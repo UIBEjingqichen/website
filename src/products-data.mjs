@@ -6,9 +6,9 @@ export const categories = [
     tags: ["220 kV and below"]
   },
   {
-    name: "Oil-Immersed Distribution Transformer",
-    slug: "oil-immersed-distribution-transformer",
-    description: "Energy-saving distribution transformers for grid distribution and stable low-voltage output.",
+    name: "Oil-Immersed Energy-Saving Transformer",
+    slug: "oil-immersed-energy-saving-transformer",
+    description: "S20 and SZ20 oil-immersed energy-saving transformers for grid renovation, outdoor power supply and stable voltage output.",
     tags: ["S20", "SZ20 on-load"]
   },
   {
@@ -20,14 +20,14 @@ export const categories = [
   {
     name: "Rectifier Transformer",
     slug: "rectifier-transformer",
-    description: "Rectifier transformers for DC power systems, electrochemical processing and industrial drives.",
-    tags: ["ZBS", "ZBSCB"]
+    description: "Rectifier and phase-shifting rectifier transformers for DC power systems, electrochemical processing and industrial drives.",
+    tags: ["ZBS", "ZBSCB", "24-pulse"]
   },
   {
     name: "Special Transformer",
     slug: "special-transformer",
-    description: "Project-customized oil-immersed split and phase-shifting rectifier transformer solutions.",
-    tags: ["Split transformer", "24-pulse phase-shifting"]
+    description: "Project-customized special transformer solutions, including oil-immersed split transformers.",
+    tags: ["Split transformer", "Project-customized"]
   }
 ];
 
@@ -59,18 +59,7 @@ export const products = [
     advantages: ["Designed around GB20052-2024 energy-efficiency loss requirements", "Kerosene vapor-phase drying and cold pressure lead welding are referenced in the brochure", "Special tank structure suitable for long-distance transportation"],
     technicalParameters: {
       note: "Typical technical data from brochure. Final design can be customized according to project requirements.",
-      rows: [
-        ["Number of phases", "3-phase"],
-        ["Rated frequency", "50 Hz"],
-        ["Rated voltage", "110 +/- 8 x 1.25% / 10.5 kV"],
-        ["Vector group", "YNd11"],
-        ["Cooling method", "ONAN"],
-        ["Service condition", "Outdoor"],
-        ["Load loss", "175000 W"],
-        ["No-load loss", "21000 W"],
-        ["Impedance voltage", "10.5%"],
-        ["Insulation level", "LI480AC200-LI325AC140 / LI75AC35"]
-      ]
+      rows: [["Number of phases", "3-phase"], ["Rated frequency", "50 Hz"], ["Rated voltage", "110 +/- 8 x 1.25% / 10.5 kV"], ["Vector group", "YNd11"], ["Cooling method", "ONAN"], ["Service condition", "Outdoor"], ["Load loss", "175000 W"], ["No-load loss", "21000 W"], ["Impedance voltage", "10.5%"], ["Insulation level", "LI480AC200-LI325AC140 / LI75AC35"]]
     },
     performanceIndicators: { note: "Brochure sample references grade 1 energy-efficiency product with rated capacity of 50,000 kVA.", rows: [["Detailed performance table", "To be confirmed from final engineering datasheet"]] },
     configurationOptions: baseOptions,
@@ -92,17 +81,7 @@ export const products = [
     advantages: ["High-permeability, low-loss grain-oriented cold-rolled silicon steel sheets", "Low-voltage foil winding on imported SCAL foil winding machine", "Aluminum alloy or stainless-steel enclosure options are referenced", "Silicone rubber pads improve stability and mechanical strength"],
     technicalParameters: {
       note: "Brochure configuration data.",
-      rows: [
-        ["Frequency", "50 Hz / 60 Hz"],
-        ["Number of phases", "3-phase"],
-        ["Vector group", "Dyn11 / Yyn0 / Yd11"],
-        ["Insulation system temperature", "Class F and above"],
-        ["Rated voltage", "35, 20, 10 / 0.4, 0.69, 0.8 kV"],
-        ["Tapping range", "+/-2 x 2.5%, +/-5%, +/-3 x 2.5%, +/-4 x 2.5%"],
-        ["Voltage regulation", "Non-excitation voltage regulation / on-load voltage regulation"],
-        ["Short-circuit impedance", "4%, 6%, 8%, 10%"],
-        ["Insulation level", "National standard"]
-      ]
+      rows: [["Frequency", "50 Hz / 60 Hz"], ["Number of phases", "3-phase"], ["Vector group", "Dyn11 / Yyn0 / Yd11"], ["Insulation system temperature", "Class F and above"], ["Rated voltage", "35, 20, 10 / 0.4, 0.69, 0.8 kV"], ["Tapping range", "+/-2 x 2.5%, +/-5%, +/-3 x 2.5%, +/-4 x 2.5%"], ["Voltage regulation", "Non-excitation voltage regulation / on-load voltage regulation"], ["Short-circuit impedance", "4%, 6%, 8%, 10%"], ["Insulation level", "National standard"]]
     },
     performanceIndicators: { note: "Brochure mentions CESI certification and type/special tests for dry-type products.", rows: [["Certificate/Test reference", "Italian CESI certification; type tests and special tests referenced in brochure"]] },
     configurationOptions: baseOptions,
@@ -124,15 +103,7 @@ export const products = [
     advantages: ["Dry-type or oil-immersed design can be selected according to user requirements", "Compact structure is referenced in the brochure"],
     technicalParameters: {
       note: "Typical technical data from brochure, based on ZS-8000/10-0.66 sample.",
-      rows: [
-        ["Rated capacity", "8000 / 4000 / 4000 kVA"],
-        ["Rated voltage", "10 / 0.66 / 0.66 kV"],
-        ["Rated current", "461.9 / 3499 A"],
-        ["Vector group designation", "Dy11d0"],
-        ["Cooling method", "ONAN"],
-        ["Number of phases", "3-phase"],
-        ["Frequency", "50 Hz"]
-      ]
+      rows: [["Rated capacity", "8000 / 4000 / 4000 kVA"], ["Rated voltage", "10 / 0.66 / 0.66 kV"], ["Rated current", "461.9 / 3499 A"], ["Vector group designation", "Dy11d0"], ["Cooling method", "ONAN"], ["Number of phases", "3-phase"], ["Frequency", "50 Hz"]]
     },
     performanceIndicators: { note: "Sample data only. Final design depends on rectifier duty and harmonics.", rows: [["Performance indicators", "To be confirmed"]] },
     configurationOptions: baseOptions,
@@ -154,14 +125,7 @@ export const products = [
     advantages: ["Grade 2 and grade 1 energy-efficiency product series are referenced", "Optional vacuum on-load voltage regulation and intelligent unit are referenced"],
     technicalParameters: {
       note: "Typical technical data from brochure. Full table is available in brochure but should be confirmed for final model selection.",
-      rows: [
-        ["High voltage", "6, 6.3, 6.6, 10, 10.5, 11 kV"],
-        ["Low voltage", "0.4, 0.69, 0.8 kV"],
-        ["HV tapping range", "+/-2 x 2.5%, +/-5%, +/-3 x 2.5%"],
-        ["Short-circuit impedance", "4%, 6%, 8%, 10%"],
-        ["Vector group designation", "Dyn11, Yyn0, Yd11"],
-        ["Rated capacity examples", "30-2500 kVA shown in brochure table"]
-      ]
+      rows: [["High voltage", "6, 6.3, 6.6, 10, 10.5, 11 kV"], ["Low voltage", "0.4, 0.69, 0.8 kV"], ["HV tapping range", "+/-2 x 2.5%, +/-5%, +/-3 x 2.5%"], ["Short-circuit impedance", "4%, 6%, 8%, 10%"], ["Vector group designation", "Dyn11, Yyn0, Yd11"], ["Rated capacity examples", "30-2500 kVA shown in brochure table"]]
     },
     performanceIndicators: { note: "Typical rows from brochure table.", rows: [["SCB18/SCB14 loss table", "Available in brochure; final selection to be confirmed by model"]] },
     configurationOptions: baseOptions,
@@ -181,10 +145,7 @@ export const products = [
     applications: ["New power grid reconstruction", "Power grid upgrades", "Energy-saving distribution projects"],
     features: ["Amorphous alloy core technology", "Epoxy resin cast dry-type transformer technology", "Three-phase three-limb frame limit protection structure", "Compact structure and good overall rigidity"],
     advantages: ["Produced according to GB20052-2024", "Designed for energy-saving grid scenarios"],
-    technicalParameters: {
-      note: "Technical Data To Be Confirmed. Brochure table exists but extraction is not clean enough for complete publication.",
-      rows: [["Noise", "<=54 dB"], ["Full model table", "To be confirmed"]]
-    },
+    technicalParameters: { note: "Technical Data To Be Confirmed. Brochure table exists but extraction is not clean enough for complete publication.", rows: [["Noise", "<=54 dB"], ["Full model table", "To be confirmed"]] },
     performanceIndicators: { note: "To be confirmed from final datasheet.", rows: [["Performance indicators", "To be confirmed"]] },
     configurationOptions: baseOptions,
     standards: ["GB20052-2024"],
@@ -196,26 +157,16 @@ export const products = [
   {
     slug: "s20-oil-immersed-energy-saving-transformer",
     name: "S20 Oil-Immersed Energy-Saving Transformer",
-    category: "Oil-Immersed Distribution Transformer",
-    tags: ["S20", "Oil-immersed", "Distribution"],
-    shortDescription: "Oil-immersed distribution transformer with reduced losses compared with earlier S11/S13 designs.",
+    category: "Oil-Immersed Energy-Saving Transformer",
+    tags: ["S20", "Oil-immersed", "Energy-saving"],
+    shortDescription: "Oil-immersed energy-saving transformer with reduced losses compared with earlier S11/S13 designs.",
     overview: "The brochure describes S20 as a new energy-saving transformer based on the S11 energy-saving transformer. It uses high-quality silicon steel sheets and a 45-degree full miter, stepped five-stage core joint structure to reduce no-load loss and no-load current.",
-    applications: ["Distribution grids", "Energy-saving grid renovation", "Industrial and commercial distribution"],
+    applications: ["Grid renovation", "Outdoor power supply", "Industrial and commercial distribution"],
     features: ["No-load loss reduced by 30-40% compared with S11/S13 references in brochure", "Load loss reduced by 20-30% compared with S11/S13 references in brochure", "High cost performance", "Convenient maintenance and user wiring", "Fully sealed and maintenance-free"],
-    advantages: ["High-voltage coil made of oxygen-free copper wire", "Low-voltage coil above 200 kVA uses copper foil", "S22 grade 1 oil-immersed distribution transformer can be produced according to user requirements"],
+    advantages: ["High-voltage coil made of oxygen-free copper wire", "Low-voltage coil above 200 kVA uses copper foil", "S22 grade 1 oil-immersed transformer can be produced according to user requirements"],
     technicalParameters: {
       note: "Typical technical data from brochure, based on S13-630/10 sample.",
-      rows: [
-        ["Rated capacity", "630 kVA"],
-        ["Vector group", "Dyn11"],
-        ["HV voltage", "10000 V"],
-        ["LV voltage", "400 V"],
-        ["Voltage regulation range", "+/-2 x 2.5%"],
-        ["Number of phases", "3"],
-        ["Load loss", "6200 W"],
-        ["No-load loss", "570 W"],
-        ["No-load current", "0.35%"]
-      ]
+      rows: [["Rated capacity", "630 kVA"], ["Vector group", "Dyn11"], ["HV voltage", "10000 V"], ["LV voltage", "400 V"], ["Voltage regulation range", "+/-2 x 2.5%"], ["Number of phases", "3"], ["Load loss", "6200 W"], ["No-load loss", "570 W"], ["No-load current", "0.35%"]]
     },
     performanceIndicators: { note: "Sample data only. Final design can be customized.", rows: [["Performance indicators", "To be confirmed by model"]] },
     configurationOptions: baseOptions,
@@ -228,7 +179,7 @@ export const products = [
   {
     slug: "sz20-on-load-oil-immersed-energy-saving-transformer",
     name: "SZ20 On-Load Oil-Immersed Energy-Saving Transformer",
-    category: "Oil-Immersed Distribution Transformer",
+    category: "Oil-Immersed Energy-Saving Transformer",
     tags: ["SZ20", "On-load tap changer", "Oil-immersed"],
     shortDescription: "S20-based oil-immersed transformer with on-load tap changing for stable output voltage.",
     overview: "SZ20 is based on S20 with an added on-load tap changer. The brochure states that it can adjust low-voltage output voltage while energized and help maintain stable transformer output voltage when the grid fluctuates.",
@@ -237,14 +188,7 @@ export const products = [
     advantages: ["Optional app-based monitoring of voltage, current, active power, reactive power and power factor is referenced in brochure", "Controller can automatically adjust tap position based on voltage condition"],
     technicalParameters: {
       note: "Typical technical data from brochure. Final design can be customized according to project requirements.",
-      rows: [
-        ["Rated capacity examples", "200-2500 kVA shown in brochure table"],
-        ["HV voltage examples", "6, 6.3, 10, 10.5, 11 kV"],
-        ["HV tapping range", "+/-4 x 2.5%"],
-        ["LV voltage", "0.4 kV"],
-        ["Vector group", "Yyn0 or Dyn11"],
-        ["Short-circuit impedance", "4.0-5.0% in brochure table"]
-      ]
+      rows: [["Rated capacity examples", "200-2500 kVA shown in brochure table"], ["HV voltage examples", "6, 6.3, 10, 10.5, 11 kV"], ["HV tapping range", "+/-4 x 2.5%"], ["LV voltage", "0.4 kV"], ["Vector group", "Yyn0 or Dyn11"], ["Short-circuit impedance", "4.0-5.0% in brochure table"]]
     },
     performanceIndicators: { note: "Full table shown in brochure; values should be confirmed against selected model.", rows: [["Performance indicators", "To be confirmed by model"]] },
     configurationOptions: baseOptions,
@@ -266,15 +210,7 @@ export const products = [
     advantages: ["Can be engineered for project-specific requirements"],
     technicalParameters: {
       note: "Typical technical data from brochure. Final design can be customized according to project requirements.",
-      rows: [
-        ["Rated voltage input", "0.54 / 0.69 / 0.8 / 0.95 / 1.14 kV"],
-        ["Rated voltage output", "12 / 40.5 kV"],
-        ["Rated frequency", "50 Hz"],
-        ["Rated capacity examples", "900, 1250, 1600, 2000, 2500, 3150, 3300, 3500, 4000 kVA"],
-        ["Rated short-time withstand voltage input", "5 kV / 1 min"],
-        ["Rated short-time withstand voltage output", "85 kV / 1 min"],
-        ["Neutral grounding mode", "Grounded / ungrounded"]
-      ]
+      rows: [["Rated voltage input", "0.54 / 0.69 / 0.8 / 0.95 / 1.14 kV"], ["Rated voltage output", "12 / 40.5 kV"], ["Rated frequency", "50 Hz"], ["Rated capacity examples", "900, 1250, 1600, 2000, 2500, 3150, 3300, 3500, 4000 kVA"], ["Rated short-time withstand voltage input", "5 kV / 1 min"], ["Rated short-time withstand voltage output", "85 kV / 1 min"], ["Neutral grounding mode", "Grounded / ungrounded"]]
     },
     performanceIndicators: { note: "To be confirmed from final datasheet.", rows: [["Performance indicators", "To be confirmed"]] },
     configurationOptions: baseOptions,
@@ -287,7 +223,7 @@ export const products = [
   {
     slug: "oil-immersed-24-pulse-phase-shifting-rectifier-transformer",
     name: "Oil-Immersed 24-Pulse Phase-Shifting Rectifier Transformer",
-    category: "Special Transformer",
+    category: "Rectifier Transformer",
     tags: ["24-pulse", "Phase-shifting", "Rectifier transformer"],
     shortDescription: "Oil-immersed phase-shifting rectifier transformer for multi-pulse power conversion systems.",
     overview: "The brochure lists an oil-immersed 24-pulse phase-shifting rectifier transformer under transformer equipment. Extracted table data provides input/output voltages, rated frequency, capacity options and neutral grounding mode.",
@@ -296,15 +232,7 @@ export const products = [
     advantages: ["Project-customized rectifier transformer design"],
     technicalParameters: {
       note: "Typical technical data from brochure. Final design can be customized according to project requirements.",
-      rows: [
-        ["Rated voltage input", "0.54 / 0.69 / 0.8 / 0.95 / 1.14 kV"],
-        ["Rated voltage output", "12 / 40.5 kV"],
-        ["Rated frequency", "50 Hz"],
-        ["Rated capacity examples", "500-12500 kVA shown in brochure table"],
-        ["Rated short-time withstand voltage input", "5 kV / 1 min"],
-        ["Rated short-time withstand voltage output", "85 kV / 1 min"],
-        ["Neutral grounding mode", "Grounded / ungrounded"]
-      ]
+      rows: [["Rated voltage input", "0.54 / 0.69 / 0.8 / 0.95 / 1.14 kV"], ["Rated voltage output", "12 / 40.5 kV"], ["Rated frequency", "50 Hz"], ["Rated capacity examples", "500-12500 kVA shown in brochure table"], ["Rated short-time withstand voltage input", "5 kV / 1 min"], ["Rated short-time withstand voltage output", "85 kV / 1 min"], ["Neutral grounding mode", "Grounded / ungrounded"]]
     },
     performanceIndicators: { note: "To be confirmed from final datasheet.", rows: [["Performance indicators", "To be confirmed"]] },
     configurationOptions: baseOptions,
