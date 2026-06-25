@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "build": "node src/build.mjs",
+    "serve": "node src/server.mjs"
+  },
+  "devDependencies": {}
+}
