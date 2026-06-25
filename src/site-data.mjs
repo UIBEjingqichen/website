@@ -1,12 +1,16 @@
 export const nav = [
   ["Home", "index.html"],
   ["Products", "products.html"],
-  ["Applications", "applications.html"],
-  ["Projects", "projects.html"],
-  ["Quality", "quality.html"],
-  ["Factory", "factory.html"],
-  ["About Us", "about.html"],
+  ["Applications & Projects", "applications.html"],
+  ["News", "news.html"],
+  ["Company", "about.html"],
   ["Contact", "contact.html"]
+];
+
+export const companyMenu = [
+  ["About Us", "about.html"],
+  ["Factory", "factory.html"],
+  ["Quality", "quality.html"]
 ];
 
 export const company = {
@@ -24,6 +28,13 @@ export const company = {
   phone: "To be confirmed",
   whatsapp: "To be confirmed"
 };
+
+export const companyStats = [
+  { label: "Annual Sales", source: "TIANYU ELECTRIC", value: "To be confirmed", suffix: "" },
+  { label: "Established In", source: "TIANYU ELECTRIC", value: "1996", suffix: "" },
+  { label: "Technical Personnel", source: "TIANYU ELECTRIC", value: "To be confirmed", suffix: "" },
+  { label: "Employees", source: "TIANYU ELECTRIC", value: "To be confirmed", suffix: "" }
+];
 
 export const applications = [
   "Utility Grid & Substations",
@@ -72,4 +83,25 @@ export const certificates = [
   { name: "Quality, environment, occupational health and safety management system", scope: "Company management system", status: "Shown in brochure" },
   { name: "Type tests and special tests", scope: "Rongpai Tianyu dry-type transformers", status: "Brochure states repeated tests by China National Transformer Quality Supervision and Inspection Center" },
   { name: "Other certificates and reports", scope: "Project-specific products", status: "Certificate to be confirmed" }
+];
+
+export const news = [
+  {
+    title: "Transformer Website Launch Materials Checklist",
+    category: "Company News",
+    date: "To be confirmed",
+    summary: "First-version website content should be finalized with confirmed product images, drawings, certificates, factory data and project case assets."
+  },
+  {
+    title: "How to Prepare a Transformer Inquiry",
+    category: "Technical Article",
+    date: "To be confirmed",
+    summary: "Capacity, voltage, frequency, installation environment, applicable standards and drawings help the engineering team review a transformer inquiry faster."
+  },
+  {
+    title: "Oil-Immersed and Dry-Type Transformer Selection",
+    category: "Knowledge",
+    date: "To be confirmed",
+    summary: "Transformer type selection depends on project location, safety requirements, load profile, maintenance conditions and total lifecycle cost."
+  }
 ];
