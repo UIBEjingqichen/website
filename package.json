@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "sync-images": "node src/rename-images.mjs",
     "build": "node src/build.mjs",
     "serve": "node src/server.mjs"
   },
