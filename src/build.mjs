@@ -132,9 +132,9 @@ function productCard(p, depth = "") {
   </a>`;
 }
 
-function categoryTile(c, depth = "") {
+function categoryTile(c, href, depth = "") {
   const image = categoryImages[c.name] || "assets/images/factory-substation.jpeg";
-  return `<a id="${c.slug}" class="category-tile" href="${depth}products.html#${c.slug}" aria-label="View ${esc(c.name)}">
+  return `<a class="category-tile" href="${esc(href)}" aria-label="View ${esc(c.name)}">
     <img src="${depth}${image}" alt="${esc(c.name)}">
     <h3>${esc(c.name)}</h3>
   </a>`;
@@ -164,20 +164,21 @@ function companySnapshot() {
 function cultureSection() {
   const pillars = [
     ["01", "Service First", "Fast response, practical engineering review and clear document follow-up."],
-    ["02", "Reliable Engineering", "Product selection, drawings, tests and parameters are handled with disciplined project logic."],
+    ["02", "Reliable Engineering", "Drawings, tests and parameters are handled with disciplined project logic."],
     ["03", "Quality & Safety", "Safety, quality, compliance and continuous improvement are built into the workflow."],
     ["04", "Long-Term Partnership", "Transparent communication and accountable support for utilities, EPCs and industrial clients."]
   ];
   return `<section class="section culture-section">
-    <div class="culture-intro"><p class="eyebrow">Why Us</p><h2>Service Culture for Engineering Projects</h2><p>Transformer projects require more than a product list. Tianyu should present a culture of service, documentation, accountability and long-term technical cooperation.</p><a class="text-link" href="about.html">Read company culture</a></div>
+    <div class="culture-intro"><p class="eyebrow">Why Us</p><h2>Service Culture for Engineering Projects</h2><p>Transformer projects require service, documentation, accountability and long-term technical cooperation.</p><a class="text-link" href="about.html#culture">Read company culture</a></div>
     <div class="culture-pillar-list">${pillars.map(([n, title, text]) => `<article><span>${n}</span><div><h3>${esc(title)}</h3><p>${esc(text)}</p></div></article>`).join("")}</div>
+    <img class="culture-image" src="assets/images/case-booster-substation.jpeg" alt="Power grid and substation application">
   </section>`;
 }
 
 function applicationsProjectsSection() {
   return `<section class="section pale"><div class="section-head"><div><p class="eyebrow">Applications & Projects</p><h2>Applications Backed by Engineering Experience</h2></div><a class="text-link" href="applications.html">View All</a></div>
     <div class="merged-ap-grid">
-      <div class="application-panel">${applications.map((a) => `<article><h3>${esc(a)}</h3><p>Transformer selection and configuration should be confirmed according to project load, voltage level and installation environment.</p></article>`).join("")}</div>
+      <div class="application-panel">${applications.map((a) => `<article><h3>${esc(a)}</h3><p>Selection is confirmed according to load, voltage level and installation environment.</p></article>`).join("")}</div>
       <div class="case-feature">${cases.slice(0, 1).map(caseCard).join("")}<a class="btn btn-primary" href="applications.html#projects">View Project Experience</a></div>
     </div>
   </section>`;
@@ -195,7 +196,7 @@ function home() {
   </section>
   ${homeImageStrip()}
   ${companySnapshot()}
-  <section class="section"><div class="section-head"><p class="eyebrow">Product Matrix</p><h2>Transformer Solutions by Category</h2><a class="text-link" href="products.html">View All Products</a></div><div class="category-tile-grid">${categories.map((c) => categoryTile(c)).join("")}</div></section>
+  <section class="section"><div class="section-head"><p class="eyebrow">Product Matrix</p><h2>Transformer Solutions by Category</h2><a class="text-link" href="products.html">View All Products</a></div><div class="category-tile-grid">${categories.map((c) => categoryTile(c, `products.html#${c.slug}`)).join("")}</div></section>
   ${cultureSection()}
   ${applicationsProjectsSection()}
   ${newsSection()}`;
@@ -208,7 +209,7 @@ function productsPage() {
     return `<section class="section product-category-section" id="${c.slug}"><div class="section-head"><div><p class="eyebrow">${esc(c.name)}</p><h2>${esc(c.name)}</h2><p>${esc(c.description)}</p></div></div><div class="product-grid">${groupProducts.map((p) => productCard(p)).join("")}</div></section>`;
   }).join("");
   const content = `<section class="page-hero"><p class="eyebrow">Products</p><h1>Transformer Product Matrix</h1><p>Five category groups with nine brochure-sourced transformer products. Click any product card to open its detail page.</p><a class="btn btn-primary" href="contact.html#quote">Get a Quote</a></section>
-  <section class="section"><div class="category-tile-grid compact">${categories.map((c) => categoryTile(c)).join("")}</div></section>
+  <section class="section product-jump"><div class="category-tile-grid compact">${categories.map((c) => categoryTile(c, `#${c.slug}`)).join("")}</div></section>
   ${grouped}`;
   return page({ title: "Transformer Products | Tianyu Electric", description: "Oil-immersed, dry-type, rectifier and special transformer product categories from Tianyu Electric.", active: "Products", content, canonical: "products.html" });
 }
@@ -247,6 +248,10 @@ function newsPage() {
   return simplePage("News", "News & Knowledge", "Company news, website launch updates and technical knowledge articles for transformer project communication.", `<section class="section"><div class="news-grid">${news.map((n) => `<article><p class="eyebrow">${esc(n.category)}</p><h2>${esc(n.title)}</h2><small>${esc(n.date)}</small><p>${esc(n.summary)}</p></article>`).join("")}</div></section>`, "news.html");
 }
 
+function companyPage(canonicalName = "about.html") {
+  return simplePage("Company", "About Tianyu Electric", "Company profile, factory capability and quality references are organized on one page for easier review.", `<section class="section company-page-grid" id="about"><div><p class="eyebrow">About Us</p><h2>Company Profile</h2><p>${esc(company.legalName)} was established in 1996 by the former Fuzhou No.1 Switch Factory, Fuzhou No.2 Switch Factory and Fuzhou Electronic Transformer Factory, with registered capital of ${esc(company.registeredCapital)}.</p><p>${esc(company.groupBackground)} ${esc(company.manufacturingBase)}</p><p>${esc(company.productScope)}</p></div><img src="assets/images/factory-campus.jpeg" alt="Tianyu factory campus"></section><section class="section pale company-page-grid" id="factory"><div><p class="eyebrow">Factory</p><h2>Factory & Testing</h2><p>${esc(company.manufacturingBase)}</p><div class="fact-grid"><div class="fact"><strong>Factory Area</strong><span>To be confirmed</span></div><div class="fact"><strong>Annual Capacity</strong><span>To be confirmed</span></div><div class="fact"><strong>Production Equipment</strong><span>To be confirmed</span></div><div class="fact"><strong>Testing Equipment</strong><span>To be confirmed</span></div></div></div><img src="assets/images/factory-substation.jpeg" alt="Factory and substation scene"></section><section class="section" id="quality"><div class="section-head"><div><p class="eyebrow">Quality</p><h2>Quality & Certificates</h2></div></div><div class="certificate-grid">${certificates.map((c) => `<article><h2>${esc(c.name)}</h2><p>${esc(c.scope)}</p><span>${esc(c.status)}</span></article>`).join("")}</div><p class="note">Products can be designed and tested according to project-specific requirements. Certificates and test reports can be provided upon request where applicable.</p></section><section class="section pale" id="culture"><div class="prose"><h2>Corporate Culture</h2><p>Tianyu Electric presents a practical engineering culture built around integrity, safety, accountability, respect and long-term partnership. In international B2B cooperation, the company should emphasize transparent communication, reliable documentation, continuous improvement, responsible manufacturing and customer-focused service from early inquiry to after-sales support.</p><div class="culture-grid"><article><strong>Integrity</strong><span>Clear information, responsible commitments and honest technical communication.</span></article><article><strong>Safety</strong><span>Product quality, workplace safety and project risk control come first.</span></article><article><strong>Partnership</strong><span>Long-term cooperation with utilities, industrial users and renewable energy developers.</span></article><article><strong>Continuous Improvement</strong><span>Better process, better documentation and better customer service through every project.</span></article></div><h2>Historical Evolution</h2><div class="timeline"><div><strong>1958</strong><span>Fuzhou No.1 and No.2 Switch Factory and Fuzhou Electronic Transformer Factory were established.</span></div><div><strong>1996</strong><span>Tianyu Electric was established through reorganization.</span></div><div><strong>1997</strong><span>Tianyu Electric was listed on Shenzhen Stock Exchange.</span></div><div><strong>2001</strong><span>Tianyu Electric joined XJ Group Corporation.</span></div><div><strong>2016</strong><span>New factory was completed and put into operation.</span></div><div><strong>2021</strong><span>XJ Group Corporation merged into China Electrical Equipment Group Co., Ltd.</span></div></div></div></section>`, canonicalName);
+}
+
 function writeAll() {
   fs.rmSync(dist, { recursive: true, force: true });
   ensureDir(productDir);
@@ -262,9 +267,9 @@ function writeAll() {
   fs.writeFileSync(path.join(dist, "applications.html"), applicationsPage());
   fs.writeFileSync(path.join(dist, "projects.html"), applicationsPage());
   fs.writeFileSync(path.join(dist, "news.html"), newsPage());
-  fs.writeFileSync(path.join(dist, "quality.html"), simplePage("Company", "Quality & Certificates", "Only brochure-confirmed certificate and test references are shown; missing certificates remain marked to be confirmed.", `<section class="section"><div class="certificate-grid">${certificates.map((c) => `<article><h2>${esc(c.name)}</h2><p>${esc(c.scope)}</p><span>${esc(c.status)}</span></article>`).join("")}</div><p class="note">Products can be designed and tested according to project-specific requirements. Certificates and test reports can be provided upon request where applicable.</p></section>`, "quality.html"));
-  fs.writeFileSync(path.join(dist, "factory.html"), simplePage("Company", "Factory & Testing", "Factory visuals are brochure-derived temporary assets. Capacity data, equipment quantity and detailed test capability remain to be confirmed.", `<section class="section split"><div><h2>Manufacturing Base</h2><p>${esc(company.manufacturingBase)}</p><div class="fact-grid"><div class="fact"><strong>Factory Area</strong><span>To be confirmed</span></div><div class="fact"><strong>Annual Capacity</strong><span>To be confirmed</span></div><div class="fact"><strong>Production Equipment</strong><span>To be confirmed</span></div><div class="fact"><strong>Testing Equipment</strong><span>To be confirmed</span></div></div></div><div class="image-grid"><img src="assets/images/factory-campus.jpeg" alt="Factory campus"><img src="assets/images/factory-substation.jpeg" alt="Substation"></div></section>`, "factory.html"));
-  fs.writeFileSync(path.join(dist, "about.html"), simplePage("Company", "About Tianyu Electric", "Fuzhou Tianyu Electric Co., Ltd. is a professional manufacturer of power primary equipment.", `<section class="section"><div class="prose"><h2>Company Profile</h2><p>${esc(company.legalName)} was established in 1996 by the former Fuzhou No.1 Switch Factory, Fuzhou No.2 Switch Factory and Fuzhou Electronic Transformer Factory, with registered capital of ${esc(company.registeredCapital)}.</p><p>${esc(company.groupBackground)} ${esc(company.manufacturingBase)}</p><p>${esc(company.productScope)}</p><h2>Corporate Culture</h2><p>Tianyu Electric presents a practical engineering culture built around integrity, safety, accountability, respect and long-term partnership. In international B2B cooperation, the company should emphasize transparent communication, reliable documentation, continuous improvement, responsible manufacturing and customer-focused service from early inquiry to after-sales support.</p><div class="culture-grid"><article><strong>Integrity</strong><span>Clear information, responsible commitments and honest technical communication.</span></article><article><strong>Safety</strong><span>Product quality, workplace safety and project risk control come first.</span></article><article><strong>Partnership</strong><span>Long-term cooperation with utilities, industrial users and renewable energy developers.</span></article><article><strong>Continuous Improvement</strong><span>Better process, better documentation and better customer service through every project.</span></article></div><h2>Factory & Quality Access</h2><p>Factory capability and quality certificates are organized under the Company navigation so international buyers can review corporate credibility, manufacturing capability and certificates from one menu.</p><div class="company-link-grid"><a href="factory.html">Factory & Testing</a><a href="quality.html">Quality & Certificates</a></div><h2>Historical Evolution</h2><div class="timeline"><div><strong>1958</strong><span>Fuzhou No.1 and No.2 Switch Factory and Fuzhou Electronic Transformer Factory were established.</span></div><div><strong>1996</strong><span>Tianyu Electric was established through reorganization.</span></div><div><strong>1997</strong><span>Tianyu Electric was listed on Shenzhen Stock Exchange.</span></div><div><strong>2001</strong><span>Tianyu Electric joined XJ Group Corporation.</span></div><div><strong>2016</strong><span>New factory was completed and put into operation.</span></div><div><strong>2021</strong><span>XJ Group Corporation merged into China Electrical Equipment Group Co., Ltd.</span></div></div></div></section>`, "about.html"));
+  fs.writeFileSync(path.join(dist, "about.html"), companyPage("about.html"));
+  fs.writeFileSync(path.join(dist, "factory.html"), companyPage("factory.html"));
+  fs.writeFileSync(path.join(dist, "quality.html"), companyPage("quality.html"));
   fs.writeFileSync(path.join(dist, "contact.html"), simplePage("Contact", "Contact Tianyu Electric", "Send transformer requirements, drawings or project conditions for engineering review.", `<section class="section quote-band"><div><h2>Inquiry Details</h2><p>Email, phone, WhatsApp and address are placeholders until confirmed by Tianyu Electric.</p><div class="fact-grid"><div class="fact"><strong>Email</strong><span>${esc(company.email)}</span></div><div class="fact"><strong>Phone</strong><span>${esc(company.phone)}</span></div><div class="fact"><strong>WhatsApp</strong><span>${esc(company.whatsapp)}</span></div><div class="fact"><strong>Address</strong><span>${esc(company.address)}</span></div></div></div>${quoteForm()}</section>`, "contact.html"));
   fs.writeFileSync(path.join(dist, "privacy.html"), simplePage("Company", "Privacy Policy", "Placeholder privacy policy for first-version website.", `<section class="section prose"><p>To be confirmed. This first-version page is a placeholder and should be reviewed before public launch.</p></section>`, "privacy.html"));
 }
