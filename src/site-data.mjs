@@ -8,9 +8,9 @@ export const nav = [
 ];
 
 export const companyMenu = [
-  ["About Us", "about.html"],
-  ["Factory", "factory.html"],
-  ["Quality", "quality.html"]
+  ["About Us", "about.html#about"],
+  ["Factory", "about.html#factory"],
+  ["Quality", "about.html#quality"]
 ];
 
 export const company = {
