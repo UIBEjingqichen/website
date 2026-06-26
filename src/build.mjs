@@ -26,7 +26,7 @@ const assetMap = {
 
 const categoryImages = {
   "Oil-Immersed Power Transformer": "assets/images/product-oil-power.jpeg",
-  "Oil-Immersed Distribution Transformer": "assets/images/product-oil-distribution.jpeg",
+  "Oil-Immersed Energy-Saving Transformer": "assets/images/product-oil-distribution.jpeg",
   "Dry-Type Transformer": "assets/images/product-dry-type-red.jpeg",
   "Rectifier Transformer": "assets/images/product-rectifier.jpeg",
   "Special Transformer": "assets/images/product-special-container.jpeg"
@@ -56,12 +56,8 @@ function dropdown(label, href, active, depth, items) {
 
 function renderNav(active, depth = "") {
   return nav.map(([label, href]) => {
-    if (label === "Products") {
-      return dropdown(label, href, active, depth, categories.map((c) => [c.name, `products.html#${c.slug}`]));
-    }
-    if (label === "Company") {
-      return dropdown(label, href, active, depth, companyMenu);
-    }
+    if (label === "Products") return dropdown(label, href, active, depth, categories.map((c) => [c.name, `products.html#${c.slug}`]));
+    if (label === "Company") return dropdown(label, href, active, depth, companyMenu);
     return `<a class="${active === label ? "active" : ""}" href="${depth}${href}">${label}</a>`;
   }).join("");
 }
@@ -144,14 +140,17 @@ function caseCard(c) {
   return `<article class="case-card"><img src="${c.image}" alt="${esc(c.name)}"><div><p class="eyebrow">${esc(c.type)}</p><h3>${esc(c.name)}</h3><p>${esc(c.description)}</p><dl><dt>Location</dt><dd>${esc(c.location)}</dd><dt>Scale</dt><dd>${esc(c.scale)}</dd><dt>Product Used</dt><dd>${esc(c.productUsed)}</dd><dt>Disclosure</dt><dd>${esc(c.disclosure)}</dd></dl></div></article>`;
 }
 
-function homeImageStrip() {
-  const images = [
+function heroSlider() {
+  const slides = [
     ["assets/images/factory-substation.jpeg", "Substation and transformer project scene"],
     ["assets/images/product-oil-power.jpeg", "Oil-immersed power transformer"],
-    ["assets/images/case-offshore-wind.jpeg", "Offshore wind engineering application"],
     ["assets/images/case-renewable-base.jpeg", "Renewable energy base application"]
   ];
-  return `<section class="home-image-strip">${images.map(([src, alt]) => `<img src="${src}" alt="${esc(alt)}">`).join("")}</section>`;
+  return `<section class="clean-hero-slider" data-hero-slider>${slides.map(([src, alt], index) => `<figure class="hero-slide ${index === 0 ? "active" : ""}"><img src="${src}" alt="${esc(alt)}"></figure>`).join("")}<div class="hero-dots">${slides.map((_, index) => `<button class="${index === 0 ? "active" : ""}" data-slide-dot="${index}" aria-label="Show slide ${index + 1}"></button>`).join("")}</div></section>`;
+}
+
+function heroIntro() {
+  return `<section class="hero-intro"><p class="eyebrow">Fuzhou Tianyu Electric Co., Ltd.</p><h1>Power & Distribution Transformer Solutions</h1><p>Oil-immersed, dry-type, rectifier and special transformers for utility, industrial and renewable energy projects.</p><div class="hero-actions"><a class="btn btn-primary" href="contact.html#quote">Get a Quote</a><a class="btn outline-dark" href="products.html">View Products</a><a class="btn outline-dark" href="c725877080548664e85823f7bb5daa2b.docx">Download Catalog</a></div></section>`;
 }
 
 function companySnapshot() {
@@ -168,35 +167,31 @@ function cultureSection() {
     ["03", "Quality & Safety", "Safety, quality, compliance and continuous improvement are built into the workflow."],
     ["04", "Long-Term Partnership", "Transparent communication and accountable support for utilities, EPCs and industrial clients."]
   ];
-  return `<section class="section culture-section">
-    <div class="culture-intro"><p class="eyebrow">Why Us</p><h2>Service Culture for Engineering Projects</h2><p>Transformer projects require service, documentation, accountability and long-term technical cooperation.</p><a class="text-link" href="about.html#culture">Read company culture</a></div>
-    <div class="culture-pillar-list">${pillars.map(([n, title, text]) => `<article><span>${n}</span><div><h3>${esc(title)}</h3><p>${esc(text)}</p></div></article>`).join("")}</div>
-    <img class="culture-image" src="assets/images/case-booster-substation.jpeg" alt="Power grid and substation application">
+  return `<section class="section why-showcase">
+    <a class="why-image-card" href="about.html#culture"><img src="assets/images/factory-substation.jpeg" alt="Power grid and substation application"><div><p class="eyebrow">Why Us</p><h2>Service Culture for Engineering Projects</h2><p>Click to view company culture.</p></div></a>
+    <div class="why-service-grid">${pillars.map(([n, title, text]) => `<article><span>${n}</span><h3>${esc(title)}</h3><p>${esc(text)}</p></article>`).join("")}</div>
   </section>`;
 }
 
 function applicationsProjectsSection() {
-  return `<section class="section pale"><div class="section-head"><div><p class="eyebrow">Applications & Projects</p><h2>Applications Backed by Engineering Experience</h2></div><a class="text-link" href="applications.html">View All</a></div>
-    <div class="merged-ap-grid">
-      <div class="application-panel">${applications.map((a) => `<article><h3>${esc(a)}</h3><p>Selection is confirmed according to load, voltage level and installation environment.</p></article>`).join("")}</div>
-      <div class="case-feature">${cases.slice(0, 1).map(caseCard).join("")}<a class="btn btn-primary" href="applications.html#projects">View Project Experience</a></div>
+  return `<section class="section pale ap-showcase"><div class="section-head"><div><p class="eyebrow">Applications & Projects</p><h2>Applications Backed by Engineering Experience</h2></div></div>
+    <div class="ap-grid">
+      <div class="application-panel">${applications.map((a) => `<a href="applications.html"><h3>${esc(a)}</h3><p>Selection is confirmed according to load, voltage level and installation environment.</p></a>`).join("")}</div>
+      <a class="project-image-card" href="applications.html#projects"><img src="${cases[0].image}" alt="${esc(cases[0].name)}"><div><p class="eyebrow">Project Experience</p><h3>${esc(cases[0].name)}</h3><p>${esc(cases[0].description)}</p></div></a>
     </div>
   </section>`;
 }
 
 function newsSection() {
-  return `<section class="section"><div class="section-head"><p class="eyebrow">News</p><h2>News & Knowledge</h2><a class="text-link" href="news.html">View News</a></div><div class="news-grid">${news.map((n) => `<article><p class="eyebrow">${esc(n.category)}</p><h3>${esc(n.title)}</h3><small>${esc(n.date)}</small><p>${esc(n.summary)}</p></article>`).join("")}</div></section>`;
+  const newsImages = ["assets/images/case-renewable-base.jpeg", "assets/images/product-oil-power.jpeg", "assets/images/product-dry-type-red.jpeg"];
+  return `<section class="section news-showcase"><div class="section-head"><p class="eyebrow">News</p><h2>News & Knowledge</h2></div><div class="news-grid">${news.map((n, index) => `<a class="news-card" href="news.html"><img src="${newsImages[index % newsImages.length]}" alt="${esc(n.title)}"><div><p class="eyebrow">${esc(n.category)}</p><h3>${esc(n.title)}</h3><small>${esc(n.date)}</small><p>${esc(n.summary)}</p></div></a>`).join("")}</div></section>`;
 }
 
 function home() {
-  const content = `<section class="hero" style="background-image:linear-gradient(90deg,rgba(6,31,58,.82),rgba(6,31,58,.38)),url('assets/images/factory-substation.jpeg')">
-    <div class="hero-inner"><p class="eyebrow">Fuzhou Tianyu Electric Co., Ltd.</p><h1>Power & Distribution Transformer Solutions</h1>
-    <p>Oil-immersed, dry-type, rectifier and special transformers for utility, industrial and renewable energy projects.</p>
-    <div class="hero-actions"><a class="btn btn-primary" href="contact.html#quote">Get a Quote</a><a class="btn btn-secondary" href="products.html">View Products</a><a class="btn btn-secondary" href="c725877080548664e85823f7bb5daa2b.docx">Download Catalog</a></div></div>
-  </section>
-  ${homeImageStrip()}
+  const content = `${heroSlider()}
+  ${heroIntro()}
   ${companySnapshot()}
-  <section class="section"><div class="section-head"><p class="eyebrow">Product Matrix</p><h2>Transformer Solutions by Category</h2><a class="text-link" href="products.html">View All Products</a></div><div class="category-tile-grid">${categories.map((c) => categoryTile(c, `products.html#${c.slug}`)).join("")}</div></section>
+  <section class="section product-matrix"><div class="section-head"><p class="eyebrow">Product Matrix</p><h2>Transformer Solutions by Category</h2></div><div class="category-tile-grid">${categories.map((c) => categoryTile(c, `products.html#${c.slug}`)).join("")}</div></section>
   ${cultureSection()}
   ${applicationsProjectsSection()}
   ${newsSection()}`;
@@ -245,7 +240,7 @@ function applicationsPage() {
 }
 
 function newsPage() {
-  return simplePage("News", "News & Knowledge", "Company news, website launch updates and technical knowledge articles for transformer project communication.", `<section class="section"><div class="news-grid">${news.map((n) => `<article><p class="eyebrow">${esc(n.category)}</p><h2>${esc(n.title)}</h2><small>${esc(n.date)}</small><p>${esc(n.summary)}</p></article>`).join("")}</div></section>`, "news.html");
+  return simplePage("News", "News & Knowledge", "Company news, website launch updates and technical knowledge articles for transformer project communication.", `<section class="section"><div class="news-grid">${news.map((n) => `<a class="news-card" href="news.html"><div><p class="eyebrow">${esc(n.category)}</p><h2>${esc(n.title)}</h2><small>${esc(n.date)}</small><p>${esc(n.summary)}</p></div></a>`).join("")}</div></section>`, "news.html");
 }
 
 function companyPage(canonicalName = "about.html") {
