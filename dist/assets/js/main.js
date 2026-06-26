@@ -8,17 +8,17 @@ style.textContent = `
   .company-copy p { font-size: 16px; max-width: 640px; }
   .company-stats { gap: 30px 42px; }
   .company-stats strong { font-size: clamp(32px, 4vw, 52px) !important; line-height: 1.08; overflow-wrap: anywhere; }
-  .culture-section { grid-template-columns: .8fr 1.2fr !important; gap: 24px; background: #f4f7fa !important; padding-top: clamp(32px, 4vw, 52px) !important; padding-bottom: clamp(32px, 4vw, 52px) !important; align-items: start; }
-  .culture-intro { color: var(--ink) !important; padding: 22px; background: white; border: 1px solid var(--line); border-radius: 6px; }
+  .culture-section { grid-template-columns: minmax(280px, .72fr) minmax(420px, 1.28fr) !important; gap: 22px; background: #f4f7fa !important; padding-top: clamp(30px, 4vw, 50px) !important; padding-bottom: clamp(30px, 4vw, 50px) !important; align-items: stretch; }
+  .culture-intro { color: var(--ink) !important; padding: 20px; background: white; border: 1px solid var(--line); border-radius: 6px; min-height: 230px; }
   .culture-intro h2, .culture-intro p { color: var(--blue-dark) !important; }
   .culture-intro .text-link { color: var(--teal) !important; }
   .culture-intro .eyebrow { color: var(--teal) !important; }
-  .culture-intro h2 { font-size: clamp(24px, 2.2vw, 34px); }
+  .culture-intro h2 { font-size: clamp(24px, 2vw, 32px); }
   .culture-pillar-list { gap: 10px; }
-  .culture-pillar-list article { grid-template-columns: 52px 1fr !important; padding: 16px !important; }
+  .culture-pillar-list article { grid-template-columns: 52px 1fr !important; padding: 15px !important; }
   .culture-pillar-list span { font-size: 22px !important; }
   .culture-pillar-list h3 { font-size: 18px; }
-  .culture-image { grid-column: 1 / -1; width: 100%; height: 260px; object-fit: cover; border-radius: 6px; border: 1px solid var(--line); }
+  .culture-image { grid-column: 1 / 2; width: 100%; height: 230px; object-fit: cover; border-radius: 6px; border: 1px solid var(--line); align-self: end; }
   .merged-ap-grid { grid-template-columns: 1fr 1fr !important; align-items: stretch; }
   .application-panel article { min-height: 128px; display: flex; flex-direction: column; justify-content: flex-start; }
   .application-panel h3 { min-height: 48px; }
@@ -32,9 +32,15 @@ style.textContent = `
   @media (max-width: 1040px) {
     .home-image-strip, .merged-ap-grid, .company-snapshot, .culture-section, .company-page-grid { grid-template-columns: 1fr !important; }
     .home-image-strip img, .home-image-strip img:first-child { height: 210px !important; }
+    .culture-image { grid-column: auto; height: 210px; }
   }
 `;
 document.head.appendChild(style);
+
+const cultureImage = document.querySelector(".culture-image");
+if (cultureImage) {
+  cultureImage.src = "assets/images/factory-substation.jpeg";
+}
 
 const toggle = document.querySelector("[data-menu-toggle]");
 const nav = document.querySelector("[data-nav]");
