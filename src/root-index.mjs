@@ -4,32 +4,17 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
-const entryPath = path.join(root, "index.html");
+const distIndexPath = path.join(root, "dist", "index.html");
+const rootIndexPath = path.join(root, "index.html");
 
-const html = `<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=dist/index.html">
-  <title>Tianyu Electric Website Preview</title>
-  <style>
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; font-family: Arial, Helvetica, sans-serif; background: #f4f7fa; color: #06243f; }
-    main { width: min(720px, 92vw); padding: 36px; background: white; border: 1px solid #d8e0e8; box-shadow: 0 14px 40px rgba(8, 35, 58, 0.12); }
-    h1 { margin: 0 0 12px; font-size: 34px; }
-    p { color: #657386; line-height: 1.6; }
-    a { display: inline-flex; margin-top: 14px; padding: 12px 18px; background: #008b8b; color: white; text-decoration: none; font-weight: 700; }
-  </style>
-</head>
-<body>
-  <main>
-    <h1>Tianyu Electric Website Preview</h1>
-    <p>This root entry file redirects to the generated website in <strong>dist/index.html</strong>. If the redirect does not open automatically, click the button below.</p>
-    <a href="dist/index.html">Open Website</a>
-  </main>
-  <script>window.location.replace("dist/index.html");</script>
-</body>
-</html>`;
+let html = fs.readFileSync(distIndexPath, "utf8");
 
-fs.writeFileSync(entryPath, html);
-console.log(`Root preview entry generated: ${entryPath}`);
+if (!html.includes("<base href=\"dist/\">")) {
+  html = html.replace(
+    "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+    "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <base href=\"dist/\">"
+  );
+}
+
+fs.writeFileSync(rootIndexPath, html);
+console.log("Root preview index generated from dist/index.html");
