@@ -20,6 +20,14 @@ style.textContent = `
   .hero-intro p { max-width: 760px; margin: 0 auto; font-size: 19px; color: var(--muted); }
   .hero-intro .hero-actions { justify-content: center; margin-top: 28px; }
 
+  .page-image-hero { position: relative; height: clamp(340px, 44vw, 560px); overflow: hidden; background: var(--blue-dark); }
+  .page-image-hero img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.95); }
+  .page-image-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,36,63,.02), rgba(6,36,63,.78)); }
+  .image-hero-caption { position: absolute; left: clamp(22px, 5vw, 70px); right: clamp(22px, 5vw, 70px); bottom: clamp(24px, 5vw, 62px); z-index: 1; max-width: 760px; }
+  .image-hero-caption h1 { color: white; font-size: clamp(38px, 5vw, 70px); margin-bottom: 12px; }
+  .image-hero-caption p { color: rgba(255,255,255,.86); font-size: 18px; }
+  .image-hero-caption .eyebrow { color: #8ef0e2; }
+
   .home-image-strip { display: none !important; }
   .company-snapshot { grid-template-columns: .9fr 1.1fr; gap: clamp(24px, 4vw, 48px); align-items: center; }
   .company-copy h2 { font-size: clamp(28px, 3.2vw, 44px) !important; line-height: 1.12; max-width: 560px; }
@@ -34,22 +42,8 @@ style.textContent = `
   .category-tile:hover img { transform: scale(1.045); }
   .category-tile h3 { font-size: 19px !important; line-height: 1.18; }
 
-  .why-showcase {
-    display: grid;
-    grid-template-columns: minmax(340px, .92fr) minmax(420px, 1.08fr);
-    gap: 24px;
-    align-items: stretch;
-    background: #f4f7fa;
-  }
-  .why-image-card {
-    position: relative;
-    display: block;
-    min-height: 430px;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    background: var(--blue-dark);
-  }
+  .why-showcase { display: grid; grid-template-columns: minmax(340px, .92fr) minmax(420px, 1.08fr); gap: 24px; align-items: stretch; background: #f4f7fa; }
+  .why-image-card { position: relative; display: block; min-height: 430px; overflow: hidden; border-radius: 12px; box-shadow: var(--shadow); background: var(--blue-dark); }
   .why-image-card img { width: 100%; height: 100%; min-height: 430px; object-fit: cover; transition: transform .55s ease; }
   .why-image-card:hover img { transform: scale(1.04); }
   .why-image-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,36,63,.05), rgba(6,36,63,.76)); }
@@ -78,11 +72,22 @@ style.textContent = `
   .project-image-card .eyebrow { color: #8ef0e2; }
 
   .news-showcase .section-head { margin-bottom: 28px; }
-  .news-card { display: block; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: white; box-shadow: 0 10px 26px rgba(8,35,58,.06); transition: .22s ease; }
-  .news-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-  .news-card img { width: 100%; height: 190px; object-fit: cover; }
-  .news-card div { padding: 22px; }
-  .news-card small { display: block; color: var(--muted); margin-bottom: 10px; }
+  .news-list { display: grid; gap: 18px; }
+  .news-row { display: grid; grid-template-columns: 320px 1fr; gap: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: white; box-shadow: 0 10px 26px rgba(8,35,58,.06); transition: .22s ease; }
+  .news-row:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+  .news-row img { width: 100%; height: 100%; min-height: 210px; object-fit: cover; }
+  .news-row div { padding: 24px 28px; }
+  .news-row small { display: block; color: var(--muted); margin-bottom: 10px; }
+  .home-news-list .news-row { grid-template-columns: 280px 1fr; }
+
+  .quote-modal { position: fixed; inset: 0; z-index: 80; display: none; align-items: center; justify-content: center; padding: 22px; }
+  .quote-modal.open { display: flex; }
+  .quote-backdrop { position: absolute; inset: 0; background: rgba(6, 20, 34, .62); backdrop-filter: blur(5px); }
+  .quote-panel { position: relative; z-index: 1; width: min(920px, 96vw); max-height: 90vh; overflow: auto; background: white; border-radius: 12px; padding: clamp(24px, 4vw, 42px); box-shadow: 0 30px 80px rgba(0,0,0,.28); }
+  .quote-panel h2 { font-size: clamp(30px, 4vw, 46px); }
+  .quote-panel > p:not(.eyebrow) { max-width: 680px; color: var(--muted); }
+  .quote-close { position: absolute; top: 16px; right: 16px; width: 38px; height: 38px; border: 1px solid var(--line); background: white; font-size: 26px; line-height: 1; cursor: pointer; }
+  body.modal-open { overflow: hidden; }
 
   .product-jump { padding-top: 34px !important; padding-bottom: 34px !important; }
   .company-page-grid { display: grid; grid-template-columns: 1fr .85fr; gap: 32px; align-items: center; }
@@ -96,14 +101,19 @@ style.textContent = `
     .category-tile-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
     .why-showcase, .ap-grid { grid-template-columns: 1fr; }
     .why-image-card, .why-image-card img, .project-image-card img { min-height: 380px; }
+    .news-row, .home-news-list .news-row { grid-template-columns: 240px 1fr; }
   }
   @media (max-width: 1040px) {
     .company-snapshot, .company-page-grid { grid-template-columns: 1fr !important; }
   }
   @media (max-width: 720px) {
     .clean-hero-slider { height: 390px; }
-    .why-service-grid, .application-panel, .category-tile-grid, .news-grid { grid-template-columns: 1fr !important; }
+    .page-image-hero { height: 360px; }
+    .why-service-grid, .application-panel, .category-tile-grid { grid-template-columns: 1fr !important; }
     .why-image-card, .why-image-card img, .project-image-card img { min-height: 320px; }
+    .news-row, .home-news-list .news-row { grid-template-columns: 1fr; }
+    .news-row img { height: 210px; }
+    .quote-form { grid-template-columns: 1fr; }
   }
 `;
 document.head.appendChild(style);
@@ -122,7 +132,26 @@ if (slider) {
   setInterval(() => showSlide(current + 1), 5200);
 }
 
-const revealTargets = document.querySelectorAll(".company-snapshot, .product-matrix, .why-showcase, .ap-showcase, .news-showcase");
+const modal = document.querySelector("[data-quote-modal]");
+const openModal = () => {
+  if (!modal) return;
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+};
+const closeModal = () => {
+  if (!modal) return;
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+};
+document.querySelectorAll("[data-quote-open]").forEach((button) => button.addEventListener("click", openModal));
+document.querySelectorAll("[data-quote-close]").forEach((button) => button.addEventListener("click", closeModal));
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeModal();
+});
+
+const revealTargets = document.querySelectorAll(".company-snapshot, .product-matrix, .why-showcase, .ap-showcase, .news-showcase, .page-image-hero");
 revealTargets.forEach((el) => el.classList.add("reveal"));
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
