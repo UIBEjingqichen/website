@@ -83,11 +83,18 @@ style.textContent = `
   .quote-modal { position: fixed; inset: 0; z-index: 80; display: none; align-items: center; justify-content: center; padding: 22px; }
   .quote-modal.open { display: flex; }
   .quote-backdrop { position: absolute; inset: 0; background: rgba(6, 20, 34, .62); backdrop-filter: blur(5px); }
-  .quote-panel { position: relative; z-index: 1; width: min(920px, 96vw); max-height: 90vh; overflow: auto; background: white; border-radius: 12px; padding: clamp(24px, 4vw, 42px); box-shadow: 0 30px 80px rgba(0,0,0,.28); }
+  .quote-panel { position: relative; z-index: 1; width: min(1080px, 96vw); max-height: 90vh; overflow: auto; background: white; border-radius: 12px; padding: clamp(24px, 4vw, 42px); box-shadow: 0 30px 80px rgba(0,0,0,.28); }
   .quote-panel h2 { font-size: clamp(30px, 4vw, 46px); }
-  .quote-panel > p:not(.eyebrow) { max-width: 680px; color: var(--muted); }
+  .quote-panel > p:not(.eyebrow) { max-width: 760px; color: var(--muted); }
   .quote-close { position: absolute; top: 16px; right: 16px; width: 38px; height: 38px; border: 1px solid var(--line); background: white; font-size: 26px; line-height: 1; cursor: pointer; }
   body.modal-open { overflow: hidden; }
+  .quote-form .obsolete-type-field { display: none !important; }
+  .quote-form .quote-section { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 18px; padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: #f7fafc; }
+  .quote-form .quote-section h3, .quote-form .quote-section p { grid-column: 1 / -1; margin: 0; }
+  .quote-form .quote-section h3 { font-size: 18px; }
+  .quote-form .quote-section p { color: var(--muted); font-size: 14px; }
+  .quote-form [hidden] { display: none !important; }
+  .quote-form select { width: 100%; }
 
   .product-jump { padding-top: 34px !important; padding-bottom: 34px !important; }
   .company-page-grid { display: grid; grid-template-columns: 1fr .85fr; gap: 32px; align-items: center; }
@@ -113,10 +120,182 @@ style.textContent = `
     .why-image-card, .why-image-card img, .project-image-card img { min-height: 320px; }
     .news-row, .home-news-list .news-row { grid-template-columns: 1fr; }
     .news-row img { height: 210px; }
-    .quote-form { grid-template-columns: 1fr; }
+    .quote-form, .quote-form .quote-section { grid-template-columns: 1fr; }
   }
 `;
 document.head.appendChild(style);
+
+const optionList = (items) => items.map((item) => `<option value="${item[0]}">${item[1]}</option>`).join("");
+
+const technicalSelectorHtml = `
+  <section class="quote-section technical-quote-block">
+    <h3>Transformer Technical Selection</h3>
+    <p>Choose mutually exclusive body structure first, then select voltage direction, application scenario and engineering role.</p>
+    <label>Product Structure<select name="product_structure" data-product-structure>
+      ${optionList([
+        ["liquid", "Liquid-Immersed / Liquid-Filled Transformer"],
+        ["dry", "Dry-Type Transformer"],
+        ["substation", "Prefabricated Transformer Substation"],
+        ["accessories", "Transformer Accessories & Components"],
+        ["not_sure", "Not Sure / Need Recommendation"]
+      ])}
+    </select></label>
+    <label>Voltage Transformation<select name="voltage_transformation">
+      ${optionList([
+        ["step_up", "Step-Up"],
+        ["step_down", "Step-Down"],
+        ["isolation", "Isolation / Same Voltage"],
+        ["voltage_regulation", "Voltage Regulation"],
+        ["not_sure", "Not Sure"]
+      ])}
+    </select></label>
+    <label>Application Scenario<select name="application_scenario">
+      ${optionList([
+        ["utility_grid", "Utility Grid"],
+        ["substation", "Substation"],
+        ["solar", "Solar Power Plant"],
+        ["wind", "Wind Farm"],
+        ["bess", "Battery Energy Storage System"],
+        ["data_center", "Data Center"],
+        ["industrial", "Industrial Plant"],
+        ["commercial", "Commercial Building"],
+        ["mining", "Mining"],
+        ["marine", "Marine / Offshore"],
+        ["railway", "Railway / Traction"],
+        ["testing", "Testing Laboratory"],
+        ["other", "Other"]
+      ])}
+    </select></label>
+    <label>Engineering Role<select name="engineering_role">
+      ${optionList([
+        ["distribution", "Distribution"],
+        ["power_substation", "Power / Substation Main Transformer"],
+        ["generation_interconnection", "Generation Interconnection"],
+        ["auxiliary_power", "Facility Service / Auxiliary Power"],
+        ["industrial_load", "Industrial Load Supply"],
+        ["building_distribution", "Building Power Distribution"],
+        ["temporary_mobile", "Temporary / Mobile Power Supply"],
+        ["testing_power", "Testing Power Supply"],
+        ["other", "Other"]
+      ])}
+    </select></label>
+    <label>Primary Technical Function<select name="technical_function">
+      ${optionList([
+        ["general", "General Purpose"],
+        ["isolation", "Isolation"],
+        ["shielded_isolation", "Shielded Isolation"],
+        ["rectifier_converter", "Rectifier / Converter"],
+        ["harmonic", "Harmonic Mitigation"],
+        ["k_rated", "K-Rated / Nonlinear Load"],
+        ["grounding", "Grounding / Earthing"],
+        ["zigzag_grounding", "Zigzag Grounding"],
+        ["phase_shifting", "Phase-Shifting"],
+        ["furnace", "Furnace Duty"],
+        ["traction", "Traction Duty"],
+        ["inverter", "Inverter Duty"],
+        ["low_loss", "Low-Loss Design"],
+        ["low_noise", "Low-Noise Design"],
+        ["fire_resistant", "Fire-Resistant Design"],
+        ["other", "Other"]
+      ])}
+    </select></label>
+  </section>
+  <section class="quote-section" data-structure-detail="liquid">
+    <h3>Liquid-Immersed Structure</h3>
+    <label>Insulating Liquid<select name="insulating_liquid">
+      ${optionList([
+        ["mineral_oil", "Mineral Oil"],
+        ["natural_ester", "Natural Ester"],
+        ["synthetic_ester", "Synthetic Ester"],
+        ["silicone_fluid", "Silicone Fluid"],
+        ["fire_resistant_liquid", "Fire-Resistant Liquid"],
+        ["other", "Other"],
+        ["not_sure", "Not Sure"]
+      ])}
+    </select></label>
+    <label>Tank Structure<select name="tank_structure">
+      ${optionList([
+        ["hermetically_sealed", "Hermetically Sealed"],
+        ["conservator", "Conservator Type"],
+        ["corrugated_tank", "Corrugated Tank"],
+        ["radiator_type", "Radiator Type"],
+        ["gas_cushion", "Gas Cushion Type"],
+        ["other", "Other"],
+        ["not_sure", "Not Sure"]
+      ])}
+    </select></label>
+    <label>Cooling Method<select name="liquid_cooling_method">
+      ${optionList([
+        ["onan", "ONAN"],
+        ["onaf", "ONAF"],
+        ["ofaf", "OFAF"],
+        ["odaf", "ODAF"],
+        ["ofwf_odwf", "OFWF / ODWF"],
+        ["other", "Other"],
+        ["not_sure", "Not Sure"]
+      ])}
+    </select></label>
+  </section>
+  <section class="quote-section" data-structure-detail="dry">
+    <h3>Dry-Type Structure</h3>
+    <label>Insulation / Material System<select name="dry_insulation_system">
+      ${optionList([
+        ["cast_resin", "Cast Resin"],
+        ["resin_encapsulated", "Resin Encapsulated"],
+        ["vpi", "VPI"],
+        ["vpe", "VPE"],
+        ["open_wound", "Open Wound"],
+        ["amorphous_alloy_core", "Amorphous Alloy Core"],
+        ["other", "Other"],
+        ["not_sure", "Not Sure"]
+      ])}
+    </select></label>
+    <label>Enclosure Type<select name="enclosure_type">
+      ${optionList([
+        ["open", "Open Type"],
+        ["ventilated", "Ventilated Enclosure"],
+        ["non_ventilated", "Non-Ventilated Enclosure"],
+        ["sealed", "Sealed Enclosure"],
+        ["indoor", "Indoor Enclosure"],
+        ["outdoor", "Outdoor Enclosure"],
+        ["ip_customized", "IP Customized"],
+        ["other", "Other"],
+        ["not_sure", "Not Sure"]
+      ])}
+    </select></label>
+    <label>Cooling Method<select name="dry_cooling_method">
+      ${optionList([
+        ["an", "AN"],
+        ["af", "AF"],
+        ["an_af", "AN / AF"],
+        ["other", "Other"],
+        ["not_sure", "Not Sure"]
+      ])}
+    </select></label>
+  </section>
+`;
+
+function enhanceQuoteForm(form) {
+  if (!form || form.dataset.technicalSelector === "ready") return;
+  const oldTypeSelect = form.querySelector('select[name="type"]');
+  const oldTypeLabel = oldTypeSelect?.closest("label");
+  const companyInput = form.querySelector('input[name="company"]');
+  const anchor = companyInput?.closest("label") || oldTypeLabel || form.firstElementChild;
+  if (oldTypeLabel) oldTypeLabel.classList.add("obsolete-type-field");
+  if (anchor) anchor.insertAdjacentHTML("afterend", technicalSelectorHtml);
+  const structureSelect = form.querySelector("[data-product-structure]");
+  const updateStructureSections = () => {
+    const value = structureSelect?.value;
+    form.querySelectorAll("[data-structure-detail]").forEach((section) => {
+      section.hidden = section.getAttribute("data-structure-detail") !== value;
+    });
+  };
+  structureSelect?.addEventListener("change", updateStructureSections);
+  updateStructureSections();
+  form.dataset.technicalSelector = "ready";
+}
+
+document.querySelectorAll(".quote-form").forEach(enhanceQuoteForm);
 
 const slider = document.querySelector("[data-hero-slider]");
 if (slider) {
