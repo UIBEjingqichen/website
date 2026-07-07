@@ -4,6 +4,7 @@ export const nav = [
   ["Applications & Projects", "applications.html"],
   ["News", "news.html"],
   ["Company", "about.html"],
+  ["RFQ", "rfq.html"],
   ["Contact", "contact.html"]
 ];
 
