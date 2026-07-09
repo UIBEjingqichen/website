@@ -2,6 +2,7 @@ export const nav = [
   ["Home", "index.html"],
   ["Products", "products.html"],
   ["Applications & Projects", "applications.html"],
+  ["Knowledge", "knowledge/index.html"],
   ["News", "news.html"],
   ["Company", "about.html"],
   ["Contact", "contact.html"]
