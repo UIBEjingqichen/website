@@ -1,6 +1,8 @@
 name: Knowledge Center Build Check
 
 on:
+  push:
+    branches: [feature/knowledge-center-v1]
   pull_request:
     branches: [master]
   workflow_dispatch:
