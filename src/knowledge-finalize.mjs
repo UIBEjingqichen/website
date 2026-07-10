@@ -28,7 +28,8 @@ for (const file of walkHtml(dist)) {
     html = html.replace(/<a[^>]*data-knowledge-nav[^>]*>Knowledge Center<\/a>/, "");
   }
 
+  html = html.replace(/(<link rel="canonical" href="[^"]+)#[^"]+(">)/, "$1$2");
   fs.writeFileSync(file, html);
 }
 
-console.log("Finalized Knowledge Center navigation, topic labels and inquiry forms.");
+console.log("Finalized Knowledge Center navigation, topic labels, redirects and inquiry forms.");
