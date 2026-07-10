@@ -6,20 +6,26 @@
   <title>Transformer Products | Tianyu Electric</title>
   <meta name="description" content="Oil-immersed, dry-type, rectifier and special transformer product categories from Tianyu Electric.">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/knowledge.css">
+  <link rel="canonical" href="/products.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Transformer Products | Tianyu Electric">
+  <meta property="og:description" content="Oil-immersed, dry-type, rectifier and special transformer product categories from Tianyu Electric.">
+  <meta property="og:url" content="/products.html">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="index.html"><span class="brand-mark">TY</span><span><strong>Tianyu Electric</strong><small>Power Primary Equipment</small></span></a>
     <button class="menu-toggle" aria-label="Open navigation" data-menu-toggle>Menu</button>
-    <nav class="main-nav" data-nav><a class="" href="index.html">Home</a><div class="nav-item nav-dropdown"><a class="active" href="products.html">Products</a><div class="dropdown-menu"><a href="products.html#oil-immersed-power-transformer">Oil-Immersed Power Transformer</a><a href="products.html#oil-immersed-energy-saving-transformer">Oil-Immersed Energy-Saving Transformer</a><a href="products.html#dry-type-transformer">Dry-Type Transformer</a><a href="products.html#rectifier-transformer">Rectifier Transformer</a><a href="products.html#special-transformer">Special Transformer</a></div></div><a class="" href="applications.html">Applications & Projects</a><a class="" href="news.html">News</a><div class="nav-item nav-dropdown"><a class="" href="about.html">Company</a><div class="dropdown-menu"><a href="about.html#about">About Us</a><a href="about.html#factory">Factory</a><a href="about.html#quality">Quality</a></div></div><a class="" href="contact.html">Contact</a></nav>
-    <div class="header-actions"><span class="language">EN</span><a class="btn btn-primary" href="contact.html#quote">Get a Quote</a></div>
+    <nav class="main-nav" data-nav><a class="" href="index.html">Home</a><div class="nav-item nav-dropdown"><a class="active" href="products.html">Products</a><div class="dropdown-menu"><a href="products.html#oil-immersed-power-transformer">Oil-Immersed Power Transformer</a><a href="products.html#oil-immersed-energy-saving-transformer">Oil-Immersed Energy-Saving Transformer</a><a href="products.html#dry-type-transformer">Dry-Type Transformer</a><a href="products.html#rectifier-transformer">Rectifier Transformer</a><a href="products.html#special-transformer">Special Transformer</a></div></div><a class="" href="applications.html">Applications & Projects</a><a class="" href="news.html">News</a><a class="" href="knowledge/index.html">Knowledge Center</a><div class="nav-item nav-dropdown"><a class="" href="about.html">Company</a><div class="dropdown-menu"><a href="about.html#about">About Us</a><a href="about.html#factory">Factory</a><a href="about.html#quality">Quality</a></div></div><a class="" href="contact.html">Contact</a></nav>
+    <div class="header-actions"><span class="language">EN</span><button class="btn btn-primary quote-open" type="button" data-quote-open>Get a Free Quote</button></div>
   </header>
-  <main><section class="page-hero"><p class="eyebrow">Products</p><h1>Transformer Product Matrix</h1><p>Five category groups with nine brochure-sourced transformer products. Click any product card to open its detail page.</p><a class="btn btn-primary" href="contact.html#quote">Get a Quote</a></section>
+  <main><section class="page-image-hero"><img src="assets/images/product-oil-power.jpeg" alt="Transformer Products"><div class="image-hero-caption"><p class="eyebrow">Products</p><h1>Transformer Products</h1><p>Oil-immersed, dry-type, rectifier and special transformers organized by project use and product family.</p></div></section>
   <section class="section product-jump"><div class="category-tile-grid compact"><a class="category-tile" href="#oil-immersed-power-transformer" aria-label="View Oil-Immersed Power Transformer">
     <img src="assets/images/product-oil-power.jpeg" alt="Oil-Immersed Power Transformer">
     <h3>Oil-Immersed Power Transformer</h3>
   </a><a class="category-tile" href="#oil-immersed-energy-saving-transformer" aria-label="View Oil-Immersed Energy-Saving Transformer">
-    <img src="assets/images/factory-substation.jpeg" alt="Oil-Immersed Energy-Saving Transformer">
+    <img src="assets/images/product-oil-distribution.jpeg" alt="Oil-Immersed Energy-Saving Transformer">
     <h3>Oil-Immersed Energy-Saving Transformer</h3>
   </a><a class="category-tile" href="#dry-type-transformer" aria-label="View Dry-Type Transformer">
     <img src="assets/images/product-dry-type-red.jpeg" alt="Dry-Type Transformer">
@@ -77,6 +83,28 @@
     </div>
     <div class="footer-bottom"><span>© 2026 Tianyu Electric</span><a href="privacy.html">Privacy Policy</a></div>
   </footer>
+  <div class="quote-modal" data-quote-modal aria-hidden="true">
+    <div class="quote-backdrop" data-quote-close></div>
+    <section class="quote-panel" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title">
+      <button class="quote-close" type="button" aria-label="Close quote form" data-quote-close>×</button>
+      <p class="eyebrow">Quick Inquiry</p>
+      <h2 id="quote-modal-title">Get a Free Quote</h2>
+      <p>Send transformer type, capacity, voltage, country and project notes. Drawings or specifications can be uploaded if available.</p>
+      <form class="quote-form compact">
+    <label>Name<input name="name" required></label>
+    <label>Email<input name="email" type="email" required></label>
+    <label>Company Name<input name="company"></label>
+    <label>Transformer Type<select name="type"><option>Oil-Immersed Power Transformer</option><option>Oil-Immersed Energy-Saving Transformer</option><option>Dry-Type Transformer</option><option>Rectifier Transformer</option><option>Special Transformer</option></select></label>
+    <label>Rated Capacity<input name="capacity" placeholder="e.g. 630 kVA"></label>
+    <label>Rated Voltage<input name="voltage" placeholder="e.g. 10/0.4 kV"></label>
+    <label>Country<input name="country"></label>
+    <label class="full">Message<textarea name="message" rows="4"></textarea></label>
+    <label class="full">Upload File<input name="file" type="file"></label>
+    <button class="btn btn-primary" type="submit">Submit Inquiry</button>
+  </form>
+    </section>
+  </div>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/knowledge.js"></script>
 </body>
 </html>

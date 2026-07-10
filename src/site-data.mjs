@@ -3,6 +3,7 @@ export const nav = [
   ["Products", "products.html"],
   ["Applications & Projects", "applications.html"],
   ["News", "news.html"],
+  ["Knowledge Center", "knowledge/index.html"],
   ["Company", "about.html"],
   ["Contact", "contact.html"]
 ];
