@@ -1,0 +1,49 @@
+name: Knowledge Center Build Check
+
+on:
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build static website
+        run: npm run build
+
+      - name: Validate generated knowledge pages
+        shell: bash
+        run: |
+          test -f dist/knowledge/index.html
+          test -f dist/knowledge/transformer-selection.html
+          test -f dist/knowledge/faq/what-is-transformer-k-factor.html
+          test -f dist/assets/css/knowledge.css
+          test -f dist/assets/js/knowledge.js
+          test -f dist/assets/knowledge-search-index.json
+          test -f dist/robots.txt
+          FAQ_COUNT=$(find dist/knowledge/faq -maxdepth 1 -name '*.html' | wc -l)
+          TOPIC_COUNT=$(find dist/knowledge -maxdepth 1 -name '*.html' ! -name 'index.html' | wc -l)
+          test "$FAQ_COUNT" -eq 12
+          test "$TOPIC_COUNT" -eq 8
+          grep -q 'Knowledge Center' dist/index.html
+          grep -q 'Related Knowledge' dist/products/*.html
+          grep -q 'rel="canonical"' dist/index.html
+
+      - name: Upload generated preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: knowledge-center-preview
+          path: dist
+          if-no-files-found: error
