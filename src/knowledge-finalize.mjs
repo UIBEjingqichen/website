@@ -20,6 +20,7 @@ for (const file of walkHtml(dist)) {
 
   if (relativePath.startsWith("knowledge/")) {
     html = html.replace('<form class="quote-form compact">', '<form class="quote-form compact" data-technical-selector="ready">');
+    html = html.replaceAll(">00 FAQs<", ">Topic Guide<");
   }
 
   const knowledgeLinks = html.match(/>Knowledge Center<\/a>/g) || [];
@@ -30,4 +31,4 @@ for (const file of walkHtml(dist)) {
   fs.writeFileSync(file, html);
 }
 
-console.log("Finalized Knowledge Center navigation and inquiry forms.");
+console.log("Finalized Knowledge Center navigation, topic labels and inquiry forms.");
