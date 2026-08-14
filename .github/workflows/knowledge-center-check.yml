@@ -44,6 +44,7 @@ jobs:
           test -f dist/assets/js/ux-refine-v5.js
           test -f dist/assets/css/ux-refine-v6.css
           test -f dist/assets/js/ux-refine-v6.js
+          test -f dist/assets/css/ux-refine-v7.css
           test -f dist/assets/knowledge-search-index.json
           test -f dist/robots.txt
           FAQ_COUNT=$(find dist/knowledge/faq -maxdepth 1 -name '*.html' | wc -l)
@@ -60,12 +61,14 @@ jobs:
           grep -q 'VIEW MANUFACTURING' dist/index.html
           grep -q 'v5-proof-grid' dist/index.html
           grep -q 'data-v6-hero' dist/index.html
+          grep -q 'class="v7-home"' dist/index.html
+          ! grep -q 'v6-hero-shade' dist/index.html
           grep -q 'Reference Models' dist/products.html
-          grep -q 'data-v6-hero' dist/products.html
-          grep -q 'data-v6-hero' dist/applications.html
-          grep -q 'data-v6-hero' dist/resources.html
-          grep -q 'data-v6-hero' dist/about.html
-          grep -q 'data-v6-hero' dist/news.html
+          grep -q 'v6-page-hero' dist/products.html
+          grep -q 'v6-page-hero' dist/applications.html
+          grep -q 'v6-page-hero' dist/resources.html
+          grep -q 'v6-page-hero' dist/about.html
+          grep -q 'v6-page-hero' dist/news.html
           grep -q 'European-Type Prefabricated Substation' dist/products.html
           grep -q 'Compact Prefabricated Substation' dist/products.html
           grep -q 'Pad-Mounted Transformer' dist/products.html
@@ -90,7 +93,7 @@ jobs:
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email "4189822+github-actions[bot]@users.noreply.github.com"
           git add dist index.html
           if git diff --cached --quiet; then
             echo "Generated files are already up to date."
