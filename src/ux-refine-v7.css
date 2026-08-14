@@ -1,0 +1,140 @@
+:root{--v7-blue:#245f96;--v7-blue-deep:#183e63;--v7-text:#21384f;--v7-muted:#6a7d90;--v7-line:#e6edf3;--v7-pale:#f5f8fb}
+body{background:#fff;color:var(--v7-text)}
+
+/* Image-first heroes. The picture is the canvas, not a card with a dark film. */
+.v6-hero{height:clamp(560px,68vh,690px);min-height:560px;background:#eef3f7;overflow:hidden}
+.v6-hero-slides{height:100%;min-height:inherit}
+.v6-hero-slide{height:100%}
+.v6-hero-slide>img{width:100%;height:100%;object-fit:cover;display:block;filter:none!important;transform:none}
+.v6-hero-shade{display:none!important}
+.v6-hero-copy{inset:0;justify-content:flex-start;align-items:center;text-align:center;padding:clamp(92px,15vh,132px) 24px 0;color:#fff;pointer-events:none}
+.v6-hero-copy p{margin:0 0 8px;font-size:11px;letter-spacing:.2em;font-weight:600;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.v6-hero-copy h1{max-width:760px;margin:0;font-size:clamp(2.05rem,3.8vw,3.35rem);line-height:1.06;font-weight:600;color:#fff;text-shadow:0 3px 18px rgba(0,0,0,.55)}
+.v6-hero-copy span{max-width:650px;margin-top:10px;font-size:clamp(.92rem,1.35vw,1.05rem);line-height:1.55;color:#fff;text-shadow:0 2px 13px rgba(0,0,0,.58)}
+.v6-hero-copy>div{display:none!important}
+.v6-hero-dots{bottom:20px}
+.v6-hero-dots button{width:24px;height:3px;border-radius:3px;background:rgba(255,255,255,.48)}
+.v6-hero-dots button.active{background:#fff}
+.v6-hero-slide:nth-child(1)>img{object-position:center 48%}
+.v6-hero-slide:nth-child(2)>img{object-position:center 45%}
+.v6-hero-slide:nth-child(3)>img{object-position:center 50%}
+
+/* Secondary page banners remain image-led, but lower and calmer than the home hero. */
+.v6-page-hero{width:100%!important;height:clamp(380px,48vh,480px)!important;min-height:380px!important;margin:0 0 34px!important;border-radius:0!important;box-shadow:none!important}
+.v6-page-hero .v6-hero-slides{min-height:380px!important}
+.v6-page-hero .v6-hero-slide>img{height:100%!important}
+.v6-page-hero .v6-hero-copy{padding-top:clamp(72px,10vh,98px)}
+.v6-page-hero .v6-hero-copy h1{font-size:clamp(1.7rem,2.8vw,2.55rem)}
+.v6-page-hero .v6-hero-copy span{font-size:.96rem}
+
+/* Home becomes a continuous editorial flow instead of a stack of framed cards. */
+.v7-home main{background:#fff}
+.v7-home .yw-company-overview,
+.v7-home .yw-one-stop,
+.v7-home .yw-news,
+.v7-home .yw-landscape{width:min(1180px,calc(100% - 40px));margin:0 auto;border:0;border-radius:0;box-shadow:none;background:transparent;padding:74px 0}
+.v7-home .yw-company-overview{padding-top:82px;padding-bottom:68px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(360px,.9fr);gap:70px;align-items:center}
+.v7-home .yw-company-copy{max-width:620px}
+.v7-home .yw-company-copy h2{font-size:clamp(1.7rem,2.5vw,2.35rem);font-weight:600;margin-bottom:18px}
+.v7-home .yw-company-copy p{font-size:.97rem;line-height:1.78;color:#5f7386}
+.v7-home .yw-company-copy .yw-text-arrow{font-size:.82rem;color:var(--v7-blue);font-weight:700}
+
+/* Yawei-like compact metrics: useful context, never the main visual event. */
+.v7-home .yw-stat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 38px;align-items:start}
+.v7-home .yw-stat-grid article{padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;min-height:0!important}
+.v7-home .yw-stat-grid article small{display:none!important}
+.v7-home .yw-stat-grid strong{display:block;font-size:clamp(1.7rem,2.7vw,2.35rem)!important;line-height:1;font-weight:500;color:#214e78!important;margin-bottom:8px}
+.v7-home .yw-stat-grid span{display:block;font-size:.78rem!important;line-height:1.45;letter-spacing:.06em;text-transform:uppercase;color:#7b8c9d!important}
+
+/* Product section remains visual, but the outer card disappears. */
+.v7-home .yw-one-stop{border-top:1px solid #edf1f5}
+.v7-home .yw-centered-head{margin-bottom:30px}
+.v7-home .yw-centered-head p{font-size:11px;letter-spacing:.18em;color:#7890a6}
+.v7-home .yw-centered-head h2{font-size:clamp(1.55rem,2.4vw,2.2rem);font-weight:600}
+.v7-home .yw-product-card{border:0;border-radius:0;box-shadow:none;background:transparent}
+.v7-home .yw-product-image{border-radius:4px;overflow:hidden}
+.v7-home .yw-product-card-copy{padding:13px 2px 0}
+.v7-home .yw-product-card-copy h3{font-size:.96rem;font-weight:600}
+.v7-home .yw-product-card-copy span{font-size:.72rem;color:#6d8398}
+
+/* WHY section becomes one pale band with readable dark copy and minimal chrome. */
+.v7-home .yw-why.v5-why{width:100%;margin:0;border:0;border-radius:0;box-shadow:none;background:var(--v7-pale);padding:76px max(24px,calc((100vw - 1180px)/2));color:var(--v7-text)}
+.v7-home .yw-why.v5-why .light h2,
+.v7-home .yw-why.v5-why .light p,
+.v7-home .yw-why.v5-why .yw-subhead p,
+.v7-home .yw-why.v5-why .yw-subhead a,
+.v7-home .yw-why.v5-why .v5-why-links a,
+.v7-home .yw-why-grid h3,
+.v7-home .yw-why-grid p,
+.v7-home .v5-proof-card h3,
+.v7-home .v5-proof-card p,
+.v7-home .v5-proof-card span{color:var(--v7-text)!important}
+.v7-home .v5-why-links{display:flex;gap:20px;justify-content:center;margin-top:12px}
+.v7-home .v5-why-links a{font-size:.75rem!important;letter-spacing:.08em;text-decoration:none!important;color:var(--v7-blue)!important}
+.v7-home .yw-why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:44px}
+.v7-home .yw-why-grid article{padding:0 30px;background:transparent;border:0;border-left:1px solid #d9e3ec;border-radius:0;box-shadow:none}
+.v7-home .yw-why-grid article:first-child{border-left:0;padding-left:0}
+.v7-home .yw-why-grid article:last-child{padding-right:0}
+.v7-home .yw-why-grid article>span{font-size:.72rem;color:#8ba0b4!important;letter-spacing:.12em}
+.v7-home .yw-why-grid h3{margin:10px 0 8px;font-size:1rem!important;font-weight:600}
+.v7-home .yw-why-grid p{margin:0;font-size:.88rem!important;line-height:1.65;color:#62778b!important}
+.v7-home .v5-cert-block{margin-top:54px;padding:0;border:0;border-radius:0;background:transparent}
+.v7-home .yw-subhead{margin-bottom:12px}
+.v7-home .yw-subhead p{font-size:.78rem;letter-spacing:.15em;color:#667d91!important}
+.v7-home .yw-subhead a{font-size:.73rem;color:var(--v7-blue)!important}
+.v7-home .v5-coverflow-arrow{width:34px;height:34px;box-shadow:none!important}
+.v7-home .v5-proof-grid{margin-top:58px;gap:38px}
+.v7-home .v5-proof-card{display:grid;grid-template-columns:42% 1fr;align-items:stretch;overflow:hidden;border:0;border-radius:0;box-shadow:none;background:transparent}
+.v7-home .v5-proof-image{min-height:220px;overflow:hidden}
+.v7-home .v5-proof-image img{width:100%;height:100%;object-fit:cover;display:block}
+.v7-home .v5-proof-card>div:last-child{padding:22px 0 18px 26px}
+.v7-home .v5-proof-card>div:last-child>p{font-size:.72rem!important;letter-spacing:.14em;color:#7890a6!important}
+.v7-home .v5-proof-card h3{font-size:1.05rem!important;line-height:1.45;margin:8px 0}
+.v7-home .v5-proof-card span{display:block;font-size:.87rem;line-height:1.62;color:#667a8d!important}
+.v7-home .v5-proof-card strong{display:inline-block;margin-top:15px;font-size:.73rem;color:var(--v7-blue)!important}
+
+/* News and industrial landscape stay part of the same page, without giant enclosing boxes. */
+.v7-home .yw-news{border-top:1px solid #edf1f5}
+.v7-home .yw-news-head h2{font-size:clamp(1.45rem,2.2vw,2rem)}
+.v7-home .yw-news-card{border:0;border-radius:0;box-shadow:none;background:transparent;padding-left:0;padding-right:24px}
+.v7-home .yw-news-card.featured{background:transparent}
+.v7-home .yw-news-card h3{font-size:1rem}
+.v7-home .yw-news-card span{font-size:.87rem;line-height:1.62}
+.v7-home .yw-landscape{border-top:1px solid #edf1f5;padding-bottom:88px}
+.v7-home .yw-landscape-grid{gap:10px}
+.v7-home .yw-landscape-grid figure{border:0;border-radius:2px;box-shadow:none;background:#eef3f6;overflow:hidden}
+.v7-home .yw-landscape-grid img{width:100%;height:100%;object-fit:cover;filter:none!important;transition:transform .45s ease}
+.v7-home .yw-landscape-grid figure:hover img{transform:scale(1.018)}
+
+/* First-level pages: remove the extra outer-card feeling under their large image banners. */
+.section.yw-product-index,.section.evidence-section,.section#projects,.yw-news-page{width:min(1180px,calc(100% - 40px));margin:0 auto 48px;border:0!important;border-radius:0!important;box-shadow:none!important;background:#fff!important;padding:58px 0!important}
+.section.yw-product-index .yw-index-title h2,.section.evidence-section .section-head h2,.section#projects .section-head h2,.yw-news-page .yw-index-title h2{font-size:clamp(1.45rem,2.25vw,2rem)!important}
+
+/* Product pages keep structure, but reduce showroom-card heaviness. */
+.v5-family-layout,.v5-family-applications,.v5-model-hero,.v5-model-overview,.v5-model-documents,.v5-model-apps,.inquiry-cta{box-shadow:none!important;border-color:#e6edf3!important}
+.v5-family-banner{box-shadow:none!important}
+.v5-model-hero{padding:20px}
+.v6-model-main{border-radius:4px!important;border-color:#e5ebf0!important;background:#f7f9fb}
+.v6-model-main figcaption{font-size:.8rem;color:#75879a;padding:9px 12px}
+.v6-model-thumbs button{border-radius:3px!important}
+.v5-model-specs>div{background:#f5f8fb!important;border-radius:6px!important}
+.v5-evidence-card{border-radius:4px!important;box-shadow:none!important}
+.v5-evidence-meta{padding:10px 11px!important}
+.v5-evidence-meta strong{font-size:.8rem!important}.v5-evidence-meta span{font-size:.75rem!important}
+
+@media(max-width:900px){
+  .v7-home .yw-company-overview{grid-template-columns:1fr;gap:38px}
+  .v7-home .yw-why-grid{grid-template-columns:1fr;gap:26px}
+  .v7-home .yw-why-grid article,.v7-home .yw-why-grid article:first-child,.v7-home .yw-why-grid article:last-child{padding:0 0 24px;border-left:0;border-bottom:1px solid #d9e3ec}
+  .v7-home .yw-why-grid article:last-child{border-bottom:0;padding-bottom:0}
+  .v7-home .v5-proof-card{grid-template-columns:1fr}
+  .v7-home .v5-proof-card>div:last-child{padding:18px 0 0}
+}
+@media(max-width:680px){
+  .v6-hero{height:470px;min-height:470px}.v6-hero-slides{min-height:470px}.v6-hero-copy{padding:74px 18px 0}.v6-hero-copy h1{font-size:2rem}.v6-hero-copy span{font-size:.9rem;max-width:92%}
+  .v6-page-hero{height:330px!important;min-height:330px!important}.v6-page-hero .v6-hero-slides{min-height:330px!important}.v6-page-hero .v6-hero-copy{padding-top:58px}.v6-page-hero .v6-hero-copy h1{font-size:1.65rem}
+  .v7-home .yw-company-overview,.v7-home .yw-one-stop,.v7-home .yw-news,.v7-home .yw-landscape{width:calc(100% - 28px);padding:54px 0}
+  .v7-home .yw-stat-grid{gap:22px 24px}.v7-home .yw-stat-grid strong{font-size:1.8rem!important}.v7-home .yw-stat-grid span{font-size:.68rem!important}
+  .v7-home .yw-why.v5-why{padding:56px 18px}
+  .section.yw-product-index,.section.evidence-section,.section#projects,.yw-news-page{width:calc(100% - 28px);padding:46px 0!important}
+}
