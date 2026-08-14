@@ -40,19 +40,32 @@ jobs:
           test -f dist/assets/js/yawei-refine.js
           test -f dist/assets/css/visual-refine-v4.css
           test -f dist/assets/js/visual-refine-v4.js
+          test -f dist/assets/css/ux-refine-v5.css
+          test -f dist/assets/js/ux-refine-v5.js
           test -f dist/assets/knowledge-search-index.json
           test -f dist/robots.txt
           FAQ_COUNT=$(find dist/knowledge/faq -maxdepth 1 -name '*.html' | wc -l)
           TOPIC_COUNT=$(find dist/knowledge -maxdepth 1 -name '*.html' ! -name 'index.html' | wc -l)
+          MODEL_COUNT=$(find dist/products -mindepth 2 -maxdepth 2 -name '*.html' ! -name 'index.html' | wc -l)
           test "$FAQ_COUNT" -eq 12
           test "$TOPIC_COUNT" -eq 8
+          test "$MODEL_COUNT" -ge 13
           grep -q 'TRANSFORMER CUSTOMIZED ONE-STOP SOLUTION' dist/index.html
           grep -q 'EXCELLENT INDUSTRIAL LANDSCAPE' dist/index.html
           grep -q 'data-count-up' dist/index.html
-          grep -q 'certificate-3d-stage' dist/index.html
-          grep -q 'data-certificate-3d' dist/index.html
+          grep -q 'v5-certificate-coverflow' dist/index.html
+          grep -q 'VIEW CASES' dist/index.html
+          grep -q 'VIEW MANUFACTURING' dist/index.html
+          grep -q 'v5-proof-grid' dist/index.html
           grep -q 'News' dist/index.html
           grep -q 'Enabling Products' dist/products.html
+          grep -q 'id="products"' dist/products.html
+          grep -q 'v5-model-grid' dist/products/high-voltage-power-transformer/index.html
+          test -f dist/products/high-voltage-power-transformer/sz22-50000-110-nx1.html
+          test -f dist/products/high-voltage-power-transformer/sfz-150000-132.html
+          test -f dist/products/high-voltage-power-transformer/ssz20-240000-220.html
+          test -f dist/products/high-voltage-power-transformer/ssz22-240000-220-nx1.html
+          grep -q 'Documents shown below apply to this exact model only.' dist/products/high-voltage-power-transformer/sz22-50000-110-nx1.html
           grep -q 'rel="canonical"' dist/index.html
 
       - name: Upload generated preview
