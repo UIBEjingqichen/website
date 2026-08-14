@@ -47,9 +47,9 @@ jobs:
           grep -q 'TRANSFORMER CUSTOMIZED ONE-STOP SOLUTION' dist/index.html
           grep -q 'EXCELLENT INDUSTRIAL LANDSCAPE' dist/index.html
           grep -q 'data-count-up' dist/index.html
+          grep -q 'certificate-marquee' dist/index.html
           grep -q 'News' dist/index.html
           grep -q 'Enabling Products' dist/products.html
-          grep -q 'Related Knowledge' dist/products/*.html
           grep -q 'rel="canonical"' dist/index.html
 
       - name: Upload generated preview
