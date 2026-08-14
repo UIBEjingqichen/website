@@ -38,8 +38,7 @@ function nav(active = "") {
     ["Home", "../../index.html"],
     ["Products", "../../products.html"],
     ["Applications & Projects", "../../applications.html"],
-    ["News", "../../news.html"],
-    ["Knowledge Center", "../index.html"],
+    ["Resources", "../../resources.html"],
     ["Company", "../../about.html"],
     ["Contact", "../../contact.html"]
   ];
@@ -53,7 +52,7 @@ function knowledgeShell({ title, description, canonical, content, depth = "../",
     ["Home", homeHref],
     ["Products", `${depth}products.html`],
     ["Applications & Projects", `${depth}applications.html`],
-    ["News", `${depth}news.html`],
+    ["Resources", `${depth}resources.html`],
     ["Knowledge Center", knowledgeHref],
     ["Company", `${depth}about.html`],
     ["Contact", `${depth}contact.html`]
@@ -242,7 +241,7 @@ function injectBaseEnhancements(file) {
   }
   if (relativePath.startsWith("products/") && !html.includes("data-product-faqs")) {
     const faqs = relatedFaqsForProduct(relativePath).map((slug) => faqBySlug.get(slug)).filter(Boolean);
-    const section = `<section class="section pale product-faq-links" data-product-faqs><div class="section-head"><div><p class="eyebrow">Related Knowledge</p><h2>Questions to confirm before project selection</h2></div></div><div class="knowledge-faq-grid">${faqs.map((faq) => `<a class="knowledge-faq-card" href="../knowledge/faq/${faq.slug}.html"><p class="eyebrow">FAQ</p><h3>${esc(faq.question)}</h3><p>${esc(faq.summary)}</p><span>Read engineering answer →</span></a>`).join("")}</div></section>`;
+    const section = `<section class="section pale product-faq-links" data-product-faqs><div class="section-head"><div><p class="eyebrow">Related Knowledge</p><h2>Questions to confirm before project selection</h2></div></div><div class="knowledge-faq-grid">${faqs.map((faq) => `<a class="knowledge-faq-card" href="${depth}knowledge/faq/${faq.slug}.html"><p class="eyebrow">FAQ</p><h3>${esc(faq.question)}</h3><p>${esc(faq.summary)}</p><span>Read engineering answer →</span></a>`).join("")}</div></section>`;
     html = html.replace("</main>", `${section}</main>`);
   }
   if (!html.includes("assets/js/knowledge.js")) html = html.replace("</body>", `  <script src="${depth}assets/js/knowledge.js"></script>\n</body>`);
@@ -262,7 +261,7 @@ function writeSearchIndex() {
 }
 
 function writeCrawlerFiles() {
-  const paths = walkHtml(dist).map((file) => path.relative(dist, file).replaceAll(path.sep, "/")).filter((item) => !["projects.html", "factory.html", "quality.html"].includes(item)).sort();
+  const paths = walkHtml(dist).map((file) => path.relative(dist, file).replaceAll(path.sep, "/")).sort();
   fs.writeFileSync(path.join(dist, "sitemap-paths.txt"), paths.map((item) => `/${item}`).join("\n") + "\n");
   const robots = ["User-agent: *", "Allow: /"];
   if (siteUrl) {
@@ -284,9 +283,6 @@ function buildKnowledgeCenter() {
   knowledgeFaqs.forEach((faq) => fs.writeFileSync(path.join(faqDir, `${faq.slug}.html`), faqPage(faq)));
   writeSearchIndex();
   walkHtml(dist).forEach(injectBaseEnhancements);
-  writeRedirect("projects.html", "applications.html#projects");
-  writeRedirect("factory.html", "about.html#factory");
-  writeRedirect("quality.html", "about.html#quality");
   writeCrawlerFiles();
 }
 

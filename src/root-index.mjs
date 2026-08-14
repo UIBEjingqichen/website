@@ -10,10 +10,7 @@ const rootIndexPath = path.join(root, "index.html");
 let html = fs.readFileSync(distIndexPath, "utf8");
 
 if (!html.includes("<base href=\"dist/\">")) {
-  html = html.replace(
-    "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
-    "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <base href=\"dist/\">"
-  );
+  html = html.replace(/(<meta name="viewport"[^>]*>)/, '$1\n  <base href="dist/">');
 }
 
 fs.writeFileSync(rootIndexPath, html);

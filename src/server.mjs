@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "dist");
 const port = Number(process.env.PORT || 4173);
-const types = { ".html": "text/html", ".css": "text/css", ".js": "application/javascript", ".jpeg": "image/jpeg", ".jpg": "image/jpeg", ".png": "image/png", ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document" };
+const types = { ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".js": "application/javascript; charset=utf-8", ".json": "application/json; charset=utf-8", ".jpeg": "image/jpeg", ".jpg": "image/jpeg", ".png": "image/png", ".webp": "image/webp", ".pdf": "application/pdf", ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document" };
 
 http.createServer((req, res) => {
   const url = new URL(req.url, `http://localhost:${port}`);

@@ -21,6 +21,16 @@ const imageRenameMap = [
   ["image64.jpeg", "case-booster-substation.jpeg", "Booster substation case image"]
 ];
 
+const requiredV2Media = [
+  "products/oil-distribution-transformer-01.webp",
+  "products/power-transformer-220kv-240mva-ssz22.webp",
+  "products/dry-type-transformer-scb18-2500.webp",
+  "products/dry-type-prefabricated-substation-01.webp",
+  "products/oil-prefabricated-substation-01.webp",
+  "products/american-combined-transformer-01.webp",
+  "evidence/manifest.json"
+];
+
 function copyIfNeeded(from, to) {
   const oldPath = path.join(mediaDir, from);
   const semanticPath = path.join(mediaDir, to);
@@ -45,4 +55,9 @@ for (const [legacyName, semanticName] of imageRenameMap) {
   copyIfNeeded(legacyName, semanticName);
 }
 
-console.log("Image naming sync complete. Edit the semantic filenames in source-media, then run this script before build.");
+const missingV2Media = requiredV2Media.filter((relativePath) => !fs.existsSync(path.join(mediaDir, relativePath)));
+if (missingV2Media.length) {
+  throw new Error(`Missing V2 media: ${missingV2Media.join(", ")}. Run tools/inspect_sources.py and tools/prepare_site_media.py.`);
+}
+
+console.log(`Image naming sync complete. Verified ${requiredV2Media.length} V2 media anchors.`);

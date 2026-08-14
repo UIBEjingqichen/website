@@ -1,245 +1,297 @@
 export const categories = [
   {
-    name: "Oil-Immersed Power Transformer",
-    slug: "oil-immersed-power-transformer",
-    description: "High-voltage oil-immersed transformers for substations, grid interconnection and industrial transmission.",
-    tags: ["220 kV and below"]
+    id: "oil-immersed-distribution-transformer",
+    name: "Oil-Immersed Distribution Transformer",
+    shortName: "Distribution Transformer",
+    description: "S(B)20 and S(B)22 liquid-filled distribution transformers for efficient grid and industrial distribution.",
+    image: "products/oil-distribution-transformer-02.webp"
   },
   {
-    name: "Oil-Immersed Energy-Saving Transformer",
-    slug: "oil-immersed-energy-saving-transformer",
-    description: "S20 and SZ20 oil-immersed energy-saving transformers for grid renovation, outdoor power supply and stable voltage output.",
-    tags: ["S20", "SZ20 on-load"]
+    id: "high-voltage-power-transformer",
+    name: "High-Voltage Power Transformer",
+    shortName: "Power Transformer",
+    description: "110 kV, 132 kV and 220 kV main transformers verified by independent type-test reports.",
+    image: "products/power-transformer-220kv-240mva-ssz22.webp"
   },
   {
-    name: "Dry-Type Transformer",
-    slug: "dry-type-transformer",
-    description: "Epoxy resin cast and amorphous alloy dry-type transformers for indoor and fire-sensitive loads.",
-    tags: ["SC(B)10-18", "SC(B)14/18", "SC(B)17/19"]
+    id: "cast-resin-dry-type-transformer",
+    name: "Cast Resin Dry-Type Transformer",
+    shortName: "Dry-Type Transformer",
+    description: "SCB18 epoxy-resin cast dry-type transformers for indoor, fire-sensitive and infrastructure loads.",
+    image: "products/dry-type-transformer-scb18-2500.webp"
   },
+  {
+    id: "dry-type-prefabricated-substation",
+    name: "Dry-Type Prefabricated Substation",
+    shortName: "European-Type Substation",
+    description: "35 kV and below prefabricated substations with dry-type transformers for renewable and distribution projects.",
+    image: "products/dry-type-prefabricated-substation-01.webp"
+  },
+  {
+    id: "oil-immersed-prefabricated-substation",
+    name: "Oil-Immersed Prefabricated Substation",
+    shortName: "GY Series / China-Type Substation",
+    description: "Compact 35 kV prefabricated substations with liquid-filled transformers for demanding outdoor service.",
+    image: "products/oil-prefabricated-substation-01.webp"
+  },
+  {
+    id: "american-type-combined-transformer",
+    name: "American-Type Combined Transformer",
+    shortName: "American-Type / Pad-Mounted Solution",
+    description: "Integrated pad-mounted transformer solutions for renewable energy and compact distribution sites.",
+    image: "products/american-combined-transformer-01.webp"
+  }
+];
+
+export const products = [
+  {
+    id: "oil-immersed-distribution-transformer",
+    slug: "oil-immersed-distribution-transformer",
+    name: "Oil-Immersed Distribution Transformer",
+    family: "Distribution Transformer",
+    strapline: "S(B)20 / S(B)22 series for efficient distribution systems",
+    description: "A sealed, low-loss distribution transformer family developed for industrial loads, utility distribution and noise-sensitive sites. The published series capability is kept separate from the exact 630 kVA and 1600 kVA models covered by the attached third-party reports.",
+    seriesCapability: {
+      voltage: "22 kV and below",
+      capacity: "Up to 4,000 kVA",
+      frequency: "50 / 60 Hz",
+      cooling: "ONAN",
+      installation: "Outdoor",
+      standard: "GB 20052 / IEC project scope"
+    },
+    keyParameters: [
+      ["Series", "S(B)20 / S(B)22"],
+      ["Maximum design capacity", "4,000 kVA"],
+      ["Noise", "≤ 50 dB"],
+      ["Efficiency direction", "GB 20052 Grade 1 available"],
+      ["Construction", "Sealed liquid-filled design"]
+    ],
+    gallery: [
+      ["products/oil-distribution-transformer-02.webp", "Oil-immersed distribution transformer with radiators and conservator"],
+      ["products/oil-distribution-transformer-01.webp", "Compact oil-immersed distribution transformer product view"],
+      ["products/oil-distribution-transformer-03.webp", "Oil-immersed distribution transformer for compact equipment integration"]
+    ],
+    applications: ["Industrial power distribution", "Utility distribution networks", "Commercial and residential distribution", "Noise-sensitive sites"],
+    features: ["Low-loss silicon steel core", "Sealed design reduces contact between oil and outside air", "Low-noise operation", "Copper winding options", "Project-specific voltage and impedance design"],
+    productRange: [["Rated voltage", "Up to 22 kV"], ["Rated capacity", "Up to 4,000 kVA"], ["Verified models", "630 kVA and 1600 kVA at 22 kV"], ["Energy efficiency", "Tier 2 models independently evaluated"]],
+    technicalParameters: [["Phases", "Three phase"], ["Cooling", "ONAN"], ["Installation", "Outdoor"], ["Frequency", "50 / 60 Hz"], ["Winding material", "Project-specific"], ["Tap range", "Project-specific"]],
+    evidenceIds: ["oil-distribution-1600kva-tuv", "oil-distribution-1600kva-type-test", "oil-distribution-1600kva-efficiency", "oil-distribution-1600kva-ce", "oil-distribution-630kva-tuv", "oil-distribution-630kva-type-test", "oil-distribution-630kva-efficiency", "oil-distribution-630kva-ce"],
+    drawingIds: [],
+    testedModels: ["S-M-630/22-Tier2", "S-M-1600/22-Tier2"],
+    standards: ["IEC 60076 series", "GB 20052"],
+    faq: [
+      ["What is the difference between series capability and a tested model?", "Series capability describes the configurable product family. A tested model is the exact capacity, voltage and construction covered by a named report."],
+      ["Can the voltage and impedance be customized?", "Yes. Final ratings, tapping, impedance, accessories and losses are reviewed against the project specification."]
+    ]
+  },
+  {
+    id: "high-voltage-power-transformer",
+    slug: "high-voltage-power-transformer",
+    name: "High-Voltage Power Transformer",
+    family: "Power Transformer",
+    strapline: "Main transformer solutions for 110 kV to 220 kV systems",
+    description: "Oil-immersed power transformers for substations, grid interconnection and major industrial systems. Four attached independent reports provide model-specific evidence from 50 MVA / 110 kV through 240 MVA / 220 kV.",
+    seriesCapability: {
+      voltage: "Up to 220 kV",
+      capacity: "Project-engineered",
+      frequency: "50 Hz",
+      cooling: "ONAN / ONAF",
+      installation: "Outdoor",
+      standard: "Project specification"
+    },
+    keyParameters: [["Voltage range", "110 / 132 / 220 kV verified"], ["Verified capacity", "50 / 150 / 240 MVA"], ["Regulation", "On-load tap-changing models"], ["Construction", "Three-phase oil-immersed"]],
+    gallery: [
+      ["products/power-transformer-220kv-240mva-ssz22.webp", "240 MVA 220 kV oil-immersed power transformer test sample"],
+      ["products/power-transformer-220kv-240mva-ssz20.webp", "SSZ20 240 MVA 220 kV power transformer test sample"],
+      ["products/power-transformer-132kv-150mva.webp", "150 MVA 132 kV oil-immersed power transformer test sample"],
+      ["products/power-transformer-110kv-50mva.webp", "50 MVA 110 kV oil-immersed power transformer test sample"]
+    ],
+    applications: ["Utility substations", "Renewable generation interconnection", "Industrial main substations", "Energy storage", "Rail transit power systems"],
+    features: ["Low-loss magnetic circuit design", "Insulation coordination for high-voltage duty", "Short-circuit withstand design", "Project-specific cooling and monitoring", "Transport-oriented mechanical design"],
+    productRange: [["Voltage", "110 kV, 132 kV and 220 kV verified"], ["Capacity", "50 MVA, 150 MVA and 240 MVA verified"], ["Tap changing", "On-load regulation models included"], ["System role", "Main transformer / grid interconnection"]],
+    technicalParameters: [["Phases", "Three phase"], ["Cooling", "ONAN / ONAF by design"], ["Installation", "Outdoor"], ["Tap changer", "Project-specific"], ["Monitoring", "Project-specific"], ["Transport limits", "Reviewed for destination and route"]],
+    evidenceIds: ["power-transformer-50mva-110kv", "power-transformer-150mva-132kv", "power-transformer-240mva-220kv-ssz20", "power-transformer-240mva-220kv-ssz22"],
+    drawingIds: [],
+    testedModels: ["SZ22-50000/110-NX1", "SFZ-150000/132", "SSZ20-240000/220", "SSZ22-240000/220-NX1"],
+    standards: [],
+    faq: [
+      ["What information is needed for a power transformer quotation?", "Provide system voltages, capacity, vector group, impedance, tapping range, losses, cooling, insulation levels, accessories, site conditions and applicable standards."],
+      ["Are 220 kV reports available?", "Yes. Two independent 240 MVA / 220 kV report sets are listed in Tested & Verified."]
+    ]
+  },
+  {
+    id: "cast-resin-dry-type-transformer",
+    slug: "cast-resin-dry-type-transformer",
+    name: "Cast Resin Dry-Type Transformer",
+    family: "Dry-Type Transformer",
+    strapline: "SCB18 epoxy-resin cast transformers for indoor distribution",
+    description: "Cast-resin dry-type transformers for fire-sensitive, indoor and infrastructure applications. The current evidence set covers SCB18 1000 kVA and 2500 kVA models at 10 kV.",
+    seriesCapability: {
+      voltage: "35 kV and below",
+      capacity: "Up to 2,500 kVA shown",
+      frequency: "50 / 60 Hz",
+      cooling: "AN / AF",
+      installation: "Indoor",
+      standard: "Project specification"
+    },
+    keyParameters: [["Series", "SCB18"], ["Verified models", "1000 / 2500 kVA"], ["Verified voltage", "10 kV"], ["Cooling", "AN / AF"], ["Insulation", "Cast resin"]],
+    gallery: [
+      ["products/dry-type-transformer-scb18-2500.webp", "SCB18 2500 kVA 10 kV cast resin dry-type transformer test sample"],
+      ["products/dry-type-transformer-scb18-1000.webp", "SCB18 1000 kVA 10 kV cast resin dry-type transformer test sample"],
+      ["product-dry-type-transformer-red.jpeg", "Cast resin dry-type transformer winding and core assembly"],
+      ["product-cast-resin-dry-type-transformer.jpeg", "Cast resin dry-type transformer production view"]
+    ],
+    applications: ["Commercial buildings", "Hospitals", "Charging infrastructure", "Industrial facilities", "Rail and public infrastructure"],
+    features: ["Flame-retardant cast-resin insulation", "Low maintenance", "Low partial-discharge design direction", "Temperature monitoring options", "Protective enclosure options"],
+    productRange: [["Voltage", "35 kV and below"], ["Verified capacity", "1000 kVA and 2500 kVA"], ["Verified model", "SCB18"], ["Cooling", "AN / AF"]],
+    technicalParameters: [["Phases", "Three phase"], ["Frequency", "50 / 60 Hz"], ["Vector groups", "Dyn11 / Yyn0 / project-specific"], ["Cooling", "AN / AF"], ["Enclosure", "Optional by project"], ["Temperature control", "Optional monitoring and fan control"]],
+    evidenceIds: ["dry-type-scb18-1000kva-10kv", "dry-type-scb18-2500kva-10kv"],
+    drawingIds: [],
+    testedModels: ["SCB18-1000/10-NX1", "SCB18-2500/10"],
+    standards: [],
+    faq: [
+      ["Where are cast-resin transformers typically installed?", "They are commonly considered for indoor, fire-sensitive, occupied or environmentally constrained sites."],
+      ["Does the series include forced-air cooling?", "AN and AF arrangements can be reviewed for the selected model and enclosure."]
+    ]
+  },
+  {
+    id: "dry-type-prefabricated-substation",
+    slug: "dry-type-prefabricated-substation",
+    name: "Dry-Type Prefabricated Substation",
+    family: "Prefabricated Substation",
+    strapline: "European-Type Substation with a dry-type transformer inside",
+    description: "A 35 kV and below prefabricated substation integrating primary equipment, transformer and low-voltage distribution. Its dry-type transformer configuration avoids oil leakage risk and suits renewable and environmentally sensitive sites.",
+    seriesCapability: {
+      voltage: "35 kV and below",
+      capacity: "Up to 12,500 kVA",
+      frequency: "50 Hz",
+      cooling: "AN / AF",
+      installation: "Outdoor",
+      standard: "IEC 62271-202 project scope"
+    },
+    keyParameters: [["Primary voltage", "6 / 12 / 35 kV"], ["Secondary voltage", "400 / 690 / 800 / 1140 V"], ["Maximum capacity", "12,500 kVA"], ["Transformer", "Dry type"], ["Installation", "Outdoor prefabricated"]],
+    gallery: [
+      ["products/dry-type-prefabricated-substation-01.webp", "35 kV dry-type prefabricated substation exterior"],
+      ["products/dry-type-prefabricated-substation-02.webp", "Dry-type prefabricated substation installed at an industrial site"],
+      ["products/dry-type-prefabricated-substation-03.webp", "Dry-type prefabricated substation at a renewable energy project"],
+      ["products/dry-type-prefabricated-substation-04.webp", "Dry-type prefabricated substation production process"],
+      ["products/dry-type-prefabricated-substation-05.webp", "Prefabricated substation factory assembly"],
+      ["products/dry-type-prefabricated-substation-06.webp", "Dry-type transformer compartment inside a prefabricated substation"]
+    ],
+    applications: ["Wind power", "Solar power", "Energy storage", "Urban distribution", "Environmentally sensitive sites"],
+    features: ["Integrated transformation, protection and distribution", "Dry-type transformer inside", "Flexible primary and secondary schemes", "Factory assembly reduces site work", "Monitoring and remote-operation options"],
+    productRange: [["Primary voltage", "Up to 35 kV"], ["Secondary voltage", "400 to 1140 V"], ["Series capability", "Up to 12,500 kVA"], ["Verified models", "6300 / 10000 / 12500 kVA"]],
+    technicalParameters: [["Enclosure", "Outdoor prefabricated"], ["Transformer", "Dry type"], ["Cooling", "AN / AF"], ["Protection", "Project-specific"], ["Monitoring", "Optional"], ["Cable entry", "Project-specific"]],
+    evidenceIds: ["european-substation-6300kva-35kv", "european-substation-10000kva-35kv", "european-substation-12500kva-35kv"],
+    drawingIds: ["european-substation-6300kva-35kv-outline", "european-substation-10000kva-35kv-outline", "european-substation-12500kva-35kv-outline"],
+    testedModels: ["YB-40.5/1.14-6300", "YB-40.5/1.14-10000", "YB-40.5/1.14-12500"],
+    standards: ["IEC 62271-202 project scope"],
+    faq: [
+      ["Why use a dry-type transformer inside the substation?", "It removes transformer-oil leakage risk and can suit fire-sensitive or environmentally constrained projects."],
+      ["Can the primary and secondary schemes be customized?", "Yes. Switchgear, protection, metering, auxiliary power, cable entry and enclosure design are reviewed for each project."]
+    ]
+  },
+  {
+    id: "oil-immersed-prefabricated-substation",
+    slug: "oil-immersed-prefabricated-substation",
+    name: "Oil-Immersed Prefabricated Substation",
+    family: "Prefabricated Substation",
+    strapline: "GY Series / China-Type Substation for compact outdoor projects",
+    description: "A 35 kV and below prefabricated substation with an oil-immersed transformer, high-voltage equipment and low-voltage distribution integrated into a compact outdoor package.",
+    seriesCapability: {
+      voltage: "35 kV and below",
+      capacity: "Up to 15,000 kVA",
+      frequency: "50 Hz",
+      cooling: "ONAN",
+      installation: "Outdoor",
+      standard: "Project specification"
+    },
+    keyParameters: [["Primary voltage", "6 / 12 / 35 kV"], ["Secondary voltage", "400 / 540 / 690 / 800 / 950 / 1140 V"], ["Maximum capacity", "15,000 kVA"], ["Transformer", "Oil immersed"], ["Form", "Compact prefabricated"]],
+    gallery: [
+      ["products/oil-prefabricated-substation-01.webp", "Oil-immersed prefabricated substation with transformer and equipment compartments"],
+      ["products/oil-prefabricated-substation-02.webp", "GY series substation installed for a water-side renewable project"],
+      ["products/oil-prefabricated-substation-03.webp", "Oil-immersed prefabricated substation project unit"],
+      ["products/oil-prefabricated-substation-04.webp", "Low-voltage compartment in a prefabricated substation"],
+      ["products/oil-prefabricated-substation-05.webp", "Transformer and busbar compartment detail"],
+      ["products/oil-prefabricated-substation-06.webp", "Prefabricated substation factory inspection"]
+    ],
+    applications: ["Offshore and coastal solar", "Wind power", "Utility distribution", "Energy storage", "Industrial power"],
+    features: ["Compact footprint", "High enclosure protection direction", "Integrated protection and distribution", "Factory assembly and testing", "Adaptable to demanding outdoor environments"],
+    productRange: [["Primary voltage", "Up to 35 kV"], ["Secondary voltage", "400 to 1140 V"], ["Series capability", "Up to 15,000 kVA"], ["Verified models", "10000 / 12500 kVA"]],
+    technicalParameters: [["Transformer", "Oil immersed"], ["Cooling", "ONAN"], ["Enclosure", "Outdoor"], ["Protection level", "Project-specific"], ["Anti-corrosion", "Project-specific"], ["Monitoring", "Optional"]],
+    evidenceIds: ["china-substation-10000kva-35kv", "china-substation-12500kva-35kv"],
+    drawingIds: ["china-substation-10000kva-35kv-outline", "china-substation-12500kva-35kv-outline"],
+    testedModels: ["YB-40.5-10000", "YB-40.5/1.14-12500 (GY)"],
+    standards: [],
+    faq: [
+      ["How does this differ from the dry-type prefabricated substation?", "This family integrates an oil-immersed transformer and offers a higher published maximum series capacity."],
+      ["Can it be designed for coastal service?", "Anti-corrosion, sealing, ventilation, structural loads and site environmental data are reviewed during project design."]
+    ]
+  },
+  {
+    id: "american-type-combined-transformer",
+    slug: "american-type-combined-transformer",
+    name: "American-Type Combined Transformer",
+    family: "Combined Transformer",
+    strapline: "Compact pad-mounted solution for renewable and distribution sites",
+    description: "An integrated transformer package placing the transformer body, high-voltage load switch and fuse components within a compact oil-filled assembly. The workbook records a ZGS22-4000/35/0.8 certificate item, but the separate PDF asset has not been supplied.",
+    seriesCapability: {
+      voltage: "Up to 35 kV",
+      capacity: "Up to 4,500 kVA",
+      frequency: "50 Hz",
+      cooling: "ONAN",
+      installation: "Outdoor / pad mounted",
+      standard: "Project specification"
+    },
+    keyParameters: [["Maximum capacity", "4,500 kVA"], ["Protection level", "IP54"], ["HV breaking capacity", "31.5 kA"], ["Altitude", "Below 5,000 m"], ["Construction", "Fully insulated and sealed"]],
+    gallery: [
+      ["products/american-combined-transformer-01.webp", "American-type combined transformer exterior and low-voltage compartment"],
+      ["products/american-combined-transformer-02.webp", "American-type combined transformer factory lineup"],
+      ["products/american-combined-transformer-03.webp", "Combined transformer at a floating solar project"],
+      ["products/american-combined-transformer-04.webp", "Control and protection compartment detail"],
+      ["products/american-combined-transformer-05.webp", "Combined transformer production wiring"],
+      ["products/american-combined-transformer-06.webp", "High-voltage compartment detail"]
+    ],
+    applications: ["Solar power", "Floating photovoltaic projects", "Wind power", "Compact distribution", "Energy storage"],
+    features: ["Highly integrated construction", "Compact footprint", "Fully insulated and sealed design", "Low-maintenance operating direction", "Pad-mounted installation"],
+    productRange: [["Primary voltage", "Up to 35 kV"], ["Series capability", "Up to 4,500 kVA"], ["Recorded model", "ZGS22-4000/35/0.8"], ["Installation", "Outdoor / pad mounted"]],
+    technicalParameters: [["Cooling", "ONAN"], ["Enclosure", "IP54 published capability"], ["HV breaking capacity", "31.5 kA published capability"], ["Altitude", "Below 5,000 m published capability"], ["Protection", "Project-specific"], ["Cable entry", "Project-specific"]],
+    evidenceIds: ["american-combined-transformer-pending"],
+    drawingIds: [],
+    testedModels: [],
+    standards: [],
+    faq: [
+      ["Is the ZGS22 certificate available online?", "The workbook records the certificate item, but no separate PDF was supplied. The site therefore shows an asset-pending status without inventing a report."],
+      ["Where is this solution typically used?", "It is suited to compact outdoor distribution and renewable projects where a pad-mounted integrated package is preferred."]
+    ]
+  }
+];
+
+export const otherSolutions = [
   {
     name: "Rectifier Transformer",
-    slug: "rectifier-transformer",
-    description: "Rectifier and phase-shifting rectifier transformers for DC power systems, electrochemical processing and industrial drives.",
+    description: "ZBS, ZBSCB and project-specific oil-immersed or dry-type rectifier transformer solutions for industrial DC systems.",
+    image: "product-rectifier-transformer.jpeg",
     tags: ["ZBS", "ZBSCB", "24-pulse"]
   },
   {
     name: "Special Transformer",
-    slug: "special-transformer",
-    description: "Project-customized special transformer solutions, including oil-immersed split transformers.",
-    tags: ["Split transformer", "Project-customized"]
+    description: "Project-engineered split, isolation and other special transformer configurations.",
+    image: "product-special-transformer-container.jpeg",
+    tags: ["Split transformer", "Custom duty"]
+  },
+  {
+    name: "Amorphous Alloy Dry-Type Transformer",
+    description: "SC(B)17/19 energy-saving dry-type transformer family with an amorphous alloy core.",
+    image: "product-amorphous-alloy-dry-type-transformer.jpeg",
+    tags: ["SC(B)17/19", "Amorphous alloy"]
+  },
+  {
+    name: "S20 / SZ20 Energy-Saving Transformer",
+    description: "Low-loss oil-immersed distribution transformer solutions with optional on-load voltage regulation.",
+    image: "product-oil-immersed-energy-saving-transformer.jpeg",
+    tags: ["S20", "SZ20"]
   }
 ];
 
-const docs = [
-  { name: "Outline dimension drawing", status: "Drawing to be provided" },
-  { name: "Installation foundation drawing", status: "Drawing to be provided" },
-  { name: "Wiring diagram", status: "Available upon request" },
-  { name: "Principle diagram", status: "Available upon request" },
-  { name: "Datasheet", status: "Available upon request" },
-  { name: "Test report sample", status: "Test report sample to be provided" }
-];
-
-const baseOptions = {
-  standard: ["Project-specific design based on inquiry", "Final parameters to be confirmed"],
-  optional: ["Monitoring system: To be confirmed", "Enclosure: To be confirmed"],
-  customized: ["Capacity, voltage, impedance, tapping and cooling to be confirmed against project requirements"]
-};
-
-export const products = [
-  {
-    slug: "220kv-and-below-energy-saving-oil-immersed-power-transformer",
-    name: "220kV and Below Energy-Saving Oil-Immersed Power Transformer",
-    category: "Oil-Immersed Power Transformer",
-    tags: ["220 kV and below", "Oil-immersed", "Power transformer"],
-    shortDescription: "Energy-saving oil-immersed power transformers for new and renovated substations.",
-    overview: "This product is used as major substation equipment for voltage conversion and power transmission. The brochure describes online monitoring, remote communication, operation data monitoring, protection, fault alarm, condition diagnosis and information management as available functional directions.",
-    applications: ["Power systems", "Petrochemical, steel and papermaking transmission and distribution", "New energy power generation", "Interconnection between different voltage grids"],
-    features: ["Sufficient primary and longitudinal insulation margin", "Low stray loss and high efficiency", "Reasonable oil circuit structure", "Low partial discharge", "Folded tank process to reduce welds and improve sealing quality", "Strong short-circuit withstand capability"],
-    advantages: ["Designed around GB20052-2024 energy-efficiency loss requirements", "Kerosene vapor-phase drying and cold pressure lead welding are referenced in the brochure", "Special tank structure suitable for long-distance transportation"],
-    technicalParameters: {
-      note: "Typical technical data from brochure. Final design can be customized according to project requirements.",
-      rows: [["Number of phases", "3-phase"], ["Rated frequency", "50 Hz"], ["Rated voltage", "110 +/- 8 x 1.25% / 10.5 kV"], ["Vector group", "YNd11"], ["Cooling method", "ONAN"], ["Service condition", "Outdoor"], ["Load loss", "175000 W"], ["No-load loss", "21000 W"], ["Impedance voltage", "10.5%"], ["Insulation level", "LI480AC200-LI325AC140 / LI75AC35"]]
-    },
-    performanceIndicators: { note: "Brochure sample references grade 1 energy-efficiency product with rated capacity of 50,000 kVA.", rows: [["Detailed performance table", "To be confirmed from final engineering datasheet"]] },
-    configurationOptions: baseOptions,
-    standards: ["GB20052-2024 is explicitly referenced in brochure"],
-    drawings: docs,
-    images: { hero: "assets/images/product-oil-power.jpeg", full: "assets/images/product-oil-power.jpeg", detail: "assets/images/factory-substation.jpeg", factory: "assets/images/factory-campus.jpeg" },
-    relatedCases: ["Huaruncaijin Hongguang Fishery 220 kV Booster Substation"],
-    sourceNote: "PDF/DOCX brochure extraction"
-  },
-  {
-    slug: "scb10-18-epoxy-resin-cast-dry-type-transformer",
-    name: "SC(B)10-18 Epoxy Resin Cast Dry-Type Transformer",
-    category: "Dry-Type Transformer",
-    tags: ["SC(B)10-18", "Epoxy resin cast", "35 kV and below"],
-    shortDescription: "Epoxy resin cast dry-type transformers for power transformation and distribution systems.",
-    overview: "The brochure states that SC(B)10-18 dry-type transformers of 35 kV and below are mainly used in power transformation and distribution equipment systems, especially where fire prevention requirements are high, load fluctuation is large, or the environment is polluted and humid.",
-    applications: ["Thermal, hydro, nuclear, gas-fired and wind power", "Petrochemical facilities", "Subway, light rail, airport, ship, highway and urban transportation", "High-rise buildings, commercial plazas, communication buildings and residential areas", "Industrial and mining power supply"],
-    features: ["Flame-retardant, fireproof and pollution-free", "Maintenance-free with simple installation", "Low loss, low noise and low partial discharge", "Strong heat dissipation capability", "Temperature protection control system"],
-    advantages: ["High-permeability, low-loss grain-oriented cold-rolled silicon steel sheets", "Low-voltage foil winding on imported SCAL foil winding machine", "Aluminum alloy or stainless-steel enclosure options are referenced", "Silicone rubber pads improve stability and mechanical strength"],
-    technicalParameters: {
-      note: "Brochure configuration data.",
-      rows: [["Frequency", "50 Hz / 60 Hz"], ["Number of phases", "3-phase"], ["Vector group", "Dyn11 / Yyn0 / Yd11"], ["Insulation system temperature", "Class F and above"], ["Rated voltage", "35, 20, 10 / 0.4, 0.69, 0.8 kV"], ["Tapping range", "+/-2 x 2.5%, +/-5%, +/-3 x 2.5%, +/-4 x 2.5%"], ["Voltage regulation", "Non-excitation voltage regulation / on-load voltage regulation"], ["Short-circuit impedance", "4%, 6%, 8%, 10%"], ["Insulation level", "National standard"]]
-    },
-    performanceIndicators: { note: "Brochure mentions CESI certification and type/special tests for dry-type products.", rows: [["Certificate/Test reference", "Italian CESI certification; type tests and special tests referenced in brochure"]] },
-    configurationOptions: baseOptions,
-    standards: ["National standard is referenced for insulation level", "CESI certification referenced for dry-type products"],
-    drawings: docs,
-    images: { hero: "assets/images/product-dry-type-red.jpeg", full: "assets/images/product-dry-type-red.jpeg", detail: "assets/images/product-dry-type-cast.jpeg", factory: "assets/images/factory-campus.jpeg" },
-    relatedCases: ["Transportation and public infrastructure applications mentioned in brochure"],
-    sourceNote: "PDF/DOCX brochure extraction"
-  },
-  {
-    slug: "zbs-zbscb-series-rectifier-transformer",
-    name: "ZBS and ZBSCB Series Rectifier Transformer",
-    category: "Rectifier Transformer",
-    tags: ["ZBS", "ZBSCB", "Rectifier"],
-    shortDescription: "Rectifier transformers for electrolytic processing, DC networks, drives, electroplating and excitation systems.",
-    overview: "The brochure describes ZBS and ZBSCB rectifier transformers for chemical electrolytic processing, DC power grids for mines or urban electric locomotives, DC motor power supply, electroplating or electrical processing, excitation, charging and electrostatic precipitation. Products can be designed as dry-type or oil-immersed rectifier transformers according to user requirements.",
-    applications: ["Chemical electrolytic processing", "Mine or urban electric locomotive DC networks", "Steel rolling electric drive", "Electroplating and electrical processing", "Excitation, charging and electrostatic precipitation DC power supply"],
-    features: ["Designed with rectifier overload and harmonic temperature-rise effects in mind", "Grounding screens between high and low voltages", "Foil coil adopted for low voltage", "Energy-saving, low loss and low noise", "Strong overload, impact and short-circuit withstand capability"],
-    advantages: ["Dry-type or oil-immersed design can be selected according to user requirements", "Compact structure is referenced in the brochure"],
-    technicalParameters: {
-      note: "Typical technical data from brochure, based on ZS-8000/10-0.66 sample.",
-      rows: [["Rated capacity", "8000 / 4000 / 4000 kVA"], ["Rated voltage", "10 / 0.66 / 0.66 kV"], ["Rated current", "461.9 / 3499 A"], ["Vector group designation", "Dy11d0"], ["Cooling method", "ONAN"], ["Number of phases", "3-phase"], ["Frequency", "50 Hz"]]
-    },
-    performanceIndicators: { note: "Sample data only. Final design depends on rectifier duty and harmonics.", rows: [["Performance indicators", "To be confirmed"]] },
-    configurationOptions: baseOptions,
-    standards: ["Applicable standards to be confirmed"],
-    drawings: docs,
-    images: { hero: "assets/images/product-rectifier.jpeg", full: "assets/images/product-rectifier.jpeg", detail: "assets/images/product-dry-type-red.jpeg", factory: "assets/images/factory-campus.jpeg" },
-    relatedCases: ["Industrial DC power applications"],
-    sourceNote: "PDF/DOCX brochure extraction"
-  },
-  {
-    slug: "scb14-18-dry-type-energy-saving-transformer",
-    name: "SC(B)14/18 Dry-Type Energy-Saving Transformer",
-    category: "Dry-Type Transformer",
-    tags: ["SC(B)14", "SC(B)18", "Energy-saving dry-type"],
-    shortDescription: "New energy-saving dry-type transformer series developed in line with GB20052-2024.",
-    overview: "SC(B)14 and SC(B)18 dry-type energy-saving transformers are described as a new series developed according to the Transformer Energy Efficiency Enhancement Plan and GB20052-2024. Products can be equipped with vacuum on-load voltage regulation or intelligent units according to user requirements.",
-    applications: ["Power grid distribution", "Real estate power distribution", "Industrial and mining enterprises"],
-    features: ["Energy-saving, environmentally friendly and green", "Low loss and low noise", "Good crack resistance", "Maintenance-free", "Moisture-proof, mildew-proof and anti-fouling", "Strong short-circuit resistance"],
-    advantages: ["Grade 2 and grade 1 energy-efficiency product series are referenced", "Optional vacuum on-load voltage regulation and intelligent unit are referenced"],
-    technicalParameters: {
-      note: "Typical technical data from brochure. Full table is available in brochure but should be confirmed for final model selection.",
-      rows: [["High voltage", "6, 6.3, 6.6, 10, 10.5, 11 kV"], ["Low voltage", "0.4, 0.69, 0.8 kV"], ["HV tapping range", "+/-2 x 2.5%, +/-5%, +/-3 x 2.5%"], ["Short-circuit impedance", "4%, 6%, 8%, 10%"], ["Vector group designation", "Dyn11, Yyn0, Yd11"], ["Rated capacity examples", "30-2500 kVA shown in brochure table"]]
-    },
-    performanceIndicators: { note: "Typical rows from brochure table.", rows: [["SCB18/SCB14 loss table", "Available in brochure; final selection to be confirmed by model"]] },
-    configurationOptions: baseOptions,
-    standards: ["GB20052-2024", "Transformer Energy Efficiency Enhancement Plan (2021-2023) is referenced"],
-    drawings: docs,
-    images: { hero: "assets/images/product-dry-type-red.jpeg", full: "assets/images/product-dry-type-red.jpeg", detail: "assets/images/product-dry-type-cast.jpeg", factory: "assets/images/factory-campus.jpeg" },
-    relatedCases: ["Power grid distribution applications"],
-    sourceNote: "PDF/DOCX brochure extraction"
-  },
-  {
-    slug: "scb17-19-dry-type-amorphous-alloy-energy-saving-transformer",
-    name: "SC(B)17/19 Dry-Type Amorphous Alloy Energy-Saving Transformer",
-    category: "Dry-Type Transformer",
-    tags: ["SC(B)17", "SC(B)19", "Amorphous alloy", "Three-phase three-limb"],
-    shortDescription: "Low-loss amorphous alloy dry-type transformer for grid reconstruction and upgrades.",
-    overview: "The brochure describes SC(B)17 and SC(B)19 as low-loss energy-saving dry-type transformers combining amorphous alloy core technology and epoxy resin cast dry-type transformer technology. The structure is upgraded to a three-phase three-limb frame limit protection structure with compact layout and good overall rigidity.",
-    applications: ["New power grid reconstruction", "Power grid upgrades", "Energy-saving distribution projects"],
-    features: ["Amorphous alloy core technology", "Epoxy resin cast dry-type transformer technology", "Three-phase three-limb frame limit protection structure", "Compact structure and good overall rigidity"],
-    advantages: ["Produced according to GB20052-2024", "Designed for energy-saving grid scenarios"],
-    technicalParameters: { note: "Technical Data To Be Confirmed. Brochure table exists but extraction is not clean enough for complete publication.", rows: [["Noise", "<=54 dB"], ["Full model table", "To be confirmed"]] },
-    performanceIndicators: { note: "To be confirmed from final datasheet.", rows: [["Performance indicators", "To be confirmed"]] },
-    configurationOptions: baseOptions,
-    standards: ["GB20052-2024"],
-    drawings: docs,
-    images: { hero: "assets/images/product-amorphous-dry.jpeg", full: "assets/images/product-amorphous-dry.jpeg", detail: "assets/images/product-dry-type-red.jpeg", factory: "assets/images/factory-campus.jpeg" },
-    relatedCases: ["Energy-saving grid upgrade applications"],
-    sourceNote: "PDF/DOCX brochure extraction"
-  },
-  {
-    slug: "s20-oil-immersed-energy-saving-transformer",
-    name: "S20 Oil-Immersed Energy-Saving Transformer",
-    category: "Oil-Immersed Energy-Saving Transformer",
-    tags: ["S20", "Oil-immersed", "Energy-saving"],
-    shortDescription: "Oil-immersed energy-saving transformer with reduced losses compared with earlier S11/S13 designs.",
-    overview: "The brochure describes S20 as a new energy-saving transformer based on the S11 energy-saving transformer. It uses high-quality silicon steel sheets and a 45-degree full miter, stepped five-stage core joint structure to reduce no-load loss and no-load current.",
-    applications: ["Grid renovation", "Outdoor power supply", "Industrial and commercial distribution"],
-    features: ["No-load loss reduced by 30-40% compared with S11/S13 references in brochure", "Load loss reduced by 20-30% compared with S11/S13 references in brochure", "High cost performance", "Convenient maintenance and user wiring", "Fully sealed and maintenance-free"],
-    advantages: ["High-voltage coil made of oxygen-free copper wire", "Low-voltage coil above 200 kVA uses copper foil", "S22 grade 1 oil-immersed transformer can be produced according to user requirements"],
-    technicalParameters: {
-      note: "Typical technical data from brochure, based on S13-630/10 sample.",
-      rows: [["Rated capacity", "630 kVA"], ["Vector group", "Dyn11"], ["HV voltage", "10000 V"], ["LV voltage", "400 V"], ["Voltage regulation range", "+/-2 x 2.5%"], ["Number of phases", "3"], ["Load loss", "6200 W"], ["No-load loss", "570 W"], ["No-load current", "0.35%"]]
-    },
-    performanceIndicators: { note: "Sample data only. Final design can be customized.", rows: [["Performance indicators", "To be confirmed by model"]] },
-    configurationOptions: baseOptions,
-    standards: ["Applicable energy-efficiency standard to be confirmed by final model"],
-    drawings: docs,
-    images: { hero: "assets/images/product-oil-distribution.jpeg", full: "assets/images/product-oil-distribution.jpeg", detail: "assets/images/product-oil-power.jpeg", factory: "assets/images/factory-campus.jpeg" },
-    relatedCases: ["Distribution network upgrades"],
-    sourceNote: "PDF/DOCX brochure extraction"
-  },
-  {
-    slug: "sz20-on-load-oil-immersed-energy-saving-transformer",
-    name: "SZ20 On-Load Oil-Immersed Energy-Saving Transformer",
-    category: "Oil-Immersed Energy-Saving Transformer",
-    tags: ["SZ20", "On-load tap changer", "Oil-immersed"],
-    shortDescription: "S20-based oil-immersed transformer with on-load tap changing for stable output voltage.",
-    overview: "SZ20 is based on S20 with an added on-load tap changer. The brochure states that it can adjust low-voltage output voltage while energized and help maintain stable transformer output voltage when the grid fluctuates.",
-    applications: ["Rural power grids with unstable voltage", "Industrial and mining enterprises requiring stable long-term operation", "Distribution management upgrades"],
-    features: ["Automatic voltage regulation", "Stable downstream equipment operation", "Supports improvement of distribution management", "Optional intelligent on-load tap changer"],
-    advantages: ["Optional app-based monitoring of voltage, current, active power, reactive power and power factor is referenced in brochure", "Controller can automatically adjust tap position based on voltage condition"],
-    technicalParameters: {
-      note: "Typical technical data from brochure. Final design can be customized according to project requirements.",
-      rows: [["Rated capacity examples", "200-2500 kVA shown in brochure table"], ["HV voltage examples", "6, 6.3, 10, 10.5, 11 kV"], ["HV tapping range", "+/-4 x 2.5%"], ["LV voltage", "0.4 kV"], ["Vector group", "Yyn0 or Dyn11"], ["Short-circuit impedance", "4.0-5.0% in brochure table"]]
-    },
-    performanceIndicators: { note: "Full table shown in brochure; values should be confirmed against selected model.", rows: [["Performance indicators", "To be confirmed by model"]] },
-    configurationOptions: baseOptions,
-    standards: ["Applicable standards to be confirmed"],
-    drawings: docs,
-    images: { hero: "assets/images/product-oil-distribution.jpeg", full: "assets/images/product-oil-distribution.jpeg", detail: "assets/images/factory-substation.jpeg", factory: "assets/images/factory-campus.jpeg" },
-    relatedCases: ["Rural grid and industrial distribution applications"],
-    sourceNote: "PDF/DOCX brochure extraction"
-  },
-  {
-    slug: "oil-immersed-split-transformer",
-    name: "Oil-Immersed Split Transformer",
-    category: "Special Transformer",
-    tags: ["Oil-immersed", "Split transformer", "Special transformer"],
-    shortDescription: "Special oil-immersed split transformer for project-specific electrical systems.",
-    overview: "The brochure lists oil-immersed split transformer under transformer equipment. Extracted technical data indicates input and output voltage, rated capacity options and neutral grounding modes for the product family.",
-    applications: ["Project-specific industrial power systems", "Renewable energy electrical systems", "Special power conversion systems"],
-    features: ["Input and output side data is shown in brochure", "Capacity options listed in brochure tables", "Grounded or ungrounded neutral modes referenced"],
-    advantages: ["Can be engineered for project-specific requirements"],
-    technicalParameters: {
-      note: "Typical technical data from brochure. Final design can be customized according to project requirements.",
-      rows: [["Rated voltage input", "0.54 / 0.69 / 0.8 / 0.95 / 1.14 kV"], ["Rated voltage output", "12 / 40.5 kV"], ["Rated frequency", "50 Hz"], ["Rated capacity examples", "900, 1250, 1600, 2000, 2500, 3150, 3300, 3500, 4000 kVA"], ["Rated short-time withstand voltage input", "5 kV / 1 min"], ["Rated short-time withstand voltage output", "85 kV / 1 min"], ["Neutral grounding mode", "Grounded / ungrounded"]]
-    },
-    performanceIndicators: { note: "To be confirmed from final datasheet.", rows: [["Performance indicators", "To be confirmed"]] },
-    configurationOptions: baseOptions,
-    standards: ["Applicable standards to be confirmed"],
-    drawings: docs,
-    images: { hero: "assets/images/product-special-container.jpeg", full: "assets/images/product-special-container.jpeg", detail: "assets/images/product-oil-power.jpeg", factory: "assets/images/factory-campus.jpeg" },
-    relatedCases: ["Renewable energy electrical systems"],
-    sourceNote: "PDF/DOCX brochure extraction"
-  },
-  {
-    slug: "oil-immersed-24-pulse-phase-shifting-rectifier-transformer",
-    name: "Oil-Immersed 24-Pulse Phase-Shifting Rectifier Transformer",
-    category: "Rectifier Transformer",
-    tags: ["24-pulse", "Phase-shifting", "Rectifier transformer"],
-    shortDescription: "Oil-immersed phase-shifting rectifier transformer for multi-pulse power conversion systems.",
-    overview: "The brochure lists an oil-immersed 24-pulse phase-shifting rectifier transformer under transformer equipment. Extracted table data provides input/output voltages, rated frequency, capacity options and neutral grounding mode.",
-    applications: ["Multi-pulse rectifier systems", "Renewable energy conversion systems", "Industrial DC power systems"],
-    features: ["Input and output voltage data shown in brochure", "Capacity range examples shown in brochure", "Grounded or ungrounded neutral modes referenced"],
-    advantages: ["Project-customized rectifier transformer design"],
-    technicalParameters: {
-      note: "Typical technical data from brochure. Final design can be customized according to project requirements.",
-      rows: [["Rated voltage input", "0.54 / 0.69 / 0.8 / 0.95 / 1.14 kV"], ["Rated voltage output", "12 / 40.5 kV"], ["Rated frequency", "50 Hz"], ["Rated capacity examples", "500-12500 kVA shown in brochure table"], ["Rated short-time withstand voltage input", "5 kV / 1 min"], ["Rated short-time withstand voltage output", "85 kV / 1 min"], ["Neutral grounding mode", "Grounded / ungrounded"]]
-    },
-    performanceIndicators: { note: "To be confirmed from final datasheet.", rows: [["Performance indicators", "To be confirmed"]] },
-    configurationOptions: baseOptions,
-    standards: ["Applicable standards to be confirmed"],
-    drawings: docs,
-    images: { hero: "assets/images/product-special-container.jpeg", full: "assets/images/product-special-container.jpeg", detail: "assets/images/product-rectifier.jpeg", factory: "assets/images/factory-campus.jpeg" },
-    relatedCases: ["Industrial rectifier and renewable conversion systems"],
-    sourceNote: "PDF/DOCX brochure extraction"
-  }
-];
+export const productById = new Map(products.map((product) => [product.id, product]));
