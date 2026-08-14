@@ -47,6 +47,7 @@ jobs:
           test -f dist/assets/css/ux-refine-v7.css
           test -f dist/assets/css/ux-refine-v8.css
           test -f dist/assets/js/ux-refine-v8.js
+          test -f dist/assets/css/ux-fix-v9.css
           test -f dist/assets/knowledge-search-index.json
           test -f dist/robots.txt
           FAQ_COUNT=$(find dist/knowledge/faq -maxdepth 1 -name '*.html' | wc -l)
@@ -81,6 +82,8 @@ jobs:
           grep -q 'European-Type Prefabricated Substation' dist/products.html
           grep -q 'Compact Prefabricated Substation' dist/products.html
           grep -q 'Pad-Mounted Transformer' dist/products.html
+          grep -q 'products/oil-immersed-prefabricated-substation/index.html' dist/products.html
+          ! grep -q 'href="products/oil-immersed-prefabricated-substation/"' dist/products.html
           grep -q 'v5-model-grid' dist/products/high-voltage-power-transformer/index.html
           test -f dist/products/high-voltage-power-transformer/sz22-50000-110-nx1.html
           test -f dist/products/high-voltage-power-transformer/sfz-150000-132.html
@@ -88,6 +91,9 @@ jobs:
           test -f dist/products/high-voltage-power-transformer/ssz22-240000-220-nx1.html
           grep -q 'v6-model-gallery' dist/products/high-voltage-power-transformer/sz22-50000-110-nx1.html
           grep -q 'Documents shown below apply to this exact model only.' dist/products/high-voltage-power-transformer/sz22-50000-110-nx1.html
+          grep -q 'OTHER PRODUCTS' dist/products/high-voltage-power-transformer/sz22-50000-110-nx1.html
+          ! grep -q 'Typical Applications' dist/products/high-voltage-power-transformer/sz22-50000-110-nx1.html
+          grep -q '../../products/oil-immersed-prefabricated-substation/index.html' dist/products/high-voltage-power-transformer/sz22-50000-110-nx1.html
           grep -q 'rel="canonical"' dist/index.html
 
       - name: Upload generated preview
