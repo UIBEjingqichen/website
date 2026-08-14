@@ -1,8 +1,8 @@
-name: Knowledge Center Build Check
+name: Website Build Check
 
 on:
   push:
-    branches: [feature/knowledge-center-v1]
+    branches: [master, feature/knowledge-center-v1]
   pull_request:
     branches: [master]
   workflow_dispatch:
@@ -25,28 +25,37 @@ jobs:
       - name: Build static website
         run: npm run build
 
-      - name: Validate generated knowledge pages
+      - name: Validate generated website
         shell: bash
         run: |
+          test -f dist/index.html
+          test -f dist/products.html
+          test -f dist/news.html
           test -f dist/knowledge/index.html
           test -f dist/knowledge/transformer-selection.html
           test -f dist/knowledge/faq/what-is-transformer-k-factor.html
           test -f dist/assets/css/knowledge.css
           test -f dist/assets/js/knowledge.js
+          test -f dist/assets/css/yawei-refine.css
+          test -f dist/assets/js/yawei-refine.js
           test -f dist/assets/knowledge-search-index.json
           test -f dist/robots.txt
           FAQ_COUNT=$(find dist/knowledge/faq -maxdepth 1 -name '*.html' | wc -l)
           TOPIC_COUNT=$(find dist/knowledge -maxdepth 1 -name '*.html' ! -name 'index.html' | wc -l)
           test "$FAQ_COUNT" -eq 12
           test "$TOPIC_COUNT" -eq 8
-          grep -q 'Knowledge Center' dist/index.html
+          grep -q 'TRANSFORMER CUSTOMIZED ONE-STOP SOLUTION' dist/index.html
+          grep -q 'EXCELLENT INDUSTRIAL LANDSCAPE' dist/index.html
+          grep -q 'data-count-up' dist/index.html
+          grep -q 'News' dist/index.html
+          grep -q 'Enabling Products' dist/products.html
           grep -q 'Related Knowledge' dist/products/*.html
           grep -q 'rel="canonical"' dist/index.html
 
       - name: Upload generated preview
         uses: actions/upload-artifact@v4
         with:
-          name: knowledge-center-preview
+          name: website-preview
           path: dist
           if-no-files-found: error
 
@@ -60,6 +69,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Generated files are already up to date."
           else
-            git commit -m "Build Knowledge Center preview [skip ci]"
+            git commit -m "Build website preview [skip ci]"
             git push
           fi
