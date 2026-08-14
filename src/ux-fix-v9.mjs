@@ -1,7 +1,8 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import { categories, products } from "./products-data.mjs";
+import { categories } from "./products-data.mjs";
+import { projects } from "./projects-data.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dist = path.resolve(__dirname, "..", "dist");
@@ -38,10 +39,16 @@ function explicitIndexLinks(html) {
   });
 }
 
-function applicationsSection(product) {
-  const applications = product?.applications || [];
-  if (!applications.length) return "";
-  return `<section class="section v9-model-applications"><div class="v5-family-heading"><p>APPLICATIONS</p><h2>Typical Applications</h2><span class="v9-section-note">General applications for the ${esc(displayNames[product.id] || product.name)} family.</span></div><div class="v9-application-list">${applications.map((application) => `<span>${esc(application)}</span>`).join("")}</div></section>`;
+function projectsFor(productId) {
+  return projects.filter((project) => project.productIds?.includes(productId));
+}
+
+function realApplicationsSection(productId, depth = "../../") {
+  const rows = projectsFor(productId);
+  if (!rows.length) return "";
+  const category = categories.find((item) => item.id === productId);
+  const productName = displayNames[productId] || category?.name || "this product family";
+  return `<section class="section v9-real-applications"><div class="v5-family-heading"><p>APPLICATIONS</p><h2>Real Application References</h2><span class="v9-section-note">Recorded project applications for the ${esc(productName)} family from the export master table.</span></div><div class="v9-application-project-grid">${rows.map((project) => `<article class="v9-application-project"><div class="v9-application-project-meta"><span>${esc(project.application || project.industry || "Project")}</span>${project.country ? `<small>${esc(project.country)}</small>` : ""}</div><h3>${esc(project.name)}</h3><div class="v9-application-project-foot">${project.industry ? `<span>${esc(project.industry)}</span>` : ""}${project.capacity ? `<strong>${esc(project.capacity)}</strong>` : ""}</div></article>`).join("")}</div><a class="v9-applications-more" href="${depth}applications.html">VIEW ALL APPLICATIONS & PROJECTS →</a></section>`;
 }
 
 function relatedProductsSection(currentId) {
@@ -51,12 +58,26 @@ function relatedProductsSection(currentId) {
 
 function updateModelPage(file, familyId) {
   let html = fs.readFileSync(file, "utf8");
-  const product = products.find((item) => item.id === familyId);
-  const replacement = `${applicationsSection(product)}${relatedProductsSection(familyId)}`;
-  html = html.replace(/<section class="section v5-model-apps">[\s\S]*?<\/section>/, replacement);
+  html = html.replace(/<section class="section v9-model-applications">[\s\S]*?<\/section>/, "");
+  html = html.replace(/<section class="section v5-model-apps">[\s\S]*?<\/section>/, "");
+  html = html.replace(/<section class="section v5-model-apps v9-other-products">[\s\S]*?<\/section>/, relatedProductsSection(familyId));
+  const applications = realApplicationsSection(familyId, "../../");
+  if (applications && !html.includes("v9-real-applications")) {
+    html = html.replace(/<section class="section v5-model-apps v9-other-products">/, `${applications}<section class="section v5-model-apps v9-other-products">`);
+  }
   html = explicitIndexLinks(html);
   html = injectCss(html, "../../");
   if (!html.includes("v9-model-page")) html = html.replace(/<body([^>]*)>/, '<body$1 class="v9-model-page">');
+  fs.writeFileSync(file, html);
+}
+
+function updateFamilyPage(file, familyId) {
+  let html = fs.readFileSync(file, "utf8");
+  const applications = realApplicationsSection(familyId, "../../");
+  html = html.replace(/<section class="section pale v5-family-applications">[\s\S]*?<\/section>/, applications);
+  html = html.replace(/<section class="section v5-family-applications">[\s\S]*?<\/section>/, applications);
+  html = explicitIndexLinks(html);
+  html = injectCss(html, "../../");
   fs.writeFileSync(file, html);
 }
 
@@ -70,9 +91,13 @@ function walk(directory) {
     if (!entry.isFile() || !entry.name.endsWith(".html")) continue;
 
     const relative = path.relative(dist, full).replace(/\\/g, "/");
-    const modelMatch = relative.match(/^products\/([^/]+)\/([^/]+\.html)$/);
-    if (modelMatch && modelMatch[2] !== "index.html") {
-      updateModelPage(full, modelMatch[1]);
+    const productMatch = relative.match(/^products\/([^/]+)\/([^/]+\.html)$/);
+    if (productMatch && productMatch[2] !== "index.html") {
+      updateModelPage(full, productMatch[1]);
+      continue;
+    }
+    if (productMatch && productMatch[2] === "index.html") {
+      updateFamilyPage(full, productMatch[1]);
       continue;
     }
 
@@ -89,4 +114,4 @@ fs.mkdirSync(path.join(dist, "assets", "css"), { recursive: true });
 fs.copyFileSync(path.join(__dirname, "ux-fix-v9.css"), path.join(dist, "assets", "css", "ux-fix-v9.css"));
 walk(dist);
 
-console.log("Applied V9: explicit index links, readable typography, generic family applications, and Other Products on exact-model pages.");
+console.log("Applied V9: explicit index links, readable typography, real master-table applications, and Other Products on model pages.");
