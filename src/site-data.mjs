@@ -31,7 +31,7 @@ export const navigation = [
       ["Quality", "quality.html"]
     ]
   },
-  { label: "Contact", href: "contact.html" }
+  { label: "News", href: "news.html" }
 ];
 
 export const company = {
