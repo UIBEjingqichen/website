@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import { categories } from "./products-data.mjs";
+import { categories, products } from "./products-data.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dist = path.resolve(__dirname, "..", "dist");
@@ -38,6 +38,12 @@ function explicitIndexLinks(html) {
   });
 }
 
+function applicationsSection(product) {
+  const applications = product?.applications || [];
+  if (!applications.length) return "";
+  return `<section class="section v9-model-applications"><div class="v5-family-heading"><p>APPLICATIONS</p><h2>Typical Applications</h2><span class="v9-section-note">General applications for the ${esc(displayNames[product.id] || product.name)} family.</span></div><div class="v9-application-list">${applications.map((application) => `<span>${esc(application)}</span>`).join("")}</div></section>`;
+}
+
 function relatedProductsSection(currentId) {
   const others = categories.filter((category) => category.id !== currentId);
   return `<section class="section v5-model-apps v9-other-products"><div class="v5-family-heading"><p>OTHER PRODUCTS</p><h2>Explore Other Transformer Solutions</h2><span class="v9-section-note">Browse other Tianyu product families.</span></div><div class="v9-other-products-grid">${others.map((category) => `<a class="v9-other-product-card" href="../../products/${category.id}/index.html"><div class="v9-other-product-image"><img src="../../assets/media/${category.image}" alt="${esc(displayNames[category.id] || category.name)}" loading="lazy"></div><div class="v9-other-product-copy"><h3>${esc(displayNames[category.id] || category.name)}</h3><span>VIEW PRODUCT →</span></div></a>`).join("")}</div></section>`;
@@ -45,7 +51,9 @@ function relatedProductsSection(currentId) {
 
 function updateModelPage(file, familyId) {
   let html = fs.readFileSync(file, "utf8");
-  html = html.replace(/<section class="section v5-model-apps">[\s\S]*?<\/section>/, relatedProductsSection(familyId));
+  const product = products.find((item) => item.id === familyId);
+  const replacement = `${applicationsSection(product)}${relatedProductsSection(familyId)}`;
+  html = html.replace(/<section class="section v5-model-apps">[\s\S]*?<\/section>/, replacement);
   html = explicitIndexLinks(html);
   html = injectCss(html, "../../");
   if (!html.includes("v9-model-page")) html = html.replace(/<body([^>]*)>/, '<body$1 class="v9-model-page">');
@@ -81,4 +89,4 @@ fs.mkdirSync(path.join(dist, "assets", "css"), { recursive: true });
 fs.copyFileSync(path.join(__dirname, "ux-fix-v9.css"), path.join(dist, "assets", "css", "ux-fix-v9.css"));
 walk(dist);
 
-console.log("Applied V9: explicit index links for local browsing, dark readable news typography, and Other Products on model pages.");
+console.log("Applied V9: explicit index links, readable typography, generic family applications, and Other Products on exact-model pages.");
