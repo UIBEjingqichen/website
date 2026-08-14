@@ -38,6 +38,8 @@ jobs:
           test -f dist/assets/js/knowledge.js
           test -f dist/assets/css/yawei-refine.css
           test -f dist/assets/js/yawei-refine.js
+          test -f dist/assets/css/visual-refine-v4.css
+          test -f dist/assets/js/visual-refine-v4.js
           test -f dist/assets/knowledge-search-index.json
           test -f dist/robots.txt
           FAQ_COUNT=$(find dist/knowledge/faq -maxdepth 1 -name '*.html' | wc -l)
@@ -47,7 +49,8 @@ jobs:
           grep -q 'TRANSFORMER CUSTOMIZED ONE-STOP SOLUTION' dist/index.html
           grep -q 'EXCELLENT INDUSTRIAL LANDSCAPE' dist/index.html
           grep -q 'data-count-up' dist/index.html
-          grep -q 'certificate-marquee' dist/index.html
+          grep -q 'certificate-3d-stage' dist/index.html
+          grep -q 'data-certificate-3d' dist/index.html
           grep -q 'News' dist/index.html
           grep -q 'Enabling Products' dist/products.html
           grep -q 'rel="canonical"' dist/index.html
