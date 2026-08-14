@@ -56,15 +56,28 @@ function relatedProductsSection(currentId) {
   return `<section class="section v5-model-apps v9-other-products"><div class="v5-family-heading"><p>OTHER PRODUCTS</p><h2>Explore Other Transformer Solutions</h2><span class="v9-section-note">Browse other Tianyu product families.</span></div><div class="v9-other-products-grid">${others.map((category) => `<a class="v9-other-product-card" href="../../products/${category.id}/index.html"><div class="v9-other-product-image"><img src="../../assets/media/${category.image}" alt="${esc(displayNames[category.id] || category.name)}" loading="lazy"></div><div class="v9-other-product-copy"><h3>${esc(displayNames[category.id] || category.name)}</h3><span>VIEW PRODUCT →</span></div></a>`).join("")}</div></section>`;
 }
 
+function removeGenericApplications(html) {
+  return html
+    .replace(/<section class="section v9-model-applications">[\s\S]*?<\/section>/g, "")
+    .replace(/<section class="section(?: pale)? v5-model-apps(?! v9-other-products)[^"]*">[\s\S]*?<\/section>/g, "")
+    .replace(/<section class="section(?: pale)? v5-family-applications[^"]*">[\s\S]*?<\/section>/g, "")
+    .replace(/<section class="section(?: pale)? v6-family-applications[^"]*">[\s\S]*?<\/section>/g, "");
+}
+
+function insertBeforeInquiry(html, block) {
+  if (!block || html.includes("v9-real-applications")) return html;
+  const marker = /<section class="section inquiry-cta">/;
+  if (marker.test(html)) return html.replace(marker, `${block}<section class="section inquiry-cta">`);
+  return html.replace("</main>", `${block}</main>`);
+}
+
 function updateModelPage(file, familyId) {
   let html = fs.readFileSync(file, "utf8");
-  html = html.replace(/<section class="section v9-model-applications">[\s\S]*?<\/section>/, "");
-  html = html.replace(/<section class="section v5-model-apps">[\s\S]*?<\/section>/, "");
-  html = html.replace(/<section class="section v5-model-apps v9-other-products">[\s\S]*?<\/section>/, relatedProductsSection(familyId));
+  html = removeGenericApplications(html);
+  html = html.replace(/<section class="section v5-model-apps v9-other-products">[\s\S]*?<\/section>/g, "");
   const applications = realApplicationsSection(familyId, "../../");
-  if (applications && !html.includes("v9-real-applications")) {
-    html = html.replace(/<section class="section v5-model-apps v9-other-products">/, `${applications}<section class="section v5-model-apps v9-other-products">`);
-  }
+  const related = relatedProductsSection(familyId);
+  html = insertBeforeInquiry(html, `${applications}${related}`);
   html = explicitIndexLinks(html);
   html = injectCss(html, "../../");
   if (!html.includes("v9-model-page")) html = html.replace(/<body([^>]*)>/, '<body$1 class="v9-model-page">');
@@ -73,9 +86,9 @@ function updateModelPage(file, familyId) {
 
 function updateFamilyPage(file, familyId) {
   let html = fs.readFileSync(file, "utf8");
+  html = removeGenericApplications(html);
   const applications = realApplicationsSection(familyId, "../../");
-  html = html.replace(/<section class="section pale v5-family-applications">[\s\S]*?<\/section>/, applications);
-  html = html.replace(/<section class="section v5-family-applications">[\s\S]*?<\/section>/, applications);
+  html = insertBeforeInquiry(html, applications);
   html = explicitIndexLinks(html);
   html = injectCss(html, "../../");
   fs.writeFileSync(file, html);
