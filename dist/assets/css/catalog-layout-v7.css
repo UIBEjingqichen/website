@@ -1,0 +1,143 @@
+/* Catalog V7: compact product photography, single certificate register, one drawing per page */
+
+/* Product photography: two restrained images side by side. */
+.catalog-product-photo-pair {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-rows: none !important;
+  gap: 14px !important;
+  min-height: 0 !important;
+  align-self: start !important;
+}
+.catalog-product-photo-pair figure {
+  height: 220px !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 8px !important;
+  background: #fff !important;
+  border: 1px solid #e0e6eb !important;
+  overflow: hidden !important;
+}
+.catalog-product-photo-pair img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+.product-overview-grid {
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr) !important;
+  gap: 52px !important;
+  align-items: start !important;
+}
+.product-overview-copy {
+  max-width: 500px !important;
+  margin-left: auto !important;
+  padding-left: 18px !important;
+}
+
+/* Exactly three front certificate sheets, each showing four complete pages horizontally. */
+.catalog-front-certificate-sheet {
+  break-after: page;
+  page-break-after: always;
+}
+.catalog-front-certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+.catalog-front-certificate {
+  min-width: 0;
+  border-top: 1px solid #d7dfe6;
+}
+.catalog-front-certificate figure {
+  height: 465px;
+  margin: 0;
+  padding: 10px 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.catalog-front-certificate img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.catalog-front-certificate > div {
+  padding-top: 10px;
+  border-top: 1px solid #e7ebef;
+}
+.catalog-front-certificate strong,
+.catalog-front-certificate span,
+.catalog-front-certificate small {
+  display: block;
+}
+.catalog-front-certificate strong {
+  color: #0a2f56;
+  font-size: 12.5px;
+  line-height: 1.35;
+}
+.catalog-front-certificate span {
+  margin-top: 5px;
+  color: #24384d;
+  font-size: 11px;
+  font-weight: 700;
+}
+.catalog-front-certificate small {
+  margin-top: 4px;
+  color: #6e8192;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+/* One engineering drawing per page, maximized for reading dimensions and interfaces. */
+.catalog-single-drawing-sheet {
+  break-after: page;
+  page-break-after: always;
+}
+.catalog-single-drawing {
+  height: 650px;
+  display: grid;
+  place-items: center;
+}
+.catalog-single-drawing figure {
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  padding-top: 8px !important;
+  border-top: 1px solid #d7dfe6;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.catalog-single-drawing img {
+  width: 100% !important;
+  height: 610px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #fff !important;
+}
+.catalog-single-drawing figcaption {
+  margin-top: 8px !important;
+  color: #6e8192 !important;
+  font-size: 10px !important;
+  line-height: 1.4 !important;
+}
+
+@media (max-width: 900px) {
+  .catalog-product-photo-pair,
+  .catalog-front-certificate-grid { grid-template-columns: 1fr !important; }
+  .catalog-product-photo-pair figure { height: 240px !important; }
+  .catalog-front-certificate figure { height: auto !important; max-height: 520px; }
+  .catalog-single-drawing,
+  .catalog-single-drawing figure { height: auto !important; }
+  .catalog-single-drawing img { height: auto !important; max-height: 720px; }
+}
+
+@media print {
+  .catalog-product-photo-pair figure { height: 48mm !important; }
+  .catalog-front-certificate figure { height: 118mm !important; }
+  .catalog-single-drawing { height: 178mm !important; }
+  .catalog-single-drawing img { height: 166mm !important; }
+}
