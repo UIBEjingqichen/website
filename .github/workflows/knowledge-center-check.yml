@@ -72,8 +72,8 @@ jobs:
           grep -q 'Tianyu Export Catalog V2' dist/catalog.html
           grep -q 'COMPLETE TECHNICAL EVIDENCE REGISTER' dist/catalog.html
           grep -q 'All 20 current certificate and test-report records' dist/catalog.html
-          grep -q 'Certification & Report Pages' dist/catalog.html
-          grep -q 'Product & Test Image Library' dist/catalog.html
+          grep -q 'Certification &amp; Report Pages' dist/catalog.html
+          grep -q 'Product &amp; Test Image Library' dist/catalog.html
           grep -q 'Engineering Drawing Library' dist/catalog.html
           grep -q '24XB0336-S' dist/catalog.html
           grep -q 'ZGS22-4000/35/0.8' dist/catalog.html
