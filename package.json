@@ -1,7 +1,7 @@
 {
   "scripts": {
     "sync-images": "node src/rename-images.mjs",
-    "build": "node src/build.mjs && node src/knowledge-build.mjs && node src/knowledge-finalize.mjs && node src/yawei-refine.mjs && node src/visual-refine-v4.mjs && node src/ux-refine-v5.mjs && node src/ux-fix-v5-1.mjs && node src/ux-refine-v6.mjs && node src/ux-fix-v6-1.mjs && node src/ux-refine-v7.mjs && node src/ux-refine-v8.mjs && node src/ux-fix-v9.mjs && node src/catalog-build.mjs && node src/catalog-enrich-v2.mjs && node src/catalog-fix-v2-1.mjs && node src/root-index.mjs",
+    "build": "node src/build.mjs && node src/knowledge-build.mjs && node src/knowledge-finalize.mjs && node src/yawei-refine.mjs && node src/visual-refine-v4.mjs && node src/ux-refine-v5.mjs && node src/ux-fix-v5-1.mjs && node src/ux-refine-v6.mjs && node src/ux-fix-v6-1.mjs && node src/ux-refine-v7.mjs && node src/ux-refine-v8.mjs && node src/ux-fix-v9.mjs && node src/catalog-build.mjs && node src/catalog-enrich-v2.mjs && node src/catalog-fix-v2-1.mjs && node src/catalog-remove-backcover.mjs && node src/root-index.mjs",
     "serve": "node src/server.mjs"
   },
   "devDependencies": {}
