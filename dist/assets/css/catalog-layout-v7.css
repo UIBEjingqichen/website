@@ -135,9 +135,99 @@
   .catalog-single-drawing img { height: auto !important; max-height: 720px; }
 }
 
+/*
+ * Print layout
+ *
+ * The screen catalog uses visually bounded sheets. The old print rule inherited
+ * overflow:hidden while also forcing every sheet to exactly 210 mm high. Any
+ * section taller than one physical A4 landscape page was therefore clipped.
+ *
+ * In print, normal content sheets are now allowed to grow and fragment across
+ * physical pages. Deliberately composed one-page sheets (cover, certificate
+ * spreads and single-drawing sheets) remain fixed to one A4 landscape page.
+ */
 @media print {
+  html,
+  body {
+    width: 297mm !important;
+    min-width: 297mm !important;
+    overflow: visible !important;
+  }
+
+  .catalog {
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  /* Default: never discard content just because a screen sheet became taller. */
+  .catalog-sheet {
+    width: 297mm !important;
+    height: auto !important;
+    min-height: 210mm !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 14mm 16mm 12mm !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+    break-after: page !important;
+    page-break-after: always !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  /* These page types are intentionally designed as single A4 landscape pages. */
+  .catalog-cover,
+  .catalog-front-certificate-sheet,
+  .catalog-single-drawing-sheet {
+    width: 297mm !important;
+    height: 210mm !important;
+    min-height: 210mm !important;
+    max-height: 210mm !important;
+    overflow: hidden !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Keep compact visual units intact, but allow long tables to paginate by row. */
+  figure,
+  .catalog-product-photo-pair,
+  .catalog-spec-grid > div,
+  .catalog-model-card,
+  .catalog-project-card,
+  .catalog-front-certificate,
+  .catalog-single-drawing {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  table {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+  thead {
+    display: table-header-group !important;
+  }
+  tfoot {
+    display: table-footer-group !important;
+  }
+  tr,
+  th,
+  td {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Print-specific image budgets. */
   .catalog-product-photo-pair figure { height: 48mm !important; }
   .catalog-front-certificate figure { height: 118mm !important; }
   .catalog-single-drawing { height: 178mm !important; }
   .catalog-single-drawing img { height: 166mm !important; }
+
+  /* Prevent headings or captions from being stranded at the bottom of a page. */
+  .sheet-head,
+  .catalog-detail-section > h3,
+  .catalog-single-drawing figcaption {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
 }
