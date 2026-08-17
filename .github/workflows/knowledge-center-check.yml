@@ -22,6 +22,17 @@ jobs:
         with:
           node-version: 22
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PDF asset tools
+        run: python -m pip install --disable-pip-version-check pymupdf pillow
+
+      - name: Organize certificate assets
+        run: python src/certificate-assets-build.py
+
       - name: Build static website
         run: npm run build
 
@@ -31,6 +42,7 @@ jobs:
           test -f dist/index.html
           test -f dist/products.html
           test -f dist/news.html
+          test -f dist/catalog.html
           test -f dist/knowledge/index.html
           test -f dist/knowledge/transformer-selection.html
           test -f dist/knowledge/faq/what-is-transformer-k-factor.html
@@ -50,6 +62,11 @@ jobs:
           test -f dist/assets/css/ux-fix-v9.css
           test -f dist/assets/knowledge-search-index.json
           test -f dist/robots.txt
+          test -f source-media/catalog-assets/manifest.json
+          test -d source-media/catalog-assets/images
+          test -d source-media/catalog-assets/drawings
+          test -d source-media/catalog-assets/certifications
+          grep -q '"document_count": 20' source-media/catalog-assets/manifest.json
           FAQ_COUNT=$(find dist/knowledge/faq -maxdepth 1 -name '*.html' | wc -l)
           TOPIC_COUNT=$(find dist/knowledge -maxdepth 1 -name '*.html' ! -name 'index.html' | wc -l)
           MODEL_COUNT=$(find dist/products -mindepth 2 -maxdepth 2 -name '*.html' ! -name 'index.html' | wc -l)
@@ -106,16 +123,16 @@ jobs:
           path: dist
           if-no-files-found: error
 
-      - name: Commit generated preview
+      - name: Commit generated preview and certificate assets
         if: github.event_name == 'push'
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dist index.html
+          git add dist index.html source-media/catalog-assets
           if git diff --cached --quiet; then
             echo "Generated files are already up to date."
           else
-            git commit -m "Build website preview [skip ci]"
+            git commit -m "Build website preview and certificate assets [skip ci]"
             git push
           fi
