@@ -1,0 +1,353 @@
+/* Catalog V5: brochure typography + dedicated evidence/drawing pages */
+:root {
+  --catalog-navy: #0a2f56;
+  --catalog-ink: #24384d;
+  --catalog-copy: #41566a;
+  --catalog-muted: #6e8192;
+  --catalog-line: #d8e0e7;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
+  color: var(--catalog-ink) !important;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.catalog-sheet {
+  padding: 50px 58px 44px !important;
+}
+
+.sheet-head {
+  max-width: 1050px !important;
+  margin-bottom: 28px !important;
+}
+.sheet-head > p {
+  margin-bottom: 9px !important;
+  font-size: 10.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: .16em !important;
+}
+.sheet-head h2 {
+  max-width: 1080px !important;
+  font-size: clamp(31px, 3.1vw, 44px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.025em !important;
+  font-weight: 700 !important;
+  color: var(--catalog-navy) !important;
+}
+.sheet-head > span {
+  max-width: 920px !important;
+  margin-top: 10px !important;
+  color: var(--catalog-muted) !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+}
+.compact-sheet-head {
+  margin-bottom: 22px !important;
+}
+.compact-sheet-head h2 {
+  font-size: clamp(29px, 2.8vw, 40px) !important;
+}
+
+/* Remove the oversized drop-cap treatment. */
+.catalog-editorial-prose p:first-child::first-letter,
+.catalog-editorial-intro p:first-child::first-letter,
+.catalog-product-detail-prose p:first-child::first-letter {
+  float: none !important;
+  margin: 0 !important;
+  color: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  font-weight: inherit !important;
+}
+
+.catalog-editorial-prose,
+.catalog-editorial-intro,
+.catalog-product-detail-prose {
+  max-width: 1160px !important;
+  column-gap: 48px !important;
+}
+.catalog-editorial-prose p,
+.catalog-editorial-intro p,
+.catalog-product-detail-prose p {
+  color: var(--catalog-copy) !important;
+  font-size: 14.5px !important;
+  line-height: 1.72 !important;
+  letter-spacing: 0 !important;
+}
+
+.company-lead {
+  margin-top: 0 !important;
+  font-size: 19px !important;
+  line-height: 1.55 !important;
+  font-weight: 500;
+}
+.company-grid p {
+  color: var(--catalog-copy) !important;
+  font-size: 13.5px !important;
+  line-height: 1.65 !important;
+}
+.company-grid {
+  gap: 34px !important;
+}
+.company-grid > img {
+  min-height: 430px !important;
+}
+
+.catalog-spec-grid span {
+  font-size: 10.5px !important;
+  letter-spacing: .075em !important;
+}
+.catalog-spec-grid strong {
+  font-size: 16px !important;
+  line-height: 1.25 !important;
+}
+
+.catalog-capability-grid article > div {
+  padding-top: 12px !important;
+}
+.catalog-capability-grid p {
+  font-size: 9.5px !important;
+}
+.catalog-capability-grid h3 {
+  font-size: 15px !important;
+  line-height: 1.3 !important;
+}
+.catalog-capability-grid span {
+  color: var(--catalog-copy) !important;
+  font-size: 11.5px !important;
+  line-height: 1.55 !important;
+}
+.catalog-capability-grid img {
+  height: 178px !important;
+}
+
+.product-overview-grid {
+  gap: 42px !important;
+  align-items: center !important;
+}
+.product-hero-image,
+.product-hero-image img {
+  min-height: 0 !important;
+  height: 470px !important;
+}
+.product-hero-image {
+  background: #fff !important;
+}
+.product-hero-image img {
+  object-fit: contain !important;
+}
+.product-overview-copy > p {
+  color: var(--catalog-copy) !important;
+  font-size: 14.5px !important;
+  line-height: 1.72 !important;
+}
+.product-overview-copy h3,
+.catalog-detail-section > h3 {
+  color: var(--catalog-navy) !important;
+  font-size: 18px !important;
+  line-height: 1.25 !important;
+  font-weight: 700 !important;
+}
+.product-overview-copy ul {
+  color: var(--catalog-copy) !important;
+  font-size: 13.5px !important;
+  line-height: 1.65 !important;
+}
+
+.catalog-detail-section {
+  margin-top: 28px !important;
+  padding-top: 20px !important;
+}
+.catalog-section-intro,
+.catalog-quality-note p {
+  color: var(--catalog-copy) !important;
+  font-size: 13.5px !important;
+  line-height: 1.65 !important;
+}
+
+/* Tested models now contain only the buyer-facing rating columns. */
+.catalog-model-table th:nth-child(1) { width: 48% !important; }
+.catalog-model-table th:nth-child(2) { width: 24% !important; }
+.catalog-model-table th:nth-child(3) { width: 28% !important; }
+.catalog-model-table th,
+.catalog-project-table th {
+  color: var(--catalog-navy) !important;
+  font-size: 10.5px !important;
+  font-weight: 700 !important;
+}
+.catalog-model-table td,
+.catalog-project-table td {
+  color: var(--catalog-copy) !important;
+  font-size: 12.5px !important;
+  line-height: 1.5 !important;
+}
+.catalog-model-table td strong,
+.catalog-project-table td strong {
+  color: var(--catalog-navy) !important;
+}
+
+/* Quality section: two balanced pages, four complete previews per page. */
+.quality-sheet .catalog-quality-note {
+  max-width: 100% !important;
+  margin: 0 0 22px !important;
+  padding: 0 0 18px !important;
+  clear: both !important;
+}
+.catalog-quality-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 24px 30px !important;
+  align-items: start !important;
+}
+.catalog-quality-grid .catalog-evidence-card {
+  display: grid !important;
+  grid-template-columns: 42% 58% !important;
+  grid-template-rows: none !important;
+  min-height: 250px !important;
+  border-top: 1px solid var(--catalog-line) !important;
+}
+.catalog-quality-grid .catalog-evidence-image {
+  min-height: 250px !important;
+  height: 250px !important;
+  padding: 8px !important;
+  background: #fff !important;
+}
+.catalog-quality-grid .catalog-evidence-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+.catalog-quality-grid .catalog-evidence-card > div:last-child {
+  padding: 18px 10px 12px 18px !important;
+}
+.catalog-quality-grid .catalog-evidence-card h3 {
+  font-size: 14px !important;
+  line-height: 1.35 !important;
+}
+.catalog-quality-grid .catalog-evidence-card dl {
+  font-size: 11.5px !important;
+  line-height: 1.45 !important;
+}
+.catalog-quality-continuation {
+  break-before: page;
+}
+
+/* Product certificate pages: exactly four complete document previews per page. */
+.catalog-certificate-sheet {
+  min-height: 790px !important;
+  break-after: page;
+}
+.catalog-cert-page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 30px;
+}
+.catalog-cert-page-grid article {
+  display: grid;
+  grid-template-columns: 46% 54%;
+  min-height: 270px;
+  border-top: 1px solid var(--catalog-line);
+  background: #fff !important;
+}
+.catalog-cert-page-grid figure {
+  height: 270px !important;
+  margin: 0 !important;
+  padding: 8px 12px 8px 0 !important;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #fff !important;
+}
+.catalog-cert-page-grid figure img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+.catalog-cert-page-grid article > div {
+  align-content: center;
+  display: grid;
+  gap: 8px;
+  padding: 20px 0 18px 16px !important;
+}
+.catalog-cert-page-grid article span {
+  color: #1f6fb4 !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase;
+}
+.catalog-cert-page-grid article strong {
+  color: var(--catalog-navy) !important;
+  font-size: 14px !important;
+  line-height: 1.35 !important;
+}
+.catalog-cert-page-grid article small {
+  color: var(--catalog-muted) !important;
+  font-size: 11.5px !important;
+  line-height: 1.5 !important;
+}
+
+/* Drawings get their own sheets, two large drawings per page. */
+.catalog-drawing-sheet {
+  min-height: 790px !important;
+  break-after: page;
+}
+.catalog-drawing-page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 34px;
+}
+.catalog-drawing-page-grid figure {
+  margin: 0 !important;
+  padding-top: 14px !important;
+  border-top: 1px solid var(--catalog-line) !important;
+}
+.catalog-drawing-page-grid img {
+  width: 100% !important;
+  height: 500px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #fff !important;
+}
+.catalog-drawing-page-grid figcaption {
+  margin-top: 10px !important;
+  color: var(--catalog-muted) !important;
+  font-size: 11px !important;
+  line-height: 1.45 !important;
+}
+
+.catalog-page-no {
+  font-size: 10px !important;
+}
+
+@media (max-width: 900px) {
+  .catalog-editorial-prose,
+  .catalog-editorial-intro,
+  .catalog-product-detail-prose { columns: 1 !important; }
+  .catalog-quality-grid,
+  .catalog-cert-page-grid,
+  .catalog-drawing-page-grid { grid-template-columns: 1fr !important; }
+  .catalog-quality-grid .catalog-evidence-card,
+  .catalog-cert-page-grid article { grid-template-columns: 1fr !important; }
+  .catalog-quality-grid .catalog-evidence-image,
+  .catalog-cert-page-grid figure,
+  .catalog-drawing-page-grid img { height: auto !important; max-height: 430px !important; }
+}
+
+@media print {
+  body { font-family: Arial, Helvetica, sans-serif !important; }
+  .catalog-certificate-sheet,
+  .catalog-drawing-sheet,
+  .catalog-quality-continuation { break-after: page; }
+  .catalog-cert-page-grid figure { height: 56mm !important; }
+  .catalog-drawing-page-grid img { height: 118mm !important; }
+  .catalog-editorial-prose p,
+  .catalog-editorial-intro p,
+  .catalog-product-detail-prose p { font-size: 10.2pt !important; line-height: 1.58 !important; }
+  .catalog-model-table td,
+  .catalog-project-table td { font-size: 8.7pt !important; }
+}
