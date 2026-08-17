@@ -1,21 +1,27 @@
-/* Catalog V7: compact product photography, single certificate register, one drawing per page */
+/* Catalog V7: 16:9 electronic brochure, larger product photography, landscape evidence, curated technical references */
 
-/* Product photography: two restrained images side by side. */
+/* Keep the screen brochure close to the same 16:9 geometry used by the PDF. */
+.catalog-sheet {
+  width: min(1440px, calc(100vw - 32px)) !important;
+  min-height: 810px !important;
+}
+
+/* Product photography: larger, more dominant and less detached from the copy. */
 .catalog-product-photo-pair {
   display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   grid-template-rows: none !important;
-  gap: 14px !important;
+  gap: 18px !important;
   min-height: 0 !important;
   align-self: start !important;
 }
 .catalog-product-photo-pair figure {
-  height: 220px !important;
+  height: 300px !important;
   min-height: 0 !important;
   margin: 0 !important;
-  padding: 8px !important;
+  padding: 4px !important;
   background: #fff !important;
-  border: 1px solid #e0e6eb !important;
+  border: 1px solid #dbe4eb !important;
   overflow: hidden !important;
 }
 .catalog-product-photo-pair img {
@@ -24,37 +30,47 @@
   max-width: 100% !important;
   object-fit: contain !important;
   object-position: center !important;
+  transform: scale(1.035);
+  transform-origin: center;
 }
 .product-overview-grid {
-  grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr) !important;
-  gap: 52px !important;
+  grid-template-columns: minmax(0, 1.22fr) minmax(350px, .78fr) !important;
+  gap: 38px !important;
   align-items: start !important;
 }
 .product-overview-copy {
-  max-width: 500px !important;
+  max-width: 470px !important;
   margin-left: auto !important;
-  padding-left: 18px !important;
+  padding-left: 8px !important;
 }
 
-/* Exactly three front certificate sheets, each showing four complete pages horizontally. */
+/* Certificates: two horizontal evidence cards per row rather than four narrow portrait columns. */
 .catalog-front-certificate-sheet {
   break-after: page;
   page-break-after: always;
 }
 .catalog-front-certificate-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-  align-items: start;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 18px 22px;
+  align-items: stretch;
 }
 .catalog-front-certificate {
   min-width: 0;
-  border-top: 1px solid #d7dfe6;
+  min-height: 260px;
+  display: grid;
+  grid-template-columns: minmax(175px, .72fr) minmax(190px, 1fr);
+  align-items: center;
+  border-top: 1px solid #cfd9e2;
+  border-bottom: 1px solid #e5ebf0;
+  background: #fff;
+  overflow: hidden;
 }
 .catalog-front-certificate figure {
-  height: 465px;
+  height: 250px;
   margin: 0;
-  padding: 10px 0;
+  padding: 8px 16px 8px 0;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -66,8 +82,19 @@
   object-position: center;
 }
 .catalog-front-certificate > div {
-  padding-top: 10px;
-  border-top: 1px solid #e7ebef;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px 10px 18px 20px;
+  border-left: 1px solid #e4e9ee;
+}
+.catalog-front-certificate p {
+  margin: 0 0 10px;
+  color: #5c7890;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .14em;
 }
 .catalog-front-certificate strong,
 .catalog-front-certificate span,
@@ -76,31 +103,57 @@
 }
 .catalog-front-certificate strong {
   color: #0a2f56;
-  font-size: 12.5px;
-  line-height: 1.35;
+  font-size: 15px;
+  line-height: 1.32;
 }
 .catalog-front-certificate span {
-  margin-top: 5px;
+  margin-top: 10px;
   color: #24384d;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
 }
 .catalog-front-certificate small {
-  margin-top: 4px;
+  margin-top: 8px;
   color: #6e8192;
-  font-size: 10px;
-  line-height: 1.45;
+  font-size: 11px;
+  line-height: 1.55;
 }
 
-/* One engineering drawing per page, maximized for reading dimensions and interfaces. */
+/* Project references now occupy their own 16:9 sheet. */
+.catalog-project-reference-sheet .sheet-head {
+  margin-bottom: 18px !important;
+}
+.catalog-project-reference-sheet .catalog-detail-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-top: 0 !important;
+}
+.catalog-project-reference-sheet .catalog-section-intro {
+  max-width: 950px;
+  margin-bottom: 14px !important;
+}
+.catalog-project-reference-sheet .catalog-project-table th {
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
+}
+.catalog-project-reference-sheet .catalog-project-table td {
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
+}
+
+/* One representative technical reference per page, presented in a wide landscape stage. */
 .catalog-single-drawing-sheet {
   break-after: page;
   page-break-after: always;
+}
+.catalog-single-drawing-sheet .sheet-head {
+  margin-bottom: 16px !important;
 }
 .catalog-single-drawing {
   height: 650px;
   display: grid;
   place-items: center;
+  overflow: hidden;
 }
 .catalog-single-drawing figure {
   width: 100%;
@@ -109,87 +162,113 @@
   padding-top: 8px !important;
   border-top: 1px solid #d7dfe6;
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: minmax(0, 1fr) auto;
+  place-items: center;
+  overflow: hidden;
 }
 .catalog-single-drawing img {
-  width: 100% !important;
+  display: block;
+  max-width: 100% !important;
+  max-height: 610px !important;
+  width: auto !important;
   height: 610px !important;
   object-fit: contain !important;
   object-position: center !important;
   background: #fff !important;
 }
+.catalog-drawing-rotate .catalog-single-drawing img {
+  width: 500px !important;
+  height: 708px !important;
+  max-width: none !important;
+  max-height: none !important;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
 .catalog-single-drawing figcaption {
+  width: 100%;
   margin-top: 8px !important;
   color: #6e8192 !important;
   font-size: 10px !important;
   line-height: 1.4 !important;
+  text-align: center;
+}
+
+@media (max-width: 1050px) {
+  .product-overview-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .product-overview-copy {
+    max-width: none !important;
+    padding-left: 0 !important;
+  }
 }
 
 @media (max-width: 900px) {
   .catalog-product-photo-pair,
-  .catalog-front-certificate-grid { grid-template-columns: 1fr !important; }
-  .catalog-product-photo-pair figure { height: 240px !important; }
-  .catalog-front-certificate figure { height: auto !important; max-height: 520px; }
+  .catalog-front-certificate-grid { grid-template-columns: 1fr !important; grid-template-rows: none !important; }
+  .catalog-product-photo-pair figure { height: 280px !important; }
+  .catalog-front-certificate { grid-template-columns: minmax(150px, .7fr) 1fr; }
+  .catalog-front-certificate figure { height: 230px; }
   .catalog-single-drawing,
   .catalog-single-drawing figure { height: auto !important; }
-  .catalog-single-drawing img { height: auto !important; max-height: 720px; }
+  .catalog-single-drawing img { height: auto !important; max-height: 720px !important; }
+  .catalog-drawing-rotate .catalog-single-drawing img {
+    width: 420px !important;
+    height: 594px !important;
+    max-width: none !important;
+    transform: rotate(90deg);
+  }
 }
 
 /*
- * Print layout
+ * 16:9 electronic catalog PDF
  *
- * Screen sheets are allowed to be taller than A4. The original print CSS forced
- * every .catalog-sheet to exactly 210 mm while inheriting overflow:hidden, so
- * anything below that box was simply discarded in the PDF. Normal content
- * sheets now grow and fragment instead of being clipped. Only page types that
- * are deliberately composed to fit one A4 landscape page stay fixed-height.
+ * The brochure is designed for screens first, so the PDF page follows the same wide geometry
+ * instead of forcing the layout into A4. Each catalog sheet is one 320 x 180 mm page.
  */
 @media print {
+  @page {
+    size: 320mm 180mm;
+    margin: 0;
+  }
+
   html,
   body {
-    width: 297mm !important;
-    min-width: 297mm !important;
+    width: 320mm !important;
+    min-width: 320mm !important;
+    margin: 0 !important;
     overflow: visible !important;
+    background: #fff !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
 
   .catalog {
     display: block !important;
+    padding: 0 !important;
     overflow: visible !important;
   }
 
-  /* Default print behavior: preserve every piece of content. */
   .catalog-sheet {
-    width: 297mm !important;
-    height: auto !important;
-    min-height: 210mm !important;
-    max-height: none !important;
+    width: 320mm !important;
+    height: 180mm !important;
+    min-height: 180mm !important;
+    max-height: 180mm !important;
     margin: 0 !important;
-    padding: 14mm 16mm 12mm !important;
-    overflow: visible !important;
+    padding: 10mm 14mm 9mm !important;
+    overflow: hidden !important;
     box-shadow: none !important;
     break-after: page !important;
     page-break-after: always !important;
-    break-inside: auto !important;
-    page-break-inside: auto !important;
-  }
-
-  /* Deliberately composed one-page sheets. */
-  .catalog-cover,
-  .catalog-front-certificate-sheet,
-  .catalog-single-drawing-sheet {
-    width: 297mm !important;
-    height: 210mm !important;
-    min-height: 210mm !important;
-    max-height: 210mm !important;
-    overflow: hidden !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
+
   .catalog-cover {
     padding: 0 !important;
   }
 
-  /* Keep compact visual units intact, but allow long tables to paginate by row. */
   figure,
   .catalog-product-photo-pair,
   .catalog-spec-grid > div,
@@ -201,36 +280,134 @@
     page-break-inside: avoid !important;
   }
 
+  .sheet-head {
+    margin-bottom: 5mm !important;
+  }
+  .sheet-head h2 {
+    font-size: 25pt !important;
+  }
+  .sheet-head > span {
+    font-size: 9.7pt !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Product hero images get materially more of the page. */
+  .product-overview-grid {
+    grid-template-columns: minmax(0, 1.25fr) minmax(84mm, .75fr) !important;
+    gap: 9mm !important;
+  }
+  .catalog-product-photo-pair {
+    gap: 4mm !important;
+  }
+  .catalog-product-photo-pair figure {
+    height: 66mm !important;
+    padding: 1mm !important;
+  }
+  .product-overview-copy {
+    max-width: 94mm !important;
+    padding-left: 0 !important;
+  }
+  .product-overview-copy > p {
+    font-size: 9.7pt !important;
+    line-height: 1.5 !important;
+    margin-bottom: 3.5mm !important;
+  }
+  .product-overview-copy .catalog-spec-grid {
+    margin-top: 3mm !important;
+  }
+  .product-overview-copy .catalog-spec-grid > div {
+    padding: 2.5mm 3mm !important;
+  }
+
+  /* Four certificates per page, but each evidence item is a horizontal card. */
+  .catalog-front-certificate-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, 58mm) !important;
+    gap: 5mm 6mm !important;
+  }
+  .catalog-front-certificate {
+    min-height: 58mm !important;
+    height: 58mm !important;
+    grid-template-columns: 42mm minmax(0, 1fr) !important;
+  }
+  .catalog-front-certificate figure {
+    width: 42mm !important;
+    height: 56mm !important;
+    padding: 1mm 3mm 1mm 0 !important;
+  }
+  .catalog-front-certificate > div {
+    padding: 4mm 3mm 4mm 5mm !important;
+  }
+  .catalog-front-certificate p { font-size: 6.4pt !important; margin-bottom: 2mm !important; }
+  .catalog-front-certificate strong { font-size: 10pt !important; }
+  .catalog-front-certificate span { font-size: 8pt !important; margin-top: 2mm !important; }
+  .catalog-front-certificate small { font-size: 7.2pt !important; margin-top: 1.5mm !important; line-height: 1.4 !important; }
+
+  /* Product details and application tables are already split into separate sheets by the build step. */
+  .catalog-product-detail-prose {
+    columns: 2 !important;
+    column-gap: 10mm !important;
+    margin-bottom: 4mm !important;
+  }
+  .catalog-product-detail-prose p {
+    font-size: 9.2pt !important;
+    line-height: 1.5 !important;
+  }
+  .catalog-product-spec-sheet .catalog-detail-section {
+    margin-top: 4mm !important;
+    padding-top: 3mm !important;
+  }
+  .catalog-project-reference-sheet .catalog-project-table th,
+  .catalog-project-reference-sheet .catalog-project-table td {
+    padding: 2.2mm 2.5mm !important;
+    font-size: 8.2pt !important;
+    line-height: 1.3 !important;
+  }
+  .catalog-project-reference-sheet .catalog-section-intro {
+    font-size: 8.4pt !important;
+    line-height: 1.4 !important;
+    margin-bottom: 3mm !important;
+  }
+
+  /* Technical reference pages are landscape stages. Sideways source pages are rotated into reading orientation. */
+  .catalog-single-drawing-sheet .sheet-head {
+    margin-bottom: 3mm !important;
+  }
+  .catalog-single-drawing {
+    width: 100% !important;
+    height: 126mm !important;
+    overflow: hidden !important;
+  }
+  .catalog-single-drawing figure {
+    width: 100% !important;
+    height: 126mm !important;
+    padding-top: 2mm !important;
+  }
+  .catalog-single-drawing img {
+    width: auto !important;
+    height: 116mm !important;
+    max-width: 275mm !important;
+    max-height: 116mm !important;
+  }
+  .catalog-drawing-rotate .catalog-single-drawing img {
+    width: 118mm !important;
+    height: 167mm !important;
+    max-width: none !important;
+    max-height: none !important;
+    transform: rotate(90deg) !important;
+  }
+  .catalog-single-drawing figcaption {
+    margin-top: 1.5mm !important;
+    font-size: 7pt !important;
+  }
+
   table {
-    break-inside: auto !important;
-    page-break-inside: auto !important;
-  }
-  thead {
-    display: table-header-group !important;
-  }
-  tfoot {
-    display: table-footer-group !important;
-  }
-  tr,
-  th,
-  td {
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
-
-  /* A4 landscape content height is about 184 mm after the page padding above. */
-  .catalog-product-photo-pair figure { height: 48mm !important; }
-  .catalog-front-certificate figure { height: 118mm !important; }
-
-  /* Leave room for the drawing page heading and caption inside the same A4 page. */
-  .catalog-single-drawing { height: 150mm !important; }
-  .catalog-single-drawing img { height: 138mm !important; }
-
-  /* Prevent headings or captions from being stranded at the bottom of a page. */
-  .sheet-head,
-  .catalog-detail-section > h3,
-  .catalog-single-drawing figcaption {
-    break-after: avoid !important;
-    page-break-after: avoid !important;
+  thead { display: table-header-group !important; }
+  tr, th, td {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
 }
