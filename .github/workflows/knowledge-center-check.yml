@@ -43,6 +43,8 @@ jobs:
           test -f dist/products.html
           test -f dist/news.html
           test -f dist/catalog.html
+          test -f dist/assets/css/catalog.css
+          test -f dist/assets/css/catalog-enrich-v2.css
           test -f dist/knowledge/index.html
           test -f dist/knowledge/transformer-selection.html
           test -f dist/knowledge/faq/what-is-transformer-k-factor.html
@@ -67,6 +69,16 @@ jobs:
           test -d source-media/catalog-assets/drawings
           test -d source-media/catalog-assets/certifications
           grep -q '"document_count": 20' source-media/catalog-assets/manifest.json
+          grep -q 'Tianyu Export Catalog V2' dist/catalog.html
+          grep -q 'COMPLETE TECHNICAL EVIDENCE REGISTER' dist/catalog.html
+          grep -q 'All 20 current certificate and test-report records' dist/catalog.html
+          grep -q 'Certification & Report Pages' dist/catalog.html
+          grep -q 'Product & Test Image Library' dist/catalog.html
+          grep -q 'Engineering Drawing Library' dist/catalog.html
+          grep -q '24XB0336-S' dist/catalog.html
+          grep -q 'ZGS22-4000/35/0.8' dist/catalog.html
+          grep -q 'IP65' dist/catalog.html
+          grep -q 'IP68' dist/catalog.html
           FAQ_COUNT=$(find dist/knowledge/faq -maxdepth 1 -name '*.html' | wc -l)
           TOPIC_COUNT=$(find dist/knowledge -maxdepth 1 -name '*.html' ! -name 'index.html' | wc -l)
           MODEL_COUNT=$(find dist/products -mindepth 2 -maxdepth 2 -name '*.html' ! -name 'index.html' | wc -l)
