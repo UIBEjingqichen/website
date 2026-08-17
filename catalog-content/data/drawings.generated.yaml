@@ -29,7 +29,7 @@ drawings:
     document_id: "oil-distribution-1600kva-type-test"
     source_page: 11
     image: "../../source-media/catalog-assets/drawings/oil-distribution-1600kva-type-test-p011.webp"
-    include_in_catalog: false
+    include_in_catalog: true
   - id: "oil-distribution-1600kva-type-test-p055"
     product_id: "oil-immersed-distribution-transformer"
     document_id: "oil-distribution-1600kva-type-test"
@@ -107,7 +107,7 @@ drawings:
     document_id: "power-transformer-50mva-110kv"
     source_page: 40
     image: "../../source-media/catalog-assets/drawings/power-transformer-50mva-110kv-p040.webp"
-    include_in_catalog: false
+    include_in_catalog: true
   - id: "power-transformer-50mva-110kv-p041"
     product_id: "high-voltage-power-transformer"
     document_id: "power-transformer-50mva-110kv"
@@ -185,7 +185,7 @@ drawings:
     document_id: "european-substation-6300kva-35kv"
     source_page: 11
     image: "../../source-media/catalog-assets/drawings/european-substation-6300kva-35kv-p011.webp"
-    include_in_catalog: false
+    include_in_catalog: true
   - id: "european-substation-6300kva-35kv-p105"
     product_id: "dry-type-prefabricated-substation"
     document_id: "european-substation-6300kva-35kv"
@@ -377,7 +377,7 @@ drawings:
     document_id: "china-substation-12500kva-35kv"
     source_page: 11
     image: "../../source-media/catalog-assets/drawings/china-substation-12500kva-35kv-p011.webp"
-    include_in_catalog: false
+    include_in_catalog: true
   - id: "china-substation-12500kva-35kv-p037"
     product_id: "oil-immersed-prefabricated-substation"
     document_id: "china-substation-12500kva-35kv"
