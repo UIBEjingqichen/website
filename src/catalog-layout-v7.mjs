@@ -19,7 +19,11 @@ html = html
   .replaceAll("assets/media/products/power-transformer-220kv-240mva-ssz22.webp", "assets/media/product-oil-immersed-power-transformer.png")
   .replaceAll("assets/media/products/power-transformer-132kv-150mva.webp", "assets/media/product-oil-immersed-energy-saving-transformer.jpeg")
   .replaceAll("assets/media/products/dry-type-transformer-scb18-2500.webp", "assets/media/product-dry-type-transformer-red.jpeg")
-  .replaceAll("assets/media/products/dry-type-transformer-scb18-1000.webp", "assets/media/product-cast-resin-dry-type-transformer.jpeg");
+  .replaceAll("assets/media/products/dry-type-transformer-scb18-1000.webp", "assets/media/product-cast-resin-dry-type-transformer.jpeg")
+  .replaceAll(
+    "Product pages present series ratings, tested reference configurations, certificates and test reports, engineering drawings and project applications together with the technical information required for quotation.",
+    "Product pages present series ratings, tested reference configurations, engineering drawings and project applications together with the technical information required for quotation. Certificates and test reports are presented once in the Quality & Certification section."
+  );
 
 // Remove every previously generated certificate section. Certificates are shown only once near the front.
 html = html.replace(/<section class="catalog-sheet quality-sheet[^"]*"[^>]*>[\s\S]*?<\/section>\s*/g, "");
