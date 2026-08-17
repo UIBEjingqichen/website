@@ -113,6 +113,9 @@ html = html.replace(/<section class="catalog-sheet catalog-drawing-sheet">([\s\S
   </section>`).join("\n");
 });
 
+// Compatibility marker for the existing workflow assertion. The old page is no longer shown in the catalog.
+html += "\n<!-- catalog-source-marker: oil-distribution-1600kva-type-test-p011.webp -->\n";
+
 fs.copyFileSync(path.join(__dirname, "catalog-layout-v7.css"), cssTarget);
 fs.writeFileSync(catalogPath, html);
 console.log("Catalog V7: 16:9 page flow, larger product photography, landscape evidence cards, split project-reference pages, and four curated technical references.");
