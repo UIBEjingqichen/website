@@ -17,6 +17,7 @@ export const navigation = [
     label: "Resources",
     href: "resources.html",
     items: [
+      ["Export Product Catalog", "catalog.html"],
       ["Certificates & Test Reports", "resources.html#certificates"],
       ["Engineering Drawings", "resources.html#drawings"],
       ["Knowledge Center", "knowledge/index.html"]
