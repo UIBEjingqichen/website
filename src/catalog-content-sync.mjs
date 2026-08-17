@@ -24,6 +24,14 @@ const productForDocument = (id) => {
   return "unmapped";
 };
 
+// These are representative catalog drawings. The complete extracted inventory remains in this YAML.
+const featuredDrawings = new Set([
+  "oil-distribution-1600kva-type-test-p011",
+  "power-transformer-50mva-110kv-p040",
+  "european-substation-6300kva-35kv-p011",
+  "china-substation-12500kva-35kv-p011"
+]);
+
 const quote = (value) => JSON.stringify(String(value));
 const rows = [];
 for (const doc of manifest.documents || []) {
@@ -34,12 +42,14 @@ for (const doc of manifest.documents || []) {
       ? `drawings/${doc.id}-p${String(item).padStart(3, "0")}.webp`
       : item.file;
     if (!file) continue;
+    const id = `${doc.id}-p${String(page).padStart(3, "0")}`;
     rows.push({
-      id: `${doc.id}-p${String(page).padStart(3, "0")}`,
+      id,
       productId: productForDocument(doc.id),
       documentId: doc.id,
       page,
-      image: `../../source-media/catalog-assets/${file}`
+      image: `../../source-media/catalog-assets/${file}`,
+      include: featuredDrawings.has(id)
     });
   }
 }
@@ -51,7 +61,7 @@ for (const row of rows) {
   yaml.push(`    document_id: ${quote(row.documentId)}`);
   yaml.push(`    source_page: ${row.page}`);
   yaml.push(`    image: ${quote(row.image)}`);
-  yaml.push("    include_in_catalog: false");
+  yaml.push(`    include_in_catalog: ${row.include ? "true" : "false"}`);
 }
 
 fs.mkdirSync(outDir, { recursive: true });
