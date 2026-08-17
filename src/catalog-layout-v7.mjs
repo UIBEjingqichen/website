@@ -44,7 +44,10 @@ const certificates = [
   ["china-substation-10000kva-35kv-p001.webp", "GY Series Substation Type Test Report", "YB-40.5-10000", "26XB0129-S", "10000 kVA · 35 kV"]
 ];
 
-const certCard = ([file, type, model, report, rating]) => `<article class="catalog-front-certificate"><figure><img src="assets/media/catalog-assets/certifications/${file}" alt="${type} ${model}" loading="lazy"></figure><div><strong>${type}</strong><span>${model}</span><small>${rating}<br>${report}</small></div></article>`;
+// Certificate cards are deliberately landscape compositions: complete portrait evidence on the left,
+// concise reference data on the right. This makes the evidence readable on a 16:9 catalog page
+// without rotating certificate text sideways.
+const certCard = ([file, type, model, report, rating]) => `<article class="catalog-front-certificate"><figure><img src="assets/media/catalog-assets/certifications/${file}" alt="${type} ${model}" loading="lazy"></figure><div><p>REFERENCE EVIDENCE</p><strong>${type}</strong><span>${model}</span><small>${rating}<br>${report}</small></div></article>`;
 const certPages = [0, 1, 2].map((page) => {
   const group = certificates.slice(page * 4, page * 4 + 4);
   return `<section class="catalog-sheet catalog-front-certificate-sheet"${page === 0 ? ' id="quality"' : ''}>
@@ -65,17 +68,51 @@ if (manufacturingAt >= 0) {
   }
 }
 
-// Split every existing engineering-drawing sheet so that one drawing occupies one page.
+// Product detail sheets were the main source of ugly print fragmentation. Split the engineering/specification
+// content from the six-row application table so every 16:9 page has one clear editorial job.
+html = html.replace(/<section class="catalog-sheet product-evidence-sheet catalog-product-detail-sheet">([\s\S]*?)<\/section>/g, (section, body) => {
+  const projectMarker = '<div class="catalog-detail-section catalog-project-table-section">';
+  const projectAt = body.indexOf(projectMarker);
+  if (projectAt < 0) return section;
+
+  const title = body.match(/<h2>([\s\S]*?)<\/h2>/)?.[1]?.trim() || "Product";
+  const firstBody = body.slice(0, projectAt).replace(/<span class="catalog-page-no">[\s\S]*?<\/span>\s*/, "");
+  const projectBody = body.slice(projectAt);
+
+  return `<section class="catalog-sheet product-evidence-sheet catalog-product-detail-sheet catalog-product-spec-sheet">
+    ${firstBody}
+  </section>
+  <section class="catalog-sheet product-evidence-sheet catalog-product-detail-sheet catalog-project-reference-sheet">
+    <div class="sheet-head compact-sheet-head"><p>APPLICATION REFERENCES</p><h2>${title}</h2><span>Selected project references recorded for this product family.</span></div>
+    ${projectBody}
+  </section>`;
+});
+
+// Keep only representative technical references in the catalog. The source archive still retains every
+// extracted drawing/report page. Two selected pages contain landscape artwork inside portrait report pages;
+// mark those for a 90-degree presentation rotation so the technical content reads horizontally.
+const drawingRules = new Map([
+  ["oil-distribution-1600kva-type-test-p102.webp", { label: "General arrangement drawing", rotate: true }],
+  ["power-transformer-50mva-110kv-p040.webp", { label: "Test circuit schematic", rotate: true }],
+  ["european-substation-6300kva-35kv-p011.webp", { label: "General arrangement drawing", rotate: false }],
+  ["china-substation-12500kva-35kv-p011.webp", { label: "General arrangement drawing", rotate: false }]
+]);
+
 html = html.replace(/<section class="catalog-sheet catalog-drawing-sheet">([\s\S]*?)<\/section>/g, (section, body) => {
-  const title = body.match(/<h2>([\s\S]*?)<\/h2>/)?.[1] || "Engineering Drawing";
+  const title = body.match(/<h2>([\s\S]*?)<\/h2>/)?.[1] || "Technical Reference";
   const figures = body.match(/<figure>[\s\S]*?<\/figure>/g) || [];
-  if (!figures.length) return section;
-  return figures.map((figure, index) => `<section class="catalog-sheet catalog-drawing-sheet catalog-single-drawing-sheet">
-    <div class="sheet-head compact-sheet-head"><p>ENGINEERING DRAWING</p><h2>${title}</h2><span>Reference drawing · ${index + 1} / ${figures.length}</span></div>
+  const selected = figures.flatMap((figure) => {
+    const file = [...drawingRules.keys()].find((name) => figure.includes(name));
+    return file ? [{ figure, file, ...drawingRules.get(file) }] : [];
+  });
+  if (!selected.length) return "";
+
+  return selected.map(({ figure, label, rotate }) => `<section class="catalog-sheet catalog-drawing-sheet catalog-single-drawing-sheet${rotate ? " catalog-drawing-rotate" : " catalog-drawing-upright"}">
+    <div class="sheet-head compact-sheet-head"><p>TECHNICAL REFERENCE</p><h2>${title}</h2><span>${label}</span></div>
     <div class="catalog-single-drawing">${figure}</div>
   </section>`).join("\n");
 });
 
 fs.copyFileSync(path.join(__dirname, "catalog-layout-v7.css"), cssTarget);
 fs.writeFileSync(catalogPath, html);
-console.log("Catalog V7: 3 front certificate pages, no product-level certificate duplication, smaller marketing images, and one drawing per page.");
+console.log("Catalog V7: 16:9 page flow, larger product photography, landscape evidence cards, split project-reference pages, and four curated technical references.");
