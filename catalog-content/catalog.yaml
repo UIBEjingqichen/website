@@ -1,0 +1,30 @@
+title: Tianyu Electric Export Product Catalog
+edition: 2026
+company:
+  name: Fuzhou Tianyu Electric Co., Ltd.
+  established: 1996
+  group_background: Wholly-owned subsidiary of XJ Group Corporation under China Electrical Equipment Group Co., Ltd.
+  portfolio_summary: Transformers, prefabricated substations, switchgear and primary electrical equipment for utility, renewable-energy, industrial and infrastructure projects.
+
+notion:
+  hub: https://app.notion.com/p/3bf89c0b427f81fdaa42c937abacfc29
+  products_data_source: a0dc9b34-0a10-4f42-af57-dda2f7c02791
+  certificates_data_source: c324c996-383c-4f5b-a640-767f24ee3909
+  projects_data_source: 2cfedd1e-88b4-4da1-a96f-708cac28a8ae
+  drawings_data_source: 01983ce2-9a1d-41a8-bff9-8ea8b49cb8e5
+
+print:
+  page_size: A4
+  default_orientation: portrait
+  certificate_pages: 3
+  certificates_per_page: 4
+  drawings_per_page: 1
+  product_certificate_images: false
+
+product_order:
+  - oil-immersed-distribution-transformer
+  - high-voltage-power-transformer
+  - cast-resin-dry-type-transformer
+  - dry-type-prefabricated-substation
+  - oil-immersed-prefabricated-substation
+  - american-type-combined-transformer
