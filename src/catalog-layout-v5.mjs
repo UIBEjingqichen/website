@@ -68,14 +68,12 @@ function buildDrawingPages(productName, figures, basePage) {
 </section>`).join("");
 }
 
-// Rebuild each product-detail section so certificates and drawings have dedicated pages.
 const edits = [];
 for (const productName of productNames) {
   const titleNeedle = `<h2>${productName}</h2>`;
   const titleIndex = html.indexOf(titleNeedle);
   if (titleIndex < 0) continue;
 
-  // Find the PRODUCT DETAILS occurrence, not the earlier overview occurrence.
   let detailTitleIndex = html.indexOf(titleNeedle, titleIndex + titleNeedle.length);
   if (detailTitleIndex < 0) detailTitleIndex = titleIndex;
   const sectionStart = html.lastIndexOf('<section class="catalog-sheet product-evidence-sheet catalog-product-detail-sheet">', detailTitleIndex);
@@ -119,7 +117,6 @@ for (const edit of edits.sort((a, b) => b.start - a.start)) {
   html = html.slice(0, edit.start) + edit.replacement + html.slice(edit.end);
 }
 
-// Split the front Quality & Certification evidence into two balanced pages of four records.
 const qualityStart = html.indexOf('<section class="catalog-sheet quality-sheet" id="quality">');
 if (qualityStart >= 0) {
   const qualityEndTag = html.indexOf("</section>", qualityStart);
@@ -134,8 +131,7 @@ if (qualityStart >= 0) {
       if (cards.length > 4) {
         const first = cards.slice(0, 4).join("");
         const second = cards.slice(4, 8).join("");
-        const gridEnd = quality.indexOf("</div>", gridStart) + 6;
-        quality = quality.slice(0, gridStart) + `<div class="catalog-evidence-grid catalog-quality-grid">${first}</div>` + quality.slice(gridEnd);
+        quality = quality.slice(0, gridStart) + `<div class="catalog-evidence-grid catalog-quality-grid">${first}</div>` + quality.slice(principlesStart);
         const pageMatch = quality.match(/<span class="catalog-page-no">([^<]+)<\/span>/);
         const basePage = pageMatch?.[1] || "05";
         const secondPage = `
@@ -150,7 +146,6 @@ if (qualityStart >= 0) {
   }
 }
 
-// Final defensive cleanup in case any older generated model table survived.
 html = stripValidationColumn(html);
 
 fs.copyFileSync(path.join(__dirname, "catalog-layout-v5.css"), cssTarget);
