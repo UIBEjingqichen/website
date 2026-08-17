@@ -1,0 +1,1135 @@
+{
+  "document_count": 20,
+  "categories": {
+    "images": "Product / test photographs that may be reusable in catalog or product pages",
+    "drawings": "Drawings, diagrams and layout figures",
+    "certifications": "Certificate or official report cover pages"
+  },
+  "documents": [
+    {
+      "id": "oil-distribution-1600kva-tuv",
+      "pdf": "oil-distribution-1600kva-tuv.pdf",
+      "page_count": 3,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/oil-distribution-1600kva-tuv-p001.webp"
+          },
+          {
+            "page": 2,
+            "file": "certifications/oil-distribution-1600kva-tuv-p002.webp"
+          },
+          {
+            "page": 3,
+            "file": "certifications/oil-distribution-1600kva-tuv-p003.webp"
+          }
+        ],
+        "images": [],
+        "drawings": []
+      }
+    },
+    {
+      "id": "oil-distribution-1600kva-efficiency",
+      "pdf": "oil-distribution-1600kva-efficiency.pdf",
+      "page_count": 28,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/oil-distribution-1600kva-efficiency-p001.webp"
+          }
+        ],
+        "images": [
+          {
+            "page": 1,
+            "file": "images/oil-distribution-1600kva-efficiency-p001.webp"
+          },
+          {
+            "page": 20,
+            "file": "images/oil-distribution-1600kva-efficiency-p020.webp"
+          },
+          {
+            "page": 22,
+            "file": "images/oil-distribution-1600kva-efficiency-p022.webp"
+          },
+          {
+            "page": 25,
+            "file": "images/oil-distribution-1600kva-efficiency-p025.webp"
+          },
+          {
+            "page": 26,
+            "file": "images/oil-distribution-1600kva-efficiency-p026.webp"
+          },
+          {
+            "page": 27,
+            "file": "images/oil-distribution-1600kva-efficiency-p027.webp"
+          }
+        ],
+        "drawings": [
+          {
+            "page": 25,
+            "file": "drawings/oil-distribution-1600kva-efficiency-p025.webp"
+          },
+          {
+            "page": 28,
+            "file": "drawings/oil-distribution-1600kva-efficiency-p028.webp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "oil-distribution-630kva-efficiency",
+      "pdf": "oil-distribution-630kva-efficiency.pdf",
+      "page_count": 28,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/oil-distribution-630kva-efficiency-p001.webp"
+          }
+        ],
+        "images": [
+          {
+            "page": 1,
+            "file": "images/oil-distribution-630kva-efficiency-p001.webp"
+          },
+          {
+            "page": 20,
+            "file": "images/oil-distribution-630kva-efficiency-p020.webp"
+          },
+          {
+            "page": 22,
+            "file": "images/oil-distribution-630kva-efficiency-p022.webp"
+          },
+          {
+            "page": 25,
+            "file": "images/oil-distribution-630kva-efficiency-p025.webp"
+          },
+          {
+            "page": 26,
+            "file": "images/oil-distribution-630kva-efficiency-p026.webp"
+          },
+          {
+            "page": 27,
+            "file": "images/oil-distribution-630kva-efficiency-p027.webp"
+          }
+        ],
+        "drawings": [
+          {
+            "page": 25,
+            "file": "drawings/oil-distribution-630kva-efficiency-p025.webp"
+          },
+          {
+            "page": 28,
+            "file": "drawings/oil-distribution-630kva-efficiency-p028.webp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "oil-distribution-630kva-tuv",
+      "pdf": "oil-distribution-630kva-tuv.pdf",
+      "page_count": 3,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/oil-distribution-630kva-tuv-p001.webp"
+          },
+          {
+            "page": 2,
+            "file": "certifications/oil-distribution-630kva-tuv-p002.webp"
+          },
+          {
+            "page": 3,
+            "file": "certifications/oil-distribution-630kva-tuv-p003.webp"
+          }
+        ],
+        "images": [],
+        "drawings": []
+      }
+    },
+    {
+      "id": "oil-distribution-630kva-ce",
+      "pdf": "oil-distribution-630kva-ce.pdf",
+      "page_count": 1,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/oil-distribution-630kva-ce-p001.webp"
+          }
+        ],
+        "images": [],
+        "drawings": []
+      }
+    },
+    {
+      "id": "oil-distribution-1600kva-ce",
+      "pdf": "oil-distribution-1600kva-ce.pdf",
+      "page_count": 1,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/oil-distribution-1600kva-ce-p001.webp"
+          }
+        ],
+        "images": [],
+        "drawings": []
+      }
+    },
+    {
+      "id": "oil-distribution-1600kva-type-test",
+      "pdf": "oil-distribution-1600kva-type-test.pdf",
+      "page_count": 104,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/oil-distribution-1600kva-type-test-p001.webp"
+          }
+        ],
+        "images": [
+          {
+            "page": 8,
+            "file": "images/oil-distribution-1600kva-type-test-p008.webp"
+          },
+          {
+            "page": 9,
+            "file": "images/oil-distribution-1600kva-type-test-p009.webp"
+          },
+          {
+            "page": 15,
+            "file": "images/oil-distribution-1600kva-type-test-p015.webp"
+          },
+          {
+            "page": 17,
+            "file": "images/oil-distribution-1600kva-type-test-p017.webp"
+          },
+          {
+            "page": 21,
+            "file": "images/oil-distribution-1600kva-type-test-p021.webp"
+          },
+          {
+            "page": 24,
+            "file": "images/oil-distribution-1600kva-type-test-p024.webp"
+          },
+          {
+            "page": 26,
+            "file": "images/oil-distribution-1600kva-type-test-p026.webp"
+          },
+          {
+            "page": 28,
+            "file": "images/oil-distribution-1600kva-type-test-p028.webp"
+          },
+          {
+            "page": 31,
+            "file": "images/oil-distribution-1600kva-type-test-p031.webp"
+          },
+          {
+            "page": 51,
+            "file": "images/oil-distribution-1600kva-type-test-p051.webp"
+          },
+          {
+            "page": 57,
+            "file": "images/oil-distribution-1600kva-type-test-p057.webp"
+          },
+          {
+            "page": 61,
+            "file": "images/oil-distribution-1600kva-type-test-p061.webp"
+          },
+          {
+            "page": 63,
+            "file": "images/oil-distribution-1600kva-type-test-p063.webp"
+          },
+          {
+            "page": 65,
+            "file": "images/oil-distribution-1600kva-type-test-p065.webp"
+          },
+          {
+            "page": 68,
+            "file": "images/oil-distribution-1600kva-type-test-p068.webp"
+          },
+          {
+            "page": 70,
+            "file": "images/oil-distribution-1600kva-type-test-p070.webp"
+          },
+          {
+            "page": 72,
+            "file": "images/oil-distribution-1600kva-type-test-p072.webp"
+          },
+          {
+            "page": 74,
+            "file": "images/oil-distribution-1600kva-type-test-p074.webp"
+          },
+          {
+            "page": 76,
+            "file": "images/oil-distribution-1600kva-type-test-p076.webp"
+          },
+          {
+            "page": 78,
+            "file": "images/oil-distribution-1600kva-type-test-p078.webp"
+          },
+          {
+            "page": 93,
+            "file": "images/oil-distribution-1600kva-type-test-p093.webp"
+          },
+          {
+            "page": 98,
+            "file": "images/oil-distribution-1600kva-type-test-p098.webp"
+          },
+          {
+            "page": 101,
+            "file": "images/oil-distribution-1600kva-type-test-p101.webp"
+          },
+          {
+            "page": 102,
+            "file": "images/oil-distribution-1600kva-type-test-p102.webp"
+          }
+        ],
+        "drawings": [
+          {
+            "page": 11,
+            "file": "drawings/oil-distribution-1600kva-type-test-p011.webp"
+          },
+          {
+            "page": 55,
+            "file": "drawings/oil-distribution-1600kva-type-test-p055.webp"
+          },
+          {
+            "page": 102,
+            "file": "drawings/oil-distribution-1600kva-type-test-p102.webp"
+          },
+          {
+            "page": 103,
+            "file": "drawings/oil-distribution-1600kva-type-test-p103.webp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "oil-distribution-630kva-type-test",
+      "pdf": "oil-distribution-630kva-type-test.pdf",
+      "page_count": 104,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/oil-distribution-630kva-type-test-p001.webp"
+          }
+        ],
+        "images": [
+          {
+            "page": 8,
+            "file": "images/oil-distribution-630kva-type-test-p008.webp"
+          },
+          {
+            "page": 9,
+            "file": "images/oil-distribution-630kva-type-test-p009.webp"
+          },
+          {
+            "page": 15,
+            "file": "images/oil-distribution-630kva-type-test-p015.webp"
+          },
+          {
+            "page": 17,
+            "file": "images/oil-distribution-630kva-type-test-p017.webp"
+          },
+          {
+            "page": 21,
+            "file": "images/oil-distribution-630kva-type-test-p021.webp"
+          },
+          {
+            "page": 24,
+            "file": "images/oil-distribution-630kva-type-test-p024.webp"
+          },
+          {
+            "page": 26,
+            "file": "images/oil-distribution-630kva-type-test-p026.webp"
+          },
+          {
+            "page": 28,
+            "file": "images/oil-distribution-630kva-type-test-p028.webp"
+          },
+          {
+            "page": 31,
+            "file": "images/oil-distribution-630kva-type-test-p031.webp"
+          },
+          {
+            "page": 51,
+            "file": "images/oil-distribution-630kva-type-test-p051.webp"
+          },
+          {
+            "page": 57,
+            "file": "images/oil-distribution-630kva-type-test-p057.webp"
+          },
+          {
+            "page": 61,
+            "file": "images/oil-distribution-630kva-type-test-p061.webp"
+          },
+          {
+            "page": 63,
+            "file": "images/oil-distribution-630kva-type-test-p063.webp"
+          },
+          {
+            "page": 65,
+            "file": "images/oil-distribution-630kva-type-test-p065.webp"
+          },
+          {
+            "page": 68,
+            "file": "images/oil-distribution-630kva-type-test-p068.webp"
+          },
+          {
+            "page": 70,
+            "file": "images/oil-distribution-630kva-type-test-p070.webp"
+          },
+          {
+            "page": 72,
+            "file": "images/oil-distribution-630kva-type-test-p072.webp"
+          },
+          {
+            "page": 74,
+            "file": "images/oil-distribution-630kva-type-test-p074.webp"
+          },
+          {
+            "page": 76,
+            "file": "images/oil-distribution-630kva-type-test-p076.webp"
+          },
+          {
+            "page": 78,
+            "file": "images/oil-distribution-630kva-type-test-p078.webp"
+          },
+          {
+            "page": 93,
+            "file": "images/oil-distribution-630kva-type-test-p093.webp"
+          },
+          {
+            "page": 98,
+            "file": "images/oil-distribution-630kva-type-test-p098.webp"
+          },
+          {
+            "page": 101,
+            "file": "images/oil-distribution-630kva-type-test-p101.webp"
+          },
+          {
+            "page": 102,
+            "file": "images/oil-distribution-630kva-type-test-p102.webp"
+          }
+        ],
+        "drawings": [
+          {
+            "page": 11,
+            "file": "drawings/oil-distribution-630kva-type-test-p011.webp"
+          },
+          {
+            "page": 55,
+            "file": "drawings/oil-distribution-630kva-type-test-p055.webp"
+          },
+          {
+            "page": 102,
+            "file": "drawings/oil-distribution-630kva-type-test-p102.webp"
+          },
+          {
+            "page": 103,
+            "file": "drawings/oil-distribution-630kva-type-test-p103.webp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "power-transformer-240mva-220kv-ssz22",
+      "pdf": "power-transformer-240mva-220kv-ssz22.pdf",
+      "page_count": 74,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/power-transformer-240mva-220kv-ssz22-p001.webp"
+          }
+        ],
+        "images": [
+          {
+            "page": 4,
+            "file": "images/power-transformer-240mva-220kv-ssz22-p004.webp"
+          },
+          {
+            "page": 57,
+            "file": "images/power-transformer-240mva-220kv-ssz22-p057.webp"
+          }
+        ],
+        "drawings": [
+          {
+            "page": 67,
+            "file": "drawings/power-transformer-240mva-220kv-ssz22-p067.webp"
+          },
+          {
+            "page": 68,
+            "file": "drawings/power-transformer-240mva-220kv-ssz22-p068.webp"
+          },
+          {
+            "page": 69,
+            "file": "drawings/power-transformer-240mva-220kv-ssz22-p069.webp"
+          },
+          {
+            "page": 70,
+            "file": "drawings/power-transformer-240mva-220kv-ssz22-p070.webp"
+          },
+          {
+            "page": 71,
+            "file": "drawings/power-transformer-240mva-220kv-ssz22-p071.webp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "power-transformer-50mva-110kv",
+      "pdf": "power-transformer-50mva-110kv.pdf",
+      "page_count": 47,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/power-transformer-50mva-110kv-p001.webp"
+          }
+        ],
+        "images": [
+          {
+            "page": 4,
+            "file": "images/power-transformer-50mva-110kv-p004.webp"
+          },
+          {
+            "page": 36,
+            "file": "images/power-transformer-50mva-110kv-p036.webp"
+          }
+        ],
+        "drawings": [
+          {
+            "page": 40,
+            "file": "drawings/power-transformer-50mva-110kv-p040.webp"
+          },
+          {
+            "page": 41,
+            "file": "drawings/power-transformer-50mva-110kv-p041.webp"
+          },
+          {
+            "page": 42,
+            "file": "drawings/power-transformer-50mva-110kv-p042.webp"
+          },
+          {
+            "page": 43,
+            "file": "drawings/power-transformer-50mva-110kv-p043.webp"
+          },
+          {
+            "page": 44,
+            "file": "drawings/power-transformer-50mva-110kv-p044.webp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "power-transformer-150mva-132kv",
+      "pdf": "power-transformer-150mva-132kv.pdf",
+      "page_count": 50,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/power-transformer-150mva-132kv-p001.webp"
+          }
+        ],
+        "images": [
+          {
+            "page": 4,
+            "file": "images/power-transformer-150mva-132kv-p004.webp"
+          },
+          {
+            "page": 34,
+            "file": "images/power-transformer-150mva-132kv-p034.webp"
+          },
+          {
+            "page": 38,
+            "file": "images/power-transformer-150mva-132kv-p038.webp"
+          }
+        ],
+        "drawings": [
+          {
+            "page": 43,
+            "file": "drawings/power-transformer-150mva-132kv-p043.webp"
+          },
+          {
+            "page": 44,
+            "file": "drawings/power-transformer-150mva-132kv-p044.webp"
+          },
+          {
+            "page": 45,
+            "file": "drawings/power-transformer-150mva-132kv-p045.webp"
+          },
+          {
+            "page": 46,
+            "file": "drawings/power-transformer-150mva-132kv-p046.webp"
+          },
+          {
+            "page": 47,
+            "file": "drawings/power-transformer-150mva-132kv-p047.webp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "power-transformer-240mva-220kv-ssz20",
+      "pdf": "power-transformer-240mva-220kv-ssz20.pdf",
+      "page_count": 110,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/power-transformer-240mva-220kv-ssz20-p001.webp"
+          }
+        ],
+        "images": [
+          {
+            "page": 4,
+            "file": "images/power-transformer-240mva-220kv-ssz20-p004.webp"
+          },
+          {
+            "page": 99,
+            "file": "images/power-transformer-240mva-220kv-ssz20-p099.webp"
+          },
+          {
+            "page": 105,
+            "file": "images/power-transformer-240mva-220kv-ssz20-p105.webp"
+          },
+          {
+            "page": 106,
+            "file": "images/power-transformer-240mva-220kv-ssz20-p106.webp"
+          }
+        ],
+        "drawings": [
+          {
+            "page": 107,
+            "file": "drawings/power-transformer-240mva-220kv-ssz20-p107.webp"
+          },
+          {
+            "page": 108,
+            "file": "drawings/power-transformer-240mva-220kv-ssz20-p108.webp"
+          },
+          {
+            "page": 109,
+            "file": "drawings/power-transformer-240mva-220kv-ssz20-p109.webp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "european-substation-6300kva-35kv",
+      "pdf": "european-substation-6300kva-35kv.pdf",
+      "page_count": 111,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/european-substation-6300kva-35kv-p001.webp"
+          }
+        ],
+        "images": [
+          {
+            "page": 4,
+            "file": "images/european-substation-6300kva-35kv-p004.webp"
+          },
+          {
+            "page": 101,
+            "file": "images/european-substation-6300kva-35kv-p101.webp"
+          },
+          {
+            "page": 102,
+            "file": "images/european-substation-6300kva-35kv-p102.webp"
+          },
+          {
+            "page": 103,
+            "file": "images/european-substation-6300kva-35kv-p103.webp"
+          },
+          {
+            "page": 104,
+            "file": "images/european-substation-6300kva-35kv-p104.webp"
+          }
+        ],
+        "drawings": [
+          {
+            "page": 11,
+            "file": "drawings/european-substation-6300kva-35kv-p011.webp"
+          },
+          {
+            "page": 105,
+            "file": "drawings/european-substation-6300kva-35kv-p105.webp"
+          },
+          {
+            "page": 106,
+            "file": "drawings/european-substation-6300kva-35kv-p106.webp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "european-substation-10000kva-35kv",
+      "pdf": "european-substation-10000kva-35kv.pdf",
+      "page_count": 108,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/european-substation-10000kva-35kv-p001.webp"
+          }
+        ],
+        "images": [
+          {
+            "page": 4,
+            "file": "images/european-substation-10000kva-35kv-p004.webp"
+          },
+          {
+            "page": 95,
+            "file": "images/european-substation-10000kva-35kv-p095.webp"
+          },
+          {
+            "page": 96,
+            "file": "images/european-substation-10000kva-35kv-p096.webp"
+          },
+          {
+            "page": 97,
+            "file": "images/european-substation-10000kva-35kv-p097.webp"
+          },
+          {
+            "page": 98,
+            "file": "images/european-substation-10000kva-35kv-p098.webp"
+          },
+          {
+            "page": 99,
+            "file": "images/european-substation-10000kva-35kv-p099.webp"
+          },
+          {
+            "page": 100,
+            "file": "images/european-substation-10000kva-35kv-p100.webp"
+          }
+        ],
+        "drawings": [
+          {
+            "page": 11,
+            "file": "drawings/european-substation-10000kva-35kv-p011.webp"
+          },
+          {
+            "page": 44,
+            "file": "drawings/european-substation-10000kva-35kv-p044.webp"
+          },
+          {
+            "page": 46,
+            "file": "drawings/european-substation-10000kva-35kv-p046.webp"
+          },
+          {
+            "page": 50,
+            "file": "drawings/european-substation-10000kva-35kv-p050.webp"
+          },
+          {
+            "page": 54,
+            "file": "drawings/european-substation-10000kva-35kv-p054.webp"
+          },
+          {
+            "page": 57,
+            "file": "drawings/european-substation-10000kva-35kv-p057.webp"
+          },
+          {
+            "page": 82,
+            "file": "drawings/european-substation-10000kva-35kv-p082.webp"
+          },
+          {
+            "page": 87,
+            "file": "drawings/european-substation-10000kva-35kv-p087.webp"
+          },
+          {
+            "page": 101,
+            "file": "drawings/european-substation-10000kva-35kv-p101.webp"
+          },
+          {
+            "page": 102,
+            "file": "drawings/european-substation-10000kva-35kv-p102.webp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "european-substation-12500kva-35kv",
+      "pdf": "european-substation-12500kva-35kv.pdf",
+      "page_count": 106,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/european-substation-12500kva-35kv-p001.webp"
+          }
+        ],
+        "images": [
+          {
+            "page": 4,
+            "file": "images/european-substation-12500kva-35kv-p004.webp"
+          },
+          {
+            "page": 94,
+            "file": "images/european-substation-12500kva-35kv-p094.webp"
+          },
+          {
+            "page": 95,
+            "file": "images/european-substation-12500kva-35kv-p095.webp"
+          },
+          {
+            "page": 96,
+            "file": "images/european-substation-12500kva-35kv-p096.webp"
+          },
+          {
+            "page": 97,
+            "file": "images/european-substation-12500kva-35kv-p097.webp"
+          },
+          {
+            "page": 98,
+            "file": "images/european-substation-12500kva-35kv-p098.webp"
+          },
+          {
+            "page": 99,
+            "file": "images/european-substation-12500kva-35kv-p099.webp"
+          }
+        ],
+        "drawings": [
+          {
+            "page": 11,
+            "file": "drawings/european-substation-12500kva-35kv-p011.webp"
+          },
+          {
+            "page": 44,
+            "file": "drawings/european-substation-12500kva-35kv-p044.webp"
+          },
+          {
+            "page": 46,
+            "file": "drawings/european-substation-12500kva-35kv-p046.webp"
+          },
+          {
+            "page": 50,
+            "file": "drawings/european-substation-12500kva-35kv-p050.webp"
+          },
+          {
+            "page": 54,
+            "file": "drawings/european-substation-12500kva-35kv-p054.webp"
+          },
+          {
+            "page": 57,
+            "file": "drawings/european-substation-12500kva-35kv-p057.webp"
+          },
+          {
+            "page": 81,
+            "file": "drawings/european-substation-12500kva-35kv-p081.webp"
+          },
+          {
+            "page": 86,
+            "file": "drawings/european-substation-12500kva-35kv-p086.webp"
+          },
+          {
+            "page": 100,
+            "file": "drawings/european-substation-12500kva-35kv-p100.webp"
+          },
+          {
+            "page": 101,
+            "file": "drawings/european-substation-12500kva-35kv-p101.webp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "china-substation-10000kva-35kv",
+      "pdf": "china-substation-10000kva-35kv.pdf",
+      "page_count": 103,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/china-substation-10000kva-35kv-p001.webp"
+          }
+        ],
+        "images": [
+          {
+            "page": 4,
+            "file": "images/china-substation-10000kva-35kv-p004.webp"
+          },
+          {
+            "page": 91,
+            "file": "images/china-substation-10000kva-35kv-p091.webp"
+          },
+          {
+            "page": 92,
+            "file": "images/china-substation-10000kva-35kv-p092.webp"
+          },
+          {
+            "page": 93,
+            "file": "images/china-substation-10000kva-35kv-p093.webp"
+          },
+          {
+            "page": 94,
+            "file": "images/china-substation-10000kva-35kv-p094.webp"
+          },
+          {
+            "page": 95,
+            "file": "images/china-substation-10000kva-35kv-p095.webp"
+          },
+          {
+            "page": 96,
+            "file": "images/china-substation-10000kva-35kv-p096.webp"
+          }
+        ],
+        "drawings": [
+          {
+            "page": 11,
+            "file": "drawings/china-substation-10000kva-35kv-p011.webp"
+          },
+          {
+            "page": 37,
+            "file": "drawings/china-substation-10000kva-35kv-p037.webp"
+          },
+          {
+            "page": 39,
+            "file": "drawings/china-substation-10000kva-35kv-p039.webp"
+          },
+          {
+            "page": 43,
+            "file": "drawings/china-substation-10000kva-35kv-p043.webp"
+          },
+          {
+            "page": 48,
+            "file": "drawings/china-substation-10000kva-35kv-p048.webp"
+          },
+          {
+            "page": 51,
+            "file": "drawings/china-substation-10000kva-35kv-p051.webp"
+          },
+          {
+            "page": 78,
+            "file": "drawings/china-substation-10000kva-35kv-p078.webp"
+          },
+          {
+            "page": 83,
+            "file": "drawings/china-substation-10000kva-35kv-p083.webp"
+          },
+          {
+            "page": 97,
+            "file": "drawings/china-substation-10000kva-35kv-p097.webp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "china-substation-12500kva-35kv",
+      "pdf": "china-substation-12500kva-35kv.pdf",
+      "page_count": 89,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/china-substation-12500kva-35kv-p001.webp"
+          }
+        ],
+        "images": [
+          {
+            "page": 4,
+            "file": "images/china-substation-12500kva-35kv-p004.webp"
+          },
+          {
+            "page": 80,
+            "file": "images/china-substation-12500kva-35kv-p080.webp"
+          },
+          {
+            "page": 81,
+            "file": "images/china-substation-12500kva-35kv-p081.webp"
+          },
+          {
+            "page": 82,
+            "file": "images/china-substation-12500kva-35kv-p082.webp"
+          },
+          {
+            "page": 83,
+            "file": "images/china-substation-12500kva-35kv-p083.webp"
+          }
+        ],
+        "drawings": [
+          {
+            "page": 11,
+            "file": "drawings/china-substation-12500kva-35kv-p011.webp"
+          },
+          {
+            "page": 37,
+            "file": "drawings/china-substation-12500kva-35kv-p037.webp"
+          },
+          {
+            "page": 39,
+            "file": "drawings/china-substation-12500kva-35kv-p039.webp"
+          },
+          {
+            "page": 43,
+            "file": "drawings/china-substation-12500kva-35kv-p043.webp"
+          },
+          {
+            "page": 48,
+            "file": "drawings/china-substation-12500kva-35kv-p048.webp"
+          },
+          {
+            "page": 51,
+            "file": "drawings/china-substation-12500kva-35kv-p051.webp"
+          },
+          {
+            "page": 75,
+            "file": "drawings/china-substation-12500kva-35kv-p075.webp"
+          },
+          {
+            "page": 84,
+            "file": "drawings/china-substation-12500kva-35kv-p084.webp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "dry-type-scb18-1000kva-10kv",
+      "pdf": "dry-type-scb18-1000kva-10kv.pdf",
+      "page_count": 45,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/dry-type-scb18-1000kva-10kv-p001.webp"
+          }
+        ],
+        "images": [
+          {
+            "page": 4,
+            "file": "images/dry-type-scb18-1000kva-10kv-p004.webp"
+          },
+          {
+            "page": 36,
+            "file": "images/dry-type-scb18-1000kva-10kv-p036.webp"
+          },
+          {
+            "page": 37,
+            "file": "images/dry-type-scb18-1000kva-10kv-p037.webp"
+          }
+        ],
+        "drawings": [
+          {
+            "page": 38,
+            "file": "drawings/dry-type-scb18-1000kva-10kv-p038.webp"
+          },
+          {
+            "page": 39,
+            "file": "drawings/dry-type-scb18-1000kva-10kv-p039.webp"
+          },
+          {
+            "page": 40,
+            "file": "drawings/dry-type-scb18-1000kva-10kv-p040.webp"
+          },
+          {
+            "page": 41,
+            "file": "drawings/dry-type-scb18-1000kva-10kv-p041.webp"
+          },
+          {
+            "page": 42,
+            "file": "drawings/dry-type-scb18-1000kva-10kv-p042.webp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "dry-type-scb18-2500kva-10kv",
+      "pdf": "dry-type-scb18-2500kva-10kv.pdf",
+      "page_count": 45,
+      "status": "ok",
+      "assets": {
+        "certifications": [
+          {
+            "page": 1,
+            "file": "certifications/dry-type-scb18-2500kva-10kv-p001.webp"
+          }
+        ],
+        "images": [
+          {
+            "page": 4,
+            "file": "images/dry-type-scb18-2500kva-10kv-p004.webp"
+          },
+          {
+            "page": 36,
+            "file": "images/dry-type-scb18-2500kva-10kv-p036.webp"
+          },
+          {
+            "page": 37,
+            "file": "images/dry-type-scb18-2500kva-10kv-p037.webp"
+          }
+        ],
+        "drawings": [
+          {
+            "page": 38,
+            "file": "drawings/dry-type-scb18-2500kva-10kv-p038.webp"
+          },
+          {
+            "page": 39,
+            "file": "drawings/dry-type-scb18-2500kva-10kv-p039.webp"
+          },
+          {
+            "page": 40,
+            "file": "drawings/dry-type-scb18-2500kva-10kv-p040.webp"
+          },
+          {
+            "page": 41,
+            "file": "drawings/dry-type-scb18-2500kva-10kv-p041.webp"
+          },
+          {
+            "page": 42,
+            "file": "drawings/dry-type-scb18-2500kva-10kv-p042.webp"
+          }
+        ]
+      }
+    },
+    {
+      "id": "american-combined-zgs22-4000kva-35kv",
+      "pdf": "american-combined-zgs22-4000kva-35kv.pdf",
+      "certifications": [
+        1
+      ],
+      "images": [
+        4,
+        17
+      ],
+      "drawings": [
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "status": "missing-source-pdf"
+    }
+  ],
+  "total_assets": 211,
+  "missing_source_pdfs": [
+    "source-media/evidence/pdfs/american-combined-zgs22-4000kva-35kv.pdf"
+  ]
+}
