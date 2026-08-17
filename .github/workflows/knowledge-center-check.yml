@@ -49,6 +49,16 @@ jobs:
           test -f dist/assets/css/catalog-refine-v4.css
           test -f dist/assets/css/catalog-layout-v5.css
           test -f dist/assets/css/catalog-layout-v6.css
+          test -f dist/assets/css/catalog-layout-v7.css
+          test -f catalog-content/README.md
+          test -f catalog-content/catalog.yaml
+          test -f catalog-content/data/products.yaml
+          test -f catalog-content/data/certificates.yaml
+          test -f catalog-content/data/projects.yaml
+          test -f catalog-content/data/drawings.generated.yaml
+          test -f catalog-content/typst/catalog.typ
+          test -f catalog-content/typst/styles.typ
+          grep -q '^drawings:' catalog-content/data/drawings.generated.yaml
           test -f dist/knowledge/index.html
           test -f dist/knowledge/transformer-selection.html
           test -f dist/knowledge/faq/what-is-transformer-k-factor.html
@@ -74,21 +84,22 @@ jobs:
           test -d source-media/catalog-assets/certifications
           grep -q '"document_count": 20' source-media/catalog-assets/manifest.json
           grep -q 'Tianyu Export Catalog V2' dist/catalog.html
-          grep -q 'catalog-refine-v3.css' dist/catalog.html
-          grep -q 'catalog-refine-v4.css' dist/catalog.html
-          grep -q 'catalog-layout-v5.css' dist/catalog.html
-          grep -q 'catalog-layout-v6.css' dist/catalog.html
+          grep -q 'catalog-layout-v7.css' dist/catalog.html
           grep -q 'Tianyu Electric supplies transformers and prefabricated substations' dist/catalog.html
           grep -q 'Fuzhou Tianyu Electric supplies S(B)20 / S(B)22 oil-immersed distribution transformers' dist/catalog.html
           grep -q 'catalog-product-photo-pair' dist/catalog.html
           grep -q 'oil-distribution-transformer-01.webp' dist/catalog.html
           grep -q 'oil-distribution-transformer-02.webp' dist/catalog.html
+          grep -q 'product-oil-immersed-power-transformer.png' dist/catalog.html
+          grep -q 'product-dry-type-transformer-red.jpeg' dist/catalog.html
+          ! grep -q 'products/power-transformer-220kv-240mva-ssz22.webp' dist/catalog.html
+          ! grep -q 'products/dry-type-transformer-scb18-2500.webp' dist/catalog.html
           grep -q 'PRODUCT DETAILS' dist/catalog.html
           grep -q 'Tested Reference Configurations' dist/catalog.html
-          grep -q 'catalog-certificate-sheet' dist/catalog.html
-          grep -q 'catalog-cert-page-grid' dist/catalog.html
-          grep -q 'catalog-drawing-sheet' dist/catalog.html
-          grep -q 'catalog-drawing-page-grid' dist/catalog.html
+          FRONT_CERT_COUNT=$(grep -o 'catalog-front-certificate-sheet' dist/catalog.html | wc -l)
+          test "$FRONT_CERT_COUNT" -eq 3
+          ! grep -q 'catalog-certificate-sheet' dist/catalog.html
+          grep -q 'catalog-single-drawing-sheet' dist/catalog.html
           grep -q 'Applications & Project References' dist/catalog.html
           grep -q 'catalog-project-table' dist/catalog.html
           grep -q 'oil-distribution-1600kva-type-test-p011.webp' dist/catalog.html
@@ -164,16 +175,16 @@ jobs:
           path: dist
           if-no-files-found: error
 
-      - name: Commit generated preview and certificate assets
+      - name: Commit generated preview and catalog data
         if: github.event_name == 'push'
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dist index.html source-media/catalog-assets
+          git add dist index.html source-media/catalog-assets catalog-content/data/drawings.generated.yaml
           if git diff --cached --quiet; then
             echo "Generated files are already up to date."
           else
-            git commit -m "Build website preview and certificate assets [skip ci]"
+            git commit -m "Build website preview and catalog data [skip ci]"
             git push
           fi
