@@ -1,28 +1,38 @@
-/* Catalog V7: 16:9 electronic brochure, larger product photography, landscape evidence, curated technical references */
+/* Catalog V7: 16:9 electronic brochure, adaptive product galleries, landscape evidence and enlarged technical references */
 
-/* Keep the screen brochure close to the same 16:9 geometry used by the PDF. */
 .catalog-sheet {
   width: min(1440px, calc(100vw - 32px)) !important;
   min-height: 810px !important;
 }
 
-/* Product photography: larger, more dominant and less detached from the copy. */
+/* Product overview: make the image field carry comparable visual weight to the specification column. */
+.product-overview-grid {
+  grid-template-columns: minmax(0, 1.34fr) minmax(360px, .66fr) !important;
+  gap: 34px !important;
+  align-items: stretch !important;
+}
+.product-overview-copy {
+  max-width: 450px !important;
+  margin-left: auto !important;
+  padding-left: 4px !important;
+}
 .catalog-product-photo-pair {
   display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  grid-template-rows: none !important;
   gap: 18px !important;
   min-height: 0 !important;
-  align-self: start !important;
+  align-self: stretch !important;
 }
 .catalog-product-photo-pair figure {
-  height: 300px !important;
+  height: 390px !important;
   min-height: 0 !important;
   margin: 0 !important;
-  padding: 4px !important;
+  padding: 3px !important;
   background: #fff !important;
   border: 1px solid #dbe4eb !important;
   overflow: hidden !important;
+  display: grid !important;
+  place-items: center !important;
 }
 .catalog-product-photo-pair img {
   width: 100% !important;
@@ -30,96 +40,178 @@
   max-width: 100% !important;
   object-fit: contain !important;
   object-position: center !important;
-  transform: scale(1.035);
+  transform: scale(1.055);
   transform-origin: center;
 }
-.product-overview-grid {
-  grid-template-columns: minmax(0, 1.22fr) minmax(350px, .78fr) !important;
-  gap: 38px !important;
-  align-items: start !important;
+
+/* Three-photo layout: one large anchor image and two supporting views. */
+.catalog-product-photo-pair.catalog-photo-count-3 {
+  grid-template-columns: minmax(0, 1.18fr) minmax(0, .82fr) !important;
+  grid-template-rows: repeat(2, 187px) !important;
 }
-.product-overview-copy {
-  max-width: 470px !important;
-  margin-left: auto !important;
-  padding-left: 8px !important;
+.catalog-product-photo-pair.catalog-photo-count-3 figure {
+  height: 187px !important;
+}
+.catalog-product-photo-pair.catalog-photo-count-3 figure:first-child {
+  grid-row: 1 / span 2 !important;
+  height: 392px !important;
 }
 
-/* Certificates: two horizontal evidence cards per row rather than four narrow portrait columns. */
+/* Four-photo layout: compact 2 x 2 visual matrix. */
+.catalog-product-photo-pair.catalog-photo-count-4 {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(2, 187px) !important;
+}
+.catalog-product-photo-pair.catalog-photo-count-4 figure {
+  height: 187px !important;
+}
+
+/* Certificate sheets: explicitly override earlier four-across rules. */
 .catalog-front-certificate-sheet {
-  break-after: page;
-  page-break-after: always;
+  break-after: page !important;
+  page-break-after: always !important;
 }
 .catalog-front-certificate-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-  gap: 18px 22px;
-  align-items: stretch;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(2, minmax(0, 1fr)) !important;
+  gap: 20px 24px !important;
+  align-items: stretch !important;
 }
 .catalog-front-certificate {
-  min-width: 0;
-  min-height: 260px;
-  display: grid;
-  grid-template-columns: minmax(175px, .72fr) minmax(190px, 1fr);
-  align-items: center;
-  border-top: 1px solid #cfd9e2;
-  border-bottom: 1px solid #e5ebf0;
-  background: #fff;
-  overflow: hidden;
+  min-width: 0 !important;
+  min-height: 285px !important;
+  display: grid !important;
+  grid-template-columns: minmax(205px, .78fr) minmax(210px, 1fr) !important;
+  align-items: center !important;
+  border-top: 1px solid #cfd9e2 !important;
+  border-bottom: 1px solid #e5ebf0 !important;
+  background: #fff !important;
+  overflow: hidden !important;
 }
 .catalog-front-certificate figure {
-  height: 250px;
-  margin: 0;
-  padding: 8px 16px 8px 0;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
+  width: 100% !important;
+  height: 275px !important;
+  margin: 0 !important;
+  padding: 8px 18px 8px 0 !important;
+  display: grid !important;
+  place-items: center !important;
+  overflow: hidden !important;
 }
 .catalog-front-certificate img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
 }
 .catalog-front-certificate > div {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 18px 10px 18px 20px;
-  border-left: 1px solid #e4e9ee;
+  align-self: stretch !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding: 20px 14px 20px 22px !important;
+  border-left: 1px solid #e4e9ee !important;
 }
 .catalog-front-certificate p {
-  margin: 0 0 10px;
-  color: #5c7890;
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: .14em;
+  margin: 0 0 10px !important;
+  color: #5c7890 !important;
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  letter-spacing: .14em !important;
 }
 .catalog-front-certificate strong,
 .catalog-front-certificate span,
 .catalog-front-certificate small {
-  display: block;
+  display: block !important;
 }
 .catalog-front-certificate strong {
-  color: #0a2f56;
-  font-size: 15px;
-  line-height: 1.32;
+  color: #0a2f56 !important;
+  font-size: 16px !important;
+  line-height: 1.3 !important;
 }
 .catalog-front-certificate span {
-  margin-top: 10px;
-  color: #24384d;
-  font-size: 12px;
-  font-weight: 700;
+  margin-top: 10px !important;
+  color: #24384d !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
 }
 .catalog-front-certificate small {
-  margin-top: 8px;
-  color: #6e8192;
-  font-size: 11px;
-  line-height: 1.55;
+  margin-top: 8px !important;
+  color: #6e8192 !important;
+  font-size: 11px !important;
+  line-height: 1.5 !important;
 }
 
-/* Project references now occupy their own 16:9 sheet. */
+/* Product detail pages: richer editorial explanation before the exact reference table. */
+.catalog-product-detail-prose {
+  margin-bottom: 18px !important;
+}
+.catalog-product-story-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr) !important;
+  gap: 28px !important;
+  margin: 16px 0 18px !important;
+}
+.catalog-product-story-grid article {
+  border-top: 1px solid #bdcbd7 !important;
+  padding-top: 13px !important;
+}
+.catalog-product-story-grid article > p {
+  margin: 0 0 7px !important;
+  color: #5f7b92 !important;
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  letter-spacing: .13em !important;
+}
+.catalog-product-story-grid h3 {
+  margin: 0 0 8px !important;
+  color: #092f55 !important;
+  font-size: 17px !important;
+  line-height: 1.3 !important;
+}
+.catalog-product-story-grid span,
+.catalog-product-story-grid li {
+  color: #344b60 !important;
+  font-size: 12px !important;
+  line-height: 1.55 !important;
+}
+.catalog-product-story-grid ul {
+  margin: 4px 0 0 18px !important;
+  padding: 0 !important;
+}
+.catalog-reference-band {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  margin: 0 0 18px !important;
+  border-top: 1px solid #d2dce4 !important;
+  border-bottom: 1px solid #d2dce4 !important;
+}
+.catalog-reference-band > div {
+  padding: 12px 16px !important;
+  border-right: 1px solid #e2e8ed !important;
+}
+.catalog-reference-band > div:last-child {
+  border-right: 0 !important;
+}
+.catalog-reference-band span,
+.catalog-reference-band strong {
+  display: block !important;
+}
+.catalog-reference-band span {
+  margin-bottom: 5px !important;
+  color: #6a7f92 !important;
+  font-size: 9px !important;
+  text-transform: uppercase !important;
+  letter-spacing: .08em !important;
+}
+.catalog-reference-band strong {
+  color: #123a5f !important;
+  font-size: 11.5px !important;
+  line-height: 1.4 !important;
+}
+
+/* Application references keep their own full-width sheet. */
 .catalog-project-reference-sheet .sheet-head {
   margin-bottom: 18px !important;
 }
@@ -129,68 +221,67 @@
   border-top: 0 !important;
 }
 .catalog-project-reference-sheet .catalog-section-intro {
-  max-width: 950px;
+  max-width: 950px !important;
   margin-bottom: 14px !important;
 }
-.catalog-project-reference-sheet .catalog-project-table th {
-  padding-top: 9px !important;
-  padding-bottom: 9px !important;
-}
+.catalog-project-reference-sheet .catalog-project-table th,
 .catalog-project-reference-sheet .catalog-project-table td {
   padding-top: 9px !important;
   padding-bottom: 9px !important;
 }
 
-/* One representative technical reference per page, presented in a wide landscape stage. */
+/* Technical references: use nearly the entire remaining 16:9 canvas. */
 .catalog-single-drawing-sheet {
-  break-after: page;
-  page-break-after: always;
+  break-after: page !important;
+  page-break-after: always !important;
 }
 .catalog-single-drawing-sheet .sheet-head {
-  margin-bottom: 16px !important;
+  margin-bottom: 8px !important;
 }
 .catalog-single-drawing {
-  height: 650px;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
+  height: 705px !important;
+  display: grid !important;
+  place-items: center !important;
+  overflow: hidden !important;
 }
 .catalog-single-drawing figure {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   margin: 0 !important;
-  padding-top: 8px !important;
-  border-top: 1px solid #d7dfe6;
-  display: grid;
-  grid-template-rows: minmax(0, 1fr) auto;
-  place-items: center;
-  overflow: hidden;
+  padding-top: 4px !important;
+  border-top: 1px solid #d7dfe6 !important;
+  display: grid !important;
+  grid-template-rows: minmax(0, 1fr) auto !important;
+  place-items: center !important;
+  overflow: hidden !important;
 }
 .catalog-single-drawing img {
-  display: block;
-  max-width: 100% !important;
-  max-height: 610px !important;
+  display: block !important;
   width: auto !important;
-  height: 610px !important;
+  height: 665px !important;
+  max-width: 1320px !important;
+  max-height: 665px !important;
   object-fit: contain !important;
   object-position: center !important;
   background: #fff !important;
-}
-.catalog-drawing-rotate .catalog-single-drawing img {
-  width: 500px !important;
-  height: 708px !important;
-  max-width: none !important;
-  max-height: none !important;
-  transform: rotate(90deg);
+  transform: scale(1.025);
   transform-origin: center;
 }
+.catalog-drawing-rotate .catalog-single-drawing img {
+  width: 620px !important;
+  height: 876px !important;
+  max-width: none !important;
+  max-height: none !important;
+  transform: rotate(90deg) scale(1.08) !important;
+  transform-origin: center !important;
+}
 .catalog-single-drawing figcaption {
-  width: 100%;
-  margin-top: 8px !important;
+  width: 100% !important;
+  margin-top: 5px !important;
   color: #6e8192 !important;
   font-size: 10px !important;
-  line-height: 1.4 !important;
-  text-align: center;
+  line-height: 1.35 !important;
+  text-align: center !important;
 }
 
 @media (max-width: 1050px) {
@@ -202,31 +293,52 @@
     max-width: none !important;
     padding-left: 0 !important;
   }
+  .catalog-product-photo-pair.catalog-photo-count-3,
+  .catalog-product-photo-pair.catalog-photo-count-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
 }
 
 @media (max-width: 900px) {
   .catalog-product-photo-pair,
-  .catalog-front-certificate-grid { grid-template-columns: 1fr !important; grid-template-rows: none !important; }
-  .catalog-product-photo-pair figure { height: 280px !important; }
-  .catalog-front-certificate { grid-template-columns: minmax(150px, .7fr) 1fr; }
-  .catalog-front-certificate figure { height: 230px; }
+  .catalog-product-photo-pair.catalog-photo-count-3,
+  .catalog-product-photo-pair.catalog-photo-count-4,
+  .catalog-front-certificate-grid,
+  .catalog-product-story-grid,
+  .catalog-reference-band {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: none !important;
+  }
+  .catalog-product-photo-pair figure,
+  .catalog-product-photo-pair.catalog-photo-count-3 figure,
+  .catalog-product-photo-pair.catalog-photo-count-3 figure:first-child,
+  .catalog-product-photo-pair.catalog-photo-count-4 figure {
+    height: 300px !important;
+    grid-row: auto !important;
+  }
+  .catalog-front-certificate {
+    grid-template-columns: minmax(150px, .7fr) 1fr !important;
+  }
+  .catalog-front-certificate figure {
+    height: 245px !important;
+  }
   .catalog-single-drawing,
-  .catalog-single-drawing figure { height: auto !important; }
-  .catalog-single-drawing img { height: auto !important; max-height: 720px !important; }
+  .catalog-single-drawing figure {
+    height: auto !important;
+  }
+  .catalog-single-drawing img {
+    height: auto !important;
+    max-height: 720px !important;
+  }
   .catalog-drawing-rotate .catalog-single-drawing img {
-    width: 420px !important;
-    height: 594px !important;
+    width: 430px !important;
+    height: 608px !important;
     max-width: none !important;
-    transform: rotate(90deg);
+    transform: rotate(90deg) !important;
   }
 }
 
-/*
- * 16:9 electronic catalog PDF
- *
- * The brochure is designed for screens first, so the PDF page follows the same wide geometry
- * instead of forcing the layout into A4. Each catalog sheet is one 320 x 180 mm page.
- */
+/* 16:9 electronic catalog PDF. Each catalog sheet is one 320 x 180 mm page. */
 @media print {
   @page {
     size: 320mm 180mm;
@@ -256,7 +368,7 @@
     min-height: 180mm !important;
     max-height: 180mm !important;
     margin: 0 !important;
-    padding: 10mm 14mm 9mm !important;
+    padding: 9mm 13mm 8mm !important;
     overflow: hidden !important;
     box-shadow: none !important;
     break-after: page !important;
@@ -281,82 +393,155 @@
   }
 
   .sheet-head {
-    margin-bottom: 5mm !important;
+    margin-bottom: 4mm !important;
   }
   .sheet-head h2 {
-    font-size: 25pt !important;
+    font-size: 24pt !important;
   }
   .sheet-head > span {
-    font-size: 9.7pt !important;
-    line-height: 1.4 !important;
+    font-size: 9.3pt !important;
+    line-height: 1.35 !important;
   }
 
-  /* Product hero images get materially more of the page. */
+  /* Product overview galleries use the lower half of the page instead of leaving a white shelf. */
   .product-overview-grid {
-    grid-template-columns: minmax(0, 1.25fr) minmax(84mm, .75fr) !important;
-    gap: 9mm !important;
+    grid-template-columns: minmax(0, 1.34fr) minmax(82mm, .66fr) !important;
+    gap: 7mm !important;
+    align-items: stretch !important;
   }
   .catalog-product-photo-pair {
-    gap: 4mm !important;
+    gap: 3.5mm !important;
+  }
+  .catalog-product-photo-pair.catalog-photo-count-2 figure {
+    height: 84mm !important;
+  }
+  .catalog-product-photo-pair.catalog-photo-count-3 {
+    grid-template-columns: minmax(0, 1.18fr) minmax(0, .82fr) !important;
+    grid-template-rows: repeat(2, 39.5mm) !important;
+  }
+  .catalog-product-photo-pair.catalog-photo-count-3 figure {
+    height: 39.5mm !important;
+  }
+  .catalog-product-photo-pair.catalog-photo-count-3 figure:first-child {
+    grid-row: 1 / span 2 !important;
+    height: 83mm !important;
+  }
+  .catalog-product-photo-pair.catalog-photo-count-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, 39.5mm) !important;
+  }
+  .catalog-product-photo-pair.catalog-photo-count-4 figure {
+    height: 39.5mm !important;
   }
   .catalog-product-photo-pair figure {
-    height: 66mm !important;
-    padding: 1mm !important;
+    padding: .8mm !important;
   }
   .product-overview-copy {
-    max-width: 94mm !important;
+    max-width: 88mm !important;
     padding-left: 0 !important;
   }
   .product-overview-copy > p {
-    font-size: 9.7pt !important;
-    line-height: 1.5 !important;
-    margin-bottom: 3.5mm !important;
+    font-size: 9pt !important;
+    line-height: 1.45 !important;
+    margin-bottom: 2.8mm !important;
   }
   .product-overview-copy .catalog-spec-grid {
-    margin-top: 3mm !important;
+    margin-top: 2.5mm !important;
   }
   .product-overview-copy .catalog-spec-grid > div {
-    padding: 2.5mm 3mm !important;
+    padding: 2.1mm 2.5mm !important;
+  }
+  .product-overview-copy h3 {
+    margin-top: 3mm !important;
+    margin-bottom: 1.5mm !important;
+  }
+  .product-overview-copy li {
+    font-size: 8.1pt !important;
+    line-height: 1.35 !important;
   }
 
-  /* Four certificates per page, but each evidence item is a horizontal card. */
+  /* Certificate pages are 2 x 2 wide cards, never one narrow four-column strip. */
   .catalog-front-certificate-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    grid-template-rows: repeat(2, 58mm) !important;
-    gap: 5mm 6mm !important;
+    grid-template-rows: repeat(2, 59mm) !important;
+    gap: 4mm 6mm !important;
   }
   .catalog-front-certificate {
-    min-height: 58mm !important;
-    height: 58mm !important;
-    grid-template-columns: 42mm minmax(0, 1fr) !important;
+    min-height: 59mm !important;
+    height: 59mm !important;
+    grid-template-columns: 44mm minmax(0, 1fr) !important;
   }
   .catalog-front-certificate figure {
-    width: 42mm !important;
-    height: 56mm !important;
+    width: 44mm !important;
+    height: 57mm !important;
     padding: 1mm 3mm 1mm 0 !important;
   }
   .catalog-front-certificate > div {
     padding: 4mm 3mm 4mm 5mm !important;
   }
-  .catalog-front-certificate p { font-size: 6.4pt !important; margin-bottom: 2mm !important; }
-  .catalog-front-certificate strong { font-size: 10pt !important; }
-  .catalog-front-certificate span { font-size: 8pt !important; margin-top: 2mm !important; }
-  .catalog-front-certificate small { font-size: 7.2pt !important; margin-top: 1.5mm !important; line-height: 1.4 !important; }
+  .catalog-front-certificate p { font-size: 6.2pt !important; margin-bottom: 1.8mm !important; }
+  .catalog-front-certificate strong { font-size: 10.2pt !important; }
+  .catalog-front-certificate span { font-size: 8pt !important; margin-top: 1.8mm !important; }
+  .catalog-front-certificate small { font-size: 7.2pt !important; margin-top: 1.4mm !important; line-height: 1.35 !important; }
 
-  /* Product details and application tables are already split into separate sheets by the build step. */
+  /* Richer product-details page while preserving a clear tested-reference table. */
   .catalog-product-detail-prose {
     columns: 2 !important;
-    column-gap: 10mm !important;
-    margin-bottom: 4mm !important;
+    column-gap: 9mm !important;
+    margin-bottom: 2.5mm !important;
   }
   .catalog-product-detail-prose p {
-    font-size: 9.2pt !important;
-    line-height: 1.5 !important;
+    font-size: 8.5pt !important;
+    line-height: 1.42 !important;
+    margin-top: 0 !important;
+    margin-bottom: 2.2mm !important;
+  }
+  .catalog-product-story-grid {
+    grid-template-columns: 1.08fr .92fr !important;
+    gap: 7mm !important;
+    margin: 2.5mm 0 3mm !important;
+  }
+  .catalog-product-story-grid article {
+    padding-top: 2.3mm !important;
+  }
+  .catalog-product-story-grid article > p {
+    font-size: 6.1pt !important;
+    margin-bottom: 1.2mm !important;
+  }
+  .catalog-product-story-grid h3 {
+    font-size: 10.5pt !important;
+    margin-bottom: 1.2mm !important;
+  }
+  .catalog-product-story-grid span,
+  .catalog-product-story-grid li {
+    font-size: 7.5pt !important;
+    line-height: 1.35 !important;
+  }
+  .catalog-reference-band {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    margin-bottom: 2.8mm !important;
+  }
+  .catalog-reference-band > div {
+    padding: 2.2mm 3mm !important;
+  }
+  .catalog-reference-band span {
+    font-size: 5.8pt !important;
+    margin-bottom: .8mm !important;
+  }
+  .catalog-reference-band strong {
+    font-size: 7.2pt !important;
+    line-height: 1.3 !important;
   }
   .catalog-product-spec-sheet .catalog-detail-section {
-    margin-top: 4mm !important;
-    padding-top: 3mm !important;
+    margin-top: 2.5mm !important;
+    padding-top: 2mm !important;
   }
+  .catalog-product-spec-sheet .catalog-model-table th,
+  .catalog-product-spec-sheet .catalog-model-table td {
+    padding: 1.8mm 2.2mm !important;
+    font-size: 7.6pt !important;
+  }
+
   .catalog-project-reference-sheet .catalog-project-table th,
   .catalog-project-reference-sheet .catalog-project-table td {
     padding: 2.2mm 2.5mm !important;
@@ -369,36 +554,43 @@
     margin-bottom: 3mm !important;
   }
 
-  /* Technical reference pages are landscape stages. Sideways source pages are rotated into reading orientation. */
+  /* Technical reference pages use almost all vertical space available below the compact heading. */
+  .catalog-single-drawing-sheet {
+    padding: 7mm 10mm 6mm !important;
+  }
   .catalog-single-drawing-sheet .sheet-head {
-    margin-bottom: 3mm !important;
+    margin-bottom: 1.5mm !important;
+  }
+  .catalog-single-drawing-sheet .sheet-head h2 {
+    font-size: 20pt !important;
   }
   .catalog-single-drawing {
     width: 100% !important;
-    height: 126mm !important;
+    height: 139mm !important;
     overflow: hidden !important;
   }
   .catalog-single-drawing figure {
     width: 100% !important;
-    height: 126mm !important;
-    padding-top: 2mm !important;
+    height: 139mm !important;
+    padding-top: 1mm !important;
   }
   .catalog-single-drawing img {
     width: auto !important;
-    height: 116mm !important;
-    max-width: 275mm !important;
-    max-height: 116mm !important;
+    height: 132mm !important;
+    max-width: 296mm !important;
+    max-height: 132mm !important;
+    transform: scale(1.03) !important;
   }
   .catalog-drawing-rotate .catalog-single-drawing img {
-    width: 118mm !important;
-    height: 167mm !important;
+    width: 134mm !important;
+    height: 190mm !important;
     max-width: none !important;
     max-height: none !important;
-    transform: rotate(90deg) !important;
+    transform: rotate(90deg) scale(1.12) !important;
   }
   .catalog-single-drawing figcaption {
-    margin-top: 1.5mm !important;
-    font-size: 7pt !important;
+    margin-top: 1mm !important;
+    font-size: 6.6pt !important;
   }
 
   table {
