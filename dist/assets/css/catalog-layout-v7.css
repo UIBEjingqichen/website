@@ -138,13 +138,11 @@
 /*
  * Print layout
  *
- * The screen catalog uses visually bounded sheets. The old print rule inherited
- * overflow:hidden while also forcing every sheet to exactly 210 mm high. Any
- * section taller than one physical A4 landscape page was therefore clipped.
- *
- * In print, normal content sheets are now allowed to grow and fragment across
- * physical pages. Deliberately composed one-page sheets (cover, certificate
- * spreads and single-drawing sheets) remain fixed to one A4 landscape page.
+ * Screen sheets are allowed to be taller than A4. The original print CSS forced
+ * every .catalog-sheet to exactly 210 mm while inheriting overflow:hidden, so
+ * anything below that box was simply discarded in the PDF. Normal content
+ * sheets now grow and fragment instead of being clipped. Only page types that
+ * are deliberately composed to fit one A4 landscape page stay fixed-height.
  */
 @media print {
   html,
@@ -159,7 +157,7 @@
     overflow: visible !important;
   }
 
-  /* Default: never discard content just because a screen sheet became taller. */
+  /* Default print behavior: preserve every piece of content. */
   .catalog-sheet {
     width: 297mm !important;
     height: auto !important;
@@ -175,7 +173,7 @@
     page-break-inside: auto !important;
   }
 
-  /* These page types are intentionally designed as single A4 landscape pages. */
+  /* Deliberately composed one-page sheets. */
   .catalog-cover,
   .catalog-front-certificate-sheet,
   .catalog-single-drawing-sheet {
@@ -186,6 +184,9 @@
     overflow: hidden !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
+  }
+  .catalog-cover {
+    padding: 0 !important;
   }
 
   /* Keep compact visual units intact, but allow long tables to paginate by row. */
@@ -217,11 +218,13 @@
     page-break-inside: avoid !important;
   }
 
-  /* Print-specific image budgets. */
+  /* A4 landscape content height is about 184 mm after the page padding above. */
   .catalog-product-photo-pair figure { height: 48mm !important; }
   .catalog-front-certificate figure { height: 118mm !important; }
-  .catalog-single-drawing { height: 178mm !important; }
-  .catalog-single-drawing img { height: 166mm !important; }
+
+  /* Leave room for the drawing page heading and caption inside the same A4 page. */
+  .catalog-single-drawing { height: 150mm !important; }
+  .catalog-single-drawing img { height: 138mm !important; }
 
   /* Prevent headings or captions from being stranded at the bottom of a page. */
   .sheet-head,
