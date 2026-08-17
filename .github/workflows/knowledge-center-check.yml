@@ -46,6 +46,7 @@ jobs:
           test -f dist/assets/css/catalog.css
           test -f dist/assets/css/catalog-enrich-v2.css
           test -f dist/assets/css/catalog-refine-v3.css
+          test -f dist/assets/css/catalog-refine-v4.css
           test -f dist/knowledge/index.html
           test -f dist/knowledge/transformer-selection.html
           test -f dist/knowledge/faq/what-is-transformer-k-factor.html
@@ -72,18 +73,28 @@ jobs:
           grep -q '"document_count": 20' source-media/catalog-assets/manifest.json
           grep -q 'Tianyu Export Catalog V2' dist/catalog.html
           grep -q 'catalog-refine-v3.css' dist/catalog.html
-          grep -q 'catalog-editorial-prose' dist/catalog.html
+          grep -q 'catalog-refine-v4.css' dist/catalog.html
           grep -q 'This catalog is designed as an engineering sales document' dist/catalog.html
           grep -q 'Transformer products are configurable, but customization is not unlimited substitution' dist/catalog.html
-          grep -q 'COMPLETE TECHNICAL EVIDENCE REGISTER' dist/catalog.html
-          grep -q 'All 20 current certificate and test-report records' dist/catalog.html
-          grep -q 'Certification &amp; Report Pages' dist/catalog.html
-          grep -q 'Product &amp; Test Image Library' dist/catalog.html
-          grep -q 'Engineering Drawing Library' dist/catalog.html
+          grep -q 'PRODUCT DETAILS' dist/catalog.html
+          grep -q 'Tested Reference Configurations' dist/catalog.html
+          grep -q 'Certificates &amp; Test Reports' dist/catalog.html
+          grep -q 'Engineering Drawings' dist/catalog.html
+          grep -q 'Applications &amp; Project References' dist/catalog.html
+          grep -q 'catalog-project-table' dist/catalog.html
+          grep -q 'oil-distribution-1600kva-type-test-p011.webp' dist/catalog.html
+          grep -q 'Tay Ninh Cement Milling Plant 2' dist/catalog.html
+          grep -q 'Atlantic Industrial Park 132 kV Substation' dist/catalog.html
           grep -q '24XB0336-S' dist/catalog.html
           grep -q 'ZGS22-4000/35/0.8' dist/catalog.html
           grep -q 'IP65' dist/catalog.html
           grep -q 'IP68' dist/catalog.html
+          ! grep -q 'COMPLETE TECHNICAL EVIDENCE REGISTER' dist/catalog.html
+          ! grep -q 'All 20 current certificate and test-report records' dist/catalog.html
+          ! grep -q 'Certification &amp; Report Pages' dist/catalog.html
+          ! grep -q 'Product &amp; Test Image Library' dist/catalog.html
+          ! grep -q 'Engineering Drawing Library' dist/catalog.html
+          ! grep -q 'Typical Application Areas' dist/catalog.html
           ! grep -q 'Built around the project' dist/catalog.html
           FAQ_COUNT=$(find dist/knowledge/faq -maxdepth 1 -name '*.html' | wc -l)
           TOPIC_COUNT=$(find dist/knowledge -maxdepth 1 -name '*.html' ! -name 'index.html' | wc -l)
