@@ -1,0 +1,55 @@
+products:
+  - id: oil-immersed-distribution-transformer
+    title: Oil-Immersed Distribution Transformer
+    subtitle: S(B)20 / S(B)22 Distribution Platform
+    description: Tianyu S(B)20 / S(B)22 oil-immersed distribution transformers are designed for utility, industrial and commercial distribution systems. The series covers voltage levels up to 22 kV and design capacities up to 4,000 kVA with sealed construction, ONAN cooling, low-loss magnetic-core design and project-specific electrical interfaces.
+    image_1: ../../source-media/products/oil-distribution-transformer-02.webp
+    image_2: ../../source-media/products/oil-distribution-transformer-01.webp
+    voltage: 22 kV and below
+    capacity: Up to 4,000 kVA
+    tested_models: S-M-630/22-Tier2; S-M-1600/22-Tier2
+  - id: high-voltage-power-transformer
+    title: High-Voltage Power Transformer
+    subtitle: Main Transformer Solutions for 110–220 kV Systems
+    description: Tianyu supplies three-phase oil-immersed power transformers for main substations, grid interconnection and major industrial power systems. Documented reference ratings cover 110 kV, 132 kV and 220 kV equipment with tested capacities from 50 MVA to 240 MVA.
+    image_1: ../../source-media/product-oil-immersed-power-transformer.png
+    image_2: ../../source-media/product-oil-immersed-energy-saving-transformer.jpeg
+    voltage: 110–220 kV documented references
+    capacity: 50–240 MVA documented references
+    tested_models: SZ22-50000/110-NX1; SFZ-150000/132; SSZ20-240000/220; SSZ22-240000/220-NX1
+  - id: cast-resin-dry-type-transformer
+    title: Cast Resin Dry-Type Transformer
+    subtitle: SCB18 Indoor Distribution Platform
+    description: Tianyu SCB18 cast-resin dry-type transformers provide oil-free indoor distribution for commercial buildings, hospitals, charging infrastructure, industrial facilities and public infrastructure, with configurable cooling, enclosure and temperature-monitoring arrangements.
+    image_1: ../../source-media/product-dry-type-transformer-red.jpeg
+    image_2: ../../source-media/product-cast-resin-dry-type-transformer.jpeg
+    voltage: 35 kV and below series capability
+    capacity: 1000 / 2500 kVA tested references
+    tested_models: SCB18-1000/10-NX1; SCB18-2500/10
+  - id: dry-type-prefabricated-substation
+    title: European-Type Prefabricated Substation
+    subtitle: Dry-Type Transformer Configuration
+    description: Tianyu European-Type Prefabricated Substations integrate high-voltage primary equipment, a dry-type transformer and low-voltage distribution equipment in a factory-assembled outdoor enclosure for renewable-energy, storage and distribution projects.
+    image_1: ../../source-media/products/dry-type-prefabricated-substation-01.webp
+    image_2: ../../source-media/products/dry-type-prefabricated-substation-03.webp
+    voltage: 6 / 12 / 35 kV primary
+    capacity: Up to 12,500 kVA
+    tested_models: YB-40.5/1.14-6300; YB-40.5/1.14-10000; YB-40.5/1.14-12500
+  - id: oil-immersed-prefabricated-substation
+    title: Compact Prefabricated Substation
+    subtitle: Oil-Immersed Transformer / GY Configuration
+    description: Tianyu Compact Prefabricated Substations integrate high-voltage equipment, an oil-immersed transformer and low-voltage distribution in a factory-assembled outdoor enclosure for renewable-energy, utility and industrial projects.
+    image_1: ../../source-media/products/oil-prefabricated-substation-01.webp
+    image_2: ../../source-media/products/oil-prefabricated-substation-04.webp
+    voltage: 35 kV and below
+    capacity: Up to 15,000 kVA
+    tested_models: YB-40.5-10000; YB-40.5/1.14-12500 (GY)
+  - id: american-type-combined-transformer
+    title: Pad-Mounted Transformer
+    subtitle: ZGS / Renewable-Energy Combined Transformer
+    description: Tianyu Pad-Mounted Transformer solutions integrate the oil-immersed transformer, high-voltage load switch and fuse protection in a compact outdoor assembly for renewable-energy collection systems and compact distribution projects.
+    image_1: ../../source-media/products/american-combined-transformer-01.webp
+    image_2: ../../source-media/products/american-combined-transformer-04.webp
+    voltage: 35 kV class
+    capacity: Up to 4,500 kVA series capability
+    tested_models: ZGS22-4000/35/0.8
