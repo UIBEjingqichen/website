@@ -1,1 +1,2 @@
 Temporary CI trigger for exporting the current website catalog to PDF on 2026-08-25. This branch is not intended for merge.
+Trigger revision: 2
