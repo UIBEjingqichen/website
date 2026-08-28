@@ -113,7 +113,19 @@ function upgradeProductPages() {
     html = upgradeQuoteForm(html);
     if (!html.includes('id="capability-ladder"')) {
       const section = productPageSection(entry.name);
-      if (section) html = html.replace('<div class="product-page-body">', `<div class="product-page-body">${section}`);
+      if (section) {
+        if (html.includes('<div class="product-page-body">')) {
+          html = html.replace('<div class="product-page-body">', `<div class="product-page-body">${section}`);
+        } else {
+          const applicationTarget = '<section class="section v9-real-applications';
+          const inquiryTarget = '<section class="section inquiry-cta';
+          const applicationIndex = html.indexOf(applicationTarget);
+          const inquiryIndex = html.indexOf(inquiryTarget);
+          const insertAt = applicationIndex >= 0 ? applicationIndex : inquiryIndex;
+          if (insertAt >= 0) html = html.slice(0, insertAt) + section + html.slice(insertAt);
+          else html = html.replace('</main>', `${section}\n</main>`);
+        }
+      }
     }
     write(file, html);
   }
