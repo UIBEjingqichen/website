@@ -1,0 +1,38 @@
+name: Website and Catalog build
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: ${{ !contains(github.event.head_commit.message, '[site-generated]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build website and export catalog
+        run: npm run build
+      - name: Commit generated website
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No generated changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist index.html catalog-content/data || true
+          git commit -m "Build website and catalog [site-generated]"
+          git push origin HEAD:master
