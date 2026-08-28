@@ -1,1 +1,0 @@
-Binary media blobs are added via Git data after this marker.
