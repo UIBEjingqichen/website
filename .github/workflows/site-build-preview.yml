@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: '22'
       - name: Build homepage preview
-        run: node src/home-capabilities-map-v14.mjs && node src/root-index.mjs && node src/home-image-cleanup-v13.mjs
+        run: node src/home-capabilities-map-v14.mjs && node src/home-capabilities-refine-v15.mjs && node src/root-index.mjs && node src/home-image-cleanup-v13.mjs
       - name: Commit generated preview
         shell: bash
         run: |
@@ -34,5 +34,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add dist index.html || true
-          git commit -m "Build homepage capabilities preview [preview-generated]"
+          git commit -m "Build refined homepage capabilities preview [preview-generated]"
           git push origin HEAD:feature/home-capabilities-project-map
