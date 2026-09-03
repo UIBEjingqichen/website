@@ -31,6 +31,7 @@ jobs:
           echo "Full legacy build validation failed; preserving committed site and applying current homepage/product refinements."
           git restore --source=HEAD -- dist index.html catalog-content/data || true
           node src/product-page-refine-v19.mjs
+          node src/product-hero-split-v21.mjs
           node src/home-news-refine-v18.mjs
           node src/root-index.mjs
       - name: Commit generated website
