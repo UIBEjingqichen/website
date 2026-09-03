@@ -1,0 +1,61 @@
+/* V27: keep inquiry modal centered in the viewport, independent of page scroll/entry transforms. */
+html body.modal-open {
+  overflow: hidden !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+.quote-modal.open {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 9999 !important;
+  display: grid !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  margin: 0 !important;
+  padding: clamp(14px, 2.5vw, 30px) !important;
+  place-items: center !important;
+  overflow: hidden !important;
+  transform: none !important;
+}
+
+.quote-modal.open > .modal-backdrop {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.quote-modal.open > .quote-panel {
+  position: relative !important;
+  z-index: 1 !important;
+  align-self: center !important;
+  justify-self: center !important;
+  width: min(820px, calc(100vw - 28px)) !important;
+  max-height: calc(100vh - 28px) !important;
+  max-height: calc(100dvh - 28px) !important;
+  margin: 0 !important;
+  overflow: auto !important;
+  overscroll-behavior: contain;
+  transform: none !important;
+  animation: quote-v27-enter .24s cubic-bezier(.22,.7,.3,1) both;
+}
+
+@keyframes quote-v27-enter {
+  from { opacity: 0; transform: translateY(14px) scale(.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 640px) {
+  .quote-modal.open { padding: 10px !important; }
+  .quote-modal.open > .quote-panel {
+    width: calc(100vw - 20px) !important;
+    max-height: calc(100dvh - 20px) !important;
+    padding: 22px 18px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quote-modal.open > .quote-panel { animation: none !important; }
+}

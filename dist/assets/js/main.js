@@ -56,7 +56,7 @@ function setModalState(modal, open) {
   body.classList.toggle("modal-open", open);
   if (open) {
     lastFocused = document.activeElement;
-    bySelector("input,button,a,select,textarea", modal)?.focus();
+    bySelector("input,button,a,select,textarea", modal)?.focus({ preventScroll: true });
   } else {
     lastFocused?.focus?.();
   }
