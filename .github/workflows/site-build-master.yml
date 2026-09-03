@@ -36,6 +36,7 @@ jobs:
           node src/root-index.mjs
           node src/copy-cleanup-v24.mjs
           node src/applications-projects-v26.mjs
+          node src/modal-center-fix-v27.mjs
       - name: Commit generated website
         shell: bash
         run: |
