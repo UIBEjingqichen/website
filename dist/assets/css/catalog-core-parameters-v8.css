@@ -1,0 +1,207 @@
+/* Catalog V8: comprehensive tested-reference technical parameter sheets */
+
+.catalog-core-params-sheet {
+  break-after: page !important;
+  page-break-after: always !important;
+}
+.catalog-core-params-sheet .sheet-head {
+  margin-bottom: 14px !important;
+}
+.catalog-core-note {
+  margin: 0 0 14px !important;
+  padding: 9px 12px !important;
+  border-left: 3px solid #2f6fa4 !important;
+  background: #f5f8fb !important;
+  color: #435a6e !important;
+  font-size: 11px !important;
+  line-height: 1.45 !important;
+}
+.catalog-core-note strong {
+  color: #0a3158 !important;
+}
+.catalog-core-table-wrap {
+  width: 100% !important;
+  overflow: hidden !important;
+}
+.catalog-core-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  table-layout: fixed !important;
+  background: #fff !important;
+}
+.catalog-core-table th,
+.catalog-core-table td {
+  border-bottom: 1px solid #d9e1e8 !important;
+  border-right: 1px solid #e9eef2 !important;
+  padding: 7px 7px !important;
+  text-align: left !important;
+  vertical-align: top !important;
+  overflow-wrap: anywhere !important;
+}
+.catalog-core-table th:last-child,
+.catalog-core-table td:last-child {
+  border-right: 0 !important;
+}
+.catalog-core-table thead th {
+  border-top: 1px solid #aebdca !important;
+  border-bottom: 1px solid #aebdca !important;
+  background: #f7f9fb !important;
+  color: #38546c !important;
+  font-size: 8.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: .035em !important;
+  line-height: 1.25 !important;
+  text-transform: uppercase !important;
+}
+.catalog-core-table tbody td {
+  color: #243a4e !important;
+  font-size: 10.5px !important;
+  line-height: 1.35 !important;
+}
+.catalog-core-table tbody td:first-child {
+  color: #0a3158 !important;
+  font-weight: 800 !important;
+}
+.catalog-core-table .value-strong {
+  color: #0b3d69 !important;
+  font-weight: 800 !important;
+}
+.catalog-core-subtitle {
+  margin: 15px 0 7px !important;
+  color: #0a3158 !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+}
+.catalog-core-foot {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  margin-top: 14px !important;
+  border-top: 1px solid #cfd9e2 !important;
+  border-bottom: 1px solid #cfd9e2 !important;
+}
+.catalog-core-foot > div {
+  padding: 9px 12px !important;
+  border-right: 1px solid #e2e8ed !important;
+}
+.catalog-core-foot > div:last-child {
+  border-right: 0 !important;
+}
+.catalog-core-foot span,
+.catalog-core-foot strong {
+  display: block !important;
+}
+.catalog-core-foot span {
+  margin-bottom: 4px !important;
+  color: #718597 !important;
+  font-size: 8px !important;
+  text-transform: uppercase !important;
+  letter-spacing: .07em !important;
+}
+.catalog-core-foot strong {
+  color: #123b5f !important;
+  font-size: 10.5px !important;
+  line-height: 1.35 !important;
+}
+.catalog-core-kv {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  border-top: 1px solid #c7d3dd !important;
+  border-left: 1px solid #e1e7ec !important;
+}
+.catalog-core-kv > div {
+  min-height: 64px !important;
+  padding: 10px 12px !important;
+  border-right: 1px solid #e1e7ec !important;
+  border-bottom: 1px solid #e1e7ec !important;
+}
+.catalog-core-kv span,
+.catalog-core-kv strong {
+  display: block !important;
+}
+.catalog-core-kv span {
+  margin-bottom: 5px !important;
+  color: #718597 !important;
+  font-size: 8px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .06em !important;
+}
+.catalog-core-kv strong {
+  color: #173b5c !important;
+  font-size: 11.5px !important;
+  line-height: 1.35 !important;
+}
+.catalog-core-missing {
+  color: #8a5a3b !important;
+  font-style: italic !important;
+}
+
+@media (max-width: 900px) {
+  .catalog-core-table-wrap { overflow-x: auto !important; }
+  .catalog-core-table { min-width: 1080px !important; }
+  .catalog-core-kv { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .catalog-core-foot { grid-template-columns: 1fr !important; }
+}
+
+@media print {
+  .catalog-core-params-sheet {
+    width: 320mm !important;
+    height: 180mm !important;
+    min-height: 180mm !important;
+    max-height: 180mm !important;
+    padding: 8mm 10mm 7mm !important;
+    overflow: hidden !important;
+  }
+  .catalog-core-params-sheet .sheet-head {
+    margin-bottom: 2.2mm !important;
+  }
+  .catalog-core-params-sheet .sheet-head h2 {
+    font-size: 20pt !important;
+  }
+  .catalog-core-params-sheet .sheet-head > span {
+    font-size: 8pt !important;
+  }
+  .catalog-core-note {
+    margin-bottom: 2.2mm !important;
+    padding: 1.7mm 2.3mm !important;
+    font-size: 6.5pt !important;
+    line-height: 1.3 !important;
+  }
+  .catalog-core-table th,
+  .catalog-core-table td {
+    padding: 1.35mm 1.25mm !important;
+  }
+  .catalog-core-table thead th {
+    font-size: 5.3pt !important;
+    line-height: 1.15 !important;
+  }
+  .catalog-core-table tbody td {
+    font-size: 6.1pt !important;
+    line-height: 1.24 !important;
+  }
+  .catalog-core-subtitle {
+    margin: 2.5mm 0 1.2mm !important;
+    font-size: 8.5pt !important;
+  }
+  .catalog-core-foot {
+    margin-top: 2.2mm !important;
+  }
+  .catalog-core-foot > div {
+    padding: 1.5mm 2mm !important;
+  }
+  .catalog-core-foot span { font-size: 4.8pt !important; margin-bottom: .6mm !important; }
+  .catalog-core-foot strong { font-size: 6pt !important; line-height: 1.25 !important; }
+  .catalog-core-kv > div {
+    min-height: 14mm !important;
+    padding: 1.6mm 2mm !important;
+  }
+  .catalog-core-kv span { font-size: 4.9pt !important; margin-bottom: .7mm !important; }
+  .catalog-core-kv strong { font-size: 6.4pt !important; line-height: 1.25 !important; }
+  .catalog-core-table,
+  .catalog-core-kv,
+  .catalog-core-foot {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}

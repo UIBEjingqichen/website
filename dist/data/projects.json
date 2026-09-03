@@ -1,0 +1,470 @@
+[
+  {
+    "id": "oil-immersed-distribution-transformer-project-01",
+    "name": "Tay Ninh Cement Milling Plant 2",
+    "country": null,
+    "industry": "Cement",
+    "application": "Industrial",
+    "productIds": [
+      "oil-immersed-distribution-transformer"
+    ],
+    "capacity": null,
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "oil-immersed-distribution-transformer-project-02",
+    "name": "Neikeng Phase I Transformer Project",
+    "country": null,
+    "industry": "Industrial",
+    "application": "Industrial",
+    "productIds": [
+      "oil-immersed-distribution-transformer"
+    ],
+    "capacity": null,
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "oil-immersed-distribution-transformer-project-03",
+    "name": "Wanhua Ningbo 450 Substation Grade 1 Efficiency Transformer",
+    "country": "China",
+    "industry": "Chemical",
+    "application": "Industrial",
+    "productIds": [
+      "oil-immersed-distribution-transformer"
+    ],
+    "capacity": null,
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "oil-immersed-distribution-transformer-project-04",
+    "name": "SCC Cement Plant 6000 TPD",
+    "country": null,
+    "industry": "Cement",
+    "application": "Industrial",
+    "productIds": [
+      "oil-immersed-distribution-transformer"
+    ],
+    "capacity": "6000 TPD",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "oil-immersed-distribution-transformer-project-05",
+    "name": "Yamama 6000 TPD Clinker Plant Project",
+    "country": null,
+    "industry": "Cement",
+    "application": "Industrial",
+    "productIds": [
+      "oil-immersed-distribution-transformer"
+    ],
+    "capacity": "6000 TPD",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "oil-immersed-distribution-transformer-project-06",
+    "name": "Wanhua Chemical Haiyang Phase II & III Distribution Project",
+    "country": "China",
+    "industry": "Chemical",
+    "application": "Industrial",
+    "productIds": [
+      "oil-immersed-distribution-transformer"
+    ],
+    "capacity": null,
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "high-voltage-power-transformer-project-01",
+    "name": "BCL Hattar Line 2 7200 TPD Cement Plant",
+    "country": "Pakistan",
+    "industry": "Cement",
+    "application": "Industrial",
+    "productIds": [
+      "high-voltage-power-transformer"
+    ],
+    "capacity": "7200 TPD",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "high-voltage-power-transformer-project-02",
+    "name": "Atlantic Industrial Park 132 kV Substation",
+    "country": "Nigeria",
+    "industry": "Industrial Park",
+    "application": "Utility Grid",
+    "productIds": [
+      "high-voltage-power-transformer"
+    ],
+    "capacity": "132 kV",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "high-voltage-power-transformer-project-03",
+    "name": "Long Son Company Cement Grinding Project",
+    "country": "Vietnam",
+    "industry": "Cement",
+    "application": "Industrial",
+    "productIds": [
+      "high-voltage-power-transformer"
+    ],
+    "capacity": null,
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "high-voltage-power-transformer-project-04",
+    "name": "Methanol Dayyer Mobile Substation Export Project",
+    "country": "United Arab Emirates",
+    "industry": "Chemical",
+    "application": "Infrastructure",
+    "productIds": [
+      "high-voltage-power-transformer"
+    ],
+    "capacity": null,
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "high-voltage-power-transformer-project-05",
+    "name": "Feicheng 100 MW-Class Advanced Compressed Air Energy Storage Station Phase II",
+    "country": "China",
+    "industry": "Energy Storage",
+    "application": "Energy Storage",
+    "productIds": [
+      "high-voltage-power-transformer"
+    ],
+    "capacity": "100 MW-class",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "high-voltage-power-transformer-project-06",
+    "name": "Xi'an Metro Lines 8, 10 and 15 Main Substations",
+    "country": "China",
+    "industry": "Rail Transit",
+    "application": "Infrastructure",
+    "productIds": [
+      "high-voltage-power-transformer"
+    ],
+    "capacity": null,
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "cast-resin-dry-type-transformer-project-01",
+    "name": "Yinchuan Charging Infrastructure Phase II Lot 2",
+    "country": "China",
+    "industry": "Charging Infrastructure",
+    "application": "Infrastructure",
+    "productIds": [
+      "cast-resin-dry-type-transformer"
+    ],
+    "capacity": null,
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "cast-resin-dry-type-transformer-project-02",
+    "name": "Baihong Nylon Texturing Workshop Phase I",
+    "country": "China",
+    "industry": "Industrial",
+    "application": "Industrial",
+    "productIds": [
+      "cast-resin-dry-type-transformer"
+    ],
+    "capacity": null,
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "cast-resin-dry-type-transformer-project-03",
+    "name": "Zhangzhou Hospital",
+    "country": "China",
+    "industry": "Healthcare",
+    "application": "Infrastructure",
+    "productIds": [
+      "cast-resin-dry-type-transformer"
+    ],
+    "capacity": null,
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "cast-resin-dry-type-transformer-project-04",
+    "name": "Anhui Xinyi Photovoltaic Glass Lines BA-D",
+    "country": "China",
+    "industry": "Photovoltaic Manufacturing",
+    "application": "Industrial",
+    "productIds": [
+      "cast-resin-dry-type-transformer"
+    ],
+    "capacity": null,
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "cast-resin-dry-type-transformer-project-05",
+    "name": "Fujian Ruian Electric Power Construction Project",
+    "country": "China",
+    "industry": "Power Construction",
+    "application": "Utility Grid",
+    "productIds": [
+      "cast-resin-dry-type-transformer"
+    ],
+    "capacity": null,
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "cast-resin-dry-type-transformer-project-06",
+    "name": "Zhenjiang Chunen Dry-Type Transformer Framework",
+    "country": "China",
+    "industry": "Industrial",
+    "application": "Industrial",
+    "productIds": [
+      "cast-resin-dry-type-transformer"
+    ],
+    "capacity": null,
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "dry-type-prefabricated-substation-project-01",
+    "name": "CR Power Laohekou 130 MW Wind Power Project",
+    "country": "China",
+    "industry": "Wind",
+    "application": "Renewable Energy",
+    "productIds": [
+      "dry-type-prefabricated-substation"
+    ],
+    "capacity": "130 MW",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "dry-type-prefabricated-substation-project-02",
+    "name": "Shandong Rizhao 200 MW Energy Storage Project",
+    "country": "China",
+    "industry": "Energy Storage",
+    "application": "Energy Storage",
+    "productIds": [
+      "dry-type-prefabricated-substation"
+    ],
+    "capacity": "200 MW",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "dry-type-prefabricated-substation-project-03",
+    "name": "Huaneng Weichang 200 MW Wind Power Project",
+    "country": "China",
+    "industry": "Wind",
+    "application": "Renewable Energy",
+    "productIds": [
+      "dry-type-prefabricated-substation"
+    ],
+    "capacity": "200 MW",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "dry-type-prefabricated-substation-project-04",
+    "name": "Yinchuan Charging Infrastructure Project",
+    "country": "China",
+    "industry": "Charging Infrastructure",
+    "application": "Infrastructure",
+    "productIds": [
+      "dry-type-prefabricated-substation"
+    ],
+    "capacity": null,
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "dry-type-prefabricated-substation-project-05",
+    "name": "Three Gorges Jiangsu Taizhou Hailing 100 MW Fishery-Solar Project",
+    "country": "China",
+    "industry": "Solar",
+    "application": "Renewable Energy",
+    "productIds": [
+      "dry-type-prefabricated-substation"
+    ],
+    "capacity": "100 MW",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "dry-type-prefabricated-substation-project-06",
+    "name": "Huaneng Laoting 125 MW Wind Power Project",
+    "country": "China",
+    "industry": "Wind",
+    "application": "Renewable Energy",
+    "productIds": [
+      "dry-type-prefabricated-substation"
+    ],
+    "capacity": "125 MW",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "oil-immersed-prefabricated-substation-project-01",
+    "name": "Yunnan Zhaotong Xiaozhai 350 MW Solar Project",
+    "country": "China",
+    "industry": "Solar",
+    "application": "Renewable Energy",
+    "productIds": [
+      "oil-immersed-prefabricated-substation"
+    ],
+    "capacity": "350 MW",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "oil-immersed-prefabricated-substation-project-02",
+    "name": "Three Gorges Dongshan Xingchen 180 MW Offshore Solar Project",
+    "country": "China",
+    "industry": "Offshore Solar",
+    "application": "Renewable Energy",
+    "productIds": [
+      "oil-immersed-prefabricated-substation"
+    ],
+    "capacity": "180 MW",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "oil-immersed-prefabricated-substation-project-03",
+    "name": "Sunshare Nambala 100 MW Solar Project",
+    "country": "Zambia",
+    "industry": "Solar",
+    "application": "Renewable Energy",
+    "productIds": [
+      "oil-immersed-prefabricated-substation"
+    ],
+    "capacity": "100 MW",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "oil-immersed-prefabricated-substation-project-04",
+    "name": "Shanghai Lingang 500 MW Offshore Solar Project",
+    "country": "China",
+    "industry": "Offshore Solar",
+    "application": "Renewable Energy",
+    "productIds": [
+      "oil-immersed-prefabricated-substation"
+    ],
+    "capacity": "500 MW",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "oil-immersed-prefabricated-substation-project-05",
+    "name": "CMOC Mining Area 500 MW Solar Project",
+    "country": "Democratic Republic of the Congo",
+    "industry": "Mining / Solar",
+    "application": "Renewable Energy",
+    "productIds": [
+      "oil-immersed-prefabricated-substation"
+    ],
+    "capacity": "500 MW",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "oil-immersed-prefabricated-substation-project-06",
+    "name": "Luneng Ruoqiang 2 GW Solar Power Project",
+    "country": "China",
+    "industry": "Solar",
+    "application": "Renewable Energy",
+    "productIds": [
+      "oil-immersed-prefabricated-substation"
+    ],
+    "capacity": "2 GW",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "american-type-combined-transformer-project-01",
+    "name": "Pianguan Jinlin 100 MW Solar + Storage Project",
+    "country": "China",
+    "industry": "Solar / Storage",
+    "application": "Renewable Energy",
+    "productIds": [
+      "american-type-combined-transformer"
+    ],
+    "capacity": "100 MW",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "american-type-combined-transformer-project-02",
+    "name": "Qianxi Hongjiadu 150 MW Agriculture-Solar Project",
+    "country": "China",
+    "industry": "Solar",
+    "application": "Renewable Energy",
+    "productIds": [
+      "american-type-combined-transformer"
+    ],
+    "capacity": "150 MW",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "american-type-combined-transformer-project-03",
+    "name": "Shexian 150 MW Solar Power Project",
+    "country": "China",
+    "industry": "Solar",
+    "application": "Renewable Energy",
+    "productIds": [
+      "american-type-combined-transformer"
+    ],
+    "capacity": "150 MW",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "american-type-combined-transformer-project-04",
+    "name": "Qinhuangdao Juxing 200 MW Solar Project",
+    "country": "China",
+    "industry": "Solar",
+    "application": "Renewable Energy",
+    "productIds": [
+      "american-type-combined-transformer"
+    ],
+    "capacity": "200 MW",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "american-type-combined-transformer-project-05",
+    "name": "Xinze Kaiping 150 MW Solar Project",
+    "country": "China",
+    "industry": "Solar",
+    "application": "Renewable Energy",
+    "productIds": [
+      "american-type-combined-transformer"
+    ],
+    "capacity": "150 MW",
+    "image": null,
+    "featured": false
+  },
+  {
+    "id": "american-type-combined-transformer-project-06",
+    "name": "CHN Energy Zhoushan Putuo Dengbu Island 213 MWp Fishery-Solar Project",
+    "country": "China",
+    "industry": "Solar",
+    "application": "Renewable Energy",
+    "productIds": [
+      "american-type-combined-transformer"
+    ],
+    "capacity": "213 MWp",
+    "image": null,
+    "featured": false
+  }
+]

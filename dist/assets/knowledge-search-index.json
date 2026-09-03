@@ -1,0 +1,195 @@
+[
+  {
+    "type": "topic",
+    "title": "Transformer Basics",
+    "summary": "Core transformer structures, operating principles and terminology used during early project communication.",
+    "url": "knowledge/transformer-basics.html"
+  },
+  {
+    "type": "topic",
+    "title": "Transformer Selection",
+    "summary": "Selection guidance based on voltage, capacity, load profile, fire safety, environment and lifecycle requirements.",
+    "url": "knowledge/transformer-selection.html"
+  },
+  {
+    "type": "topic",
+    "title": "Engineering Roles",
+    "summary": "How transformers function inside generation, transmission, distribution, industrial and auxiliary power systems.",
+    "url": "knowledge/engineering-roles.html"
+  },
+  {
+    "type": "topic",
+    "title": "Applications",
+    "summary": "Transformer requirements for utility, renewable energy, data center, industrial, mining, marine and infrastructure projects.",
+    "url": "knowledge/applications.html"
+  },
+  {
+    "type": "topic",
+    "title": "Liquid-Immersed Transformers",
+    "summary": "Insulating liquids, tank structures, cooling codes, accessories and maintenance considerations for liquid-filled transformers.",
+    "url": "knowledge/liquid-immersed-transformers.html"
+  },
+  {
+    "type": "topic",
+    "title": "Dry-Type Transformers",
+    "summary": "Dry-type insulation systems, enclosures, core materials and cooling arrangements for indoor and fire-sensitive installations.",
+    "url": "knowledge/dry-type-transformers.html"
+  },
+  {
+    "type": "topic",
+    "title": "Electrical Parameters",
+    "summary": "Definitions and selection effects of capacity, voltage ratio, frequency, vector group, impedance, insulation level and tap range.",
+    "url": "knowledge/electrical-parameters.html"
+  },
+  {
+    "type": "topic",
+    "title": "Standards & Testing",
+    "summary": "How project standards, routine tests, type tests and documentation should be confirmed for an export transformer inquiry.",
+    "url": "knowledge/standards-and-testing.html"
+  },
+  {
+    "type": "faq",
+    "title": "Dry-type vs oil-immersed transformer: how should a project choose?",
+    "summary": "The selection depends on installation location, fire and environmental requirements, voltage and capacity, maintenance conditions and lifecycle cost.",
+    "terms": [
+      "Cast resin",
+      "VPI",
+      "Mineral oil",
+      "Natural ester",
+      "Fire-resistant fluid"
+    ],
+    "url": "knowledge/faq/dry-type-vs-oil-immersed-transformer.html"
+  },
+  {
+    "type": "faq",
+    "title": "What is transformer K-factor?",
+    "summary": "K-factor indicates the transformer's ability to carry specified nonlinear load currents without exceeding its thermal limits.",
+    "terms": [
+      "Nonlinear load",
+      "Harmonic current",
+      "Neutral current",
+      "Harmonic mitigation"
+    ],
+    "url": "knowledge/faq/what-is-transformer-k-factor.html"
+  },
+  {
+    "type": "faq",
+    "title": "What is the difference between ONAN and ONAF transformer cooling?",
+    "summary": "ONAN uses natural oil circulation and natural air cooling, while ONAF adds forced air from fans around the radiators.",
+    "terms": [
+      "Oil Natural Air Natural",
+      "Oil Natural Air Forced",
+      "Temperature rise",
+      "Multi-rating"
+    ],
+    "url": "knowledge/faq/onan-vs-onaf-transformer-cooling.html"
+  },
+  {
+    "type": "faq",
+    "title": "Mineral oil vs natural ester: which transformer fluid should be selected?",
+    "summary": "Mineral oil offers mature performance and broad application, while natural ester provides a higher fire point and improved biodegradability.",
+    "terms": [
+      "Insulating liquid",
+      "Fire point",
+      "Biodegradability",
+      "Hermetically sealed tank"
+    ],
+    "url": "knowledge/faq/mineral-oil-vs-natural-ester.html"
+  },
+  {
+    "type": "faq",
+    "title": "What is transformer impedance voltage and why does it matter?",
+    "summary": "Impedance voltage affects fault current, voltage regulation, load sharing and the ability of transformers to operate in parallel.",
+    "terms": [
+      "Percentage impedance",
+      "Short-circuit current",
+      "Voltage drop",
+      "Parallel operation"
+    ],
+    "url": "knowledge/faq/transformer-impedance-voltage.html"
+  },
+  {
+    "type": "faq",
+    "title": "What information is required for a transformer quotation?",
+    "summary": "A useful quotation starts with electrical ratings, application, installation conditions, standards, accessories and required documents.",
+    "terms": [
+      "Datasheet",
+      "Single-line diagram",
+      "Technical specification",
+      "Inspection and test plan"
+    ],
+    "url": "knowledge/faq/information-required-for-transformer-quotation.html"
+  },
+  {
+    "type": "faq",
+    "title": "What transformer is suitable for a data center?",
+    "summary": "Data center transformer selection usually emphasizes fire safety, harmonic loading, efficiency, reliability, noise and integration with busway or switchgear.",
+    "terms": [
+      "K-rated transformer",
+      "Bus duct",
+      "Low-noise design",
+      "Redundancy"
+    ],
+    "url": "knowledge/faq/transformer-for-data-center.html"
+  },
+  {
+    "type": "faq",
+    "title": "What is an inverter-duty transformer?",
+    "summary": "An inverter-duty transformer is designed for the electrical and thermal stresses associated with power-electronic converters and inverter-connected systems.",
+    "terms": [
+      "dv/dt",
+      "Electrostatic shield",
+      "DC bias",
+      "Split winding"
+    ],
+    "url": "knowledge/faq/inverter-duty-transformer.html"
+  },
+  {
+    "type": "faq",
+    "title": "Cast resin vs VPI dry-type transformer: what is the difference?",
+    "summary": "Cast resin embeds the winding in a solid resin body, while VPI impregnates the winding insulation with varnish under vacuum and pressure.",
+    "terms": [
+      "Epoxy resin",
+      "Vacuum pressure impregnation",
+      "Partial discharge",
+      "Thermal class"
+    ],
+    "url": "knowledge/faq/cast-resin-vs-vpi.html"
+  },
+  {
+    "type": "faq",
+    "title": "What is the difference between OLTC and OCTC?",
+    "summary": "An OLTC changes transformer taps while energized and carrying load, while an OCTC is operated only when the transformer is de-energized.",
+    "terms": [
+      "Tap range",
+      "Automatic voltage regulator",
+      "Voltage regulation",
+      "Parallel operation"
+    ],
+    "url": "knowledge/faq/oltc-vs-octc.html"
+  },
+  {
+    "type": "faq",
+    "title": "What is a transformer vector group?",
+    "summary": "The vector group identifies winding connections, neutral availability and the phase displacement between transformer windings.",
+    "terms": [
+      "Dyn11",
+      "YNd11",
+      "Zigzag",
+      "Phase displacement"
+    ],
+    "url": "knowledge/faq/transformer-vector-group.html"
+  },
+  {
+    "type": "faq",
+    "title": "How does high altitude affect transformer design?",
+    "summary": "Reduced air density at high altitude affects external insulation, cooling and the performance of air-insulated components.",
+    "terms": [
+      "Altitude correction",
+      "Air clearance",
+      "Temperature rise",
+      "Derating"
+    ],
+    "url": "knowledge/faq/high-altitude-transformer-design.html"
+  }
+]

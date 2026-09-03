@@ -1,0 +1,218 @@
+[
+  {
+    "id": "china-substation-10000kva-35kv",
+    "source": "新补充/华氏/35kV华变试验报告【YB-40.5-10000】26XB0129-S (1).pdf",
+    "pdf": "source-media/evidence/pdfs/china-substation-10000kva-35kv.pdf",
+    "previewImages": [
+      "source-media/evidence/china-substation-10000kva-35kv-cover.webp",
+      "source-media/evidence/china-substation-10000kva-35kv-summary.webp",
+      "source-media/evidence/china-substation-10000kva-35kv-parameters.webp",
+      "source-media/evidence/sample-photo-pages/china-substation-10000kva-35kv-sample-photo-page.webp"
+    ],
+    "drawing": "source-media/drawings/china-substation-10000kva-35kv-outline.webp"
+  },
+  {
+    "id": "china-substation-12500kva-35kv",
+    "source": "新补充/华氏/35kV华变试验报告【YB口-40.5-1.14-12500 (GY)】 (1).pdf",
+    "pdf": "source-media/evidence/pdfs/china-substation-12500kva-35kv.pdf",
+    "previewImages": [
+      "source-media/evidence/china-substation-12500kva-35kv-cover.webp",
+      "source-media/evidence/china-substation-12500kva-35kv-summary.webp",
+      "source-media/evidence/china-substation-12500kva-35kv-parameters.webp",
+      "source-media/evidence/sample-photo-pages/china-substation-12500kva-35kv-sample-photo-page.webp"
+    ],
+    "drawing": "source-media/drawings/china-substation-12500kva-35kv-outline.webp"
+  },
+  {
+    "id": "dry-type-scb18-1000kva-10kv",
+    "source": "新补充/干式/SCB18-1000-10-NX1 试验报告26N0284-S (1).pdf",
+    "pdf": "source-media/evidence/pdfs/dry-type-scb18-1000kva-10kv.pdf",
+    "previewImages": [
+      "source-media/evidence/dry-type-scb18-1000kva-10kv-cover.webp",
+      "source-media/evidence/dry-type-scb18-1000kva-10kv-summary.webp",
+      "source-media/evidence/dry-type-scb18-1000kva-10kv-parameters.webp",
+      "source-media/evidence/sample-photo-pages/dry-type-scb18-1000kva-10kv-sample-photo-page.webp"
+    ],
+    "drawing": null
+  },
+  {
+    "id": "dry-type-scb18-2500kva-10kv",
+    "source": "新补充/干式/SCB18-2500-10试验报告26N0286-S (1).pdf",
+    "pdf": "source-media/evidence/pdfs/dry-type-scb18-2500kva-10kv.pdf",
+    "previewImages": [
+      "source-media/evidence/dry-type-scb18-2500kva-10kv-cover.webp",
+      "source-media/evidence/dry-type-scb18-2500kva-10kv-summary.webp",
+      "source-media/evidence/dry-type-scb18-2500kva-10kv-parameters.webp",
+      "source-media/evidence/sample-photo-pages/dry-type-scb18-2500kva-10kv-sample-photo-page.webp"
+    ],
+    "drawing": null
+  },
+  {
+    "id": "european-substation-6300kva-35kv",
+    "source": "新补充/欧式/35kv-prefabricated-substation-6300kva-yb-40.5-1.14-6300-type-test-report-23xb0121-s.pdf",
+    "pdf": "source-media/evidence/pdfs/european-substation-6300kva-35kv.pdf",
+    "previewImages": [
+      "source-media/evidence/european-substation-6300kva-35kv-cover.webp",
+      "source-media/evidence/european-substation-6300kva-35kv-summary.webp",
+      "source-media/evidence/european-substation-6300kva-35kv-parameters.webp",
+      "source-media/evidence/sample-photo-pages/european-substation-6300kva-35kv-sample-photo-page.webp"
+    ],
+    "drawing": "source-media/drawings/european-substation-6300kva-35kv-outline.webp"
+  },
+  {
+    "id": "european-substation-10000kva-35kv",
+    "source": "新补充/欧式/35kv-prefabricated-substation-10000kva-yb-40.5-1.14-10000-type-test-report-26xb0130-s.pdf",
+    "pdf": "source-media/evidence/pdfs/european-substation-10000kva-35kv.pdf",
+    "previewImages": [
+      "source-media/evidence/european-substation-10000kva-35kv-cover.webp",
+      "source-media/evidence/european-substation-10000kva-35kv-summary.webp",
+      "source-media/evidence/european-substation-10000kva-35kv-parameters.webp",
+      "source-media/evidence/sample-photo-pages/european-substation-10000kva-35kv-sample-photo-page.webp"
+    ],
+    "drawing": "source-media/drawings/european-substation-10000kva-35kv-outline.webp"
+  },
+  {
+    "id": "european-substation-12500kva-35kv",
+    "source": "新补充/欧式/35kv-prefabricated-substation-12500kva-yb-40.5-1.14-12500-type-test-report-26xb0131-s.pdf",
+    "pdf": "source-media/evidence/pdfs/european-substation-12500kva-35kv.pdf",
+    "previewImages": [
+      "source-media/evidence/european-substation-12500kva-35kv-cover.webp",
+      "source-media/evidence/european-substation-12500kva-35kv-summary.webp",
+      "source-media/evidence/european-substation-12500kva-35kv-parameters.webp",
+      "source-media/evidence/sample-photo-pages/european-substation-12500kva-35kv-sample-photo-page.webp"
+    ],
+    "drawing": "source-media/drawings/european-substation-12500kva-35kv-outline.webp"
+  },
+  {
+    "id": "oil-distribution-1600kva-ce",
+    "source": "新补充/油浸式/oil-immersed-transformer-1600kva-22kv-tier2-ce-ecodesign-verification-cn25ney4.pdf",
+    "pdf": "source-media/evidence/pdfs/oil-distribution-1600kva-ce.pdf",
+    "previewImages": [
+      "source-media/evidence/oil-distribution-1600kva-ce-cover.webp"
+    ],
+    "drawing": null
+  },
+  {
+    "id": "oil-distribution-1600kva-efficiency",
+    "source": "新补充/油浸式/oil-immersed-transformer-1600kva-22kv-tier2-efficiency-test-report-cn25ney4.pdf",
+    "pdf": "source-media/evidence/pdfs/oil-distribution-1600kva-efficiency.pdf",
+    "previewImages": [
+      "source-media/evidence/oil-distribution-1600kva-efficiency-cover.webp",
+      "source-media/evidence/oil-distribution-1600kva-efficiency-summary.webp",
+      "source-media/evidence/oil-distribution-1600kva-efficiency-parameters.webp",
+      "source-media/evidence/sample-photo-pages/oil-distribution-1600kva-efficiency-sample-photo-page.webp"
+    ],
+    "drawing": null
+  },
+  {
+    "id": "oil-distribution-1600kva-type-test",
+    "source": "新补充/油浸式/oil-immersed-transformer-1600kva-22kv-tier2-iec-complete-type-test-report-cn25zjn4.pdf",
+    "pdf": "source-media/evidence/pdfs/oil-distribution-1600kva-type-test.pdf",
+    "previewImages": [
+      "source-media/evidence/oil-distribution-1600kva-type-test-cover.webp",
+      "source-media/evidence/oil-distribution-1600kva-type-test-summary.webp",
+      "source-media/evidence/oil-distribution-1600kva-type-test-parameters.webp",
+      "source-media/evidence/sample-photo-pages/oil-distribution-1600kva-type-test-sample-photo-page.webp"
+    ],
+    "drawing": null
+  },
+  {
+    "id": "oil-distribution-1600kva-tuv",
+    "source": "新补充/油浸式/oil-immersed-transformer-1600kva-22kv-tier2-tuv-certificate-cn25zjn4.pdf",
+    "pdf": "source-media/evidence/pdfs/oil-distribution-1600kva-tuv.pdf",
+    "previewImages": [
+      "source-media/evidence/oil-distribution-1600kva-tuv-cover.webp"
+    ],
+    "drawing": null
+  },
+  {
+    "id": "oil-distribution-630kva-ce",
+    "source": "新补充/油浸式/oil-immersed-transformer-630kva-22kv-tier2-ce-ecodesign-verification-cn2532px.pdf",
+    "pdf": "source-media/evidence/pdfs/oil-distribution-630kva-ce.pdf",
+    "previewImages": [
+      "source-media/evidence/oil-distribution-630kva-ce-cover.webp"
+    ],
+    "drawing": null
+  },
+  {
+    "id": "oil-distribution-630kva-efficiency",
+    "source": "新补充/油浸式/oil-immersed-transformer-630kva-22kv-tier2-efficiency-test-report-cn2532px.pdf",
+    "pdf": "source-media/evidence/pdfs/oil-distribution-630kva-efficiency.pdf",
+    "previewImages": [
+      "source-media/evidence/oil-distribution-630kva-efficiency-cover.webp",
+      "source-media/evidence/oil-distribution-630kva-efficiency-summary.webp",
+      "source-media/evidence/oil-distribution-630kva-efficiency-parameters.webp",
+      "source-media/evidence/sample-photo-pages/oil-distribution-630kva-efficiency-sample-photo-page.webp"
+    ],
+    "drawing": null
+  },
+  {
+    "id": "oil-distribution-630kva-type-test",
+    "source": "新补充/油浸式/oil-immersed-transformer-630kva-22kv-tier2-iec-complete-type-test-report-cn25im0t.pdf",
+    "pdf": "source-media/evidence/pdfs/oil-distribution-630kva-type-test.pdf",
+    "previewImages": [
+      "source-media/evidence/oil-distribution-630kva-type-test-cover.webp",
+      "source-media/evidence/oil-distribution-630kva-type-test-summary.webp",
+      "source-media/evidence/oil-distribution-630kva-type-test-parameters.webp",
+      "source-media/evidence/sample-photo-pages/oil-distribution-630kva-type-test-sample-photo-page.webp"
+    ],
+    "drawing": null
+  },
+  {
+    "id": "oil-distribution-630kva-tuv",
+    "source": "新补充/油浸式/oil-immersed-transformer-630kva-22kv-tier2-tuv-certificate-cn25im0t.pdf",
+    "pdf": "source-media/evidence/pdfs/oil-distribution-630kva-tuv.pdf",
+    "previewImages": [
+      "source-media/evidence/oil-distribution-630kva-tuv-cover.webp"
+    ],
+    "drawing": null
+  },
+  {
+    "id": "power-transformer-150mva-132kv",
+    "source": "新补充/油浸式高压/oil-immersed-power-transformer-150mva-132kv-sfz-150000-132-test-report-21m2079-s.pdf",
+    "pdf": "source-media/evidence/pdfs/power-transformer-150mva-132kv.pdf",
+    "previewImages": [
+      "source-media/evidence/power-transformer-150mva-132kv-cover.webp",
+      "source-media/evidence/power-transformer-150mva-132kv-summary.webp",
+      "source-media/evidence/power-transformer-150mva-132kv-parameters.webp",
+      "source-media/evidence/sample-photo-pages/power-transformer-150mva-132kv-sample-photo-page.webp"
+    ],
+    "drawing": null
+  },
+  {
+    "id": "power-transformer-240mva-220kv-ssz20",
+    "source": "新补充/油浸式高压/oil-immersed-power-transformer-240mva-220kv-ssz20-240000-220-type-test-report-21m0905-s.pdf",
+    "pdf": "source-media/evidence/pdfs/power-transformer-240mva-220kv-ssz20.pdf",
+    "previewImages": [
+      "source-media/evidence/power-transformer-240mva-220kv-ssz20-cover.webp",
+      "source-media/evidence/power-transformer-240mva-220kv-ssz20-summary.webp",
+      "source-media/evidence/power-transformer-240mva-220kv-ssz20-parameters.webp",
+      "source-media/evidence/sample-photo-pages/power-transformer-240mva-220kv-ssz20-sample-photo-page.webp"
+    ],
+    "drawing": null
+  },
+  {
+    "id": "power-transformer-240mva-220kv-ssz22",
+    "source": "新补充/油浸式高压/oil-immersed-power-transformer-240mva-220kv-ssz22-240000-220-nx1-test-report-23m1317-s.pdf",
+    "pdf": "source-media/evidence/pdfs/power-transformer-240mva-220kv-ssz22.pdf",
+    "previewImages": [
+      "source-media/evidence/power-transformer-240mva-220kv-ssz22-cover.webp",
+      "source-media/evidence/power-transformer-240mva-220kv-ssz22-summary.webp",
+      "source-media/evidence/power-transformer-240mva-220kv-ssz22-parameters.webp",
+      "source-media/evidence/sample-photo-pages/power-transformer-240mva-220kv-ssz22-sample-photo-page.webp"
+    ],
+    "drawing": null
+  },
+  {
+    "id": "power-transformer-50mva-110kv",
+    "source": "新补充/油浸式高压/oil-immersed-power-transformer-50mva-110kv-sz22-50000-110-nx1-test-report-21m2078-s.pdf",
+    "pdf": "source-media/evidence/pdfs/power-transformer-50mva-110kv.pdf",
+    "previewImages": [
+      "source-media/evidence/power-transformer-50mva-110kv-cover.webp",
+      "source-media/evidence/power-transformer-50mva-110kv-summary.webp",
+      "source-media/evidence/power-transformer-50mva-110kv-parameters.webp",
+      "source-media/evidence/sample-photo-pages/power-transformer-50mva-110kv-sample-photo-page.webp"
+    ],
+    "drawing": null
+  }
+]

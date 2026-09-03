@@ -1,0 +1,597 @@
+/* Catalog V9: balanced editorial layouts for 16:9 electronic catalog pages */
+
+.catalog-v9-overview,
+.catalog-v9-details,
+.catalog-v9-params {
+  overflow: hidden !important;
+}
+
+/* --- Oil distribution overview: equal visual mass on left and right --- */
+.catalog-v9-overview .sheet-head {
+  margin-bottom: 12px !important;
+}
+.v9-overview-lead {
+  max-width: 1120px !important;
+  margin: 0 0 17px !important;
+  color: #334c61 !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+}
+.v9-overview-stage {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.08fr) minmax(390px, .92fr) !important;
+  gap: 28px !important;
+  align-items: stretch !important;
+}
+.v9-product-gallery {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.18fr) minmax(0, .82fr) !important;
+  grid-template-rows: repeat(2, 176px) !important;
+  gap: 14px !important;
+  height: 366px !important;
+}
+.v9-product-gallery figure {
+  height: 176px !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 5px !important;
+  border: 1px solid #d8e1e8 !important;
+  background: #fff !important;
+  overflow: hidden !important;
+  display: grid !important;
+  place-items: center !important;
+}
+.v9-product-gallery figure:first-child {
+  grid-row: 1 / span 2 !important;
+  height: 366px !important;
+}
+.v9-product-gallery img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  transform: scale(1.07) !important;
+  transform-origin: center !important;
+}
+.v9-overview-panel {
+  height: 366px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 19px 21px !important;
+  border-top: 2px solid #154b78 !important;
+  border-bottom: 1px solid #d4dfe7 !important;
+  background: #f8fafc !important;
+}
+.v9-panel-intro > p,
+.v9-panel-columns p {
+  margin: 0 0 7px !important;
+  color: #55758f !important;
+  font-size: 8px !important;
+  font-weight: 800 !important;
+  letter-spacing: .13em !important;
+}
+.v9-panel-intro h3 {
+  margin: 0 0 8px !important;
+  color: #082f56 !important;
+  font-size: 18px !important;
+  line-height: 1.28 !important;
+}
+.v9-panel-intro span {
+  display: block !important;
+  color: #3c5368 !important;
+  font-size: 11.5px !important;
+  line-height: 1.5 !important;
+}
+.v9-overview-specs {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  margin: 15px 0 14px !important;
+  border-top: 1px solid #ccd8e2 !important;
+  border-left: 1px solid #e3e9ee !important;
+}
+.v9-overview-specs > div {
+  min-height: 53px !important;
+  padding: 9px 11px !important;
+  border-right: 1px solid #e3e9ee !important;
+  border-bottom: 1px solid #e3e9ee !important;
+  background: #fff !important;
+}
+.v9-overview-specs span,
+.v9-overview-specs strong {
+  display: block !important;
+}
+.v9-overview-specs span {
+  margin-bottom: 4px !important;
+  color: #738697 !important;
+  font-size: 7.5px !important;
+  text-transform: uppercase !important;
+  letter-spacing: .07em !important;
+}
+.v9-overview-specs strong {
+  color: #09355e !important;
+  font-size: 12px !important;
+  line-height: 1.3 !important;
+}
+.v9-panel-columns {
+  display: grid !important;
+  grid-template-columns: 1.1fr .9fr !important;
+  gap: 18px !important;
+}
+.v9-panel-columns ul {
+  margin: 0 !important;
+  padding-left: 16px !important;
+}
+.v9-panel-columns li,
+.v9-panel-columns strong,
+.v9-panel-columns small {
+  color: #344e64 !important;
+  font-size: 10px !important;
+  line-height: 1.45 !important;
+}
+.v9-panel-columns strong,
+.v9-panel-columns small {
+  display: block !important;
+}
+.v9-panel-columns small {
+  margin-top: 5px !important;
+  color: #738697 !important;
+}
+.v9-overview-band {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  margin-top: 18px !important;
+  border-top: 1px solid #bfcdd8 !important;
+  border-bottom: 1px solid #bfcdd8 !important;
+}
+.v9-overview-band > div {
+  min-height: 58px !important;
+  padding: 10px 14px !important;
+  border-right: 1px solid #e1e7ec !important;
+}
+.v9-overview-band > div:last-child { border-right: 0 !important; }
+.v9-overview-band span,
+.v9-overview-band strong {
+  display: block !important;
+}
+.v9-overview-band span {
+  margin-bottom: 5px !important;
+  color: #718597 !important;
+  font-size: 8px !important;
+  text-transform: uppercase !important;
+  letter-spacing: .07em !important;
+}
+.v9-overview-band strong {
+  color: #153b5e !important;
+  font-size: 10.5px !important;
+  line-height: 1.35 !important;
+}
+
+/* --- Product details: editorial main field + anchored reference panel --- */
+.catalog-v9-details .sheet-head {
+  margin-bottom: 18px !important;
+}
+.v9-details-stage {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.22fr) minmax(330px, .78fr) !important;
+  gap: 28px !important;
+  align-items: stretch !important;
+}
+.v9-details-main {
+  display: flex !important;
+  min-width: 0 !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+.v9-details-lead {
+  padding: 17px 19px 18px !important;
+  border-top: 2px solid #154b78 !important;
+  background: #f7f9fb !important;
+}
+.v9-details-lead p,
+.v9-detail-duo p,
+.v9-reference-panel > p {
+  margin: 0 0 7px !important;
+  color: #5d7890 !important;
+  font-size: 8px !important;
+  font-weight: 800 !important;
+  letter-spacing: .12em !important;
+}
+.v9-details-lead h3 {
+  margin: 0 0 9px !important;
+  color: #082f56 !important;
+  font-size: 22px !important;
+  line-height: 1.25 !important;
+}
+.v9-details-lead span {
+  display: block !important;
+  max-width: 760px !important;
+  color: #354e63 !important;
+  font-size: 12px !important;
+  line-height: 1.55 !important;
+}
+.v9-detail-duo {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+  margin: 18px 0 !important;
+}
+.v9-detail-duo article {
+  min-height: 180px !important;
+  padding: 16px 17px !important;
+  border: 1px solid #d6e0e8 !important;
+  background: #fff !important;
+}
+.v9-detail-duo h4 {
+  margin: 0 0 10px !important;
+  color: #103a60 !important;
+  font-size: 15px !important;
+  line-height: 1.3 !important;
+}
+.v9-detail-duo ul {
+  margin: 0 !important;
+  padding-left: 17px !important;
+}
+.v9-detail-duo li {
+  margin: 4px 0 !important;
+  color: #41586b !important;
+  font-size: 11px !important;
+  line-height: 1.45 !important;
+}
+.v9-selection-strip {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  border-top: 1px solid #c8d4de !important;
+  border-bottom: 1px solid #c8d4de !important;
+}
+.v9-selection-strip > div {
+  min-height: 61px !important;
+  padding: 10px 12px !important;
+  border-right: 1px solid #e0e7ec !important;
+}
+.v9-selection-strip > div:last-child { border-right: 0 !important; }
+.v9-selection-strip span,
+.v9-selection-strip strong {
+  display: block !important;
+}
+.v9-selection-strip span {
+  margin-bottom: 5px !important;
+  color: #718597 !important;
+  font-size: 8px !important;
+  text-transform: uppercase !important;
+}
+.v9-selection-strip strong {
+  color: #123b60 !important;
+  font-size: 12px !important;
+}
+.v9-reference-panel {
+  min-width: 0 !important;
+  padding: 0 18px 18px !important;
+  border: 1px solid #d5e0e8 !important;
+  background: #f8fafc !important;
+}
+.v9-reference-panel figure {
+  height: 210px !important;
+  margin: 0 -18px 18px !important;
+  padding: 9px !important;
+  border-bottom: 1px solid #d5e0e8 !important;
+  background: #fff !important;
+  display: grid !important;
+  place-items: center !important;
+  overflow: hidden !important;
+}
+.v9-reference-panel figure img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  transform: scale(1.08) !important;
+}
+.v9-reference-panel h3 {
+  margin: 0 0 13px !important;
+  color: #082f56 !important;
+  font-size: 18px !important;
+  line-height: 1.28 !important;
+}
+.v9-reference-model {
+  padding: 10px 0 !important;
+  border-top: 1px solid #d9e2e9 !important;
+}
+.v9-reference-model strong,
+.v9-reference-model span {
+  display: block !important;
+}
+.v9-reference-model strong {
+  color: #113c62 !important;
+  font-size: 12px !important;
+}
+.v9-reference-model span {
+  margin-top: 3px !important;
+  color: #61788c !important;
+  font-size: 10px !important;
+}
+.v9-reference-evidence {
+  margin-top: 9px !important;
+  padding-top: 10px !important;
+  border-top: 1px solid #cbd7e0 !important;
+}
+.v9-reference-evidence span,
+.v9-reference-evidence strong {
+  display: block !important;
+}
+.v9-reference-evidence span {
+  margin-bottom: 6px !important;
+  color: #72879a !important;
+  font-size: 8px !important;
+  text-transform: uppercase !important;
+}
+.v9-reference-evidence strong {
+  margin: 3px 0 !important;
+  color: #3f586d !important;
+  font-size: 10px !important;
+  line-height: 1.35 !important;
+}
+.v9-detail-note {
+  margin: 16px 0 0 !important;
+  padding-top: 10px !important;
+  border-top: 1px solid #d9e1e7 !important;
+  color: #728494 !important;
+  font-size: 9.5px !important;
+  line-height: 1.4 !important;
+}
+
+/* --- Two tested models: cards instead of a twelve-column spreadsheet --- */
+.catalog-v9-params .sheet-head {
+  margin-bottom: 11px !important;
+}
+.catalog-v9-params .catalog-core-note {
+  margin-bottom: 13px !important;
+}
+.v9-model-card-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+}
+.v9-model-card {
+  min-width: 0 !important;
+  border: 1px solid #cedae3 !important;
+  border-top: 3px solid #174d78 !important;
+  background: #fff !important;
+}
+.v9-model-head {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 15px !important;
+  align-items: end !important;
+  padding: 15px 16px 13px !important;
+  background: #f7f9fb !important;
+  border-bottom: 1px solid #d9e2e9 !important;
+}
+.v9-model-head p {
+  margin: 0 0 5px !important;
+  color: #6c8295 !important;
+  font-size: 8px !important;
+  font-weight: 800 !important;
+  letter-spacing: .1em !important;
+}
+.v9-model-head h3 {
+  margin: 0 !important;
+  color: #082f56 !important;
+  font-size: 19px !important;
+  line-height: 1.2 !important;
+}
+.v9-model-head > div:last-child {
+  min-width: 120px !important;
+  text-align: right !important;
+}
+.v9-model-head span,
+.v9-model-head strong {
+  display: block !important;
+}
+.v9-model-head span {
+  margin-bottom: 4px !important;
+  color: #708597 !important;
+  font-size: 9px !important;
+}
+.v9-model-head strong {
+  color: #0b3c68 !important;
+  font-size: 18px !important;
+}
+.v9-model-spec-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+.v9-model-spec-grid > div {
+  min-height: 53px !important;
+  padding: 9px 12px !important;
+  border-right: 1px solid #e5ebef !important;
+  border-bottom: 1px solid #e5ebef !important;
+}
+.v9-model-spec-grid > div:nth-child(2n) { border-right: 0 !important; }
+.v9-model-spec-grid span,
+.v9-model-spec-grid strong {
+  display: block !important;
+}
+.v9-model-spec-grid span {
+  margin-bottom: 5px !important;
+  color: #728699 !important;
+  font-size: 7.5px !important;
+  text-transform: uppercase !important;
+  letter-spacing: .04em !important;
+}
+.v9-model-spec-grid strong {
+  color: #253f56 !important;
+  font-size: 11px !important;
+  line-height: 1.3 !important;
+}
+.v9-insulation-band {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  margin-top: 15px !important;
+  border-top: 1px solid #c6d2dc !important;
+  border-bottom: 1px solid #c6d2dc !important;
+  background: #f8fafc !important;
+}
+.v9-insulation-band > div {
+  min-height: 61px !important;
+  padding: 10px 13px !important;
+  border-right: 1px solid #e0e7ec !important;
+}
+.v9-insulation-band > div:last-child { border-right: 0 !important; }
+.v9-insulation-band span,
+.v9-insulation-band strong,
+.v9-evidence-footer span,
+.v9-evidence-footer strong {
+  display: block !important;
+}
+.v9-insulation-band span,
+.v9-evidence-footer span {
+  margin-bottom: 5px !important;
+  color: #708699 !important;
+  font-size: 8px !important;
+  text-transform: uppercase !important;
+  letter-spacing: .05em !important;
+}
+.v9-insulation-band strong {
+  color: #143b5e !important;
+  font-size: 11px !important;
+  line-height: 1.35 !important;
+}
+.v9-evidence-footer {
+  display: grid !important;
+  grid-template-columns: .95fr 1.05fr !important;
+  gap: 22px !important;
+  margin-top: 13px !important;
+}
+.v9-evidence-footer > div {
+  padding-top: 9px !important;
+  border-top: 1px solid #d6e0e7 !important;
+}
+.v9-evidence-footer strong {
+  color: #425b70 !important;
+  font-size: 10px !important;
+  line-height: 1.4 !important;
+}
+
+@media (max-width: 900px) {
+  .v9-overview-stage,
+  .v9-details-stage,
+  .v9-model-card-grid,
+  .v9-detail-duo,
+  .v9-panel-columns,
+  .v9-overview-band,
+  .v9-insulation-band,
+  .v9-evidence-footer {
+    grid-template-columns: 1fr !important;
+  }
+  .v9-product-gallery {
+    height: auto !important;
+  }
+  .v9-overview-panel {
+    height: auto !important;
+  }
+}
+
+@media print {
+  .catalog-v9-overview,
+  .catalog-v9-details,
+  .catalog-v9-params {
+    width: 320mm !important;
+    height: 180mm !important;
+    min-height: 180mm !important;
+    max-height: 180mm !important;
+    padding: 8mm 11mm 7mm !important;
+  }
+  .catalog-v9-overview .sheet-head,
+  .catalog-v9-details .sheet-head,
+  .catalog-v9-params .sheet-head {
+    margin-bottom: 2.6mm !important;
+  }
+  .catalog-v9-overview .sheet-head h2,
+  .catalog-v9-details .sheet-head h2,
+  .catalog-v9-params .sheet-head h2 {
+    font-size: 23pt !important;
+  }
+  .v9-overview-lead {
+    margin-bottom: 3mm !important;
+    font-size: 8.4pt !important;
+    line-height: 1.4 !important;
+  }
+  .v9-overview-stage {
+    grid-template-columns: minmax(0, 1.08fr) minmax(91mm, .92fr) !important;
+    gap: 5mm !important;
+  }
+  .v9-product-gallery {
+    grid-template-rows: repeat(2, 37.5mm) !important;
+    gap: 2.6mm !important;
+    height: 77.6mm !important;
+  }
+  .v9-product-gallery figure { height: 37.5mm !important; padding: .8mm !important; }
+  .v9-product-gallery figure:first-child { height: 77.6mm !important; }
+  .v9-overview-panel {
+    height: 77.6mm !important;
+    padding: 3.2mm 3.8mm !important;
+  }
+  .v9-panel-intro > p,
+  .v9-panel-columns p { font-size: 5.1pt !important; margin-bottom: 1mm !important; }
+  .v9-panel-intro h3 { font-size: 11.4pt !important; margin-bottom: 1.2mm !important; }
+  .v9-panel-intro span { font-size: 6.8pt !important; line-height: 1.35 !important; }
+  .v9-overview-specs { margin: 2.2mm 0 !important; }
+  .v9-overview-specs > div { min-height: 10.3mm !important; padding: 1.5mm 1.8mm !important; }
+  .v9-overview-specs span { font-size: 4.6pt !important; margin-bottom: .6mm !important; }
+  .v9-overview-specs strong { font-size: 7pt !important; }
+  .v9-panel-columns { gap: 3mm !important; }
+  .v9-panel-columns li,
+  .v9-panel-columns strong,
+  .v9-panel-columns small { font-size: 5.7pt !important; line-height: 1.3 !important; }
+  .v9-overview-band { margin-top: 3mm !important; }
+  .v9-overview-band > div { min-height: 11mm !important; padding: 1.5mm 2mm !important; }
+  .v9-overview-band span { font-size: 4.8pt !important; margin-bottom: .7mm !important; }
+  .v9-overview-band strong { font-size: 6.3pt !important; }
+
+  .v9-details-stage {
+    grid-template-columns: minmax(0, 1.22fr) minmax(77mm, .78fr) !important;
+    gap: 5mm !important;
+  }
+  .v9-details-lead { padding: 3mm 3.5mm !important; }
+  .v9-details-lead p,
+  .v9-detail-duo p,
+  .v9-reference-panel > p { font-size: 5pt !important; margin-bottom: .9mm !important; }
+  .v9-details-lead h3 { font-size: 13pt !important; margin-bottom: 1.3mm !important; }
+  .v9-details-lead span { font-size: 7.2pt !important; line-height: 1.4 !important; }
+  .v9-detail-duo { gap: 3.5mm !important; margin: 3.2mm 0 !important; }
+  .v9-detail-duo article { min-height: 35mm !important; padding: 2.6mm 3mm !important; }
+  .v9-detail-duo h4 { font-size: 8.8pt !important; margin-bottom: 1.3mm !important; }
+  .v9-detail-duo li { margin: .5mm 0 !important; font-size: 6.5pt !important; line-height: 1.35 !important; }
+  .v9-selection-strip > div { min-height: 11mm !important; padding: 1.5mm 1.8mm !important; }
+  .v9-selection-strip span { font-size: 4.7pt !important; margin-bottom: .6mm !important; }
+  .v9-selection-strip strong { font-size: 6.8pt !important; }
+  .v9-reference-panel { padding: 0 3mm 3mm !important; }
+  .v9-reference-panel figure { height: 37mm !important; margin: 0 -3mm 3mm !important; padding: 1.2mm !important; }
+  .v9-reference-panel h3 { font-size: 10pt !important; margin-bottom: 1.6mm !important; }
+  .v9-reference-model { padding: 1.6mm 0 !important; }
+  .v9-reference-model strong { font-size: 7pt !important; }
+  .v9-reference-model span { font-size: 5.8pt !important; }
+  .v9-reference-evidence { margin-top: 1.4mm !important; padding-top: 1.5mm !important; }
+  .v9-reference-evidence span { font-size: 4.7pt !important; margin-bottom: .7mm !important; }
+  .v9-reference-evidence strong { margin: .4mm 0 !important; font-size: 5.7pt !important; }
+  .v9-detail-note { margin-top: 2.5mm !important; padding-top: 1.6mm !important; font-size: 5.8pt !important; }
+
+  .catalog-v9-params .catalog-core-note { margin-bottom: 2.2mm !important; }
+  .v9-model-card-grid { gap: 4mm !important; }
+  .v9-model-head { padding: 2.5mm 3mm 2.2mm !important; gap: 2mm !important; }
+  .v9-model-head p { font-size: 4.8pt !important; margin-bottom: .7mm !important; }
+  .v9-model-head h3 { font-size: 10.2pt !important; }
+  .v9-model-head > div:last-child { min-width: 25mm !important; }
+  .v9-model-head span { font-size: 5.3pt !important; }
+  .v9-model-head strong { font-size: 10.2pt !important; }
+  .v9-model-spec-grid > div { min-height: 9.8mm !important; padding: 1.45mm 2mm !important; }
+  .v9-model-spec-grid span { font-size: 4.4pt !important; margin-bottom: .6mm !important; }
+  .v9-model-spec-grid strong { font-size: 6.5pt !important; }
+  .v9-insulation-band { margin-top: 2.4mm !important; }
+  .v9-insulation-band > div { min-height: 11mm !important; padding: 1.5mm 2mm !important; }
+  .v9-insulation-band span,
+  .v9-evidence-footer span { font-size: 4.6pt !important; margin-bottom: .6mm !important; }
+  .v9-insulation-band strong { font-size: 6.2pt !important; }
+  .v9-evidence-footer { gap: 4mm !important; margin-top: 2.2mm !important; }
+  .v9-evidence-footer > div { padding-top: 1.4mm !important; }
+  .v9-evidence-footer strong { font-size: 5.8pt !important; line-height: 1.3 !important; }
+}

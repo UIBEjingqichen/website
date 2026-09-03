@@ -1,0 +1,188 @@
+/* V4 visual refinement: preserve the Yawei-style layout, add genuine 3D certificate motion and unify existing photography. */
+
+/* Homepage hero image selection and grading */
+.home-wave-slide:nth-child(1) > img {
+  object-position: center 56%;
+  filter: brightness(.82) saturate(.92) contrast(1.06);
+}
+.home-wave-slide:nth-child(2) > img {
+  object-position: center 52%;
+  filter: brightness(.86) saturate(.90) contrast(1.05);
+}
+.home-wave-slide:nth-child(3) > img {
+  object-position: center 46%;
+  filter: brightness(.84) saturate(.90) contrast(1.06);
+}
+
+/* Keep product, industry, factory and landscape photography within one visual family. */
+.yw-product-image img,
+.yw-industry-grid img,
+.yw-landscape-grid img,
+.yw-model-grid img,
+.yw-other-grid img,
+.company-intro-clean > img,
+.gallery-main img,
+.gallery-thumbs img {
+  filter: brightness(.95) saturate(.92) contrast(1.04);
+}
+
+.yw-product-image img { object-position: center 54%; }
+.yw-industry-grid a:nth-child(1) img { object-position: center 56%; }
+.yw-industry-grid a:nth-child(2) img { object-position: center 48%; }
+.yw-industry-grid a:nth-child(3) img { object-position: center 50%; }
+.yw-industry-grid a:nth-child(4) img { object-position: center 44%; }
+.yw-landscape-grid .landscape-1 img { object-position: center 54%; }
+.yw-landscape-grid .landscape-2 img { object-position: center 52%; }
+.yw-landscape-grid .landscape-3 img { object-position: center 48%; }
+.yw-landscape-grid .landscape-4 img { object-position: center 50%; }
+.yw-landscape-grid .landscape-5 img { object-position: center 52%; }
+.yw-landscape-grid .landscape-6 img { object-position: center 50%; }
+
+/* 3D certificates. The source pages remain clean: certificate image only, no caption block. */
+.certificate-3d-stage {
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+  perspective: 1800px;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+.certificate-3d-stage.dragging { cursor: grabbing; }
+.certificate-3d-stage::before {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(90deg, #072a47 0%, rgba(7,42,71,0) 11%, rgba(7,42,71,0) 89%, #072a47 100%);
+}
+.certificate-3d-stage::after {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: 28px;
+  width: min(760px, 86%);
+  height: 64px;
+  content: "";
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,0,0,.34) 0%, rgba(0,0,0,.17) 44%, rgba(0,0,0,0) 76%);
+  filter: blur(5px);
+  pointer-events: none;
+}
+.certificate-3d-scene {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  transform-style: preserve-3d;
+}
+.certificate-3d-ring {
+  position: relative;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(-8deg) rotateY(var(--rotation, -12deg));
+  will-change: transform;
+}
+.certificate-3d-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 232px;
+  height: 320px;
+  margin: -160px 0 0 -116px;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * (360deg / var(--certificate-count)))) translateZ(420px);
+  backface-visibility: hidden;
+}
+.certificate-3d-card-inner {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: linear-gradient(180deg, #fff 0%, #f3f7fa 100%);
+  box-shadow: 0 20px 44px rgba(0,0,0,.24);
+  transition: box-shadow .25s ease, transform .25s ease;
+}
+.certificate-3d-card:hover .certificate-3d-card-inner {
+  transform: translateZ(14px);
+  box-shadow: 0 26px 54px rgba(0,0,0,.30);
+}
+.certificate-3d-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(1.03) contrast(1.06);
+  user-select: none;
+}
+
+/* The old flat marquee is no longer rendered, but keep it suppressed if stale output survives cache. */
+.certificate-marquee-viewport { display: none !important; }
+
+/* Product images get a slightly cleaner showroom crop without changing source files. */
+.yw-model-grid img,
+.yw-product-image img {
+  background: #f3f5f6;
+}
+.yw-model-grid img { object-position: center 52%; }
+.gallery-main img { object-position: center 52%; }
+.gallery-thumbs img { object-position: center; }
+
+@media (max-width: 1080px) {
+  .certificate-3d-stage { height: 420px; }
+  .certificate-3d-card {
+    width: 214px;
+    height: 295px;
+    margin: -147.5px 0 0 -107px;
+    transform: rotateY(calc(var(--i) * (360deg / var(--certificate-count)))) translateZ(350px);
+  }
+}
+
+@media (max-width: 720px) {
+  .certificate-3d-stage {
+    height: 355px;
+    margin-right: -18px;
+    margin-left: -18px;
+  }
+  .certificate-3d-stage::before {
+    background: linear-gradient(90deg, #072a47 0%, rgba(7,42,71,0) 6%, rgba(7,42,71,0) 94%, #072a47 100%);
+  }
+  .certificate-3d-card {
+    width: 182px;
+    height: 250px;
+    margin: -125px 0 0 -91px;
+    transform: rotateY(calc(var(--i) * (360deg / var(--certificate-count)))) translateZ(265px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .certificate-3d-stage {
+    height: auto;
+    overflow-x: auto;
+    perspective: none;
+    cursor: auto;
+  }
+  .certificate-3d-stage::before,
+  .certificate-3d-stage::after { display: none; }
+  .certificate-3d-scene { position: static; display: block; }
+  .certificate-3d-ring {
+    display: flex;
+    width: max-content;
+    height: auto;
+    gap: 14px;
+    padding: 8px 0 22px;
+    transform: none !important;
+  }
+  .certificate-3d-card {
+    position: static;
+    width: 210px;
+    height: 290px;
+    margin: 0;
+    transform: none !important;
+  }
+}

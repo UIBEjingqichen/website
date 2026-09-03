@@ -1,0 +1,512 @@
+# Generated from source-media/catalog-assets/manifest.json
+drawings:
+  - id: "oil-distribution-1600kva-efficiency-p025"
+    product_id: "oil-immersed-distribution-transformer"
+    document_id: "oil-distribution-1600kva-efficiency"
+    source_page: 25
+    image: "../../source-media/catalog-assets/drawings/oil-distribution-1600kva-efficiency-p025.webp"
+    include_in_catalog: false
+  - id: "oil-distribution-1600kva-efficiency-p028"
+    product_id: "oil-immersed-distribution-transformer"
+    document_id: "oil-distribution-1600kva-efficiency"
+    source_page: 28
+    image: "../../source-media/catalog-assets/drawings/oil-distribution-1600kva-efficiency-p028.webp"
+    include_in_catalog: false
+  - id: "oil-distribution-630kva-efficiency-p025"
+    product_id: "oil-immersed-distribution-transformer"
+    document_id: "oil-distribution-630kva-efficiency"
+    source_page: 25
+    image: "../../source-media/catalog-assets/drawings/oil-distribution-630kva-efficiency-p025.webp"
+    include_in_catalog: false
+  - id: "oil-distribution-630kva-efficiency-p028"
+    product_id: "oil-immersed-distribution-transformer"
+    document_id: "oil-distribution-630kva-efficiency"
+    source_page: 28
+    image: "../../source-media/catalog-assets/drawings/oil-distribution-630kva-efficiency-p028.webp"
+    include_in_catalog: false
+  - id: "oil-distribution-1600kva-type-test-p011"
+    product_id: "oil-immersed-distribution-transformer"
+    document_id: "oil-distribution-1600kva-type-test"
+    source_page: 11
+    image: "../../source-media/catalog-assets/drawings/oil-distribution-1600kva-type-test-p011.webp"
+    include_in_catalog: true
+  - id: "oil-distribution-1600kva-type-test-p055"
+    product_id: "oil-immersed-distribution-transformer"
+    document_id: "oil-distribution-1600kva-type-test"
+    source_page: 55
+    image: "../../source-media/catalog-assets/drawings/oil-distribution-1600kva-type-test-p055.webp"
+    include_in_catalog: false
+  - id: "oil-distribution-1600kva-type-test-p102"
+    product_id: "oil-immersed-distribution-transformer"
+    document_id: "oil-distribution-1600kva-type-test"
+    source_page: 102
+    image: "../../source-media/catalog-assets/drawings/oil-distribution-1600kva-type-test-p102.webp"
+    include_in_catalog: false
+  - id: "oil-distribution-1600kva-type-test-p103"
+    product_id: "oil-immersed-distribution-transformer"
+    document_id: "oil-distribution-1600kva-type-test"
+    source_page: 103
+    image: "../../source-media/catalog-assets/drawings/oil-distribution-1600kva-type-test-p103.webp"
+    include_in_catalog: false
+  - id: "oil-distribution-630kva-type-test-p011"
+    product_id: "oil-immersed-distribution-transformer"
+    document_id: "oil-distribution-630kva-type-test"
+    source_page: 11
+    image: "../../source-media/catalog-assets/drawings/oil-distribution-630kva-type-test-p011.webp"
+    include_in_catalog: false
+  - id: "oil-distribution-630kva-type-test-p055"
+    product_id: "oil-immersed-distribution-transformer"
+    document_id: "oil-distribution-630kva-type-test"
+    source_page: 55
+    image: "../../source-media/catalog-assets/drawings/oil-distribution-630kva-type-test-p055.webp"
+    include_in_catalog: false
+  - id: "oil-distribution-630kva-type-test-p102"
+    product_id: "oil-immersed-distribution-transformer"
+    document_id: "oil-distribution-630kva-type-test"
+    source_page: 102
+    image: "../../source-media/catalog-assets/drawings/oil-distribution-630kva-type-test-p102.webp"
+    include_in_catalog: false
+  - id: "oil-distribution-630kva-type-test-p103"
+    product_id: "oil-immersed-distribution-transformer"
+    document_id: "oil-distribution-630kva-type-test"
+    source_page: 103
+    image: "../../source-media/catalog-assets/drawings/oil-distribution-630kva-type-test-p103.webp"
+    include_in_catalog: false
+  - id: "power-transformer-240mva-220kv-ssz22-p067"
+    product_id: "high-voltage-power-transformer"
+    document_id: "power-transformer-240mva-220kv-ssz22"
+    source_page: 67
+    image: "../../source-media/catalog-assets/drawings/power-transformer-240mva-220kv-ssz22-p067.webp"
+    include_in_catalog: false
+  - id: "power-transformer-240mva-220kv-ssz22-p068"
+    product_id: "high-voltage-power-transformer"
+    document_id: "power-transformer-240mva-220kv-ssz22"
+    source_page: 68
+    image: "../../source-media/catalog-assets/drawings/power-transformer-240mva-220kv-ssz22-p068.webp"
+    include_in_catalog: false
+  - id: "power-transformer-240mva-220kv-ssz22-p069"
+    product_id: "high-voltage-power-transformer"
+    document_id: "power-transformer-240mva-220kv-ssz22"
+    source_page: 69
+    image: "../../source-media/catalog-assets/drawings/power-transformer-240mva-220kv-ssz22-p069.webp"
+    include_in_catalog: false
+  - id: "power-transformer-240mva-220kv-ssz22-p070"
+    product_id: "high-voltage-power-transformer"
+    document_id: "power-transformer-240mva-220kv-ssz22"
+    source_page: 70
+    image: "../../source-media/catalog-assets/drawings/power-transformer-240mva-220kv-ssz22-p070.webp"
+    include_in_catalog: false
+  - id: "power-transformer-240mva-220kv-ssz22-p071"
+    product_id: "high-voltage-power-transformer"
+    document_id: "power-transformer-240mva-220kv-ssz22"
+    source_page: 71
+    image: "../../source-media/catalog-assets/drawings/power-transformer-240mva-220kv-ssz22-p071.webp"
+    include_in_catalog: false
+  - id: "power-transformer-50mva-110kv-p040"
+    product_id: "high-voltage-power-transformer"
+    document_id: "power-transformer-50mva-110kv"
+    source_page: 40
+    image: "../../source-media/catalog-assets/drawings/power-transformer-50mva-110kv-p040.webp"
+    include_in_catalog: true
+  - id: "power-transformer-50mva-110kv-p041"
+    product_id: "high-voltage-power-transformer"
+    document_id: "power-transformer-50mva-110kv"
+    source_page: 41
+    image: "../../source-media/catalog-assets/drawings/power-transformer-50mva-110kv-p041.webp"
+    include_in_catalog: false
+  - id: "power-transformer-50mva-110kv-p042"
+    product_id: "high-voltage-power-transformer"
+    document_id: "power-transformer-50mva-110kv"
+    source_page: 42
+    image: "../../source-media/catalog-assets/drawings/power-transformer-50mva-110kv-p042.webp"
+    include_in_catalog: false
+  - id: "power-transformer-50mva-110kv-p043"
+    product_id: "high-voltage-power-transformer"
+    document_id: "power-transformer-50mva-110kv"
+    source_page: 43
+    image: "../../source-media/catalog-assets/drawings/power-transformer-50mva-110kv-p043.webp"
+    include_in_catalog: false
+  - id: "power-transformer-50mva-110kv-p044"
+    product_id: "high-voltage-power-transformer"
+    document_id: "power-transformer-50mva-110kv"
+    source_page: 44
+    image: "../../source-media/catalog-assets/drawings/power-transformer-50mva-110kv-p044.webp"
+    include_in_catalog: false
+  - id: "power-transformer-150mva-132kv-p043"
+    product_id: "high-voltage-power-transformer"
+    document_id: "power-transformer-150mva-132kv"
+    source_page: 43
+    image: "../../source-media/catalog-assets/drawings/power-transformer-150mva-132kv-p043.webp"
+    include_in_catalog: false
+  - id: "power-transformer-150mva-132kv-p044"
+    product_id: "high-voltage-power-transformer"
+    document_id: "power-transformer-150mva-132kv"
+    source_page: 44
+    image: "../../source-media/catalog-assets/drawings/power-transformer-150mva-132kv-p044.webp"
+    include_in_catalog: false
+  - id: "power-transformer-150mva-132kv-p045"
+    product_id: "high-voltage-power-transformer"
+    document_id: "power-transformer-150mva-132kv"
+    source_page: 45
+    image: "../../source-media/catalog-assets/drawings/power-transformer-150mva-132kv-p045.webp"
+    include_in_catalog: false
+  - id: "power-transformer-150mva-132kv-p046"
+    product_id: "high-voltage-power-transformer"
+    document_id: "power-transformer-150mva-132kv"
+    source_page: 46
+    image: "../../source-media/catalog-assets/drawings/power-transformer-150mva-132kv-p046.webp"
+    include_in_catalog: false
+  - id: "power-transformer-150mva-132kv-p047"
+    product_id: "high-voltage-power-transformer"
+    document_id: "power-transformer-150mva-132kv"
+    source_page: 47
+    image: "../../source-media/catalog-assets/drawings/power-transformer-150mva-132kv-p047.webp"
+    include_in_catalog: false
+  - id: "power-transformer-240mva-220kv-ssz20-p107"
+    product_id: "high-voltage-power-transformer"
+    document_id: "power-transformer-240mva-220kv-ssz20"
+    source_page: 107
+    image: "../../source-media/catalog-assets/drawings/power-transformer-240mva-220kv-ssz20-p107.webp"
+    include_in_catalog: false
+  - id: "power-transformer-240mva-220kv-ssz20-p108"
+    product_id: "high-voltage-power-transformer"
+    document_id: "power-transformer-240mva-220kv-ssz20"
+    source_page: 108
+    image: "../../source-media/catalog-assets/drawings/power-transformer-240mva-220kv-ssz20-p108.webp"
+    include_in_catalog: false
+  - id: "power-transformer-240mva-220kv-ssz20-p109"
+    product_id: "high-voltage-power-transformer"
+    document_id: "power-transformer-240mva-220kv-ssz20"
+    source_page: 109
+    image: "../../source-media/catalog-assets/drawings/power-transformer-240mva-220kv-ssz20-p109.webp"
+    include_in_catalog: false
+  - id: "european-substation-6300kva-35kv-p011"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-6300kva-35kv"
+    source_page: 11
+    image: "../../source-media/catalog-assets/drawings/european-substation-6300kva-35kv-p011.webp"
+    include_in_catalog: true
+  - id: "european-substation-6300kva-35kv-p105"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-6300kva-35kv"
+    source_page: 105
+    image: "../../source-media/catalog-assets/drawings/european-substation-6300kva-35kv-p105.webp"
+    include_in_catalog: false
+  - id: "european-substation-6300kva-35kv-p106"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-6300kva-35kv"
+    source_page: 106
+    image: "../../source-media/catalog-assets/drawings/european-substation-6300kva-35kv-p106.webp"
+    include_in_catalog: false
+  - id: "european-substation-10000kva-35kv-p011"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-10000kva-35kv"
+    source_page: 11
+    image: "../../source-media/catalog-assets/drawings/european-substation-10000kva-35kv-p011.webp"
+    include_in_catalog: false
+  - id: "european-substation-10000kva-35kv-p044"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-10000kva-35kv"
+    source_page: 44
+    image: "../../source-media/catalog-assets/drawings/european-substation-10000kva-35kv-p044.webp"
+    include_in_catalog: false
+  - id: "european-substation-10000kva-35kv-p046"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-10000kva-35kv"
+    source_page: 46
+    image: "../../source-media/catalog-assets/drawings/european-substation-10000kva-35kv-p046.webp"
+    include_in_catalog: false
+  - id: "european-substation-10000kva-35kv-p050"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-10000kva-35kv"
+    source_page: 50
+    image: "../../source-media/catalog-assets/drawings/european-substation-10000kva-35kv-p050.webp"
+    include_in_catalog: false
+  - id: "european-substation-10000kva-35kv-p054"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-10000kva-35kv"
+    source_page: 54
+    image: "../../source-media/catalog-assets/drawings/european-substation-10000kva-35kv-p054.webp"
+    include_in_catalog: false
+  - id: "european-substation-10000kva-35kv-p057"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-10000kva-35kv"
+    source_page: 57
+    image: "../../source-media/catalog-assets/drawings/european-substation-10000kva-35kv-p057.webp"
+    include_in_catalog: false
+  - id: "european-substation-10000kva-35kv-p082"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-10000kva-35kv"
+    source_page: 82
+    image: "../../source-media/catalog-assets/drawings/european-substation-10000kva-35kv-p082.webp"
+    include_in_catalog: false
+  - id: "european-substation-10000kva-35kv-p087"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-10000kva-35kv"
+    source_page: 87
+    image: "../../source-media/catalog-assets/drawings/european-substation-10000kva-35kv-p087.webp"
+    include_in_catalog: false
+  - id: "european-substation-10000kva-35kv-p101"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-10000kva-35kv"
+    source_page: 101
+    image: "../../source-media/catalog-assets/drawings/european-substation-10000kva-35kv-p101.webp"
+    include_in_catalog: false
+  - id: "european-substation-10000kva-35kv-p102"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-10000kva-35kv"
+    source_page: 102
+    image: "../../source-media/catalog-assets/drawings/european-substation-10000kva-35kv-p102.webp"
+    include_in_catalog: false
+  - id: "european-substation-12500kva-35kv-p011"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-12500kva-35kv"
+    source_page: 11
+    image: "../../source-media/catalog-assets/drawings/european-substation-12500kva-35kv-p011.webp"
+    include_in_catalog: false
+  - id: "european-substation-12500kva-35kv-p044"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-12500kva-35kv"
+    source_page: 44
+    image: "../../source-media/catalog-assets/drawings/european-substation-12500kva-35kv-p044.webp"
+    include_in_catalog: false
+  - id: "european-substation-12500kva-35kv-p046"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-12500kva-35kv"
+    source_page: 46
+    image: "../../source-media/catalog-assets/drawings/european-substation-12500kva-35kv-p046.webp"
+    include_in_catalog: false
+  - id: "european-substation-12500kva-35kv-p050"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-12500kva-35kv"
+    source_page: 50
+    image: "../../source-media/catalog-assets/drawings/european-substation-12500kva-35kv-p050.webp"
+    include_in_catalog: false
+  - id: "european-substation-12500kva-35kv-p054"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-12500kva-35kv"
+    source_page: 54
+    image: "../../source-media/catalog-assets/drawings/european-substation-12500kva-35kv-p054.webp"
+    include_in_catalog: false
+  - id: "european-substation-12500kva-35kv-p057"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-12500kva-35kv"
+    source_page: 57
+    image: "../../source-media/catalog-assets/drawings/european-substation-12500kva-35kv-p057.webp"
+    include_in_catalog: false
+  - id: "european-substation-12500kva-35kv-p081"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-12500kva-35kv"
+    source_page: 81
+    image: "../../source-media/catalog-assets/drawings/european-substation-12500kva-35kv-p081.webp"
+    include_in_catalog: false
+  - id: "european-substation-12500kva-35kv-p086"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-12500kva-35kv"
+    source_page: 86
+    image: "../../source-media/catalog-assets/drawings/european-substation-12500kva-35kv-p086.webp"
+    include_in_catalog: false
+  - id: "european-substation-12500kva-35kv-p100"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-12500kva-35kv"
+    source_page: 100
+    image: "../../source-media/catalog-assets/drawings/european-substation-12500kva-35kv-p100.webp"
+    include_in_catalog: false
+  - id: "european-substation-12500kva-35kv-p101"
+    product_id: "dry-type-prefabricated-substation"
+    document_id: "european-substation-12500kva-35kv"
+    source_page: 101
+    image: "../../source-media/catalog-assets/drawings/european-substation-12500kva-35kv-p101.webp"
+    include_in_catalog: false
+  - id: "china-substation-10000kva-35kv-p011"
+    product_id: "oil-immersed-prefabricated-substation"
+    document_id: "china-substation-10000kva-35kv"
+    source_page: 11
+    image: "../../source-media/catalog-assets/drawings/china-substation-10000kva-35kv-p011.webp"
+    include_in_catalog: false
+  - id: "china-substation-10000kva-35kv-p037"
+    product_id: "oil-immersed-prefabricated-substation"
+    document_id: "china-substation-10000kva-35kv"
+    source_page: 37
+    image: "../../source-media/catalog-assets/drawings/china-substation-10000kva-35kv-p037.webp"
+    include_in_catalog: false
+  - id: "china-substation-10000kva-35kv-p039"
+    product_id: "oil-immersed-prefabricated-substation"
+    document_id: "china-substation-10000kva-35kv"
+    source_page: 39
+    image: "../../source-media/catalog-assets/drawings/china-substation-10000kva-35kv-p039.webp"
+    include_in_catalog: false
+  - id: "china-substation-10000kva-35kv-p043"
+    product_id: "oil-immersed-prefabricated-substation"
+    document_id: "china-substation-10000kva-35kv"
+    source_page: 43
+    image: "../../source-media/catalog-assets/drawings/china-substation-10000kva-35kv-p043.webp"
+    include_in_catalog: false
+  - id: "china-substation-10000kva-35kv-p048"
+    product_id: "oil-immersed-prefabricated-substation"
+    document_id: "china-substation-10000kva-35kv"
+    source_page: 48
+    image: "../../source-media/catalog-assets/drawings/china-substation-10000kva-35kv-p048.webp"
+    include_in_catalog: false
+  - id: "china-substation-10000kva-35kv-p051"
+    product_id: "oil-immersed-prefabricated-substation"
+    document_id: "china-substation-10000kva-35kv"
+    source_page: 51
+    image: "../../source-media/catalog-assets/drawings/china-substation-10000kva-35kv-p051.webp"
+    include_in_catalog: false
+  - id: "china-substation-10000kva-35kv-p078"
+    product_id: "oil-immersed-prefabricated-substation"
+    document_id: "china-substation-10000kva-35kv"
+    source_page: 78
+    image: "../../source-media/catalog-assets/drawings/china-substation-10000kva-35kv-p078.webp"
+    include_in_catalog: false
+  - id: "china-substation-10000kva-35kv-p083"
+    product_id: "oil-immersed-prefabricated-substation"
+    document_id: "china-substation-10000kva-35kv"
+    source_page: 83
+    image: "../../source-media/catalog-assets/drawings/china-substation-10000kva-35kv-p083.webp"
+    include_in_catalog: false
+  - id: "china-substation-10000kva-35kv-p097"
+    product_id: "oil-immersed-prefabricated-substation"
+    document_id: "china-substation-10000kva-35kv"
+    source_page: 97
+    image: "../../source-media/catalog-assets/drawings/china-substation-10000kva-35kv-p097.webp"
+    include_in_catalog: false
+  - id: "china-substation-12500kva-35kv-p011"
+    product_id: "oil-immersed-prefabricated-substation"
+    document_id: "china-substation-12500kva-35kv"
+    source_page: 11
+    image: "../../source-media/catalog-assets/drawings/china-substation-12500kva-35kv-p011.webp"
+    include_in_catalog: true
+  - id: "china-substation-12500kva-35kv-p037"
+    product_id: "oil-immersed-prefabricated-substation"
+    document_id: "china-substation-12500kva-35kv"
+    source_page: 37
+    image: "../../source-media/catalog-assets/drawings/china-substation-12500kva-35kv-p037.webp"
+    include_in_catalog: false
+  - id: "china-substation-12500kva-35kv-p039"
+    product_id: "oil-immersed-prefabricated-substation"
+    document_id: "china-substation-12500kva-35kv"
+    source_page: 39
+    image: "../../source-media/catalog-assets/drawings/china-substation-12500kva-35kv-p039.webp"
+    include_in_catalog: false
+  - id: "china-substation-12500kva-35kv-p043"
+    product_id: "oil-immersed-prefabricated-substation"
+    document_id: "china-substation-12500kva-35kv"
+    source_page: 43
+    image: "../../source-media/catalog-assets/drawings/china-substation-12500kva-35kv-p043.webp"
+    include_in_catalog: false
+  - id: "china-substation-12500kva-35kv-p048"
+    product_id: "oil-immersed-prefabricated-substation"
+    document_id: "china-substation-12500kva-35kv"
+    source_page: 48
+    image: "../../source-media/catalog-assets/drawings/china-substation-12500kva-35kv-p048.webp"
+    include_in_catalog: false
+  - id: "china-substation-12500kva-35kv-p051"
+    product_id: "oil-immersed-prefabricated-substation"
+    document_id: "china-substation-12500kva-35kv"
+    source_page: 51
+    image: "../../source-media/catalog-assets/drawings/china-substation-12500kva-35kv-p051.webp"
+    include_in_catalog: false
+  - id: "china-substation-12500kva-35kv-p075"
+    product_id: "oil-immersed-prefabricated-substation"
+    document_id: "china-substation-12500kva-35kv"
+    source_page: 75
+    image: "../../source-media/catalog-assets/drawings/china-substation-12500kva-35kv-p075.webp"
+    include_in_catalog: false
+  - id: "china-substation-12500kva-35kv-p084"
+    product_id: "oil-immersed-prefabricated-substation"
+    document_id: "china-substation-12500kva-35kv"
+    source_page: 84
+    image: "../../source-media/catalog-assets/drawings/china-substation-12500kva-35kv-p084.webp"
+    include_in_catalog: false
+  - id: "dry-type-scb18-1000kva-10kv-p038"
+    product_id: "cast-resin-dry-type-transformer"
+    document_id: "dry-type-scb18-1000kva-10kv"
+    source_page: 38
+    image: "../../source-media/catalog-assets/drawings/dry-type-scb18-1000kva-10kv-p038.webp"
+    include_in_catalog: false
+  - id: "dry-type-scb18-1000kva-10kv-p039"
+    product_id: "cast-resin-dry-type-transformer"
+    document_id: "dry-type-scb18-1000kva-10kv"
+    source_page: 39
+    image: "../../source-media/catalog-assets/drawings/dry-type-scb18-1000kva-10kv-p039.webp"
+    include_in_catalog: false
+  - id: "dry-type-scb18-1000kva-10kv-p040"
+    product_id: "cast-resin-dry-type-transformer"
+    document_id: "dry-type-scb18-1000kva-10kv"
+    source_page: 40
+    image: "../../source-media/catalog-assets/drawings/dry-type-scb18-1000kva-10kv-p040.webp"
+    include_in_catalog: false
+  - id: "dry-type-scb18-1000kva-10kv-p041"
+    product_id: "cast-resin-dry-type-transformer"
+    document_id: "dry-type-scb18-1000kva-10kv"
+    source_page: 41
+    image: "../../source-media/catalog-assets/drawings/dry-type-scb18-1000kva-10kv-p041.webp"
+    include_in_catalog: false
+  - id: "dry-type-scb18-1000kva-10kv-p042"
+    product_id: "cast-resin-dry-type-transformer"
+    document_id: "dry-type-scb18-1000kva-10kv"
+    source_page: 42
+    image: "../../source-media/catalog-assets/drawings/dry-type-scb18-1000kva-10kv-p042.webp"
+    include_in_catalog: false
+  - id: "dry-type-scb18-2500kva-10kv-p038"
+    product_id: "cast-resin-dry-type-transformer"
+    document_id: "dry-type-scb18-2500kva-10kv"
+    source_page: 38
+    image: "../../source-media/catalog-assets/drawings/dry-type-scb18-2500kva-10kv-p038.webp"
+    include_in_catalog: false
+  - id: "dry-type-scb18-2500kva-10kv-p039"
+    product_id: "cast-resin-dry-type-transformer"
+    document_id: "dry-type-scb18-2500kva-10kv"
+    source_page: 39
+    image: "../../source-media/catalog-assets/drawings/dry-type-scb18-2500kva-10kv-p039.webp"
+    include_in_catalog: false
+  - id: "dry-type-scb18-2500kva-10kv-p040"
+    product_id: "cast-resin-dry-type-transformer"
+    document_id: "dry-type-scb18-2500kva-10kv"
+    source_page: 40
+    image: "../../source-media/catalog-assets/drawings/dry-type-scb18-2500kva-10kv-p040.webp"
+    include_in_catalog: false
+  - id: "dry-type-scb18-2500kva-10kv-p041"
+    product_id: "cast-resin-dry-type-transformer"
+    document_id: "dry-type-scb18-2500kva-10kv"
+    source_page: 41
+    image: "../../source-media/catalog-assets/drawings/dry-type-scb18-2500kva-10kv-p041.webp"
+    include_in_catalog: false
+  - id: "dry-type-scb18-2500kva-10kv-p042"
+    product_id: "cast-resin-dry-type-transformer"
+    document_id: "dry-type-scb18-2500kva-10kv"
+    source_page: 42
+    image: "../../source-media/catalog-assets/drawings/dry-type-scb18-2500kva-10kv-p042.webp"
+    include_in_catalog: false
+  - id: "american-combined-zgs22-4000kva-35kv-p049"
+    product_id: "american-type-combined-transformer"
+    document_id: "american-combined-zgs22-4000kva-35kv"
+    source_page: 49
+    image: "../../source-media/catalog-assets/drawings/american-combined-zgs22-4000kva-35kv-p049.webp"
+    include_in_catalog: false
+  - id: "american-combined-zgs22-4000kva-35kv-p050"
+    product_id: "american-type-combined-transformer"
+    document_id: "american-combined-zgs22-4000kva-35kv"
+    source_page: 50
+    image: "../../source-media/catalog-assets/drawings/american-combined-zgs22-4000kva-35kv-p050.webp"
+    include_in_catalog: false
+  - id: "american-combined-zgs22-4000kva-35kv-p051"
+    product_id: "american-type-combined-transformer"
+    document_id: "american-combined-zgs22-4000kva-35kv"
+    source_page: 51
+    image: "../../source-media/catalog-assets/drawings/american-combined-zgs22-4000kva-35kv-p051.webp"
+    include_in_catalog: false
+  - id: "american-combined-zgs22-4000kva-35kv-p052"
+    product_id: "american-type-combined-transformer"
+    document_id: "american-combined-zgs22-4000kva-35kv"
+    source_page: 52
+    image: "../../source-media/catalog-assets/drawings/american-combined-zgs22-4000kva-35kv-p052.webp"
+    include_in_catalog: false
+  - id: "american-combined-zgs22-4000kva-35kv-p053"
+    product_id: "american-type-combined-transformer"
+    document_id: "american-combined-zgs22-4000kva-35kv"
+    source_page: 53
+    image: "../../source-media/catalog-assets/drawings/american-combined-zgs22-4000kva-35kv-p053.webp"
+    include_in_catalog: false

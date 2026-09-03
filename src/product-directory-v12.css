@@ -1,0 +1,7 @@
+.v12-directory-group{margin-top:56px;padding-top:12px;border-top:1px solid rgba(20,43,66,.12)}
+.v12-directory-group:first-of-type{margin-top:30px}
+.v12-directory-head{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(280px,1.2fr);gap:32px;align-items:end;margin:0 0 24px}
+.v12-directory-head h3{margin:.15rem 0 0;font-size:clamp(1.55rem,2.2vw,2.25rem);line-height:1.1}
+.v12-directory-head>p{margin:0;color:var(--muted,#5b6873);max-width:720px}
+.v12-two-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:820px){.v12-directory-head{grid-template-columns:1fr;gap:10px}.v12-two-card-grid{grid-template-columns:1fr}.v12-directory-group{margin-top:40px}}

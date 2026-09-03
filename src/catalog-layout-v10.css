@@ -1,0 +1,361 @@
+/* Catalog V10: visual polish for balanced 16:9 product, detail and technical pages */
+
+/* OVERVIEW: give text and image fields comparable weight and keep the footer from colliding with content. */
+.catalog-v10-overview .sheet-head {
+  margin-bottom: 9px !important;
+}
+.catalog-v10-overview .v9-overview-lead {
+  max-width: 1180px !important;
+  margin: 0 0 12px !important;
+  font-size: 12.5px !important;
+  line-height: 1.45 !important;
+}
+.catalog-v10-overview .v9-overview-stage {
+  grid-template-columns: minmax(0, 1.04fr) minmax(410px, .96fr) !important;
+  gap: 22px !important;
+}
+.catalog-v10-overview .v9-product-gallery {
+  grid-template-rows: repeat(2, 184px) !important;
+  gap: 14px !important;
+  height: 382px !important;
+}
+.catalog-v10-overview .v9-product-gallery figure {
+  height: 184px !important;
+  padding: 4px !important;
+}
+.catalog-v10-overview .v9-product-gallery figure:first-child {
+  height: 382px !important;
+}
+.catalog-v10-overview .v9-product-gallery img {
+  transform: scale(1.05) !important;
+}
+.catalog-v10-overview .v9-overview-panel {
+  height: 382px !important;
+  padding: 15px 18px 14px !important;
+}
+.catalog-v10-overview .v9-panel-intro h3 {
+  margin-bottom: 6px !important;
+  font-size: 17px !important;
+  line-height: 1.22 !important;
+}
+.catalog-v10-overview .v9-panel-intro span {
+  font-size: 11px !important;
+  line-height: 1.42 !important;
+}
+.catalog-v10-overview .v9-overview-specs {
+  margin: 10px 0 9px !important;
+}
+.catalog-v10-overview .v9-overview-specs > div {
+  min-height: 46px !important;
+  padding: 7px 10px !important;
+}
+.catalog-v10-overview .v9-overview-specs span {
+  margin-bottom: 3px !important;
+  font-size: 7px !important;
+}
+.catalog-v10-overview .v9-overview-specs strong {
+  font-size: 11.5px !important;
+}
+.catalog-v10-overview .v9-panel-columns {
+  grid-template-columns: 1.04fr .96fr !important;
+  gap: 14px !important;
+}
+.catalog-v10-overview .v9-panel-columns p {
+  margin-bottom: 4px !important;
+  font-size: 7.3px !important;
+}
+.catalog-v10-overview .v9-panel-columns li,
+.catalog-v10-overview .v9-panel-columns strong,
+.catalog-v10-overview .v9-panel-columns small {
+  font-size: 9.2px !important;
+  line-height: 1.3 !important;
+}
+.catalog-v10-overview .v9-panel-columns li {
+  margin: 1px 0 !important;
+}
+.catalog-v10-overview .v9-panel-columns small {
+  margin-top: 3px !important;
+}
+.catalog-v10-overview .v9-overview-band {
+  margin-top: 11px !important;
+}
+.catalog-v10-overview .v9-overview-band > div {
+  min-height: 46px !important;
+  padding: 7px 12px !important;
+}
+.catalog-v10-overview .v9-overview-band span {
+  margin-bottom: 3px !important;
+  font-size: 7px !important;
+}
+.catalog-v10-overview .v9-overview-band strong {
+  font-size: 9.5px !important;
+  line-height: 1.25 !important;
+}
+
+/* DETAILS: remove the artificial vertical canyon and turn the left side into one continuous editorial system. */
+.catalog-v10-details .sheet-head {
+  margin-bottom: 14px !important;
+}
+.catalog-v10-details .v9-details-stage {
+  grid-template-columns: minmax(0, 1.14fr) minmax(365px, .86fr) !important;
+  gap: 24px !important;
+  height: 516px !important;
+}
+.catalog-v10-details .v9-details-main {
+  display: grid !important;
+  grid-template-rows: auto minmax(0, 1fr) auto !important;
+  gap: 13px !important;
+  height: 516px !important;
+  justify-content: stretch !important;
+}
+.catalog-v10-details .v9-details-lead {
+  padding: 14px 18px 15px !important;
+}
+.catalog-v10-details .v9-details-lead h3 {
+  margin-bottom: 7px !important;
+  font-size: 20px !important;
+  line-height: 1.22 !important;
+}
+.catalog-v10-details .v9-details-lead span {
+  max-width: none !important;
+  font-size: 11.5px !important;
+  line-height: 1.45 !important;
+}
+.catalog-v10-details .v9-detail-duo {
+  height: 100% !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  gap: 13px !important;
+  align-items: stretch !important;
+}
+.catalog-v10-details .v9-detail-duo article {
+  height: 100% !important;
+  min-height: 0 !important;
+  padding: 15px 17px !important;
+}
+.catalog-v10-details .v9-detail-duo h4 {
+  margin-bottom: 8px !important;
+  font-size: 15px !important;
+}
+.catalog-v10-details .v9-detail-duo li {
+  margin: 5px 0 !important;
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+}
+.catalog-v10-details .v9-selection-strip > div {
+  min-height: 58px !important;
+  padding: 9px 12px !important;
+}
+.catalog-v10-details .v9-reference-panel {
+  box-sizing: border-box !important;
+  height: 516px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 18px 15px !important;
+  overflow: hidden !important;
+}
+.catalog-v10-details .v9-reference-panel figure {
+  flex: 0 0 226px !important;
+  height: 226px !important;
+  margin-bottom: 14px !important;
+  padding: 8px !important;
+}
+.catalog-v10-details .v9-reference-panel figure img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: scale(.94) !important;
+}
+.catalog-v10-details .v9-reference-panel h3 {
+  margin-bottom: 8px !important;
+  font-size: 17px !important;
+}
+.catalog-v10-details .v9-reference-model {
+  padding: 7px 0 !important;
+}
+.catalog-v10-details .v9-reference-evidence {
+  margin-top: 5px !important;
+  padding-top: 7px !important;
+}
+.catalog-v10-details .v9-reference-evidence span {
+  margin-bottom: 3px !important;
+}
+.catalog-v10-details .v9-reference-evidence strong {
+  margin: 1px 0 !important;
+  font-size: 9.5px !important;
+  line-height: 1.28 !important;
+}
+.catalog-v10-details .v9-detail-note {
+  margin-top: 9px !important;
+  padding-top: 7px !important;
+  font-size: 8.8px !important;
+}
+
+/* PARAMETERS: protect both cards from overflow and use the remaining space for standards / scope. */
+.catalog-v10-params .v9-model-card-grid {
+  width: 100% !important;
+  max-width: 100% !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  gap: 18px !important;
+  box-sizing: border-box !important;
+}
+.catalog-v10-params .v9-model-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+.catalog-v10-params .v9-model-head {
+  grid-template-columns: minmax(0, 1fr) 112px !important;
+  gap: 10px !important;
+  padding: 13px 14px 12px !important;
+}
+.catalog-v10-params .v9-model-head > div:last-child {
+  min-width: 0 !important;
+  width: 112px !important;
+  padding-right: 2px !important;
+  overflow: hidden !important;
+}
+.catalog-v10-params .v9-model-head span {
+  white-space: nowrap !important;
+  font-size: 8px !important;
+}
+.catalog-v10-params .v9-model-head h3 {
+  font-size: 18px !important;
+}
+.catalog-v10-params .v9-model-head strong {
+  font-size: 17px !important;
+}
+.catalog-v10-params .v9-model-spec-grid > div {
+  min-height: 51px !important;
+  padding: 8px 11px !important;
+}
+.catalog-v10-params .v9-insulation-band {
+  margin-top: 12px !important;
+}
+.catalog-v10-params .v9-evidence-footer {
+  margin-top: 11px !important;
+}
+.v10-standards-band {
+  display: grid !important;
+  grid-template-columns: 190px minmax(0, 1fr) !important;
+  align-items: center !important;
+  gap: 18px !important;
+  margin-top: 10px !important;
+  padding: 10px 12px !important;
+  border-top: 1px solid #cad6df !important;
+  border-bottom: 1px solid #cad6df !important;
+  background: #f7f9fb !important;
+}
+.v10-standards-band > div:first-child span,
+.v10-standards-band > div:first-child strong {
+  display: block !important;
+}
+.v10-standards-band > div:first-child span {
+  margin-bottom: 4px !important;
+  color: #718597 !important;
+  font-size: 7px !important;
+  text-transform: uppercase !important;
+  letter-spacing: .08em !important;
+}
+.v10-standards-band > div:first-child strong {
+  color: #123b60 !important;
+  font-size: 11px !important;
+}
+.v10-standard-list {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+  justify-content: flex-end !important;
+}
+.v10-standard-list span {
+  padding: 5px 8px !important;
+  border: 1px solid #d6e0e7 !important;
+  background: #fff !important;
+  color: #2f4e69 !important;
+  font-size: 8.5px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+}
+
+@media (max-width: 900px) {
+  .catalog-v10-overview .v9-overview-stage,
+  .catalog-v10-details .v9-details-stage {
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+  }
+  .catalog-v10-details .v9-details-main,
+  .catalog-v10-details .v9-reference-panel {
+    height: auto !important;
+  }
+  .catalog-v10-params .v9-model-card-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .v10-standards-band {
+    grid-template-columns: 1fr !important;
+  }
+  .v10-standard-list { justify-content: flex-start !important; }
+}
+
+@media print {
+  .catalog-v10-overview .v9-overview-stage {
+    grid-template-columns: minmax(0, 1.04fr) minmax(0, .96fr) !important;
+    gap: 5mm !important;
+  }
+  .catalog-v10-overview .v9-overview-lead {
+    margin-bottom: 2.2mm !important;
+    font-size: 8.1pt !important;
+  }
+  .catalog-v10-overview .v9-overview-band {
+    margin-top: 2.2mm !important;
+  }
+  .catalog-v10-overview .v9-overview-band > div {
+    min-height: 10mm !important;
+    padding: 1.5mm 2mm !important;
+  }
+
+  .catalog-v10-details .v9-details-stage {
+    grid-template-columns: minmax(0, 1.14fr) minmax(82mm, .86fr) !important;
+    gap: 5mm !important;
+    height: 126mm !important;
+  }
+  .catalog-v10-details .v9-details-main,
+  .catalog-v10-details .v9-reference-panel {
+    height: 126mm !important;
+  }
+  .catalog-v10-details .v9-details-main {
+    gap: 2.5mm !important;
+  }
+  .catalog-v10-details .v9-detail-duo {
+    margin: 0 !important;
+    gap: 2.5mm !important;
+  }
+  .catalog-v10-details .v9-reference-panel figure {
+    flex-basis: 53mm !important;
+    height: 53mm !important;
+  }
+
+  .catalog-v10-params .v9-model-card-grid {
+    gap: 4mm !important;
+  }
+  .catalog-v10-params .v9-model-head {
+    grid-template-columns: minmax(0, 1fr) 29mm !important;
+  }
+  .catalog-v10-params .v9-model-head > div:last-child {
+    width: 29mm !important;
+  }
+  .v10-standards-band {
+    grid-template-columns: 38mm minmax(0, 1fr) !important;
+    gap: 3mm !important;
+    margin-top: 2mm !important;
+    padding: 1.6mm 2mm !important;
+  }
+  .v10-standard-list {
+    gap: 1.2mm !important;
+  }
+  .v10-standard-list span {
+    padding: 1mm 1.5mm !important;
+    font-size: 5.5pt !important;
+  }
+}

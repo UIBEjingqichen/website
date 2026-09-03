@@ -1,0 +1,42 @@
+projects:
+  - {product_id: oil-immersed-distribution-transformer, name: "Tay Ninh Cement Milling Plant 2", application: Industrial, industry: Cement, country: "", scale: ""}
+  - {product_id: oil-immersed-distribution-transformer, name: "Neikeng Phase I Transformer Project", application: Industrial, industry: Industrial, country: "", scale: ""}
+  - {product_id: oil-immersed-distribution-transformer, name: "Wanhua Ningbo 450 Substation Grade 1 Efficiency Transformer", application: Industrial, industry: Chemical, country: China, scale: ""}
+  - {product_id: oil-immersed-distribution-transformer, name: "SCC Cement Plant 6000 TPD", application: Industrial, industry: Cement, country: "", scale: "6000 TPD"}
+  - {product_id: oil-immersed-distribution-transformer, name: "Yamama 6000 TPD Clinker Plant Project", application: Industrial, industry: Cement, country: "", scale: "6000 TPD"}
+  - {product_id: oil-immersed-distribution-transformer, name: "Wanhua Chemical Haiyang Phase II & III Distribution Project", application: Industrial, industry: Chemical, country: China, scale: ""}
+
+  - {product_id: high-voltage-power-transformer, name: "BCL Hattar Line 2 7200 TPD Cement Plant", application: Industrial, industry: Cement, country: Pakistan, scale: "7200 TPD"}
+  - {product_id: high-voltage-power-transformer, name: "Atlantic Industrial Park 132 kV Substation", application: Utility Grid, industry: Industrial Park, country: Nigeria, scale: "132 kV"}
+  - {product_id: high-voltage-power-transformer, name: "Long Son Company Cement Grinding Project", application: Industrial, industry: Cement, country: Vietnam, scale: ""}
+  - {product_id: high-voltage-power-transformer, name: "Methanol Dayyer Mobile Substation Export Project", application: Infrastructure, industry: Chemical, country: United Arab Emirates, scale: ""}
+  - {product_id: high-voltage-power-transformer, name: "Feicheng 100 MW-Class Advanced Compressed Air Energy Storage Station Phase II", application: Energy Storage, industry: Energy Storage, country: China, scale: "100 MW-class"}
+  - {product_id: high-voltage-power-transformer, name: "Xi'an Metro Lines 8, 10 and 15 Main Substations", application: Infrastructure, industry: Rail Transit, country: China, scale: ""}
+
+  - {product_id: cast-resin-dry-type-transformer, name: "Yinchuan Charging Infrastructure Phase II Lot 2", application: Infrastructure, industry: Charging Infrastructure, country: China, scale: ""}
+  - {product_id: cast-resin-dry-type-transformer, name: "Baihong Nylon Texturing Workshop Phase I", application: Industrial, industry: Industrial, country: China, scale: ""}
+  - {product_id: cast-resin-dry-type-transformer, name: "Zhangzhou Hospital", application: Infrastructure, industry: Healthcare, country: China, scale: ""}
+  - {product_id: cast-resin-dry-type-transformer, name: "Anhui Xinyi Photovoltaic Glass Lines BA-D", application: Industrial, industry: Photovoltaic Manufacturing, country: China, scale: ""}
+  - {product_id: cast-resin-dry-type-transformer, name: "Fujian Ruian Electric Power Construction Project", application: Utility Grid, industry: Power Construction, country: China, scale: ""}
+  - {product_id: cast-resin-dry-type-transformer, name: "Zhenjiang Chunen Dry-Type Transformer Framework", application: Industrial, industry: Industrial, country: China, scale: ""}
+
+  - {product_id: dry-type-prefabricated-substation, name: "CR Power Laohekou 130 MW Wind Power Project", application: Renewable Energy, industry: Wind, country: China, scale: "130 MW"}
+  - {product_id: dry-type-prefabricated-substation, name: "Shandong Rizhao 200 MW Energy Storage Project", application: Energy Storage, industry: Energy Storage, country: China, scale: "200 MW"}
+  - {product_id: dry-type-prefabricated-substation, name: "Huaneng Weichang 200 MW Wind Power Project", application: Renewable Energy, industry: Wind, country: China, scale: "200 MW"}
+  - {product_id: dry-type-prefabricated-substation, name: "Yinchuan Charging Infrastructure Project", application: Infrastructure, industry: Charging Infrastructure, country: China, scale: ""}
+  - {product_id: dry-type-prefabricated-substation, name: "Three Gorges Jiangsu Taizhou Hailing 100 MW Fishery-Solar Project", application: Renewable Energy, industry: Solar, country: China, scale: "100 MW"}
+  - {product_id: dry-type-prefabricated-substation, name: "Huaneng Laoting 125 MW Wind Power Project", application: Renewable Energy, industry: Wind, country: China, scale: "125 MW"}
+
+  - {product_id: oil-immersed-prefabricated-substation, name: "Yunnan Zhaotong Xiaozhai 350 MW Solar Project", application: Renewable Energy, industry: Solar, country: China, scale: "350 MW"}
+  - {product_id: oil-immersed-prefabricated-substation, name: "Three Gorges Dongshan Xingchen 180 MW Offshore Solar Project", application: Renewable Energy, industry: Offshore Solar, country: China, scale: "180 MW"}
+  - {product_id: oil-immersed-prefabricated-substation, name: "Sunshare Nambala 100 MW Solar Project", application: Renewable Energy, industry: Solar, country: Zambia, scale: "100 MW"}
+  - {product_id: oil-immersed-prefabricated-substation, name: "Shanghai Lingang 500 MW Offshore Solar Project", application: Renewable Energy, industry: Offshore Solar, country: China, scale: "500 MW"}
+  - {product_id: oil-immersed-prefabricated-substation, name: "CMOC Mining Area 500 MW Solar Project", application: Renewable Energy, industry: Mining / Solar, country: Democratic Republic of the Congo, scale: "500 MW"}
+  - {product_id: oil-immersed-prefabricated-substation, name: "Luneng Ruoqiang 2 GW Solar Power Project", application: Renewable Energy, industry: Solar, country: China, scale: "2 GW"}
+
+  - {product_id: american-type-combined-transformer, name: "Pianguan Jinlin 100 MW Solar + Storage Project", application: Renewable Energy, industry: Solar / Storage, country: China, scale: "100 MW"}
+  - {product_id: american-type-combined-transformer, name: "Qianxi Hongjiadu 150 MW Agriculture-Solar Project", application: Renewable Energy, industry: Solar, country: China, scale: "150 MW"}
+  - {product_id: american-type-combined-transformer, name: "Shexian 150 MW Solar Power Project", application: Renewable Energy, industry: Solar, country: China, scale: "150 MW"}
+  - {product_id: american-type-combined-transformer, name: "Qinhuangdao Juxing 200 MW Solar Project", application: Renewable Energy, industry: Solar, country: China, scale: "200 MW"}
+  - {product_id: american-type-combined-transformer, name: "Xinze Kaiping 150 MW Solar Project", application: Renewable Energy, industry: Solar, country: China, scale: "150 MW"}
+  - {product_id: american-type-combined-transformer, name: "CHN Energy Zhoushan Putuo Dengbu Island 213 MWp Fishery-Solar Project", application: Renewable Energy, industry: Solar, country: China, scale: "213 MWp"}

@@ -1,0 +1,140 @@
+/* Catalog-first image quality pass. Preserve evidence/document previews; normalize marketing photography. */
+
+/* Product-family cards should show the machine clearly instead of cropping away radiators, bushings or enclosure edges. */
+.v3p-products-home .v3p-family-card-media,
+.v3p-family-grid .v3p-family-card-media{
+  height:auto!important;
+  aspect-ratio:4/3;
+  overflow:hidden;
+  background:linear-gradient(180deg,#f7f9fa,#edf2f4);
+}
+.v3p-products-home .v3p-family-card-media img,
+.v3p-family-grid .v3p-family-card-media img{
+  width:100%;
+  height:100%;
+  padding:16px!important;
+  object-fit:contain!important;
+  object-position:center;
+  transform:none!important;
+}
+
+/* Product index hero is also a product view, not a lifestyle crop. */
+.v3p-index-hero .media{
+  background:linear-gradient(180deg,#f7f9fa,#edf2f4);
+  overflow:hidden;
+}
+.v3p-index-hero .media img{
+  width:100%;
+  height:100%;
+  padding:18px!important;
+  object-fit:contain!important;
+  object-position:center;
+}
+
+/* Product range cards stay aligned even when source images have different native ratios. */
+.v3p-platform-grid .v3p-platform-card{
+  grid-template-rows:auto 1fr;
+}
+.v3p-platform-grid .v3p-platform-card .media{
+  aspect-ratio:4/3;
+  overflow:hidden;
+  background:#f4f7f8;
+}
+.v3p-platform-grid .v3p-platform-card .media img{
+  width:100%;
+  height:100%;
+  max-width:none;
+  max-height:none;
+  padding:14px!important;
+  object-fit:contain!important;
+  object-position:center;
+}
+
+/* Detailed product pages should show the complete machine/drawing, not amputate technical details. */
+.v3p-hero-media,
+.v3p-family-hero-media,
+.v3p-photo:not(.cover){
+  background:linear-gradient(180deg,#f8fafb,#eef3f5);
+}
+.v3p-hero-media img,
+.v3p-family-hero-media img,
+.v3p-photo:not(.cover) img{
+  object-fit:contain!important;
+  object-position:center;
+}
+.v3p-hero-media img,
+.v3p-family-hero-media img{
+  padding:18px!important;
+}
+
+/* The former irregular collage is now a calm 3 x 2 grid of six distinct source images. */
+.iq-landscape{
+  padding:clamp(58px,7vw,96px) 20px;
+  overflow:hidden;
+}
+.iq-landscape .yw-centered-head{
+  width:min(1240px,100%);
+  margin:0 auto 30px;
+}
+.iq-landscape-grid{
+  display:grid;
+  width:min(1240px,100%);
+  margin:0 auto;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+}
+.iq-landscape-card{
+  position:relative;
+  margin:0;
+  aspect-ratio:4/3;
+  overflow:hidden;
+  background:#dfe8ec;
+}
+.iq-landscape-card img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transform:scale(1.012);
+}
+.iq-landscape-card.iq-campus img{object-position:center 48%;}
+.iq-landscape-card.iq-manufacturing img{object-position:center 52%;}
+.iq-landscape-card.iq-testing img{object-position:center 50%;}
+.iq-landscape-card.iq-grid img{object-position:center 48%;}
+.iq-landscape-card.iq-renewable img{object-position:center 52%;}
+.iq-landscape-card.iq-solar img{object-position:center 50%;}
+
+/* Proof cards use photographic crops and equal-height media windows. */
+.v5-proof-grid .v5-proof-image{
+  aspect-ratio:16/10;
+  overflow:hidden;
+}
+.v5-proof-grid .v5-proof-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover!important;
+  object-position:center;
+}
+
+/* Hero photography fills its frame consistently; no stretching. */
+.v6-hero-slide{
+  overflow:hidden;
+}
+.v6-hero-slide>img{
+  width:100%;
+  height:100%;
+  object-fit:cover!important;
+  object-position:center;
+}
+
+@media(max-width:900px){
+  .iq-landscape-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media(max-width:620px){
+  .iq-landscape{padding-left:14px;padding-right:14px;}
+  .iq-landscape-grid{grid-template-columns:1fr;gap:10px;}
+  .iq-landscape-card{aspect-ratio:16/10;}
+  .v3p-products-home .v3p-family-card-media,
+  .v3p-family-grid .v3p-family-card-media{aspect-ratio:16/10;}
+}

@@ -1,0 +1,213 @@
+{
+  "families": [
+    {
+      "id": "power",
+      "title": "Power Transformers",
+      "subtitle": "35 kV to 220 kV oil-immersed power-transformer platforms",
+      "landing": "high-voltage-power-transformer",
+      "image": "evidence/sample-photo-pages/power-transformer-240mva-220kv-ssz22-sample-photo-page.webp",
+      "children": [
+        "35kv-power-transformer",
+        "66kv-power-transformer",
+        "110kv-power-transformer",
+        "220kv-power-transformer"
+      ]
+    },
+    {
+      "id": "distribution",
+      "title": "Distribution Transformers",
+      "subtitle": "Oil-immersed distribution, renewable-energy and rectifier platforms",
+      "landing": "oil-immersed-distribution-transformer",
+      "image": "products/distribution-transformers/oil-immersed-distribution-transformer-conservator-01.webp",
+      "children": [
+        "12kv-oil-immersed-distribution-transformer",
+        "40-5kv-renewable-oil-immersed-transformer",
+        "oil-immersed-rectifier-transformer"
+      ]
+    },
+    {
+      "id": "dry",
+      "title": "Dry-Type Transformers",
+      "subtitle": "Distribution, 35 kV-class, renewable-energy and amorphous-alloy platforms",
+      "landing": "cast-resin-dry-type-transformer",
+      "image": "evidence/sample-photo-pages/dry-type-scb18-2500kva-10kv-sample-photo-page.webp",
+      "children": [
+        "dry-type-distribution-transformer",
+        "40-5kv-new-energy-dry-type-transformer",
+        "35kv-large-dry-type-power-transformer",
+        "amorphous-alloy-dry-type-transformer"
+      ]
+    },
+    {
+      "id": "prefab",
+      "title": "Prefabricated Substations",
+      "subtitle": "ZGS, YB, YBH and PV / converter / ESS integrated systems",
+      "landing": "prefabricated-substations",
+      "image": "products/prefabricated-substations/dry-type-prefabricated-substation-exterior-01.webp",
+      "children": [
+        "zgs-prefabricated-substation",
+        "yb-prefabricated-substation",
+        "ybh-prefabricated-substation",
+        "pv-ess-integrated-substation"
+      ]
+    },
+    {
+      "id": "special",
+      "title": "Special & Renewable Solutions",
+      "subtitle": "Mobile substations, offshore wind and renewable booster solutions",
+      "landing": "special-renewable-solutions",
+      "image": "products/prefabricated-substations/integrated-prefabricated-substation-render.jpeg",
+      "children": [
+        "35-110kv-mobile-intelligent-substation",
+        "66kv-offshore-wind-nacelle-transformer",
+        "220kv-double-split-booster-transformer"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "slug": "35kv-power-transformer",
+      "family": "power",
+      "title": "35 kV Oil-Immersed Power Transformer",
+      "range": "8–31.5 MVA",
+      "voltage": "35–38.5 kV HV",
+      "source": "Tianyu transformer English catalog, 35 kV power-transformer technical parameter table."
+    },
+    {
+      "slug": "66kv-power-transformer",
+      "family": "power",
+      "title": "66 kV Oil-Immersed Power Transformer",
+      "range": "6.3–63 MVA",
+      "voltage": "63 / 66 / 69 kV HV",
+      "source": "Tianyu transformer English catalog, 66 kV power-transformer technical parameter table."
+    },
+    {
+      "slug": "110kv-power-transformer",
+      "family": "power",
+      "title": "110 kV Three-Winding Power Transformer",
+      "range": "6.3–63 MVA",
+      "voltage": "110 / 115 / 121 kV HV",
+      "source": "Tianyu transformer English catalog, 110 kV three-winding power-transformer technical parameter table."
+    },
+    {
+      "slug": "220kv-power-transformer",
+      "family": "power",
+      "title": "220 kV Three-Winding Power Transformer",
+      "range": "31.5–240 MVA",
+      "voltage": "220 / 230 / 242 kV HV",
+      "source": "Tianyu transformer English catalog, 220 kV three-winding power-transformer technical parameter table."
+    },
+    {
+      "slug": "12kv-oil-immersed-distribution-transformer",
+      "family": "distribution",
+      "title": "12 kV Oil-Immersed Distribution Transformer",
+      "range": "30–2,500 kVA",
+      "voltage": "6–11 kV HV · 0.4 / 0.415 / 0.42 kV LV",
+      "source": "Tianyu transformer English catalog, 12 kV oil-immersed transformer technical parameter table."
+    },
+    {
+      "slug": "40-5kv-renewable-oil-immersed-transformer",
+      "family": "distribution",
+      "title": "40.5 kV-Class Renewable Oil-Immersed Transformer",
+      "range": "1–12.5 MVA",
+      "voltage": "33–38.5 kV HV · 0.4–1.14 kV LV",
+      "source": "Tianyu transformer English catalog, 40.5 kV-class new-energy oil-immersed transformer technical parameter table."
+    },
+    {
+      "slug": "oil-immersed-rectifier-transformer",
+      "family": "distribution",
+      "title": "Oil-Immersed Rectifier Transformer",
+      "range": "Project engineered",
+      "voltage": "35 kV and below",
+      "source": "Tianyu transformer English catalog, small and medium oil-immersed transformer section."
+    },
+    {
+      "slug": "dry-type-distribution-transformer",
+      "family": "dry",
+      "title": "Energy-Saving Low-Noise Dry-Type Transformer",
+      "range": "Project / series dependent",
+      "voltage": "35 kV and below family",
+      "source": "Tianyu transformer English catalog, dry-type transformer section and product standards."
+    },
+    {
+      "slug": "40-5kv-new-energy-dry-type-transformer",
+      "family": "dry",
+      "title": "40.5 kV-Class New-Energy Dry-Type Transformer",
+      "range": "Up to 8 MVA design capability",
+      "voltage": "35 kV-class family",
+      "source": "Tianyu transformer English catalog, new-energy dry-type transformer section."
+    },
+    {
+      "slug": "35kv-large-dry-type-power-transformer",
+      "family": "dry",
+      "title": "35 kV Large Dry-Type Power Transformer",
+      "range": "Up to 25 MVA design capability",
+      "voltage": "35 kV",
+      "source": "Tianyu transformer English catalog, 35 kV large-sized dry-type transformer section."
+    },
+    {
+      "slug": "amorphous-alloy-dry-type-transformer",
+      "family": "dry",
+      "title": "Amorphous-Alloy Dry-Type Transformer",
+      "range": "Up to 4 MVA",
+      "voltage": "Project dependent",
+      "source": "Tianyu transformer English catalog, amorphous-alloy dry-type transformer section."
+    },
+    {
+      "slug": "zgs-prefabricated-substation",
+      "family": "prefab",
+      "title": "ZGS Combined Transformer",
+      "range": "200–40,000 kVA",
+      "voltage": "7.2–40.5 kV HV · 0.315–1.14 kV LV",
+      "source": "Tianyu transformer English catalog, prefabricated-substation product standard table."
+    },
+    {
+      "slug": "yb-prefabricated-substation",
+      "family": "prefab",
+      "title": "YB Prefabricated Substation",
+      "range": "200–8,000 kVA",
+      "voltage": "7.2–40.5 kV HV · 0.315–1.14 kV LV",
+      "source": "Tianyu transformer English catalog, prefabricated-substation product standard table."
+    },
+    {
+      "slug": "ybh-prefabricated-substation",
+      "family": "prefab",
+      "title": "YBH Chinese-Type Prefabricated Substation",
+      "range": "200–12,500 kVA",
+      "voltage": "7.2–40.5 kV HV · 0.315–1.14 kV LV",
+      "source": "Tianyu transformer English catalog, prefabricated-substation product standard table."
+    },
+    {
+      "slug": "pv-ess-integrated-substation",
+      "family": "prefab",
+      "title": "PV / Converter / ESS Integrated Substation",
+      "range": "2,000–9,000 kVA",
+      "voltage": "7.2–40.5 kV HV · 0.315–1.14 kV LV",
+      "source": "Tianyu transformer English catalog, PV / converter / energy-storage integrated-machine standard table."
+    },
+    {
+      "slug": "35-110kv-mobile-intelligent-substation",
+      "family": "special",
+      "title": "35–110 kV Mobile Intelligent Substation",
+      "range": "Capacity selected to project load",
+      "voltage": "35–110 kV",
+      "source": "Tianyu transformer English catalog, 35–110 kV mobile intelligent substation page."
+    },
+    {
+      "slug": "66kv-offshore-wind-nacelle-transformer",
+      "family": "special",
+      "title": "66 kV Offshore Wind Nacelle Transformer",
+      "range": "Project engineered",
+      "voltage": "66 kV",
+      "source": "Tianyu transformer English catalog, 66 kV offshore-wind liquid-immersed nacelle-transformer page."
+    },
+    {
+      "slug": "220kv-double-split-booster-transformer",
+      "family": "special",
+      "title": "220 kV Double-Split Booster Transformer",
+      "range": "Project engineered",
+      "voltage": "220 kV class",
+      "source": "Tianyu transformer English catalog, large oil-immersed transformer typical-product section."
+    }
+  ]
+}

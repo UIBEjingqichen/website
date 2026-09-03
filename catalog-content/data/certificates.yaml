@@ -1,0 +1,194 @@
+documents:
+  - id: oil-distribution-1600kva-tuv
+    product_id: oil-immersed-distribution-transformer
+    type: Certificate of Conformity
+    model: S-M-1600/22-Tier2
+    rating: 1600 kVA
+    voltage: 22 / 0.42 kV
+    report_no: AK 50683814 0001
+    issuer: TÜV Rheinland
+    preview: ../../source-media/catalog-assets/certifications/oil-distribution-1600kva-tuv-p001.webp
+    featured_order: 1
+  - id: oil-distribution-1600kva-type-test
+    product_id: oil-immersed-distribution-transformer
+    type: Complete Type Test Report
+    model: S-M-1600/22-Tier2
+    rating: 1600 kVA
+    voltage: 22 / 0.42 kV
+    report_no: CN25ZJN4 001
+    issuer: TÜV Rheinland
+    preview: ../../source-media/catalog-assets/certifications/oil-distribution-1600kva-type-test-p001.webp
+    featured_order: 2
+  - id: oil-distribution-1600kva-efficiency
+    product_id: oil-immersed-distribution-transformer
+    type: Efficiency Test Report
+    model: S-M-1600/22-Tier2
+    rating: 1600 kVA
+    voltage: 22 / 0.42 kV
+    report_no: CN25NEY4 001
+    issuer: TÜV Rheinland
+    preview: ../../source-media/catalog-assets/certifications/oil-distribution-1600kva-efficiency-p001.webp
+    featured_order: 3
+  - id: oil-distribution-1600kva-ce
+    product_id: oil-immersed-distribution-transformer
+    type: CE / Ecodesign Verification
+    model: S-M-1600/22-Tier2
+    rating: 1600 kVA
+    voltage: 22 / 0.42 kV
+    report_no: CN25NEY4 001
+    issuer: TÜV Rheinland
+    preview: ../../source-media/catalog-assets/certifications/oil-distribution-1600kva-ce-p001.webp
+    featured_order: 4
+  - id: oil-distribution-630kva-tuv
+    product_id: oil-immersed-distribution-transformer
+    type: Certificate of Conformity
+    model: S-M-630/22-Tier2
+    rating: 630 kVA
+    voltage: 22 / 0.42 kV
+    report_no: AK 50683807 0001
+    issuer: TÜV Rheinland
+    preview: ../../source-media/catalog-assets/certifications/oil-distribution-630kva-tuv-p001.webp
+  - id: oil-distribution-630kva-type-test
+    product_id: oil-immersed-distribution-transformer
+    type: Complete Type Test Report
+    model: S-M-630/22-Tier2
+    rating: 630 kVA
+    voltage: 22 / 0.42 kV
+    report_no: CN25IM0T 001
+    issuer: TÜV Rheinland
+    preview: ../../source-media/catalog-assets/certifications/oil-distribution-630kva-type-test-p001.webp
+  - id: oil-distribution-630kva-efficiency
+    product_id: oil-immersed-distribution-transformer
+    type: Efficiency Test Report
+    model: S-M-630/22-Tier2
+    rating: 630 kVA
+    voltage: 22 / 0.42 kV
+    report_no: CN2532PX 001
+    issuer: TÜV Rheinland
+    preview: ../../source-media/catalog-assets/certifications/oil-distribution-630kva-efficiency-p001.webp
+  - id: oil-distribution-630kva-ce
+    product_id: oil-immersed-distribution-transformer
+    type: CE / Ecodesign Verification
+    model: S-M-630/22-Tier2
+    rating: 630 kVA
+    voltage: 22 / 0.42 kV
+    report_no: CN2532PX 001
+    issuer: TÜV Rheinland
+    preview: ../../source-media/catalog-assets/certifications/oil-distribution-630kva-ce-p001.webp
+  - id: power-transformer-50mva-110kv
+    product_id: high-voltage-power-transformer
+    type: Test Report
+    model: SZ22-50000/110-NX1
+    rating: 50 MVA
+    voltage: 110 kV
+    report_no: 21M2078-S
+    issuer: Suzhou Electrical Apparatus Science Research Institute
+    preview: ../../source-media/catalog-assets/certifications/power-transformer-50mva-110kv-p001.webp
+    featured_order: 5
+  - id: power-transformer-150mva-132kv
+    product_id: high-voltage-power-transformer
+    type: Test Report
+    model: SFZ-150000/132
+    rating: 150 MVA
+    voltage: 132 kV
+    report_no: 21M2079-S
+    issuer: Suzhou Electrical Apparatus Science Research Institute
+    preview: ../../source-media/catalog-assets/certifications/power-transformer-150mva-132kv-p001.webp
+    featured_order: 6
+  - id: power-transformer-240mva-220kv-ssz20
+    product_id: high-voltage-power-transformer
+    type: Type Test Report
+    model: SSZ20-240000/220
+    rating: 240 MVA
+    voltage: 220 kV
+    report_no: 21M0905-S
+    issuer: Suzhou Electrical Apparatus Science Research Institute
+    preview: ../../source-media/catalog-assets/certifications/power-transformer-240mva-220kv-ssz20-p001.webp
+    featured_order: 7
+  - id: power-transformer-240mva-220kv-ssz22
+    product_id: high-voltage-power-transformer
+    type: Test Report
+    model: SSZ22-240000/220-NX1
+    rating: 240 MVA
+    voltage: 220 kV
+    report_no: 23M1317-S
+    issuer: Suzhou Electrical Apparatus Science Research Institute
+    preview: ../../source-media/catalog-assets/certifications/power-transformer-240mva-220kv-ssz22-p001.webp
+    featured_order: 8
+  - id: dry-type-scb18-1000kva-10kv
+    product_id: cast-resin-dry-type-transformer
+    type: Type Test Report
+    model: SCB18-1000/10-NX1
+    rating: 1000 kVA
+    voltage: 10 kV
+    report_no: 26N0284-S
+    issuer: Suzhou Electrical Apparatus Science Research Institute
+    preview: ../../source-media/catalog-assets/certifications/dry-type-scb18-1000kva-10kv-p001.webp
+  - id: dry-type-scb18-2500kva-10kv
+    product_id: cast-resin-dry-type-transformer
+    type: Type Test Report
+    model: SCB18-2500/10
+    rating: 2500 kVA
+    voltage: 10 kV
+    report_no: 26N0286-S
+    issuer: Suzhou Electrical Apparatus Science Research Institute
+    preview: ../../source-media/catalog-assets/certifications/dry-type-scb18-2500kva-10kv-p001.webp
+    featured_order: 9
+  - id: european-substation-6300kva-35kv
+    product_id: dry-type-prefabricated-substation
+    type: Type Test Report
+    model: YB-40.5/1.14-6300
+    rating: 6300 kVA
+    voltage: 35 kV
+    report_no: 23XB0121-S
+    issuer: Suzhou Electrical Apparatus Science Research Institute
+    preview: ../../source-media/catalog-assets/certifications/european-substation-6300kva-35kv-p001.webp
+  - id: european-substation-10000kva-35kv
+    product_id: dry-type-prefabricated-substation
+    type: Type Test Report
+    model: YB-40.5/1.14-10000
+    rating: 10000 kVA
+    voltage: 35 kV
+    report_no: 26XB0130-S
+    issuer: Suzhou Electrical Apparatus Science Research Institute
+    preview: ../../source-media/catalog-assets/certifications/european-substation-10000kva-35kv-p001.webp
+  - id: european-substation-12500kva-35kv
+    product_id: dry-type-prefabricated-substation
+    type: Type Test Report
+    model: YB-40.5/1.14-12500
+    rating: 12500 kVA
+    voltage: 35 kV
+    report_no: 26XB0131-S
+    issuer: Suzhou Electrical Apparatus Science Research Institute
+    preview: ../../source-media/catalog-assets/certifications/european-substation-12500kva-35kv-p001.webp
+    featured_order: 10
+  - id: china-substation-10000kva-35kv
+    product_id: oil-immersed-prefabricated-substation
+    type: Type Test Report
+    model: YB-40.5-10000
+    rating: 10000 kVA
+    voltage: 35 kV
+    report_no: 26XB0129-S
+    issuer: Suzhou Electrical Apparatus Science Research Institute
+    preview: ../../source-media/catalog-assets/certifications/china-substation-10000kva-35kv-p001.webp
+    featured_order: 12
+  - id: china-substation-12500kva-35kv
+    product_id: oil-immersed-prefabricated-substation
+    type: Type Test Report
+    model: YB-40.5/1.14-12500 (GY)
+    rating: 12500 kVA
+    voltage: 35 kV
+    report_no: 23XB0332-S
+    issuer: Suzhou Electrical Apparatus Science Research Institute
+    preview: ../../source-media/catalog-assets/certifications/china-substation-12500kva-35kv-p001.webp
+    featured_order: 11
+  - id: american-combined-zgs22-4000kva-35kv
+    product_id: american-type-combined-transformer
+    type: Type Test Report
+    model: ZGS22-4000/35/0.8
+    rating: 4000 kVA
+    voltage: 37 / 0.8 kV
+    report_no: 24XB0336-S
+    issuer: Suzhou Electrical Apparatus Science Research Institute
+    standards: IEC 60076 series; IEC/IEEE 60076-16
+    source_status: source PDF not yet committed to GitHub media directory

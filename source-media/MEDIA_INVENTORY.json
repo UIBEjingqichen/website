@@ -1,0 +1,2680 @@
+{
+  "version": 1,
+  "image_paths": 376,
+  "unique_binary_images": 370,
+  "duplicate_groups": [
+    [
+      "catalog-assets/certifications/oil-distribution-1600kva-efficiency-p001.webp",
+      "catalog-assets/images/oil-distribution-1600kva-efficiency-p001.webp"
+    ],
+    [
+      "catalog-assets/certifications/oil-distribution-630kva-efficiency-p001.webp",
+      "catalog-assets/images/oil-distribution-630kva-efficiency-p001.webp"
+    ],
+    [
+      "catalog-assets/drawings/oil-distribution-1600kva-efficiency-p025.webp",
+      "catalog-assets/images/oil-distribution-1600kva-efficiency-p025.webp"
+    ],
+    [
+      "catalog-assets/drawings/oil-distribution-1600kva-type-test-p102.webp",
+      "catalog-assets/images/oil-distribution-1600kva-type-test-p102.webp"
+    ],
+    [
+      "catalog-assets/drawings/oil-distribution-630kva-efficiency-p025.webp",
+      "catalog-assets/images/oil-distribution-630kva-efficiency-p025.webp"
+    ],
+    [
+      "catalog-assets/drawings/oil-distribution-630kva-type-test-p102.webp",
+      "catalog-assets/images/oil-distribution-630kva-type-test-p102.webp"
+    ]
+  ],
+  "category_counts": {
+    "application": 28,
+    "branding": 2,
+    "catalog-curated": 5,
+    "company": 1,
+    "decorative": 4,
+    "evidence": 49,
+    "evidence-drawing": 5,
+    "evidence-sample-page": 15,
+    "factory": 4,
+    "generated-report-certification-page": 23,
+    "generated-report-drawing-page": 80,
+    "generated-report-page": 108,
+    "product": 52
+  },
+  "assets": [
+    {
+      "path": "applications/aerospace-launch-facility.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 20263,
+      "sha256": "61950d4865711ea0815d070c4689f9d8641abfa09de9fe16ee5e204b529450f7"
+    },
+    {
+      "path": "applications/airport-terminal-aerial.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 32280,
+      "sha256": "981f2aae35764c0afe044ab2d1624f7df89a7bc36c6be0fe3c620f61e9027b6f"
+    },
+    {
+      "path": "applications/compact-substation-outdoor-landscaped-site.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 29442,
+      "sha256": "2bb984ede25b9557d93a9d6c326b389ad5e8e8f8c25a561c83b1a2108953ffaa"
+    },
+    {
+      "path": "applications/floating-solar-combined-transformer-site.webp",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 37590,
+      "sha256": "644ad181645e913a29af00fe78fa669eb2110442c2af53837c233fc32c31041a"
+    },
+    {
+      "path": "applications/floating-solar-farm-reservoir.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 13683,
+      "sha256": "7f8ea33c0327d874845695e4fea8ee67bcde60dca241aac1ac1339eec6076ebf"
+    },
+    {
+      "path": "applications/grid-substation-busbar-yard.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 92355,
+      "sha256": "9ce041d4e484141d8025d157244aa4293e39fefa89d97ebf9939787806a26f62"
+    },
+    {
+      "path": "applications/grid-substation-yard.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 267652,
+      "sha256": "68640a53c96bbd213d0c230ae4df4b53dcb857410d3fd23cf81d45fae9bca656"
+    },
+    {
+      "path": "applications/hydropower-dam.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 25436,
+      "sha256": "32495a5b4d67324fed921cbb896b748fc91f055db3fb4549ef3916fe79e64b58"
+    },
+    {
+      "path": "applications/industrial-facility-aerial-render.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 27886,
+      "sha256": "c2ee14cde40da7d39a6d97bed2fad9da6a8c87f00888b5ba9b307a2452e64bfa"
+    },
+    {
+      "path": "applications/industrial-petrochemical-plant.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 57180,
+      "sha256": "e48bd012559fc7545ae4a4f77fcf67ae058e1f0ef195ed7003dc4fe98ce5ddd2"
+    },
+    {
+      "path": "applications/industrial-platform-oil-prefabricated-substation-site.webp",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 39234,
+      "sha256": "dfda88a3bcfbb839cc037a154a02538b7b1aa525f63542c11bcaeda83fe11ada"
+    },
+    {
+      "path": "applications/metro-platform-screen-doors.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 29268,
+      "sha256": "7e6b3bacc60b023bb7c2d1b6f2bf20e5c278e9ecfc999b132623e8d8fdd7b418"
+    },
+    {
+      "path": "applications/offshore-oil-platform.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 18773,
+      "sha256": "36d957899db48c9b267e40f77bc9f07b2d7094348c561d625d2f44c1dd34a328"
+    },
+    {
+      "path": "applications/offshore-wind-turbine-installation.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 15919,
+      "sha256": "84c350c2abb1e1b42c3f04f2ad7e3f5265ae2399e4d7642d3acdb00715075246"
+    },
+    {
+      "path": "applications/oil-prefabricated-substation-site-01.webp",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 19340,
+      "sha256": "6a837e339c8fe5b3b8e1096b2c7cf53c7ecc04218eb948526d84e092fb34f7ac"
+    },
+    {
+      "path": "applications/onshore-wind-farm-coastal.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 17035,
+      "sha256": "6f172d07af74cce0891c1441720e645b918a1e4a2ab73aeffa595a959d6c0de7"
+    },
+    {
+      "path": "applications/onshore-wind-farm-grassland.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 19144,
+      "sha256": "5fb2e297fe5c2621c3f949eec3196018f25c23d484dc4b798aea4e98d8343582"
+    },
+    {
+      "path": "applications/public-infrastructure-stadium.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 29601,
+      "sha256": "e05ce9c08e3b506ce662925a8ff8a2c734ad4c6b05a188c788e5293d254be31e"
+    },
+    {
+      "path": "applications/renewable-prefabricated-substation-site-01.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 23002,
+      "sha256": "34826f664983e21270034d4248082ca9f2fe5ab6a788a19f3747a71265be022b"
+    },
+    {
+      "path": "applications/renewable-prefabricated-substation-site-02.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 26354,
+      "sha256": "ea259b4b2c9683071fca3a495e2f1df0b5f7f11323117d65edd9a4b2081134b7"
+    },
+    {
+      "path": "applications/renewable-prefabricated-substation-site-03.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 21417,
+      "sha256": "85c6e6dee1810cfd3a0e33a64ef8157e77e4cb426bac63fee6dac10a87d2b896"
+    },
+    {
+      "path": "applications/renewable-wind-solar-landscape.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 274917,
+      "sha256": "58795fba2ac43c987184466f9c641efa760f74f44ccc4b0a9c5aa827c2646afd"
+    },
+    {
+      "path": "applications/transmission-line-towers.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 149484,
+      "sha256": "21cf4a39508188be431908d9e81eda78ed2c85f0996d45f05a45a204c7c7dce3"
+    },
+    {
+      "path": "applications/utility-scale-solar-farm-aerial-01.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 19788,
+      "sha256": "643e24164b9187678cced27eb806e51ef228e9a97ed818356f0ef6ee8f54761b"
+    },
+    {
+      "path": "applications/utility-scale-solar-farm-aerial-02.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 22159,
+      "sha256": "5b1e49f7363af96911d578d3e65ef2e2f7c558e43479005b7cae03bdace7468d"
+    },
+    {
+      "path": "applications/water-infrastructure-reservoir-aerial.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 24988,
+      "sha256": "ffbc46d5bad78851b358c0ea4e00915f8cc0661f203f558b40ad9653f01836c3"
+    },
+    {
+      "path": "applications/wind-farm-snowfield.jpeg",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 12760,
+      "sha256": "d4c69084256cae267830caba24fb083afccf9ec4660a6400c663d089977e40cb"
+    },
+    {
+      "path": "applications/wind-turbine-dry-type-prefabricated-substation-site.webp",
+      "category": "application",
+      "marketing_use": "conditional",
+      "bytes": 135206,
+      "sha256": "80d0cb96b360acc2828ecbf1040d016955c46510d0ee11b0ea21d04a49f11d5d"
+    },
+    {
+      "path": "branding/legacy-green-blue-symbol.jpeg",
+      "category": "branding",
+      "marketing_use": "yes",
+      "bytes": 1479,
+      "sha256": "a079d7ffe73fc73cbae88915703988f5111e245a9b78461df462af287e7bac83"
+    },
+    {
+      "path": "branding/og-tianyu-electric.png",
+      "category": "branding",
+      "marketing_use": "yes",
+      "bytes": 1964499,
+      "sha256": "1cf7fd67f608601f35985c788bfc262b8e0c442529f12de4b26ff5c772507c75"
+    },
+    {
+      "path": "catalog-assets/certifications/china-substation-10000kva-35kv-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 64992,
+      "sha256": "8cb7dc0f317ae05e81ecbe9eb238137272e7a8037109e27e85c4add5ebc5d33b"
+    },
+    {
+      "path": "catalog-assets/certifications/china-substation-12500kva-35kv-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 72746,
+      "sha256": "00672fb624a4072eaf24ed0daa51d0048db4c629cfc64ad2bddfaaae20b14340"
+    },
+    {
+      "path": "catalog-assets/certifications/dry-type-scb18-1000kva-10kv-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 67188,
+      "sha256": "b7ad8686360ee0b50b647d33a3f20ac565e851a65f379e4a52f0f6c7166617b3"
+    },
+    {
+      "path": "catalog-assets/certifications/dry-type-scb18-2500kva-10kv-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 64748,
+      "sha256": "8efa243d7f7756fb6ffc10fd99af86cd2f2518a3b02020273c28c92aa574aae4"
+    },
+    {
+      "path": "catalog-assets/certifications/european-substation-10000kva-35kv-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 67476,
+      "sha256": "8217899eb9b5a9451cf5afa0e64a975f81badb8f56a9671a5c6371aaf14d8d4d"
+    },
+    {
+      "path": "catalog-assets/certifications/european-substation-12500kva-35kv-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 65670,
+      "sha256": "ad395602870bfce679e42f9289b95c313c36dc07ea7a9552bc79a474f2ce5940"
+    },
+    {
+      "path": "catalog-assets/certifications/european-substation-6300kva-35kv-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 60616,
+      "sha256": "0e579a5790e627d65dad5aa46e3c980ae5145e641c0e061c7a2911ce96e70cc4"
+    },
+    {
+      "path": "catalog-assets/certifications/oil-distribution-1600kva-ce-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 121072,
+      "sha256": "afc6101c221321e7ab22c37c4d7b20adde202dc2a8719608bdf1f85b1eb166ea"
+    },
+    {
+      "path": "catalog-assets/certifications/oil-distribution-1600kva-efficiency-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 146494,
+      "sha256": "f651af8c7c7819991ce9e322e212870ed683c4bda1ef3fbb4e5927e443d4eeb7"
+    },
+    {
+      "path": "catalog-assets/certifications/oil-distribution-1600kva-tuv-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 79218,
+      "sha256": "8e88467dea80127cafce26767b8d23841a32d2eca358954f0f54db035718e49f"
+    },
+    {
+      "path": "catalog-assets/certifications/oil-distribution-1600kva-tuv-p002.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 94438,
+      "sha256": "37f45c658bd3fe1ccc2f40ce878638870997e353949e43411f4f5acdcbe4af74"
+    },
+    {
+      "path": "catalog-assets/certifications/oil-distribution-1600kva-tuv-p003.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 65218,
+      "sha256": "36afa3b78d165175d1f46cd7705e19e7734a3885b547dbe8a713baf9f51ce893"
+    },
+    {
+      "path": "catalog-assets/certifications/oil-distribution-1600kva-type-test-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 121498,
+      "sha256": "36a11b4506aa986931d55fe57dc2ad99b85ab4ad2f41b6348bbb56cac0febe9d"
+    },
+    {
+      "path": "catalog-assets/certifications/oil-distribution-630kva-ce-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 122564,
+      "sha256": "dbdbc74789a81f7c622ec132a151bdb61c8a35e7c8993dac72bffffd5a4ac38d"
+    },
+    {
+      "path": "catalog-assets/certifications/oil-distribution-630kva-efficiency-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 150236,
+      "sha256": "b3183f40892f5711fa18974329d6b6915a76a65a07e80de9c326cbcbc07b3839"
+    },
+    {
+      "path": "catalog-assets/certifications/oil-distribution-630kva-tuv-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 79222,
+      "sha256": "f7f8e786007b7bee3f5a79a4c3a21c9ea233e8dc6055d482eba20fa4eff6f364"
+    },
+    {
+      "path": "catalog-assets/certifications/oil-distribution-630kva-tuv-p002.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 94370,
+      "sha256": "a2c02f909abc20b4fc68ec5d5c6d66966218b1f1a5b971e0fd45a243e394b719"
+    },
+    {
+      "path": "catalog-assets/certifications/oil-distribution-630kva-tuv-p003.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 65148,
+      "sha256": "4a1271cc6d39edfe8d628b6d4c0bd1c954e0d1a7fda051c7173cf25b4ef20073"
+    },
+    {
+      "path": "catalog-assets/certifications/oil-distribution-630kva-type-test-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 121046,
+      "sha256": "2894e1bc795f1b33a8f705beec1ce2a3a92b1d905cca05cfd58d32c9df2088b1"
+    },
+    {
+      "path": "catalog-assets/certifications/power-transformer-150mva-132kv-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 57306,
+      "sha256": "5a2db1b0ee22c0ad9142aa03a2ede2505f30bc5026bef56b64ddb043d9fef991"
+    },
+    {
+      "path": "catalog-assets/certifications/power-transformer-240mva-220kv-ssz20-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 58082,
+      "sha256": "286a9d3b11da8a9c5911f4cd960e71528ee9a16f0746279d6dade1220bb73b4b"
+    },
+    {
+      "path": "catalog-assets/certifications/power-transformer-240mva-220kv-ssz22-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 62426,
+      "sha256": "a20edf57733e672fc2327d92301fa28c840780bbb6f1f0992ac2c92934be90b4"
+    },
+    {
+      "path": "catalog-assets/certifications/power-transformer-50mva-110kv-p001.webp",
+      "category": "generated-report-certification-page",
+      "marketing_use": "no",
+      "bytes": 57226,
+      "sha256": "4bcde885cedbecf1b0eff1d1d05fa09a3c5d0aa065b756f9d4b5d9dbee6d4730"
+    },
+    {
+      "path": "catalog-assets/drawings/china-substation-10000kva-35kv-p011.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 48612,
+      "sha256": "22a1355a7265290c47b63dba4b39f5028c4a05cc6986426f9fdd878a7a0cb4cd"
+    },
+    {
+      "path": "catalog-assets/drawings/china-substation-10000kva-35kv-p037.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 44548,
+      "sha256": "2f4fae2ef57f3f33801a0c5dd4afceb137bdf4b372e4044e46688e83bb98052b"
+    },
+    {
+      "path": "catalog-assets/drawings/china-substation-10000kva-35kv-p039.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 47616,
+      "sha256": "6682e632f596be99cc41250812752c661f448a000d99cf749fcffe84de27527a"
+    },
+    {
+      "path": "catalog-assets/drawings/china-substation-10000kva-35kv-p043.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 42954,
+      "sha256": "d0f55a4dd73dec86b0046b65b7114dd12c3d813a4b1d1644355150c4abb051af"
+    },
+    {
+      "path": "catalog-assets/drawings/china-substation-10000kva-35kv-p048.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 56458,
+      "sha256": "5c9275c5b1bd62c3a0396489eabff4d279621f07da259adc6b8cbcc4c8dc2861"
+    },
+    {
+      "path": "catalog-assets/drawings/china-substation-10000kva-35kv-p051.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 52566,
+      "sha256": "d45c250ba9ebc553312f7ce666373b055de60189b47e1447ece4d5749fd659c6"
+    },
+    {
+      "path": "catalog-assets/drawings/china-substation-10000kva-35kv-p078.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 54534,
+      "sha256": "cbd32570ea702b9066f271a64f04cd98fc180ad45cdc5ef2dde76e685c68f3bc"
+    },
+    {
+      "path": "catalog-assets/drawings/china-substation-10000kva-35kv-p083.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 52938,
+      "sha256": "6c0361323a58a36944e7bea7a47d86b1601354ccf68f08f8d9a072d539819f0d"
+    },
+    {
+      "path": "catalog-assets/drawings/china-substation-10000kva-35kv-p097.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 28710,
+      "sha256": "8afbd4e1c71948ba888ca47373fcb10e6338957b6de11f4d40c721d16aa71aa0"
+    },
+    {
+      "path": "catalog-assets/drawings/china-substation-12500kva-35kv-p011.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 54214,
+      "sha256": "5b75801900e678c84d9aecfa77ff76761b3f8b87bb8c76895d47db85c8d1dc9e"
+    },
+    {
+      "path": "catalog-assets/drawings/china-substation-12500kva-35kv-p037.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 44812,
+      "sha256": "d31ab1a539eb105939b8f4b4f301a4866333d9744cdd67ae81bd15c644c11023"
+    },
+    {
+      "path": "catalog-assets/drawings/china-substation-12500kva-35kv-p039.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 48602,
+      "sha256": "8d2ef7bbfdfb770764cf4b12e9bfa28ac240eb71761d014da13416b006ad7f30"
+    },
+    {
+      "path": "catalog-assets/drawings/china-substation-12500kva-35kv-p043.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 39790,
+      "sha256": "0018778e9b8b98c2963bcbe1642f67f246d3c2fa0cb23f030cf08e358733f355"
+    },
+    {
+      "path": "catalog-assets/drawings/china-substation-12500kva-35kv-p048.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 56712,
+      "sha256": "915b3027b17810c873de8c3bf39a8b42c48a76a0db2eb4f906320e56e318edfe"
+    },
+    {
+      "path": "catalog-assets/drawings/china-substation-12500kva-35kv-p051.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 52120,
+      "sha256": "56df5c40bc643bc9ebbda13cf858224826628b8a21770cce35cbf96ec7cda008"
+    },
+    {
+      "path": "catalog-assets/drawings/china-substation-12500kva-35kv-p075.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 54176,
+      "sha256": "da11daa0286c9714d685728db1be6627f4aa83cdf70803685b6f5c6f8c7c730b"
+    },
+    {
+      "path": "catalog-assets/drawings/china-substation-12500kva-35kv-p084.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 32746,
+      "sha256": "9efcacd16e87e2349429992f495919b73335c0d33a33d11c1e3b665d8c9b287c"
+    },
+    {
+      "path": "catalog-assets/drawings/dry-type-scb18-1000kva-10kv-p038.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 23850,
+      "sha256": "fec26fefe0bb11ca52e234c421793edfbb2fe723f10f8f1663a6481aecb01ecc"
+    },
+    {
+      "path": "catalog-assets/drawings/dry-type-scb18-1000kva-10kv-p039.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 28058,
+      "sha256": "dee257eef3616c2e0fa55626752773f8181ca63a5105e5a9eeba247c98dca65b"
+    },
+    {
+      "path": "catalog-assets/drawings/dry-type-scb18-1000kva-10kv-p040.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 21324,
+      "sha256": "9965f9473a68c08120c99a841116655f2c6a2daae94ab5e69622cdfa13c28b25"
+    },
+    {
+      "path": "catalog-assets/drawings/dry-type-scb18-1000kva-10kv-p041.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 22270,
+      "sha256": "9c16546fc36548435ac97d79aa95bc7e16937df196e23f9dd35213232b45d127"
+    },
+    {
+      "path": "catalog-assets/drawings/dry-type-scb18-1000kva-10kv-p042.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 28958,
+      "sha256": "569fa2f1770d2d152055e78e8070f7c3ea4d0fff6e54e062508014ea717131da"
+    },
+    {
+      "path": "catalog-assets/drawings/dry-type-scb18-2500kva-10kv-p038.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 23876,
+      "sha256": "d8126f8269b0ffbddff1ac9f779a5aac23b8d3e1f68acfded75dc3c005ef513b"
+    },
+    {
+      "path": "catalog-assets/drawings/dry-type-scb18-2500kva-10kv-p039.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 28002,
+      "sha256": "d61d2d0fe4724fc32fd7d18368154c110a94e5225f88135b622e82191837325c"
+    },
+    {
+      "path": "catalog-assets/drawings/dry-type-scb18-2500kva-10kv-p040.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 20950,
+      "sha256": "f9636a6a340a27336f80fc780bf5a91ac5b0cfa6abb0ae53cce7a8b128a501dd"
+    },
+    {
+      "path": "catalog-assets/drawings/dry-type-scb18-2500kva-10kv-p041.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 22528,
+      "sha256": "2768b46c860d2fae71e6b036c9495ecd4855e92fa751633585db0025219950f9"
+    },
+    {
+      "path": "catalog-assets/drawings/dry-type-scb18-2500kva-10kv-p042.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 25694,
+      "sha256": "a5bd90ec3bb66e46fd336d860cc305331eb219cb310c6c74b81fcbec467bb37b"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-10000kva-35kv-p011.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 31554,
+      "sha256": "7dcf00cdcec35d7dcb8fc8380b73fb0b2d856bc51bcc5d59f23f2421e4e6c9cd"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-10000kva-35kv-p044.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 44670,
+      "sha256": "30e04b5391e4567d014e7d6b9f3e627b43edd76180d837a495a999460a1657b7"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-10000kva-35kv-p046.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 48634,
+      "sha256": "8f2d1e92a5cde6b537af105cc3ba6972b1c9963828d9282df95e48936e63e093"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-10000kva-35kv-p050.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 39992,
+      "sha256": "819fec609899c19d1ba483fd4610fd587c184c258dd1b76c50bebbfe27d67656"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-10000kva-35kv-p054.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 56606,
+      "sha256": "03c2f827a4bfa866f86728ad72e7a86e9b8d1e63676c67c92cedba2db5fb0a82"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-10000kva-35kv-p057.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 52194,
+      "sha256": "92c2864dd8e5d00781a65771eb0f0ba899d17fa79ac106e269390c630bb9a84e"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-10000kva-35kv-p082.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 53192,
+      "sha256": "12c2a374967c9ba1585399478eeea51e6ce2fc834c01b1c9acb835df4c7d4f0f"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-10000kva-35kv-p087.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 52294,
+      "sha256": "c592f15a17849e6c9ae996b5baddfdf670ca5dc80adfc590bc355960dd022511"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-10000kva-35kv-p101.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 27630,
+      "sha256": "fed26ca5c9ddf6c839fc2672afc0197332b2e5f7c35b77bb76f0fc14799ccf50"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-10000kva-35kv-p102.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 28790,
+      "sha256": "52e42b76b4b9260f6b2af9762d2cb8adf9a08f66be29c64025a23e189164142f"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-12500kva-35kv-p011.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 28178,
+      "sha256": "5c388fe4da830627a399982db94c4b05aa6a007fd011ecc319926061eb30b985"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-12500kva-35kv-p044.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 43890,
+      "sha256": "c89c0429ee32bf888903d9725b8951ad25f19bb02df60a48751e1e68aa5a08db"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-12500kva-35kv-p046.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 48532,
+      "sha256": "a008a799db2affd5e2106e08af26a17c500a9e25a53dd9969ad5b2761ebdd646"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-12500kva-35kv-p050.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 38106,
+      "sha256": "222c32a11408dcee82bf97a3794040b0b95e7194f9f6f6aedc0a8767058f41cd"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-12500kva-35kv-p054.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 56886,
+      "sha256": "425574f1fe8fd1192e635a302f429512cb43bf7b7a91b8b57b55420a8a97e6cb"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-12500kva-35kv-p057.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 51774,
+      "sha256": "e45a91caa0ef07f7f0233991caf0c7fdd98e1e75b32ee180d271b9d93a5cbcbc"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-12500kva-35kv-p081.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 54406,
+      "sha256": "afd0725627e851b65dd870b1c4f41f0d6db95f666ca84c99c940a159a3b60a4f"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-12500kva-35kv-p086.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 53196,
+      "sha256": "a10662e55b2c1121218c630153041b2799723f374f628f88e8ff021ca9c55cdf"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-12500kva-35kv-p100.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 27408,
+      "sha256": "8064b15a33b33d90c57e66479a874efae551f69ac37b3b1d22ad1913850d5b4c"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-12500kva-35kv-p101.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 27742,
+      "sha256": "87548557fa22c19e6ad6b0b35e5690a213e16047377b33b5cb4b8ed01d6e793b"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-6300kva-35kv-p011.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 58062,
+      "sha256": "fcba852180574bde74a3bad38a20c3dd2a415128c1ed0af8d6aabedcfa529c78"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-6300kva-35kv-p105.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 37446,
+      "sha256": "951f6c43877441fd85f24d4b1bc798b6ce6e769725b3921c9ec8c135adf457b5"
+    },
+    {
+      "path": "catalog-assets/drawings/european-substation-6300kva-35kv-p106.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 37706,
+      "sha256": "6d332ca69f5cb1772e73d72815fe84cf9a78f74919cf882d84b1000a181d142c"
+    },
+    {
+      "path": "catalog-assets/drawings/oil-distribution-1600kva-efficiency-p025.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 64958,
+      "sha256": "d17bb6553bf8360200675686d5ddf42932e07f9e93f4900579c3bd1d8b0d7ec3"
+    },
+    {
+      "path": "catalog-assets/drawings/oil-distribution-1600kva-efficiency-p028.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 47906,
+      "sha256": "0d06c0c4f5813f80bd6cdbdf823aac00b3c753046b3c94a13b63631f01aa0484"
+    },
+    {
+      "path": "catalog-assets/drawings/oil-distribution-1600kva-type-test-p011.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 79388,
+      "sha256": "36ec5c0ae630f20ae9a4ee7dc58a8752f668087b7ea555e670dea750d416025d"
+    },
+    {
+      "path": "catalog-assets/drawings/oil-distribution-1600kva-type-test-p055.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 100748,
+      "sha256": "14f323458456d501ff0b31f8f6129a8a990d2a529fec4f5b1803789c2e4144f0"
+    },
+    {
+      "path": "catalog-assets/drawings/oil-distribution-1600kva-type-test-p102.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 50438,
+      "sha256": "7c0f818b959fd19d56be60a441d624cc4bda9ab0204c538a45803ae8fcf32e67"
+    },
+    {
+      "path": "catalog-assets/drawings/oil-distribution-1600kva-type-test-p103.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 83348,
+      "sha256": "c196fdde2ad4f28100755a092989d8c4da8b02ed21ba754869a5f2196eea1e09"
+    },
+    {
+      "path": "catalog-assets/drawings/oil-distribution-630kva-efficiency-p025.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 59712,
+      "sha256": "0a74f927772c8f9df8f35e6a0d59b53811528386df1a586397323c5b10325bf8"
+    },
+    {
+      "path": "catalog-assets/drawings/oil-distribution-630kva-efficiency-p028.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 51890,
+      "sha256": "3c2daf044f9a4853f7b195b8ce3138287555cc6caf9516a2afb28546780a2e40"
+    },
+    {
+      "path": "catalog-assets/drawings/oil-distribution-630kva-type-test-p011.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 79606,
+      "sha256": "71b8a99e34f92dfcd2fcc8d4c050a4f7b8776ab74b432b06ddd4517dae70b946"
+    },
+    {
+      "path": "catalog-assets/drawings/oil-distribution-630kva-type-test-p055.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 99964,
+      "sha256": "12bef127473809c1fa8f378227b01ef949c7bf10b9559306de60e2a2e98cd83a"
+    },
+    {
+      "path": "catalog-assets/drawings/oil-distribution-630kva-type-test-p102.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 56730,
+      "sha256": "bae18219d506bbcc4955be5327d06a4cd02105078dcd5c515c79843ec3df4d5a"
+    },
+    {
+      "path": "catalog-assets/drawings/oil-distribution-630kva-type-test-p103.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 75924,
+      "sha256": "77a2f291a66c6551e120c0bb1d75cabcb35ae3b34a7ced2e20bb0fad621ea59f"
+    },
+    {
+      "path": "catalog-assets/drawings/power-transformer-150mva-132kv-p043.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 37240,
+      "sha256": "f1cd1d92f4b605850b0647ddbe91c658d657da5f612310eae90ec6ab7fd89583"
+    },
+    {
+      "path": "catalog-assets/drawings/power-transformer-150mva-132kv-p044.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 41458,
+      "sha256": "d3031272ba7462660a70e860728696839ae75aaa7d47224218dc85f9b919d481"
+    },
+    {
+      "path": "catalog-assets/drawings/power-transformer-150mva-132kv-p045.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 35116,
+      "sha256": "bc5b9e6485b4e5123792efc41bb220ede01aff278afb17f99a3a3e277d618f10"
+    },
+    {
+      "path": "catalog-assets/drawings/power-transformer-150mva-132kv-p046.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 35908,
+      "sha256": "61a16de375fdb6329df15391b9be50057dfe61cd50c20aeb1c25b514dbbd1763"
+    },
+    {
+      "path": "catalog-assets/drawings/power-transformer-150mva-132kv-p047.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 29892,
+      "sha256": "dc6040792999ff8ac16c53dddda7d8520074ddac943ae7a8fc64acc417bf8a93"
+    },
+    {
+      "path": "catalog-assets/drawings/power-transformer-240mva-220kv-ssz20-p107.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 90588,
+      "sha256": "b62c21615621853b64abc3ff58ad94459f4082194836ec816ab0e39352675dd7"
+    },
+    {
+      "path": "catalog-assets/drawings/power-transformer-240mva-220kv-ssz20-p108.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 64538,
+      "sha256": "7db35198bffdb018a191489bb647497abf8faf0d7097f088f89c608c2953dd88"
+    },
+    {
+      "path": "catalog-assets/drawings/power-transformer-240mva-220kv-ssz20-p109.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 49584,
+      "sha256": "3accae5f6df2c021b95758f7c89848e6352f949bc0446c34e006c545c3baa6e7"
+    },
+    {
+      "path": "catalog-assets/drawings/power-transformer-240mva-220kv-ssz22-p067.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 54632,
+      "sha256": "869657c863c1a2e5f1d654f958477d84727d39bcdd928ca4648613590b275a47"
+    },
+    {
+      "path": "catalog-assets/drawings/power-transformer-240mva-220kv-ssz22-p068.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 48478,
+      "sha256": "9adc96ec1304530ed1953f6a99d75a2b52017b91d5c2c516b88b2955df54eafe"
+    },
+    {
+      "path": "catalog-assets/drawings/power-transformer-240mva-220kv-ssz22-p069.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 40886,
+      "sha256": "80e6dda2703908cf59753bc9b0dbd349625df9339ea6a5d65d620e7f8c1fb0c0"
+    },
+    {
+      "path": "catalog-assets/drawings/power-transformer-240mva-220kv-ssz22-p070.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 53132,
+      "sha256": "0c886abb22476eb958262855a29e14ec227fc862ef5434f47b2872cb29a1edbb"
+    },
+    {
+      "path": "catalog-assets/drawings/power-transformer-240mva-220kv-ssz22-p071.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 38792,
+      "sha256": "b275cb1d756fbe9e8281740a89f4d15a6c0d6e639c66751a6c4333ddcd679e12"
+    },
+    {
+      "path": "catalog-assets/drawings/power-transformer-50mva-110kv-p040.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 37806,
+      "sha256": "bc6d2ec84095c926db98ed1d80da81d22c9ec317b4f15677c2e07a28995bd948"
+    },
+    {
+      "path": "catalog-assets/drawings/power-transformer-50mva-110kv-p041.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 42230,
+      "sha256": "5f7ddec145c7ea9af558bb442633eecf23ef4706bc0ae69becc77eda613f9f01"
+    },
+    {
+      "path": "catalog-assets/drawings/power-transformer-50mva-110kv-p042.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 35668,
+      "sha256": "1b731988c3b1d6407a2b2f5f4426644b9eeade1e5d945df272c105d89e55b559"
+    },
+    {
+      "path": "catalog-assets/drawings/power-transformer-50mva-110kv-p043.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 35798,
+      "sha256": "2aa8b9945952a4e7b1253644d628ec05d1a01c47091284b763a21cc8287dab09"
+    },
+    {
+      "path": "catalog-assets/drawings/power-transformer-50mva-110kv-p044.webp",
+      "category": "generated-report-drawing-page",
+      "marketing_use": "no",
+      "bytes": 28322,
+      "sha256": "35a76bd2959785d5c8327a27f9c2d4e058499857e6befb0ff2b2b07330412879"
+    },
+    {
+      "path": "catalog-assets/images/china-substation-10000kva-35kv-p004.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 41692,
+      "sha256": "03480de6e00f5ef7bb4cd5d562076a7b1b1b16b22c1ae603a6f6ba6aeeba2a33"
+    },
+    {
+      "path": "catalog-assets/images/china-substation-10000kva-35kv-p091.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 68678,
+      "sha256": "a94c416c3c5999defd950c2475fe09bd584ac976927d03b40652809193e67415"
+    },
+    {
+      "path": "catalog-assets/images/china-substation-10000kva-35kv-p092.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 70904,
+      "sha256": "ac1008375a56afc90c5f580544a750a686605cd51f1dee5c75152abaf5499a49"
+    },
+    {
+      "path": "catalog-assets/images/china-substation-10000kva-35kv-p093.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 83584,
+      "sha256": "37abd0a2ae206a074b137a94f5bf21358c415279afc350b2d92c94d497dff8c9"
+    },
+    {
+      "path": "catalog-assets/images/china-substation-10000kva-35kv-p094.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 85494,
+      "sha256": "5faca22aac3ad865351b61dc9f890acd9362a112d0e47d1af00fe7e1a7fe33b1"
+    },
+    {
+      "path": "catalog-assets/images/china-substation-10000kva-35kv-p095.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 83744,
+      "sha256": "a04d57c1c3e55f713eaee0dda7cf3fed4ed0f995d215b955f906d9d7d83b62a8"
+    },
+    {
+      "path": "catalog-assets/images/china-substation-10000kva-35kv-p096.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 83212,
+      "sha256": "664dcde20bdf318f7dd887a4241d851fc40d32dd19d8dbfd1459a8504791594a"
+    },
+    {
+      "path": "catalog-assets/images/china-substation-12500kva-35kv-p004.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 48248,
+      "sha256": "b39fa31eeb70bcffe30aea43e77ecbf5dea720f04c2a012ccfd8540a012bb0cf"
+    },
+    {
+      "path": "catalog-assets/images/china-substation-12500kva-35kv-p080.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 71246,
+      "sha256": "571fa8b00e68f9e5ab5b5e5b5b0cfce4a66ca04a1987fba67f8bded600150e91"
+    },
+    {
+      "path": "catalog-assets/images/china-substation-12500kva-35kv-p081.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 73356,
+      "sha256": "0c445b48151b1011aedecae0ffe68207233450bcd52ed8130fabea7a28989e84"
+    },
+    {
+      "path": "catalog-assets/images/china-substation-12500kva-35kv-p082.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 72474,
+      "sha256": "c32e15b86b3c0f5319b3b7be4d00c017ad5ec15b62e07dfd68c9059811bdc422"
+    },
+    {
+      "path": "catalog-assets/images/china-substation-12500kva-35kv-p083.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 67458,
+      "sha256": "474dcf0e69bd54ff30d2f5a179baa0b93600ec92c7bcaeec0bf418f7b9a5239d"
+    },
+    {
+      "path": "catalog-assets/images/dry-type-scb18-1000kva-10kv-p004.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 41762,
+      "sha256": "f87277ea472a015522c09406632e8ed1aa267495872f8efa3f1eb8f69797c9a1"
+    },
+    {
+      "path": "catalog-assets/images/dry-type-scb18-1000kva-10kv-p036.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 50750,
+      "sha256": "5daf1dc60a86211a17fedeeb151fbb3d138b1fef4060cc0844cb19f24b5cfcfc"
+    },
+    {
+      "path": "catalog-assets/images/dry-type-scb18-1000kva-10kv-p037.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 53340,
+      "sha256": "f4e8cb2d4f925290331afeacd3b4bd7369f7dce3e151dfd736c7898a007d4209"
+    },
+    {
+      "path": "catalog-assets/images/dry-type-scb18-2500kva-10kv-p004.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 49156,
+      "sha256": "9e4cafd90ed1b5e5889e741655fe04d90f81b802d889aca726ce743885c1b857"
+    },
+    {
+      "path": "catalog-assets/images/dry-type-scb18-2500kva-10kv-p036.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 58836,
+      "sha256": "b27e248405efaff90184762b718c489168b8f7b15d4444d78e175be030cdfe2d"
+    },
+    {
+      "path": "catalog-assets/images/dry-type-scb18-2500kva-10kv-p037.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 58824,
+      "sha256": "d4848c2fba8f5bfe0725071ef8d38d19c29b46c3a499df0b7683ed12ab16a5ba"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-10000kva-35kv-p004.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 35928,
+      "sha256": "abf39ac67dc8c91ba2991e90c57507495c4dd689d0cea4cd7c5e1f740107f087"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-10000kva-35kv-p095.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 80528,
+      "sha256": "22e71087583287f2d4685e92919a1c3b5b9bbb7aa1e2be5a51a296957dfee22d"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-10000kva-35kv-p096.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 74722,
+      "sha256": "250ac24d9817233d50e9517a2210e0609d11973bd9bb3a3280b3c9506d38f15f"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-10000kva-35kv-p097.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 72554,
+      "sha256": "4aa94ab2fc314baa9cfc6dc410951bffc7b8ca69c06e0292b4ef7194e48e592d"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-10000kva-35kv-p098.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 71436,
+      "sha256": "52c460fa684e23308b27e13165bf118e7efb77f4e4f3b5988b693cf138725899"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-10000kva-35kv-p099.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 65618,
+      "sha256": "499c2d2d78033f055f8299adf331a6422898088396959d94d1338758fed0b81f"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-10000kva-35kv-p100.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 60914,
+      "sha256": "c0ac077d3e996da59ddc12971ba01641ca1e5f228ab0f0ebd8c0b6cb02e1930a"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-12500kva-35kv-p004.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 48202,
+      "sha256": "3391a8503da40f5d942598d286d5a24f0849bdc90a17b590838958f7c39fda5a"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-12500kva-35kv-p094.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 83754,
+      "sha256": "712cbe6f28cc850a265697b1e123aac32f9d10870546e5ae681ed7b42dd1dc4c"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-12500kva-35kv-p095.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 81684,
+      "sha256": "345dff6df4312b7352d949e63b8106c404781806a99d0d846296ed83917f2cfc"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-12500kva-35kv-p096.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 79376,
+      "sha256": "16d6fe32f72db88fa3b6ef9810c9015681b598fad05875e5a86d27a5ea8a1cea"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-12500kva-35kv-p097.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 78180,
+      "sha256": "70f5f05a37e732077f66eca2284992b099669002d49d86e660edaf673fca8bc3"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-12500kva-35kv-p098.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 85908,
+      "sha256": "f4c1db0e3d49b59322d10eb8bac22b7d6832263c5a332beb62a7ae84199e2233"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-12500kva-35kv-p099.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 85892,
+      "sha256": "8617cdcc268603cc0f1ca2bf6d417f96d606af7e7b326b32929c0d25cd45517c"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-6300kva-35kv-p004.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 46008,
+      "sha256": "88efd31050dc393f593fe0c9a548a1845e5e3ee26b111c3de54d2db595efd07c"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-6300kva-35kv-p101.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 50986,
+      "sha256": "b82f5c5f1560da18e14ed2ad63d368c64e6733fbf231d037bd691107d8e72238"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-6300kva-35kv-p102.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 52704,
+      "sha256": "f396b21b5ad71649cee5e704b8eb7ef3bf559597ebca96ce9b9dcc5bcdf45737"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-6300kva-35kv-p103.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 51600,
+      "sha256": "356806ed374baa1d815ab9e6970daea41135e4950fd79d0d30ad04b01553ea9e"
+    },
+    {
+      "path": "catalog-assets/images/european-substation-6300kva-35kv-p104.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 38274,
+      "sha256": "0a35b7ed63c3e82ebe10683f8815fad96879186f607630d7b558b1faea4ccf62"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-efficiency-p001.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 146494,
+      "sha256": "f651af8c7c7819991ce9e322e212870ed683c4bda1ef3fbb4e5927e443d4eeb7"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-efficiency-p020.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 41506,
+      "sha256": "872c6d7cc7404a984b8ee700711f79eb16028df7029fee270ec37faddacaa0f0"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-efficiency-p022.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 85870,
+      "sha256": "ed76efb7ba9a019bfc3001fdc915ad54caa00afb6b4f0a96f9b333902c0895ae"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-efficiency-p025.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 64958,
+      "sha256": "d17bb6553bf8360200675686d5ddf42932e07f9e93f4900579c3bd1d8b0d7ec3"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-efficiency-p026.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 80946,
+      "sha256": "00d37a257ea32d5bc7fa611a37c97abe6d5baa8c8801eef00db18548c88ed0ab"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-efficiency-p027.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 70944,
+      "sha256": "f88b4ee22b61a6bb2b3cb8f799d9a44e6573787b77c79fe624cabcdd5a7c77f7"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p008.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 78678,
+      "sha256": "711c4fb90fdfdbb36ce0eb0991e3fa36d0f3fefadf041b5f46598a29850c8bd2"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p009.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 69970,
+      "sha256": "b9460c2205ba85de38f3da6e0c3ab6f34a2796cdcbe48a506ec547d2cb970277"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p015.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 61912,
+      "sha256": "3fd7f8b027fc5b4f73619dea0a61aa64cc94b856ceaefd2ff88dad8934ce11d6"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p017.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 54858,
+      "sha256": "7a051ff50ee0e41ef21fa3f775311d09497c3c8796b6edf007c0d67e34854613"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p021.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 56922,
+      "sha256": "5964537ed62a55d5d4a1a9e439458c744c8a8a45cff72114d988371385b64832"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p024.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 71070,
+      "sha256": "00cc713189c0730b074314f2e3c3b7916f45089bad5be3af3cbf29fa4c97cbe6"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p026.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 76088,
+      "sha256": "a8462c8bcebe1445d20052da3158b6bef3f7fe284f488046011f01e599959896"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p028.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 46058,
+      "sha256": "c0f904b672d0a290217de80c1a296cc2e7f5ce2f102a9da4c263f4e8c3c85a4c"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p031.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 84090,
+      "sha256": "a4133fbdd8b0715a698f0bd7eee1dea818290c98794502dd1a2dc4c634d6dcc0"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p051.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 117112,
+      "sha256": "942f0565f44834d9b14b78b94d0b12fa7681b72d8dcae5834ad713bc0433b96b"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p057.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 58936,
+      "sha256": "1502bd94258e8c9ec724a314369ea52d1626c220219f3de725e6158f9b1e07e1"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p061.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 58140,
+      "sha256": "4785b58446198094425b9d3f5ca3dfb459c7ba1532fdcb538c87708bc1fa1f5b"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p063.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 56304,
+      "sha256": "58eb65aa2c215f7a797c246d70f35fba5c3956125f3f112fe9241b4296c1cd25"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p065.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 65140,
+      "sha256": "1a0b9450092570ad1d753a81b4a0ba56c1a31158fa3bd2290eddb517de0ec49e"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p068.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 59086,
+      "sha256": "fa0e67f956b7f5202b6d2bec9fb5c4236557c2cd4f6b3e3adee3b6d711048160"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p070.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 82908,
+      "sha256": "9cf10cb9082e79b614a34bc35d64e3c2fb65b88450cd84ffde41c4e4cc63e367"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p072.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 56288,
+      "sha256": "7e1f405d2cc0bb93c7c6527d53ed98ef4c0e8f37a57ac466b0f489ee4fb420ef"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p074.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 73016,
+      "sha256": "c7db910c075490f808a7f15995475ef10de71b816f46bb94b3910ccc601e96c1"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p076.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 67834,
+      "sha256": "0db6fd1bb46326bb125b95d92452703d87010096efd5270ad3e24342a35b8c37"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p078.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 55378,
+      "sha256": "d7851727587f1f329e74d7ec37254ba4b1dcbb7b0ab0c4bcc213a7ef461099b1"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p093.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 62972,
+      "sha256": "a8b6cbe2a00faa2ba169b36a0e23c4a6758a9413fb2a7e65229f550429c6fc56"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p098.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 50858,
+      "sha256": "02d57f8580c0210fda5895b3feb6f9b041ad8d0e0717526635bd011bd28d0128"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p101.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 63434,
+      "sha256": "3fce76617da15c5c8a1927bf524b3061426f64fe1f4d3ef0301143ea2f331c8c"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-1600kva-type-test-p102.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 50438,
+      "sha256": "7c0f818b959fd19d56be60a441d624cc4bda9ab0204c538a45803ae8fcf32e67"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-efficiency-p001.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 150236,
+      "sha256": "b3183f40892f5711fa18974329d6b6915a76a65a07e80de9c326cbcbc07b3839"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-efficiency-p020.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 34052,
+      "sha256": "0e7c240868d3d2253dbefa04a418e06d9b519f3780eded77914e6cf09800a88d"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-efficiency-p022.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 86810,
+      "sha256": "2e3f41f82e2a2758dfb89c103bee20f7a7a512a6dbbb5bdca7a00845bb71aa32"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-efficiency-p025.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 59712,
+      "sha256": "0a74f927772c8f9df8f35e6a0d59b53811528386df1a586397323c5b10325bf8"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-efficiency-p026.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 90124,
+      "sha256": "c3301d157cba0f31eadf22dbea7e4a195e32acbb365aed62684bbbba41abfd1d"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-efficiency-p027.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 76760,
+      "sha256": "ab41e1ce8168b8c4e7cd52eda4129733a0ef4b0e79b0f8125893cfeec41c8ed6"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p008.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 86218,
+      "sha256": "63188cf7b82b019faf74f9494bfcde79b592976ecd058be93a1ce6f2f0e6bee6"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p009.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 75392,
+      "sha256": "3a61b1c9c9798c41fab9eb32807255e5e5c77cbe196251da1d4bc8c9d5b22cb2"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p015.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 56376,
+      "sha256": "f6e94c7b26bb4d37df397a0245076c8d16b80ec92baa8cb455eeae9b00079e07"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p017.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 63932,
+      "sha256": "0d207670cb437186f64a0670b3f2eabe40cc8f05c1404f4fe0bff2d24d50a565"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p021.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 56950,
+      "sha256": "63c9da052cfc7e4d9dac8e8554dc5e929bad6ff91f57cd0e69bb36f1410dca70"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p024.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 64610,
+      "sha256": "08a393f3fe3a642d91099764a5a67b75eb344a8efa0a2725bca92868d2837f2b"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p026.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 78880,
+      "sha256": "afcc046826cd31ba865a052cf530427ef167ac75e0a710fd8bcf8c6c0c2dff3c"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p028.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 38606,
+      "sha256": "1bf95b5487536b8d189a9d691bf5d2ecf7bfc0f7fb250f2de15e2ac405504716"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p031.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 91380,
+      "sha256": "196c9d509ececdd0d6b675e41ab8eec3ef344aae23becd475ac7e40ffc1250e4"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p051.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 103806,
+      "sha256": "6f188e28f649c785522db479361f23fc3369f24ea2dd2d6f64a4ab19ec5a621f"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p057.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 53212,
+      "sha256": "0775e67ace2d9a23400867ed6f78490435a0950d54091302ebc608b6257dc53e"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p061.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 70074,
+      "sha256": "07da790f5c57d15232792cfa19d6a680478d6a433fff76d922b9fe132048e347"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p063.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 60108,
+      "sha256": "e4ee123f3fe71596f83835f0330f70be137c035f6fdcef1d7b9f19d462c2b846"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p065.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 56024,
+      "sha256": "a569b87d604d21dda2f5d2616dff82388ead997e3a3a34a7ea589acab4a9f24e"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p068.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 48882,
+      "sha256": "716ba3a4d3a1d4cdd03e8b1494971d0a19ce570069befa56634621581943f5be"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p070.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 78954,
+      "sha256": "9a1057493bb11ef683ac8ad7ae81bee137127679cabbb622009f2fd6a472dec7"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p072.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 67816,
+      "sha256": "68f7334042c0fb77685eee29cc32f35c5c3ec7d6fce24d3695ed41542efc7eed"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p074.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 66278,
+      "sha256": "35ec13db1ac63b269ace357e8a78df61ac54f23354fc619d250a089457d0e495"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p076.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 63792,
+      "sha256": "020a15423609ba8123c44b042df06ea39406d4086f9b13227df4571b4a1a0025"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p078.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 53220,
+      "sha256": "76d5d2067d980f981d84daa09c7899d95cc9ae484dcc1667ed7053fff33aaf6b"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p093.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 56126,
+      "sha256": "d02d2ee62f3f73917dc72b0d74488359dcb8608a5ffd3c3a876a300b75b457ae"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p098.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 55528,
+      "sha256": "f591264484e80a25b44ba59971064d2698a3f614bc42d5086666197aa6b052c7"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p101.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 58014,
+      "sha256": "cf600fcbe2c82b70dc8585bc096dfb7ae75ed91286d5a1cf84986db41a157ab6"
+    },
+    {
+      "path": "catalog-assets/images/oil-distribution-630kva-type-test-p102.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 56730,
+      "sha256": "bae18219d506bbcc4955be5327d06a4cd02105078dcd5c515c79843ec3df4d5a"
+    },
+    {
+      "path": "catalog-assets/images/power-transformer-150mva-132kv-p004.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 74996,
+      "sha256": "f06ada7d829cd857008420f70cf84e38ce555bc680fe30c14d39f59982a8c078"
+    },
+    {
+      "path": "catalog-assets/images/power-transformer-150mva-132kv-p034.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 53494,
+      "sha256": "3ee351ebfe6547edaa8bd63b671d3bc4299694e06710a93c70feabc9b3a476b8"
+    },
+    {
+      "path": "catalog-assets/images/power-transformer-150mva-132kv-p038.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 60250,
+      "sha256": "a46c9a5a54b6186187a77d63d6f44daa74b6330a2b4653667dd8c4e45eee11cb"
+    },
+    {
+      "path": "catalog-assets/images/power-transformer-240mva-220kv-ssz20-p004.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 53254,
+      "sha256": "b7c1443c8ff4660a47a46fbefe4525d87ad9672d494ff542cb62a6ef3a8ced7d"
+    },
+    {
+      "path": "catalog-assets/images/power-transformer-240mva-220kv-ssz20-p099.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 87838,
+      "sha256": "2d0e30bb3c5cf32b698b92e299ad84f9deeb822eed08116f6ae9fb85443d99d8"
+    },
+    {
+      "path": "catalog-assets/images/power-transformer-240mva-220kv-ssz20-p105.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 39986,
+      "sha256": "6d1f12119687d3929a593071f6aef1a8a4692cc0fc422768554e5b67cca8b612"
+    },
+    {
+      "path": "catalog-assets/images/power-transformer-240mva-220kv-ssz20-p106.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 84676,
+      "sha256": "e3a53c423c7af23dd8574fd8144d3c276f11a2a0497f4ee4de6dbd2f2d493ec6"
+    },
+    {
+      "path": "catalog-assets/images/power-transformer-240mva-220kv-ssz22-p004.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 73940,
+      "sha256": "3798679ba1f67e584eff38386e45f63d47915eaa47371cc33c97a79ac4c62a37"
+    },
+    {
+      "path": "catalog-assets/images/power-transformer-240mva-220kv-ssz22-p057.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 50926,
+      "sha256": "19eed6ef7291fc911d5eb7c8fab29f27fe5e71654f0fc0733508b0d19c5a4403"
+    },
+    {
+      "path": "catalog-assets/images/power-transformer-50mva-110kv-p004.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 71954,
+      "sha256": "f2d83967d2936df58baa793ca1b2640340ed39a368c76bc91a660425957d5571"
+    },
+    {
+      "path": "catalog-assets/images/power-transformer-50mva-110kv-p036.webp",
+      "category": "generated-report-page",
+      "marketing_use": "no",
+      "bytes": 49880,
+      "sha256": "5e7804a0f77daaab9978554ae74ac6f596f8cb1a1b695c9b93520847efaee386"
+    },
+    {
+      "path": "catalog-v3/ga-distribution-renewable.webp",
+      "category": "catalog-curated",
+      "marketing_use": "conditional",
+      "bytes": 15009,
+      "sha256": "036912a57d215752189347da3e49dde5d6f140d15da12755633ddd7937f49d5a"
+    },
+    {
+      "path": "catalog-v3/ga-power-transformers.webp",
+      "category": "catalog-curated",
+      "marketing_use": "conditional",
+      "bytes": 15028,
+      "sha256": "ded193665fe07daff4e9c75799072c7c6770e14590eff3da1e349f96b3de245b"
+    },
+    {
+      "path": "catalog-v3/manufacturing-overview.webp",
+      "category": "catalog-curated",
+      "marketing_use": "conditional",
+      "bytes": 10286,
+      "sha256": "f8ca8ca8f6a3946fc75827f9d689d64cdfc837b167983c82fb1a487fc3758384"
+    },
+    {
+      "path": "catalog-v3/renewable-application-montage.webp",
+      "category": "catalog-curated",
+      "marketing_use": "conditional",
+      "bytes": 5142,
+      "sha256": "e2e2a05a051f5e7ac7e35a2aa092989535fe0b9a8518a63f7b2aec0a79a7ca1e"
+    },
+    {
+      "path": "catalog-v3/testing-220kv-lab.webp",
+      "category": "catalog-curated",
+      "marketing_use": "conditional",
+      "bytes": 10900,
+      "sha256": "8ab7be45e91f31b44de93f860eca820204db6a2637fb2f6a650706bc10a97751"
+    },
+    {
+      "path": "company/factory-campus-panorama.jpeg",
+      "category": "company",
+      "marketing_use": "yes",
+      "bytes": 300522,
+      "sha256": "ed1d02218e81be1859e0d95958a1d1b3e147a8866e47992551f75b6b1dfd8b65"
+    },
+    {
+      "path": "decorative/brochure-substation-section-graphic.png",
+      "category": "decorative",
+      "marketing_use": "no",
+      "bytes": 3182711,
+      "sha256": "2b09b1e0bbbfdb52a1176e15efd6a3c606f5ec9c289702a722923c9a4ac06d9f"
+    },
+    {
+      "path": "decorative/legacy-blue-gradient-brochure-background.jpeg",
+      "category": "decorative",
+      "marketing_use": "no",
+      "bytes": 111364,
+      "sha256": "b62ada0abc3bc6c82379a0c3bcb4c2f5df15b89b8c4bc2e699e44e6d0a42e755"
+    },
+    {
+      "path": "decorative/renewable-wind-solar-illustration.jpeg",
+      "category": "decorative",
+      "marketing_use": "no",
+      "bytes": 79656,
+      "sha256": "e950a3820975e18db94212d3623107e1fbf3c508edd6c6293a87a63df1d23872"
+    },
+    {
+      "path": "decorative/snow-mountain-panorama-strip.jpeg",
+      "category": "decorative",
+      "marketing_use": "no",
+      "bytes": 52351,
+      "sha256": "734d46d93edaacd33e88506aa4a04b6ccf5caee3f3f13551a92fbb4fbd251775"
+    },
+    {
+      "path": "drawings/china-substation-10000kva-35kv-outline.webp",
+      "category": "evidence-drawing",
+      "marketing_use": "no",
+      "bytes": 66824,
+      "sha256": "ae742c9a20317042395a56d4f61f63def134b099b7085deafb7c965547dd8250"
+    },
+    {
+      "path": "drawings/china-substation-12500kva-35kv-outline.webp",
+      "category": "evidence-drawing",
+      "marketing_use": "no",
+      "bytes": 74672,
+      "sha256": "0a3ca4d6f9c451efa3b548be2e306b1c2763f655a972f93d443e465d8dae666d"
+    },
+    {
+      "path": "drawings/european-substation-10000kva-35kv-outline.webp",
+      "category": "evidence-drawing",
+      "marketing_use": "no",
+      "bytes": 42800,
+      "sha256": "0433c38be359658b1100a8b3ef7facb5187b95973352f717cbc456c00475b170"
+    },
+    {
+      "path": "drawings/european-substation-12500kva-35kv-outline.webp",
+      "category": "evidence-drawing",
+      "marketing_use": "no",
+      "bytes": 37484,
+      "sha256": "fe06636fde623c9c43690a80ce34c35a520d2f02b60eed62b7540adfa0f5e209"
+    },
+    {
+      "path": "drawings/european-substation-6300kva-35kv-outline.webp",
+      "category": "evidence-drawing",
+      "marketing_use": "no",
+      "bytes": 96730,
+      "sha256": "b56eb914891997df1bd36ff0e5d359f680e1587d46bb9da10de26a494306f32c"
+    },
+    {
+      "path": "evidence/china-substation-10000kva-35kv-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 92648,
+      "sha256": "ed4d6b2deffe70844d05724a55dbc16694107a249e44da0f8d9d2c0af7b25048"
+    },
+    {
+      "path": "evidence/china-substation-10000kva-35kv-parameters.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 74614,
+      "sha256": "dbe1afb6b22a2dc2a80e4f2ed6c6f6c2ff568fe52a5f1320e07a22e57aec4bf8"
+    },
+    {
+      "path": "evidence/china-substation-10000kva-35kv-summary.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 113160,
+      "sha256": "da0887bd1416c776d49a6188aa3ae237b2eebca2a309a57b86ff2b006390ea37"
+    },
+    {
+      "path": "evidence/china-substation-12500kva-35kv-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 111694,
+      "sha256": "c6eb9b1c3144727fe372d68316b53addee47e495db3e12a65ffae3f9b5c5b40a"
+    },
+    {
+      "path": "evidence/china-substation-12500kva-35kv-parameters.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 77196,
+      "sha256": "7704bccb4f0d3f558079f291179fb30a84806af27bad9db5fc352e0d090ae5bd"
+    },
+    {
+      "path": "evidence/china-substation-12500kva-35kv-summary.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 182648,
+      "sha256": "97be293ca136984e795d40c7a046704afce3cb0df1d42d8cb8ef90ddea5375f5"
+    },
+    {
+      "path": "evidence/dry-type-scb18-1000kva-10kv-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 97662,
+      "sha256": "e47a2b4cd12521f69eb2888469749c6b5a9f4dc61e69a2aeb5888ed4e5c1d1b2"
+    },
+    {
+      "path": "evidence/dry-type-scb18-1000kva-10kv-parameters.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 98400,
+      "sha256": "dbad8d0e4c103ad46d91008cb044d9af4f6790387082013f1ecda79e19d60576"
+    },
+    {
+      "path": "evidence/dry-type-scb18-1000kva-10kv-summary.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 122120,
+      "sha256": "3043074aab8c9b91e725ea1501fab72f4a68fdf93fe833d6335a364976ed2322"
+    },
+    {
+      "path": "evidence/dry-type-scb18-2500kva-10kv-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 94174,
+      "sha256": "e9d606d2cf04e26ce51eb119ab9db8195c9c25ce2844db58540b39071bcae65b"
+    },
+    {
+      "path": "evidence/dry-type-scb18-2500kva-10kv-parameters.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 98878,
+      "sha256": "dc78a7608fce55039b944522587fce9bf741a7a10ad6dea4a97ed0aedc45baa8"
+    },
+    {
+      "path": "evidence/dry-type-scb18-2500kva-10kv-summary.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 127970,
+      "sha256": "98151ada0b694b915a8485a74decc6b0b5b7f05abd2ff714e5e0a066f23de2c7"
+    },
+    {
+      "path": "evidence/european-substation-10000kva-35kv-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 94932,
+      "sha256": "dfe68601173aabd01fa6623db0f77a92fc0d86b81674c51295f99b71a60c573c"
+    },
+    {
+      "path": "evidence/european-substation-10000kva-35kv-parameters.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 74656,
+      "sha256": "88533c2cc01fe50c6f1486469f4f0e4fe0faafb0037c03c73f3930c41f533d8a"
+    },
+    {
+      "path": "evidence/european-substation-10000kva-35kv-summary.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 114012,
+      "sha256": "69ef4665f8e495b6d56dbd940cdd0c77ef402f283995997170204820839bfcf7"
+    },
+    {
+      "path": "evidence/european-substation-12500kva-35kv-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 91752,
+      "sha256": "cd5d76dc7e06695881ef311ea48cfbd2b259fe80ad6ae5c86cc5d4d00349b2e8"
+    },
+    {
+      "path": "evidence/european-substation-12500kva-35kv-parameters.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 75816,
+      "sha256": "2c7da35426c0e259338a4b699d9bc70e0d0c92a98f72e51f35032997e802dca1"
+    },
+    {
+      "path": "evidence/european-substation-12500kva-35kv-summary.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 115976,
+      "sha256": "c6cdad9550b1e9fbc313bc994120e9d9b8a40b4a55392c2a009540f8600152f4"
+    },
+    {
+      "path": "evidence/european-substation-6300kva-35kv-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 88048,
+      "sha256": "2c128836b7d461888b352663ef6f96e34b96bed3c7497407d667058b91faaf03"
+    },
+    {
+      "path": "evidence/european-substation-6300kva-35kv-parameters.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 82608,
+      "sha256": "9dd22b4c76ff513aa555b24a3a898e7e0b5da107375ec1421e1d358e408bb026"
+    },
+    {
+      "path": "evidence/european-substation-6300kva-35kv-summary.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 112930,
+      "sha256": "6b9c3811a7fbe88a5c349fb2823853d25b0b13cb1f86ceaf669be07bae06e6bb"
+    },
+    {
+      "path": "evidence/oil-distribution-1600kva-ce-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 179996,
+      "sha256": "d81b6029885fa7c46217843b1fb69fd76badf547af50ab901316de9c0c47d53a"
+    },
+    {
+      "path": "evidence/oil-distribution-1600kva-efficiency-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 196054,
+      "sha256": "5b986f8530edc5e89a316f81347e64af950324ef98b6a184668a0f9679a9f81c"
+    },
+    {
+      "path": "evidence/oil-distribution-1600kva-efficiency-parameters.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 80350,
+      "sha256": "84aa1b9eb21b009cfa396c198b930c3640c38ba8085b8bfe0c545669810a1b74"
+    },
+    {
+      "path": "evidence/oil-distribution-1600kva-efficiency-summary.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 85706,
+      "sha256": "0bd7b1ec7b6c42bf3e5cfa266a810424e9e9b6a263aea8ad70338282ece98b10"
+    },
+    {
+      "path": "evidence/oil-distribution-1600kva-tuv-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 128750,
+      "sha256": "a64f921c2739406663eff4d3e52d51f331a5cf6d59c452a9fa602aefaed121e1"
+    },
+    {
+      "path": "evidence/oil-distribution-1600kva-type-test-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 161670,
+      "sha256": "b7bd8f77e40d08ad9281b01902fe27eb9c427668e21e7969f98c9d4a6095ff10"
+    },
+    {
+      "path": "evidence/oil-distribution-1600kva-type-test-parameters.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 120748,
+      "sha256": "bb0d38f75aae346b04b8a7b6f2bc1ee035efa5dab10bc90b55a76e8e888e479e"
+    },
+    {
+      "path": "evidence/oil-distribution-1600kva-type-test-summary.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 115262,
+      "sha256": "feeb65b3f217e5f93b4aefbbee800f93304b14a31969d62d309a0df2c58d818f"
+    },
+    {
+      "path": "evidence/oil-distribution-630kva-ce-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 179420,
+      "sha256": "3533b027104a1bb3eac1ef2a6b5b60f9bdb7164b76c6b99ad6d804dcdcaa44d8"
+    },
+    {
+      "path": "evidence/oil-distribution-630kva-efficiency-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 203780,
+      "sha256": "8b0acc422488e11b6e09f8cd4db51743fade52b18eed9758057d0c951e9951db"
+    },
+    {
+      "path": "evidence/oil-distribution-630kva-efficiency-parameters.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 80448,
+      "sha256": "7eee0bfdac292becf7562828e2c716d9e3272eb16c2904e4b4c4997a69a89c6f"
+    },
+    {
+      "path": "evidence/oil-distribution-630kva-efficiency-summary.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 85760,
+      "sha256": "cb2f0bc732594528eb4d7f6dd18ce5f0e121e7b6ab97be1ff3fa280f88be1e3e"
+    },
+    {
+      "path": "evidence/oil-distribution-630kva-tuv-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 128800,
+      "sha256": "0453ab9a18b72bac51dcfcfb1febdbad23ea3655a1740609630db96b2d1a2d31"
+    },
+    {
+      "path": "evidence/oil-distribution-630kva-type-test-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 159520,
+      "sha256": "b3e0fe1a66d8a710335e0a58e3ced5eef3d637629786b7b22a6edf1eea45b3c5"
+    },
+    {
+      "path": "evidence/oil-distribution-630kva-type-test-parameters.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 120454,
+      "sha256": "d6e21fbc636396574abcd7328032a589a503e87b62dc54aa35f24a64e33c0ec3"
+    },
+    {
+      "path": "evidence/oil-distribution-630kva-type-test-summary.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 115248,
+      "sha256": "a3db14c7e95187e183ac0bfd9301d762243db280675ba65d399578073d79a33b"
+    },
+    {
+      "path": "evidence/power-transformer-150mva-132kv-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 84970,
+      "sha256": "5ea7a5b0ae2eb903a6ceccf12339d08a40793bd111ba15d48b6371f63f532102"
+    },
+    {
+      "path": "evidence/power-transformer-150mva-132kv-parameters.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 117330,
+      "sha256": "7c013007a2eca642b8fac7db38670c8dcb357da995ff343f3ba1dc98a643c082"
+    },
+    {
+      "path": "evidence/power-transformer-150mva-132kv-summary.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 162676,
+      "sha256": "c190cbb93c74629d12a0386a4a6f33ab5af6ad57670229314a23e034ef102e4e"
+    },
+    {
+      "path": "evidence/power-transformer-240mva-220kv-ssz20-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 88050,
+      "sha256": "90111f597572c53c08c8ab56af9de83804ccb9b758325546e0ee09bb616e8fb4"
+    },
+    {
+      "path": "evidence/power-transformer-240mva-220kv-ssz20-parameters.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 130902,
+      "sha256": "0fdb8a3c110dc3a9740c73210fa503f07efec5cfd3526dcfe398b623983cc935"
+    },
+    {
+      "path": "evidence/power-transformer-240mva-220kv-ssz20-summary.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 138076,
+      "sha256": "f4ca88cfa6180d8955a643513f533d1555ebacd39106d354a40839499e23031f"
+    },
+    {
+      "path": "evidence/power-transformer-240mva-220kv-ssz22-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 91566,
+      "sha256": "b7ea23282d3a77e62a7d91c8ef0a6f22bd02f53ad3e3600a227dae339a6983a6"
+    },
+    {
+      "path": "evidence/power-transformer-240mva-220kv-ssz22-parameters.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 131440,
+      "sha256": "c79456e20c8d4447616f55143679ca8bbd5d8fefe2a824e1d2e99482402b9987"
+    },
+    {
+      "path": "evidence/power-transformer-240mva-220kv-ssz22-summary.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 151612,
+      "sha256": "efce012bcdbeb96747eba10be651ec049890bf8c057ed57922f5e335e0159a46"
+    },
+    {
+      "path": "evidence/power-transformer-50mva-110kv-cover.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 84182,
+      "sha256": "7cf6244c523cb23b4413e28b1a631008f6a1dadd4933bd6578cf0f5ea9e705bb"
+    },
+    {
+      "path": "evidence/power-transformer-50mva-110kv-parameters.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 133222,
+      "sha256": "5b763b3dc2942ae2a046c64da69bff51957bd5430a857dff87a49d2391797dd7"
+    },
+    {
+      "path": "evidence/power-transformer-50mva-110kv-summary.webp",
+      "category": "evidence",
+      "marketing_use": "no",
+      "bytes": 169022,
+      "sha256": "6304cba9bed16fe5673a12802ee88742ac9e32500ee2303b2d2fd8ca2c6054da"
+    },
+    {
+      "path": "evidence/sample-photo-pages/china-substation-10000kva-35kv-sample-photo-page.webp",
+      "category": "evidence-sample-page",
+      "marketing_use": "no",
+      "bytes": 68528,
+      "sha256": "64fc53d489023f05a0d944365bdaaa85019b7f591471ce4fb5ca5e43411cb387"
+    },
+    {
+      "path": "evidence/sample-photo-pages/china-substation-12500kva-35kv-sample-photo-page.webp",
+      "category": "evidence-sample-page",
+      "marketing_use": "no",
+      "bytes": 78462,
+      "sha256": "980541b0dff9abd72dfc068cb64eccf03fede8d53ccbd17adb67413599563285"
+    },
+    {
+      "path": "evidence/sample-photo-pages/dry-type-scb18-1000kva-10kv-sample-photo-page.webp",
+      "category": "evidence-sample-page",
+      "marketing_use": "no",
+      "bytes": 72402,
+      "sha256": "5f242d21ea447bb14cf34ea1811fe19033aee315b8a561c5e8f9f42e819172ec"
+    },
+    {
+      "path": "evidence/sample-photo-pages/dry-type-scb18-2500kva-10kv-sample-photo-page.webp",
+      "category": "evidence-sample-page",
+      "marketing_use": "no",
+      "bytes": 80090,
+      "sha256": "33fc710b07a0546671e89642e0bf4a48d5925753daa8e3eacc92dc70f7e2209f"
+    },
+    {
+      "path": "evidence/sample-photo-pages/european-substation-10000kva-35kv-sample-photo-page.webp",
+      "category": "evidence-sample-page",
+      "marketing_use": "no",
+      "bytes": 55980,
+      "sha256": "31af373e94ba1a9c5a3a632f279d886cfc6725a439f3c2befe5289fbd33f1a6d"
+    },
+    {
+      "path": "evidence/sample-photo-pages/european-substation-12500kva-35kv-sample-photo-page.webp",
+      "category": "evidence-sample-page",
+      "marketing_use": "no",
+      "bytes": 77094,
+      "sha256": "1ddcc28a3a86e9d7da86115ae70bb633fd6fa4db9123ce04bc68870d013aacc9"
+    },
+    {
+      "path": "evidence/sample-photo-pages/european-substation-6300kva-35kv-sample-photo-page.webp",
+      "category": "evidence-sample-page",
+      "marketing_use": "no",
+      "bytes": 78764,
+      "sha256": "cc9ace63afa17beefbc37f7aeff873d55f83e587e0657a7790da2f963e581577"
+    },
+    {
+      "path": "evidence/sample-photo-pages/oil-distribution-1600kva-efficiency-sample-photo-page.webp",
+      "category": "evidence-sample-page",
+      "marketing_use": "no",
+      "bytes": 72656,
+      "sha256": "4a91f6162d00f9fd7f217733b73c84a26d9cf7024d323303bc1e3be564956a8e"
+    },
+    {
+      "path": "evidence/sample-photo-pages/oil-distribution-1600kva-type-test-sample-photo-page.webp",
+      "category": "evidence-sample-page",
+      "marketing_use": "no",
+      "bytes": 106282,
+      "sha256": "0ab65a79ec9900b4c2bb3bd717ead0c0011f032d7b61fe7788f684e8f769e274"
+    },
+    {
+      "path": "evidence/sample-photo-pages/oil-distribution-630kva-efficiency-sample-photo-page.webp",
+      "category": "evidence-sample-page",
+      "marketing_use": "no",
+      "bytes": 74752,
+      "sha256": "e643e8c31bc32817ca9a4f7d03dadde34bc460b9f8eea24eafe48c9b5c2471fc"
+    },
+    {
+      "path": "evidence/sample-photo-pages/oil-distribution-630kva-type-test-sample-photo-page.webp",
+      "category": "evidence-sample-page",
+      "marketing_use": "no",
+      "bytes": 96838,
+      "sha256": "9e898cb3bfd101c8d659b335becccd61e84b49ed1ca085f153eefa53007274df"
+    },
+    {
+      "path": "evidence/sample-photo-pages/power-transformer-150mva-132kv-sample-photo-page.webp",
+      "category": "evidence-sample-page",
+      "marketing_use": "no",
+      "bytes": 141146,
+      "sha256": "390155a618a949601b8b408752df17d24d4072b1baf78e5a84aa4895c2922f38"
+    },
+    {
+      "path": "evidence/sample-photo-pages/power-transformer-240mva-220kv-ssz20-sample-photo-page.webp",
+      "category": "evidence-sample-page",
+      "marketing_use": "no",
+      "bytes": 96928,
+      "sha256": "aea3949fa1ae8fd3acf90f4ded32bc674e40ac06eedbb9e77096030d8cb2b994"
+    },
+    {
+      "path": "evidence/sample-photo-pages/power-transformer-240mva-220kv-ssz22-sample-photo-page.webp",
+      "category": "evidence-sample-page",
+      "marketing_use": "no",
+      "bytes": 148406,
+      "sha256": "5f848784d86906301adbfdb3d27fffdd43f0df245719802684cc77598f608546"
+    },
+    {
+      "path": "evidence/sample-photo-pages/power-transformer-50mva-110kv-sample-photo-page.webp",
+      "category": "evidence-sample-page",
+      "marketing_use": "no",
+      "bytes": 141694,
+      "sha256": "12417bfcdf22f4f0c932d8558c893c21f0c404537a0a640b478b0c107c7737fc"
+    },
+    {
+      "path": "factory/combined-transformer-wiring-assembly.webp",
+      "category": "factory",
+      "marketing_use": "yes",
+      "bytes": 220922,
+      "sha256": "85d68872b532f9f3f441b5b70dc718648003cc04fcade9c185add425bc38baac"
+    },
+    {
+      "path": "factory/dry-type-prefabricated-substation-assembly-01.webp",
+      "category": "factory",
+      "marketing_use": "yes",
+      "bytes": 239698,
+      "sha256": "59167e13313897d04ca8d8c2877937c3c796f4a8f51056adad54c32c503bcd21"
+    },
+    {
+      "path": "factory/dry-type-prefabricated-substation-assembly-02.webp",
+      "category": "factory",
+      "marketing_use": "yes",
+      "bytes": 268666,
+      "sha256": "be3b410960eedd007f0cb141cc32eb681c548299016f84d25e46766cc5596a72"
+    },
+    {
+      "path": "factory/oil-prefabricated-substation-assembly.webp",
+      "category": "factory",
+      "marketing_use": "yes",
+      "bytes": 318148,
+      "sha256": "3fc3efe6fcc009c9d64f63bfaccc549e9f649de021c4456f8c7e6c57db3bdd2d"
+    },
+    {
+      "path": "products/combined-transformers/american-type-combined-transformer-busbar-interior.webp",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 322990,
+      "sha256": "f27b2fb263761a9a9daf658b7efc37232bee878faa06204555a5c8d35df4c0e2"
+    },
+    {
+      "path": "products/combined-transformers/american-type-combined-transformer-exterior-01.webp",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 59664,
+      "sha256": "842c07eaa5744328d398ba590998c1b5291184f577a0464ec03a1c2fdcb744ef"
+    },
+    {
+      "path": "products/combined-transformers/american-type-combined-transformer-exterior-02.webp",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 177354,
+      "sha256": "1341bc1448cdec0acc6d9a80112d86ac9f01d898f343c1b96eefeb542856143f"
+    },
+    {
+      "path": "products/combined-transformers/american-type-combined-transformer-lv-cabinet-interior.webp",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 300548,
+      "sha256": "f6add8913e6d004694001dafda88e0eadc90c83b4a02df7cbdfafe2b6ad4b723"
+    },
+    {
+      "path": "products/distribution-transformers/oil-immersed-distribution-transformer-blue.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 21779,
+      "sha256": "7dd60349d6425540d5a99dc159b6bcbdc68948a5c192c3c1bea75c3fdf2c25b9"
+    },
+    {
+      "path": "products/distribution-transformers/oil-immersed-distribution-transformer-cable-connected-01.webp",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 48860,
+      "sha256": "8818ab0294862c5553462c3b0bb90cd271126e119f40796841b98cacee438e98"
+    },
+    {
+      "path": "products/distribution-transformers/oil-immersed-distribution-transformer-conservator-01.webp",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 115370,
+      "sha256": "0402275ad88cae294695029565e8d372ef97c167d774bc92a3f20970988bc6b1"
+    },
+    {
+      "path": "products/distribution-transformers/oil-immersed-distribution-transformer-conservator-white.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 21290,
+      "sha256": "66cea76e942b76394e9841ac6790c0cfc1efdb4e5dfac1ffe01fbf55816f2043"
+    },
+    {
+      "path": "products/distribution-transformers/oil-immersed-distribution-transformer-green.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 25809,
+      "sha256": "aa78b70a4be2002393af44d77f9f8949eef4db417e60b55b4898bb4554361cf5"
+    },
+    {
+      "path": "products/distribution-transformers/oil-immersed-distribution-transformer-sealed-01.webp",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 63978,
+      "sha256": "e0e00508498f052b1192fca756f11592ad34d27efccdce6045c7ba2387c49e0d"
+    },
+    {
+      "path": "products/dry-type-transformers/amorphous-alloy-dry-type-transformer-with-fans.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 23843,
+      "sha256": "90bdd714cff4a55df5da909c9ea7487353b80673e6a9c03f4b561e5c47356374"
+    },
+    {
+      "path": "products/dry-type-transformers/cast-resin-dry-type-transformer-red-01.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 27676,
+      "sha256": "8a50199f013c0ac5d66a95be39481fa0f17a094762b10c522d26a49a24846366"
+    },
+    {
+      "path": "products/dry-type-transformers/cast-resin-dry-type-transformer-red-02.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 21576,
+      "sha256": "3ec40cf91af040b53b66acfbf786d88c6b8e61c4286c020f944eac663389a10e"
+    },
+    {
+      "path": "products/dry-type-transformers/cast-resin-transformer-core-coil-assembly.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 35534,
+      "sha256": "d5306013684853c158bdbc7bf389e772c377c071f873fdea5a71503feb484f4d"
+    },
+    {
+      "path": "products/dry-type-transformers/dry-type-transformer-coil-assembly-beige.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 31345,
+      "sha256": "cf507950b1a1b2d23cd9410fa9cfa2831734c8b38c6f3a833d9d6cb072b566b9"
+    },
+    {
+      "path": "products/dry-type-transformers/dry-type-transformer-red-tall-01.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 25295,
+      "sha256": "3750b519ff6a61439f0d8437f125eab7ed710e729d3f5f9c959334f85dcf3f78"
+    },
+    {
+      "path": "products/power-transformers/oil-immersed-power-transformer-installed.png",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 1888652,
+      "sha256": "4d16033fbec6c7a84975e97e058083ef0a4e1628f575617fcf1a6338c57ea4af"
+    },
+    {
+      "path": "products/power-transformers/oil-immersed-power-transformer-isolated-01.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 47302,
+      "sha256": "ab027aceaa910f7f0c96e383aca8ce1add6e0a4a625ed6a6bcaef893dccdb865"
+    },
+    {
+      "path": "products/prefabricated-substations/compact-substation-blue-01.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 18364,
+      "sha256": "8442bda287be660a3dcaab15bb68ebd77ecb2b9db87c2ada96409b7e098be890"
+    },
+    {
+      "path": "products/prefabricated-substations/compact-substation-green-01.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 15244,
+      "sha256": "9103ab9b59879fa7643500cd6916a4ea1768e7530a657beb1202525d7a16a5e6"
+    },
+    {
+      "path": "products/prefabricated-substations/compact-substation-with-transformer-render.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 19467,
+      "sha256": "84552b43e1f54c604025112f4bf715bf04e76d77b5a0ecc53f204b0ad56b5652"
+    },
+    {
+      "path": "products/prefabricated-substations/containerized-substation-industrial-exterior.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 30732,
+      "sha256": "9bf1055def2e2de74897268b591e9a787f79b03077306921cf735cd81e270ba8"
+    },
+    {
+      "path": "products/prefabricated-substations/dry-type-prefabricated-substation-exterior-01.webp",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 26816,
+      "sha256": "a19e6c2ab2d3e7bef882c76cc47a160cde6dbff520383e772bfff58cbb53dd90"
+    },
+    {
+      "path": "products/prefabricated-substations/dry-type-prefabricated-substation-interior.webp",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 25764,
+      "sha256": "c9cb23a8124061828daa292f939f08a81cd70fc47e53a4091578598672d0fe8b"
+    },
+    {
+      "path": "products/prefabricated-substations/dry-type-prefabricated-substation-lineup.webp",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 28604,
+      "sha256": "d20f84c8cc7ac4169412e0b9de6a9db046bff47ef5b641068cd7e3164287005e"
+    },
+    {
+      "path": "products/prefabricated-substations/integrated-prefabricated-substation-render.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 23839,
+      "sha256": "f98d62a72ea0e3bbf1edc085a3295dd14913c72d9e04af510fdd009635650066"
+    },
+    {
+      "path": "products/prefabricated-substations/integrated-substation-modules-render.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 27184,
+      "sha256": "a58794900c82f90bd6ee5fc9a807f14bd72103e9a3a5f9e8dc38bcd250e1280d"
+    },
+    {
+      "path": "products/prefabricated-substations/integrated-substation-white-exterior-01.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 20870,
+      "sha256": "95d8df5bb03f89ebb17e32742c7ab6678ecdb558be58a4c139f112711ed6f22e"
+    },
+    {
+      "path": "products/prefabricated-substations/oil-prefabricated-substation-exterior-01.webp",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 27022,
+      "sha256": "95d62a21b8b95e3ca2285419edc1013d9ea0bef6cdb4e85f8e6c29e5132cf288"
+    },
+    {
+      "path": "products/prefabricated-substations/oil-prefabricated-substation-hv-compartment-interior.webp",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 362514,
+      "sha256": "3cc0c5e543733e834ffb5d2906d80a595181c745a12d7bd957893dd55158b67c"
+    },
+    {
+      "path": "products/prefabricated-substations/oil-prefabricated-substation-lv-cabinet-interior.webp",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 145124,
+      "sha256": "e9de131f677f1dd36427c55aff3e57bdf0113a70e97498d608267da6e3b25f39"
+    },
+    {
+      "path": "products/prefabricated-substations/prefabricated-substation-white-showroom-01.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 19116,
+      "sha256": "e3eb5dd8489a42071c772bcea40baa89becd6156e8c54bf1dbd44b5d83c15e0c"
+    },
+    {
+      "path": "products/prefabricated-substations/substation-complex-render.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 78618,
+      "sha256": "465971c118606dddd610ae977b84fe25e0110e8ec580240e38bd3881f1073daf"
+    },
+    {
+      "path": "products/special-transformers/dry-type-rectifier-transformer-red.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 22710,
+      "sha256": "2aaf8c366eb4ea3c45448bbc6833f78181ef214c08eafb67c8da636e92025506"
+    },
+    {
+      "path": "products/switchgear/control-cabinet-white-red-panel.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 11390,
+      "sha256": "05691d8776ca6053a8161400bda9d805ad9f876448794d01a1e59f50d94f33cd"
+    },
+    {
+      "path": "products/switchgear/low-voltage-switchgear-gray.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 25096,
+      "sha256": "3ab25e317ff1847be97dc51d47837e2e990eed07a7cf40d01777f30c36f1092e"
+    },
+    {
+      "path": "products/switchgear/medium-voltage-switchgear-cabinet-01.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 17967,
+      "sha256": "8414c971c7808c61f943cdd474ec99fb81245dc6b1e13f0ccec1be3b7b9e4a2d"
+    },
+    {
+      "path": "products/switchgear/medium-voltage-switchgear-cabinet-02.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 13839,
+      "sha256": "10f30d7675b0805b287547558a25f6ba0c6982f3beba30cdb78248c7c2fb4c65"
+    },
+    {
+      "path": "products/switchgear/medium-voltage-switchgear-three-panel.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 15837,
+      "sha256": "75358f89561cffb15dd6d03ff2decdb72f554d8e7fa08a610059965b05b77475"
+    },
+    {
+      "path": "products/switchgear/ring-main-unit-blue-white.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 16896,
+      "sha256": "25d6db08183a6f497444654832f34c2428e0f54e91b60e2f68a537b06b14e1ae"
+    },
+    {
+      "path": "products/switchgear/ring-main-unit-orange.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 15936,
+      "sha256": "ba778654f89712ea6df2126dac47863875bd6d6d378cdd8abaebde4e79307b51"
+    },
+    {
+      "path": "products/switchgear/ring-main-unit-white-01.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 15994,
+      "sha256": "36c69865f2eaaace965a25dccf04f7b4eea9d4ff2fa2ca272021ad66fb942392"
+    },
+    {
+      "path": "products/switchgear/switchgear-cabinet-blue-gray.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 14183,
+      "sha256": "775c37afa61e56107a7b39327b8fc920b24a7639ff9f1c564d035eceb82a1ddf"
+    },
+    {
+      "path": "products/switchgear/switchgear-cabinet-white-03.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 9474,
+      "sha256": "426dee425f7fbfc47715a474ece10076603906a8b34d951184b0d21c78a50fa9"
+    },
+    {
+      "path": "products/switchgear/switchgear-cabinet-white-04.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 14919,
+      "sha256": "9aadb8590508df361fa982c2ecb37a70cf2b75beccdb5b5b409918c243604729"
+    },
+    {
+      "path": "products/switchgear/switchgear-cabinet-white-black-panel.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 11519,
+      "sha256": "103d56d4a44ac1aa3c818d616583f94c96fa65e4c90607aae5f53d547db8e7af"
+    },
+    {
+      "path": "products/switchgear/switchgear-cabinet-white-blue-01.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 15524,
+      "sha256": "4bc074bdb66527899c5ddf7d5b1b9ecaf2ea5ef39d36d998f6f00c9ea7659061"
+    },
+    {
+      "path": "products/switchgear/switchgear-cabinet-white-green-01.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 16025,
+      "sha256": "ffaf77f21a0162d731c30c72adc0f7c820119e283cd702ccf26634d93314f4ed"
+    },
+    {
+      "path": "products/switchgear/switchgear-cabinet-wide-white-01.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 12413,
+      "sha256": "b9d9ab9360a2e4f72bdf56be5e28a43722ca6d8e01f93f33195e8cc1ff620d02"
+    },
+    {
+      "path": "products/switchgear/vacuum-circuit-breaker-compact-01.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 16599,
+      "sha256": "79a4a98c63614deaafe8321f16004a06907ee74570a048ede8bac289e7706f83"
+    },
+    {
+      "path": "products/switchgear/vacuum-circuit-breaker-panel-01.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 16140,
+      "sha256": "84fd66b66a605384a9892fefadac14e723ab0a87b987d11e6d7d9321223fd38a"
+    },
+    {
+      "path": "products/switchgear/withdrawable-vacuum-circuit-breaker-01.jpeg",
+      "category": "product",
+      "marketing_use": "yes",
+      "bytes": 20562,
+      "sha256": "81d52ece29b044e56d973a776f240c35873fdc5ef7f58a38c408c914131f678d"
+    }
+  ]
+}

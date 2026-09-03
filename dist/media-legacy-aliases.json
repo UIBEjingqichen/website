@@ -1,0 +1,507 @@
+{
+  "generated_at": "2026-09-02T10:25:09.730Z",
+  "created_count": 103,
+  "missing_target_count": 0,
+  "skipped_evidence_count": 21,
+  "created": [
+    {
+      "old": "case-offshore-wind-project.jpeg",
+      "new": "applications/utility-scale-solar-farm-aerial-02.jpeg"
+    },
+    {
+      "old": "case-renewable-energy-base.jpeg",
+      "new": "applications/renewable-wind-solar-landscape.jpeg"
+    },
+    {
+      "old": "catalog-v3/renewable-projects.webp",
+      "new": "catalog-v3/renewable-application-montage.webp"
+    },
+    {
+      "old": "company-factory-campus.jpeg",
+      "new": "company/factory-campus-panorama.jpeg"
+    },
+    {
+      "old": "hero-home-substation-grid.jpeg",
+      "new": "applications/grid-substation-yard.jpeg"
+    },
+    {
+      "old": "image1.jpeg",
+      "new": "branding/legacy-green-blue-symbol.jpeg"
+    },
+    {
+      "old": "image100.jpeg",
+      "new": "products/switchgear/switchgear-cabinet-white-green-01.jpeg"
+    },
+    {
+      "old": "image105.jpeg",
+      "new": "products/switchgear/switchgear-cabinet-wide-white-01.jpeg"
+    },
+    {
+      "old": "image108.jpeg",
+      "new": "products/switchgear/switchgear-cabinet-white-blue-01.jpeg"
+    },
+    {
+      "old": "image11.jpeg",
+      "new": "applications/offshore-wind-turbine-installation.jpeg"
+    },
+    {
+      "old": "image111.jpeg",
+      "new": "products/switchgear/switchgear-cabinet-white-black-panel.jpeg"
+    },
+    {
+      "old": "image112.jpeg",
+      "new": "applications/industrial-petrochemical-plant.jpeg"
+    },
+    {
+      "old": "image114.jpeg",
+      "new": "products/switchgear/control-cabinet-white-red-panel.jpeg"
+    },
+    {
+      "old": "image115.jpeg",
+      "new": "applications/metro-platform-screen-doors.jpeg"
+    },
+    {
+      "old": "image117.jpeg",
+      "new": "applications/renewable-wind-solar-landscape.jpeg"
+    },
+    {
+      "old": "image119.jpeg",
+      "new": "products/prefabricated-substations/compact-substation-green-01.jpeg"
+    },
+    {
+      "old": "image121.jpeg",
+      "new": "products/prefabricated-substations/compact-substation-blue-01.jpeg"
+    },
+    {
+      "old": "image122.jpeg",
+      "new": "applications/compact-substation-outdoor-landscaped-site.jpeg"
+    },
+    {
+      "old": "image123.jpeg",
+      "new": "products/prefabricated-substations/prefabricated-substation-white-showroom-01.jpeg"
+    },
+    {
+      "old": "image125.jpeg",
+      "new": "products/prefabricated-substations/compact-substation-with-transformer-render.jpeg"
+    },
+    {
+      "old": "image126.jpeg",
+      "new": "applications/onshore-wind-farm-grassland.jpeg"
+    },
+    {
+      "old": "image128.jpeg",
+      "new": "products/prefabricated-substations/containerized-substation-industrial-exterior.jpeg"
+    },
+    {
+      "old": "image130.jpeg",
+      "new": "products/prefabricated-substations/substation-complex-render.jpeg"
+    },
+    {
+      "old": "image131.jpeg",
+      "new": "products/prefabricated-substations/integrated-substation-modules-render.jpeg"
+    },
+    {
+      "old": "image133.jpeg",
+      "new": "products/prefabricated-substations/integrated-prefabricated-substation-render.jpeg"
+    },
+    {
+      "old": "image137.jpeg",
+      "new": "products/prefabricated-substations/integrated-substation-white-exterior-01.jpeg"
+    },
+    {
+      "old": "image138.jpeg",
+      "new": "applications/renewable-prefabricated-substation-site-01.jpeg"
+    },
+    {
+      "old": "image139.jpeg",
+      "new": "applications/renewable-prefabricated-substation-site-02.jpeg"
+    },
+    {
+      "old": "image14.jpeg",
+      "new": "applications/utility-scale-solar-farm-aerial-01.jpeg"
+    },
+    {
+      "old": "image140.jpeg",
+      "new": "applications/renewable-prefabricated-substation-site-03.jpeg"
+    },
+    {
+      "old": "image146.png",
+      "new": "decorative/brochure-substation-section-graphic.png"
+    },
+    {
+      "old": "image148.jpeg",
+      "new": "products/switchgear/withdrawable-vacuum-circuit-breaker-01.jpeg"
+    },
+    {
+      "old": "image150.jpeg",
+      "new": "products/switchgear/vacuum-circuit-breaker-compact-01.jpeg"
+    },
+    {
+      "old": "image152.jpeg",
+      "new": "products/switchgear/vacuum-circuit-breaker-panel-01.jpeg"
+    },
+    {
+      "old": "image16.jpeg",
+      "new": "applications/industrial-facility-aerial-render.jpeg"
+    },
+    {
+      "old": "image19.jpeg",
+      "new": "applications/floating-solar-farm-reservoir.jpeg"
+    },
+    {
+      "old": "image2.jpeg",
+      "new": "decorative/legacy-blue-gradient-brochure-background.jpeg"
+    },
+    {
+      "old": "image22.jpeg",
+      "new": "applications/water-infrastructure-reservoir-aerial.jpeg"
+    },
+    {
+      "old": "image25.jpeg",
+      "new": "applications/wind-farm-snowfield.jpeg"
+    },
+    {
+      "old": "image28.jpeg",
+      "new": "applications/utility-scale-solar-farm-aerial-02.jpeg"
+    },
+    {
+      "old": "image3.jpeg",
+      "new": "decorative/renewable-wind-solar-illustration.jpeg"
+    },
+    {
+      "old": "image30.png",
+      "new": "products/power-transformers/oil-immersed-power-transformer-installed.png"
+    },
+    {
+      "old": "image32.jpeg",
+      "new": "products/power-transformers/oil-immersed-power-transformer-isolated-01.jpeg"
+    },
+    {
+      "old": "image36.jpeg",
+      "new": "products/dry-type-transformers/amorphous-alloy-dry-type-transformer-with-fans.jpeg"
+    },
+    {
+      "old": "image37.jpeg",
+      "new": "products/special-transformers/dry-type-rectifier-transformer-red.jpeg"
+    },
+    {
+      "old": "image38.jpeg",
+      "new": "products/dry-type-transformers/dry-type-transformer-red-tall-01.jpeg"
+    },
+    {
+      "old": "image39.jpeg",
+      "new": "products/distribution-transformers/oil-immersed-distribution-transformer-blue.jpeg"
+    },
+    {
+      "old": "image4.jpeg",
+      "new": "company/factory-campus-panorama.jpeg"
+    },
+    {
+      "old": "image42.jpeg",
+      "new": "products/dry-type-transformers/cast-resin-dry-type-transformer-red-01.jpeg"
+    },
+    {
+      "old": "image44.jpeg",
+      "new": "products/dry-type-transformers/cast-resin-dry-type-transformer-red-02.jpeg"
+    },
+    {
+      "old": "image48.jpeg",
+      "new": "products/distribution-transformers/oil-immersed-distribution-transformer-green.jpeg"
+    },
+    {
+      "old": "image51.jpeg",
+      "new": "products/distribution-transformers/oil-immersed-distribution-transformer-conservator-white.jpeg"
+    },
+    {
+      "old": "image53.jpeg",
+      "new": "products/dry-type-transformers/cast-resin-transformer-core-coil-assembly.jpeg"
+    },
+    {
+      "old": "image57.jpeg",
+      "new": "products/dry-type-transformers/dry-type-transformer-coil-assembly-beige.jpeg"
+    },
+    {
+      "old": "image58.jpeg",
+      "new": "applications/grid-substation-yard.jpeg"
+    },
+    {
+      "old": "image6.jpeg",
+      "new": "decorative/snow-mountain-panorama-strip.jpeg"
+    },
+    {
+      "old": "image60.jpeg",
+      "new": "products/switchgear/medium-voltage-switchgear-cabinet-01.jpeg"
+    },
+    {
+      "old": "image61.jpeg",
+      "new": "applications/grid-substation-busbar-yard.jpeg"
+    },
+    {
+      "old": "image63.jpeg",
+      "new": "products/switchgear/medium-voltage-switchgear-cabinet-02.jpeg"
+    },
+    {
+      "old": "image66.jpeg",
+      "new": "products/switchgear/medium-voltage-switchgear-three-panel.jpeg"
+    },
+    {
+      "old": "image71.jpeg",
+      "new": "products/switchgear/switchgear-cabinet-white-03.jpeg"
+    },
+    {
+      "old": "image74.jpeg",
+      "new": "products/switchgear/ring-main-unit-white-01.jpeg"
+    },
+    {
+      "old": "image77.jpeg",
+      "new": "products/switchgear/ring-main-unit-blue-white.jpeg"
+    },
+    {
+      "old": "image8.jpeg",
+      "new": "applications/offshore-oil-platform.jpeg"
+    },
+    {
+      "old": "image81.jpeg",
+      "new": "products/switchgear/switchgear-cabinet-blue-gray.jpeg"
+    },
+    {
+      "old": "image83.jpeg",
+      "new": "applications/hydropower-dam.jpeg"
+    },
+    {
+      "old": "image84.jpeg",
+      "new": "applications/onshore-wind-farm-coastal.jpeg"
+    },
+    {
+      "old": "image85.jpeg",
+      "new": "products/switchgear/ring-main-unit-orange.jpeg"
+    },
+    {
+      "old": "image88.jpeg",
+      "new": "applications/transmission-line-towers.jpeg"
+    },
+    {
+      "old": "image91.jpeg",
+      "new": "products/switchgear/switchgear-cabinet-white-04.jpeg"
+    },
+    {
+      "old": "image92.jpeg",
+      "new": "applications/aerospace-launch-facility.jpeg"
+    },
+    {
+      "old": "image93.jpeg",
+      "new": "applications/public-infrastructure-stadium.jpeg"
+    },
+    {
+      "old": "image95.jpeg",
+      "new": "products/switchgear/low-voltage-switchgear-gray.jpeg"
+    },
+    {
+      "old": "image96.jpeg",
+      "new": "applications/airport-terminal-aerial.jpeg"
+    },
+    {
+      "old": "og-tianyu-electric.png",
+      "new": "branding/og-tianyu-electric.png"
+    },
+    {
+      "old": "product-amorphous-alloy-dry-type-transformer.jpeg",
+      "new": "products/dry-type-transformers/amorphous-alloy-dry-type-transformer-with-fans.jpeg"
+    },
+    {
+      "old": "product-cast-resin-dry-type-transformer.jpeg",
+      "new": "products/dry-type-transformers/cast-resin-transformer-core-coil-assembly.jpeg"
+    },
+    {
+      "old": "product-dry-type-transformer-red.jpeg",
+      "new": "products/dry-type-transformers/cast-resin-dry-type-transformer-red-01.jpeg"
+    },
+    {
+      "old": "product-oil-immersed-energy-saving-transformer.jpeg",
+      "new": "products/distribution-transformers/oil-immersed-distribution-transformer-green.jpeg"
+    },
+    {
+      "old": "product-oil-immersed-power-transformer.png",
+      "new": "products/power-transformers/oil-immersed-power-transformer-installed.png"
+    },
+    {
+      "old": "product-rectifier-transformer.jpeg",
+      "new": "products/special-transformers/dry-type-rectifier-transformer-red.jpeg"
+    },
+    {
+      "old": "product-special-transformer-container.jpeg",
+      "new": "products/prefabricated-substations/integrated-prefabricated-substation-render.jpeg"
+    },
+    {
+      "old": "products/american-combined-transformer-01.webp",
+      "new": "products/combined-transformers/american-type-combined-transformer-exterior-01.webp"
+    },
+    {
+      "old": "products/american-combined-transformer-02.webp",
+      "new": "products/combined-transformers/american-type-combined-transformer-exterior-02.webp"
+    },
+    {
+      "old": "products/american-combined-transformer-03.webp",
+      "new": "applications/floating-solar-combined-transformer-site.webp"
+    },
+    {
+      "old": "products/american-combined-transformer-04.webp",
+      "new": "products/combined-transformers/american-type-combined-transformer-lv-cabinet-interior.webp"
+    },
+    {
+      "old": "products/american-combined-transformer-05.webp",
+      "new": "factory/combined-transformer-wiring-assembly.webp"
+    },
+    {
+      "old": "products/american-combined-transformer-06.webp",
+      "new": "products/combined-transformers/american-type-combined-transformer-busbar-interior.webp"
+    },
+    {
+      "old": "products/dry-type-prefabricated-substation-01.webp",
+      "new": "products/prefabricated-substations/dry-type-prefabricated-substation-exterior-01.webp"
+    },
+    {
+      "old": "products/dry-type-prefabricated-substation-02.webp",
+      "new": "products/prefabricated-substations/dry-type-prefabricated-substation-lineup.webp"
+    },
+    {
+      "old": "products/dry-type-prefabricated-substation-03.webp",
+      "new": "applications/wind-turbine-dry-type-prefabricated-substation-site.webp"
+    },
+    {
+      "old": "products/dry-type-prefabricated-substation-04.webp",
+      "new": "factory/dry-type-prefabricated-substation-assembly-01.webp"
+    },
+    {
+      "old": "products/dry-type-prefabricated-substation-05.webp",
+      "new": "factory/dry-type-prefabricated-substation-assembly-02.webp"
+    },
+    {
+      "old": "products/dry-type-prefabricated-substation-06.webp",
+      "new": "products/prefabricated-substations/dry-type-prefabricated-substation-interior.webp"
+    },
+    {
+      "old": "products/oil-distribution-transformer-01.webp",
+      "new": "products/distribution-transformers/oil-immersed-distribution-transformer-sealed-01.webp"
+    },
+    {
+      "old": "products/oil-distribution-transformer-02.webp",
+      "new": "products/distribution-transformers/oil-immersed-distribution-transformer-conservator-01.webp"
+    },
+    {
+      "old": "products/oil-distribution-transformer-03.webp",
+      "new": "products/distribution-transformers/oil-immersed-distribution-transformer-cable-connected-01.webp"
+    },
+    {
+      "old": "products/oil-prefabricated-substation-01.webp",
+      "new": "products/prefabricated-substations/oil-prefabricated-substation-exterior-01.webp"
+    },
+    {
+      "old": "products/oil-prefabricated-substation-02.webp",
+      "new": "applications/industrial-platform-oil-prefabricated-substation-site.webp"
+    },
+    {
+      "old": "products/oil-prefabricated-substation-03.webp",
+      "new": "applications/oil-prefabricated-substation-site-01.webp"
+    },
+    {
+      "old": "products/oil-prefabricated-substation-04.webp",
+      "new": "products/prefabricated-substations/oil-prefabricated-substation-lv-cabinet-interior.webp"
+    },
+    {
+      "old": "products/oil-prefabricated-substation-05.webp",
+      "new": "products/prefabricated-substations/oil-prefabricated-substation-hv-compartment-interior.webp"
+    },
+    {
+      "old": "products/oil-prefabricated-substation-06.webp",
+      "new": "factory/oil-prefabricated-substation-assembly.webp"
+    }
+  ],
+  "missing_targets": [],
+  "skipped_evidence": [
+    {
+      "old": "evidence/china-substation-10000kva-35kv-product-photo.webp",
+      "new": "evidence/sample-photo-pages/china-substation-10000kva-35kv-sample-photo-page.webp"
+    },
+    {
+      "old": "evidence/china-substation-12500kva-35kv-product-photo.webp",
+      "new": "evidence/sample-photo-pages/china-substation-12500kva-35kv-sample-photo-page.webp"
+    },
+    {
+      "old": "evidence/dry-type-scb18-1000kva-10kv-product-photo.webp",
+      "new": "evidence/sample-photo-pages/dry-type-scb18-1000kva-10kv-sample-photo-page.webp"
+    },
+    {
+      "old": "evidence/dry-type-scb18-2500kva-10kv-product-photo.webp",
+      "new": "evidence/sample-photo-pages/dry-type-scb18-2500kva-10kv-sample-photo-page.webp"
+    },
+    {
+      "old": "evidence/european-substation-10000kva-35kv-product-photo.webp",
+      "new": "evidence/sample-photo-pages/european-substation-10000kva-35kv-sample-photo-page.webp"
+    },
+    {
+      "old": "evidence/european-substation-12500kva-35kv-product-photo.webp",
+      "new": "evidence/sample-photo-pages/european-substation-12500kva-35kv-sample-photo-page.webp"
+    },
+    {
+      "old": "evidence/european-substation-6300kva-35kv-product-photo.webp",
+      "new": "evidence/sample-photo-pages/european-substation-6300kva-35kv-sample-photo-page.webp"
+    },
+    {
+      "old": "evidence/oil-distribution-1600kva-efficiency-product-photo.webp",
+      "new": "evidence/sample-photo-pages/oil-distribution-1600kva-efficiency-sample-photo-page.webp"
+    },
+    {
+      "old": "evidence/oil-distribution-1600kva-type-test-product-photo.webp",
+      "new": "evidence/sample-photo-pages/oil-distribution-1600kva-type-test-sample-photo-page.webp"
+    },
+    {
+      "old": "evidence/oil-distribution-630kva-efficiency-product-photo.webp",
+      "new": "evidence/sample-photo-pages/oil-distribution-630kva-efficiency-sample-photo-page.webp"
+    },
+    {
+      "old": "evidence/oil-distribution-630kva-type-test-product-photo.webp",
+      "new": "evidence/sample-photo-pages/oil-distribution-630kva-type-test-sample-photo-page.webp"
+    },
+    {
+      "old": "evidence/power-transformer-150mva-132kv-product-photo.webp",
+      "new": "evidence/sample-photo-pages/power-transformer-150mva-132kv-sample-photo-page.webp"
+    },
+    {
+      "old": "evidence/power-transformer-240mva-220kv-ssz20-product-photo.webp",
+      "new": "evidence/sample-photo-pages/power-transformer-240mva-220kv-ssz20-sample-photo-page.webp"
+    },
+    {
+      "old": "evidence/power-transformer-240mva-220kv-ssz22-product-photo.webp",
+      "new": "evidence/sample-photo-pages/power-transformer-240mva-220kv-ssz22-sample-photo-page.webp"
+    },
+    {
+      "old": "evidence/power-transformer-50mva-110kv-product-photo.webp",
+      "new": "evidence/sample-photo-pages/power-transformer-50mva-110kv-sample-photo-page.webp"
+    },
+    {
+      "old": "products/dry-type-transformer-scb18-1000.webp",
+      "new": "evidence/sample-photo-pages/dry-type-scb18-1000kva-10kv-sample-photo-page.webp"
+    },
+    {
+      "old": "products/dry-type-transformer-scb18-2500.webp",
+      "new": "evidence/sample-photo-pages/dry-type-scb18-2500kva-10kv-sample-photo-page.webp"
+    },
+    {
+      "old": "products/power-transformer-110kv-50mva.webp",
+      "new": "evidence/sample-photo-pages/power-transformer-50mva-110kv-sample-photo-page.webp"
+    },
+    {
+      "old": "products/power-transformer-132kv-150mva.webp",
+      "new": "evidence/sample-photo-pages/power-transformer-150mva-132kv-sample-photo-page.webp"
+    },
+    {
+      "old": "products/power-transformer-220kv-240mva-ssz20.webp",
+      "new": "evidence/sample-photo-pages/power-transformer-240mva-220kv-ssz20-sample-photo-page.webp"
+    },
+    {
+      "old": "products/power-transformer-220kv-240mva-ssz22.webp",
+      "new": "evidence/sample-photo-pages/power-transformer-240mva-220kv-ssz22-sample-photo-page.webp"
+    }
+  ]
+}

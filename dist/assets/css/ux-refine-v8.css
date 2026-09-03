@@ -1,0 +1,74 @@
+:root{--v8-bg:#edf2f6;--v8-surface:#f7f9fb;--v8-band:#dfe9f1;--v8-band-strong:#d3e1ec;--v8-line:#cbd8e3;--v8-text:#23384b;--v8-muted:#64798d;--v8-blue:#255f93;--v8-blue-deep:#173f63}
+
+body.v8-home{background:var(--v8-bg)!important;color:var(--v8-text)}
+body.v8-home main{background:linear-gradient(180deg,#eaf0f5 0%,#f3f6f8 42%,#eaf0f5 100%)!important}
+body.v8-home .v6-hero{margin-bottom:0}
+body.v8-home .yw-company-overview,
+body.v8-home .yw-one-stop,
+body.v8-home .yw-news,
+body.v8-home .yw-landscape{width:min(1180px,calc(100% - 40px));background:transparent!important}
+
+/* Company data becomes one unified industrial band, not four unrelated chips. */
+body.v8-home .yw-stat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0!important;padding:20px 14px;background:linear-gradient(135deg,var(--v8-band) 0%,#e8f0f5 100%);border:1px solid #d2dee8;border-radius:14px}
+body.v8-home .yw-stat-grid article{position:relative!important;padding:5px 20px!important;text-align:left;background:transparent!important}
+body.v8-home .yw-stat-grid article+article:before{content:"";position:absolute;left:0;top:7px;bottom:7px;width:1px;background:#c6d4df}
+body.v8-home .yw-stat-grid strong{font-size:clamp(1.45rem,2vw,1.95rem)!important;line-height:1.05!important;color:var(--v8-blue-deep)!important;font-weight:600!important;margin-bottom:7px!important}
+body.v8-home .yw-stat-grid span{font-size:.72rem!important;letter-spacing:.045em!important;color:#60758a!important;text-transform:uppercase!important;line-height:1.35!important}
+
+/* Continuous page rhythm with soft tone changes instead of pure white slabs. */
+body.v8-home .yw-company-overview{padding-top:72px!important;padding-bottom:58px!important}
+body.v8-home .yw-one-stop{padding-top:64px!important;padding-bottom:64px!important;border-top:1px solid rgba(123,149,171,.18)!important}
+body.v8-home .yw-why.v5-why{background:linear-gradient(180deg,#e2ebf2 0%,#edf3f7 100%)!important;border-top:1px solid #d3dfe8!important;border-bottom:1px solid #d3dfe8!important}
+body.v8-home .yw-news{padding-top:66px!important;padding-bottom:62px!important;border-top:1px solid rgba(123,149,171,.18)!important}
+body.v8-home .yw-landscape{padding-top:64px!important;background:transparent!important}
+body.v8-home .yw-product-image{background:#e3eaf0!important}
+body.v8-home .yw-news-card span,
+body.v8-home .yw-product-card-copy span{color:var(--v8-muted)!important}
+
+/* Reduce dead-white feel of proof and certificate areas while keeping documents readable. */
+body.v8-home .v5-cert-block{background:rgba(255,255,255,.34)!important;border-radius:16px!important;padding:22px 18px!important}
+body.v8-home .v5-coverflow-stage{filter:none!important}
+body.v8-home .v5-proof-card{background:rgba(255,255,255,.34)!important;padding:10px!important}
+body.v8-home .v5-proof-card>div:last-child{padding-right:12px!important}
+
+/* First-level pages use independently sourced image-led banners with no heavy film. */
+body.v8-top-page{background:#eef3f7!important;color:var(--v8-text)}
+body.v8-top-page main{background:#eef3f7!important}
+body.v8-top-page .v6-page-hero{height:clamp(410px,52vh,520px)!important;min-height:410px!important;margin:0 0 28px!important;background:#dfe7ed!important}
+body.v8-top-page .v6-page-hero .v6-hero-slide>img{height:100%!important;object-fit:cover!important;filter:saturate(.96) contrast(1.02)!important}
+body.v8-top-page .v6-page-hero .v6-hero-copy{padding-top:76px!important}
+body.v8-top-page .v6-page-hero .v6-hero-copy h1{font-size:clamp(1.65rem,2.45vw,2.3rem)!important;font-weight:600!important;max-width:720px!important}
+body.v8-top-page .v6-page-hero .v6-hero-copy span{font-size:.94rem!important;max-width:620px!important}
+body.v8-top-page .v6-page-hero .v6-hero-dots{bottom:18px!important}
+body.v8-top-page .section.yw-product-index,
+body.v8-top-page .section.evidence-section,
+body.v8-top-page .section#projects,
+body.v8-top-page .yw-news-page{background:transparent!important}
+
+/* CPEPE-like reveal: a restrained upward pop with slight spring and stagger. */
+.v8-reveal{opacity:0;transform:translate3d(0,34px,0) scale(.985);transition:opacity .72s ease,transform .78s cubic-bezier(.18,1.18,.32,1);transition-delay:var(--v8-delay,0ms);will-change:opacity,transform}
+.v8-reveal.v8-reveal-soft{transform:translate3d(0,24px,0) scale(.993)}
+.v8-reveal.is-visible{opacity:1;transform:translate3d(0,0,0) scale(1)}
+
+body.v8-home .yw-product-card.v8-reveal:hover,
+body.v8-home .yw-landscape-grid figure.v8-reveal:hover{transform:translate3d(0,-4px,0) scale(1.006)}
+
+@media(max-width:900px){
+  body.v8-home .yw-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr));padding:14px 10px}
+  body.v8-home .yw-stat-grid article{padding:12px 16px!important}
+  body.v8-home .yw-stat-grid article+article:before{display:none}
+  body.v8-home .yw-stat-grid article:nth-child(even){border-left:1px solid #c6d4df!important}
+  body.v8-home .yw-stat-grid article:nth-child(n+3){border-top:1px solid #c6d4df!important}
+}
+
+@media(max-width:680px){
+  body.v8-home main,body.v8-top-page main{background:#edf2f6!important}
+  body.v8-home .yw-company-overview,body.v8-home .yw-one-stop,body.v8-home .yw-news,body.v8-home .yw-landscape{width:calc(100% - 28px)!important}
+  body.v8-home .yw-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr));border-radius:10px}
+  body.v8-home .yw-stat-grid strong{font-size:1.55rem!important}
+  body.v8-top-page .v6-page-hero{height:350px!important;min-height:350px!important}
+  body.v8-top-page .v6-page-hero .v6-hero-copy{padding-top:56px!important}
+  .v8-reveal{transform:translate3d(0,24px,0) scale(.99)}
+}
+
+@media(prefers-reduced-motion:reduce){.v8-reveal{opacity:1!important;transform:none!important;transition:none!important}}
