@@ -112,19 +112,31 @@ function walk(dir) {
 }
 
 let headerCount = 0;
+let detailCount = 0;
 for (const file of walk(dist)) {
   let html = fs.readFileSync(file, "utf8");
   let changed = false;
   html = html.replace(/<header class="site-header">[\s\S]*?<\/header>/, (header) => {
     let nextHeader = header;
     for (const [pattern, replacement] of linkRules) nextHeader = nextHeader.replace(pattern, replacement);
+    nextHeader = nextHeader.replace(/<a href="(?:\.\.\/)*products\.html#all-platforms">All Transformer &amp; Substation Products<\/a>/g, "");
     if (nextHeader !== header) {
       changed = true;
       headerCount += 1;
     }
     return nextHeader;
   });
+
+  const productsRoot = path.join(dist, "products") + path.sep;
+  const isProductDetail = file.startsWith(productsRoot);
+  if (isProductDetail && !html.includes("product-hero-split-v21.css")) {
+    const relCss = path.relative(path.dirname(file), cssTarget).split(path.sep).join("/");
+    html = html.replace("</head>", `  <link rel="stylesheet" href="${relCss}">\n</head>`);
+    changed = true;
+    detailCount += 1;
+  }
+
   if (changed) fs.writeFileSync(file, html, "utf8");
 }
 
-console.log(`Applied simplified product showcase hero, single family navigation, and rewired product dropdown anchors across ${headerCount} pages.`);
+console.log(`Applied simplified product showcase hero, removed redundant all-products dropdown entry across ${headerCount} pages, and refined ${detailCount} product detail pages.`);
