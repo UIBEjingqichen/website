@@ -35,6 +35,7 @@ jobs:
           node src/home-news-refine-v18.mjs
           node src/root-index.mjs
           node src/copy-cleanup-v24.mjs
+          node src/applications-projects-v26.mjs
       - name: Commit generated website
         shell: bash
         run: |
