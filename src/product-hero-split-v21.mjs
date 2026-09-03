@@ -8,6 +8,8 @@ const dist = path.join(root, "dist");
 const productsFile = path.join(dist, "products.html");
 const cssSource = path.join(__dirname, "product-hero-split-v21.css");
 const cssTarget = path.join(dist, "assets", "css", "product-hero-split-v21.css");
+const interactionCssSource = path.join(__dirname, "product-hero-interaction-v25.css");
+const interactionCssTarget = path.join(dist, "assets", "css", "product-hero-interaction-v25.css");
 
 if (!fs.existsSync(productsFile)) {
   console.log("Product hero refinement skipped: dist/products.html not found.");
@@ -16,10 +18,14 @@ if (!fs.existsSync(productsFile)) {
 
 fs.mkdirSync(path.dirname(cssTarget), { recursive: true });
 fs.copyFileSync(cssSource, cssTarget);
+if (fs.existsSync(interactionCssSource)) fs.copyFileSync(interactionCssSource, interactionCssTarget);
 
 let productsHtml = fs.readFileSync(productsFile, "utf8");
 if (!productsHtml.includes("product-hero-split-v21.css")) {
   productsHtml = productsHtml.replace("</head>", '  <link rel="stylesheet" href="assets/css/product-hero-split-v21.css">\n</head>');
+}
+if (!productsHtml.includes("product-hero-interaction-v25.css")) {
+  productsHtml = productsHtml.replace("</head>", '  <link rel="stylesheet" href="assets/css/product-hero-interaction-v25.css">\n</head>');
 }
 
 const hero = `<section class="v3p-index-hero v23-product-hero" data-product-hero>
@@ -35,7 +41,7 @@ const hero = `<section class="v3p-index-hero v23-product-hero" data-product-hero
       <figure class="v23-product-visual" data-product-panel="1" aria-hidden="true"><img src="assets/media/products/dry-type-transformers/cast-resin-dry-type-transformer-red-01.jpeg" alt="Cast resin dry-type transformer"></figure>
       <figure class="v23-product-visual" data-product-panel="2" aria-hidden="true"><img src="assets/media/products/special-transformers/dry-type-rectifier-transformer-red.jpeg" alt="Special rectifier transformer"></figure>
       <figure class="v23-product-visual" data-product-panel="3" aria-hidden="true"><img src="assets/media/products/prefabricated-substations/dry-type-prefabricated-substation-exterior-01.webp" alt="Prefabricated substation"></figure>
-      <div class="v23-stage-status" aria-label="Product image position"><span data-product-count>01 / 04</span><div class="v23-stage-dots" aria-hidden="true"><i class="is-active"></i><i></i><i></i><i></i></div></div>
+      <div class="v23-stage-status" aria-label="Product image position"><span data-product-count>01 / 04</span><div class="v23-stage-dots" aria-label="Choose product image"><button class="is-active" type="button" data-product-dot="0" aria-label="Show product image 1" aria-current="true"></button><button type="button" data-product-dot="1" aria-label="Show product image 2" aria-current="false"></button><button type="button" data-product-dot="2" aria-label="Show product image 3" aria-current="false"></button><button type="button" data-product-dot="3" aria-label="Show product image 4" aria-current="false"></button></div></div>
     </div>
   </div>
 </section>`;
@@ -50,7 +56,6 @@ const familyNavigation = `<section class="v23-family-section" id="product-famili
   </nav>
 </div></section>`;
 
-// Match both the original generated hero and any previously refined hero, including extra data-* attributes.
 productsHtml = productsHtml.replace(/<section class="v3p-index-hero[^"]*"[^>]*>[\s\S]*?<\/section>/, hero);
 productsHtml = productsHtml.replace(/<nav class="v20-product-jump"[\s\S]*?<\/nav>\s*/g, "");
 productsHtml = productsHtml.replace(/<section class="v3p-section"><div class="v3p-shell">\s*<p class="v3p-kicker">Browse by Product Family<\/p>[\s\S]*?<\/section>\s*(?=<section class="v3p-section v3p-soft" id="all-platforms">)/, `${familyNavigation}\n`);
@@ -60,7 +65,7 @@ const heroScript = `<script>
   const root = document.querySelector('[data-product-hero]');
   if (!root) return;
   const panels = [...root.querySelectorAll('[data-product-panel]')];
-  const dots = [...root.querySelectorAll('.v23-stage-dots i')];
+  const dots = [...root.querySelectorAll('[data-product-dot]')];
   const count = root.querySelector('[data-product-count]');
   let active = 0;
   let timer;
@@ -72,7 +77,11 @@ const heroScript = `<script>
       panel.classList.toggle('is-active', i === active);
       panel.setAttribute('aria-hidden', i === active ? 'false' : 'true');
     });
-    dots.forEach((dot, i) => dot.classList.toggle('is-active', i === active));
+    dots.forEach((dot, i) => {
+      const current = i === active;
+      dot.classList.toggle('is-active', current);
+      dot.setAttribute('aria-current', current ? 'true' : 'false');
+    });
     if (count) count.textContent = String(active + 1).padStart(2, '0') + ' / ' + String(panels.length).padStart(2, '0');
   };
 
@@ -82,6 +91,13 @@ const heroScript = `<script>
     timer = setInterval(() => select(active + 1), 5600);
   };
 
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      select(index);
+      start();
+    });
+  });
+
   root.addEventListener('mouseenter', () => { paused = true; clearInterval(timer); });
   root.addEventListener('mouseleave', () => { paused = false; start(); });
   root.addEventListener('focusin', () => { paused = true; clearInterval(timer); });
@@ -90,7 +106,6 @@ const heroScript = `<script>
 })();
 </script>`;
 
-// Remove an older V22/V23 inline hero controller before adding the current controller.
 productsHtml = productsHtml.replace(/<script>\s*\(\(\) => \{\s*const root = document\.querySelector\('\[data-product-hero\]'\);[\s\S]*?<\/script>\s*/g, "");
 productsHtml = productsHtml.replace("</body>", `${heroScript}\n</body>`);
 
@@ -139,4 +154,4 @@ for (const file of walk(dist)) {
   if (changed) fs.writeFileSync(file, html, "utf8");
 }
 
-console.log(`Applied simplified product showcase hero, removed redundant all-products dropdown entry across ${headerCount} pages, and refined ${detailCount} product detail pages.`);
+console.log(`Applied enlarged interactive product showcase hero, removed redundant all-products dropdown entry across ${headerCount} pages, and refined ${detailCount} product detail pages.`);
