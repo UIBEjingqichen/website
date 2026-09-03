@@ -50,7 +50,8 @@ const familyNavigation = `<section class="v23-family-section" id="product-famili
   </nav>
 </div></section>`;
 
-productsHtml = productsHtml.replace(/<section class="v3p-index-hero(?: [^"]*)?">[\s\S]*?<\/section>/, hero);
+// Match both the original generated hero and any previously refined hero, including extra data-* attributes.
+productsHtml = productsHtml.replace(/<section class="v3p-index-hero[^"]*"[^>]*>[\s\S]*?<\/section>/, hero);
 productsHtml = productsHtml.replace(/<nav class="v20-product-jump"[\s\S]*?<\/nav>\s*/g, "");
 productsHtml = productsHtml.replace(/<section class="v3p-section"><div class="v3p-shell">\s*<p class="v3p-kicker">Browse by Product Family<\/p>[\s\S]*?<\/section>\s*(?=<section class="v3p-section v3p-soft" id="all-platforms">)/, `${familyNavigation}\n`);
 
@@ -89,9 +90,9 @@ const heroScript = `<script>
 })();
 </script>`;
 
-if (!productsHtml.includes("const root = document.querySelector('[data-product-hero]')")) {
-  productsHtml = productsHtml.replace("</body>", `${heroScript}\n</body>`);
-}
+// Remove an older V22/V23 inline hero controller before adding the current controller.
+productsHtml = productsHtml.replace(/<script>\s*\(\(\) => \{\s*const root = document\.querySelector\('\[data-product-hero\]'\);[\s\S]*?<\/script>\s*/g, "");
+productsHtml = productsHtml.replace("</body>", `${heroScript}\n</body>`);
 
 fs.writeFileSync(productsFile, productsHtml, "utf8");
 
