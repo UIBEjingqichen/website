@@ -23,6 +23,7 @@ jobs:
         with:
           node-version: '22'
       - name: Build homepage preview
+        # v15 capability tabs, image assets and project map
         run: node src/home-capabilities-map-v14.mjs && node src/home-capabilities-refine-v15.mjs && node src/root-index.mjs && node src/home-image-cleanup-v13.mjs
       - name: Commit generated preview
         shell: bash
