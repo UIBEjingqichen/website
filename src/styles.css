@@ -15,7 +15,8 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; color: var(--ink); background: #fff; font: 16px/1.55 Arial, Helvetica, sans-serif; }
+body { margin: 0; color: var(--ink); background: #fff; font: 16px/1.55 Arial, Helvetica, sans-serif; animation: site-page-enter .28s cubic-bezier(.22,.7,.3,1) both; }
+body.is-page-leaving { opacity: 0; transform: translateY(-5px); transition: opacity .16s ease, transform .16s ease; pointer-events: none; }
 body.modal-open { overflow: hidden; }
 a { color: inherit; text-decoration: none; }
 button, input, select, textarea { font: inherit; }
@@ -27,6 +28,7 @@ h1 { font-size: clamp(42px, 6vw, 74px); }
 h2 { font-size: clamp(29px, 3.4vw, 46px); }
 h3 { font-size: 20px; }
 p { margin: 0 0 14px; color: var(--muted); }
+@keyframes site-page-enter { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
 .eyebrow { margin: 0 0 8px; color: var(--teal); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .lead { max-width: 950px; color: #34495b; font-size: 19px; }
 .section, .page-hero, .page-image-hero, .product-hero-v2, .product-page-body { padding: clamp(54px, 7vw, 96px) clamp(20px, 5vw, 76px); }

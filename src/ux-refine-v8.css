@@ -8,12 +8,12 @@ body.v8-home .yw-one-stop,
 body.v8-home .yw-news,
 body.v8-home .yw-landscape{width:min(1180px,calc(100% - 40px));background:transparent!important}
 
-/* Company data becomes one unified industrial band, not four unrelated chips. */
-body.v8-home .yw-stat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0!important;padding:20px 14px;background:linear-gradient(135deg,var(--v8-band) 0%,#e8f0f5 100%);border:1px solid #d2dee8;border-radius:14px}
-body.v8-home .yw-stat-grid article{position:relative!important;padding:5px 20px!important;text-align:left;background:transparent!important}
-body.v8-home .yw-stat-grid article+article:before{content:"";position:absolute;left:0;top:7px;bottom:7px;width:1px;background:#c6d4df}
-body.v8-home .yw-stat-grid strong{font-size:clamp(1.45rem,2vw,1.95rem)!important;line-height:1.05!important;color:var(--v8-blue-deep)!important;font-weight:600!important;margin-bottom:7px!important}
-body.v8-home .yw-stat-grid span{font-size:.72rem!important;letter-spacing:.045em!important;color:#60758a!important;text-transform:uppercase!important;line-height:1.35!important}
+/* Give each company metric enough room to read as a number, not a squeezed label. */
+body.v8-home .yw-stat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px!important;padding:1px;overflow:hidden;background:#c6d4df;border:1px solid #c6d4df;border-radius:16px}
+body.v8-home .yw-stat-grid article{position:relative!important;display:flex;min-height:132px!important;flex-direction:column;justify-content:center;padding:24px 26px!important;text-align:left;background:linear-gradient(145deg,#e2ebf2 0%,#edf3f7 100%)!important}
+body.v8-home .yw-stat-grid article:before{display:none!important}
+body.v8-home .yw-stat-grid strong{white-space:nowrap;font-size:clamp(1.75rem,2.6vw,2.35rem)!important;line-height:1!important;color:var(--v8-blue-deep)!important;font-weight:650!important;margin:0 0 10px!important;letter-spacing:-.025em}
+body.v8-home .yw-stat-grid span{max-width:190px;font-size:.7rem!important;letter-spacing:.055em!important;color:#60758a!important;text-transform:uppercase!important;line-height:1.45!important}
 
 /* Continuous page rhythm with soft tone changes instead of pure white slabs. */
 body.v8-home .yw-company-overview{padding-top:72px!important;padding-bottom:58px!important}
@@ -54,11 +54,7 @@ body.v8-home .yw-product-card.v8-reveal:hover,
 body.v8-home .yw-landscape-grid figure.v8-reveal:hover{transform:translate3d(0,-4px,0) scale(1.006)}
 
 @media(max-width:900px){
-  body.v8-home .yw-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr));padding:14px 10px}
-  body.v8-home .yw-stat-grid article{padding:12px 16px!important}
-  body.v8-home .yw-stat-grid article+article:before{display:none}
-  body.v8-home .yw-stat-grid article:nth-child(even){border-left:1px solid #c6d4df!important}
-  body.v8-home .yw-stat-grid article:nth-child(n+3){border-top:1px solid #c6d4df!important}
+  body.v8-home .yw-stat-grid article{min-height:118px!important;padding:20px!important}
 }
 
 @media(max-width:680px){

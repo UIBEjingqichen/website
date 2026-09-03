@@ -2,6 +2,44 @@ const body = document.body;
 const bySelector = (selector, scope = document) => scope.querySelector(selector);
 const all = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 
+function setupPageTransitions() {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let navigating = false;
+
+  const resetPage = () => {
+    navigating = false;
+    body.classList.remove("is-page-leaving");
+    body.removeAttribute("aria-busy");
+  };
+
+  window.addEventListener("pageshow", resetPage);
+  window.addEventListener("pagehide", () => body.classList.remove("is-page-leaving"));
+
+  document.addEventListener("click", (event) => {
+    if (event.defaultPrevented || navigating || reducedMotion.matches || event.button !== 0) return;
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+    const link = event.target instanceof Element ? event.target.closest("a[href]") : null;
+    if (!link || link.hasAttribute("download") || (link.target && link.target !== "_self")) return;
+
+    const href = link.getAttribute("href");
+    if (!href || href.startsWith("#") || /^(mailto:|tel:|javascript:)/i.test(href)) return;
+
+    const destination = new URL(link.href, window.location.href);
+    if (destination.origin !== window.location.origin) return;
+    if (destination.pathname === window.location.pathname && destination.search === window.location.search && destination.hash) return;
+    if (/\.(?:pdf|docx?|xlsx?|zip|jpe?g|png|webp)$/i.test(destination.pathname)) return;
+
+    event.preventDefault();
+    navigating = true;
+    body.classList.add("is-page-leaving");
+    body.setAttribute("aria-busy", "true");
+    window.setTimeout(() => window.location.assign(destination.href), 160);
+  });
+}
+
+setupPageTransitions();
+
 const menuButton = bySelector("[data-menu-toggle]");
 const navigation = bySelector("[data-nav]");
 menuButton?.addEventListener("click", () => {

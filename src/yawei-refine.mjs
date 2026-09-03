@@ -68,7 +68,7 @@ function heroWave() {
 
 function companyOverview() {
   return `<section class="yw-company-overview">
-    <div class="yw-company-copy"><p class="yw-kicker">TIANYU ELECTRIC</p><h2>${esc(company.legalName)}</h2><p>Established in ${esc(company.established)}, Tianyu Electric provides transformer, prefabricated substation, switchgear and primary electrical equipment solutions for utility, renewable, industrial and infrastructure projects.</p><p>${esc(company.groupBackground)} ${esc(company.manufacturingBase)}</p><a class="yw-text-arrow" href="about.html">EXPLORE COMPANY <span>→</span></a></div>
+    <div class="yw-company-copy"><p class="yw-kicker">TIANYU ELECTRIC</p><h2>${esc(company.legalName)}</h2><p>Established in ${esc(company.established)}, Tianyu Electric provides transformer, prefabricated substation, switchgear and primary electrical equipment solutions for utility, renewable, industrial and infrastructure projects.</p><a class="yw-text-arrow" href="about.html">EXPLORE COMPANY <span>→</span></a></div>
     <div class="yw-stat-grid">${companyStats.map((stat, index) => `<article><small>${String(index + 1).padStart(2, "0")}</small><strong data-count-up="${esc(stat.value)}">0</strong><span>${esc(stat.label)}</span></article>`).join("")}</div>
   </section>`;
 }
