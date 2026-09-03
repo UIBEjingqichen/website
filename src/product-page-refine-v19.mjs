@@ -10,7 +10,7 @@ const cssSource = path.join(__dirname, "product-page-refine-v19.css");
 const cssTarget = path.join(dist, "assets", "css", "product-page-refine-v19.css");
 
 if (!fs.existsSync(productsFile)) {
-  console.log("Product V19 refinement skipped: dist/products.html not found.");
+  console.log("Product refinement skipped: dist/products.html not found.");
   process.exit(0);
 }
 
@@ -42,5 +42,17 @@ html = html.replace(
   "Explore by product family"
 );
 
+/* Use a true full-width site photo for the hero. The previous isolated transformer image contains composition space that reads as an empty right column on wide screens. */
+html = html.replace(
+  '<div class="media"><img src="assets/media/products/power-transformers/oil-immersed-power-transformer-installed.png" alt="Tianyu power transformer"></div>',
+  '<div class="media"><img src="assets/media/applications/grid-substation-yard.jpeg" alt="Tianyu transformer substation project"></div>'
+);
+
+const quickNav = `<nav class="v20-product-jump" aria-label="Product quick navigation"><div class="v20-product-jump-inner"><span class="v20-product-jump-label">Quick navigation</span><a href="#all-platforms">All Products</a><a href="#power-transformers">Power Transformers</a><a href="#distribution-transformers">Distribution Transformers</a><a href="#special-transformers">Special &amp; Renewable</a><a href="#prefabricated-substations">Prefabricated Substations</a></div></nav>`;
+
+if (!html.includes("v20-product-jump")) {
+  html = html.replace(/(<section class="v3p-index-hero">[\s\S]*?<\/section>)/, `$1\n${quickNav}`);
+}
+
 fs.writeFileSync(productsFile, html, "utf8");
-console.log("Applied V19 homepage-style refinement to the product portfolio page.");
+console.log("Applied product-page hero, quick navigation and card-rhythm refinement.");
