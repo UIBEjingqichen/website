@@ -17,5 +17,11 @@ let html = fs.readFileSync(home, "utf8");
 if (!html.includes("home-evidence-transition-v17.css")) {
   html = html.replace("</head>", '  <link rel="stylesheet" href="assets/css/home-evidence-transition-v17.css">\n</head>');
 }
+
+// The homepage already presents project cases and manufacturing immediately above.
+// Remove the duplicated proof-card pair under the certificate carousel so the
+// evidence section can transition directly into News.
+html = html.replace(/<div class="v5-proof-grid">[\s\S]*?<\/div>\s*<\/section>/, "</section>");
+
 fs.writeFileSync(home, html, "utf8");
-console.log("Homepage map-to-evidence transition and certificate presentation refined.");
+console.log("Homepage certificate presentation refined and duplicated proof cards removed.");
