@@ -34,6 +34,7 @@ jobs:
           node src/product-hero-split-v21.mjs
           node src/home-news-refine-v18.mjs
           node src/root-index.mjs
+          node src/copy-cleanup-v24.mjs
       - name: Commit generated website
         shell: bash
         run: |
