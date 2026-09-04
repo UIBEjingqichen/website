@@ -46,6 +46,7 @@ jobs:
           node src/manufacturing-v35-density.mjs
           node src/site-density-v36.mjs
           node src/home-density-v37.mjs
+          node src/home-refine-v38.mjs
       - name: Commit generated website
         shell: bash
         run: |
