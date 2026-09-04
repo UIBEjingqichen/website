@@ -28,7 +28,7 @@ jobs:
           if npm run build; then
             exit 0
           fi
-          echo "Full legacy build validation failed; preserving committed site and applying current homepage/product refinements."
+          echo "Full legacy build validation failed; preserving committed site and applying current refinements."
           git restore --source=HEAD -- dist index.html catalog-content/data || true
           node src/product-page-refine-v19.mjs
           node src/product-hero-split-v21.mjs
@@ -37,6 +37,7 @@ jobs:
           node src/copy-cleanup-v24.mjs
           node src/applications-projects-v26.mjs
           node src/modal-center-fix-v27.mjs
+          node src/about-page-v28.mjs
       - name: Commit generated website
         shell: bash
         run: |
