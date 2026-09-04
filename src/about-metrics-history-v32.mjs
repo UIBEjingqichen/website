@@ -6,10 +6,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const dist = path.join(root, 'dist');
 const page = path.join(dist, 'about.html');
-const cssSource = path.join(__dirname, 'about-metrics-history-v32.css');
-const cssTarget = path.join(dist, 'assets', 'css', 'about-metrics-history-v32.css');
-const jsSource = path.join(__dirname, 'about-metrics-v32.js');
-const jsTarget = path.join(dist, 'assets', 'js', 'about-metrics-v32.js');
+const cssSource = path.join(__dirname, 'about-interactions-v33.css');
+const cssTarget = path.join(dist, 'assets', 'css', 'about-interactions-v33.css');
+const jsSource = path.join(__dirname, 'about-interactions-v33.js');
+const jsTarget = path.join(dist, 'assets', 'js', 'about-interactions-v33.js');
 
 if (!fs.existsSync(page)) process.exit(0);
 fs.mkdirSync(path.dirname(cssTarget), { recursive: true });
@@ -18,10 +18,14 @@ fs.copyFileSync(cssSource, cssTarget);
 fs.copyFileSync(jsSource, jsTarget);
 
 let html = fs.readFileSync(page, 'utf8');
+
+/* Remove superseded About interaction assets, then insert V33 last so it wins the cascade. */
 html = html.replace(/\s*<link rel="stylesheet" href="assets\/css\/about-metrics-history-v32\.css">/g, '');
-html = html.replace('</head>', '  <link rel="stylesheet" href="assets/css/about-metrics-history-v32.css">\n</head>');
+html = html.replace(/\s*<link rel="stylesheet" href="assets\/css\/about-interactions-v33\.css">/g, '');
+html = html.replace('</head>', '  <link rel="stylesheet" href="assets/css/about-interactions-v33.css">\n</head>');
 html = html.replace(/\s*<script src="assets\/js\/about-metrics-v32\.js"><\/script>/g, '');
-html = html.replace('</body>', '  <script src="assets/js/about-metrics-v32.js"></script>\n</body>');
+html = html.replace(/\s*<script src="assets\/js\/about-interactions-v33\.js"><\/script>/g, '');
+html = html.replace('</body>', '  <script src="assets/js/about-interactions-v33.js"></script>\n</body>');
 
 const metrics = `    <div class="ab30-metrics" aria-label="Tianyu Electric manufacturing metrics">
       <div class="ab30-metric"><small>Product portfolio</small><strong data-count="30" data-suffix="+">30+</strong><span>Product series</span></div>
@@ -37,4 +41,4 @@ const metrics = `    <div class="ab30-metrics" aria-label="Tianyu Electric manuf
 html = html.replace(/    <div class="ab30-metrics"[\s\S]*?\n    <\/div>\n  <\/div><\/section>/, `${metrics}\n  </div></section>`);
 
 fs.writeFileSync(page, html, 'utf8');
-console.log('Expanded About metrics, removed 220 kV as a headline metric, enabled count-up animation, and made company milestones fully visible without horizontal dragging.');
+console.log('About V33: 8 count-up metrics plus an auto-scrolling milestone rail that can be dragged directly with mouse or touch.');
