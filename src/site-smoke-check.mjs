@@ -16,6 +16,7 @@ const requiredFiles = [
   "catalog.html",
   "knowledge/index.html",
   "product-range-pages.json",
+  "assets/css/site-typography.css",
   "assets/media/catalog-v3/ga-power-transformers.webp",
   "assets/media/catalog-v3/ga-distribution-renewable.webp",
   "products/35kv-power-transformer/index.html",
@@ -46,6 +47,10 @@ const checks = [
   ["products/220kv-power-transformer/index.html", "240,000 kVA"],
   ["catalog.html", "Tianyu Electric Export Product Catalog 2026"],
   ["index.html", "rel=\"canonical\""],
+  ["index.html", "site-typography.css"],
+  ["about.html", "site-typography.css"],
+  ["manufacturing.html", "site-typography.css"],
+  ["knowledge/index.html", "site-typography.css"],
 ];
 for (const [rel, needle] of checks) {
   if (!read(rel).includes(needle)) throw new Error(`${rel} is missing expected content: ${needle}`);
