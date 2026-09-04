@@ -42,6 +42,7 @@ jobs:
           node src/about-page-v30.mjs
           node src/about-history-v31.mjs
           node src/about-interactions-v33.mjs
+          node src/manufacturing-v34.mjs
       - name: Commit generated website
         shell: bash
         run: |
