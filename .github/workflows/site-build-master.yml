@@ -43,6 +43,7 @@ jobs:
           node src/about-history-v31.mjs
           node src/about-interactions-v33.mjs
           node src/manufacturing-v34.mjs
+          node src/manufacturing-v35-density.mjs
       - name: Commit generated website
         shell: bash
         run: |
