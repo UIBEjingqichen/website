@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-02T10:25:09.730Z",
-  "created_count": 103,
+  "generated_at": "2026-09-04T08:23:41.036Z",
+  "created_count": 102,
   "missing_target_count": 0,
   "skipped_evidence_count": 21,
   "created": [
@@ -11,10 +11,6 @@
     {
       "old": "case-renewable-energy-base.jpeg",
       "new": "applications/renewable-wind-solar-landscape.jpeg"
-    },
-    {
-      "old": "catalog-v3/renewable-projects.webp",
-      "new": "catalog-v3/renewable-application-montage.webp"
     },
     {
       "old": "company-factory-campus.jpeg",
