@@ -33,6 +33,7 @@
       if (block) observer.observe(block); else metrics.forEach(animate);
     }
   }
+
   const links = [...document.querySelectorAll('.mfg34-jump a[href^="#"]')];
   const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
   const activate = (id) => links.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === `#${id}`));
