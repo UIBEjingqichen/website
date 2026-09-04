@@ -1,11 +1,15 @@
 (() => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   const metrics = [...document.querySelectorAll('.ab30-metric strong[data-count]')];
   const formatValue = (value, el) => {
     const decimals = Number(el.dataset.decimals || 0);
     const suffix = el.dataset.suffix || '';
     const prefix = el.dataset.prefix || '';
-    const formatted = Number(value).toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+    const formatted = Number(value).toLocaleString('en-US', {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals
+    });
     return `${prefix}${formatted}${suffix}`;
   };
   const showFinal = (el) => { el.textContent = formatValue(Number(el.dataset.count || 0), el); };
@@ -24,6 +28,7 @@
     };
     requestAnimationFrame(tick);
   };
+
   if (metrics.length) {
     if (prefersReducedMotion) metrics.forEach(showFinal);
     else {
@@ -45,16 +50,18 @@
   scroller.setAttribute('tabindex', '0');
   scroller.setAttribute('role', 'region');
   scroller.setAttribute('aria-label', 'Company milestones. Drag left or right to explore the timeline.');
+
   let dragging = false;
-  let hovering = false;
   let startX = 0;
   let startScrollLeft = 0;
   let direction = 1;
   let resumeAt = 0;
   let edgePauseUntil = 0;
   let lastTime = performance.now();
-  const speed = 0.028;
+  const speed = 0.055; // 55px/s: slow, but clearly visible
+
   const pauseFor = (ms) => { resumeAt = Math.max(resumeAt, performance.now() + ms); };
+
   scroller.addEventListener('pointerdown', (event) => {
     if (event.button !== undefined && event.button !== 0) return;
     dragging = true;
@@ -62,41 +69,53 @@
     startScrollLeft = scroller.scrollLeft;
     scroller.classList.add('is-dragging');
     scroller.setPointerCapture?.(event.pointerId);
-    pauseFor(1800);
   });
+
   scroller.addEventListener('pointermove', (event) => {
     if (!dragging) return;
     scroller.scrollLeft = startScrollLeft - (event.clientX - startX);
     event.preventDefault();
   });
+
   const endDrag = (event) => {
     if (!dragging) return;
     dragging = false;
     scroller.classList.remove('is-dragging');
-    if (event?.pointerId !== undefined) { try { scroller.releasePointerCapture?.(event.pointerId); } catch (_) {} }
-    pauseFor(1500);
+    if (event?.pointerId !== undefined) {
+      try { scroller.releasePointerCapture?.(event.pointerId); } catch (_) {}
+    }
+    pauseFor(700);
   };
+
   scroller.addEventListener('pointerup', endDrag);
   scroller.addEventListener('pointercancel', endDrag);
   scroller.addEventListener('lostpointercapture', endDrag);
-  scroller.addEventListener('mouseenter', () => { hovering = true; });
-  scroller.addEventListener('mouseleave', () => { hovering = false; pauseFor(700); });
+
   scroller.addEventListener('keydown', (event) => {
     if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
     event.preventDefault();
     scroller.scrollBy({ left: event.key === 'ArrowRight' ? 220 : -220, behavior: 'smooth' });
-    pauseFor(1800);
+    pauseFor(1000);
   });
+
   const autoScroll = (now) => {
     const dt = Math.min(now - lastTime, 48);
     lastTime = now;
     const max = Math.max(0, scroller.scrollWidth - scroller.clientWidth);
-    if (!prefersReducedMotion && max > 2 && !dragging && !hovering && now >= resumeAt && now >= edgePauseUntil) {
+
+    if (!prefersReducedMotion && max > 2 && !dragging && now >= resumeAt && now >= edgePauseUntil) {
       scroller.scrollLeft += direction * speed * dt;
-      if (scroller.scrollLeft >= max - 1) { scroller.scrollLeft = max; direction = -1; edgePauseUntil = now + 900; }
-      else if (scroller.scrollLeft <= 1) { scroller.scrollLeft = 0; direction = 1; edgePauseUntil = now + 900; }
+      if (scroller.scrollLeft >= max - 1) {
+        scroller.scrollLeft = max;
+        direction = -1;
+        edgePauseUntil = now + 650;
+      } else if (scroller.scrollLeft <= 1) {
+        scroller.scrollLeft = 0;
+        direction = 1;
+      }
     }
     requestAnimationFrame(autoScroll);
   };
+
   requestAnimationFrame(autoScroll);
 })();
