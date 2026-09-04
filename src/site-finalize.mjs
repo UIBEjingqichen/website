@@ -8,4 +8,5 @@ runStages("Final site pass", [
   "home-density-v37.mjs",
   "home-refine-v38.mjs",
   "company-build.mjs",
+  "site-typography.mjs",
 ]);
