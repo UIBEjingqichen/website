@@ -1,0 +1,5 @@
+/* About history V31: catalog-grounded timeline, no invented labels */
+.ab30-about .ab30-history-head{display:block;max-width:620px;margin-bottom:42px}
+.ab30-about .ab30-history-track{grid-template-columns:repeat(9,190px)}
+.ab30-about .ab30-time p{margin-top:10px}
+@media(max-width:680px){.ab30-about .ab30-history-track{grid-template-columns:repeat(9,168px)}}
