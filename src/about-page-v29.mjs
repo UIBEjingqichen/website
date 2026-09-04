@@ -49,7 +49,7 @@ const main = `<main>
   <section class="ab29-history"><div class="ab29-shell">
     <div class="ab29-history-head">
       <div><p class="ab29-kicker">Historical Evolution</p><h2>From predecessor electrical factories to the present Tianyu manufacturing base.</h2></div>
-      <p>The development sequence below follows Tianyu's company catalog and traces the predecessor factories, group restructuring and relocation of the modern manufacturing base.</p>
+      <p>The company's development spans predecessor electrical factories in Fuzhou, the formation of Tianyu Group, integration with XJ Group and the move to the current Minhou manufacturing campus.</p>
     </div>
     <div class="ab29-history-scroll"><div class="ab29-history-track">
       <article class="ab29-time"><strong>1920</strong><small>Predecessor roots</small><p>A predecessor machine works was established in Fuzhou, forming part of the industrial lineage that later developed into the electrical-equipment business.</p></article>
