@@ -39,6 +39,7 @@ jobs:
           node src/modal-center-fix-v27.mjs
           node src/about-page-v28.mjs
           node src/about-page-v29.mjs
+          node src/about-page-v30.mjs
       - name: Commit generated website
         shell: bash
         run: |
