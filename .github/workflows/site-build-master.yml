@@ -40,6 +40,7 @@ jobs:
           node src/about-page-v28.mjs
           node src/about-page-v29.mjs
           node src/about-page-v30.mjs
+          node src/about-history-v31.mjs
       - name: Commit generated website
         shell: bash
         run: |
