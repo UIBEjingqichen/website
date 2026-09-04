@@ -38,7 +38,7 @@ const checks = [
   ["manufacturing.html", "85,243 m²"],
   ["products.html", "Power Transformers"],
   ["products.html", "Distribution Transformers"],
-  ["products.html", "Dry-Type Transformers"],
+  ["products.html", "Special &amp; Renewable Transformers"],
   ["products.html", "Prefabricated Substations"],
   ["products/35kv-power-transformer/index.html", "8–31.5 MVA"],
   ["products/66kv-power-transformer/index.html", "6.3–63 MVA"],
