@@ -1,0 +1,174 @@
+/* Homepage V37: tighter editorial scale for company overview and news */
+
+/* Company overview: remove the oversized empty stage and keep the evidence close to the copy */
+body.site36-density.v8-home .yw-company-overview,
+body.site36-density.v7-home .yw-company-overview{
+  width:min(1080px,calc(100% - 48px))!important;
+  min-height:0!important;
+  margin:0 auto!important;
+  padding:44px 0 46px!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(430px,.92fr)!important;
+  gap:58px!important;
+  align-items:center!important;
+}
+body.site36-density.v8-home .yw-company-copy,
+body.site36-density.v7-home .yw-company-copy{max-width:560px!important}
+body.site36-density.v8-home .yw-company-copy .yw-kicker,
+body.site36-density.v7-home .yw-company-copy .yw-kicker{
+  margin:0 0 12px!important;
+  font-size:10px!important;
+  line-height:1.2!important;
+  letter-spacing:.13em!important;
+}
+body.site36-density.v8-home .yw-company-copy h2,
+body.site36-density.v7-home .yw-company-copy h2{
+  margin:0!important;
+  font-size:30px!important;
+  font-weight:600!important;
+  line-height:1.15!important;
+  letter-spacing:-.018em!important;
+}
+body.site36-density.v8-home .yw-company-copy>p:not(.yw-kicker),
+body.site36-density.v7-home .yw-company-copy>p:not(.yw-kicker){
+  max-width:535px!important;
+  margin:20px 0 0!important;
+  font-size:13px!important;
+  line-height:1.68!important;
+}
+body.site36-density.v8-home .yw-company-copy .yw-text-arrow,
+body.site36-density.v7-home .yw-company-copy .yw-text-arrow{
+  display:inline-flex!important;
+  margin-top:26px!important;
+  font-size:10.5px!important;
+  letter-spacing:.035em!important;
+}
+body.site36-density.v8-home .yw-stat-grid,
+body.site36-density.v7-home .yw-stat-grid{
+  align-self:center!important;
+  min-height:0!important;
+  border-radius:12px!important;
+}
+body.site36-density.v8-home .yw-stat-grid article,
+body.site36-density.v7-home .yw-stat-grid article{
+  min-height:102px!important;
+  padding:17px 18px!important;
+}
+body.site36-density.v8-home .yw-stat-grid strong,
+body.site36-density.v7-home .yw-stat-grid strong{
+  font-size:27px!important;
+  font-weight:600!important;
+  line-height:1!important;
+}
+body.site36-density.v8-home .yw-stat-grid span,
+body.site36-density.v7-home .yw-stat-grid span{
+  margin-top:12px!important;
+  font-size:9.5px!important;
+  line-height:1.35!important;
+  letter-spacing:.055em!important;
+}
+
+/* Technical News & Knowledge: supporting editorial module, not another hero */
+body.site36-density.v8-home .yw-news,
+body.site36-density.v7-home .yw-news{
+  padding:50px max(48px,calc((100vw - 1080px)/2)) 58px!important;
+}
+body.site36-density.v8-home .yw-news-head,
+body.site36-density.v7-home .yw-news-head{
+  gap:28px!important;
+  margin-bottom:26px!important;
+  align-items:flex-end!important;
+}
+body.site36-density.v8-home .yw-news-head>div,
+body.site36-density.v7-home .yw-news-head>div{max-width:600px!important}
+body.site36-density.v8-home .yw-news-head h2,
+body.site36-density.v7-home .yw-news-head h2{
+  max-width:600px!important;
+  font-size:32px!important;
+  font-weight:600!important;
+  line-height:1.14!important;
+  letter-spacing:-.018em!important;
+}
+body.site36-density.v8-home .yw-news-head>div>p,
+body.site36-density.v7-home .yw-news-head>div>p{
+  margin-bottom:7px!important;
+  font-size:9.5px!important;
+  letter-spacing:.13em!important;
+}
+body.site36-density.v8-home .yw-news-head>a,
+body.site36-density.v7-home .yw-news-head>a{font-size:10px!important}
+body.site36-density.v8-home .yw-news-grid,
+body.site36-density.v7-home .yw-news-grid{gap:12px!important}
+body.site36-density.v8-home .yw-news-card,
+body.site36-density.v8-home .yw-news-card.featured,
+body.site36-density.v7-home .yw-news-card,
+body.site36-density.v7-home .yw-news-card.featured{
+  min-height:232px!important;
+  padding:21px 22px 20px!important;
+  border-radius:8px!important;
+}
+body.site36-density.v8-home .yw-news-number,
+body.site36-density.v7-home .yw-news-number{
+  top:20px!important;
+  right:21px!important;
+  font-size:27px!important;
+}
+body.site36-density.v8-home .yw-news-card>p,
+body.site36-density.v8-home .yw-news-card.featured>p,
+body.site36-density.v7-home .yw-news-card>p,
+body.site36-density.v7-home .yw-news-card.featured>p{
+  margin:0 48px 27px 0!important;
+  font-size:9px!important;
+  letter-spacing:.09em!important;
+}
+body.site36-density.v8-home .yw-news-card h3,
+body.site36-density.v8-home .yw-news-card.featured h3,
+body.site36-density.v7-home .yw-news-card h3,
+body.site36-density.v7-home .yw-news-card.featured h3{
+  margin-bottom:10px!important;
+  font-size:17px!important;
+  font-weight:600!important;
+  line-height:1.28!important;
+}
+body.site36-density.v8-home .yw-news-card>span,
+body.site36-density.v8-home .yw-news-card.featured>span,
+body.site36-density.v7-home .yw-news-card>span,
+body.site36-density.v7-home .yw-news-card.featured>span{
+  font-size:11.5px!important;
+  line-height:1.55!important;
+}
+body.site36-density.v8-home .yw-news-card>strong,
+body.site36-density.v8-home .yw-news-card.featured>strong,
+body.site36-density.v7-home .yw-news-card>strong,
+body.site36-density.v7-home .yw-news-card.featured>strong{
+  padding-top:18px!important;
+  font-size:9.5px!important;
+}
+
+@media(max-width:900px){
+  body.site36-density.v8-home .yw-company-overview,
+  body.site36-density.v7-home .yw-company-overview{
+    width:min(100% - 32px,1080px)!important;
+    grid-template-columns:1fr!important;
+    gap:30px!important;
+    padding:40px 0!important;
+  }
+  body.site36-density.v8-home .yw-company-copy,
+  body.site36-density.v7-home .yw-company-copy{max-width:650px!important}
+  body.site36-density.v8-home .yw-news,
+  body.site36-density.v7-home .yw-news{padding:44px 28px 52px!important}
+}
+@media(max-width:640px){
+  body.site36-density.v8-home .yw-company-overview,
+  body.site36-density.v7-home .yw-company-overview{padding:34px 0 38px!important}
+  body.site36-density.v8-home .yw-company-copy h2,
+  body.site36-density.v7-home .yw-company-copy h2{font-size:27px!important}
+  body.site36-density.v8-home .yw-news,
+  body.site36-density.v7-home .yw-news{padding:40px 18px 46px!important}
+  body.site36-density.v8-home .yw-news-head h2,
+  body.site36-density.v7-home .yw-news-head h2{font-size:28px!important}
+  body.site36-density.v8-home .yw-news-card,
+  body.site36-density.v8-home .yw-news-card.featured,
+  body.site36-density.v7-home .yw-news-card,
+  body.site36-density.v7-home .yw-news-card.featured{min-height:210px!important}
+}
