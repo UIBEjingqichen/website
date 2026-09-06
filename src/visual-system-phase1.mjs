@@ -73,7 +73,7 @@ function phaseOneHome(html) {
     return next;
   });
 
-  html = html.replace('<div class="v5-certificate-coverflow">', '<div class="v5-certificate-coverflow" data-phase1-evidence-shelf tabindex="0">');
+  html = html.replace(/<div class="v5-certificate-coverflow"([^>]*)>/, (_match, attrs) => `<div class="v5-certificate-coverflow"${attrs} data-phase1-evidence-shelf tabindex="0">`);
   return html;
 }
 
