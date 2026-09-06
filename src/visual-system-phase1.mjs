@@ -61,6 +61,7 @@ function migrateStyles(html, cssHrefs, behaviorHref) {
 function phaseOneHome(html) {
   html = migrateStyles(html, ['assets/css/visual-system.css', 'assets/css/home.css'], 'assets/js/visual-behavior.js');
   html = addBodyClass(html, 'phase1-home');
+  html = html.replace(/\s*<script\b[^>]*src=["']assets\/js\/ux-refine-v5\.js["'][^>]*><\/script>/g, '');
 
   let slideIndex = 0;
   html = html.replace(/<article class="v6-hero-slide[^>]*>[\s\S]*?<\/article>/g, (article) => {
@@ -109,6 +110,7 @@ function phaseOneDetail(html) {
 
   html = html.replace('<section class="v3p-section"><div class="v3p-shell"><p class="v3p-kicker">Technical Range</p>', '<section class="v3p-section" id="ratings"><div class="v3p-shell"><p class="v3p-kicker">Technical Range</p>');
   html = html.replace('<section class="v3p-section v3p-soft"><div class="v3p-shell v3p-two-col">', '<section class="v3p-section v3p-soft" id="applications"><div class="v3p-shell v3p-two-col">');
+  html = html.replace('<div><p class="v3p-kicker">Engineering Characteristics</p>', '<div id="engineering"><p class="v3p-kicker">Engineering Characteristics</p>');
   html = html.replace('<p class="v3p-kicker">Application</p>', '<p class="v3p-kicker">Applications</p>');
   html = html.replace(/(<p class="v3p-kicker">Engineering Characteristics<\/p><h2>Platform features<\/h2><ul class="v3p-list">[\s\S]*?<\/ul>)/, `$1<div class="vs-config-link"><button class="vs-button" type="button" data-quote-open>Request project configuration review</button></div>`);
   html = html.replace('<section class="v3p-section"><div class="v3p-shell"><p class="v3p-kicker">Product & Engineering Views</p>', '<section class="v3p-section" id="drawings"><div class="v3p-shell"><p class="v3p-kicker">Product & Engineering Views</p>');
