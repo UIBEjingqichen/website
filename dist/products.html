@@ -3,27 +3,9 @@
     <title>Transformer Product Range | Tianyu Electric</title><meta name="description" content="Browse Tianyu transformers and prefabricated substations by voltage class, capacity range and application.">
     <link rel="canonical" href="/products.html">
     <meta property="og:type" content="website"><meta property="og:title" content="Transformer Product Database | Tianyu Electric"><meta property="og:description" content="Filter Tianyu transformer families by product type, voltage level and application."><meta property="og:url" content="/products.html"><meta property="og:image" content="/assets/media/branding/og-tianyu-electric.png"><meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/knowledge.css">
-    <link rel="stylesheet" href="assets/css/yawei-refine.css">
-    <link rel="stylesheet" href="assets/css/visual-refine-v4.css">
-    <link rel="stylesheet" href="assets/css/ux-refine-v5.css">
-    <link rel="stylesheet" href="assets/css/ux-refine-v6.css">
-    <link rel="stylesheet" href="assets/css/ux-refine-v7.css">
-    <link rel="stylesheet" href="assets/css/ux-refine-v8.css">
-    <link rel="stylesheet" href="assets/css/ux-fix-v9.css">
-  <link rel="stylesheet" href="assets/css/catalog-v3.css">
-  <link rel="stylesheet" href="assets/css/product-contract-upgrade.css">
-  <link rel="stylesheet" href="assets/css/site-v3-upgrade.css">
-  <link rel="stylesheet" href="assets/css/image-quality-pass.css">
-  <link rel="stylesheet" href="assets/css/product-directory-v12.css">
-  <link rel="stylesheet" href="assets/css/product-page-refine-v19.css">
-  <link rel="stylesheet" href="assets/css/product-hero-split-v21.css">
-  <link rel="stylesheet" href="assets/css/product-portfolio-carousel.css">
-  <link rel="stylesheet" href="assets/css/modal-center-fix-v27.css">
-  <link rel="stylesheet" href="assets/css/site-density-v36.css">
-  <link rel="stylesheet" href="assets/css/site-typography.css">
-</head><body class="v8-top-page v19-products-page site36-density">
+    <link rel="stylesheet" href="assets/css/visual-system.css">
+    <link rel="stylesheet" href="assets/css/product-directory.css">
+</head><body class="v8-top-page v19-products-page site36-density phase1-products">
     <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">TY</span><span><strong>Tianyu Electric</strong><small>Transformer Solutions</small></span></a><button class="menu-toggle" type="button" aria-label="Open navigation" data-menu-toggle>Menu</button><nav class="main-nav" data-nav><div class="nav-item"><a class="" href="index.html">Home</a></div><div class="nav-item nav-dropdown"><a class="active" href="products.html">Products</a><div class="dropdown-menu"><a href="products.html#power-transformers">Power Transformers</a><a href="products.html#distribution-transformers">Distribution Transformers</a><a href="products.html#special-transformers">Special &amp; Renewable Transformers</a><a href="products.html#prefabricated-substations">Prefabricated Substations</a></div></div><div class="nav-item"><a class="" href="applications.html">Applications &amp; Projects</a></div><div class="nav-item nav-dropdown"><a class="" href="resources.html">Resources</a><div class="dropdown-menu"><a href="catalog.html">Export Product Catalog</a><a href="resources.html#certificates">Certificates &amp; Test Reports</a><a href="resources.html#drawings">Engineering Drawings</a><a href="knowledge/index.html">Knowledge Center</a></div></div><div class="nav-item nav-dropdown"><a class="" href="about.html">Company</a><div class="dropdown-menu"><a href="about.html">About Tianyu</a><a href="manufacturing.html">Manufacturing</a><a href="quality.html">Quality</a></div></div><div class="nav-item"><a class="" href="news.html">News</a></div></nav><div class="header-actions"><span class="language">EN</span><button class="btn btn-primary" type="button" data-quote-open>Request a Quote</button></div></header>
     <main><section class="v3p-index-hero v23-product-hero" data-product-hero>
   <div class="copy">
@@ -33,7 +15,7 @@
     <div class="v23-hero-facts" aria-label="Product range summary">
       <span><small>Power</small><strong>35–220 kV</strong></span>
       <span><small>Distribution</small><strong>6–35 kV</strong></span>
-      <span><small>Dry-type</small><strong>Up to 35 kV</strong></span>
+      <span><small>Special &amp; Renewable</small><strong>Application-specific</strong></span>
       <span><small>Substations</small><strong>Project engineered</strong></span>
     </div>
     <a class="v23-hero-link" href="#product-families">Explore product families <span>↓</span></a>
@@ -58,7 +40,7 @@
       </figure>
       <div class="v23-carousel-nav" aria-label="Product image controls">
         <span class="v23-carousel-count" data-product-count>01 / 04</span>
-        <div class="v23-carousel-dots">
+        <button class="vs-carousel-toggle" type="button" data-product-toggle aria-pressed="false">Pause</button><div class="v23-carousel-dots">
           <button class="v23-carousel-dot is-active" type="button" data-product-dot="0" aria-label="Show power transformer" aria-current="true"></button>
           <button class="v23-carousel-dot" type="button" data-product-dot="1" aria-label="Show distribution transformer" aria-current="false"></button>
           <button class="v23-carousel-dot" type="button" data-product-dot="2" aria-label="Show dry-type transformer" aria-current="false"></button>
@@ -120,53 +102,5 @@
     <script src="assets/js/ux-refine-v5.js"></script>
     <script src="assets/js/ux-refine-v6.js"></script>
     <script src="assets/js/ux-refine-v8.js"></script>
-<script data-product-carousel>
-(() => {
-  const root = document.querySelector('[data-product-hero]');
-  if (!root) return;
-  const slides = [...root.querySelectorAll('[data-product-slide]')];
-  const dots = [...root.querySelectorAll('[data-product-dot]')];
-  const count = root.querySelector('[data-product-count]');
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let active = 0;
-  let timer = null;
-  let paused = false;
-
-  const select = (index) => {
-    active = (index + slides.length) % slides.length;
-    slides.forEach((slide, i) => {
-      const current = i === active;
-      slide.classList.toggle('is-active', current);
-      slide.setAttribute('aria-hidden', current ? 'false' : 'true');
-    });
-    dots.forEach((dot, i) => {
-      const current = i === active;
-      dot.classList.toggle('is-active', current);
-      dot.setAttribute('aria-current', current ? 'true' : 'false');
-    });
-    if (count) count.textContent = String(active + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0');
-  };
-
-  const start = () => {
-    clearInterval(timer);
-    if (reduced || paused || slides.length < 2) return;
-    timer = setInterval(() => select(active + 1), 5200);
-  };
-
-  dots.forEach((dot, index) => dot.addEventListener('click', () => {
-    select(index);
-    start();
-  }));
-
-  root.addEventListener('mouseenter', () => { paused = true; clearInterval(timer); });
-  root.addEventListener('mouseleave', () => { paused = false; start(); });
-  root.addEventListener('focusin', () => { paused = true; clearInterval(timer); });
-  root.addEventListener('focusout', () => setTimeout(() => {
-    if (!root.contains(document.activeElement)) { paused = false; start(); }
-  }, 0));
-
-  select(0);
-  start();
-})();
-</script>
+<script src="assets/js/visual-behavior.js"></script>
 </body></html>

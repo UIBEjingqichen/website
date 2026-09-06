@@ -9,4 +9,5 @@ runStages("Final site pass", [
   "home-refine-v38.mjs",
   "company-build.mjs",
   "site-typography.mjs",
+  "visual-system-phase1.mjs",
 ]);
