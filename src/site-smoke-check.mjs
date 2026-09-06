@@ -63,6 +63,7 @@ const checks = [
   ["products/110kv-power-transformer/index.html", "21M2078-S"],
   ["products/110kv-power-transformer/index.html", "SZ22-50000/110-NX1"],
   ["products/110kv-power-transformer/index.html", "phase1-detail"],
+  ["products/110kv-power-transformer/index.html", "id=\"engineering\""],
   ["products/220kv-power-transformer/index.html", "240,000 kVA"],
   ["catalog.html", "Tianyu Electric Export Product Catalog 2026"],
   ["index.html", "rel=\"canonical\""],
@@ -92,6 +93,7 @@ for (const [rel, expected] of migratedPages) {
 const home = read("index.html");
 const homeH1Count = (home.match(/<h1\b/g) || []).length;
 if (homeH1Count !== 1) throw new Error(`Homepage should contain one semantic H1, found ${homeH1Count}`);
+if (home.includes("assets/js/ux-refine-v5.js")) throw new Error("Homepage still loads the legacy auto-rotating 3D certificate behavior");
 
 const detail = read("products/110kv-power-transformer/index.html");
 const ratingTable = detail.match(/<h3[^>]*>Rating Range<\/h3>[\s\S]*?<tbody>([\s\S]*?)<\/tbody>/)?.[1] || "";
