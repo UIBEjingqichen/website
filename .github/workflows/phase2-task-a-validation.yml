@@ -64,11 +64,23 @@ jobs:
             ['mobile', 390, 844],
           ];
 
+          async function primeMotion(page, viewportHeight) {
+            const pageHeight = await page.evaluate(() => document.documentElement.scrollHeight);
+            const step = Math.max(320, Math.floor(viewportHeight * .72));
+            for (let y = 0; y < pageHeight; y += step) {
+              await page.evaluate((top) => window.scrollTo({ top, behavior: 'instant' }), y);
+              await page.waitForTimeout(85);
+            }
+            await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+            await page.waitForTimeout(2200);
+          }
+
           for (const [label, width, height] of viewports) {
             const page = await browser.newPage({ viewport: { width, height }, deviceScaleFactor: 1 });
             for (const [name, route] of targets) {
               await page.goto(`http://127.0.0.1:4173${route}`, { waitUntil: 'domcontentloaded' });
-              await page.waitForTimeout(700);
+              await page.waitForTimeout(250);
+              await primeMotion(page, height);
               await page.screenshot({ path: `visual-artifacts/${name}-${label}-full.png`, fullPage: true });
             }
             await page.close();
@@ -77,6 +89,7 @@ jobs:
           const page = await browser.newPage({ viewport: { width: 1363, height: 900 }, deviceScaleFactor: 1 });
           await page.goto('http://127.0.0.1:4173/dist/products/110kv-power-transformer/index.html', { waitUntil: 'domcontentloaded' });
           await page.locator('[data-drawing-thumb]').scrollIntoViewIfNeeded();
+          await page.waitForTimeout(900);
           await page.locator('[data-drawing-thumb]').click();
           await page.waitForTimeout(300);
           await page.screenshot({ path: 'visual-artifacts/detail-110kv-drawing-viewer-desktop.png' });
@@ -88,12 +101,13 @@ jobs:
 
           await page.goto('http://127.0.0.1:4173/dist/manufacturing.html', { waitUntil: 'domcontentloaded' });
           const faq = page.locator('#faq details').first();
+          await faq.scrollIntoViewIfNeeded();
+          await page.waitForTimeout(900);
           await faq.locator('summary').click();
-          await page.locator('#faq').scrollIntoViewIfNeeded();
           await page.waitForTimeout(150);
           await page.locator('#faq').screenshot({ path: 'visual-artifacts/manufacturing-faq-expanded-desktop.png' });
 
-          fs.writeFileSync('visual-artifacts/README.txt', 'Screenshots generated from the Task A branch build at 1363px, 768px and 390px. Full-page captures include footers; additional captures cover the drawing viewer, RFQ modal and expanded manufacturing FAQ.\n');
+          fs.writeFileSync('visual-artifacts/README.txt', 'Screenshots generated from the Task A branch build at 1363px, 768px and 390px. The capture pass scrolls through each page first so count-up and progressive reveal motion reaches its settled visual state before full-page screenshots. Additional captures cover the drawing viewer, RFQ modal and expanded manufacturing FAQ.\n');
           await browser.close();
           NODE
           kill "$(cat /tmp/tianyu-http.pid)" || true
