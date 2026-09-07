@@ -25,18 +25,17 @@ const requiredFiles = [
   "assets/js/visual-behavior.js",
   "assets/media/catalog-v3/ga-power-transformers.webp",
   "assets/media/catalog-v3/ga-distribution-renewable.webp",
-  "products/35kv-power-transformer/index.html",
-  "products/66kv-power-transformer/index.html",
-  "products/110kv-power-transformer/index.html",
-  "products/220kv-power-transformer/index.html",
-  "products/12kv-oil-immersed-distribution-transformer/index.html",
-  "products/dry-type-distribution-transformer/index.html",
-  "products/zgs-prefabricated-substation/index.html",
-  "products/pv-ess-integrated-substation/index.html",
 ];
 
 for (const rel of requiredFiles) {
   if (!fs.existsSync(path.join(dist, rel))) throw new Error(`Missing generated file: ${rel}`);
+}
+
+const productIndex = JSON.parse(read("product-range-pages.json"));
+if (productIndex.pages.length !== 18) throw new Error(`Expected 18 catalog-backed leaf product pages, found ${productIndex.pages.length}`);
+for (const page of productIndex.pages) {
+  const rel = `products/${page.slug}/index.html`;
+  if (!fs.existsSync(path.join(dist, rel))) throw new Error(`Missing generated product page: ${rel}`);
 }
 
 const checks = [
@@ -67,10 +66,16 @@ const checks = [
   ["products/110kv-power-transformer/index.html", "6.3–63 MVA"],
   ["products/110kv-power-transformer/index.html", "21M2078-S"],
   ["products/110kv-power-transformer/index.html", "SZ22-50000/110-NX1"],
-  ["products/110kv-power-transformer/index.html", "phase1-detail"],
-  ["products/110kv-power-transformer/index.html", "id=\"engineering\""],
-  ["products/110kv-power-transformer/index.html", "data-drawing-thumb"],
   ["products/220kv-power-transformer/index.html", "240,000 kVA"],
+  ["products/12kv-oil-immersed-distribution-transformer/index.html", "30–2,500 kVA"],
+  ["products/40-5kv-renewable-oil-immersed-transformer/index.html", "1–12.5 MVA"],
+  ["products/zgs-prefabricated-substation/index.html", "200–40,000 kVA"],
+  ["products/yb-prefabricated-substation/index.html", "200–8,000 kVA"],
+  ["products/ybh-prefabricated-substation/index.html", "200–12,500 kVA"],
+  ["products/pv-ess-integrated-substation/index.html", "2,000–9,000 kVA"],
+  ["products/35-110kv-mobile-intelligent-substation/index.html", "35–110 kV"],
+  ["products/66kv-offshore-wind-nacelle-transformer/index.html", "66 kV"],
+  ["products/220kv-double-split-booster-transformer/index.html", "220 kV class"],
   ["catalog.html", "Tianyu Electric Export Product Catalog 2026"],
   ["index.html", "rel=\"canonical\""],
   ["about.html", "site-typography.css"],
@@ -83,8 +88,8 @@ for (const [rel, needle] of checks) {
 const migratedPages = [
   ["index.html", ["assets/css/visual-system.css", "assets/css/home.css"]],
   ["products.html", ["assets/css/visual-system.css", "assets/css/product-directory.css"]],
-  ["products/110kv-power-transformer/index.html", ["../../assets/css/visual-system.css", "../../assets/css/product-detail.css"]],
   ["manufacturing.html", ["assets/css/visual-system.css", "assets/css/manufacturing.css"]],
+  ...productIndex.pages.map((page) => [`products/${page.slug}/index.html`, ["../../assets/css/visual-system.css", "../../assets/css/product-detail.css"]]),
 ];
 
 for (const [rel, expected] of migratedPages) {
@@ -94,6 +99,19 @@ for (const [rel, expected] of migratedPages) {
   for (const href of expected) if (!styles.includes(href)) throw new Error(`${rel} missing stylesheet ${href}`);
   if (html.includes("site-typography.css")) throw new Error(`${rel} still loads the legacy typography override`);
   if (!html.includes("visual-behavior.js")) throw new Error(`${rel} missing visual-system interaction script`);
+}
+
+for (const page of productIndex.pages) {
+  const rel = `products/${page.slug}/index.html`;
+  const html = read(rel);
+  if (!html.includes("phase1-detail") || !html.includes("product-detail-standard")) throw new Error(`${page.slug} is not on the canonical product-detail template`);
+  for (const id of ["ratings", "applications", "engineering", "drawings", "documents", "related", "contact-rfq"]) {
+    if (!html.includes(`id="${id}"`)) throw new Error(`${page.slug} is missing #${id}`);
+  }
+  if (!html.includes(page.range) || !html.includes(page.voltage)) throw new Error(`${page.slug} lost catalog-backed range or voltage text`);
+  if (!html.includes("Published series capability")) throw new Error(`${page.slug} is missing the catalog source/scope note`);
+  if (!html.includes("Standards &amp; Documents")) throw new Error(`${page.slug} is missing the evidence section`);
+  if (!html.includes("Related Products")) throw new Error(`${page.slug} is missing related products`);
 }
 
 const home = read("index.html");
@@ -119,7 +137,7 @@ if (!detail.includes("not presented as certification of the full 110 kV product 
 if (!detail.includes("ga-power-transformers.webp")) throw new Error("110 kV reference drawing resource is missing");
 
 const manufacturing = read("manufacturing.html");
-if (manufacturing.includes("manufacturing-v34.js")) throw new Error("Manufacturing counter-animation script is still loaded");
+if (manufacturing.includes("manufacturing-v34.js")) throw new Error("Manufacturing legacy counter script is still loaded");
 if (manufacturing.includes("The page now presents")) throw new Error("Manufacturing still contains implementation-facing rewrite language");
 if (manufacturing.includes("Company-scale figures use")) throw new Error("Manufacturing still exposes internal source-conflict language");
 if (manufacturing.includes("not decoration")) throw new Error("Manufacturing still contains implementation-facing testing language");
@@ -127,6 +145,9 @@ const processSteps = (manufacturing.match(/class="mfg34-step(?:\s|\")/g) || []).
 if (processSteps !== 8) throw new Error(`Manufacturing should retain eight process steps, found ${processSteps}`);
 const heroStats = (manufacturing.match(/class="mfg34-hero-stat"/g) || []).length;
 if (heroStats !== 3) throw new Error(`Manufacturing hero should show three concise metrics, found ${heroStats}`);
+
+const behavior = read("assets/js/visual-behavior.js");
+if (!behavior.includes("parseCounter") || !behavior.includes("IntersectionObserver")) throw new Error("Count-up or progressive reveal behavior is missing");
 
 for (const rel of ["products.html", "applications.html", "about.html"]) {
   if (read(rel).includes("images.unsplash.com")) throw new Error(`${rel} still references Unsplash.`);
@@ -137,4 +158,4 @@ if (!rootIndex.includes('<base href="dist/">')) throw new Error("Root index mirr
 const normalizedRoot = rootIndex.replace(/\s*<base href="dist\/">/, "");
 if (normalizedRoot !== home) throw new Error("Root index mirror does not match generated homepage content");
 
-console.log(`Smoke check passed: ${requiredFiles.length} required files, ${checks.length} content checks, four migrated stylesheet contracts, Task A visual-structure guards and 11-row 110 kV rating table.`);
+console.log(`Smoke check passed: ${requiredFiles.length} base files, ${productIndex.pages.length} canonical product detail pages, ${checks.length} content checks, visual-system contracts, catalog-scope guards and 11-row 110 kV rating table.`);
