@@ -21,6 +21,7 @@ function polishHome() {
   if (!tailPattern.test(html)) throw new Error("Homepage evidence tail not found for Task A polish");
   html = html.replace(tailPattern, evidence);
   write(file, html);
+  return html;
 }
 
 function polishProducts() {
@@ -38,7 +39,14 @@ function polishDetail() {
   write(file, html);
 }
 
-polishHome();
+function writeRootMirror(homeHtml) {
+  let mirror = homeHtml.replace(/\s*<base href="dist\/">/g, "");
+  mirror = mirror.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n    <base href="dist/">');
+  fs.writeFileSync(path.join(root, "index.html"), mirror, "utf8");
+}
+
+const home = polishHome();
 polishProducts();
 polishDetail();
-console.log("Representative-page Task A polish applied to homepage, products directory and canonical 110 kV detail page.");
+writeRootMirror(home);
+console.log("Representative-page Task A polish applied to homepage, products directory and canonical 110 kV detail page; root homepage mirror refreshed.");
