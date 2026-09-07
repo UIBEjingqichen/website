@@ -19,7 +19,7 @@ Phase 2 Task A refines these four pages before the system is propagated to other
 2. **Reduce height through structure, not tiny type.** Repetition, uncontrolled galleries and empty fixed-height cards should be compressed before font size is reduced.
 3. **Real photography carries trust.** Factory, product, test-station and project imagery is preferred to abstract decoration.
 4. **Image treatment is part of the system.** Subject scale, media well, crop, caption and alignment should be consistent within each component family.
-5. **Restrained motion.** Motion may clarify a gallery or carousel but must not become a visual event of its own.
+5. **Restrained motion.** Motion should support hierarchy and pacing. Metric count-up and short scroll reveals are allowed; parallax, perpetual decorative movement and large layout-shifting effects are not.
 6. **Scope claims precisely.** A report for one tested model is never promoted as proof for an entire product family.
 7. **Stable page rhythm.** Similar information receives similar spacing, borders, image ratios and heading scale.
 8. **Do not cardify every paragraph.** Use lists, rules, parameter grids and image-text layouts where a bordered card adds no information.
@@ -137,7 +137,9 @@ The canonical 110 kV product detail retains all 11 Rating Range rows.
 
 Parameter summaries use a structured grid with pale cells and 1 px separators. Labels are about 12 px and values about 14–15 px.
 
-Manufacturing hero metrics are intentionally selective. A hero should show only a few distinctive values; the full set belongs in the overview immediately below. Numeric zero-to-target animation is not part of the representative system.
+Manufacturing hero metrics are intentionally selective. A hero should show only a few distinctive values; the full set belongs in the overview immediately below. High-level company and manufacturing metrics may animate once from zero to their final published value when they enter the viewport. Technical rating tables, voltage ranges, product model numbers and document identifiers must remain static.
+
+Count-up animation preserves prefixes, suffixes, units and grouping. It should complete in roughly 1.1–1.9 seconds, run only once, and settle on the exact source value rather than a rounded approximation.
 
 Where source documents contain conflicting company-scale figures, the discrepancy is tracked internally rather than explained in customer-facing rewrite notes or silently normalized across unrelated contexts.
 
@@ -199,7 +201,7 @@ A report card shows report number, tested model, capacity, voltage and testing o
 Manufacturing reads as an evidence chain rather than a SaaS feature page:
 
 - Real factory hero around 420 px with three concise capability highlights.
-- Complete static manufacturing metrics are centralized in the overview below.
+- Complete manufacturing metrics are centralized in the overview below and may use the shared one-time count-up behavior.
 - Eight numbered process steps remain in order.
 - Core cutting, coil winding, assembly and testing evidence is placed adjacent to the relevant step rather than in a detached generic gallery.
 - A step without suitable evidence remains a text step. Do not use an unrelated image to fill space.
@@ -239,7 +241,10 @@ Responsive rules are implementation targets, not proof of visual verification. A
 
 ## Motion and accessibility
 
-- Respect `prefers-reduced-motion`.
+- Representative pages use short progressive scroll reveals for section headings, product rows, evidence blocks, manufacturing steps and selected gallery items. The standard reveal is about 20 px upward travel with roughly 680 ms duration and small staggered delays.
+- Homepage company metrics and Manufacturing hero/overview metrics count from zero to the exact final published value when entering the viewport. Count-up runs once and does not apply to technical tables, model numbers, voltage ranges or report identifiers.
+- Motion must not change layout dimensions, crop engineering content, or block interaction.
+- Respect `prefers-reduced-motion`: count-up and progressive reveal motion are skipped, and final content/value is presented immediately.
 - Product carousel does not auto-advance under reduced motion.
 - Hover and keyboard focus pause the product carousel.
 - Modal close controls remain keyboard reachable.
@@ -258,7 +263,7 @@ The representative system is applied late in the canonical build so legacy gener
 | `src/product-directory.css` | `dist/assets/css/product-directory.css` |
 | `src/product-detail.css` | `dist/assets/css/product-detail.css` |
 | `src/manufacturing.css` | `dist/assets/css/manufacturing.css` |
-| `src/visual-behavior.js` | `dist/assets/js/visual-behavior.js` |
+| `src/visual-behavior.js` | `dist/assets/js/visual-behavior.js`; product carousel, evidence shelf, manufacturing section tracking, metric count-up and progressive scroll reveal |
 | `src/home-project-map-v16.mjs` | builds calibrated project-map markup and project reference pages |
 | `src/manufacturing-v34.mjs` | builds the manufacturing evidence structure upstream |
 | `src/visual-system-phase1.mjs` | replaces stylesheet lists and applies the representative visual contract |
