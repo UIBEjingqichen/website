@@ -1,0 +1,133 @@
+name: Phase 2 Task A Validation
+
+on:
+  push:
+    branches:
+      - phase2-task-a-visual-polish-20260907
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: phase2-task-a-visual-polish
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    if: ${{ !contains(github.event.head_commit.message, '[site-generated]') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout work branch
+        uses: actions/checkout@v4
+        with:
+          ref: phase2-task-a-visual-polish-20260907
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build website
+        run: npm run build
+
+      - name: Validate generated website
+        run: npm run check
+
+      - name: Install Chromium for visual screenshots
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Capture representative-page screenshots
+        run: |
+          mkdir -p visual-artifacts
+          python3 -m http.server 4173 >/tmp/tianyu-http.log 2>&1 &
+          echo $! >/tmp/tianyu-http.pid
+          sleep 2
+          node --input-type=module <<'NODE'
+          import { chromium } from 'playwright';
+          import fs from 'node:fs';
+
+          const browser = await chromium.launch({ headless: true });
+          const targets = [
+            ['home', '/dist/index.html'],
+            ['products', '/dist/products.html'],
+            ['detail-110kv', '/dist/products/110kv-power-transformer/index.html'],
+            ['manufacturing', '/dist/manufacturing.html'],
+          ];
+          const viewports = [
+            ['desktop', 1363, 900],
+            ['tablet', 768, 1024],
+            ['mobile', 390, 844],
+          ];
+
+          async function primeMotion(page, viewportHeight) {
+            const pageHeight = await page.evaluate(() => document.documentElement.scrollHeight);
+            const step = Math.max(320, Math.floor(viewportHeight * .72));
+            for (let y = 0; y < pageHeight; y += step) {
+              await page.evaluate((top) => window.scrollTo({ top, behavior: 'instant' }), y);
+              await page.waitForTimeout(85);
+            }
+            await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+            await page.waitForTimeout(2200);
+          }
+
+          for (const [label, width, height] of viewports) {
+            const page = await browser.newPage({ viewport: { width, height }, deviceScaleFactor: 1 });
+            for (const [name, route] of targets) {
+              await page.goto(`http://127.0.0.1:4173${route}`, { waitUntil: 'domcontentloaded' });
+              await page.waitForTimeout(250);
+              await primeMotion(page, height);
+              await page.screenshot({ path: `visual-artifacts/${name}-${label}-full.png`, fullPage: true });
+            }
+            await page.close();
+          }
+
+          const page = await browser.newPage({ viewport: { width: 1363, height: 900 }, deviceScaleFactor: 1 });
+          await page.goto('http://127.0.0.1:4173/dist/products/110kv-power-transformer/index.html', { waitUntil: 'domcontentloaded' });
+          await page.locator('[data-drawing-thumb]').scrollIntoViewIfNeeded();
+          await page.waitForTimeout(900);
+          await page.locator('[data-drawing-thumb]').click();
+          await page.waitForTimeout(300);
+          await page.screenshot({ path: 'visual-artifacts/detail-110kv-drawing-viewer-desktop.png' });
+          await page.keyboard.press('Escape');
+          await page.locator('[data-quote-open]').first().click();
+          await page.waitForTimeout(200);
+          await page.screenshot({ path: 'visual-artifacts/detail-110kv-rfq-modal-desktop.png' });
+          await page.keyboard.press('Escape');
+
+          await page.goto('http://127.0.0.1:4173/dist/manufacturing.html', { waitUntil: 'domcontentloaded' });
+          const faq = page.locator('#faq details').first();
+          await faq.scrollIntoViewIfNeeded();
+          await page.waitForTimeout(900);
+          await faq.locator('summary').click();
+          await page.waitForTimeout(150);
+          await page.locator('#faq').screenshot({ path: 'visual-artifacts/manufacturing-faq-expanded-desktop.png' });
+
+          fs.writeFileSync('visual-artifacts/README.txt', 'Screenshots generated from the Task A branch build at 1363px, 768px and 390px. The capture pass scrolls through each page first so count-up and progressive reveal motion reaches its settled visual state before full-page screenshots. Additional captures cover the drawing viewer, RFQ modal and expanded manufacturing FAQ.\n');
+          await browser.close();
+          NODE
+          kill "$(cat /tmp/tianyu-http.pid)" || true
+
+      - name: Upload visual validation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase2-task-a-visual-screenshots
+          path: visual-artifacts
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Commit generated site output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist index.html
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+          else
+            git commit -m "Build Phase 2 Task A visual polish [site-generated]"
+            git push origin HEAD:phase2-task-a-visual-polish-20260907
+          fi

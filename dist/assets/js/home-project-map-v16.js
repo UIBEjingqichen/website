@@ -27,15 +27,13 @@
   let selectedId = null;
   let switchTimer = null;
 
-  function sameProject(el, id) {
-    return el.dataset.projectId === id;
-  }
+  const sameProject = (el, id) => el.dataset.projectId === id;
 
   function setActive(id) {
     selectedId = id || null;
     pins.forEach(pin => pin.classList.toggle('active', Boolean(id) && sameProject(pin, id)));
     cards.forEach(card => card.classList.toggle('active', Boolean(id) && sameProject(card, id)));
-    if (stage) stage.classList.toggle('has-selection', Boolean(id));
+    stage?.classList.toggle('has-selection', Boolean(id));
   }
 
   function updatePanel(el) {
@@ -84,15 +82,15 @@
   }
 
   function showTooltip(el) {
-    if (!tooltip || !el || el.hidden || el.dataset.projectId === selectedId) return;
+    if (!tooltip || !stage || !el || el.hidden || el.dataset.projectId === selectedId) return;
     tipCountry.textContent = el.dataset.country || '';
     tipTitle.textContent = el.dataset.title || '';
-    const x = Number(el.dataset.x || 50);
-    const y = Number(el.dataset.y || 50);
-    const safeX = Math.min(86, Math.max(14, x));
-    const safeY = Math.min(86, Math.max(18, y));
-    tooltip.style.left = `${safeX}%`;
-    tooltip.style.top = `${safeY}%`;
+    const stageRect = stage.getBoundingClientRect();
+    const pinRect = el.getBoundingClientRect();
+    const x = pinRect.left + pinRect.width / 2 - stageRect.left;
+    const y = pinRect.top + pinRect.height / 2 - stageRect.top;
+    tooltip.style.left = `${Math.min(stageRect.width - 110, Math.max(110, x))}px`;
+    tooltip.style.top = `${Math.min(stageRect.height - 40, Math.max(66, y))}px`;
     tooltip.classList.add('show');
     tooltip.setAttribute('aria-hidden', 'false');
   }
@@ -103,9 +101,7 @@
     tooltip.setAttribute('aria-hidden', 'true');
   }
 
-  function matches(el, value) {
-    return value === 'all' || el.dataset.application === value;
-  }
+  const matches = (el, value) => value === 'all' || el.dataset.application === value;
 
   function applyFilter(value) {
     filters.forEach(btn => {
@@ -114,9 +110,7 @@
       btn.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
 
-    pins.forEach(pin => {
-      pin.hidden = !matches(pin, value);
-    });
+    pins.forEach(pin => { pin.hidden = !matches(pin, value); });
 
     let shown = 0;
     cards.forEach(card => {
@@ -139,26 +133,20 @@
   });
 
   cards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
+    const preview = on => {
       const id = card.dataset.projectId;
-      pins.forEach(pin => pin.classList.toggle('preview', sameProject(pin, id)));
-    });
-    card.addEventListener('mouseleave', () => pins.forEach(pin => pin.classList.remove('preview')));
-    card.addEventListener('focus', () => {
-      const id = card.dataset.projectId;
-      pins.forEach(pin => pin.classList.toggle('preview', sameProject(pin, id)));
-    });
-    card.addEventListener('blur', () => pins.forEach(pin => pin.classList.remove('preview')));
+      pins.forEach(pin => pin.classList.toggle('preview', on && sameProject(pin, id)));
+    };
+    card.addEventListener('mouseenter', () => preview(true));
+    card.addEventListener('mouseleave', () => preview(false));
+    card.addEventListener('focus', () => preview(true));
+    card.addEventListener('blur', () => preview(false));
   });
 
-  filters.forEach(btn => {
-    btn.addEventListener('click', () => applyFilter(btn.dataset.ty16Filter || 'all'));
-  });
-
+  filters.forEach(btn => btn.addEventListener('click', () => applyFilter(btn.dataset.ty16Filter || 'all')));
   closeButton?.addEventListener('click', closePanel);
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') closePanel();
-  });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') closePanel(); });
+  window.addEventListener('resize', hideTooltip);
 
   applyFilter('all');
 })();

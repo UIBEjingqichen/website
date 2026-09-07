@@ -2,25 +2,27 @@
 
 ## Purpose
 
-This visual system is designed for an overseas industrial B2B audience reviewing transformers, prefabricated substations, manufacturing capability, technical evidence and project references. The visual hierarchy should communicate engineering credibility through real industrial photography, disciplined alignment, readable technical data and restrained interaction.
+This system is for an overseas industrial B2B audience reviewing transformers, prefabricated substations, manufacturing capability, technical evidence and project references. Engineering credibility should come from real industrial photography, disciplined alignment, readable data and restrained interaction rather than decorative effects.
 
-Phase 1 applies the system deeply to four representative templates only:
+The representative baseline remains:
 
 - Homepage
 - Product Directory
 - Canonical Product Detail: 110 kV Three-Winding Power Transformer
 - Manufacturing
 
-Unmigrated pages remain on their legacy presentation until a later controlled migration.
+Phase 2 Task A refines these four pages before the system is propagated to other templates. Unmigrated pages remain on their legacy presentation until a later controlled migration.
 
 ## Design principles
 
-1. **Engineering information before decoration.** Voltage, capacity, model, test-report identity and project evidence must be easy to scan and compare.
-2. **Reduce height before reducing type.** Dense pages become shorter through layout, grouping and multi-column composition, not 8–10 px labels.
+1. **Engineering information before decoration.** Voltage, capacity, model, report identity and project evidence must be easy to scan and compare.
+2. **Reduce height through structure, not tiny type.** Repetition, uncontrolled galleries and empty fixed-height cards should be compressed before font size is reduced.
 3. **Real photography carries trust.** Factory, product, test-station and project imagery is preferred to abstract decoration.
-4. **Restrained motion.** Motion may clarify a gallery or carousel but must not become a visual event of its own.
-5. **Scope claims precisely.** A report for one tested model is never visually or verbally promoted as proof for an entire product family.
-6. **Stable page rhythm.** Similar information receives similar spacing, borders, image ratios and heading scale across templates.
+4. **Image treatment is part of the system.** Subject scale, media well, crop, caption and alignment should be consistent within each component family.
+5. **Restrained motion.** Motion should support hierarchy and pacing. Metric count-up and short scroll reveals are allowed; parallax, perpetual decorative movement and large layout-shifting effects are not.
+6. **Scope claims precisely.** A report for one tested model is never promoted as proof for an entire product family.
+7. **Stable page rhythm.** Similar information receives similar spacing, borders, image ratios and heading scale.
+8. **Do not cardify every paragraph.** Use lists, rules, parameter grids and image-text layouts where a bordered card adds no information.
 
 ## Core layout
 
@@ -35,24 +37,24 @@ Unmigrated pages remain on their legacy presentation until a later controlled mi
 | Primary card padding | 16–20 px |
 | Primary radius | 4 px |
 | Border | 1 px cool gray-blue |
-| Shadow | light, used only for overlays, dialogs and selected floating states |
+| Shadow | light, mainly overlays, dialogs and selected floating states |
 
-The layout should avoid long sequences of pure-white sections. Alternate pale engineering surfaces with near-white content sections where this improves section recognition.
+Avoid long sequences of pure-white sections. Alternate pale engineering surfaces with near-white content sections when that improves section recognition.
 
 ## Typography
 
 The system uses the platform sans-serif stack beginning with Inter where available, then Segoe UI and Arial.
 
-| Role | Desktop target |
+| Role | Target |
 | --- | --- |
-| H1 | 32–40 px; never above 42 px at default desktop sizing |
+| H1 | 32–40 px; default display never above 42 px |
 | H2 | 24–30 px |
 | H3 | 16–20 px |
-| Main body | 13–15 px; primary explanatory copy prefers 15 px |
+| Main body | 13–15 px; important explanatory copy prefers 15 px |
 | Secondary label / kicker | normally 12 px or larger |
 | Technical table | approximately 13 px body / 12 px header |
 
-Headings use compact line-height and modest negative letter spacing. Body text is not condensed to compensate for oversized sections.
+Headings use compact line-height and modest negative letter spacing. Body text must not be squeezed merely to compensate for oversized sections.
 
 ## Color system
 
@@ -65,28 +67,22 @@ Headings use compact line-height and modest negative letter spacing. Body text i
 | Main text | `#203B50` | body and technical text |
 | Secondary text | `#566C7C` | supporting copy and captions |
 | Border | `#CBD8DF` | cards, tables, structural separators |
-| Pale surface | `#EDF3F6` | alternate sections and card media wells |
-| Technical panel | `#D8E5EC` | CTA and technical summary panels |
-| Map section | `#DCE7ED` | project-map section background |
+| Pale surface | `#EDF3F6` | alternate sections and media wells |
+| Technical panel | `#D8E5EC` | CTA and technical summaries |
+| Map section | `#DCE7ED` | project-map background |
 | Map canvas | `#C4D6E0` | world-map canvas |
 
-Avoid adding a new red accent. Avoid long runs of dark navy sections. Dark surfaces should be reserved for places where contrast has a functional purpose, such as the footer, photo overlay, or floating project detail.
+Do not add a new red accent. Do not globally tint industrial photography blue. Dark surfaces should be reserved for places where contrast has a functional purpose, such as the footer, photo overlay or floating project detail.
 
-## Buttons and links
+## Buttons, links and focus
 
-Primary buttons use dark teal with white text, 4 px radius and approximately 40 px minimum height. Secondary buttons use a blue/teal outline. Hover should be limited to a small color change and at most a subtle 1 px lift.
+Primary buttons use dark teal with white text, 4 px radius and approximately 40 px minimum height. Secondary buttons use a blue/teal outline. Hover is limited to a small color change and at most a subtle 1 px lift.
 
-Text links use engineering blue with clear labels such as `View product`, `All reports`, or `Request project drawing`. Avoid vague CTA language when the destination can be named.
-
-Keyboard focus uses a visible teal outline and should never be removed.
-
-## Borders, radius and shadow
-
-Cards, data blocks and image frames use a 1 px `#CBD8DF` border and 4 px radius as the default industrial grammar. Heavy shadows and floating marketing-card treatments are discouraged. Overlays and dialogs may use a larger soft shadow because separation from the page is functional there.
+Text links use engineering blue with explicit labels such as `View product`, `All reports`, or `Request project drawing`. Keyboard focus uses a visible teal outline and must never be removed.
 
 ## Hero pattern
 
-Desktop hero height is generally 400–440 px. Content-driven cases may approach about 480 px. Mobile hero height may grow naturally to contain text.
+Desktop hero height is generally 400–440 px. Content-driven cases may approach about 480 px. A directory hero can be slightly shorter when orientation information is already compact. Mobile hero height may grow naturally to contain text.
 
 Hero rules:
 
@@ -96,34 +92,39 @@ Hero rules:
 - One semantic H1 per page.
 - Supporting copy is concise.
 - Primary route should be visible without scrolling when practical.
+- Avoid frame-inside-frame image treatments when a single media well is enough.
 - Do not add parallax or conspicuous image zoom.
 
-The Product Directory hero may rotate representative product images. The transition target is approximately 1.2–1.4 seconds with an approximately 8-second interval. Hover and keyboard focus pause the rotation, and a direct Pause/Play control is provided. `prefers-reduced-motion` disables automatic rotation.
+The Product Directory hero may rotate representative product images. Transition target is approximately 1.2–1.4 seconds with an approximately 8-second interval. Hover and keyboard focus pause rotation, a direct Pause/Play control is provided, and `prefers-reduced-motion` disables automatic rotation.
 
 ## Images and captions
 
 ### Product images
 
-Product-directory thumbnails use `object-fit: contain` so bushings, radiators and accessories are not cropped merely to fill a box. Technical product imagery should prioritize completeness over dramatic crop.
+Product-directory thumbnails use `object-fit: contain` so bushings, radiators and accessories are not cropped merely to fill a box. Thumbnail wells should give different source images a comparable apparent subject scale and consistent center alignment.
+
+A different photograph must not be substituted merely to create variety. If the media library contains only a generic family photograph, reuse is acceptable only where that image genuinely represents the family. The asset gap should be recorded for later sourcing rather than hidden through invented imagery.
 
 ### Factory and project images
 
-Landscape evidence photography may use `object-fit: cover` where cropping does not remove the engineering subject. Repeated gallery items should share a consistent ratio within the same component.
+Landscape evidence photography may use `object-fit: cover` where cropping does not remove the engineering subject. Repeated gallery items share one ratio within the component. Prefer raw workshop photography without catalog-page labels when both forms exist.
 
 ### Drawings
 
-A drawing displayed on a product page must be labeled as a **Reference outline drawing** unless it is explicitly project-specific. Supporting text must state that final dimensions and interfaces are issued against the approved project design.
+A drawing displayed on a product page is labeled **Reference outline drawing** unless it is explicitly project-specific. Final dimensions and interfaces are issued against the approved project design.
+
+Engineering drawings may use a larger, natural-height contain treatment than product photos. Do not force a detailed drawing into the same small crop as photography. A thumbnail must remain visibly meaningful and its zoom/viewer action must preserve the whole drawing.
 
 ### Captions
 
-Captions use secondary text color, approximately 12 px, with a separating border where useful. They should identify the engineering subject rather than offer promotional prose.
+Captions use secondary text color, approximately 11–12 px, with a separating border where useful. They identify the engineering subject rather than repeat visible catalog labels or provide promotional prose.
 
 ## Technical tables
 
-Technical tables are compact, comparison-first components:
+Technical tables remain comparison-first components:
 
 - 1 px structural border.
-- Distinct pale blue-gray header.
+- Pale blue-gray header.
 - Approximately 10 px vertical cell padding.
 - Light alternating row surface.
 - No forced wrapping of short rating headers.
@@ -136,63 +137,83 @@ The canonical 110 kV product detail retains all 11 Rating Range rows.
 
 Parameter summaries use a structured grid with pale cells and 1 px separators. Labels are about 12 px and values about 14–15 px.
 
-Manufacturing metrics are displayed as static accurate values. Numeric zero-to-target animation is not part of the Phase 1 system. Where source documents contain conflicting company-scale figures, the UI must retain the selected source context and the discrepancy must be tracked rather than silently normalized.
+Manufacturing hero metrics are intentionally selective. A hero should show only a few distinctive values; the full set belongs in the overview immediately below. High-level company and manufacturing metrics may animate once from zero to their final published value when they enter the viewport. Technical rating tables, voltage ranges, product model numbers and document identifiers must remain static.
+
+Count-up animation preserves prefixes, suffixes, units and grouping. It should complete in roughly 1.1–1.9 seconds, run only once, and settle on the exact source value rather than a rounded approximation.
+
+Where source documents contain conflicting company-scale figures, the discrepancy is tracked internally rather than explained in customer-facing rewrite notes or silently normalized across unrelated contexts.
+
+## Homepage
+
+The homepage should maintain one consistent 1200 px content boundary from hero support sections to the footer.
+
+- Product families remain five genuine product routes.
+- Manufacturing, testing and project support form one three-part evidence layer.
+- Global project references use a blue-gray technical map, filters, project detail and compact summaries.
+- Certificate/report evidence is manually browsable rather than an automatic 3D carousel.
+- News uses a compact three-column desktop grid.
+- The post-news factory/application evidence area is a controlled gallery, not a sequence of unrelated full-width images.
+- Duplicate capability metrics must not be repeated at the page end.
+- The final content section is a compact RFQ/project-inquiry CTA directly before the footer.
+
+## Project map
+
+The map image and pins must share one coordinate plane. The current map uses a Robinson-projection world map, so country-level reference anchors are projected into that same Robinson space before being expressed as percentages.
+
+Project source records provide country/application facts but not verified site coordinates for every project. Therefore map pins are **country-level reference placement**, not exact project-site coordinates. The UI must not imply otherwise.
+
+The world map should visually blend into the blue-gray canvas rather than appear as a separate white oval. Pins use restrained teal. Filtering, pin interaction, project detail and project links remain functional requirements. A compact set of project summaries sits adjacent to or below the map so customers can scan experience without opening every pin.
 
 ## Product Directory
 
 The Product Directory separates orientation from comparison:
 
-- Hero gives the four product directions.
-- Product-family explanation is placed on the left on desktop.
-- Product rows are placed on the right.
-- Row structure is `thumbnail | product/use | voltage/capacity range`.
-- Family explanation may stay sticky on desktop.
-- Sticky behavior is disabled on mobile.
-- Section anchors account for the fixed/sticky navigation offset.
+- Hero summarizes the four product directions without becoming a second catalogue.
+- Four family routes are compact and the real product list should enter the viewport quickly.
+- Directory groups use a concise family explanation and a comparison-oriented product list.
+- Product row structure is `thumbnail | product name | voltage/capacity range | use/context`.
+- Repeated family labels inside every product row are suppressed because the group heading already establishes context.
+- Family explanation may stay sticky on desktop, but it must not create artificial blank height and becomes static on mobile.
+- Section anchors account for sticky navigation.
 
-The product row is intentionally shorter and flatter than a marketing card. The user should be able to scan several products in one viewport.
+The product row is intentionally flatter than a marketing card. Several products should be comparable in one desktop viewport.
 
 ## Canonical Product Detail
 
 The representative detail template uses:
 
 1. Breadcrumb and compact hero.
-2. Product image and voltage/capacity summary.
+2. Clean product-image area with voltage/capacity summary.
 3. RFQ action.
-4. In-page navigation.
-5. Key parameter blocks.
-6. Full Rating Range table.
-7. Applications.
-8. Engineering Characteristics and configuration-review action.
-9. Product photographs and reference drawing.
-10. Standards & Documents with tested-model specificity.
-11. Related Products.
-12. Final RFQ.
+4. One-line, horizontally scrollable family switcher where necessary.
+5. In-page navigation.
+6. Key parameter blocks and the full Rating Range table.
+7. Applications and Engineering Characteristics as clear lists.
+8. Product photographs plus a larger reference-drawing treatment.
+9. Standards & Documents with tested-model specificity.
+10. Related Products.
+11. Final RFQ.
 
-A report card must show report number, tested model, capacity, voltage and testing organization when those fields exist in `documents-data.mjs`. Empty metadata is shown as unverified/not specified rather than filled from assumption.
+A report card shows report number, tested model, capacity, voltage and testing organization when those fields exist in `documents-data.mjs`. Empty metadata is shown as not specified rather than filled from assumption. Applicability warnings remain, but their visual weight is lower than the report identity and viewing action.
 
 ## Manufacturing
 
-Manufacturing should read as an evidence chain rather than a SaaS feature page:
+Manufacturing reads as an evidence chain rather than a SaaS feature page:
 
-- Real factory hero around 420 px.
-- Compact static manufacturing metrics.
-- Eight process steps, four columns on desktop and two on small mobile layouts.
-- Winding and core-processing photos directly support the process explanation.
-- SRM, MOM, QMS and WMS are compact operational information blocks.
+- Real factory hero around 420 px with three concise capability highlights.
+- Complete manufacturing metrics are centralized in the overview below and may use the shared one-time count-up behavior.
+- Eight numbered process steps remain in order.
+- Core cutting, coil winding, assembly and testing evidence is placed adjacent to the relevant step rather than in a detached generic gallery.
+- A step without suitable evidence remains a text step. Do not use an unrelated image to fill space.
+- SRM, MOM, QMS and WMS are simple operational evidence rows.
 - Testing image is paired with Routine Tests, Type / Special Tests, Witness FAT and Traceable Records.
-- Equipment gallery uses consistent image proportions and captions.
+- The final gallery prioritizes raw workshop/assembly photography and consistent captions.
+- Developer-facing rewrite commentary and internal source-conflict notes do not appear on customer pages.
 - FAQ, factory visit and technical inquiry remain available.
-
-## Project map and project cards
-
-The project-map area uses medium-value blue-gray backgrounds so the map outline remains legible without becoming a dark visual centerpiece. Pins use restrained teal. Project detail is shown in a compact floating panel containing application, industry, scale, product and documented scope.
-
-Map filtering, project pins, project detail and links are functional requirements and should not be removed during visual cleanup.
 
 ## Certificates and reports
 
-Homepage certificates are treated as a manually browsable evidence shelf, not an automatic 3D showpiece. Cards remain document-like and the user controls horizontal browsing. The design should not imply a certificate applies more broadly than its metadata supports.
+Homepage certificates are a manually browsable evidence shelf, not an automatic 3D showpiece. Cards remain document-like and the user controls horizontal browsing. The design must not imply that a certificate applies more broadly than its metadata supports.
 
 ## Responsive behavior
 
@@ -203,43 +224,53 @@ Homepage certificates are treated as a manually browsable evidence shelf, not an
 - Technical table scroll remains inside its own container.
 - Product rows keep the thumbnail visible but reduce its width.
 - Section navigation may horizontally scroll.
-- Manufacturing process remains readable as a two-column step grid where space permits.
+- Manufacturing process becomes two columns where space permits.
+- Homepage evidence gallery becomes two columns.
 
 ### Approximately 390 px
 
 - Page shell reduces to about 16 px side gutters.
 - Hero grows vertically if needed.
-- Major content becomes one column except compact metric/process pairs where two columns remain readable.
-- Product directory rows keep a small `contain` thumbnail plus stacked product/range copy.
+- Major content becomes one column except compact metrics/gallery pairs where two columns remain readable.
+- Product directory rows keep a small `contain` thumbnail plus stacked product/range/use copy.
+- Manufacturing process becomes one column so evidence images remain legible.
 - CTA groups wrap or stack.
 - No component may force page-level horizontal overflow.
 
+Responsive rules are implementation targets, not proof of visual verification. A viewport can only be marked visually accepted after an actual browser screenshot/interaction review at that size.
+
 ## Motion and accessibility
 
-- Respect `prefers-reduced-motion`.
+- Representative pages use short progressive scroll reveals for section headings, product rows, evidence blocks, manufacturing steps and selected gallery items. The standard reveal is about 20 px upward travel with roughly 680 ms duration and small staggered delays.
+- Homepage company metrics and Manufacturing hero/overview metrics count from zero to the exact final published value when entering the viewport. Count-up runs once and does not apply to technical tables, model numbers, voltage ranges or report identifiers.
+- Motion must not change layout dimensions, crop engineering content, or block interaction.
+- Respect `prefers-reduced-motion`: count-up and progressive reveal motion are skipped, and final content/value is presented immediately.
 - Product carousel does not auto-advance under reduced motion.
 - Hover and keyboard focus pause the product carousel.
 - Modal close controls remain keyboard reachable.
-- Existing modal logic returns focus to the element that opened the dialog.
-- Section navigation and carousel controls use actual links/buttons rather than click-only generic elements.
-- Visible focus styles must be retained.
+- Existing modal logic returns focus to the opener.
+- Section navigation and carousel controls use real links/buttons.
+- Visible focus styles are retained.
 
 ## Source and generated-file relationship
 
-The Phase 1 design system is applied by `src/visual-system-phase1.mjs`, which runs as the final site stage after legacy generators. The legacy generators remain available for unmigrated pages, while the four representative pages have their stylesheet lists replaced at the end of the canonical build.
+The representative system is applied late in the canonical build so legacy generators can continue serving unmigrated pages while the representative pages receive a clean two-stylesheet contract.
 
-| Source | Generated output |
+| Source | Generated output / role |
 | --- | --- |
 | `src/visual-system.css` | `dist/assets/css/visual-system.css` |
 | `src/home.css` | `dist/assets/css/home.css` |
 | `src/product-directory.css` | `dist/assets/css/product-directory.css` |
 | `src/product-detail.css` | `dist/assets/css/product-detail.css` |
 | `src/manufacturing.css` | `dist/assets/css/manufacturing.css` |
-| `src/visual-behavior.js` | `dist/assets/js/visual-behavior.js` |
-| `src/visual-system-phase1.mjs` | migrates the four generated representative pages and mirrors the homepage to root `index.html` |
+| `src/visual-behavior.js` | `dist/assets/js/visual-behavior.js`; product carousel, evidence shelf, manufacturing section tracking, metric count-up and progressive scroll reveal |
+| `src/home-project-map-v16.mjs` | builds calibrated project-map markup and project reference pages |
+| `src/manufacturing-v34.mjs` | builds the manufacturing evidence structure upstream |
+| `src/visual-system-phase1.mjs` | replaces stylesheet lists and applies the representative visual contract |
+| `src/representative-page-polish.mjs` | Task A structural cleanup for the representative pages after migration |
 
-For each migrated page, the intended stylesheet contract is exactly:
+For each representative page, the intended stylesheet contract remains exactly:
 
 `visual-system.css + current page template stylesheet`
 
-The rest of the site continues to use the pre-existing styles until explicitly migrated.
+Do not add a new numbered patch stylesheet to solve a local visual issue. Fix the formal source component or canonical page stylesheet instead.

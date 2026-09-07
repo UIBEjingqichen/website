@@ -10,4 +10,5 @@ runStages("Final site pass", [
   "company-build.mjs",
   "site-typography.mjs",
   "visual-system-phase1.mjs",
+  "representative-page-polish.mjs",
 ]);
