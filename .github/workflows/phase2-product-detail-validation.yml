@@ -1,0 +1,152 @@
+name: Phase 2 Product Detail Validation
+
+on:
+  push:
+    branches:
+      - phase2-product-detail-rollout-20260907
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: phase2-product-detail-rollout
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    if: ${{ !contains(github.event.head_commit.message, '[site-generated]') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout product-detail branch
+        uses: actions/checkout@v4
+        with:
+          ref: phase2-product-detail-rollout-20260907
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build website
+        run: npm run build
+
+      - name: Validate generated website
+        run: npm run check
+
+      - name: Install Chromium
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Browser-check all product pages and capture representative screenshots
+        run: |
+          mkdir -p visual-artifacts/product-details
+          python3 -m http.server 4173 >/tmp/tianyu-products-http.log 2>&1 &
+          echo $! >/tmp/tianyu-products-http.pid
+          sleep 2
+          node --input-type=module <<'NODE'
+          import { chromium } from 'playwright';
+          import fs from 'node:fs';
+
+          const index = JSON.parse(fs.readFileSync('dist/product-range-pages.json', 'utf8'));
+          const browser = await chromium.launch({ headless: true });
+
+          const desktop = await browser.newPage({ viewport: { width: 1363, height: 900 }, deviceScaleFactor: 1 });
+          const audit = [];
+          for (const product of index.pages) {
+            const route = `/dist/products/${product.slug}/index.html`;
+            await desktop.goto(`http://127.0.0.1:4173${route}`, { waitUntil: 'domcontentloaded' });
+            await desktop.waitForTimeout(180);
+            const result = await desktop.evaluate(() => ({
+              h1: document.querySelectorAll('h1').length,
+              phase: document.body.classList.contains('phase1-detail'),
+              standard: document.body.classList.contains('product-detail-standard'),
+              overflow: document.documentElement.scrollWidth - window.innerWidth,
+              sections: ['ratings','applications','engineering','drawings','documents','related','contact-rfq'].every((id) => Boolean(document.getElementById(id))),
+              styles: [...document.querySelectorAll('link[rel="stylesheet"]')].map((link) => link.getAttribute('href')),
+            }));
+            if (result.h1 !== 1 || !result.phase || !result.standard || !result.sections || result.overflow > 2 || result.styles.length !== 2) {
+              throw new Error(`${product.slug} failed browser contract: ${JSON.stringify(result)}`);
+            }
+            audit.push({ slug: product.slug, ...result });
+          }
+          await desktop.close();
+
+          const samples = [
+            '35kv-power-transformer',
+            '110kv-power-transformer',
+            '12kv-oil-immersed-distribution-transformer',
+            'dry-type-distribution-transformer',
+            'yb-prefabricated-substation',
+            'zgs-prefabricated-substation',
+            '35-110kv-mobile-intelligent-substation',
+          ];
+          const viewports = [
+            ['desktop', 1363, 900],
+            ['tablet', 768, 1024],
+            ['mobile', 390, 844],
+          ];
+
+          async function settle(page, height) {
+            const total = await page.evaluate(() => document.documentElement.scrollHeight);
+            const step = Math.max(320, Math.floor(height * .72));
+            for (let y = 0; y < total; y += step) {
+              await page.evaluate((top) => window.scrollTo({ top, behavior: 'instant' }), y);
+              await page.waitForTimeout(70);
+            }
+            await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+            await page.waitForTimeout(350);
+          }
+
+          for (const [label, width, height] of viewports) {
+            const page = await browser.newPage({ viewport: { width, height }, deviceScaleFactor: 1 });
+            for (const slug of samples) {
+              await page.goto(`http://127.0.0.1:4173/dist/products/${slug}/index.html`, { waitUntil: 'domcontentloaded' });
+              await settle(page, height);
+              const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+              if (overflow > 2) throw new Error(`${slug} has ${overflow}px page-level horizontal overflow at ${label}`);
+              await page.screenshot({ path: `visual-artifacts/product-details/${slug}-${label}-full.png`, fullPage: true });
+            }
+            await page.close();
+          }
+
+          const drawingPage = await browser.newPage({ viewport: { width: 1363, height: 900 }, deviceScaleFactor: 1 });
+          await drawingPage.goto('http://127.0.0.1:4173/dist/products/35kv-power-transformer/index.html', { waitUntil: 'domcontentloaded' });
+          const drawing = drawingPage.locator('[data-drawing-thumb]').first();
+          if (await drawing.count()) {
+            await drawing.scrollIntoViewIfNeeded();
+            await drawingPage.waitForTimeout(500);
+            await drawing.click();
+            await drawingPage.waitForTimeout(200);
+            await drawingPage.screenshot({ path: 'visual-artifacts/product-details/35kv-drawing-viewer-desktop.png' });
+          }
+          await drawingPage.close();
+
+          fs.writeFileSync('visual-artifacts/product-details/audit.json', JSON.stringify(audit, null, 2));
+          fs.writeFileSync('visual-artifacts/product-details/README.txt', 'All 18 catalog-backed leaf product pages were browser-checked at 1363px for canonical sections, one H1, two-stylesheet contract and page-level overflow. Representative power, distribution, dry-type, prefabricated and special product pages were captured at 1363px, 768px and 390px.\n');
+          await browser.close();
+          NODE
+          kill "$(cat /tmp/tianyu-products-http.pid)" || true
+
+      - name: Upload product-detail screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase2-product-detail-screenshots
+          path: visual-artifacts/product-details
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Commit generated site output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist index.html
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+          else
+            git commit -m "Build canonical product-detail rollout [site-generated]"
+            git push origin HEAD:phase2-product-detail-rollout-20260907
+          fi
