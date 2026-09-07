@@ -1,6 +1,150 @@
 (() => {
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+  function parseCounter(element) {
+    const original = element.textContent.trim();
+    const match = original.match(/^(.*?)(-?\d[\d,]*(?:\.\d+)?)(.*)$/);
+    if (!match) return null;
+    const numericText = match[2];
+    const target = Number(numericText.replace(/,/g, ''));
+    if (!Number.isFinite(target)) return null;
+    const decimals = (numericText.split('.')[1] || '').length;
+    return {
+      original,
+      prefix: match[1],
+      suffix: match[3],
+      target,
+      decimals,
+      grouped: numericText.includes(',') || Math.abs(target) >= 1000
+    };
+  }
+
+  function setupCountUp() {
+    const counters = [...document.querySelectorAll([
+      '.phase1-home .yw-stat-grid strong',
+      '.phase1-manufacturing .mfg34-hero-stat strong',
+      '.phase1-manufacturing .mfg34-metric strong'
+    ].join(','))].map((element) => ({ element, data: parseCounter(element) })).filter((item) => item.data);
+
+    if (!counters.length || reduced.matches) return;
+
+    const formatter = (data, value) => new Intl.NumberFormat('en-US', {
+      useGrouping: data.grouped,
+      minimumFractionDigits: data.decimals,
+      maximumFractionDigits: data.decimals
+    }).format(value);
+
+    const animate = ({ element, data }) => {
+      if (element.dataset.vsCountDone === 'true') return;
+      element.dataset.vsCountDone = 'true';
+      element.setAttribute('aria-label', data.original);
+      const duration = Math.min(1900, 1150 + Math.log10(Math.abs(data.target) + 1) * 150);
+      const started = performance.now();
+      const easeOutCubic = (progress) => 1 - Math.pow(1 - progress, 3);
+      element.textContent = `${data.prefix}${formatter(data, 0)}${data.suffix}`;
+
+      const tick = (now) => {
+        const progress = Math.min(1, (now - started) / duration);
+        const eased = easeOutCubic(progress);
+        const rawValue = data.target * eased;
+        const value = data.decimals ? rawValue : Math.round(rawValue);
+        element.textContent = `${data.prefix}${formatter(data, value)}${data.suffix}`;
+        if (progress < 1) {
+          requestAnimationFrame(tick);
+        } else {
+          element.textContent = data.original;
+          element.animate([
+            { transform: 'translateY(0) scale(1)' },
+            { transform: 'translateY(-2px) scale(1.025)', offset: .58 },
+            { transform: 'translateY(0) scale(1)' }
+          ], { duration: 220, easing: 'ease-out' });
+        }
+      };
+      requestAnimationFrame(tick);
+    };
+
+    if (!('IntersectionObserver' in window)) {
+      counters.forEach(animate);
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const item = counters.find((candidate) => candidate.element === entry.target);
+        if (item) animate(item);
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: .45, rootMargin: '0px 0px -6% 0px' });
+
+    counters.forEach(({ element }) => observer.observe(element));
+  }
+
+  function setupScrollReveal() {
+    if (reduced.matches || !('IntersectionObserver' in window)) return;
+
+    const groups = [
+      ['.phase1-home .yw-company-copy, .phase1-home .yw-stat-grid article', 70],
+      ['.phase1-home .v3p-products-home .v3p-title, .phase1-home .v3p-family-card', 65],
+      ['.phase1-home .ty15-head, .phase1-home .ty15-band', 75],
+      ['.phase1-home .ty16-head, .phase1-home .ty16-filters, .phase1-home .ty16-map-stage, .phase1-home .ty16-card', 70],
+      ['.phase1-home .v5-certificate-coverflow, .phase1-home .ty18-news-card, .phase1-home .vs-home-evidence-head, .phase1-home .vs-home-evidence-grid figure, .phase1-home .vs-home-cta .v3p-shell', 70],
+      ['.phase1-products .v23-family-heading, .phase1-products .v23-family-grid > a, .phase1-products .v12-directory-head, .phase1-products .v3p-platform-card', 55],
+      ['.phase1-detail .v3p-spec, .phase1-detail .v3p-table-wrap, .phase1-detail .v3p-two-col > div, .phase1-detail .v3p-photo, .phase1-detail .vs-doc-card, .phase1-detail .vs-related-card, .phase1-detail .v3p-cta > *', 65],
+      ['.phase1-manufacturing .mfg34-head, .phase1-manufacturing .mfg34-metric, .phase1-manufacturing .mfg34-step, .phase1-manufacturing .mfg34-system, .phase1-manufacturing .mfg34-digital-visual, .phase1-manufacturing .mfg34-test-item, .phase1-manufacturing .mfg34-test-photo, .phase1-manufacturing .mfg34-gallery figure, .phase1-manufacturing .mfg34-faq details, .phase1-manufacturing .mfg34-cta-inner > *', 55]
+    ];
+
+    const revealItems = [];
+    const seen = new Set();
+
+    groups.forEach(([selector, delayStep]) => {
+      const items = [...document.querySelectorAll(selector)];
+      items.forEach((element, index) => {
+        if (seen.has(element)) return;
+        seen.add(element);
+        const delay = Math.min(280, (index % 5) * delayStep);
+        element.dataset.vsReveal = 'pending';
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(20px)';
+        element.style.willChange = 'opacity, transform';
+        revealItems.push({ element, delay });
+      });
+    });
+
+    const reveal = ({ element, delay }) => {
+      if (element.dataset.vsReveal === 'done') return;
+      element.dataset.vsReveal = 'done';
+      const animation = element.animate([
+        { opacity: 0, transform: 'translateY(20px)' },
+        { opacity: 1, transform: 'translateY(0)' }
+      ], {
+        duration: 680,
+        delay,
+        easing: 'cubic-bezier(.2,.72,.25,1)',
+        fill: 'forwards'
+      });
+      animation.addEventListener('finish', () => {
+        element.style.opacity = '';
+        element.style.transform = '';
+        element.style.willChange = '';
+      }, { once: true });
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const item = revealItems.find((candidate) => candidate.element === entry.target);
+        if (item) reveal(item);
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: .12, rootMargin: '0px 0px 8% 0px' });
+
+    revealItems.forEach(({ element }) => observer.observe(element));
+  }
+
+  setupCountUp();
+  setupScrollReveal();
+
   const hero = document.querySelector('[data-product-hero]');
   if (hero) {
     const slides = [...hero.querySelectorAll('[data-product-slide]')];
