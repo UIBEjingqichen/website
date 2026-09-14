@@ -9,10 +9,8 @@ const distRoot = path.join(root, "dist");
 const productsRoot = path.join(distRoot, "products");
 const mediaRoot = path.join(distRoot, "assets", "media", "products", "classified");
 
-const FORBIDDEN_SHA = "54cc027041d0b5741a433ac36b63491311034596";
-const forbiddenPaths = [
-  path.join(root, "source-media", "applications", "floating-solar-combined-transformer-site.webp"),
-  path.join(sourceRoot, "products", "american-combined-transformer-03.webp"),
+const FORBIDDEN_GIT_BLOB_SHA = "54cc027041d0b5741a433ac36b63491311034596";
+const forbiddenGeneratedPaths = [
   path.join(distRoot, "assets", "media", "applications", "floating-solar-combined-transformer-site.webp"),
 ];
 
@@ -26,7 +24,6 @@ const pageMedia = {
     "products/220KV.png",
     "products/220KV111.png",
     "products/220kv222.png",
-    "products/220kv55.png",
   ],
   "220kv-double-split-booster-transformer": [
     "products/220KV111.png",
@@ -35,7 +32,7 @@ const pageMedia = {
   ],
   "35kv-power-transformer": [
     "products/35KV.png",
-    "products/35KV.JPG",
+    "power-transformers/oil-immersed-power-transformer-installed.png",
     "power-transformers/oil-immersed-power-transformer-isolated-01.jpeg",
   ],
   "66kv-power-transformer": [
@@ -48,9 +45,8 @@ const pageMedia = {
   ],
   "12kv-oil-immersed-distribution-transformer": [
     "products/小型油浸式配变 (1).JPG",
-    "products/小型油浸式配变 (2).JPG",
-    "products/小型油浸式配变 (3).JPG",
     "distribution-transformers/oil-immersed-distribution-transformer-sealed-01.webp",
+    "distribution-transformers/oil-immersed-distribution-transformer-conservator-01.webp",
   ],
   "40-5kv-renewable-oil-immersed-transformer": [
     "products/35KV油浸式.png",
@@ -62,20 +58,20 @@ const pageMedia = {
     "distribution-transformers/oil-immersed-distribution-transformer-cable-connected-01.webp",
   ],
   "dry-type-distribution-transformer": [
-    "products/10kv干式.png",
-    "products/10kv干式11.png",
     "products/10kv干 (1).jpg",
+    "products/10kv干 (2).jpg",
     "dry-type-transformers/cast-resin-dry-type-transformer-red-01.jpeg",
+    "dry-type-transformers/cast-resin-dry-type-transformer-red-02.jpeg",
   ],
   "40-5kv-new-energy-dry-type-transformer": [
     "dry-type-transformers/dry-type-transformer-red-tall-01.jpeg",
     "dry-type-transformers/cast-resin-dry-type-transformer-red-02.jpeg",
-    "dry-type-transformers/12_产品照片_013_红色三相干式变压器成品待交付.JPG",
+    "dry-type-transformers/cast-resin-transformer-core-coil-assembly.jpeg",
   ],
   "35kv-large-dry-type-power-transformer": [
     "dry-type-transformers/07_变压器总装_003_大型红色三相干式变压器，工人顶部装配.JPG",
     "dry-type-transformers/dry-type-transformer-red-tall-01.jpeg",
-    "dry-type-transformers/12_产品照片_006_红色干式变压器成品阵列存放区.JPG",
+    "dry-type-transformers/cast-resin-dry-type-transformer-red-02.jpeg",
   ],
   "amorphous-alloy-dry-type-transformer": [
     "dry-type-transformers/amorphous-alloy-dry-type-transformer-with-fans.jpeg",
@@ -154,15 +150,17 @@ const familyFallbacks = {
   ],
 };
 
-function sha1(file) {
-  const crypto = requireCrypto();
-  return crypto.createHash("sha1").update(fs.readFileSync(file)).digest("hex");
-}
-
 let cryptoModule;
 function requireCrypto() {
   if (!cryptoModule) throw new Error("crypto module not initialized");
   return cryptoModule;
+}
+
+function gitBlobSha(file) {
+  const crypto = requireCrypto();
+  const body = fs.readFileSync(file);
+  const header = Buffer.from(`blob ${body.length}\0`);
+  return crypto.createHash("sha1").update(header).update(body).digest("hex");
 }
 
 function escapeHtml(value = "") {
@@ -187,8 +185,8 @@ function uniqueExisting(list) {
   for (const relative of list) {
     const source = path.join(sourceRoot, relative);
     if (!fs.existsSync(source)) continue;
-    const digest = sha1(source);
-    if (digest === FORBIDDEN_SHA || seen.has(digest)) continue;
+    const digest = gitBlobSha(source);
+    if (digest === FORBIDDEN_GIT_BLOB_SHA || seen.has(digest)) continue;
     seen.add(digest);
     output.push({ relative, source, digest });
   }
@@ -216,8 +214,8 @@ function carousel(srcs, title) {
 async function main() {
   cryptoModule = await import("node:crypto");
 
-  // The prohibited photograph and its duplicate alias are never allowed into generated media.
-  for (const file of forbiddenPaths.filter((p) => p.startsWith(distRoot))) fs.rmSync(file, { force: true });
+  // Remove the prohibited photograph from generated assets even if an earlier build copied it.
+  for (const file of forbiddenGeneratedPaths) fs.rmSync(file, { force: true });
 
   fs.mkdirSync(mediaRoot, { recursive: true });
   let pageCount = 0;
