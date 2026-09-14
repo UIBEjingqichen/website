@@ -24,4 +24,5 @@ runStages("Final site pass", [
   "product-unit-normalize-v49.mjs",
   "product-nav-direct-jump-v50.mjs",
   "product-remove-selection-logic-v51.mjs",
+  "distribution-family-consolidation-v52.mjs",
 ]);
