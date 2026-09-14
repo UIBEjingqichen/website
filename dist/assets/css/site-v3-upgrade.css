@@ -64,3 +64,68 @@
   .phase1-detail .vs-product-carousel-stage{height:240px}
   .v45-variant-link{grid-template-columns:1fr;gap:4px}
 }
+
+/* v46: three-family architecture, larger product imagery, and clean substation presentation. */
+
+/* Products landing page: larger, cleaner media without nested frames. */
+.phase1-products .v23-product-carousel{height:400px;background:#fff;border:0;box-shadow:none}
+.phase1-products .v23-product-slide img{height:336px;padding:0;background:#fff;object-fit:cover;object-position:center;transform:scale(1.02)}
+.phase1-products .v23-product-slide figcaption{min-height:64px;padding:12px 16px;border-top:1px solid #e1e9ed;background:#fff}
+.phase1-products .v23-family-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.phase1-products .v23-hero-facts{grid-template-columns:repeat(3,minmax(0,1fr));max-width:720px}
+
+/* Product directory cards: one clean image field, larger and edge-to-edge. */
+.phase1-products .v3p-platform-card{grid-template-columns:220px minmax(0,1fr);min-height:160px}
+.phase1-products .v3p-platform-card .media{padding:0!important;border-right:0!important;background:#fff!important;overflow:hidden}
+.phase1-products .v3p-platform-card .media img{display:block;width:100%!important;height:160px!important;min-height:160px!important;padding:0!important;background:#fff;object-fit:cover!important;object-position:center;mix-blend-mode:normal!important;transform:scale(1.02)}
+
+/* Family pages use the same media rhythm. */
+.v3p-family-hero-media{background:#fff!important}
+.v3p-family-hero-media img{padding:0!important;object-fit:cover!important;object-position:center!important;transform:scale(1.02)!important}
+.v3p-platform-card .media{padding:0!important;background:#fff!important;overflow:hidden!important}
+.v3p-platform-card .media img,.v3p-platform-card>img{padding:0!important;background:#fff!important;object-fit:cover!important;object-position:center!important;transform:scale(1.02)!important}
+
+/* Product detail pages: substantially larger product image area. */
+.phase1-detail .v3p-hero{grid-template-columns:minmax(0,.86fr) minmax(600px,1.14fr);width:min(1540px,calc(100% - 40px));min-height:520px;padding:22px 0}
+.phase1-detail .v3p-hero-copy{padding-right:32px}
+.phase1-detail .v3p-hero-media,.phase1-detail .vs-product-carousel{padding:0;background:#fff}
+.phase1-detail .vs-product-carousel-stage{height:500px;background:#fff;border:0;border-radius:0}
+.phase1-detail .vs-product-carousel-slide{padding:0;background:#fff}
+.phase1-detail .vs-product-carousel-slide img{width:100%;height:100%;max-height:none;padding:0;background:#fff;object-fit:contain;object-position:center;filter:none;transform:scale(1.12);transform-origin:center}
+.phase1-detail .vs-product-carousel-controls{margin-top:6px;padding:0 4px}
+
+/* Distribution family now contains exactly the two construction types. */
+.v46-distribution-family .v3p-platform-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:980px}
+.v46-distribution-family .v3p-platform-card{grid-template-rows:280px auto}
+.v46-distribution-family .v3p-platform-card .media img{height:280px!important;object-fit:contain!important;transform:scale(1.10)!important}
+
+@media(max-width:1080px){
+  .phase1-detail .v3p-hero{grid-template-columns:1fr 1fr;width:min(var(--ty-max),calc(100% - 36px))}
+  .phase1-detail .vs-product-carousel-stage{height:420px}
+  .phase1-products .v3p-platform-card{grid-template-columns:190px minmax(0,1fr)}
+}
+@media(max-width:820px){
+  .phase1-products .v23-family-grid{grid-template-columns:1fr}
+  .phase1-products .v23-hero-facts{grid-template-columns:1fr 1fr}
+  .phase1-products .v23-product-carousel{height:350px}
+  .phase1-products .v23-product-slide img{height:286px}
+  .phase1-products .v3p-platform-card{grid-template-columns:170px minmax(0,1fr);min-height:142px}
+  .phase1-products .v3p-platform-card .media img{height:142px!important;min-height:142px!important}
+  .phase1-detail .v3p-hero{grid-template-columns:1fr;min-height:0}
+  .phase1-detail .vs-product-carousel-stage{height:360px}
+  .phase1-detail .vs-product-carousel-slide img{transform:scale(1.08)}
+  .v46-distribution-family .v3p-platform-grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .phase1-products .v23-hero-facts{grid-template-columns:1fr}
+  .phase1-products .v23-product-carousel{height:300px}
+  .phase1-products .v23-product-slide img{height:238px}
+  .phase1-products .v3p-platform-card{grid-template-columns:132px minmax(0,1fr);min-height:124px}
+  .phase1-products .v3p-platform-card .media img{height:124px!important;min-height:124px!important}
+  .phase1-detail .vs-product-carousel-stage{height:290px}
+  .phase1-detail .vs-product-carousel-slide img{transform:scale(1.06)}
+}
+
+/* v47: final three-family layout polish. */
+.v3p-products-home .v3p-family-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:900px){.v3p-products-home .v3p-family-grid{grid-template-columns:1fr}}
