@@ -1,0 +1,27 @@
+/* v42: product imagery lives in the hero carousel; the lower Product & Engineering Views block is retired. */
+.phase1-detail .vs-product-carousel{position:relative;display:block;min-width:0;padding:18px;background:transparent}
+.phase1-detail .vs-product-carousel-stage{position:relative;width:100%;height:330px;overflow:hidden;border-radius:var(--ty-radius);background:#eef4f6}
+.phase1-detail .vs-product-carousel-slide{position:absolute;inset:0;display:grid;place-items:center;padding:18px;opacity:0;pointer-events:none;transition:opacity .28s ease}
+.phase1-detail .vs-product-carousel-slide.is-active{opacity:1;pointer-events:auto}
+.phase1-detail .vs-product-carousel-slide img{width:100%;height:100%;max-height:294px;object-fit:contain;object-position:center;filter:drop-shadow(0 10px 14px rgba(16,46,70,.11))}
+.phase1-detail .vs-product-carousel-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px}
+.phase1-detail .vs-product-carousel-dots{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.phase1-detail .vs-product-carousel-dot{width:8px;height:8px;padding:0;border:0;border-radius:999px;background:#b9c7ce;cursor:pointer;transition:width .18s ease,background .18s ease}
+.phase1-detail .vs-product-carousel-dot.is-active{width:24px;background:var(--ty-teal-dark)}
+.phase1-detail .vs-product-carousel-count{color:var(--ty-muted);font-size:11px;font-weight:750;letter-spacing:.04em}
+.phase1-detail .vs-product-carousel[data-single-slide="true"] .vs-product-carousel-controls{display:none}
+
+@media(max-width:820px){
+  .phase1-detail .vs-product-carousel{order:-1;min-height:240px;padding:8px 0 20px}
+  .phase1-detail .vs-product-carousel-stage{height:250px}
+  .phase1-detail .vs-product-carousel-slide img{max-height:220px}
+}
+@media(max-width:560px){
+  .phase1-detail .vs-product-carousel{min-height:210px}
+  .phase1-detail .vs-product-carousel-stage{height:220px}
+  .phase1-detail .vs-product-carousel-slide{padding:12px}
+  .phase1-detail .vs-product-carousel-slide img{max-height:196px}
+}
+@media(prefers-reduced-motion:reduce){
+  .phase1-detail .vs-product-carousel-slide,.phase1-detail .vs-product-carousel-dot{transition:none!important}
+}
