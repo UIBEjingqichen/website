@@ -20,4 +20,5 @@ runStages("Final site pass", [
   "product-media-presentation-v45.mjs",
   "product-architecture-v46.mjs",
   "product-architecture-fix-v47.mjs",
+  "product-thumbnail-selection-v48.mjs",
 ]);
