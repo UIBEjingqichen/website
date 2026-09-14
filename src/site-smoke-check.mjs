@@ -53,6 +53,11 @@ if (read(pulseRel).includes("Actual 24-Pulse Transformer")) {
   throw new Error("24-pulse page presents representative imagery as an actual model photograph.");
 }
 
+const detailCss = read("assets/css/product-detail.css");
+if (!detailCss.includes("v42: product imagery lives in the hero carousel")) {
+  throw new Error("Product-detail CSS is missing the v42 hero-carousel styles.");
+}
+
 const productsRoot = path.join(dist, "products");
 let detailCount = 0;
 for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
@@ -67,8 +72,11 @@ for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
   const expectedStyles = ["../../assets/css/visual-system.css", "../../assets/css/product-detail.css"];
   if (styles.length !== 2) throw new Error(`${rel} should load exactly two detail stylesheets; found ${styles.length}.`);
   for (const href of expectedStyles) if (!styles.includes(href)) throw new Error(`${rel} missing unified stylesheet: ${href}`);
-  for (const marker of ["phase1-detail", "vs-detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="drawings"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "visual-behavior.js"]) {
-    if (!html.includes(marker)) throw new Error(`${rel} missing 110 kV detail-layout marker: ${marker}`);
+  for (const marker of ["phase1-detail", "vs-detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "data-product-hero", "data-product-slide", "data-v41-reference-parameters", "visual-behavior.js"]) {
+    if (!html.includes(marker)) throw new Error(`${rel} missing unified detail-layout marker: ${marker}`);
+  }
+  for (const retired of ['id="drawings"', 'href="#drawings"', "Product &amp; Engineering Views", "Product & Engineering Views", "Product Images &amp; Engineering Drawings", "Product Images & Engineering Drawings"]) {
+    if (html.includes(retired)) throw new Error(`${rel} still contains retired lower-gallery content: ${retired}`);
   }
 }
 if (detailCount < 10) throw new Error(`Expected at least 10 concrete product detail pages; found ${detailCount}.`);
@@ -84,4 +92,4 @@ if (ratingRows !== 11) throw new Error(`110 kV Rating Range should retain 11 row
 const rootIndex = fs.readFileSync(path.join(root, "index.html"), "utf8");
 if (!rootIndex.includes('<base href="dist/">')) throw new Error("Root index mirror is missing the dist base path.");
 
-console.log(`Smoke check passed: four-family taxonomy, 24-pulse evidence guardrails, ${detailCount} unified concrete product pages, and preserved 110 kV source-backed ratings.`);
+console.log(`Smoke check passed: four-family taxonomy, source-labeled parameter tables, ${detailCount} hero-carousel product pages, retired lower galleries, and preserved 110 kV ratings.`);
