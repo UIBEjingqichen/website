@@ -22,4 +22,5 @@ runStages("Final site pass", [
   "product-architecture-fix-v47.mjs",
   "product-thumbnail-selection-v48.mjs",
   "product-unit-normalize-v49.mjs",
+  "product-nav-direct-jump-v50.mjs",
 ]);
