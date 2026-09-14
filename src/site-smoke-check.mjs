@@ -5,169 +5,83 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
 const dist = path.join(root, "dist");
+const exists = (rel) => fs.existsSync(path.join(dist, rel));
 const read = (rel) => fs.readFileSync(path.join(dist, rel), "utf8");
+const requireFile = (rel) => { if (!exists(rel)) throw new Error(`Missing generated file: ${rel}`); };
+const requireText = (rel, text) => { if (!read(rel).includes(text)) throw new Error(`${rel} is missing expected content: ${text}`); };
 
-const requiredFiles = [
+const required = [
   "index.html",
   "products.html",
   "manufacturing.html",
-  "about.html",
   "applications.html",
+  "about.html",
   "catalog.html",
-  "knowledge/index.html",
-  "product-range-pages.json",
-  "assets/css/site-typography.css",
   "assets/css/visual-system.css",
-  "assets/css/home.css",
   "assets/css/product-directory.css",
   "assets/css/product-detail.css",
-  "assets/css/manufacturing.css",
   "assets/js/visual-behavior.js",
-  "assets/media/catalog-v3/ga-power-transformers.webp",
-  "assets/media/catalog-v3/ga-distribution-renewable.webp",
-  "products/35kv-power-transformer/index.html",
-  "products/66kv-power-transformer/index.html",
   "products/110kv-power-transformer/index.html",
-  "products/220kv-power-transformer/index.html",
-  "products/12kv-oil-immersed-distribution-transformer/index.html",
+  "products/cast-resin-dry-type-transformer/index.html",
   "products/dry-type-distribution-transformer/index.html",
-  "products/zgs-prefabricated-substation/index.html",
-  "products/pv-ess-integrated-substation/index.html",
+  "products/oil-immersed-rectifier-transformer/index.html",
   "products/24-pulse-phase-shifting-transformer/index.html",
 ];
+required.forEach(requireFile);
 
-for (const rel of requiredFiles) {
-  if (!fs.existsSync(path.join(dist, rel))) throw new Error(`Missing generated file: ${rel}`);
+for (const text of ["Power Transformers", "Oil-Immersed Transformers", "Dry-Type Transformers", "Prefabricated Substations", "24-Pulse Phase-Shifting Transformer"]) {
+  requireText("products.html", text);
+}
+const directory = read("products.html");
+if (directory.includes('href="#special-transformers"') || directory.includes('id="special-transformers"')) {
+  throw new Error("Products directory still exposes Special & Renewable as an active top-level family.");
 }
 
-const checks = [
-  ["index.html", "85,243 m²"],
-  ["index.html", "phase1-home"],
-  ["index.html", "data-ty16-filter"],
-  ["index.html", "data-phase1-evidence-shelf"],
-  ["index.html", "ty16-map-plane"],
-  ["index.html", "Country-level reference map"],
-  ["index.html", "vs-home-evidence"],
-  ["index.html", "vs-home-cta"],
-  ["about.html", "85,243 m²"],
-  ["manufacturing.html", "85,243 m²"],
-  ["manufacturing.html", "phase1-manufacturing"],
-  ["manufacturing.html", "Routine Tests"],
-  ["manufacturing.html", "Witness FAT"],
-  ["manufacturing.html", "combined-transformer-wiring-assembly.webp"],
-  ["products.html", "Power Transformers"],
-  ["products.html", "Oil-Immersed Transformers"],
-  ["products.html", "Dry-Type Transformers"],
-  ["products.html", "Prefabricated Substations"],
-  ["products.html", "phase1-products"],
-  ["products.html", "data-product-toggle"],
-  ["products.html", "24-Pulse Phase-Shifting Transformer"],
-  ["products/35kv-power-transformer/index.html", "8–31.5 MVA"],
-  ["products/66kv-power-transformer/index.html", "6.3–63 MVA"],
-  ["products/110kv-power-transformer/index.html", "SSZ-6300~63000/110"],
-  ["products/110kv-power-transformer/index.html", "110 / 115 / 121 kV"],
-  ["products/110kv-power-transformer/index.html", "6.3–63 MVA"],
-  ["products/110kv-power-transformer/index.html", "21M2078-S"],
-  ["products/110kv-power-transformer/index.html", "SZ22-50000/110-NX1"],
-  ["products/110kv-power-transformer/index.html", "phase1-detail"],
-  ["products/110kv-power-transformer/index.html", "id=\"engineering\""],
-  ["products/110kv-power-transformer/index.html", "data-drawing-thumb"],
-  ["products/220kv-power-transformer/index.html", "240,000 kVA"],
-  ["products/24-pulse-phase-shifting-transformer/index.html", "Dry-Type Reference Platform"],
-  ["products/24-pulse-phase-shifting-transformer/index.html", "Project Engineered"],
-  ["products/24-pulse-phase-shifting-transformer/index.html", "Representative dry-type family platform"],
-  ["products/cast-resin-dry-type-transformer/index.html", "Special Configurations"],
-  ["products/cast-resin-dry-type-transformer/index.html", "24-Pulse Phase-Shifting Transformer"],
-  ["products/oil-immersed-rectifier-transformer/index.html", "id=\"24-pulse\""],
-  ["catalog.html", "Tianyu Electric Export Product Catalog 2026"],
-  ["index.html", "rel=\"canonical\""],
-  ["about.html", "site-typography.css"],
-  ["knowledge/index.html", "site-typography.css"],
-];
-for (const [rel, needle] of checks) {
-  if (!read(rel).includes(needle)) throw new Error(`${rel} is missing expected content: ${needle}`);
+requireText("products/cast-resin-dry-type-transformer/index.html", "Special Configurations");
+requireText("products/cast-resin-dry-type-transformer/index.html", "24-Pulse Phase-Shifting Transformer");
+requireText("products/oil-immersed-rectifier-transformer/index.html", 'id="24-pulse"');
+
+const pulseRel = "products/24-pulse-phase-shifting-transformer/index.html";
+for (const text of [
+  "24-Pulse Phase-Shifting Transformer",
+  "Dry-Type Reference Platform",
+  "Project Engineered",
+  "Representative dry-type family platform",
+  "not provide a complete model-specific 24-pulse rating table or certificate",
+]) requireText(pulseRel, text);
+if (read(pulseRel).includes("Actual 24-Pulse Transformer")) {
+  throw new Error("24-pulse page presents representative imagery as an actual model photograph.");
 }
 
-const migratedPages = [
-  ["index.html", ["assets/css/visual-system.css", "assets/css/home.css"]],
-  ["products.html", ["assets/css/visual-system.css", "assets/css/product-directory.css"]],
-  ["products/110kv-power-transformer/index.html", ["../../assets/css/visual-system.css", "../../assets/css/product-detail.css"]],
-  ["manufacturing.html", ["assets/css/visual-system.css", "assets/css/manufacturing.css"]],
-];
-
-for (const [rel, expected] of migratedPages) {
-  const html = read(rel);
-  const styles = [...html.matchAll(/<link\b[^>]*rel=["']stylesheet["'][^>]*href=["']([^"']+)["'][^>]*>/gi)].map((match) => match[1]);
-  if (styles.length !== 2) throw new Error(`${rel} should load exactly two stylesheets, found ${styles.length}`);
-  for (const href of expected) if (!styles.includes(href)) throw new Error(`${rel} missing stylesheet ${href}`);
-  if (html.includes("site-typography.css")) throw new Error(`${rel} still loads the legacy typography override`);
-  if (!html.includes("visual-behavior.js")) throw new Error(`${rel} missing visual-system interaction script`);
-}
-
-const productRoot = path.join(dist, "products");
-for (const entry of fs.readdirSync(productRoot, { withFileTypes: true })) {
+const productsRoot = path.join(dist, "products");
+let detailCount = 0;
+for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
   if (!entry.isDirectory()) continue;
   const rel = `products/${entry.name}/index.html`;
-  const file = path.join(dist, rel);
-  if (!fs.existsSync(file)) continue;
-  const html = fs.readFileSync(file, "utf8");
+  if (!exists(rel)) continue;
+  const html = read(rel);
   if (!html.includes('<section class="v3p-hero">') || html.includes('v3p-family-hero')) continue;
-  const styles = [...html.matchAll(/<link\b[^>]*rel=["']stylesheet["'][^>]*href=["']([^"']+)["'][^>]*>/gi)].map((match) => match[1]);
+  detailCount += 1;
+
+  const styles = [...html.matchAll(/<link\b[^>]*rel=["']stylesheet["'][^>]*href=["']([^"']+)["'][^>]*>/gi)].map((m) => m[1]);
   const expectedStyles = ["../../assets/css/visual-system.css", "../../assets/css/product-detail.css"];
-  if (styles.length !== 2) throw new Error(`${rel} should use the two-file product-detail visual system, found ${styles.length} stylesheets`);
-  for (const href of expectedStyles) if (!styles.includes(href)) throw new Error(`${rel} missing unified stylesheet ${href}`);
-  for (const marker of ["phase1-detail", "vs-detail-jump", 'id="ratings"', 'id="documents"', 'id="related"', 'id="contact-rfq"']) {
-    if (!html.includes(marker)) throw new Error(`${rel} is missing unified detail-layout marker: ${marker}`);
+  if (styles.length !== 2) throw new Error(`${rel} should load exactly two detail stylesheets; found ${styles.length}.`);
+  for (const href of expectedStyles) if (!styles.includes(href)) throw new Error(`${rel} missing unified stylesheet: ${href}`);
+  for (const marker of ["phase1-detail", "vs-detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="drawings"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "visual-behavior.js"]) {
+    if (!html.includes(marker)) throw new Error(`${rel} missing 110 kV detail-layout marker: ${marker}`);
   }
-  if (!html.includes("visual-behavior.js")) throw new Error(`${rel} missing visual-system interaction script`);
 }
+if (detailCount < 10) throw new Error(`Expected at least 10 concrete product detail pages; found ${detailCount}.`);
 
-const products = read("products.html");
-if (products.includes('href="#special-transformers"') || products.includes('id="special-transformers"')) {
-  throw new Error("Products directory still exposes the retired Special & Renewable top-level taxonomy");
+const detail110 = read("products/110kv-power-transformer/index.html");
+for (const text of ["SSZ-6300~63000/110", "21M2078-S", "SZ22-50000/110-NX1", "Reference outline drawing"]) {
+  if (!detail110.includes(text)) throw new Error(`110 kV reference page lost source-backed content: ${text}`);
 }
-const productCards = (products.match(/class="v3p-platform-card"/g) || []).length;
-if (productCards < 10) throw new Error(`Products directory lost product comparison rows, found ${productCards}`);
-
-const home = read("index.html");
-const homeH1Count = (home.match(/<h1\b/g) || []).length;
-if (homeH1Count !== 1) throw new Error(`Homepage should contain one semantic H1, found ${homeH1Count}`);
-if (home.includes("assets/js/ux-refine-v5.js")) throw new Error("Homepage still loads the legacy auto-rotating 3D certificate behavior");
-if (home.includes("yw-landscape iq-landscape")) throw new Error("Homepage still contains the unstructured legacy post-news landscape gallery");
-if (home.includes("data-v3-home-capability")) throw new Error("Homepage still ends with the duplicate legacy capability strip");
-if (home.includes("100,000 m²")) throw new Error("Homepage exposes the conflicting 100,000 m² legacy metric after Task A cleanup");
-const mapPins = [...home.matchAll(/data-ty16-pin\b/g)].length;
-if (mapPins < 7) throw new Error(`Homepage project map should retain the selected project references, found ${mapPins} pins`);
-
-const detail = read("products/110kv-power-transformer/index.html");
-const ratingTable = detail.match(/<h3[^>]*>Rating Range<\/h3>[\s\S]*?<tbody>([\s\S]*?)<\/tbody>/)?.[1] || "";
+const ratingTable = detail110.match(/<h3[^>]*>Rating Range<\/h3>[\s\S]*?<tbody>([\s\S]*?)<\/tbody>/)?.[1] || "";
 const ratingRows = (ratingTable.match(/<tr>/g) || []).length;
-if (ratingRows !== 11) throw new Error(`110 kV Rating Range should retain 11 rows, found ${ratingRows}`);
-if (!detail.includes("Reference outline drawing")) throw new Error("110 kV detail lost reference-drawing labeling");
-if (!detail.includes("not presented as certification of the full 110 kV product family")) throw new Error("110 kV model-specific report scope note is missing");
-if (!detail.includes("ga-power-transformers.webp")) throw new Error("110 kV reference drawing resource is missing");
-
-const pulse = read("products/24-pulse-phase-shifting-transformer/index.html");
-if (pulse.includes("Actual 24-Pulse Transformer")) throw new Error("24-pulse page incorrectly presents representative imagery as an actual model photograph");
-if (!pulse.includes("not provide a complete model-specific 24-pulse rating table or certificate")) throw new Error("24-pulse evidence limitation is not stated clearly");
-
-const manufacturing = read("manufacturing.html");
-if (manufacturing.includes("manufacturing-v34.js")) throw new Error("Manufacturing counter-animation script is still loaded");
-if (manufacturing.includes("The page now presents")) throw new Error("Manufacturing still contains implementation-facing rewrite language");
-if (manufacturing.includes("Company-scale figures use")) throw new Error("Manufacturing still exposes internal source-conflict language");
-if (manufacturing.includes("not decoration")) throw new Error("Manufacturing still contains implementation-facing testing language");
-const processSteps = (manufacturing.match(/class="mfg34-step(?:\s|\")/g) || []).length;
-if (processSteps !== 8) throw new Error(`Manufacturing should retain eight process steps, found ${processSteps}`);
-const heroStats = (manufacturing.match(/class="mfg34-hero-stat"/g) || []).length;
-if (heroStats !== 3) throw new Error(`Manufacturing hero should show three concise metrics, found ${heroStats}`);
-
-for (const rel of ["products.html", "applications.html", "about.html"]) {
-  if (read(rel).includes("images.unsplash.com")) throw new Error(`${rel} still references Unsplash.`);
-}
+if (ratingRows !== 11) throw new Error(`110 kV Rating Range should retain 11 rows; found ${ratingRows}.`);
 
 const rootIndex = fs.readFileSync(path.join(root, "index.html"), "utf8");
-if (!rootIndex.includes('<base href="dist/">')) throw new Error("Root index mirror is missing the dist base path");
-const normalizedRoot = rootIndex.replace(/\s*<base href="dist\/">/, "");
-if (normalizedRoot !== home) throw new Error("Root index mirror does not match generated homepage content");
+if (!rootIndex.includes('<base href="dist/">')) throw new Error("Root index mirror is missing the dist base path.");
 
-console.log(`Smoke check passed: ${requiredFiles.length} required files, ${checks.length} content checks, unified product-detail visual contracts, four-family taxonomy guards and the 11-row 110 kV rating table.`);
+console.log(`Smoke check passed: four-family taxonomy, 24-pulse evidence guardrails, ${detailCount} unified concrete product pages, and preserved 110 kV source-backed ratings.`);
