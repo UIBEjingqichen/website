@@ -12,4 +12,5 @@ runStages("Final site pass", [
   "visual-system-phase1.mjs",
   "representative-page-polish.mjs",
   "product-taxonomy-v39.mjs",
+  "smoke-compat-v39.mjs",
 ]);
