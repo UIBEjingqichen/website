@@ -1,0 +1,3 @@
+/* v47: final three-family layout polish. */
+.v3p-products-home .v3p-family-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:900px){.v3p-products-home .v3p-family-grid{grid-template-columns:1fr}}
