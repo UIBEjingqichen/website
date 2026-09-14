@@ -81,6 +81,12 @@ function mark(html) {
   return html.replace(/<body\b([^>]*)>/i, '<body data-v45-product-media="true"$1>');
 }
 
+function cleanupEmptyProductSections(html) {
+  let next = html.replace(/<div\s+class=["']v3p-platform-grid["']>\s*<\/div>/gi, "");
+  next = next.replace(/<section\b[^>]*id=["']application-specific-power["'][^>]*>[\s\S]*?<\/section>/gi, "");
+  return next;
+}
+
 function removeMergedNavLinks(html) {
   html = html.replace(/<nav\b([^>]*class=["'][^"']*v3p-family-nav[^"']*["'][^>]*)>([\s\S]*?)<\/nav>/gi, (whole, attrs, inner) => {
     let next = inner;
@@ -159,7 +165,7 @@ function insertVariantBlock(parentSlug, variants) {
   } else {
     html = html.replace(/<\/main>/i, `${block}</main>`);
   }
-  html = mark(removeMergedNavLinks(html));
+  html = cleanupEmptyProductSections(mark(removeMergedNavLinks(html)));
   fs.writeFileSync(file, html, "utf8");
   return 1;
 }
@@ -184,7 +190,7 @@ for (const rel of [
 const directoryFile = path.join(dist, "products.html");
 let directory = fs.readFileSync(directoryFile, "utf8");
 const directoryCards = updatePlatformCards(directory, directoryFile);
-directory = mark(removeMergedNavLinks(directoryCards.html));
+directory = cleanupEmptyProductSections(mark(removeMergedNavLinks(directoryCards.html)));
 fs.writeFileSync(directoryFile, directory, "utf8");
 
 let familyPages = 0;
@@ -198,13 +204,13 @@ for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
   let html = fs.readFileSync(file, "utf8");
   if (html.includes("v3p-family-hero")) {
     const cards = updatePlatformCards(html, file);
-    html = mark(removeMergedNavLinks(cards.html));
+    html = cleanupEmptyProductSections(mark(removeMergedNavLinks(cards.html)));
     fs.writeFileSync(file, html, "utf8");
     familyPages += 1;
     familyCardsUpdated += cards.updated;
     familyCardsRemoved += cards.removed;
   } else if (html.includes('<section class="v3p-hero">')) {
-    html = mark(removeMergedNavLinks(html));
+    html = cleanupEmptyProductSections(mark(removeMergedNavLinks(html)));
     fs.writeFileSync(file, html, "utf8");
     detailPages += 1;
   }
@@ -229,4 +235,4 @@ if (directoryCards.removed < 4) throw new Error(`v45: expected at least four wea
 if (mergedBlocks < 3) throw new Error(`v45: expected three parent variant blocks, inserted ${mergedBlocks}`);
 if (detailPages < 20) throw new Error(`v45: expected at least 20 detail pages, found ${detailPages}`);
 
-console.log(`v45 product presentation: ${cssTargets} CSS targets updated; ${directoryCards.updated} directory cards refreshed and ${directoryCards.removed} weak child cards merged; ${familyCardsUpdated} family cards refreshed and ${familyCardsRemoved} removed; ${homeCards} homepage family cards refreshed; ${mergedBlocks} parent variant blocks inserted.`);
+console.log(`v45 product presentation: ${cssTargets} CSS targets updated; ${directoryCards.updated} directory cards refreshed and ${directoryCards.removed} weak child cards merged; ${familyCardsUpdated} family cards refreshed and ${familyCardsRemoved} removed; ${homeCards} homepage family cards refreshed; ${mergedBlocks} parent variant blocks inserted; empty duplicate-image grids removed.`);
