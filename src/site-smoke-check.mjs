@@ -30,17 +30,30 @@ const required = [
 ];
 required.forEach(requireFile);
 
-for (const text of ["Power Transformers", "Oil-Immersed Transformers", "Dry-Type Transformers", "Prefabricated Substations", "24-Pulse Phase-Shifting Transformer"]) {
+for (const text of ["Power Transformers", "Oil-Immersed Transformers", "Dry-Type Transformers", "Prefabricated Substations"]) {
   requireText("products.html", text);
 }
 const directory = read("products.html");
 if (directory.includes('href="#special-transformers"') || directory.includes('id="special-transformers"')) {
   throw new Error("Products directory still exposes Special & Renewable as an active top-level family.");
 }
-if (!directory.includes('data-v44-media-sync="true"')) throw new Error("Products directory is missing the v44 media-sync marker.");
+for (const marker of ['data-v44-media-sync="true"', 'data-v45-product-media="true"']) {
+  if (!directory.includes(marker)) throw new Error(`Products directory is missing media marker: ${marker}`);
+}
+
+const mergedChildren = [
+  "66kv-offshore-wind-nacelle-transformer",
+  "220kv-double-split-booster-transformer",
+  "40-5kv-new-energy-dry-type-transformer",
+  "24-pulse-phase-shifting-transformer",
+];
+for (const slug of mergedChildren) {
+  const re = new RegExp(`<a\\b[^>]*class=["'][^"']*v3p-platform-card[^"']*["'][^>]*href=["'][^"']*${slug}\\/?["']`, "i");
+  if (re.test(directory)) throw new Error(`Products directory still exposes merged child ${slug} as a standalone image card.`);
+}
 
 requireText("products/cast-resin-dry-type-transformer/index.html", "Special Configurations");
-requireText("products/cast-resin-dry-type-transformer/index.html", "24-Pulse Phase-Shifting Transformer");
+requireText("products/cast-resin-dry-type-transformer/index.html", "24-Pulse Phase-Shifting Configuration");
 requireText("products/oil-immersed-rectifier-transformer/index.html", 'id="24-pulse"');
 
 const pulseRel = "products/24-pulse-phase-shifting-transformer/index.html";
@@ -54,6 +67,9 @@ if (read(pulseRel).includes("Actual 24-Pulse Transformer")) {
   throw new Error("24-pulse page presents representative imagery as an actual model photograph.");
 }
 
+for (const cssRel of ["assets/css/visual-system.css", "assets/css/product-directory.css", "assets/css/product-detail.css"]) {
+  if (!read(cssRel).includes("v45: full-bleed product media")) throw new Error(`${cssRel} is missing v45 full-bleed media rules.`);
+}
 const detailCss = read("assets/css/product-detail.css");
 if (!detailCss.includes("v42: product imagery lives in the hero carousel")) {
   throw new Error("Product-detail CSS is missing the v42 hero-carousel styles.");
@@ -74,7 +90,7 @@ for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
   const expectedStyles = ["../../assets/css/visual-system.css", "../../assets/css/product-detail.css"];
   if (styles.length !== 2) throw new Error(`${rel} should load exactly two detail stylesheets; found ${styles.length}.`);
   for (const href of expectedStyles) if (!styles.includes(href)) throw new Error(`${rel} missing unified stylesheet: ${href}`);
-  for (const marker of ["phase1-detail", "vs-detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "data-product-hero", "data-product-slide", "data-v41-reference-parameters", "data-v43-classified-media", 'data-v44-media-sync="true"', "visual-behavior.js"]) {
+  for (const marker of ["phase1-detail", "vs-detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "data-product-hero", "data-product-slide", "data-v41-reference-parameters", "data-v43-classified-media", 'data-v44-media-sync="true"', 'data-v45-product-media="true"', "visual-behavior.js"]) {
     if (!html.includes(marker)) throw new Error(`${rel} missing unified detail-layout marker: ${marker}`);
   }
   for (const retired of ['id="drawings"', 'href="#drawings"', "Product &amp; Engineering Views", "Product & Engineering Views", "Product Images &amp; Engineering Drawings", "Product Images & Engineering Drawings"]) {
@@ -104,15 +120,16 @@ function validateProductCards(rel, minExpected) {
     const slug = slugFromHref(match[1]);
     if (!slug || !fs.existsSync(path.join(classifiedRoot, slug))) continue;
     checked += 1;
-    if (!match[2].includes(`assets/media/products/classified/${slug}/01.`)) {
-      throw new Error(`${rel} product card for ${slug} is not using its classified cover.`);
+    const imageMatch = match[2].match(/<img\b[^>]*src=["']([^"']+)["']/i)?.[1] || "";
+    if (!imageMatch.includes(`assets/media/products/classified/${slug}/`)) {
+      throw new Error(`${rel} product card for ${slug} is not using one of its classified product images.`);
     }
   }
   if (checked < minExpected) throw new Error(`${rel} expected at least ${minExpected} classified product cards; found ${checked}.`);
   return checked;
 }
 
-const directoryCardCount = validateProductCards("products.html", 15);
+const directoryCardCount = validateProductCards("products.html", 12);
 for (const slug of ["110kv-power-transformer", "12kv-oil-immersed-distribution-transformer", "dry-type-distribution-transformer", "yb-prefabricated-substation"]) {
   if (!directory.includes(`assets/media/products/classified/${slug}/01.`)) {
     throw new Error(`Products directory hero is missing classified representative media for ${slug}.`);
@@ -124,11 +141,23 @@ for (const family of ["high-voltage-power-transformer", "oil-immersed-distributi
   const rel = `products/${family}/index.html`;
   requireFile(rel);
   const html = read(rel);
-  if (!html.includes('data-v44-media-sync="true"')) throw new Error(`${rel} is missing v44 media synchronization.`);
+  for (const marker of ['data-v44-media-sync="true"', 'data-v45-product-media="true"']) {
+    if (!html.includes(marker)) throw new Error(`${rel} is missing ${marker}.`);
+  }
   if (!/v3p-family-hero-media[\s\S]*?assets\/media\/products\/classified\//i.test(html)) {
     throw new Error(`${rel} family hero is not using classified product media.`);
   }
   familyCardCount += validateProductCards(rel, 2);
+}
+
+for (const [parent, text] of [
+  ["66kv-power-transformer", "66 kV Offshore Wind Configuration"],
+  ["220kv-power-transformer", "Double-Split Booster Configuration"],
+  ["cast-resin-dry-type-transformer", "Configurations grouped under the parent product"],
+]) {
+  const rel = `products/${parent}/index.html`;
+  requireText(rel, 'data-v45-merged-variants');
+  requireText(rel, text);
 }
 
 const pvRel = "products/pv-ess-integrated-substation/index.html";
@@ -137,6 +166,7 @@ for (const text of [
   "assets/media/products/classified/pv-ess-integrated-substation/01.png",
   "data-v43-classified-media",
   'data-v44-media-sync="true"',
+  'data-v45-product-media="true"',
 ]) {
   if (!pv.includes(text)) throw new Error(`${pvRel} is missing classified PV/ESS media marker: ${text}`);
 }
@@ -155,4 +185,4 @@ if (ratingRows !== 11) throw new Error(`110 kV Rating Range should retain 11 row
 const rootIndex = fs.readFileSync(path.join(root, "index.html"), "utf8");
 if (!rootIndex.includes('<base href="dist/">')) throw new Error("Root index mirror is missing the dist base path.");
 
-console.log(`Smoke check passed: four-family taxonomy, source-labeled parameter tables, ${detailCount} classified-media detail pages, ${directoryCardCount} directory product cards, ${familyCardCount} family product cards, forbidden image removal, and preserved 110 kV ratings.`);
+console.log(`Smoke check passed: v45 full-bleed product media, ${detailCount} detail pages, ${directoryCardCount} active directory cards, ${familyCardCount} family cards, merged weak child variants, forbidden image removal, and preserved 110 kV ratings.`);
