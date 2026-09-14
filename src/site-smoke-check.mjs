@@ -26,6 +26,7 @@ const required = [
   "products/dry-type-distribution-transformer/index.html",
   "products/oil-immersed-rectifier-transformer/index.html",
   "products/24-pulse-phase-shifting-transformer/index.html",
+  "products/pv-ess-integrated-substation/index.html",
 ];
 required.forEach(requireFile);
 
@@ -72,14 +73,32 @@ for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
   const expectedStyles = ["../../assets/css/visual-system.css", "../../assets/css/product-detail.css"];
   if (styles.length !== 2) throw new Error(`${rel} should load exactly two detail stylesheets; found ${styles.length}.`);
   for (const href of expectedStyles) if (!styles.includes(href)) throw new Error(`${rel} missing unified stylesheet: ${href}`);
-  for (const marker of ["phase1-detail", "vs-detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "data-product-hero", "data-product-slide", "data-v41-reference-parameters", "visual-behavior.js"]) {
+  for (const marker of ["phase1-detail", "vs-detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "data-product-hero", "data-product-slide", "data-v41-reference-parameters", "data-v43-classified-media", "visual-behavior.js"]) {
     if (!html.includes(marker)) throw new Error(`${rel} missing unified detail-layout marker: ${marker}`);
   }
   for (const retired of ['id="drawings"', 'href="#drawings"', "Product &amp; Engineering Views", "Product & Engineering Views", "Product Images &amp; Engineering Drawings", "Product Images & Engineering Drawings"]) {
     if (html.includes(retired)) throw new Error(`${rel} still contains retired lower-gallery content: ${retired}`);
   }
+  for (const forbidden of ["floating-solar-combined-transformer-site", "american-combined-transformer-03"]) {
+    if (html.includes(forbidden)) throw new Error(`${rel} still references forbidden product media: ${forbidden}`);
+  }
+  if (!html.includes(`../../assets/media/products/classified/${entry.name}/`)) {
+    throw new Error(`${rel} is not using the v43 classified product-media directory.`);
+  }
 }
 if (detailCount < 10) throw new Error(`Expected at least 10 concrete product detail pages; found ${detailCount}.`);
+
+const pvRel = "products/pv-ess-integrated-substation/index.html";
+const pv = read(pvRel);
+for (const text of [
+  "assets/media/products/classified/pv-ess-integrated-substation/01.png",
+  "data-v43-classified-media",
+]) {
+  if (!pv.includes(text)) throw new Error(`${pvRel} is missing classified PV/ESS media marker: ${text}`);
+}
+if (exists("assets/media/applications/floating-solar-combined-transformer-site.webp")) {
+  throw new Error("Forbidden floating-solar combined-transformer photograph remains in generated assets.");
+}
 
 const detail110 = read("products/110kv-power-transformer/index.html");
 for (const text of ["SSZ-6300~63000/110", "21M2078-S", "SZ22-50000/110-NX1", "Reference outline drawing"]) {
@@ -92,4 +111,4 @@ if (ratingRows !== 11) throw new Error(`110 kV Rating Range should retain 11 row
 const rootIndex = fs.readFileSync(path.join(root, "index.html"), "utf8");
 if (!rootIndex.includes('<base href="dist/">')) throw new Error("Root index mirror is missing the dist base path.");
 
-console.log(`Smoke check passed: four-family taxonomy, source-labeled parameter tables, ${detailCount} hero-carousel product pages, retired lower galleries, and preserved 110 kV ratings.`);
+console.log(`Smoke check passed: four-family taxonomy, source-labeled parameter tables, ${detailCount} classified-media hero carousels, forbidden image removal, retired lower galleries, and preserved 110 kV ratings.`);
