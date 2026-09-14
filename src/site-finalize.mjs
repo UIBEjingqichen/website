@@ -13,4 +13,5 @@ runStages("Final site pass", [
   "representative-page-polish.mjs",
   "product-taxonomy-v39.mjs",
   "product-detail-guard-v40.mjs",
+  "product-reference-table-v41.mjs",
 ]);
