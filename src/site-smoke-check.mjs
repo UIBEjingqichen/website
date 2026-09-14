@@ -56,7 +56,7 @@ for (const text of [
   "Dry-Type Distribution Transformer",
   'data-v52-oil-family="true"',
   "data-v52-oil-family-media",
-  "22 kV Tested Reference",
+  "Representative Parameters",
   "35 kV-class / renewable collection range",
   "30 kVA–12.5 MVA",
 ]) {
@@ -68,6 +68,9 @@ if ((distributionFamily.match(/data-product-slide/g) || []).length < 5) {
 if (/12 kV Oil-Immersed Distribution Transformer|40\.5 kV-Class Renewable Oil-Immersed/i.test(distributionFamily)) {
   throw new Error("Consolidated oil-distribution page still uses a voltage-defined product identity.");
 }
+if (/includes 22 kV tested reference/i.test(distributionFamily)) {
+  throw new Error("Oil-distribution hero still over-emphasizes the 22 kV tested reference.");
+}
 
 for (const cssRel of ["assets/css/visual-system.css", "assets/css/product-directory.css", "assets/css/product-detail.css"]) {
   const css = read(cssRel);
@@ -76,6 +79,9 @@ for (const cssRel of ["assets/css/visual-system.css", "assets/css/product-direct
 }
 const detailCss = read("assets/css/product-detail.css");
 if (!detailCss.includes("height:500px")) throw new Error("Product detail hero media did not receive the larger v46 image stage.");
+if (!detailCss.includes("v54: complete-product hero fit and balanced detail layout") || !detailCss.includes("object-fit:contain!important")) {
+  throw new Error("Product detail hero media is missing the v54 complete-image fit rules.");
+}
 
 const prohibitedSource = path.join(root, "source-media", "products", "products", "小型油浸式配变 (1).JPG");
 if (fs.existsSync(prohibitedSource)) throw new Error("Prohibited small oil distribution transformer source image still exists.");
@@ -120,7 +126,7 @@ for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
   for (const href of ["../../assets/css/visual-system.css", "../../assets/css/product-detail.css"]) {
     if (!styles.includes(href)) throw new Error(`${rel} missing unified stylesheet: ${href}`);
   }
-  for (const marker of ["phase1-detail", "vs-detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "data-product-hero", "data-product-slide", "data-v41-reference-parameters", "visual-behavior.js"]) {
+  for (const marker of ["phase1-detail", "vs-detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "data-product-hero", "data-product-slide", "data-v41-reference-parameters", "data-v54-complete-image-fit", "visual-behavior.js"]) {
     if (!html.includes(marker)) throw new Error(`${rel} missing detail-layout marker: ${marker}`);
   }
   if (!html.includes("data-v43-classified-media") && !html.includes("data-v52-oil-family-media")) {
@@ -160,4 +166,4 @@ if ((ratingTable.match(/<tr>/g) || []).length !== 11) throw new Error("110 kV Ra
 const rootIndex = fs.readFileSync(path.join(root, "index.html"), "utf8");
 if (!rootIndex.includes('<base href="dist/">')) throw new Error("Root index mirror is missing the dist base path.");
 
-console.log(`Smoke check passed: three-family product architecture, consolidated oil/dry distribution family, expanded oil-distribution voltage coverage and media, enlarged detail imagery, clean prefabricated-substation media, prohibited-image removal, ${detailCount} detail pages, and preserved 110 kV ratings.`);
+console.log(`Smoke check passed: three-family product architecture, consolidated oil/dry distribution family, expanded oil-distribution voltage coverage and media, complete-image detail heroes, clean prefabricated-substation media, prohibited-image removal, ${detailCount} detail pages, and preserved 110 kV ratings.`);
