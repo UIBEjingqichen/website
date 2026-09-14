@@ -31,4 +31,30 @@ if (fs.existsSync(familyFile)) {
   fs.writeFileSync(familyFile, html, "utf8");
 }
 
-console.log("v47 three-family layout polish applied.");
+const cleanPrefabCovers = {
+  "zgs-prefabricated-substation": "02.webp",
+  "yb-prefabricated-substation": "02.webp",
+  "ybh-prefabricated-substation": "02.jpeg",
+};
+
+for (const [slug, cover] of Object.entries(cleanPrefabCovers)) {
+  const file = path.join(dist, "products", slug, "index.html");
+  if (!fs.existsSync(file)) throw new Error(`v47: missing prefab detail page ${slug}`);
+  let html = fs.readFileSync(file, "utf8");
+  const oldRelative = `../../assets/media/products/classified/${slug}/01.png`;
+  const newRelative = `../../assets/media/products/classified/${slug}/${cover}`;
+  const oldAbsolute = `/assets/media/products/classified/${slug}/01.png`;
+  const newAbsolute = `/assets/media/products/classified/${slug}/${cover}`;
+  html = html.split(oldRelative).join(newRelative);
+  html = html.split(oldAbsolute).join(newAbsolute);
+  html = html.replace(/(<meta\s+property=["']og:image["']\s+content=["'])[^"']+(["'][^>]*>)/i, `$1${newAbsolute}$2`);
+  if (html.includes(`classified/${slug}/01.png`)) {
+    throw new Error(`v47: captioned prefab cover still referenced by ${slug}`);
+  }
+  if (!html.includes(`classified/${slug}/${cover}`)) {
+    throw new Error(`v47: clean prefab cover missing from ${slug}`);
+  }
+  fs.writeFileSync(file, html, "utf8");
+}
+
+console.log("v47 three-family layout polish applied with caption-free prefab detail media.");
