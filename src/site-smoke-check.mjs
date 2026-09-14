@@ -37,6 +37,7 @@ const directory = read("products.html");
 if (directory.includes('href="#special-transformers"') || directory.includes('id="special-transformers"')) {
   throw new Error("Products directory still exposes Special & Renewable as an active top-level family.");
 }
+if (!directory.includes('data-v44-media-sync="true"')) throw new Error("Products directory is missing the v44 media-sync marker.");
 
 requireText("products/cast-resin-dry-type-transformer/index.html", "Special Configurations");
 requireText("products/cast-resin-dry-type-transformer/index.html", "24-Pulse Phase-Shifting Transformer");
@@ -59,6 +60,7 @@ if (!detailCss.includes("v42: product imagery lives in the hero carousel")) {
 }
 
 const productsRoot = path.join(dist, "products");
+const classifiedRoot = path.join(dist, "assets", "media", "products", "classified");
 let detailCount = 0;
 for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
   if (!entry.isDirectory()) continue;
@@ -72,7 +74,7 @@ for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
   const expectedStyles = ["../../assets/css/visual-system.css", "../../assets/css/product-detail.css"];
   if (styles.length !== 2) throw new Error(`${rel} should load exactly two detail stylesheets; found ${styles.length}.`);
   for (const href of expectedStyles) if (!styles.includes(href)) throw new Error(`${rel} missing unified stylesheet: ${href}`);
-  for (const marker of ["phase1-detail", "vs-detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "data-product-hero", "data-product-slide", "data-v41-reference-parameters", "data-v43-classified-media", "visual-behavior.js"]) {
+  for (const marker of ["phase1-detail", "vs-detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "data-product-hero", "data-product-slide", "data-v41-reference-parameters", "data-v43-classified-media", 'data-v44-media-sync="true"', "visual-behavior.js"]) {
     if (!html.includes(marker)) throw new Error(`${rel} missing unified detail-layout marker: ${marker}`);
   }
   for (const retired of ['id="drawings"', 'href="#drawings"', "Product &amp; Engineering Views", "Product & Engineering Views", "Product Images &amp; Engineering Drawings", "Product Images & Engineering Drawings"]) {
@@ -84,14 +86,57 @@ for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
   if (!html.includes(`../../assets/media/products/classified/${entry.name}/`)) {
     throw new Error(`${rel} is not using the v43 classified product-media directory.`);
   }
+  if (!html.includes(`property="og:image" content="/assets/media/products/classified/${entry.name}/`)) {
+    throw new Error(`${rel} does not expose its classified product cover as og:image.`);
+  }
 }
-if (detailCount < 10) throw new Error(`Expected at least 10 concrete product detail pages; found ${detailCount}.`);
+if (detailCount < 20) throw new Error(`Expected at least 20 concrete product detail pages; found ${detailCount}.`);
+
+function slugFromHref(href = "") {
+  const clean = href.split(/[?#]/)[0].replace(/\/+$/, "");
+  return clean.split("/").filter((p) => p && p !== "." && p !== "..").at(-1) || null;
+}
+
+function validateProductCards(rel, minExpected) {
+  const html = read(rel);
+  let checked = 0;
+  for (const match of html.matchAll(/<a\b[^>]*class=["'][^"']*v3p-platform-card[^"']*["'][^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
+    const slug = slugFromHref(match[1]);
+    if (!slug || !fs.existsSync(path.join(classifiedRoot, slug))) continue;
+    checked += 1;
+    if (!match[2].includes(`assets/media/products/classified/${slug}/01.`)) {
+      throw new Error(`${rel} product card for ${slug} is not using its classified cover.`);
+    }
+  }
+  if (checked < minExpected) throw new Error(`${rel} expected at least ${minExpected} classified product cards; found ${checked}.`);
+  return checked;
+}
+
+const directoryCardCount = validateProductCards("products.html", 15);
+for (const slug of ["110kv-power-transformer", "12kv-oil-immersed-distribution-transformer", "dry-type-distribution-transformer", "yb-prefabricated-substation"]) {
+  if (!directory.includes(`assets/media/products/classified/${slug}/01.`)) {
+    throw new Error(`Products directory hero is missing classified representative media for ${slug}.`);
+  }
+}
+
+let familyCardCount = 0;
+for (const family of ["high-voltage-power-transformer", "oil-immersed-distribution-transformer", "cast-resin-dry-type-transformer", "prefabricated-substations"]) {
+  const rel = `products/${family}/index.html`;
+  requireFile(rel);
+  const html = read(rel);
+  if (!html.includes('data-v44-media-sync="true"')) throw new Error(`${rel} is missing v44 media synchronization.`);
+  if (!/v3p-family-hero-media[\s\S]*?assets\/media\/products\/classified\//i.test(html)) {
+    throw new Error(`${rel} family hero is not using classified product media.`);
+  }
+  familyCardCount += validateProductCards(rel, 2);
+}
 
 const pvRel = "products/pv-ess-integrated-substation/index.html";
 const pv = read(pvRel);
 for (const text of [
   "assets/media/products/classified/pv-ess-integrated-substation/01.png",
   "data-v43-classified-media",
+  'data-v44-media-sync="true"',
 ]) {
   if (!pv.includes(text)) throw new Error(`${pvRel} is missing classified PV/ESS media marker: ${text}`);
 }
@@ -110,4 +155,4 @@ if (ratingRows !== 11) throw new Error(`110 kV Rating Range should retain 11 row
 const rootIndex = fs.readFileSync(path.join(root, "index.html"), "utf8");
 if (!rootIndex.includes('<base href="dist/">')) throw new Error("Root index mirror is missing the dist base path.");
 
-console.log(`Smoke check passed: four-family taxonomy, source-labeled parameter tables, ${detailCount} classified-media hero carousels, forbidden image removal, retired lower galleries, and preserved 110 kV ratings.`);
+console.log(`Smoke check passed: four-family taxonomy, source-labeled parameter tables, ${detailCount} classified-media detail pages, ${directoryCardCount} directory product cards, ${familyCardCount} family product cards, forbidden image removal, and preserved 110 kV ratings.`);
