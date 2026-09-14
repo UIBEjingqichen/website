@@ -33,6 +33,7 @@ const requiredFiles = [
   "products/dry-type-distribution-transformer/index.html",
   "products/zgs-prefabricated-substation/index.html",
   "products/pv-ess-integrated-substation/index.html",
+  "products/24-pulse-phase-shifting-transformer/index.html",
 ];
 
 for (const rel of requiredFiles) {
@@ -55,11 +56,12 @@ const checks = [
   ["manufacturing.html", "Witness FAT"],
   ["manufacturing.html", "combined-transformer-wiring-assembly.webp"],
   ["products.html", "Power Transformers"],
-  ["products.html", "Distribution Transformers"],
-  ["products.html", "Special &amp; Renewable Transformers"],
+  ["products.html", "Oil-Immersed Transformers"],
+  ["products.html", "Dry-Type Transformers"],
   ["products.html", "Prefabricated Substations"],
   ["products.html", "phase1-products"],
   ["products.html", "data-product-toggle"],
+  ["products.html", "24-Pulse Phase-Shifting Transformer"],
   ["products/35kv-power-transformer/index.html", "8–31.5 MVA"],
   ["products/66kv-power-transformer/index.html", "6.3–63 MVA"],
   ["products/110kv-power-transformer/index.html", "SSZ-6300~63000/110"],
@@ -71,6 +73,12 @@ const checks = [
   ["products/110kv-power-transformer/index.html", "id=\"engineering\""],
   ["products/110kv-power-transformer/index.html", "data-drawing-thumb"],
   ["products/220kv-power-transformer/index.html", "240,000 kVA"],
+  ["products/24-pulse-phase-shifting-transformer/index.html", "Dry-Type Reference Platform"],
+  ["products/24-pulse-phase-shifting-transformer/index.html", "Project Engineered"],
+  ["products/24-pulse-phase-shifting-transformer/index.html", "Representative dry-type family platform"],
+  ["products/cast-resin-dry-type-transformer/index.html", "Special Configurations"],
+  ["products/cast-resin-dry-type-transformer/index.html", "24-Pulse Phase-Shifting Transformer"],
+  ["products/oil-immersed-rectifier-transformer/index.html", "id=\"24-pulse\""],
   ["catalog.html", "Tianyu Electric Export Product Catalog 2026"],
   ["index.html", "rel=\"canonical\""],
   ["about.html", "site-typography.css"],
@@ -96,6 +104,31 @@ for (const [rel, expected] of migratedPages) {
   if (!html.includes("visual-behavior.js")) throw new Error(`${rel} missing visual-system interaction script`);
 }
 
+const productRoot = path.join(dist, "products");
+for (const entry of fs.readdirSync(productRoot, { withFileTypes: true })) {
+  if (!entry.isDirectory()) continue;
+  const rel = `products/${entry.name}/index.html`;
+  const file = path.join(dist, rel);
+  if (!fs.existsSync(file)) continue;
+  const html = fs.readFileSync(file, "utf8");
+  if (!html.includes('<section class="v3p-hero">') || html.includes('v3p-family-hero')) continue;
+  const styles = [...html.matchAll(/<link\b[^>]*rel=["']stylesheet["'][^>]*href=["']([^"']+)["'][^>]*>/gi)].map((match) => match[1]);
+  const expectedStyles = ["../../assets/css/visual-system.css", "../../assets/css/product-detail.css"];
+  if (styles.length !== 2) throw new Error(`${rel} should use the two-file product-detail visual system, found ${styles.length} stylesheets`);
+  for (const href of expectedStyles) if (!styles.includes(href)) throw new Error(`${rel} missing unified stylesheet ${href}`);
+  for (const marker of ["phase1-detail", "vs-detail-jump", 'id="ratings"', 'id="documents"', 'id="related"', 'id="contact-rfq"']) {
+    if (!html.includes(marker)) throw new Error(`${rel} is missing unified detail-layout marker: ${marker}`);
+  }
+  if (!html.includes("visual-behavior.js")) throw new Error(`${rel} missing visual-system interaction script`);
+}
+
+const products = read("products.html");
+if (products.includes('href="#special-transformers"') || products.includes('id="special-transformers"')) {
+  throw new Error("Products directory still exposes the retired Special & Renewable top-level taxonomy");
+}
+const productCards = (products.match(/class="v3p-platform-card"/g) || []).length;
+if (productCards < 10) throw new Error(`Products directory lost product comparison rows, found ${productCards}`);
+
 const home = read("index.html");
 const homeH1Count = (home.match(/<h1\b/g) || []).length;
 if (homeH1Count !== 1) throw new Error(`Homepage should contain one semantic H1, found ${homeH1Count}`);
@@ -106,10 +139,6 @@ if (home.includes("100,000 m²")) throw new Error("Homepage exposes the conflict
 const mapPins = [...home.matchAll(/data-ty16-pin\b/g)].length;
 if (mapPins < 7) throw new Error(`Homepage project map should retain the selected project references, found ${mapPins} pins`);
 
-const products = read("products.html");
-const productCards = (products.match(/class="v3p-platform-card"/g) || []).length;
-if (productCards < 10) throw new Error(`Products directory lost product comparison rows, found ${productCards}`);
-
 const detail = read("products/110kv-power-transformer/index.html");
 const ratingTable = detail.match(/<h3[^>]*>Rating Range<\/h3>[\s\S]*?<tbody>([\s\S]*?)<\/tbody>/)?.[1] || "";
 const ratingRows = (ratingTable.match(/<tr>/g) || []).length;
@@ -117,6 +146,10 @@ if (ratingRows !== 11) throw new Error(`110 kV Rating Range should retain 11 row
 if (!detail.includes("Reference outline drawing")) throw new Error("110 kV detail lost reference-drawing labeling");
 if (!detail.includes("not presented as certification of the full 110 kV product family")) throw new Error("110 kV model-specific report scope note is missing");
 if (!detail.includes("ga-power-transformers.webp")) throw new Error("110 kV reference drawing resource is missing");
+
+const pulse = read("products/24-pulse-phase-shifting-transformer/index.html");
+if (pulse.includes("Actual 24-Pulse Transformer")) throw new Error("24-pulse page incorrectly presents representative imagery as an actual model photograph");
+if (!pulse.includes("not provide a complete model-specific 24-pulse rating table or certificate")) throw new Error("24-pulse evidence limitation is not stated clearly");
 
 const manufacturing = read("manufacturing.html");
 if (manufacturing.includes("manufacturing-v34.js")) throw new Error("Manufacturing counter-animation script is still loaded");
@@ -137,4 +170,4 @@ if (!rootIndex.includes('<base href="dist/">')) throw new Error("Root index mirr
 const normalizedRoot = rootIndex.replace(/\s*<base href="dist\/">/, "");
 if (normalizedRoot !== home) throw new Error("Root index mirror does not match generated homepage content");
 
-console.log(`Smoke check passed: ${requiredFiles.length} required files, ${checks.length} content checks, four migrated stylesheet contracts, Task A visual-structure guards and 11-row 110 kV rating table.`);
+console.log(`Smoke check passed: ${requiredFiles.length} required files, ${checks.length} content checks, unified product-detail visual contracts, four-family taxonomy guards and the 11-row 110 kV rating table.`);
