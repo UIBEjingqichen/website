@@ -42,14 +42,31 @@ if ((directory.match(/data-product-slide=/g) || []).length !== 3) throw new Erro
 for (const familyId of ["power-transformers", "distribution-transformers", "prefabricated-substations"]) {
   if (!directory.includes(`id="${familyId}"`)) throw new Error(`Products directory missing family section: ${familyId}`);
 }
+if (directory.includes("Choose between power transformers, distribution transformers and prefabricated substations")) {
+  throw new Error("Products directory still contains the removed product-family explainer.");
+}
+if (!directory.includes("Oil-immersed and dry-type transformers up to 35 kV")) {
+  throw new Error("Products directory is missing the consolidated up-to-35-kV distribution-family description.");
+}
 
 const distributionFamilyRel = "products/oil-immersed-distribution-transformer/index.html";
 const distributionFamily = read(distributionFamilyRel);
-for (const text of ["Distribution Transformers", "Oil-Immersed Distribution Transformer", "Dry-Type Distribution Transformer", "v46-distribution-family", 'data-v46-three-family="true"']) {
-  if (!distributionFamily.includes(text)) throw new Error(`${distributionFamilyRel} missing merged distribution-family content: ${text}`);
+for (const text of [
+  "Oil-Immersed Distribution Transformer",
+  "Dry-Type Distribution Transformer",
+  'data-v52-oil-family="true"',
+  "data-v52-oil-family-media",
+  "22 kV Tested Reference",
+  "35 kV-class / renewable collection range",
+  "30 kVA–12.5 MVA",
+]) {
+  if (!distributionFamily.includes(text)) throw new Error(`${distributionFamilyRel} missing consolidated oil-distribution content: ${text}`);
 }
-if ((distributionFamily.match(/class="v3p-platform-card"/g) || []).length !== 2) {
-  throw new Error("Distribution family should expose exactly two image cards: oil-immersed and dry-type.");
+if ((distributionFamily.match(/data-product-slide/g) || []).length < 5) {
+  throw new Error("Consolidated oil-immersed distribution page should expose at least five compatible product images.");
+}
+if (/12 kV Oil-Immersed Distribution Transformer|40\.5 kV-Class Renewable Oil-Immersed/i.test(distributionFamily)) {
+  throw new Error("Consolidated oil-distribution page still uses a voltage-defined product identity.");
 }
 
 for (const cssRel of ["assets/css/visual-system.css", "assets/css/product-directory.css", "assets/css/product-detail.css"]) {
@@ -103,8 +120,11 @@ for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
   for (const href of ["../../assets/css/visual-system.css", "../../assets/css/product-detail.css"]) {
     if (!styles.includes(href)) throw new Error(`${rel} missing unified stylesheet: ${href}`);
   }
-  for (const marker of ["phase1-detail", "vs-detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "data-product-hero", "data-product-slide", "data-v41-reference-parameters", "data-v43-classified-media", "visual-behavior.js"]) {
+  for (const marker of ["phase1-detail", "vs-detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "data-product-hero", "data-product-slide", "data-v41-reference-parameters", "visual-behavior.js"]) {
     if (!html.includes(marker)) throw new Error(`${rel} missing detail-layout marker: ${marker}`);
+  }
+  if (!html.includes("data-v43-classified-media") && !html.includes("data-v52-oil-family-media")) {
+    throw new Error(`${rel} missing classified product-media marker.`);
   }
   for (const forbidden of ["floating-solar-combined-transformer-site", "american-combined-transformer-03", "小型油浸式配变 (1)"]) {
     if (html.includes(forbidden)) throw new Error(`${rel} references forbidden product media: ${forbidden}`);
@@ -140,4 +160,4 @@ if ((ratingTable.match(/<tr>/g) || []).length !== 11) throw new Error("110 kV Ra
 const rootIndex = fs.readFileSync(path.join(root, "index.html"), "utf8");
 if (!rootIndex.includes('<base href="dist/">')) throw new Error("Root index mirror is missing the dist base path.");
 
-console.log(`Smoke check passed: three-family product architecture, merged oil/dry distribution family, enlarged detail imagery, clean prefabricated-substation media, prohibited-image removal, ${detailCount} detail pages, and preserved 110 kV ratings.`);
+console.log(`Smoke check passed: three-family product architecture, consolidated oil/dry distribution family, expanded oil-distribution voltage coverage and media, enlarged detail imagery, clean prefabricated-substation media, prohibited-image removal, ${detailCount} detail pages, and preserved 110 kV ratings.`);
