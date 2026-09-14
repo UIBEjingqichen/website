@@ -17,4 +17,5 @@ runStages("Final site pass", [
   "product-hero-carousel-v42.mjs",
   "product-media-classification-v43.mjs",
   "product-media-rollout-v44.mjs",
+  "product-media-presentation-v45.mjs",
 ]);
