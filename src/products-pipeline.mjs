@@ -3,6 +3,7 @@ import { runStages } from "./pipeline-runner.mjs";
 runStages("Products", [
   "product-contract-upgrade.mjs",
   "media-preflight.mjs",
+  "product-media-compat-v43.mjs",
   "site-v3-upgrade.mjs",
   "image-quality-pass.mjs",
   "evidence-path-normalize.mjs",
