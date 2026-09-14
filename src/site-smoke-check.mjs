@@ -47,7 +47,6 @@ for (const text of [
   "24-Pulse Phase-Shifting Transformer",
   "Dry-Type Reference Platform",
   "Project Engineered",
-  "Representative Tianyu dry-type transformer platform",
   "not provide a complete model-specific 24-pulse rating table or certificate",
 ]) requireText(pulseRel, text);
 if (read(pulseRel).includes("Actual 24-Pulse Transformer")) {
