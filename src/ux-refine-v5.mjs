@@ -87,12 +87,12 @@ function familyMain(product) {
   const depth = "../../";
   const variants = variantsFor(product);
   const applicationImages = ["applications/grid-substation-yard.jpeg", "applications/renewable-wind-solar-landscape.jpeg", "products/distribution-transformers/oil-immersed-distribution-transformer-conservator-01.webp", "applications/utility-scale-solar-farm-aerial-02.jpeg"];
-  return `<section class="yw-product-banner product-family v5-family-banner" style="--banner:url('${media(product.gallery[0][0], depth)}')"><div><p>PRODUCTS / ${esc(product.family)}</p><h1>${esc(product.name)}</h1></div></section>
+  return `<section class="ty-home__product-banner product-family v5-family-banner" style="--banner:url('${media(product.gallery[0][0], depth)}')"><div><p>PRODUCTS / ${esc(product.family)}</p><h1>${esc(product.name)}</h1></div></section>
     <section class="section v5-family-layout">${familySidebar(product.id, depth)}<div class="v5-family-content">
       <div class="v5-family-heading"><p>PRODUCT RANGE</p><h2>Enabling Products</h2><div class="v5-family-capability"><span>${esc(product.seriesCapability.voltage)}</span><span>${esc(product.seriesCapability.capacity)}</span><span>${esc(product.seriesCapability.cooling)}</span></div></div>
       <div class="v5-model-grid">${variants.map((variant) => `<a class="v5-model-card" href="${esc(variant.slug)}.html"><div class="v5-model-image"><img src="${media(variant.image, depth)}" alt="${esc(variant.model)}" loading="lazy"></div><div class="v5-model-copy"><h3>${esc(variant.model)}</h3><p>${esc(variant.representative?.ratedPower || "Configured model")} · ${esc(variant.representative?.ratedVoltage || product.seriesCapability.voltage)}</p><span>EXPLORE →</span></div></a>`).join("")}</div>
     </div></section>
-    <section class="section pale v5-family-applications"><div class="v5-family-heading"><p>APPLICATIONS</p><h2>Applied Industries</h2></div><div class="yw-industry-grid">${product.applications.slice(0,4).map((name,index) => `<a href="${depth}applications.html"><img src="${media(applicationImages[index % applicationImages.length], depth)}" alt="${esc(name)}" loading="lazy"><h3>${esc(name)}</h3></a>`).join("")}</div></section>
+    <section class="section pale v5-family-applications"><div class="v5-family-heading"><p>APPLICATIONS</p><h2>Applied Industries</h2></div><div class="ty-home__industry-grid">${product.applications.slice(0,4).map((name,index) => `<a href="${depth}applications.html"><img src="${media(applicationImages[index % applicationImages.length], depth)}" alt="${esc(name)}" loading="lazy"><h3>${esc(name)}</h3></a>`).join("")}</div></section>
     <section class="section inquiry-cta"><div><p class="eyebrow">PROJECT INQUIRY</p><h2>Need a different rating or project configuration?</h2></div><button class="btn btn-primary" type="button" data-quote-open>REQUEST A QUOTE</button></section>`;
 }
 
@@ -142,9 +142,9 @@ function certificateCoverflow() {
 }
 
 function whyChooseUs() {
-  return `<section class="section yw-why v5-why" id="why-us"><div class="yw-centered-head light"><p>WHY CHOOSE US</p><h2>ENGINEERING CONFIDENCE YOU CAN REVIEW</h2><div class="v5-why-links"><a href="applications.html">VIEW CASES →</a><a href="manufacturing.html">VIEW MANUFACTURING →</a></div></div>
-    <div class="yw-why-grid"><article><span>01</span><h3>Certification & Testing</h3><p>Independent certificates and model-specific reports organized by exact tested model.</p></article><article><span>02</span><h3>Project Experience</h3><p>Reference projects across renewable energy, utility grids, industry and infrastructure.</p></article><article><span>03</span><h3>Manufacturing & Quality</h3><p>Production, assembly, testing and quality-control capability connected to engineering delivery.</p></article></div>
-    <div class="yw-cert-block v5-cert-block"><div class="yw-subhead"><p>CERTIFICATES & TEST REPORTS</p><a href="resources.html">VIEW ALL →</a></div>${certificateCoverflow()}</div>
+  return `<section class="section ty-home__why v5-why" id="why-us"><div class="ty-home__centered-head light"><p>WHY CHOOSE US</p><h2>ENGINEERING CONFIDENCE YOU CAN REVIEW</h2><div class="v5-why-links"><a href="applications.html">VIEW CASES →</a><a href="manufacturing.html">VIEW MANUFACTURING →</a></div></div>
+    <div class="ty-home__why-grid"><article><span>01</span><h3>Certification & Testing</h3><p>Independent certificates and model-specific reports organized by exact tested model.</p></article><article><span>02</span><h3>Project Experience</h3><p>Reference projects across renewable energy, utility grids, industry and infrastructure.</p></article><article><span>03</span><h3>Manufacturing & Quality</h3><p>Production, assembly, testing and quality-control capability connected to engineering delivery.</p></article></div>
+    <div class="ty-home__cert-block v5-cert-block"><div class="ty-home__subhead"><p>CERTIFICATES & TEST REPORTS</p><a href="resources.html">VIEW ALL →</a></div>${certificateCoverflow()}</div>
     <div class="v5-proof-grid"><a class="v5-proof-card" href="applications.html"><div class="v5-proof-image"><img src="${media("applications/catalog-brazil-pv-export-project.png")}" alt="Tianyu Electric Brazil photovoltaic export project team" loading="lazy"></div><div><p>PROJECT CASES</p><h3>From renewable energy to utility and industrial power projects</h3><span>Explore recorded project references by application and product family.</span><strong>VIEW CASES →</strong></div></a><a class="v5-proof-card" href="manufacturing.html"><div class="v5-proof-image"><img src="${media("company/factory-campus-panorama.jpeg")}" alt="Tianyu Electric manufacturing base" loading="lazy"></div><div><p>MANUFACTURING</p><h3>Production, assembly, testing and quality control in one workflow</h3><span>Review the manufacturing base and the equipment behind project delivery.</span><strong>VIEW MANUFACTURING →</strong></div></a></div>
   </section>`;
 }
@@ -152,14 +152,14 @@ function whyChooseUs() {
 function updateHome() {
   const target = path.join(dist, "index.html");
   let html = fs.readFileSync(target, "utf8");
-  html = html.replace(/<section class="section yw-why"[\s\S]*?<\/section>(?=<section class="section yw-news")/, whyChooseUs());
+  html = html.replace(/<section class="section ty-home__why"[\s\S]*?<\/section>(?=<section class="section ty-home__news")/, whyChooseUs());
   html = injectAssets(html);
   fs.writeFileSync(target, html);
 
   const productsPath = path.join(dist, "products.html");
   if (fs.existsSync(productsPath)) {
     let productsHtml = fs.readFileSync(productsPath, "utf8");
-    productsHtml = productsHtml.replace('class="section yw-product-index"', 'class="section yw-product-index" id="products"');
+    productsHtml = productsHtml.replace('class="section ty-home__product-index"', 'class="section ty-home__product-index" id="products"');
     fs.writeFileSync(productsPath, productsHtml);
   }
 }

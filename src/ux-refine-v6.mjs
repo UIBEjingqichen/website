@@ -49,10 +49,10 @@ const pages={
 function updateTopPages(){
   for(const [name,c] of Object.entries(pages)){
     const f=path.join(dist,name); if(!fs.existsSync(f)) continue; let h=fs.readFileSync(f,"utf8"); const block=hero(...c);
-    if(name==="products.html") h=h.replace(/<section class="yw-product-banner"[\s\S]*?<\/section>/,block);
+    if(name==="products.html") h=h.replace(/<section class="ty-home__product-banner"[\s\S]*?<\/section>/,block);
     else if(name==="applications.html"||name==="resources.html") h=h.replace(/<section class="page-hero">[\s\S]*?<\/section>/,block);
     else if(name==="about.html") h=h.replace(/<section class="page-image-hero">[\s\S]*?<\/section>/,block);
-    else h=h.replace(/<section class="yw-product-banner news-banner"[\s\S]*?<\/section>/,block);
+    else h=h.replace(/<section class="ty-home__product-banner news-banner"[\s\S]*?<\/section>/,block);
     fs.writeFileSync(f,inject(h));
   }
 }

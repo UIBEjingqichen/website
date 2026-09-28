@@ -25,7 +25,7 @@ const oldAboutAssets = [
   'assets/js/about-interactions-v33.js'
 ];
 
-const homepageMetrics = `<div class="yw-stat-grid"><article><small>01</small><strong>30+</strong><span>Product Series</span></article><article><small>02</small><strong>85,243 m²</strong><span>Plant Area</span></article><article><small>03</small><strong>460</strong><span>Large Mechanical Equipment</span></article><article><small>04</small><strong>60</strong><span>Supporting Test Equipment Types</span></article></div>`;
+const homepageMetrics = `<div class="ty-home__stat-grid"><article><small>01</small><strong>30+</strong><span>Product Series</span></article><article><small>02</small><strong>85,243 m²</strong><span>Plant Area</span></article><article><small>03</small><strong>460</strong><span>Large Mechanical Equipment</span></article><article><small>04</small><strong>60</strong><span>Supporting Test Equipment Types</span></article></div>`;
 
 const aboutMain = `<main>
   <section class="company-hero">
@@ -130,7 +130,7 @@ function buildAbout() {
 function buildHomepageCompany() {
   if (!fs.existsSync(homePage)) return;
   let html = fs.readFileSync(homePage, 'utf8');
-  html = html.replace(/<div class="yw-stat-grid">[\s\S]*?<\/div>/, homepageMetrics);
+  html = html.replace(/<div class="ty-home__stat-grid">[\s\S]*?<\/div>/, homepageMetrics);
   fs.writeFileSync(homePage, html, 'utf8');
 
   let rootHtml = html;

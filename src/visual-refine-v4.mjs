@@ -27,7 +27,7 @@ function heroWave() {
   ];
 
   return `<section class="home-wave-hero" data-wave-slider>
-    <div class="home-wave-slides">${slides.map(([image, title, text], index) => `<article class="home-wave-slide${index === 0 ? " active" : ""}" data-wave-slide><img src="${asset(image)}" alt="${esc(title)}"><div class="home-wave-overlay"></div><div class="home-wave-copy"><p>TIANYU ELECTRIC</p><h1>${esc(title)}</h1><span>${esc(text)}</span><div><a class="yw-outline-button" href="products.html">EXPLORE PRODUCTS</a><button class="yw-solid-button" type="button" data-quote-open>REQUEST A QUOTE</button></div></div></article>`).join("")}</div>
+    <div class="home-wave-slides">${slides.map(([image, title, text], index) => `<article class="home-wave-slide${index === 0 ? " active" : ""}" data-wave-slide><img src="${asset(image)}" alt="${esc(title)}"><div class="home-wave-overlay"></div><div class="home-wave-copy"><p>TIANYU ELECTRIC</p><h1>${esc(title)}</h1><span>${esc(text)}</span><div><a class="ty-home__outline-button" href="products.html">EXPLORE PRODUCTS</a><button class="ty-home__solid-button" type="button" data-quote-open>REQUEST A QUOTE</button></div></div></article>`).join("")}</div>
     <div class="home-wave-dots">${slides.map((_, index) => `<button class="${index === 0 ? "active" : ""}" type="button" data-wave-dot="${index}" aria-label="Show hero slide ${index + 1}"></button>`).join("")}</div>
     <svg class="home-wave-edge" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0,58 C220,112 400,4 655,55 C900,104 1110,19 1440,66 L1440,120 L0,120 Z"></path></svg>
   </section>`;

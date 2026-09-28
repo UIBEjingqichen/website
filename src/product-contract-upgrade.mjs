@@ -138,7 +138,7 @@ function upgradeHome() {
   html = ensureStyleLink(html, file);
   html = upgradeQuoteForm(html);
   if (!html.includes('id="project-delivery"')) {
-    const target = '<section class="section yw-why';
+    const target = '<section class="section ty-home__why';
     const index = html.indexOf(target);
     if (index >= 0) html = html.slice(0, index) + deliveryWorkflowSection("section") + html.slice(index);
     else html = html.replace("</main>", `${deliveryWorkflowSection("section")}\n</main>`);

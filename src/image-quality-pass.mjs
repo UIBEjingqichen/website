@@ -56,7 +56,7 @@ function replaceMarketingImages(html, file) {
 function replaceHomeLandscape(html, file) {
   if (path.resolve(file) !== path.join(dist, "index.html")) return html;
   const media = (name) => rel(file, path.join(dist, "assets", "media", name));
-  const section = `<section class="yw-landscape iq-landscape"><div class="yw-centered-head"><p>TIANYU ELECTRIC</p><h2>MANUFACTURING, TESTING & APPLICATION ENVIRONMENTS</h2></div><div class="iq-landscape-grid">
+  const section = `<section class="ty-home__landscape iq-landscape"><div class="ty-home__centered-head"><p>TIANYU ELECTRIC</p><h2>MANUFACTURING, TESTING & APPLICATION ENVIRONMENTS</h2></div><div class="iq-landscape-grid">
     <figure class="iq-landscape-card iq-campus"><img src="${media("company/factory-campus-panorama.jpeg")}" alt="Tianyu Electric manufacturing campus" loading="lazy"></figure>
     <figure class="iq-landscape-card iq-manufacturing"><img src="${media("factory/dry-type-prefabricated-substation-assembly-01.webp")}" alt="Prefabricated substation factory assembly" loading="lazy"></figure>
     <figure class="iq-landscape-card iq-testing"><img src="${media("catalog-v3/testing-220kv-lab.webp")}" alt="High-voltage transformer testing laboratory" loading="lazy"></figure>
@@ -64,7 +64,7 @@ function replaceHomeLandscape(html, file) {
     <figure class="iq-landscape-card iq-renewable"><img src="${media("applications/onshore-wind-farm-grassland.jpeg")}" alt="Onshore wind power application environment" loading="lazy"></figure>
     <figure class="iq-landscape-card iq-solar"><img src="${media("applications/utility-scale-solar-farm-aerial-01.jpeg")}" alt="Utility-scale photovoltaic application environment" loading="lazy"></figure>
   </div></section>`;
-  return html.replace(/<section class="yw-landscape">[\s\S]*?<\/section>/, section);
+  return html.replace(/<section class="ty-home__landscape">[\s\S]*?<\/section>/, section);
 }
 
 function processHtml(file) {

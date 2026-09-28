@@ -15,28 +15,28 @@
 }
 
 /* Keep product, industry, factory and landscape photography within one visual family. */
-.yw-product-image img,
-.yw-industry-grid img,
-.yw-landscape-grid img,
-.yw-model-grid img,
-.yw-other-grid img,
+.ty-home__product-image img,
+.ty-home__industry-grid img,
+.ty-home__landscape-grid img,
+.ty-home__model-grid img,
+.ty-home__other-grid img,
 .company-intro-clean > img,
 .gallery-main img,
 .gallery-thumbs img {
   filter: brightness(.95) saturate(.92) contrast(1.04);
 }
 
-.yw-product-image img { object-position: center 54%; }
-.yw-industry-grid a:nth-child(1) img { object-position: center 56%; }
-.yw-industry-grid a:nth-child(2) img { object-position: center 48%; }
-.yw-industry-grid a:nth-child(3) img { object-position: center 50%; }
-.yw-industry-grid a:nth-child(4) img { object-position: center 44%; }
-.yw-landscape-grid .landscape-1 img { object-position: center 54%; }
-.yw-landscape-grid .landscape-2 img { object-position: center 52%; }
-.yw-landscape-grid .landscape-3 img { object-position: center 48%; }
-.yw-landscape-grid .landscape-4 img { object-position: center 50%; }
-.yw-landscape-grid .landscape-5 img { object-position: center 52%; }
-.yw-landscape-grid .landscape-6 img { object-position: center 50%; }
+.ty-home__product-image img { object-position: center 54%; }
+.ty-home__industry-grid a:nth-child(1) img { object-position: center 56%; }
+.ty-home__industry-grid a:nth-child(2) img { object-position: center 48%; }
+.ty-home__industry-grid a:nth-child(3) img { object-position: center 50%; }
+.ty-home__industry-grid a:nth-child(4) img { object-position: center 44%; }
+.ty-home__landscape-grid .landscape-1 img { object-position: center 54%; }
+.ty-home__landscape-grid .landscape-2 img { object-position: center 52%; }
+.ty-home__landscape-grid .landscape-3 img { object-position: center 48%; }
+.ty-home__landscape-grid .landscape-4 img { object-position: center 50%; }
+.ty-home__landscape-grid .landscape-5 img { object-position: center 52%; }
+.ty-home__landscape-grid .landscape-6 img { object-position: center 50%; }
 
 /* 3D certificates. The source pages remain clean: certificate image only, no caption block. */
 .certificate-3d-stage {
@@ -125,11 +125,11 @@
 .certificate-marquee-viewport { display: none !important; }
 
 /* Product images get a slightly cleaner showroom crop without changing source files. */
-.yw-model-grid img,
-.yw-product-image img {
+.ty-home__model-grid img,
+.ty-home__product-image img {
   background: var(--ty-n-50);
 }
-.yw-model-grid img { object-position: center 52%; }
+.ty-home__model-grid img { object-position: center 52%; }
 .gallery-main img { object-position: center 52%; }
 .gallery-thumbs img { object-position: center; }
 

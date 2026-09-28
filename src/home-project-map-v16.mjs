@@ -128,7 +128,7 @@ function patchHome() {
   if (/<section class="ty16-projects"[\s\S]*?<\/section>/.test(html)) html = html.replace(/<section class="ty16-projects"[\s\S]*?<\/section>/, section);
   else if (/<section class="ty-projects"[\s\S]*?<\/section>/.test(html)) html = html.replace(/<section class="ty-projects"[\s\S]*?<\/section>/, section);
   else {
-    const certIndex = html.indexOf('<section class="section yw-why');
+    const certIndex = html.indexOf('<section class="section ty-home__why');
     html = certIndex >= 0 ? html.slice(0, certIndex) + section + html.slice(certIndex) : html.replace("</main>", section + "</main>");
   }
   fs.writeFileSync(home, html, "utf8");

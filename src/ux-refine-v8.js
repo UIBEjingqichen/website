@@ -2,17 +2,17 @@ function initV8Reveal(){
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   const selectors=[
     'body.ty-home main > section:not(.v6-hero)',
-    'body.ty-home .yw-stat-grid article',
-    'body.ty-home .yw-product-card',
-    'body.ty-home .yw-why-grid article',
+    'body.ty-home .ty-home__stat-grid article',
+    'body.ty-home .ty-home__product-card',
+    'body.ty-home .ty-home__why-grid article',
     'body.ty-home .v5-proof-card',
-    'body.ty-home .yw-news-card',
-    'body.ty-home .yw-landscape-grid figure',
+    'body.ty-home .ty-home__news-card',
+    'body.ty-home .ty-home__landscape-grid figure',
     'body.v8-top-page main > section:not(.v6-page-hero)',
-    'body.v8-top-page .yw-product-card',
+    'body.v8-top-page .ty-home__product-card',
     'body.v8-top-page .project-card',
     'body.v8-top-page .evidence-card',
-    'body.v8-top-page .yw-news-card'
+    'body.v8-top-page .ty-home__news-card'
   ];
   const nodes=[...new Set(selectors.flatMap(selector=>[...document.querySelectorAll(selector)]))];
   nodes.forEach((node,index)=>{

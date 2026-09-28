@@ -1,20 +1,20 @@
 
 
 /* Home news and engineering-guide cards must never inherit white display text. */
-.ty-home .yw-news,
-.ty-home .yw-news-card,
-.ty-home .yw-news-card a,
-.ty-home .yw-news-card h3,
-.ty-home .yw-news-card p,
-.ty-home .yw-news-card span,
-.ty-home .yw-news-card strong,
-.ty-home .yw-news-card small,
-.ty-home .yw-news-card *{color:var(--v9-text)!important}
-.ty-home .yw-news-card span,
-.ty-home .yw-news-card p{color:var(--v9-muted)!important}
-.ty-home .yw-news-card a{text-decoration:none!important}
-.ty-home .yw-news-card strong,
-.ty-home .yw-news-card .eyebrow{color:var(--v9-blue)!important}
+.ty-home .ty-home__news,
+.ty-home .ty-home__news-card,
+.ty-home .ty-home__news-card a,
+.ty-home .ty-home__news-card h3,
+.ty-home .ty-home__news-card p,
+.ty-home .ty-home__news-card span,
+.ty-home .ty-home__news-card strong,
+.ty-home .ty-home__news-card small,
+.ty-home .ty-home__news-card *{color:var(--v9-text)!important}
+.ty-home .ty-home__news-card span,
+.ty-home .ty-home__news-card p{color:var(--v9-muted)!important}
+.ty-home .ty-home__news-card a{text-decoration:none!important}
+.ty-home .ty-home__news-card strong,
+.ty-home .ty-home__news-card .eyebrow{color:var(--v9-blue)!important}
 
 /* Exact-model pages use dark typography throughout the lower content. */
 .v9-model-page .v5-model-apps,
@@ -57,8 +57,8 @@
 .v9-other-product-copy span{font-size:var(--ty-fs-1);letter-spacing:.07em;color:var(--v9-blue)!important;font-weight:700}
 
 /* Local file browsing: cards should visibly behave like links without white-on-white text. */
-.yw-product-card,.v5-model-card,.v9-other-product-card{color:var(--v9-text)!important}
-.yw-product-card h3,.v5-model-card h3{color:var(--v9-text)!important}
+.ty-home__product-card,.v5-model-card,.v9-other-product-card{color:var(--v9-text)!important}
+.ty-home__product-card h3,.v5-model-card h3{color:var(--v9-text)!important}
 
 @media(max-width:1100px){.v9-other-products-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.v9-application-project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.v9-other-products-grid,.v9-application-project-grid{grid-template-columns:1fr}.v9-other-products .v5-family-heading,.v9-real-applications .v5-family-heading{align-items:flex-start;flex-direction:column;gap:8px}}

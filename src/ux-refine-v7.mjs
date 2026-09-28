@@ -30,7 +30,7 @@ function homeLandscape() {
     ["evidence/sample-photo-pages/power-transformer-240mva-220kv-ssz22-sample-photo-page.webp", "220 kV power transformer"],
     ["products/prefabricated-substations/oil-prefabricated-substation-exterior-01.webp", "Compact prefabricated substation"]
   ];
-  return `<div class="yw-landscape-grid">${items.map(([src, alt], index) => `<figure class="landscape-${index + 1}"><img src="assets/media/${src}" alt="${alt}" loading="lazy"></figure>`).join("")}</div>`;
+  return `<div class="ty-home__landscape-grid">${items.map(([src, alt], index) => `<figure class="landscape-${index + 1}"><img src="assets/media/${src}" alt="${alt}" loading="lazy"></figure>`).join("")}</div>`;
 }
 
 function updateHome() {
@@ -39,7 +39,7 @@ function updateHome() {
   let html = fs.readFileSync(file, "utf8");
   html = stripHeroActions(html);
   if (html.includes("<body>")) html = html.replace("<body>", '<body class="ty-home">');
-  html = html.replace(/<div class="yw-landscape-grid">[\s\S]*?<\/div>(?=<\/section>)/, homeLandscape());
+  html = html.replace(/<div class="ty-home__landscape-grid">[\s\S]*?<\/div>(?=<\/section>)/, homeLandscape());
   html = injectCss(html);
   fs.writeFileSync(file, html);
 }

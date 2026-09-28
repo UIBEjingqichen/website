@@ -21,7 +21,7 @@
 
   function setupCountUp() {
     const counters = [...document.querySelectorAll([
-      '.ty-home .yw-stat-grid strong',
+      '.ty-home .ty-home__stat-grid strong',
       '.phase1-manufacturing .mfg34-hero-stat strong',
       '.phase1-manufacturing .mfg34-metric strong'
     ].join(','))].map((element) => ({ element, data: parseCounter(element) })).filter((item) => item.data);
@@ -84,7 +84,7 @@
     if (reduced.matches || !('IntersectionObserver' in window)) return;
 
     const groups = [
-      ['.ty-home .yw-company-copy, .ty-home .yw-stat-grid article', 70],
+      ['.ty-home .ty-home__company-copy, .ty-home .ty-home__stat-grid article', 70],
       ['.ty-home .v3p-products-home .v3p-title, .ty-home .v3p-family-card', 65],
       ['.ty-home .ty15-head, .ty-home .ty15-band', 75],
       ['.ty-home .ty16-head, .ty-home .ty16-filters, .ty-home .ty16-map-stage, .ty-home .ty16-card', 70],
