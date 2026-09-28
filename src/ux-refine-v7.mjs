@@ -13,12 +13,12 @@ function injectCss(html, depth = "") {
 }
 
 function stripHeroActions(html) {
-  html = html.replaceAll('<div class="v6-hero-shade"></div>', '');
+  html = html.replaceAll('<div class="ty-panel__hero-shade"></div>', '');
   return html.replace(/<div><a class="btn btn-primary"[\s\S]*?<\/div>(?=<\/div><\/article>)/g, "");
 }
 
 function markPageHero(html) {
-  return html.replace('<section class="v6-hero" data-v6-hero>', '<section class="v6-hero v6-page-hero" data-v6-hero>');
+  return html.replace('<section class="ty-panel__hero" data-ty-panel__hero>', '<section class="ty-panel__hero ty-panel__page-hero" data-ty-panel__hero>');
 }
 
 function homeLandscape() {

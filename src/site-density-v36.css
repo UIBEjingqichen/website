@@ -46,12 +46,12 @@ body.ty-density .section{
 }
 
 /* Shared image/page heroes */
-body.ty-density .v6-hero,
-body.ty-density .v6-page-hero{
+body.ty-density .ty-panel__hero,
+body.ty-density .ty-panel__page-hero{
   min-height:500px;
 }
-body.ty-density .v6-hero-copy h1,
-body.ty-density .v6-page-hero .v6-hero-copy h1,
+body.ty-density .ty-panel__hero-copy h1,
+body.ty-density .ty-panel__page-hero .ty-panel__hero-copy h1,
 body.ty-density .page-image-hero h1,
 body.ty-density .page-hero h1{
   max-width:620px;
@@ -60,7 +60,7 @@ body.ty-density .page-hero h1{
   line-height:1.04;
   letter-spacing:-.03em;
 }
-body.ty-density .v6-hero-copy span,
+body.ty-density .ty-panel__hero-copy span,
 body.ty-density .page-image-hero p,
 body.ty-density .page-hero>p:last-child{
   font-size:var(--ty-fs-3);
@@ -72,8 +72,8 @@ body.ty-density .page-hero{
 }
 
 /* Homepage */
-body.ty-density.ty-home .v6-hero,
-body.ty-density.ty-home .v6-hero{min-height:520px}
+body.ty-density.ty-home .ty-panel__hero,
+body.ty-density.ty-home .ty-panel__hero{min-height:520px}
 body.ty-density .ty-home__company-overview{padding-top:58px;padding-bottom:58px}
 body.ty-density .ty-home__company-copy h2{font-size:var(--ty-fs-7);font-weight:600;line-height:1.15;letter-spacing:-.018em}
 body.ty-density .ty-home__company-copy>p:not(.ty-home__kicker){font-size:var(--ty-fs-3);line-height:1.65}
@@ -178,15 +178,15 @@ body.ty-density .text-link{font-weight:650}
   body.ty-density .ty-evidence__shell,
   body.ty-density .ty-proof__shell,
   body.ty-density .ty18-shell{width:min(100% - 32px,var(--s36-shell))}
-  body.ty-density .v6-hero,
-  body.ty-density .v6-page-hero,
+  body.ty-density .ty-panel__hero,
+  body.ty-density .ty-panel__page-hero,
   body.ty-density.ap26-projects-page .ap26-hero,
   body.ty-density.v19-products-page .v23-product-hero,
   body.ty-density.ab30-about .ab30-hero{min-height:560px}
 }
 @media(max-width:560px){
   body.ty-density{--s36-section:46px;--s36-title:28px;--s36-hero:40px}
-  body.ty-density .v6-hero-copy h1,
+  body.ty-density .ty-panel__hero-copy h1,
   body.ty-density .page-image-hero h1,
   body.ty-density .page-hero h1,
   body.ty-density .ap26-hero-copy h1,

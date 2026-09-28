@@ -118,10 +118,10 @@
 }
 
 /* Hero photography fills its frame consistently; no stretching. */
-.v6-hero-slide{
+.ty-panel__hero-slide{
   overflow:hidden;
 }
-.v6-hero-slide>img{
+.ty-panel__hero-slide>img{
   width:100%;
   height:100%;
   object-fit:cover!important;

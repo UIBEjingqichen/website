@@ -31,12 +31,12 @@ function afterSection(html, className, addition) {
 }
 
 let home = read('index.html');
-const previousHeroRange = sectionRange(home, 'v6-hero');
+const previousHeroRange = sectionRange(home, 'ty-panel__hero');
 const previousFlowRange = sectionRange(home, 'ty-energy-flow-wrap');
 if (!previousHeroRange || !previousFlowRange) throw new Error('Previous homepage hero or energy flow missing');
 const previousFlow = home.slice(...previousFlowRange);
 home = replaceSection(home, 'ty-energy-flow-wrap', '');
-home = replaceSection(home, 'v6-hero', `${previousFlow}<section class="ty-editorial__hero" aria-labelledby="ty-editorial__home-title">
+home = replaceSection(home, 'ty-panel__hero', `${previousFlow}<section class="ty-editorial__hero" aria-labelledby="ty-editorial__home-title">
   <div class="ty-editorial__shell ty-editorial__hero-grid">
     <div class="ty-editorial__hero-copy"><p class="ty-editorial__eyebrow">TIANYU ELECTRIC · TRANSFORMER MANUFACTURING</p>
       <h1 id="ty-editorial__home-title">Power transformers for utility, renewable and industrial projects.</h1>
@@ -83,11 +83,11 @@ quality = replaceSection(quality, 'evidence-section', `<section class="ty-editor
 write('quality.html', quality);
 
 let resources = read('resources.html');
-const resourceHero = sectionRange(resources, 'v6-hero');
+const resourceHero = sectionRange(resources, 'ty-panel__hero');
 if (!resourceHero) throw new Error('Resources hero missing');
-const firstResourceSlide = resources.slice(...resourceHero).match(/<article class="v6-hero-slide active"[\s\S]*?<\/article>/)?.[0];
+const firstResourceSlide = resources.slice(...resourceHero).match(/<article class="ty-panel__hero-slide active"[\s\S]*?<\/article>/)?.[0];
 if (!firstResourceSlide) throw new Error('Resources hero slide missing');
-resources = resources.slice(0, resourceHero[0]) + `<section class="v6-hero v6-page-hero ty-editorial__static-page-hero"><div class="v6-hero-slides">${firstResourceSlide}</div></section>` + resources.slice(resourceHero[1]);
+resources = resources.slice(0, resourceHero[0]) + `<section class="ty-panel__hero ty-panel__page-hero ty-editorial__static-page-hero"><div class="ty-panel__hero-slides">${firstResourceSlide}</div></section>` + resources.slice(resourceHero[1]);
 write('resources.html', resources);
 
 let applications = read('applications.html');

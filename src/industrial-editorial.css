@@ -40,7 +40,7 @@ body .v3p-breadcrumb a{min-height:24px;display:inline-flex;align-items:center}
 .ty-editorial__hero-media{margin:0;align-self:stretch;display:flex;flex-direction:column;justify-content:center}
 .ty-editorial__hero-media img{display:block;width:100%;max-height:500px;object-fit:contain;background:var(--ty-n-0)}
 .ty-editorial__hero-media figcaption{padding:10px 0;color:var(--ty-editorial__muted);font-size:var(--ty-fs-2)}
-@media(max-width:900px){body.ty-home .v6-hero,body.ty-home .ty-energy-flow-wrap{display:none!important}}
+@media(max-width:900px){body.ty-home .ty-panel__hero,body.ty-home .ty-energy-flow-wrap{display:none!important}}
 .ty-editorial__home-products{padding:72px 0;background:var(--ty-n-0)}
 .ty-editorial__family-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-block:1px solid var(--ty-editorial__line)}
 .ty-editorial__family-links a{display:grid;grid-template-columns:36px 1fr;column-gap:12px;align-content:center;min-height:112px;padding:18px 20px;color:var(--ty-editorial__navy);text-decoration:none}
@@ -139,7 +139,7 @@ body .ty-proof__detail-media img{object-fit:contain}
 body .document-filter input,body .document-filter select{min-height:44px}
 
 /* Controls and touch targets. */
-body .carousel-arrow,body .typs-arrow,body .v6-hero-dots button,body [data-marquee-toggle]{min-width:32px!important;min-height:32px!important}
+body .carousel-arrow,body .typs-arrow,body .ty-panel__hero-dots button,body [data-marquee-toggle]{min-width:32px!important;min-height:32px!important}
 body .quote-form input,body .quote-form select,body .quote-form textarea{min-height:44px}
 body .quote-form button,body .quote-form .btn{min-height:44px}
 

@@ -61,7 +61,7 @@ function removeGenericApplications(html) {
     .replace(/<section class="section v9-model-applications">[\s\S]*?<\/section>/g, "")
     .replace(/<section class="section(?: pale)? ty-carousel__model-apps(?! v9-other-products)[^"]*">[\s\S]*?<\/section>/g, "")
     .replace(/<section class="section(?: pale)? ty-carousel__family-applications[^"]*">[\s\S]*?<\/section>/g, "")
-    .replace(/<section class="section(?: pale)? v6-family-applications[^"]*">[\s\S]*?<\/section>/g, "");
+    .replace(/<section class="section(?: pale)? ty-panel__family-applications[^"]*">[\s\S]*?<\/section>/g, "");
 }
 
 function insertBeforeInquiry(html, block) {

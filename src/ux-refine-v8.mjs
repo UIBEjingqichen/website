@@ -41,7 +41,7 @@ function addBodyClass(html, className) {
 
 function replacePrimaryHeroImage(html, url) {
   return html.replace(
-    /(<article class="v6-hero-slide active"[^>]*>[\s\S]*?<img src=")[^"]+("[^>]*>)/,
+    /(<article class="ty-panel__hero-slide active"[^>]*>[\s\S]*?<img src=")[^"]+("[^>]*>)/,
     `$1${url}$2`
   );
 }

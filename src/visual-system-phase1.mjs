@@ -64,7 +64,7 @@ function phaseOneHome(html) {
   html = html.replace(/\s*<script\b[^>]*src=["']assets\/js\/ux-refine-v5\.js["'][^>]*><\/script>/g, '');
 
   let slideIndex = 0;
-  html = html.replace(/<article class="v6-hero-slide[^>]*>[\s\S]*?<\/article>/g, (article) => {
+  html = html.replace(/<article class="ty-panel__hero-slide[^>]*>[\s\S]*?<\/article>/g, (article) => {
     const currentIndex = slideIndex++;
     let next = article;
     if (currentIndex > 0) next = next.replace('<h1>', '<h2 class="ty-system__hero-slide-title">').replace('</h1>', '</h2>');

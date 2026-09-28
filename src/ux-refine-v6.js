@@ -1,6 +1,6 @@
 function initV6Hero(slider){
-  const slides=[...slider.querySelectorAll('[data-v6-hero-slide]')];
-  const dots=[...slider.querySelectorAll('[data-v6-hero-dot]')];
+  const slides=[...slider.querySelectorAll('[data-ty-panel__hero-slide]')];
+  const dots=[...slider.querySelectorAll('[data-ty-panel__hero-dot]')];
   if(slides.length<2)return;
   let index=slides.findIndex((slide)=>slide.classList.contains('active'));
   if(index<0)index=0;
@@ -18,9 +18,9 @@ function initV6Hero(slider){
 }
 
 function initV6Gallery(gallery){
-  const main=gallery.querySelector('[data-v6-main-image]');
-  const caption=gallery.querySelector('[data-v6-main-caption]');
-  const thumbs=[...gallery.querySelectorAll('[data-v6-thumb]')];
+  const main=gallery.querySelector('[data-ty-panel__main-image]');
+  const caption=gallery.querySelector('[data-ty-panel__main-caption]');
+  const thumbs=[...gallery.querySelectorAll('[data-ty-panel__thumb]')];
   thumbs.forEach((thumb)=>thumb.addEventListener('click',()=>{
     thumbs.forEach((item)=>item.classList.remove('active'));
     thumb.classList.add('active');
@@ -30,6 +30,6 @@ function initV6Gallery(gallery){
 }
 
 document.addEventListener('DOMContentLoaded',()=>{
-  document.querySelectorAll('[data-v6-hero]').forEach(initV6Hero);
-  document.querySelectorAll('.v6-model-gallery').forEach(initV6Gallery);
+  document.querySelectorAll('[data-ty-panel__hero]').forEach(initV6Hero);
+  document.querySelectorAll('.ty-panel__model-gallery').forEach(initV6Gallery);
 });
