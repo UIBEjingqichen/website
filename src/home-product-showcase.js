@@ -2,7 +2,7 @@
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   document.querySelectorAll('[data-auto-marquee]').forEach(viewport => {
-    const container = viewport.closest('[data-product-showcase], .v5-cert-block');
+    const container = viewport.closest('[data-product-showcase], .ty-carousel__cert-block');
     const rail = viewport.querySelector('.typs-rail') || viewport;
     const originals = [...rail.children];
     if (!container || originals.length < 2) return;

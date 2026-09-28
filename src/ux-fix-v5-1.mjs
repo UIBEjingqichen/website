@@ -38,13 +38,13 @@ for (const product of products) {
     if (!fs.existsSync(file)) continue;
     let html = fs.readFileSync(file, "utf8");
     const image = `../../assets/media/${variant.image}`;
-    html = html.replace(/<div class="v5-model-gallery">[\s\S]*?<\/div><div class="v5-model-summary">/, `<div class="v5-model-gallery"><img class="v5-model-main-image" src="${image}" alt="${esc(variant.model)}"></div><div class="v5-model-summary">`);
+    html = html.replace(/<div class="ty-carousel__model-gallery">[\s\S]*?<\/div><div class="ty-carousel__model-summary">/, `<div class="ty-carousel__model-gallery"><img class="ty-carousel__model-main-image" src="${image}" alt="${esc(variant.model)}"></div><div class="ty-carousel__model-summary">`);
     const ratedPower = variant.representative?.ratedPower || "project-rated";
     const ratedVoltage = variant.representative?.ratedVoltage || "";
     const overview = variant.representative
       ? `${variant.model} is a ${ratedPower} ${ratedVoltage} configuration within the ${product.name} family. The documents below are tied to this exact tested model. Final accessories, tapping, impedance, losses and project interfaces are reviewed against the customer specification.`
       : `${variant.model} is presented as a recorded configuration within the ${product.name} family. Final ratings and project interfaces are confirmed against the customer specification.`;
-    html = html.replace(/<div class="v5-model-overview-copy">[\s\S]*?<\/div><div class="v5-feature-grid">/, `<div class="v5-model-overview-copy"><p class="eyebrow">PRODUCT OVERVIEW</p><h2>${esc(variant.model)}</h2><p>${esc(overview)}</p></div><div class="v5-feature-grid">`);
+    html = html.replace(/<div class="ty-carousel__model-overview-copy">[\s\S]*?<\/div><div class="ty-carousel__feature-grid">/, `<div class="ty-carousel__model-overview-copy"><p class="eyebrow">PRODUCT OVERVIEW</p><h2>${esc(variant.model)}</h2><p>${esc(overview)}</p></div><div class="ty-carousel__feature-grid">`);
     fs.writeFileSync(file, html);
   }
 }

@@ -106,11 +106,11 @@
 .iq-landscape-card.iq-solar img{object-position:center 50%;}
 
 /* Proof cards use photographic crops and equal-height media windows. */
-.v5-proof-grid .v5-proof-image{
+.ty-carousel__proof-grid .ty-carousel__proof-image{
   aspect-ratio:16/10;
   overflow:hidden;
 }
-.v5-proof-grid .v5-proof-image img{
+.ty-carousel__proof-grid .ty-carousel__proof-image img{
   width:100%;
   height:100%;
   object-fit:cover!important;

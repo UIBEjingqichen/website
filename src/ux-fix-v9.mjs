@@ -48,19 +48,19 @@ function realApplicationsSection(productId, depth = "../../") {
   if (!rows.length) return "";
   const category = categories.find((item) => item.id === productId);
   const productName = displayNames[productId] || category?.name || "this product family";
-  return `<section class="section v9-real-applications"><div class="v5-family-heading"><p>APPLICATIONS</p><h2>Real Application References</h2><span class="v9-section-note">Recorded project applications for the ${esc(productName)} family from the export master table.</span></div><div class="v9-application-project-grid">${rows.map((project) => `<article class="v9-application-project"><div class="v9-application-project-meta"><span>${esc(project.application || project.industry || "Project")}</span>${project.country ? `<small>${esc(project.country)}</small>` : ""}</div><h3>${esc(project.name)}</h3><div class="v9-application-project-foot">${project.industry ? `<span>${esc(project.industry)}</span>` : ""}${project.capacity ? `<strong>${esc(project.capacity)}</strong>` : ""}</div></article>`).join("")}</div><a class="v9-applications-more" href="${depth}applications.html">VIEW ALL APPLICATIONS & PROJECTS →</a></section>`;
+  return `<section class="section v9-real-applications"><div class="ty-carousel__family-heading"><p>APPLICATIONS</p><h2>Real Application References</h2><span class="v9-section-note">Recorded project applications for the ${esc(productName)} family from the export master table.</span></div><div class="v9-application-project-grid">${rows.map((project) => `<article class="v9-application-project"><div class="v9-application-project-meta"><span>${esc(project.application || project.industry || "Project")}</span>${project.country ? `<small>${esc(project.country)}</small>` : ""}</div><h3>${esc(project.name)}</h3><div class="v9-application-project-foot">${project.industry ? `<span>${esc(project.industry)}</span>` : ""}${project.capacity ? `<strong>${esc(project.capacity)}</strong>` : ""}</div></article>`).join("")}</div><a class="v9-applications-more" href="${depth}applications.html">VIEW ALL APPLICATIONS & PROJECTS →</a></section>`;
 }
 
 function relatedProductsSection(currentId) {
   const others = categories.filter((category) => category.id !== currentId);
-  return `<section class="section v5-model-apps v9-other-products"><div class="v5-family-heading"><p>OTHER PRODUCTS</p><h2>Explore Other Transformer Solutions</h2><span class="v9-section-note">Browse other Tianyu product families.</span></div><div class="v9-other-products-grid">${others.map((category) => `<a class="v9-other-product-card" href="../../products/${category.id}/index.html"><div class="v9-other-product-image"><img src="../../assets/media/${category.image}" alt="${esc(displayNames[category.id] || category.name)}" loading="lazy"></div><div class="v9-other-product-copy"><h3>${esc(displayNames[category.id] || category.name)}</h3><span>VIEW PRODUCT →</span></div></a>`).join("")}</div></section>`;
+  return `<section class="section ty-carousel__model-apps v9-other-products"><div class="ty-carousel__family-heading"><p>OTHER PRODUCTS</p><h2>Explore Other Transformer Solutions</h2><span class="v9-section-note">Browse other Tianyu product families.</span></div><div class="v9-other-products-grid">${others.map((category) => `<a class="v9-other-product-card" href="../../products/${category.id}/index.html"><div class="v9-other-product-image"><img src="../../assets/media/${category.image}" alt="${esc(displayNames[category.id] || category.name)}" loading="lazy"></div><div class="v9-other-product-copy"><h3>${esc(displayNames[category.id] || category.name)}</h3><span>VIEW PRODUCT →</span></div></a>`).join("")}</div></section>`;
 }
 
 function removeGenericApplications(html) {
   return html
     .replace(/<section class="section v9-model-applications">[\s\S]*?<\/section>/g, "")
-    .replace(/<section class="section(?: pale)? v5-model-apps(?! v9-other-products)[^"]*">[\s\S]*?<\/section>/g, "")
-    .replace(/<section class="section(?: pale)? v5-family-applications[^"]*">[\s\S]*?<\/section>/g, "")
+    .replace(/<section class="section(?: pale)? ty-carousel__model-apps(?! v9-other-products)[^"]*">[\s\S]*?<\/section>/g, "")
+    .replace(/<section class="section(?: pale)? ty-carousel__family-applications[^"]*">[\s\S]*?<\/section>/g, "")
     .replace(/<section class="section(?: pale)? v6-family-applications[^"]*">[\s\S]*?<\/section>/g, "");
 }
 
@@ -74,7 +74,7 @@ function insertBeforeInquiry(html, block) {
 function updateModelPage(file, familyId) {
   let html = fs.readFileSync(file, "utf8");
   html = removeGenericApplications(html);
-  html = html.replace(/<section class="section v5-model-apps v9-other-products">[\s\S]*?<\/section>/g, "");
+  html = html.replace(/<section class="section ty-carousel__model-apps v9-other-products">[\s\S]*?<\/section>/g, "");
   const applications = realApplicationsSection(familyId, "../../");
   const related = relatedProductsSection(familyId);
   html = insertBeforeInquiry(html, `${applications}${related}`);

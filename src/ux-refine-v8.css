@@ -18,7 +18,7 @@ body.ty-home .ty-home__stat-grid span{max-width:190px;font-size:var(--ty-fs-1);l
 /* Continuous page rhythm with soft tone changes instead of pure white slabs. */
 body.ty-home .ty-home__company-overview{padding-top:72px!important;padding-bottom:58px!important}
 body.ty-home .ty-home__one-stop{padding-top:64px!important;padding-bottom:64px!important;border-top:1px solid color-mix(in srgb, var(--ty-navy-500) 18%, transparent)!important}
-body.ty-home .ty-home__why.v5-why{background:linear-gradient(180deg,var(--ty-n-100) 0%,var(--ty-n-100) 100%)!important;border-top:1px solid var(--ty-n-200)!important;border-bottom:1px solid var(--ty-n-200)!important}
+body.ty-home .ty-home__why.ty-carousel__why{background:linear-gradient(180deg,var(--ty-n-100) 0%,var(--ty-n-100) 100%)!important;border-top:1px solid var(--ty-n-200)!important;border-bottom:1px solid var(--ty-n-200)!important}
 body.ty-home .ty-home__news{padding-top:66px!important;padding-bottom:62px!important;border-top:1px solid color-mix(in srgb, var(--ty-navy-500) 18%, transparent)!important}
 body.ty-home .ty-home__landscape{padding-top:64px!important;background:transparent!important}
 body.ty-home .ty-home__product-image{background:var(--ty-n-100)!important}
@@ -26,10 +26,10 @@ body.ty-home .ty-home__news-card span,
 body.ty-home .ty-home__product-card-copy span{color:var(--v8-muted)!important}
 
 /* Reduce dead-white feel of proof and certificate areas while keeping documents readable. */
-body.ty-home .v5-cert-block{background:color-mix(in srgb, var(--ty-n-0) 34%, transparent)!important;border-radius:16px!important;padding:22px 18px!important}
-body.ty-home .v5-coverflow-stage{filter:none!important}
-body.ty-home .v5-proof-card{background:color-mix(in srgb, var(--ty-n-0) 34%, transparent)!important;padding:10px!important}
-body.ty-home .v5-proof-card>div:last-child{padding-right:12px!important}
+body.ty-home .ty-carousel__cert-block{background:color-mix(in srgb, var(--ty-n-0) 34%, transparent)!important;border-radius:16px!important;padding:22px 18px!important}
+body.ty-home .ty-carousel__coverflow-stage{filter:none!important}
+body.ty-home .ty-carousel__proof-card{background:color-mix(in srgb, var(--ty-n-0) 34%, transparent)!important;padding:10px!important}
+body.ty-home .ty-carousel__proof-card>div:last-child{padding-right:12px!important}
 
 /* First-level pages use independently sourced image-led banners with no heavy film. */
 body.v8-top-page{background:var(--ty-n-100)!important;color:var(--v8-text)}

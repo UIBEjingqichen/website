@@ -5,7 +5,7 @@ function initV8Reveal(){
     'body.ty-home .ty-home__stat-grid article',
     'body.ty-home .ty-home__product-card',
     'body.ty-home .ty-home__why-grid article',
-    'body.ty-home .v5-proof-card',
+    'body.ty-home .ty-carousel__proof-card',
     'body.ty-home .ty-home__news-card',
     'body.ty-home .ty-home__landscape-grid figure',
     'body.v8-top-page main > section:not(.v6-page-hero)',

@@ -49,9 +49,9 @@ for (const file of [path.join(dist, 'index.html'), path.join(root, 'index.html')
   const oldSection = /<section class="v3p-section v3p-products-home"[\s\S]*?<\/section>/;
   if (!oldSection.test(html)) throw new Error(`Homepage product section missing: ${file}`);
   html = html.replace(oldSection, section);
-  const certStage = '<div class="v5-coverflow-stage" data-ty-coverflow-stage>';
+  const certStage = '<div class="ty-carousel__coverflow-stage" data-ty-coverflow-stage>';
   if (!html.includes(certStage)) throw new Error(`Homepage certificate stage missing: ${file}`);
-  html = html.replace(certStage, '<div class="v5-coverflow-stage" data-ty-coverflow-stage data-auto-marquee data-marquee-speed="17">');
+  html = html.replace(certStage, '<div class="ty-carousel__coverflow-stage" data-ty-coverflow-stage data-auto-marquee data-marquee-speed="17">');
   const certHead = '<div class="ty-home__subhead"><p>CERTIFICATES & TEST REPORTS</p><a href="resources.html">VIEW ALL →</a></div>';
   if (!html.includes(certHead)) throw new Error(`Homepage certificate heading missing: ${file}`);
   html = html.replace(certHead, '<div class="ty-home__subhead"><p>CERTIFICATES & TEST REPORTS</p><div class="ty-cert-actions"><button class="ty-marquee-toggle" type="button" data-marquee-toggle aria-label="Pause certificate movement" aria-pressed="false">Ⅱ</button><a href="resources.html">VIEW ALL →</a></div></div>');

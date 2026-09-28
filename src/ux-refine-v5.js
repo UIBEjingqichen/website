@@ -98,8 +98,8 @@
     start();
   });
 
-  all(".v5-model-gallery").forEach((gallery) => {
-    const main = one(".v5-model-main-image", gallery);
+  all(".ty-carousel__model-gallery").forEach((gallery) => {
+    const main = one(".ty-carousel__model-main-image", gallery);
     const thumbs = all("[data-ty-model-thumb]", gallery);
     if (!main) return;
     thumbs.forEach((thumb) => thumb.addEventListener("click", () => {

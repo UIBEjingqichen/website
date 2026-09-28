@@ -84,9 +84,9 @@ function updateProductPages(){
     for(const v of variants(p)){
       const f=path.join(dir,`${slug(v.model)}.html`); if(!fs.existsSync(f)) continue; let h=fs.readFileSync(f,"utf8"); const pics=gallery(p,v);
       const g=`<div class="v6-model-gallery"><figure class="v6-model-main"><img src="${asset(pics[0][0],"../../")}" alt="${esc(pics[0][1])}" data-v6-main-image><figcaption data-v6-main-caption>${esc(pics[0][1])}</figcaption></figure><div class="v6-model-thumbs">${pics.map(([src,cap],i)=>`<button type="button" class="${i===0?"active":""}" data-v6-thumb data-src="${asset(src,"../../")}" data-caption="${esc(cap)}"><img src="${asset(src,"../../")}" alt="${esc(cap)}" loading="lazy"></button>`).join("")}</div></div>`;
-      h=h.replace(/<div class="v5-model-gallery">[\s\S]*?<\/div><div class="v5-model-summary">/,`${g}<div class="v5-model-summary">`);
+      h=h.replace(/<div class="ty-carousel__model-gallery">[\s\S]*?<\/div><div class="ty-carousel__model-summary">/,`${g}<div class="ty-carousel__model-summary">`);
       const overview=`${v.model} is a ${rating(v,p)} reference within the ${labels(p.name)} family. The gallery uses the available exact-model product photo plus supporting family, manufacturing or application images. Certificates and test reports below are limited to this exact model.`;
-      h=h.replace(/<div class="v5-model-overview-copy">[\s\S]*?<\/div><div class="v5-feature-grid">/,`<div class="v5-model-overview-copy"><p class="eyebrow">MODEL OVERVIEW</p><h2>${esc(v.model)}</h2><p>${esc(overview)}</p></div><div class="v5-feature-grid">`);
+      h=h.replace(/<div class="ty-carousel__model-overview-copy">[\s\S]*?<\/div><div class="ty-carousel__feature-grid">/,`<div class="ty-carousel__model-overview-copy"><p class="eyebrow">MODEL OVERVIEW</p><h2>${esc(v.model)}</h2><p>${esc(overview)}</p></div><div class="ty-carousel__feature-grid">`);
       h=labels(h); fs.writeFileSync(f,inject(h,"../../"));
     }
   }
