@@ -67,7 +67,8 @@ function quoteForm(compact = false) {
     <label>Capacity / Voltage<input name="rating" placeholder="e.g. 2500 kVA, 35/0.8 kV"></label>
     <label class="full">Project Requirements<textarea name="message" rows="5" placeholder="Application, standard, installation environment, quantity and required delivery schedule"></textarea></label>
     <label class="full">Technical File<input name="file" type="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.dwg,.dxf,.jpg,.jpeg,.png"></label>
-    <button class="btn btn-primary" type="submit">Send Inquiry</button>
+    <p class="email-draft-note">This opens an email draft. Review it, attach any selected file, and press Send in your email application.</p>
+    <button class="btn btn-primary" type="submit">Continue in Email App</button>
     <p class="form-message" aria-live="polite"></p>
   </form>`;
 }
@@ -228,12 +229,13 @@ function resourcesPage() {
     canonical: "resources.html",
     content: `
       <section class="page-hero"><p class="eyebrow">Resources</p><h1>Certificates, test reports and engineering previews</h1><p>Each record is tied to a product family, tested model, voltage and issuing organization where the source file provides that information.</p></section>
-      <section class="section evidence-section" id="certificates">${sectionHead("Certificates & Test Reports", "Filter the evidence database")}<div class="filter-panel document-filter" data-document-filter>
+      <section class="section evidence-section" id="certificates">${sectionHead("Certificates & Test Reports", "Find a report by product, type or model")}<div class="filter-panel document-filter" data-document-filter>
+        <label>Search reports<input data-document-search type="search" placeholder="Model, report number or keyword" autocomplete="off"></label>
         <label>Product<select data-document-product><option value="all">All products</option>${categories.map((category) => `<option value="${category.id}">${esc(category.shortName)}</option>`).join("")}</select></label>
         <label>Document Type<select data-document-type><option value="all">All document types</option>${documentTypes.slice(0, 5).map(([value, label]) => `<option value="${value}">${esc(label)}</option>`).join("")}</select></label>
         <label>Voltage<select data-document-voltage><option value="all">All voltages</option>${["10 kV", "22 kV", "35 kV", "110 kV", "132 kV", "220 kV"].map((value) => `<option value="${value}">${value}</option>`).join("")}</select></label>
         <label>Issuer<select data-document-issuer><option value="all">All issuers</option><option value="TÜV Rheinland">TÜV Rheinland</option><option value="Suzhou Electrical Apparatus Science Research Institute">Suzhou Electrical Apparatus Science Research Institute</option></select></label>
-      </div><div class="evidence-grid">${documents.map((document) => evidenceCard(document)).join("")}</div>${evidenceTemplates(documents)}</section>
+      </div><div class="experience-document-actions"><span data-document-count aria-live="polite"></span><button type="button" data-document-clear>Clear filters</button></div><div class="evidence-grid">${documents.map((document) => evidenceCard(document)).join("")}</div><button class="experience-show-more" type="button" data-document-more>Show more reports</button>${evidenceTemplates(documents)}</section>
       <section class="section pale" id="drawings">${sectionHead("Engineering Drawings", "Reference outlines from supplied reports")}<div class="drawing-grid">${drawings.map((drawing) => `<article class="drawing-card"><button type="button" data-drawing-open data-drawing-src="${media(drawing.image)}" data-drawing-title="${esc(drawing.title)}"><img src="${media(drawing.image)}" alt="${esc(drawing.title)} preview" loading="lazy"><span>${esc(drawing.type)}</span><strong>${esc(drawing.title)}</strong></button><p>${esc(drawing.note)}</p></article>`).join("")}</div></section>
     `
   });

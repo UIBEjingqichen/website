@@ -1,0 +1,35 @@
+.phase1-detail .c8d-hero{min-height:410px}
+.phase1-detail .c8d-hero .v3p-hero-copy>p:not(.v3p-kicker){max-width:650px;font-size:15px;line-height:1.7}
+.phase1-detail .c8d-section{padding:48px 0}
+.c8d-intro{max-width:860px;margin:0 0 24px;color:#40566a;line-height:1.75}
+.c8d-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 22px}
+.c8d-fact{min-width:0;margin:0;padding:15px 17px;border:1px solid #d8e3e9;border-radius:5px;background:#fff}
+.c8d-fact dt{margin:0 0 7px;color:#5e7181;font-size:12px;font-weight:650}
+.c8d-fact dd{margin:0;color:#123c54;font-size:15px;font-weight:750;line-height:1.45}
+.c8d-scope{display:inline-block;margin:4px 0 16px;padding:7px 11px;border-left:3px solid #0c7580;background:#eaf4f5;color:#15545d;font-size:12px;font-weight:750}
+.c8d-example{grid-template-columns:repeat(3,minmax(0,1fr))}
+.c8d-table-scroll{max-width:100%;overflow-x:auto;border:1px solid #d8e3e9;border-radius:8px;background:#fff}
+.c8d-table{width:100%;min-width:790px;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.c8d-table th,.c8d-table td{padding:11px 14px;border-bottom:1px solid #e2e9ed;text-align:left;white-space:nowrap}
+.c8d-table th{background:#eaf1f4;color:#173e52;font-size:12px;font-weight:800}
+.c8d-table td{color:#203e51;font-size:13px}
+.c8d-table tbody tr:nth-child(even){background:#f6f9fa}
+.c8d-table tbody tr:last-child td{border-bottom:0}
+.c8d-table-help{display:none}
+.c8d-caveat{max-width:960px;margin:14px 0 0;color:#586c7c;font-size:12px;line-height:1.6}
+.c8d-panel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.c8d-panel{padding:22px 22px 23px;border:1px solid #dbe6eb;border-top:3px solid #0b6670;border-radius:7px;background:#fff}
+.c8d-panel h3{margin:0 0 9px;color:#173e52;font-size:16px;line-height:1.45}
+.c8d-panel p{margin:0;color:#4f6574;font-size:13px;line-height:1.7}
+.c8d-two-col{display:grid;grid-template-columns:1fr .85fr;gap:48px;align-items:start}
+.c8d-inquiry{padding:22px 26px;border:1px solid #dbe6eb;border-radius:8px;background:#fff}
+.c8d-inquiry h3{margin:0 0 14px;color:#173e52;font-size:17px}
+.c8d-list{margin:0;padding-left:20px;color:#40586a;line-height:1.8}
+.c8d-list li+li{margin-top:7px}
+.c8d-list li::marker{color:#0b6974}
+.c8d-document{display:flex;justify-content:space-between;align-items:center;gap:26px}
+.c8d-document>div{max-width:850px}
+.c8d-document p:not(.v3p-kicker){margin:8px 0;color:#4d6575;line-height:1.65}
+.c8d-document .vs-button{flex:none}
+@media(max-width:900px){.c8d-facts,.c8d-example,.c8d-panel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.c8d-two-col{gap:24px}}
+@media(max-width:640px){.phase1-detail .c8d-section{padding:40px 0}.c8d-facts,.c8d-example,.c8d-panel-grid,.c8d-two-col{grid-template-columns:1fr}.c8d-fact{padding:13px 15px}.c8d-table-help{display:block;margin:0 0 8px;color:#567080;font-size:12px}.c8d-document{display:block}.c8d-document .vs-button{margin-top:14px}.c8d-inquiry{padding:20px}}

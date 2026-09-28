@@ -28,4 +28,6 @@ runStages("Final site pass", [
   "distribution-polish-v53.mjs",
   "product-detail-image-fit-v54.mjs",
   "oil-distribution-media-audit-v55.mjs",
+  "product-visual-stabilize-v56.mjs",
+  "homepage-mirror-v57.mjs",
 ]);

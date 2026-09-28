@@ -106,7 +106,8 @@ function knowledgeShell({ title, description, canonical, content, depth = "../",
         <label>Country<input name="country"></label>
         <label class="full">Message<textarea name="message" rows="5"></textarea></label>
         <label class="full">Upload File<input name="file" type="file"></label>
-        <button class="btn btn-primary" type="submit">Submit Inquiry</button>
+        <p class="email-draft-note">This opens an email draft. Review it and press Send in your email application.</p>
+        <button class="btn btn-primary" type="submit">Continue in Email App</button>
       </form>
     </section>
   </div>

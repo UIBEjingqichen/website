@@ -74,8 +74,8 @@ function rewriteProductsDirectory() {
   const powerCards = [
     productCard({ href: "products/35kv-power-transformer/", image: "assets/media/products/classified/35kv-power-transformer/01.png", family: "Power Transformers", title: "35 kV Oil-Immersed Power Transformer", range: "8–31.5 MVA", note: "35 kV class" }),
     productCard({ href: "products/66kv-power-transformer/", image: "assets/media/products/classified/66kv-power-transformer/01.png", family: "Power Transformers", title: "66 kV Oil-Immersed Power Transformer", range: "6.3–63 MVA", note: "63 / 66 / 69 kV system voltages" }),
-    productCard({ href: "products/110kv-power-transformer/", image: "assets/media/products/classified/110kv-power-transformer/01.png", family: "Power Transformers", title: "110 / 132 kV Oil-Immersed Power Transformer", range: "110 / 132 kV", note: "Main-substation and grid-interconnection applications" }),
-    productCard({ href: "products/220kv-power-transformer/", image: "assets/media/products/classified/220kv-power-transformer/01.png", family: "Power Transformers", title: "220 kV Oil-Immersed Power Transformer", range: "Up to 420 MVA", note: "220 kV manufacturing capability" }),
+    productCard({ href: "products/110kv-power-transformer/", image: "assets/media/products/classified/110kv-power-transformer/01.png", family: "Power Transformers", title: "110 kV Three-Winding Power Transformer", range: "6.3–63 MVA", note: "110 / 115 / 121 kV high-voltage system" }),
+    productCard({ href: "products/220kv-power-transformer/", image: "assets/media/products/classified/220kv-power-transformer/01.png", family: "Power Transformers", title: "220 kV Three-Winding Power Transformer", range: "31.5–240 MVA", note: "SSZ-31500~240000/220 published series" }),
   ].join("");
 
   const distributionCards = [
@@ -86,8 +86,8 @@ function rewriteProductsDirectory() {
   const prefabCards = [
     productCard({ href: "products/zgs-prefabricated-substation/", image: "assets/media/products/classified/zgs-prefabricated-substation/02.webp", family: "Prefabricated Substations", title: "Combined Transformer / Compact Substation", range: "Up to 40.5 kV", note: "Integrated outdoor transformer and protection package" }),
     productCard({ href: "products/yb-prefabricated-substation/", image: "assets/media/products/classified/yb-prefabricated-substation/02.webp", family: "Prefabricated Substations", title: "European-Type Prefabricated Substation", range: "Up to 40.5 kV", note: "MV, transformer and LV compartments" }),
-    productCard({ href: "products/ybh-prefabricated-substation/", image: "assets/media/products/classified/ybh-prefabricated-substation/02.jpeg", family: "Prefabricated Substations", title: "Renewable Prefabricated Substation", range: "Up to 40.5 kV", note: "Renewable and industrial collection systems" }),
-    productCard({ href: "products/pv-ess-integrated-substation/", image: "assets/media/products/classified/pv-ess-integrated-substation/02.jpeg", family: "Prefabricated Substations", title: "PV / ESS Integrated Substation", range: "Project engineered", note: "Converter, transformer and switchgear integration" }),
+    productCard({ href: "products/ybh-prefabricated-substation/", image: "assets/media/products/classified/ybh-prefabricated-substation/03.jpeg", family: "Prefabricated Substations", title: "Renewable Prefabricated Substation", range: "Up to 40.5 kV", note: "Renewable and industrial collection systems" }),
+    productCard({ href: "products/pv-ess-integrated-substation/", image: "assets/media/products/classified/pv-ess-integrated-substation/03.jpeg", family: "Prefabricated Substations", title: "PV / ESS Integrated Substation", range: "Project engineered", note: "Converter, transformer and switchgear integration" }),
     productCard({ href: "products/35-110kv-mobile-intelligent-substation/", image: "assets/media/products/classified/35-110kv-mobile-intelligent-substation/02.jpeg", family: "Prefabricated Substations", title: "35–110 kV Mobile Intelligent Substation", range: "35–110 kV", note: "Mobile and temporary grid connection" }),
     productCard({ href: "products/american-type-combined-transformer/", image: "assets/media/products/classified/american-type-combined-transformer/01.webp", family: "Prefabricated Substations", title: "American-Type Combined Transformer", range: "Project dependent", note: "Compact pad-mounted distribution arrangement" }),
   ].join("");
@@ -166,20 +166,31 @@ function globalThreeFamilyNav(html) {
 function mergeHomepageFamilies(file) {
   if (!exists(file)) return;
   let html = read(file);
-  const distributionImage = toWeb(path.relative(path.dirname(file), path.join(classifiedRoot, "40-5kv-renewable-oil-immersed-transformer", "01.png")));
-  const prefabImage = toWeb(path.relative(path.dirname(file), path.join(classifiedRoot, "yb-prefabricated-substation", "02.webp")));
+  // The root index is a mirror with <base href="dist/">, so its asset URLs must
+  // be calculated from dist/index.html as well. Calculating them from the root
+  // produced dist/assets/... URLs that the base tag resolved as dist/dist/assets.
+  const assetBaseFile = html.includes('<base href="dist/">') ? path.join(dist, "index.html") : file;
+  const imageHref = (slug, name) => toWeb(path.relative(path.dirname(assetBaseFile), path.join(classifiedRoot, slug, name)));
+  const powerImage = imageHref("110kv-power-transformer", "01.png");
+  const distributionImage = imageHref("oil-immersed-distribution-transformer", "01.png");
+  const prefabImage = imageHref("yb-prefabricated-substation", "02.webp");
+  const replaceImage = (inner, src, alt) => inner.replace(/<img\b[^>]*>/i, `<img src="${src}" alt="${esc(alt)}" loading="lazy">`);
+  const replaceHref = (attrs, href) => attrs.replace(/href=["'][^"']*["']/i, `href="${href}"`);
+  const replaceSummary = (inner, summary) => inner.replace(/(<h3>[^<]*<\/h3>)<p>[^<]*<\/p>/i, `$1<p>${esc(summary)}</p>`);
   html = html.replace(/<a\b([^>]*class=["'][^"']*v3p-family-card[^"']*["'][^>]*)>([\s\S]*?)<\/a>/gi, (whole, attrs, inner) => {
-    const href = attrs.match(/href=["']([^"']+)["']/i)?.[1] || "";
-    if (href.includes("cast-resin-dry-type-transformer")) return "";
-    if (href.includes("oil-immersed-distribution-transformer")) {
-      let next = inner.replace(/Oil-Immersed(?: Distribution)? Transformers/g, "Distribution Transformers");
-      next = next.replace(/<img\b([^>]*?)src=["'][^"']+["']([^>]*)>/i, `<img$1src="${distributionImage}"$2>`);
-      next = next.replace(/Oil-immersed[^<]*/i, "Oil-immersed and dry-type distribution platforms");
-      return `<a${attrs}>${next}</a>`;
+    const title = inner.match(/<h3>([^<]+)<\/h3>/i)?.[1]?.replace(/&amp;/g, "&").trim() || "";
+    if (/^(?:Dry-Type Transformers|Special & Renewable Solutions)$/.test(title)) return "";
+    if (title === "Power Transformers") {
+      return `<a${replaceHref(attrs, "products.html#power-transformers")}>${replaceImage(inner, powerImage, title)}</a>`;
     }
-    if (href.includes("prefabricated-substations")) {
-      const next = inner.replace(/<img\b([^>]*?)src=["'][^"']+["']([^>]*)>/i, `<img$1src="${prefabImage}"$2>`);
-      return `<a${attrs}>${next}</a>`;
+    if (/^(?:Oil-Immersed(?: Distribution)? Transformers|Distribution Transformers)$/.test(title)) {
+      let next = inner.replace(/<h3>[^<]*<\/h3>/i, "<h3>Distribution Transformers</h3>");
+      next = replaceSummary(next, "Oil-immersed and dry-type transformer platforms up to 35 kV");
+      next = replaceImage(next, distributionImage, "Distribution Transformers");
+      return `<a${replaceHref(attrs, "products.html#distribution-transformers")}>${next}</a>`;
+    }
+    if (title === "Prefabricated Substations") {
+      return `<a${replaceHref(attrs, "products.html#prefabricated-substations")}>${replaceImage(inner, prefabImage, title)}</a>`;
     }
     return whole;
   });
@@ -228,5 +239,10 @@ for (const redCover of ["zgs-prefabricated-substation/01.png", "yb-prefabricated
 const distributionFamily = read(path.join(productsRoot, "oil-immersed-distribution-transformer", "index.html"));
 if (!distributionFamily.includes("Distribution Transformers") || !distributionFamily.includes("dry-type-distribution-transformer")) throw new Error("v46: distribution family merge failed");
 if ((distributionFamily.match(/class="v3p-platform-card"/g) || []).length !== 2) throw new Error("v46: distribution family should expose exactly two product cards");
+const homepage = read(path.join(dist, "index.html"));
+const homepageFamilies = homepage.match(/<section class="v3p-section v3p-products-home"[\s\S]*?<\/section>/i)?.[0] || "";
+if ((homepageFamilies.match(/class="v3p-family-card"/g) || []).length !== 3) throw new Error("v46: homepage should expose exactly three product families");
+if (/Special &(?:amp; )?Renewable Solutions|Dry-Type Transformers/.test(homepageFamilies)) throw new Error("v46: homepage still exposes a retired top-level family");
+if (!homepageFamilies.includes("classified/oil-immersed-distribution-transformer/01.png")) throw new Error("v46: homepage distribution family image is not synchronized");
 
 console.log(`v46 three-family architecture complete: ${cssTargets} CSS targets updated; products directory consolidated to Power / Distribution / Prefabricated Substations; clean prefab media restored; detail hero media enlarged.`);

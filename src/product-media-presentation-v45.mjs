@@ -27,13 +27,13 @@ const mergedVariants = [
     slug: "40-5kv-new-energy-dry-type-transformer",
     parent: "cast-resin-dry-type-transformer",
     title: "40.5 kV-Class New-Energy Configuration",
-    note: "Renewable-energy step-up configuration within the dry-type family. It no longer carries a duplicate standalone image card when dedicated media is not available.",
+    note: "Renewable-energy step-up configuration within the dry-type family; final ratings are project engineered.",
   },
   {
     slug: "24-pulse-phase-shifting-transformer",
     parent: "cast-resin-dry-type-transformer",
     title: "24-Pulse Phase-Shifting Configuration",
-    note: "Project-engineered multi-pulse rectifier configuration using the dry-type platform. Reference imagery remains family-level unless model-specific media is supplied.",
+    note: "Project-engineered multi-pulse rectifier configuration using the dry-type platform; final ratings are project engineered.",
   },
 ];
 
@@ -149,7 +149,7 @@ function variantBlock(parentFile, variants) {
     const href = `${toWeb(path.relative(path.dirname(parentFile), target))}/`;
     return `<a class="v45-variant-link" href="${esc(href)}"><strong>${esc(variant.title)}</strong><span>${esc(variant.note)}</span></a>`;
   }).join("");
-  return `<section class="v45-variant-section" data-v45-merged-variants><div class="v3p-shell"><div class="v45-variant-intro"><p class="v3p-kicker">Shared Platform Variants</p><h2>Configurations grouped under the parent product</h2><p>These variants remain available for technical reference, but they no longer use duplicate standalone product-image cards.</p></div><div class="v45-variant-list">${links}</div></div></section>`;
+  return `<section class="v45-variant-section" data-v45-merged-variants><div class="v3p-shell"><div class="v45-variant-intro"><p class="v3p-kicker">Shared Platform Variants</p><h2>Configurations available within the parent product</h2><p>These configurations use the parent platform and are finalized against the electrical system, site conditions and project requirements.</p></div><div class="v45-variant-list">${links}</div></div></section>`;
 }
 
 function insertVariantBlock(parentSlug, variants) {

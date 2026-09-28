@@ -4,7 +4,7 @@ export const navigation = [
     label: "Products",
     href: "products.html",
     items: [
-      ["Distribution Transformer", "products/oil-immersed-distribution-transformer/"],
+      ["Distribution Transformer", "products.html#distribution-transformers"],
       ["Power Transformer", "products/high-voltage-power-transformer/"],
       ["Dry-Type Transformer", "products/cast-resin-dry-type-transformer/"],
       ["Prefabricated Substation", "products.html#prefabricated-substation"],

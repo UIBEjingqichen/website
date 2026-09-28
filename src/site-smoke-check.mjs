@@ -42,6 +42,19 @@ if ((directory.match(/data-product-slide=/g) || []).length !== 3) throw new Erro
 for (const familyId of ["power-transformers", "distribution-transformers", "prefabricated-substations"]) {
   if (!directory.includes(`id="${familyId}"`)) throw new Error(`Products directory missing family section: ${familyId}`);
 }
+if (directory.includes('id="catalog-2026-additions"') || directory.includes('Additional product platforms')) {
+  throw new Error('Catalog products must be placed inside existing product families.');
+}
+const powerGroup = directory.split('id="power-transformers"')[1]?.split('id="distribution-transformers"')[0] || '';
+const distributionGroup = directory.split('id="distribution-transformers"')[1]?.split('id="prefabricated-substations"')[0] || '';
+if (!powerGroup.includes('oil-immersed-split-winding-transformer/')) throw new Error('Split-winding transformer is missing from Power Transformers.');
+for (const slug of ['sz20-on-load-oil-immersed-transformer','intelligent-low-noise-dry-type-transformer','zbs-rectifier-transformer']) {
+  if (!distributionGroup.includes(`products/${slug}/`)) throw new Error(`${slug} is missing from Distribution Transformers.`);
+}
+for (const slug of ['oil-immersed-split-winding-transformer','sz20-on-load-oil-immersed-transformer','intelligent-low-noise-dry-type-transformer','zbs-rectifier-transformer']) {
+  const image=`assets/media/products/catalog-v8/${slug}.webp`;
+  if (!directory.includes(image) || !exists(image)) throw new Error(`${slug} is missing its catalog product image.`);
+}
 if (directory.includes("Choose between power transformers, distribution transformers and prefabricated substations")) {
   throw new Error("Products directory still contains the removed product-family explainer.");
 }
@@ -129,14 +142,39 @@ for (const slug of ["zgs-prefabricated-substation", "yb-prefabricated-substation
 }
 
 const productsRoot = path.join(dist, "products");
+const supplementalDetails = new Map([
+  ['sz20-on-load-oil-immersed-transformer', ['SZ20 published series parameters', '<td>2,500</td>', '16,960', '±4 × 2.5%']],
+  ['oil-immersed-split-winding-transformer', ['SZ-50000/110', '110 / 6.3 / 6.3 kV', 'YNd11d11', 'Contract example']],
+  ['intelligent-low-noise-dry-type-transformer', ['intelligent terminal', 'Family-level dry-type catalog reference', 'sound level']],
+  ['zbs-rectifier-transformer', ['ZS-8000/10-0.66', '8,000 / 4,000 / 4,000 kVA', 'Dy11d0', 'Contract example']]
+]);
+for (const [slug, facts] of supplementalDetails) {
+  const rel = `products/${slug}/index.html`;
+  const html = read(rel);
+  for (const marker of ['catalog-v8-product-details.css', 'class="v3p-hero c8d-hero"', 'vs-detail-jump', 'id="ratings"', 'id="engineering"', 'id="applications"', 'id="documents"', 'id="contact-rfq"', ...facts]) {
+    if (!html.includes(marker)) throw new Error(`${rel} missing source-backed product detail: ${marker}`);
+  }
+  if (html.includes('>Product Overview<') || html.includes('21M2078-S')) throw new Error(`${rel} has a removed or inherited section.`);
+}
 let detailCount = 0;
 for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
   if (!entry.isDirectory()) continue;
   const rel = `products/${entry.name}/index.html`;
   if (!exists(rel)) continue;
   const html = read(rel);
+  if (html.includes('id="product-overview"') || html.includes('catalog-v8-intro') || html.includes('>Product Overview<')) {
+    throw new Error(`${rel} still contains the removed Product Overview section.`);
+  }
   if (!html.includes('<section class="v3p-hero">') || html.includes("v3p-family-hero")) continue;
   detailCount += 1;
+  const catalogV8 = new Set(["sz20-on-load-oil-immersed-transformer", "oil-immersed-split-winding-transformer", "intelligent-low-noise-dry-type-transformer", "zbs-rectifier-transformer"]);
+  if (catalogV8.has(entry.name)) {
+    for (const marker of ['id="ratings"', 'id="applications"', 'id="documents"', 'id="contact-rfq"', "visual-behavior.js"]) {
+      if (!html.includes(marker)) throw new Error(`${rel} missing catalog detail marker: ${marker}`);
+    }
+    if (html.includes("21M2078-S") || html.includes('data-v41-reference-parameters')) throw new Error(`${rel} incorrectly inherits 110 kV tested-model evidence.`);
+    continue;
+  }
   const styles = [...html.matchAll(/<link\b[^>]*rel=["']stylesheet["'][^>]*href=["']([^"']+)["'][^>]*>/gi)].map((m) => m[1]);
   for (const href of ["../../assets/css/visual-system.css", "../../assets/css/product-detail.css"]) {
     if (!styles.includes(href)) throw new Error(`${rel} missing unified stylesheet: ${href}`);
@@ -166,7 +204,7 @@ for (const slug of mergedChildren) {
 for (const [parent, text] of [
   ["66kv-power-transformer", "66 kV Offshore Wind Configuration"],
   ["220kv-power-transformer", "Double-Split Booster Configuration"],
-  ["cast-resin-dry-type-transformer", "Configurations grouped under the parent product"],
+  ["cast-resin-dry-type-transformer", "Configurations available within the parent product"],
 ]) {
   requireText(`products/${parent}/index.html`, text);
 }
@@ -180,5 +218,49 @@ if ((ratingTable.match(/<tr>/g) || []).length !== 11) throw new Error("110 kV Ra
 
 const rootIndex = fs.readFileSync(path.join(root, "index.html"), "utf8");
 if (!rootIndex.includes('<base href="dist/">')) throw new Error("Root index mirror is missing the dist base path.");
+if (!rootIndex.includes('<head><base href="dist/">')) throw new Error("Root index mirror must set its base path before stylesheet links.");
+for (const [label, html] of [["dist homepage", read("index.html")], ["root homepage", rootIndex]]) {
+  for (const marker of ['class="v6-hero" data-v6-hero', 'data-energy-flow', 'class="ie-hero"', 'class="ie-hero-media"', 'assets/css/industrial-editorial.css']) {
+    if (!html.includes(marker)) throw new Error(`${label} is missing Industrial Editorial marker: ${marker}`);
+  }
+}
+if (!exists('assets/css/industrial-editorial.css')) throw new Error('Shared Industrial Editorial stylesheet is missing.');
+const homeHtml = read("index.html");
+const localWorldMap = "assets/media/applications/blank-world-map-robinson.svg";
+if (!homeHtml.includes(`class="ty16-world-base" src="${localWorldMap}"`)) throw new Error("Homepage world map is not using its local base image.");
+if (!exists(localWorldMap)) throw new Error("Homepage world map base image is missing.");
+for (const [label, html] of [["dist homepage", homeHtml], ["root homepage", rootIndex]]) {
+  for (const marker of ['class="ie-home-products"', 'class="ie-family-links"', 'class="ie-feature-grid"']) {
+    if (!html.includes(marker)) throw new Error(`${label} is missing product-led homepage marker: ${marker}`);
+  }
+  if ((html.match(/class="ie-feature-grid"/g) || []).length !== 1) throw new Error(`${label} should have one curated product feature grid.`);
+  if (html.includes('data-product-showcase')) throw new Error(`${label} still has the moving product row.`);
+}
+
+// The site is also opened directly from index.html as a local file. In that
+// mode, Chromium shows a directory listing instead of opening its index.html.
+const htmlFiles = [];
+function collectHtml(folder) {
+  for (const entry of fs.readdirSync(folder, { withFileTypes: true })) {
+    const absolute = path.join(folder, entry.name);
+    if (entry.isDirectory()) {
+      if (entry.name !== "assets") collectHtml(absolute);
+    } else if (entry.name.endsWith(".html")) htmlFiles.push(absolute);
+  }
+}
+collectHtml(dist);
+for (const file of htmlFiles) {
+  const html = fs.readFileSync(file, "utf8");
+  for (const [, href] of html.matchAll(/\bhref="([^"?#]+\/)"/g)) {
+    if (/^[a-z][a-z\d+.-]*:/i.test(href) || href.startsWith("//")) continue;
+    const target = path.resolve(path.dirname(file), href);
+    if (target.startsWith(dist + path.sep) && fs.existsSync(path.join(target, "index.html"))) {
+      throw new Error(`Local-file navigation would open a directory: ${path.relative(dist, file)} -> ${href}`);
+    }
+  }
+}
+for (const [, href] of directory.matchAll(/<a class="(?:v3p-platform-card|catalog-v8-family-card)" href="([^"]+)"/g)) {
+  if (!fs.existsSync(path.resolve(dist, href))) throw new Error(`Product card has no target file: ${href}`);
+}
 
 console.log(`Smoke check passed: three-family product architecture, consolidated oil/dry distribution family, restored 7-image oil-distribution carousel with intrinsic-ratio protection, expanded voltage coverage, complete-image detail heroes, clean prefabricated-substation media, prohibited-image removal, ${detailCount} detail pages, and preserved 110 kV ratings.`);

@@ -7,10 +7,24 @@ const makeProjects = (productId, rows) => rows.map((row, index) => ({
   productIds: [productId],
   capacity: row[4] ?? null,
   image: row[5] ?? null,
-  featured: Boolean(row[5])
+  featured: Boolean(row[5]),
+  contentState: "partial",
+  publicationState: "published",
+  mediaKind: row[5] ? "project-reference" : "none",
+  mediaCaption: null,
+  deliveryYear: null,
+  deliveryStatus: null,
+  customerDisplayName: null,
+  challenge: null,
+  supplyScope: null,
+  result: null,
+  relatedDocuments: []
 }));
 
 export const projects = [
+  ...makeProjects("oil-immersed-prefabricated-substation", [
+    ["CEMIG 155 MW Photovoltaic Project", "Brazil", "Solar", "Renewable Energy", "155 MW", "applications/catalog-brazil-pv-export-project.png"]
+  ]),
   ...makeProjects("oil-immersed-distribution-transformer", [
     ["Tay Ninh Cement Milling Plant 2", null, "Cement", "Industrial", null],
     ["Neikeng Phase I Transformer Project", null, "Industrial", "Industrial", null],

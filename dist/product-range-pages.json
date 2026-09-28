@@ -157,7 +157,7 @@
       "slug": "zgs-prefabricated-substation",
       "family": "prefab",
       "title": "ZGS Combined Transformer",
-      "range": "200–40,000 kVA",
+      "range": "200–4,000 kVA",
       "voltage": "7.2–40.5 kV HV · 0.315–1.14 kV LV",
       "source": "Tianyu transformer English catalog, prefabricated-substation product standard table."
     },
@@ -208,6 +208,38 @@
       "range": "Project engineered",
       "voltage": "220 kV class",
       "source": "Tianyu transformer English catalog, large oil-immersed transformer typical-product section."
+    },
+    {
+      "slug": "sz20-on-load-oil-immersed-transformer",
+      "family": "Distribution Transformers",
+      "title": "SZ20 On-Load Oil-Immersed Transformer",
+      "range": "200–2,500 kVA",
+      "voltage": "6 / 6.3 / 10 / 10.5 / 11 kV to 0.4 kV",
+      "source": "Tianyu enriched 2026 catalog / 2026-05-19 catalog"
+    },
+    {
+      "slug": "oil-immersed-split-winding-transformer",
+      "family": "Power Transformers",
+      "title": "Oil-Immersed Split-Winding Transformer",
+      "range": "Project engineered",
+      "voltage": "Voltage and capacity by project",
+      "source": "Tianyu enriched 2026 catalog / 2026-05-19 catalog"
+    },
+    {
+      "slug": "intelligent-low-noise-dry-type-transformer",
+      "family": "Distribution Transformers",
+      "title": "Intelligent Low-Noise Dry-Type Transformer",
+      "range": "Project configuration",
+      "voltage": "Voltage and capacity by model",
+      "source": "Tianyu enriched 2026 catalog / 2026-05-19 catalog"
+    },
+    {
+      "slug": "zbs-rectifier-transformer",
+      "family": "Distribution Transformers",
+      "title": "ZBS / ZBSCB Rectifier Transformer",
+      "range": "Project engineered",
+      "voltage": "Voltage and capacity by rectifier scheme",
+      "source": "Tianyu enriched 2026 catalog / 2026-05-19 catalog"
     }
   ]
 }

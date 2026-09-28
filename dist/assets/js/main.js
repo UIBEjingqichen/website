@@ -61,13 +61,39 @@ function setModalState(modal, open) {
     lastFocused?.focus?.();
   }
 }
-all("[data-quote-open]").forEach((button) => button.addEventListener("click", () => setModalState(quoteModal, true)));
+all("[data-quote-open]").forEach((button) => button.addEventListener("click", () => {
+  const form = quoteModal?.querySelector(".quote-form");
+  if (form) {
+    let context = form.querySelector('[name="requestContext"]');
+    if (!context) {
+      context = document.createElement("input");
+      context.type = "hidden";
+      context.name = "requestContext";
+      form.appendChild(context);
+    }
+    context.value = button.dataset.requestType || (button.textContent.toLowerCase().includes("visit") ? "Factory visit" : "Product or project inquiry");
+  }
+  setModalState(quoteModal, true);
+}));
 all("[data-quote-close]", quoteModal || document).forEach((button) => button.addEventListener("click", () => setModalState(quoteModal, false)));
 
 all(".quote-form").forEach((form) => form.addEventListener("submit", (event) => {
   event.preventDefault();
   const message = bySelector(".form-message", form);
-  if (message) message.textContent = "Your inquiry details are ready for the Tianyu engineering review workflow.";
+  const data = new FormData(form);
+  const lines = [...data.entries()]
+    .filter(([name, value]) => name !== "file" && String(value).trim())
+    .map(([name, value]) => `${name}: ${String(value).trim()}`);
+  const file = form.querySelector('input[type="file"]')?.files?.[0];
+  const subject = `Tianyu Electric inquiry - ${String(data.get("requestContext") || data.get("product") || "Project requirements")}`;
+  const body = `Please review the following inquiry.\n\n${lines.join("\n")}\n\n${file ? `I will attach the selected file manually in my email application: ${file.name}` : ""}`;
+  const emailUrl = `mailto:shangjianchen21@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  if (emailUrl.length > 7000) {
+    if (message) message.textContent = "The inquiry is too long for an email link. Please shorten the notes or email shangjianchen21@gmail.com directly.";
+    return;
+  }
+  if (message) message.textContent = `Your email application is opening. Please attach any selected file there and press Send. This website has not sent your inquiry automatically. If no application opens, email shangjianchen21@gmail.com directly.`;
+  window.location.href = emailUrl;
 }));
 
 function setupEvidenceCarousel(carousel) {
@@ -285,14 +311,30 @@ function setupDocumentFilter(panel) {
     voltage: bySelector("[data-document-voltage]", panel),
     issuer: bySelector("[data-document-issuer]", panel)
   };
-  const filter = () => cards.forEach((card) => {
+  const search = bySelector("[data-document-search]", panel);
+  const count = bySelector("[data-document-count]");
+  const more = bySelector("[data-document-more]");
+  const clear = bySelector("[data-document-clear]");
+  let limit = 12;
+  const filter = () => {
+    let matching = 0;
+    cards.forEach((card) => {
     const match = (controls.product.value === "all" || card.dataset.product.includes(controls.product.value))
       && (controls.type.value === "all" || card.dataset.type === controls.type.value)
       && (controls.voltage.value === "all" || card.dataset.voltage === controls.voltage.value)
-      && (controls.issuer.value === "all" || card.dataset.issuer === controls.issuer.value);
-    card.hidden = !match;
-  });
-  Object.values(controls).forEach((input) => input?.addEventListener("change", filter));
+      && (controls.issuer.value === "all" || card.dataset.issuer === controls.issuer.value)
+      && (!search?.value.trim() || card.innerText.toLowerCase().includes(search.value.trim().toLowerCase()));
+    if (match) matching += 1;
+    card.hidden = !match || matching > limit;
+    });
+    if (count) count.textContent = `${matching} matching reports`;
+    if (more) more.hidden = matching <= limit;
+  };
+  Object.values(controls).forEach((input) => input?.addEventListener("change", () => { limit = 12; filter(); }));
+  search?.addEventListener("input", () => { limit = 12; filter(); });
+  more?.addEventListener("click", () => { limit += 12; filter(); });
+  clear?.addEventListener("click", () => { Object.values(controls).forEach(input => input.value = "all"); if (search) search.value = ""; limit = 12; filter(); });
+  filter();
 }
 all("[data-document-filter]").forEach(setupDocumentFilter);
 

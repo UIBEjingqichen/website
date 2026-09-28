@@ -12,8 +12,9 @@ const jsSrc = path.join(__dirname, "home-project-map-v16.js");
 const cssDst = path.join(dist, "assets", "css", "home-project-map-v16.css");
 const jsDst = path.join(dist, "assets", "js", "home-project-map-v16.js");
 
-// CC0 world map based on Natural Earth, via Wikimedia Commons.
-const worldMapUrl = "https://upload.wikimedia.org/wikipedia/commons/f/fc/Blank_world_map_Robinson_projection.svg";
+// CC0 world map based on Natural Earth, stored locally so the file-based site works offline.
+const worldMapFile = "blank-world-map-robinson.svg";
+const worldMapUrl = `assets/media/applications/${worldMapFile}`;
 
 const esc = (v = "") => String(v).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const ensureDir = d => fs.mkdirSync(d, { recursive: true });
@@ -27,16 +28,8 @@ const productLabels = {
   "american-type-combined-transformer": "American-Type Combined Transformer"
 };
 
-const supplementalProjects = {
-  "CEMIG 155 MW Photovoltaic Project": {
-    name: "CEMIG 155 MW Photovoltaic Project",
-    country: "Brazil",
-    industry: "Solar",
-    application: "Renewable Energy",
-    productIds: ["oil-immersed-prefabricated-substation"],
-    capacity: "155 MW",
-    scope: "29 × 35 kV prefabricated substations"
-  }
+const projectSupplyScope = {
+  "CEMIG 155 MW Photovoltaic Project": "29 × 35 kV prefabricated substations"
 };
 
 // The project records provide country/application facts, not verified site coordinates for every case.
@@ -70,7 +63,7 @@ function projectRobinson(lat, lon) {
 }
 
 const selectedProjects = projectConfig.map(config => {
-  const source = projectLibrary.find(project => project.name === config.name) || supplementalProjects[config.name];
+  const source = projectLibrary.find(project => project.name === config.name);
   if (!source) throw new Error(`Project record not found: ${config.name}`);
   const productId = source.productIds?.[0] || "";
   const point = projectRobinson(config.lat, config.lon);
@@ -82,7 +75,7 @@ const selectedProjects = projectConfig.map(config => {
     title: source.name,
     scale: source.capacity || "Project-specific",
     product: productLabels[productId] || productId || "Transformer / substation equipment",
-    scope: source.scope || "",
+    scope: projectSupplyScope[source.name] || "",
     href: `projects/${config.slug}.html`,
     imagePath: `assets/media/applications/${config.image}`
   };
@@ -120,6 +113,7 @@ function projectMapSection() {
 function copyFile(from, to) { if (!fs.existsSync(from)) return; ensureDir(path.dirname(to)); fs.copyFileSync(from, to); }
 function ensureAssets() {
   copyFile(cssSrc, cssDst); copyFile(jsSrc, jsDst);
+  copyFile(path.join(root, "source-media", "applications", worldMapFile), path.join(dist, "assets", "media", "applications", worldMapFile));
   for (const project of selectedProjects) copyFile(path.join(root, "source-media", "applications", project.image), path.join(dist, "assets", "media", "applications", project.image));
 }
 function ensureLinks(html) {

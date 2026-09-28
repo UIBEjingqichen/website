@@ -1,5 +1,29 @@
 [
   {
+    "id": "oil-immersed-prefabricated-substation-project-01",
+    "name": "CEMIG 155 MW Photovoltaic Project",
+    "country": "Brazil",
+    "industry": "Solar",
+    "application": "Renewable Energy",
+    "productIds": [
+      "oil-immersed-prefabricated-substation"
+    ],
+    "capacity": "155 MW",
+    "image": "applications/catalog-brazil-pv-export-project.png",
+    "featured": true,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "project-reference",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
+  },
+  {
     "id": "oil-immersed-distribution-transformer-project-01",
     "name": "Tay Ninh Cement Milling Plant 2",
     "country": null,
@@ -10,7 +34,18 @@
     ],
     "capacity": null,
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "oil-immersed-distribution-transformer-project-02",
@@ -23,7 +58,18 @@
     ],
     "capacity": null,
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "oil-immersed-distribution-transformer-project-03",
@@ -36,7 +82,18 @@
     ],
     "capacity": null,
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "oil-immersed-distribution-transformer-project-04",
@@ -49,7 +106,18 @@
     ],
     "capacity": "6000 TPD",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "oil-immersed-distribution-transformer-project-05",
@@ -62,7 +130,18 @@
     ],
     "capacity": "6000 TPD",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "oil-immersed-distribution-transformer-project-06",
@@ -75,7 +154,18 @@
     ],
     "capacity": null,
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "high-voltage-power-transformer-project-01",
@@ -88,7 +178,18 @@
     ],
     "capacity": "7200 TPD",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "high-voltage-power-transformer-project-02",
@@ -101,7 +202,18 @@
     ],
     "capacity": "132 kV",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "high-voltage-power-transformer-project-03",
@@ -114,7 +226,18 @@
     ],
     "capacity": null,
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "high-voltage-power-transformer-project-04",
@@ -127,7 +250,18 @@
     ],
     "capacity": null,
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "high-voltage-power-transformer-project-05",
@@ -140,7 +274,18 @@
     ],
     "capacity": "100 MW-class",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "high-voltage-power-transformer-project-06",
@@ -153,7 +298,18 @@
     ],
     "capacity": null,
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "cast-resin-dry-type-transformer-project-01",
@@ -166,7 +322,18 @@
     ],
     "capacity": null,
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "cast-resin-dry-type-transformer-project-02",
@@ -179,7 +346,18 @@
     ],
     "capacity": null,
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "cast-resin-dry-type-transformer-project-03",
@@ -192,7 +370,18 @@
     ],
     "capacity": null,
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "cast-resin-dry-type-transformer-project-04",
@@ -205,7 +394,18 @@
     ],
     "capacity": null,
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "cast-resin-dry-type-transformer-project-05",
@@ -218,7 +418,18 @@
     ],
     "capacity": null,
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "cast-resin-dry-type-transformer-project-06",
@@ -231,7 +442,18 @@
     ],
     "capacity": null,
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "dry-type-prefabricated-substation-project-01",
@@ -244,7 +466,18 @@
     ],
     "capacity": "130 MW",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "dry-type-prefabricated-substation-project-02",
@@ -257,7 +490,18 @@
     ],
     "capacity": "200 MW",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "dry-type-prefabricated-substation-project-03",
@@ -270,7 +514,18 @@
     ],
     "capacity": "200 MW",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "dry-type-prefabricated-substation-project-04",
@@ -283,7 +538,18 @@
     ],
     "capacity": null,
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "dry-type-prefabricated-substation-project-05",
@@ -296,7 +562,18 @@
     ],
     "capacity": "100 MW",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "dry-type-prefabricated-substation-project-06",
@@ -309,7 +586,18 @@
     ],
     "capacity": "125 MW",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "oil-immersed-prefabricated-substation-project-01",
@@ -322,7 +610,18 @@
     ],
     "capacity": "350 MW",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "oil-immersed-prefabricated-substation-project-02",
@@ -335,7 +634,18 @@
     ],
     "capacity": "180 MW",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "oil-immersed-prefabricated-substation-project-03",
@@ -348,7 +658,18 @@
     ],
     "capacity": "100 MW",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "oil-immersed-prefabricated-substation-project-04",
@@ -361,7 +682,18 @@
     ],
     "capacity": "500 MW",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "oil-immersed-prefabricated-substation-project-05",
@@ -374,7 +706,18 @@
     ],
     "capacity": "500 MW",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "oil-immersed-prefabricated-substation-project-06",
@@ -387,7 +730,18 @@
     ],
     "capacity": "2 GW",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "american-type-combined-transformer-project-01",
@@ -400,7 +754,18 @@
     ],
     "capacity": "100 MW",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "american-type-combined-transformer-project-02",
@@ -413,7 +778,18 @@
     ],
     "capacity": "150 MW",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "american-type-combined-transformer-project-03",
@@ -426,7 +802,18 @@
     ],
     "capacity": "150 MW",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "american-type-combined-transformer-project-04",
@@ -439,7 +826,18 @@
     ],
     "capacity": "200 MW",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "american-type-combined-transformer-project-05",
@@ -452,7 +850,18 @@
     ],
     "capacity": "150 MW",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   },
   {
     "id": "american-type-combined-transformer-project-06",
@@ -465,6 +874,17 @@
     ],
     "capacity": "213 MWp",
     "image": null,
-    "featured": false
+    "featured": false,
+    "contentState": "partial",
+    "publicationState": "published",
+    "mediaKind": "none",
+    "mediaCaption": null,
+    "deliveryYear": null,
+    "deliveryStatus": null,
+    "customerDisplayName": null,
+    "challenge": null,
+    "supplyScope": null,
+    "result": null,
+    "relatedDocuments": []
   }
 ]

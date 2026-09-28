@@ -63,3 +63,11 @@ export const factorySections = [
   ["Quality Control", "QMS is described as providing full-process quality traceability, alongside MES production planning, WMS warehouse management and SRM supply-chain collaboration."],
   ["Production Capacity", "Published catalog figures: 1,200 large main transformers, 12,000 distribution transformers, 10,000 box-type substations and 15,000 complete switchgear units/sets per year."]
 ];
+
+// Content slots for later area-specific photos, equipment, process and documents.
+// Existing promotional figures elsewhere on the site are intentionally untouched.
+export const factoryAreas = [
+  {id:'large-transformer',name:'Large Transformer Production',summary:'Winding and assembly views from the existing factory gallery.',image:'factory/large-oil-transformer-winding-line.png',imageAlt:'Large transformer winding line',processIds:['coil-winding','assembly'],equipment:[],documents:[],publicationState:'published'},
+  {id:'core-processing',name:'Core Processing',summary:'Core preparation and cutting views from the existing factory gallery.',image:'factory/automatic-core-cutting-line.png',imageAlt:'Automatic core cutting line',processIds:['core-processing'],equipment:[],documents:[],publicationState:'published'},
+  {id:'prefabricated-assembly',name:'Prefabricated Substation Assembly',summary:'Assembly views from the existing factory gallery.',image:'factory/box-substation-final-assembly-line.png',imageAlt:'Prefabricated substation assembly line',processIds:['assembly'],equipment:[],documents:[],publicationState:'published'}
+];

@@ -21,6 +21,7 @@ const typeLabel = (type) => ({
 }[type] || type);
 
 export function evidenceCard(document, depth = "", compact = false) {
+  if (document.status === "pending-asset") return "";
   const available = document.previewImages.length > 0;
   const cover = available ? mediaUrl(document.previewImages[0], depth) : "";
   return `<article class="evidence-card${compact ? " compact" : ""}" data-evidence-card data-product="${esc(document.productIds.join(" "))}" data-type="${esc(document.type)}" data-voltage="${esc(document.voltage || "")}" data-issuer="${esc(document.issuer || "")}">

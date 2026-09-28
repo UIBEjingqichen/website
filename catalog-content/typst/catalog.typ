@@ -69,7 +69,7 @@ Tianyu combines product engineering, manufacturing, testing and project document
     inset: 2.5mm,
     [#text(weight: "bold", fill: navy)[Voltage / class]], [#product.voltage],
     [#text(weight: "bold", fill: navy)[Capacity]], [#product.capacity],
-    [#text(weight: "bold", fill: navy)[Tested references]], [#product.tested_models],
+    [#text(weight: "bold", fill: navy)[Documented reference scope]], [#product.capacity],
   )
 
   heading(level: 2)[Applications & Project References]

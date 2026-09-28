@@ -27,11 +27,9 @@
     #v(2mm)
     #text(size: 8pt, weight: "bold", fill: navy)[#doc.type]
     #linebreak()
-    #text(size: 7.5pt, weight: "bold")[#doc.model]
+    #text(size: 7.5pt, weight: "bold")[#doc.type]
     #linebreak()
     #text(size: 6.8pt, fill: muted)[#doc.rating · #doc.voltage]
-    #linebreak()
-    #text(size: 6.8pt, fill: muted)[#doc.report_no]
   ]
 }
 
@@ -47,8 +45,8 @@
 #let drawing-page(drawing) = {
   pagebreak(weak: true)
   section-kicker[ENGINEERING DRAWING]
-  heading(level: 1)[#drawing.document_id]
+  heading(level: 1)[Reference outline drawing]
   align(center)[#image(drawing.image, width: 100%, height: 220mm, fit: "contain")]
   v(2mm)
-  text(size: 7pt, fill: muted)[Source page #drawing.source_page · Reference drawing]
+  text(size: 7pt, fill: muted)[Technical drawing · Source page #drawing.source_page]
 }

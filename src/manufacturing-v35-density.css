@@ -99,3 +99,6 @@ body.mfg34 .mfg34-cta-block p{margin:5px 0 10px;font-size:9.8px}
   body.mfg34 .mfg34-gallery figure{height:170px}
   body.mfg34 .mfg34-cta h2{font-size:23px}
 }
+/* Steps without supplied photos have a deliberate compact text layout. */
+body.mfg34 .mfg34-step:not(.has-media){background:#f2f7f9;align-content:start}
+body.mfg34 .mfg34-step:not(.has-media) .mfg34-step-copy{padding-bottom:24px}
