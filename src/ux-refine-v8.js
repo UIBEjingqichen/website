@@ -1,13 +1,13 @@
 function initV8Reveal(){
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   const selectors=[
-    'body.v8-home main > section:not(.v6-hero)',
-    'body.v8-home .yw-stat-grid article',
-    'body.v8-home .yw-product-card',
-    'body.v8-home .yw-why-grid article',
-    'body.v8-home .v5-proof-card',
-    'body.v8-home .yw-news-card',
-    'body.v8-home .yw-landscape-grid figure',
+    'body.ty-home main > section:not(.v6-hero)',
+    'body.ty-home .yw-stat-grid article',
+    'body.ty-home .yw-product-card',
+    'body.ty-home .yw-why-grid article',
+    'body.ty-home .v5-proof-card',
+    'body.ty-home .yw-news-card',
+    'body.ty-home .yw-landscape-grid figure',
     'body.v8-top-page main > section:not(.v6-page-hero)',
     'body.v8-top-page .yw-product-card',
     'body.v8-top-page .project-card',

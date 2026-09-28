@@ -230,7 +230,7 @@ th { width: 34%; color: var(--blue); background: var(--ty-n-0); }
 .drawing-dialog header { display: flex; justify-content: space-between; gap: 20px; }
 .drawing-toolbar { display: flex; gap: 7px; margin-bottom: 10px; }
 .drawing-toolbar button { padding: 7px 11px; border: 1px solid var(--line); background: var(--ty-n-0); cursor: pointer; }
-.drawing-stage { display: grid; min-height: 0; place-items: center; overflow: hidden; background: var(--ty-navy-900); cursor: grab; touch-action: none; }
+.drawing-stage { display: grid; min-height: 0; aspect-ratio: 16/9; place-items: center; overflow: hidden; background: var(--ty-navy-900); cursor: grab; touch-action: none; }
 .drawing-stage img { max-width: 92%; max-height: 92%; transform-origin: center; transition: transform .1s ease; }
 .drawing-dialog > p { margin: 8px 0 0; font-size: var(--ty-fs-2); }
 .image-lightbox section { display: grid; width: min(1200px,95vw); height: 90vh; place-items: center; padding: 16px; background: var(--ty-navy-900); }

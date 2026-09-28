@@ -1,20 +1,20 @@
 
 
 /* Home news and engineering-guide cards must never inherit white display text. */
-.v8-home .yw-news,
-.v8-home .yw-news-card,
-.v8-home .yw-news-card a,
-.v8-home .yw-news-card h3,
-.v8-home .yw-news-card p,
-.v8-home .yw-news-card span,
-.v8-home .yw-news-card strong,
-.v8-home .yw-news-card small,
-.v8-home .yw-news-card *{color:var(--v9-text)!important}
-.v8-home .yw-news-card span,
-.v8-home .yw-news-card p{color:var(--v9-muted)!important}
-.v8-home .yw-news-card a{text-decoration:none!important}
-.v8-home .yw-news-card strong,
-.v8-home .yw-news-card .eyebrow{color:var(--v9-blue)!important}
+.ty-home .yw-news,
+.ty-home .yw-news-card,
+.ty-home .yw-news-card a,
+.ty-home .yw-news-card h3,
+.ty-home .yw-news-card p,
+.ty-home .yw-news-card span,
+.ty-home .yw-news-card strong,
+.ty-home .yw-news-card small,
+.ty-home .yw-news-card *{color:var(--v9-text)!important}
+.ty-home .yw-news-card span,
+.ty-home .yw-news-card p{color:var(--v9-muted)!important}
+.ty-home .yw-news-card a{text-decoration:none!important}
+.ty-home .yw-news-card strong,
+.ty-home .yw-news-card .eyebrow{color:var(--v9-blue)!important}
 
 /* Exact-model pages use dark typography throughout the lower content. */
 .v9-model-page .v5-model-apps,

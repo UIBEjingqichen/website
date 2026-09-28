@@ -17,7 +17,7 @@
 .ty-product-showcase [hidden],.ty-cert-actions [hidden]{display:none!important}
 .typs-carousel{position:relative;padding:0 46px}
 .typs-viewport{overflow-x:auto;overflow-y:hidden;scroll-snap-type:none;scroll-behavior:auto;scrollbar-width:none;cursor:grab;touch-action:pan-x pan-y}
-.typs-viewport::-webkit-scrollbar,body.phase1-home #why-us .v5-coverflow-stage::-webkit-scrollbar{display:none}
+.typs-viewport::-webkit-scrollbar,body.ty-home #why-us .v5-coverflow-stage::-webkit-scrollbar{display:none}
 .typs-rail{display:flex;width:max-content;gap:14px;padding:2px 0 12px}
 .typs-card{display:flex;flex:0 0 220px;flex-direction:column;width:220px;height:292px;overflow:hidden;border:1px solid var(--ty-n-200);border-radius:5px;background:var(--ty-n-0);color:var(--ty-navy-700);text-decoration:none;box-shadow:var(--ty-e-1);transition:border-color .2s ease,box-shadow .2s ease}
 .typs-card:hover{border-color:var(--ty-copper-300);box-shadow:var(--ty-e-1)}
@@ -27,10 +27,10 @@
 .typs-arrow{position:absolute;z-index:2;top:50%;width:34px;height:34px;margin-top:-23px;padding:0;border:1px solid var(--ty-navy-500);border-radius:4px;background:var(--ty-n-0);color:var(--ty-navy-700);font:inherit;font-size:var(--ty-fs-5);cursor:pointer;box-shadow:var(--ty-e-1)}
 .typs-arrow:hover{border-color:var(--ty-copper-700);color:var(--ty-copper-700)}
 .typs-arrow[data-typs-prev]{left:0}.typs-arrow[data-typs-next]{right:0}
-.typs-viewport.is-dragging,body.phase1-home #why-us .v5-coverflow-stage.is-dragging{cursor:grabbing}
+.typs-viewport.is-dragging,body.ty-home #why-us .v5-coverflow-stage.is-dragging{cursor:grabbing}
 .ty-product-showcase button:focus-visible,.ty-product-showcase a:focus-visible,.ty-cert-actions button:focus-visible{outline:3px solid var(--ty-copper-700);outline-offset:3px}
-body.phase1-home #why-us .v5-coverflow-stage{overflow-x:auto;scroll-snap-type:none;scroll-behavior:auto;scrollbar-width:none;cursor:grab;touch-action:pan-x pan-y}
-body.phase1-home #why-us .v5-coverflow-card{scroll-snap-align:none}
+body.ty-home #why-us .v5-coverflow-stage{overflow-x:auto;scroll-snap-type:none;scroll-behavior:auto;scrollbar-width:none;cursor:grab;touch-action:pan-x pan-y}
+body.ty-home #why-us .v5-coverflow-card{scroll-snap-align:none}
 @media(max-width:560px){
   .typs-family-grid{grid-template-columns:1fr;gap:9px;margin-bottom:22px}
   .typs-family{min-height:0;padding:15px 17px}

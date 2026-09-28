@@ -144,6 +144,9 @@ for (const page of walk(dist).filter((file) => file.endsWith('.html'))) {
     stats.deferred++;
     return tag.replace(/>$/, ' defer>');
   });
+  // Pipeline generation still carries historical QA flags. They are never
+  // consumed by runtime JavaScript or CSS, so keep them out of published HTML.
+  html = html.replace(/\sdata-v[45]\d[\w-]*(?:="[^"]*")?/gi, '');
   let h1 = 0;
   html = html.replace(/<\/?h1\b[^>]*>/gi, (tag) => {
     if (!tag.startsWith('</')) h1++;

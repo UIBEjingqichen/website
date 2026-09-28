@@ -60,7 +60,7 @@ function updateHome() {
   const file = path.join(dist, "index.html");
   if (!fs.existsSync(file)) return;
   let html = fs.readFileSync(file, "utf8");
-  html = addBodyClass(html, "v8-home");
+  html = addBodyClass(html, "ty-home");
   html = injectAssets(html);
   fs.writeFileSync(file, html);
 }

@@ -29,7 +29,7 @@ function applyDensity(file, rel) {
   html = html.replace('</head>', `  <link rel="stylesheet" href="${href}">\n</head>`);
 
   html = html.replace(/<body(?: class="([^"]*)")?>/, (_, cls='') => {
-    const classes = [...new Set((cls + ' site36-density').trim().split(/\s+/).filter(Boolean))];
+    const classes = [...new Set((cls + ' ty-density').trim().split(/\s+/).filter(Boolean))];
     return `<body class="${classes.join(' ')}">`;
   });
 
@@ -54,7 +54,7 @@ if (fs.existsSync(rootIndex)) {
   const href = html.includes('<base href="dist/">') ? 'assets/css/site-density-v36.css' : 'dist/assets/css/site-density-v36.css';
   html = html.replace('</head>', `  <link rel="stylesheet" href="${href}">\n</head>`);
   html = html.replace(/<body(?: class="([^"]*)")?>/, (_, cls='') => {
-    const classes = [...new Set((cls + ' site36-density').trim().split(/\s+/).filter(Boolean))];
+    const classes = [...new Set((cls + ' ty-density').trim().split(/\s+/).filter(Boolean))];
     return `<body class="${classes.join(' ')}">`;
   });
   fs.writeFileSync(rootIndex, html, 'utf8');

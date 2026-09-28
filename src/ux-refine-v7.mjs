@@ -38,7 +38,7 @@ function updateHome() {
   if (!fs.existsSync(file)) return;
   let html = fs.readFileSync(file, "utf8");
   html = stripHeroActions(html);
-  if (html.includes("<body>")) html = html.replace("<body>", '<body class="v7-home">');
+  if (html.includes("<body>")) html = html.replace("<body>", '<body class="ty-home">');
   html = html.replace(/<div class="yw-landscape-grid">[\s\S]*?<\/div>(?=<\/section>)/, homeLandscape());
   html = injectCss(html);
   fs.writeFileSync(file, html);

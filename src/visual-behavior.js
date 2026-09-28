@@ -21,7 +21,7 @@
 
   function setupCountUp() {
     const counters = [...document.querySelectorAll([
-      '.phase1-home .yw-stat-grid strong',
+      '.ty-home .yw-stat-grid strong',
       '.phase1-manufacturing .mfg34-hero-stat strong',
       '.phase1-manufacturing .mfg34-metric strong'
     ].join(','))].map((element) => ({ element, data: parseCounter(element) })).filter((item) => item.data);
@@ -84,11 +84,11 @@
     if (reduced.matches || !('IntersectionObserver' in window)) return;
 
     const groups = [
-      ['.phase1-home .yw-company-copy, .phase1-home .yw-stat-grid article', 70],
-      ['.phase1-home .v3p-products-home .v3p-title, .phase1-home .v3p-family-card', 65],
-      ['.phase1-home .ty15-head, .phase1-home .ty15-band', 75],
-      ['.phase1-home .ty16-head, .phase1-home .ty16-filters, .phase1-home .ty16-map-stage, .phase1-home .ty16-card', 70],
-      ['.phase1-home .v5-certificate-coverflow, .phase1-home .ty18-news-card, .phase1-home .vs-home-evidence-head, .phase1-home .vs-home-evidence-grid figure, .phase1-home .vs-home-cta .v3p-shell', 70],
+      ['.ty-home .yw-company-copy, .ty-home .yw-stat-grid article', 70],
+      ['.ty-home .v3p-products-home .v3p-title, .ty-home .v3p-family-card', 65],
+      ['.ty-home .ty15-head, .ty-home .ty15-band', 75],
+      ['.ty-home .ty16-head, .ty-home .ty16-filters, .ty-home .ty16-map-stage, .ty-home .ty16-card', 70],
+      ['.ty-home .v5-certificate-coverflow, .ty-home .ty18-news-card, .ty-home .vs-home-evidence-head, .ty-home .vs-home-evidence-grid figure, .ty-home .vs-home-cta .v3p-shell', 70],
       ['.phase1-products .v23-family-heading, .phase1-products .v23-family-grid > a, .phase1-products .v12-directory-head, .phase1-products .v3p-platform-card', 55],
       ['.phase1-detail .v3p-spec, .phase1-detail .v3p-table-wrap, .phase1-detail .v3p-two-col > div, .phase1-detail .v3p-photo, .phase1-detail .vs-doc-card, .phase1-detail .vs-related-card, .phase1-detail .v3p-cta > *', 65],
       ['.phase1-manufacturing .mfg34-head, .phase1-manufacturing .mfg34-metric, .phase1-manufacturing .mfg34-step, .phase1-manufacturing .mfg34-system, .phase1-manufacturing .mfg34-digital-visual, .phase1-manufacturing .mfg34-test-item, .phase1-manufacturing .mfg34-test-photo, .phase1-manufacturing .mfg34-gallery figure, .phase1-manufacturing .mfg34-faq details, .phase1-manufacturing .mfg34-cta-inner > *', 55]

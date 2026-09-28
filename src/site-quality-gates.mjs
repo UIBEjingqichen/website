@@ -86,6 +86,6 @@ atMost('Distinct font sizes', new Set((cssText.match(/font-size\s*:[^;}]*/gi) ||
 atMost('Distinct shadows', new Set((cssText.match(/box-shadow\s*:[^;}]*/gi) || []).map((value) => value.toLowerCase())).size, 6);
 atMost('CSS files declaring :root', css.filter((file) => /:root\b/.test(fs.readFileSync(file, 'utf8'))).length, 1);
 const images = files.filter((file) => /\.(?:png|jpe?g|webp|gif)$/i.test(file));
-atMost('Heaviest shipped image KB', Math.ceil(Math.max(...images.map((file) => fs.statSync(file).size)) / 1024), 600);
+atMost('Heaviest shipped image KB', Math.ceil(Math.max(...images.map((file) => fs.statSync(file).size)) / 1024), 400);
 console.log(`Checked ${pages.length} pages, ${css.length} CSS files and ${images.length} images.`);
 if (failures.length) process.exitCode = 1;

@@ -35,9 +35,6 @@ for (const text of ["Power Transformers", "Distribution Transformers", "Prefabri
 for (const retired of ['id="oil-immersed-transformers"', 'id="dry-type-transformers"', ">Oil-Immersed Transformers<", ">Dry-Type Transformers<"]) {
   if (directory.includes(retired)) throw new Error(`Products directory still exposes retired top-level family: ${retired}`);
 }
-for (const marker of ['data-v44-media-sync="true"', 'data-v45-product-media="true"', 'data-v46-three-family="true"']) {
-  if (!directory.includes(marker)) throw new Error(`Products directory is missing architecture marker: ${marker}`);
-}
 if ((directory.match(/data-product-slide=/g) || []).length !== 3) throw new Error("Products landing hero must contain exactly three family slides.");
 for (const familyId of ["power-transformers", "distribution-transformers", "prefabricated-substations"]) {
   if (!directory.includes(`id="${familyId}"`)) throw new Error(`Products directory missing family section: ${familyId}`);
@@ -67,10 +64,6 @@ const distributionFamily = read(distributionFamilyRel);
 for (const text of [
   "Oil-Immersed Distribution Transformer",
   "Dry-Type Distribution Transformer",
-  'data-v52-oil-family="true"',
-  "data-v52-oil-family-media",
-  "data-v55-oil-media-integrity",
-  'data-v55-image-fit="true"',
   "Representative Parameters",
   "35 kV-class / renewable collection range",
   "30 kVA–12.5 MVA",
@@ -172,19 +165,17 @@ for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
     for (const marker of ['id="ratings"', 'id="applications"', 'id="documents"', 'id="contact-rfq"', "visual-behavior.js"]) {
       if (!html.includes(marker)) throw new Error(`${rel} missing catalog detail marker: ${marker}`);
     }
-    if (html.includes("21M2078-S") || html.includes('data-v41-reference-parameters')) throw new Error(`${rel} incorrectly inherits 110 kV tested-model evidence.`);
+    if (html.includes("21M2078-S")) throw new Error(`${rel} incorrectly inherits 110 kV tested-model evidence.`);
     continue;
   }
   const styles = [...html.matchAll(/<link\b[^>]*rel=["']stylesheet["'][^>]*href=["']([^"']+)["'][^>]*>/gi)].map((m) => m[1]);
   for (const href of ["../../assets/css/visual-system.css", "../../assets/css/product-detail.css"]) {
     if (!styles.includes(href)) throw new Error(`${rel} missing unified stylesheet: ${href}`);
   }
-  for (const marker of ["phase1-detail", "vs-detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "data-product-hero", "data-product-slide", "data-v41-reference-parameters", "data-v54-complete-image-fit", "visual-behavior.js"]) {
+  for (const marker of ["phase1-detail", "vs-detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "data-product-hero", "data-product-slide", "visual-behavior.js"]) {
     if (!html.includes(marker)) throw new Error(`${rel} missing detail-layout marker: ${marker}`);
   }
-  if (!html.includes("data-v43-classified-media") && !html.includes("data-v52-oil-family-media")) {
-    throw new Error(`${rel} missing classified product-media marker.`);
-  }
+  if (!/<img\b[^>]*src="[^"]*assets\/media\//i.test(html)) throw new Error(`${rel} is missing product media.`);
   for (const forbidden of ["floating-solar-combined-transformer-site", "american-combined-transformer-03", "小型油浸式配变 (1)"]) {
     if (html.includes(forbidden)) throw new Error(`${rel} references forbidden product media: ${forbidden}`);
   }
