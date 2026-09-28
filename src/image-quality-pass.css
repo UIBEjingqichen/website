@@ -1,15 +1,15 @@
 /* Catalog-first image quality pass. Preserve evidence/document previews; normalize marketing photography. */
 
 /* Product-family cards should show the machine clearly instead of cropping away radiators, bushings or enclosure edges. */
-.v3p-products-home .v3p-family-card-media,
-.v3p-family-grid .v3p-family-card-media{
+.ty-product__products-home .ty-product__family-card-media,
+.ty-product__family-grid .ty-product__family-card-media{
   height:auto!important;
   aspect-ratio:4/3;
   overflow:hidden;
   background:linear-gradient(180deg,var(--ty-n-50),var(--ty-n-100));
 }
-.v3p-products-home .v3p-family-card-media img,
-.v3p-family-grid .v3p-family-card-media img{
+.ty-product__products-home .ty-product__family-card-media img,
+.ty-product__family-grid .ty-product__family-card-media img{
   width:100%;
   height:100%;
   padding:16px!important;
@@ -19,11 +19,11 @@
 }
 
 /* Product index hero is also a product view, not a lifestyle crop. */
-.v3p-index-hero .media{
+.ty-product__index-hero .media{
   background:linear-gradient(180deg,var(--ty-n-50),var(--ty-n-100));
   overflow:hidden;
 }
-.v3p-index-hero .media img{
+.ty-product__index-hero .media img{
   width:100%;
   height:100%;
   padding:18px!important;
@@ -32,15 +32,15 @@
 }
 
 /* Product range cards stay aligned even when source images have different native ratios. */
-.v3p-platform-grid .v3p-platform-card{
+.ty-product__platform-grid .ty-product__platform-card{
   grid-template-rows:auto 1fr;
 }
-.v3p-platform-grid .v3p-platform-card .media{
+.ty-product__platform-grid .ty-product__platform-card .media{
   aspect-ratio:4/3;
   overflow:hidden;
   background:var(--ty-n-50);
 }
-.v3p-platform-grid .v3p-platform-card .media img{
+.ty-product__platform-grid .ty-product__platform-card .media img{
   width:100%;
   height:100%;
   max-width:none;
@@ -51,19 +51,19 @@
 }
 
 /* Detailed product pages should show the complete machine/drawing, not amputate technical details. */
-.v3p-hero-media,
-.v3p-family-hero-media,
-.v3p-photo:not(.cover){
+.ty-product__hero-media,
+.ty-product__family-hero-media,
+.ty-product__photo:not(.cover){
   background:linear-gradient(180deg,var(--ty-n-50),var(--ty-n-100));
 }
-.v3p-hero-media img,
-.v3p-family-hero-media img,
-.v3p-photo:not(.cover) img{
+.ty-product__hero-media img,
+.ty-product__family-hero-media img,
+.ty-product__photo:not(.cover) img{
   object-fit:contain!important;
   object-position:center;
 }
-.v3p-hero-media img,
-.v3p-family-hero-media img{
+.ty-product__hero-media img,
+.ty-product__family-hero-media img{
   padding:18px!important;
 }
 
@@ -135,6 +135,6 @@
   .iq-landscape{padding-left:14px;padding-right:14px;}
   .iq-landscape-grid{grid-template-columns:1fr;gap:10px;}
   .iq-landscape-card{aspect-ratio:16/10;}
-  .v3p-products-home .v3p-family-card-media,
-  .v3p-family-grid .v3p-family-card-media{aspect-ratio:16/10;}
+  .ty-product__products-home .ty-product__family-card-media,
+  .ty-product__family-grid .ty-product__family-card-media{aspect-ratio:16/10;}
 }

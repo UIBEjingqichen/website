@@ -19,18 +19,18 @@ function walk(directory) {
 }
 
 function productCard({ href, image, family, title, range, note }) {
-  return `<a class="v3p-platform-card" href="${href}"><div class="media"><img src="${image}" alt="${esc(title)}" loading="lazy"></div><div class="copy"><p class="v3p-kicker">${esc(family)}</p><h3>${esc(title)}</h3>${range ? `<span class="range">${esc(range)}</span>` : ""}${note ? `<small>${esc(note)}</small>` : ""}</div></a>`;
+  return `<a class="ty-product__platform-card" href="${href}"><div class="media"><img src="${image}" alt="${esc(title)}" loading="lazy"></div><div class="copy"><p class="ty-product__kicker">${esc(family)}</p><h3>${esc(title)}</h3>${range ? `<span class="range">${esc(range)}</span>` : ""}${note ? `<small>${esc(note)}</small>` : ""}</div></a>`;
 }
 
 const familyCards = `
-<section class="v3p-section"><div class="v3p-shell">
-  <p class="v3p-kicker">Browse by Product Family</p>
-  <h2 class="v3p-title">Four routes into Tianyu's transformer portfolio</h2>
-  <div class="v3p-family-grid">
-    <a class="v3p-family-card" href="#power-transformers"><div class="v3p-family-card-media"><img src="assets/media/products/power-transformers/oil-immersed-power-transformer-installed.png" alt="Power Transformers" loading="lazy"></div><div class="v3p-family-card-copy"><p class="v3p-kicker">Product Family</p><h3>Power Transformers</h3><p>35 kV, 66 kV, 110 / 132 kV and 220 kV main-transformer platforms, plus large dry-type power transformers.</p><strong>VIEW PRODUCTS →</strong></div></a>
-    <a class="v3p-family-card" href="#distribution-transformers"><div class="v3p-family-card-media"><img src="assets/media/products/distribution-transformers/oil-immersed-distribution-transformer-conservator-01.webp" alt="Distribution Transformers" loading="lazy"></div><div class="v3p-family-card-copy"><p class="v3p-kicker">Product Family</p><h3>Distribution Transformers</h3><p>Oil-immersed and dry-type distribution transformers presented by voltage and capacity rather than domestic model codes.</p><strong>VIEW PRODUCTS →</strong></div></a>
-    <a class="v3p-family-card" href="#special-transformers"><div class="v3p-family-card-media"><img src="assets/media/applications/renewable-wind-solar-landscape.jpeg" alt="Special and Renewable Transformers" loading="lazy"></div><div class="v3p-family-card-copy"><p class="v3p-kicker">Product Family</p><h3>Special &amp; Renewable Transformers</h3><p>Renewable step-up, offshore wind, rectifier, phase-shifting and split-winding transformer solutions.</p><strong>VIEW PRODUCTS →</strong></div></a>
-    <a class="v3p-family-card" href="#prefabricated-substations"><div class="v3p-family-card-media"><img src="assets/media/products/prefabricated-substations/dry-type-prefabricated-substation-exterior-01.webp" alt="Prefabricated Substations" loading="lazy"></div><div class="v3p-family-card-copy"><p class="v3p-kicker">Product Family</p><h3>Prefabricated Substations</h3><p>Compact, European-type, renewable, mobile, PV and energy-storage integrated substation platforms.</p><strong>VIEW PRODUCTS →</strong></div></a>
+<section class="ty-product__section"><div class="ty-product__shell">
+  <p class="ty-product__kicker">Browse by Product Family</p>
+  <h2 class="ty-product__title">Four routes into Tianyu's transformer portfolio</h2>
+  <div class="ty-product__family-grid">
+    <a class="ty-product__family-card" href="#power-transformers"><div class="ty-product__family-card-media"><img src="assets/media/products/power-transformers/oil-immersed-power-transformer-installed.png" alt="Power Transformers" loading="lazy"></div><div class="ty-product__family-card-copy"><p class="ty-product__kicker">Product Family</p><h3>Power Transformers</h3><p>35 kV, 66 kV, 110 / 132 kV and 220 kV main-transformer platforms, plus large dry-type power transformers.</p><strong>VIEW PRODUCTS →</strong></div></a>
+    <a class="ty-product__family-card" href="#distribution-transformers"><div class="ty-product__family-card-media"><img src="assets/media/products/distribution-transformers/oil-immersed-distribution-transformer-conservator-01.webp" alt="Distribution Transformers" loading="lazy"></div><div class="ty-product__family-card-copy"><p class="ty-product__kicker">Product Family</p><h3>Distribution Transformers</h3><p>Oil-immersed and dry-type distribution transformers presented by voltage and capacity rather than domestic model codes.</p><strong>VIEW PRODUCTS →</strong></div></a>
+    <a class="ty-product__family-card" href="#special-transformers"><div class="ty-product__family-card-media"><img src="assets/media/applications/renewable-wind-solar-landscape.jpeg" alt="Special and Renewable Transformers" loading="lazy"></div><div class="ty-product__family-card-copy"><p class="ty-product__kicker">Product Family</p><h3>Special &amp; Renewable Transformers</h3><p>Renewable step-up, offshore wind, rectifier, phase-shifting and split-winding transformer solutions.</p><strong>VIEW PRODUCTS →</strong></div></a>
+    <a class="ty-product__family-card" href="#prefabricated-substations"><div class="ty-product__family-card-media"><img src="assets/media/products/prefabricated-substations/dry-type-prefabricated-substation-exterior-01.webp" alt="Prefabricated Substations" loading="lazy"></div><div class="ty-product__family-card-copy"><p class="ty-product__kicker">Product Family</p><h3>Prefabricated Substations</h3><p>Compact, European-type, renewable, mobile, PV and energy-storage integrated substation platforms.</p><strong>VIEW PRODUCTS →</strong></div></a>
   </div>
 </div></section>`;
 
@@ -66,20 +66,20 @@ const prefabCards = [
 ].map((item) => productCard({ family: "Prefabricated Substations", ...item })).join("");
 
 const directory = `
-<section class="v3p-section v3p-soft" id="all-platforms"><div class="v3p-shell">
-  <p class="v3p-kicker">Product Directory</p>
-  <h2 class="v3p-title">Transformers and prefabricated substations</h2>
+<section class="ty-product__section ty-product__soft" id="all-platforms"><div class="ty-product__shell">
+  <p class="ty-product__kicker">Product Directory</p>
+  <h2 class="ty-product__title">Transformers and prefabricated substations</h2>
 
-  <div class="v12-directory-group" id="power-transformers"><div class="v12-directory-head"><div><p class="v3p-kicker">01</p><h3>Power Transformers</h3></div><p>Oil-immersed main transformers grouped by voltage class, with large dry-type power transformers shown alongside them.</p></div><div class="v3p-platform-grid">${powerCards}</div></div>
+  <div class="v12-directory-group" id="power-transformers"><div class="v12-directory-head"><div><p class="ty-product__kicker">01</p><h3>Power Transformers</h3></div><p>Oil-immersed main transformers grouped by voltage class, with large dry-type power transformers shown alongside them.</p></div><div class="ty-product__platform-grid">${powerCards}</div></div>
 
-  <div class="v12-directory-group" id="distribution-transformers"><div class="v12-directory-head"><div><p class="v3p-kicker">02</p><h3>Distribution Transformers</h3></div><p>Start with insulation type, then select voltage and capacity. Domestic series codes remain inside technical detail pages rather than in the product navigation.</p></div><div class="v3p-platform-grid v12-two-card-grid">${distributionCards}</div></div>
+  <div class="v12-directory-group" id="distribution-transformers"><div class="v12-directory-head"><div><p class="ty-product__kicker">02</p><h3>Distribution Transformers</h3></div><p>Start with insulation type, then select voltage and capacity. Domestic series codes remain inside technical detail pages rather than in the product navigation.</p></div><div class="ty-product__platform-grid v12-two-card-grid">${distributionCards}</div></div>
 
-  <div class="v12-directory-group" id="special-transformers"><div class="v12-directory-head"><div><p class="v3p-kicker">03</p><h3>Special &amp; Renewable Transformers</h3></div><p>Application-specific transformer platforms for renewable energy, offshore wind, rectifier duty and split-winding systems.</p></div><div class="v3p-platform-grid">${specialCards}</div></div>
+  <div class="v12-directory-group" id="special-transformers"><div class="v12-directory-head"><div><p class="ty-product__kicker">03</p><h3>Special &amp; Renewable Transformers</h3></div><p>Application-specific transformer platforms for renewable energy, offshore wind, rectifier duty and split-winding systems.</p></div><div class="ty-product__platform-grid">${specialCards}</div></div>
 
-  <div class="v12-directory-group" id="prefabricated-substations"><div class="v12-directory-head"><div><p class="v3p-kicker">04</p><h3>Prefabricated Substations</h3></div><p>Factory-integrated transformer and substation systems, including compact, renewable, mobile, PV and energy-storage configurations.</p></div><div class="v3p-platform-grid">${prefabCards}</div></div>
+  <div class="v12-directory-group" id="prefabricated-substations"><div class="v12-directory-head"><div><p class="ty-product__kicker">04</p><h3>Prefabricated Substations</h3></div><p>Factory-integrated transformer and substation systems, including compact, renewable, mobile, PV and energy-storage configurations.</p></div><div class="ty-product__platform-grid">${prefabCards}</div></div>
 </div></section>`;
 
-const hero = `<section class="v3p-index-hero"><div class="copy"><p class="v3p-kicker">Product Portfolio</p><h1>Transformers and prefabricated substations for power, distribution and renewable projects.</h1><p class="v3p-lead">Browse by transformer role first, then by voltage, capacity or application. Product navigation uses engineering terms that international buyers can read without decoding domestic model numbers.</p><div class="v3p-range-strip"><a href="#power-transformers">Power Transformers</a><a href="#distribution-transformers">Distribution Transformers</a><a href="#special-transformers">Special &amp; Renewable</a><a href="#prefabricated-substations">Prefabricated Substations</a></div></div><div class="media"><img src="assets/media/products/power-transformers/oil-immersed-power-transformer-installed.png" alt="Tianyu power transformer"></div></section>`;
+const hero = `<section class="ty-product__index-hero"><div class="copy"><p class="ty-product__kicker">Product Portfolio</p><h1>Transformers and prefabricated substations for power, distribution and renewable projects.</h1><p class="ty-product__lead">Browse by transformer role first, then by voltage, capacity or application. Product navigation uses engineering terms that international buyers can read without decoding domestic model numbers.</p><div class="ty-product__range-strip"><a href="#power-transformers">Power Transformers</a><a href="#distribution-transformers">Distribution Transformers</a><a href="#special-transformers">Special &amp; Renewable</a><a href="#prefabricated-substations">Prefabricated Substations</a></div></div><div class="media"><img src="assets/media/products/power-transformers/oil-immersed-power-transformer-installed.png" alt="Tianyu power transformer"></div></section>`;
 
 function rewriteNavigation(html) {
   return html.replace(/<div class="nav-item nav-dropdown"><a class="([^"]*)" href="([^"]*products\.html)">Products<\/a><div class="dropdown-menu">[\s\S]*?<\/div><\/div>/g, (match, activeClass, productsHref) => {
@@ -110,9 +110,9 @@ const productsFile = path.join(dist, "products.html");
 if (fs.existsSync(productsFile)) {
   let html = fs.readFileSync(productsFile, "utf8");
   const replacement = `${hero}${familyCards}${directory}`;
-  const pattern = /<section class="v3p-index-hero">[\s\S]*?<section class="v3p-cta">/;
+  const pattern = /<section class="ty-product__index-hero">[\s\S]*?<section class="ty-product__cta">/;
   if (!pattern.test(html)) throw new Error("Could not locate product-directory section in dist/products.html");
-  html = html.replace(pattern, `${replacement}<section class="v3p-cta">`);
+  html = html.replace(pattern, `${replacement}<section class="ty-product__cta">`);
   if (!html.includes("product-directory-v12.css")) {
     html = html.replace("</head>", `  <link rel="stylesheet" href="assets/css/product-directory-v12.css">\n</head>`);
   }

@@ -15,8 +15,8 @@ const walk = (dir) => fs.existsSync(dir)
   : [];
 
 const replacements = [
-  ['<p class="v3p-lead">The technical range below follows Tianyu\'s current product catalog. Product selection starts from voltage class, capacity ladder and application. Certificates and test reports are available separately in Resources.</p>', ''],
-  ['<p class="v3p-mini-note">Catalog performance values are reference data. Final guaranteed values, interfaces and overall dimensions are confirmed in the approved technical specification and drawings for the order.</p>', ''],
+  ['<p class="ty-product__lead">The technical range below follows Tianyu\'s current product catalog. Product selection starts from voltage class, capacity ladder and application. Certificates and test reports are available separately in Resources.</p>', ''],
+  ['<p class="ty-product__mini-note">Catalog performance values are reference data. Final guaranteed values, interfaces and overall dimensions are confirmed in the approved technical specification and drawings for the order.</p>', ''],
   ['<span>Catalog product range</span>', ''],
   ['<li>Final dimensions confirmed by approved project drawings</li>', ''],
   ['Published rating ladder', 'Rating Range'],
@@ -43,7 +43,7 @@ function cleanHtml(input) {
   for (const [from, to] of replacements) html = html.split(from).join(to);
 
   // Class-specific source block only. This element contains no nested divs in generated product pages.
-  html = html.replace(/<div class="v3p-source">[\s\S]*?<\/div>/g, '');
+  html = html.replace(/<div class="ty-product__source">[\s\S]*?<\/div>/g, '');
 
   // Remove the exact project-detail note wrapper after its sentence is cleared.
   html = html.replace(/<div class="ty-proof__note">\s*<\/div>/g, '');

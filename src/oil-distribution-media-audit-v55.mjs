@@ -73,10 +73,10 @@ const slides = media.map((item, index) => {
   return `<figure class="ty-system__product-carousel-slide${index === 0 ? " is-active" : ""}" data-product-slide aria-hidden="${index === 0 ? "false" : "true"}"><img src="${esc(src)}" alt="${esc(item.alt)}" style="${imageStyle}" ${index === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'}></figure>`;
 }).join("");
 const dots = media.map((_, index) => `<button class="ty-system__product-carousel-dot${index === 0 ? " is-active" : ""}" type="button" data-product-dot aria-label="Show image ${index + 1}" aria-current="${index === 0 ? "true" : "false"}"></button>`).join("");
-const carousel = `<div class="v3p-hero-media ty-system__product-carousel" data-product-hero data-ty-oil-family-media data-v55-oil-media-integrity data-single-slide="false" aria-label="Oil-immersed distribution transformer image carousel"><div class="ty-system__product-carousel-stage">${slides}</div><div class="ty-system__product-carousel-controls"><div class="ty-system__product-carousel-dots" aria-label="Choose product image">${dots}</div><span class="ty-system__product-carousel-count" data-product-count>01 / 07</span></div></div>`;
+const carousel = `<div class="ty-product__hero-media ty-system__product-carousel" data-product-hero data-ty-oil-family-media data-v55-oil-media-integrity data-single-slide="false" aria-label="Oil-immersed distribution transformer image carousel"><div class="ty-system__product-carousel-stage">${slides}</div><div class="ty-system__product-carousel-controls"><div class="ty-system__product-carousel-dots" aria-label="Choose product image">${dots}</div><span class="ty-system__product-carousel-count" data-product-count>01 / 07</span></div></div>`;
 
 let html = read(pageFile);
-const start = html.indexOf('<div class="v3p-hero-media ty-system__product-carousel"');
+const start = html.indexOf('<div class="ty-product__hero-media ty-system__product-carousel"');
 const end = html.indexOf('</section><nav class="ty-system__detail-jump"', start);
 if (start < 0 || end < 0) throw new Error("v55: oil-distribution hero carousel boundary not found");
 html = html.slice(0, start) + carousel + html.slice(end);

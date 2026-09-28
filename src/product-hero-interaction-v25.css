@@ -1,8 +1,8 @@
 /* V25: larger product showcase visuals and clickable carousel indicators. */
-body.v19-products-page .v3p-index-hero.v23-product-hero .v23-product-visual{
+body.v19-products-page .ty-product__index-hero.v23-product-hero .v23-product-visual{
   padding:34px 26px 88px;
 }
-body.v19-products-page .v3p-index-hero.v23-product-hero .media .v23-product-visual img{
+body.v19-products-page .ty-product__index-hero.v23-product-hero .media .v23-product-visual img{
   width:min(98%,1000px)!important;
   height:min(84%,600px)!important;
   max-width:1000px!important;
@@ -57,13 +57,13 @@ body.v19-products-page .v23-stage-dots button:focus-visible{
   border-radius:2px;
 }
 @media(max-width:1050px){
-  body.v19-products-page .v3p-index-hero.v23-product-hero .v23-product-visual{padding:30px 18px 84px}
-  body.v19-products-page .v3p-index-hero.v23-product-hero .media .v23-product-visual img{
+  body.v19-products-page .ty-product__index-hero.v23-product-hero .v23-product-visual{padding:30px 18px 84px}
+  body.v19-products-page .ty-product__index-hero.v23-product-hero .media .v23-product-visual img{
     width:min(100%,900px)!important;
     height:min(84%,560px)!important;
   }
 }
 @media(max-width:820px){
-  body.v19-products-page .v3p-index-hero.v23-product-hero .v23-product-visual{padding:20px 18px 78px}
+  body.v19-products-page .ty-product__index-hero.v23-product-hero .v23-product-visual{padding:20px 18px 78px}
   body.v19-products-page .v23-stage-status{bottom:42px}
 }

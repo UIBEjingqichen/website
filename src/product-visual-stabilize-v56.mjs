@@ -16,7 +16,7 @@ const css = `
 html, body { overflow-x: hidden; }
 
 /* Detail hero: the content grid and body sections share the same 1240px alignment. */
-.phase1-detail .v3p-hero {
+.phase1-detail .ty-product__hero {
   width: min(1240px, calc(100% - 48px));
   grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
   gap: 32px;
@@ -62,18 +62,18 @@ html, body { overflow-x: hidden; }
 }
 
 /* Short product labels may scroll inside their own strip, never across the page. */
-.phase1-detail .v3p-family-nav {
+.phase1-detail .ty-product__family-nav {
   max-width: 100%;
 }
 @media (max-width: 820px) {
-  .phase1-detail .v3p-hero {
+  .phase1-detail .ty-product__hero {
     grid-template-columns: 1fr !important;
     min-height: 0;
   }
-  .phase1-detail .v3p-hero-media { order: 0; }
+  .phase1-detail .ty-product__hero-media { order: 0; }
   .phase1-detail .ty-system__product-carousel-stage { height: 340px !important; }
   .phase1-detail .ty-system__product-carousel-slide { padding: 16px !important; }
-  .phase1-detail .v3p-family-nav {
+  .phase1-detail .ty-product__family-nav {
     display: flex;
     flex-wrap: nowrap !important;
     overflow-x: auto !important;
@@ -82,17 +82,17 @@ html, body { overflow-x: hidden; }
     scrollbar-width: thin;
     padding-bottom: 4px;
   }
-  .phase1-detail .v3p-family-nav a { flex: 0 0 auto; }
+  .phase1-detail .ty-product__family-nav a { flex: 0 0 auto; }
 }
 @media (min-width: 821px) and (max-width: 1080px) {
-  .phase1-detail .v3p-hero {
+  .phase1-detail .ty-product__hero {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 24px;
   }
   .phase1-detail .ty-system__product-carousel-stage { height: 420px !important; }
 }
 @media (max-width: 560px) {
-  .phase1-detail .v3p-hero { width: calc(100% - 28px); gap: 16px; }
+  .phase1-detail .ty-product__hero { width: calc(100% - 28px); gap: 16px; }
   .phase1-detail .ty-system__product-carousel-stage { height: 280px !important; }
   .phase1-detail .ty-system__product-carousel-slide { padding: 12px !important; }
 }
@@ -125,14 +125,14 @@ html, body { overflow-x: hidden; }
 }
 
 /* Directory and family cards show the complete equipment at a stable scale. */
-.phase1-products .v3p-platform-card .media,
-.v3p-platform-card .media {
+.phase1-products .ty-product__platform-card .media,
+.ty-product__platform-card .media {
   overflow: hidden !important;
   background: #eef3f5 !important;
 }
-.phase1-products .v3p-platform-card .media img,
-.v3p-platform-card .media img,
-.v3p-platform-card > img {
+.phase1-products .ty-product__platform-card .media img,
+.ty-product__platform-card .media img,
+.ty-product__platform-card > img {
   display: block;
   width: 100% !important;
   height: 100% !important;
@@ -145,7 +145,7 @@ html, body { overflow-x: hidden; }
   transform: none !important;
   mix-blend-mode: normal !important;
 }
-.v3p-family-hero-media img {
+.ty-product__family-hero-media img {
   width: 100% !important;
   height: 100% !important;
   padding: 28px !important;
@@ -215,7 +215,7 @@ for (const file of htmlFiles) {
   let html = read(file);
   const before = html;
   for (const [from, to] of replacements) html = html.split(from).join(to);
-  html = html.replace(/(<nav\b[^>]*class=["'][^"']*v3p-family-nav[^"']*["'][^>]*>)([\s\S]*?)<\/nav>/gi, (whole, open, inner) => {
+  html = html.replace(/(<nav\b[^>]*class=["'][^"']*ty-product__family-nav[^"']*["'][^>]*>)([\s\S]*?)<\/nav>/gi, (whole, open, inner) => {
     const labels = [
       ["35 kV Oil-Immersed Power", "35 kV"],
       ["66 kV Oil-Immersed Power", "66 kV"],

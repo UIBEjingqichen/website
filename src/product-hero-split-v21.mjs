@@ -28,11 +28,11 @@ if (!productsHtml.includes("product-hero-split-v21.css")) {
 }
 productsHtml = productsHtml.replace("</head>", '  <link rel="stylesheet" href="assets/css/product-portfolio-carousel.css">\n</head>');
 
-const hero = `<section class="v3p-index-hero v23-product-hero" data-product-hero>
+const hero = `<section class="ty-product__index-hero v23-product-hero" data-product-hero>
   <div class="copy">
-    <p class="v3p-kicker">Product Portfolio</p>
+    <p class="ty-product__kicker">Product Portfolio</p>
     <h1>Transformer &amp; Substation Products</h1>
-    <p class="v3p-lead">Power, distribution and special-purpose transformers, plus prefabricated substations for utility, renewable-energy and industrial projects.</p>
+    <p class="ty-product__lead">Power, distribution and special-purpose transformers, plus prefabricated substations for utility, renewable-energy and industrial projects.</p>
     <div class="v23-hero-facts" aria-label="Product range summary">
       <span><small>Power</small><strong>35–220 kV</strong></span>
       <span><small>Distribution</small><strong>6–35 kV</strong></span>
@@ -72,8 +72,8 @@ const hero = `<section class="v3p-index-hero v23-product-hero" data-product-hero
   </div>
 </section>`;
 
-const familyNavigation = `<section class="v23-family-section" id="product-families"><div class="v3p-shell">
-  <div class="v23-family-heading"><div><p class="v3p-kicker">Product Families</p><h2>Choose by transformer role</h2></div><p>Start with the equipment role, then move into voltage class, capacity and project-specific configuration.</p></div>
+const familyNavigation = `<section class="v23-family-section" id="product-families"><div class="ty-product__shell">
+  <div class="v23-family-heading"><div><p class="ty-product__kicker">Product Families</p><h2>Choose by transformer role</h2></div><p>Start with the equipment role, then move into voltage class, capacity and project-specific configuration.</p></div>
   <nav class="v23-family-grid" aria-label="Product family navigation">
     <a href="#power-transformers"><span>01</span><strong>Power Transformers</strong><small>35–220 kV main transformer platforms</small><b>View range →</b></a>
     <a href="#distribution-transformers"><span>02</span><strong>Distribution Transformers</strong><small>Oil-immersed and dry-type distribution platforms</small><b>View range →</b></a>
@@ -82,9 +82,9 @@ const familyNavigation = `<section class="v23-family-section" id="product-famili
   </nav>
 </div></section>`;
 
-productsHtml = productsHtml.replace(/<section class="v3p-index-hero[^"]*"[^>]*>[\s\S]*?<\/section>/, hero);
+productsHtml = productsHtml.replace(/<section class="ty-product__index-hero[^"]*"[^>]*>[\s\S]*?<\/section>/, hero);
 productsHtml = productsHtml.replace(/<nav class="v20-product-jump"[\s\S]*?<\/nav>\s*/g, "");
-productsHtml = productsHtml.replace(/<section class="v3p-section"><div class="v3p-shell">\s*<p class="v3p-kicker">Browse by Product Family<\/p>[\s\S]*?<\/section>\s*(?=<section class="v3p-section v3p-soft" id="all-platforms">)/, `${familyNavigation}\n`);
+productsHtml = productsHtml.replace(/<section class="ty-product__section"><div class="ty-product__shell">\s*<p class="ty-product__kicker">Browse by Product Family<\/p>[\s\S]*?<\/section>\s*(?=<section class="ty-product__section ty-product__soft" id="all-platforms">)/, `${familyNavigation}\n`);
 productsHtml = productsHtml.replace(/<script data-product-carousel>[\s\S]*?<\/script>\s*/g, "");
 
 const heroScript = `<script data-product-carousel>

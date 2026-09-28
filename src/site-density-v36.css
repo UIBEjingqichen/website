@@ -11,7 +11,7 @@ body.ty-density{
 }
 
 /* Shared typography */
-body.ty-density .v3p-shell,
+body.ty-density .ty-product__shell,
 body.ty-density .ap26-shell,
 body.ty-density .ab30-shell,
 body.ty-density .ty-evidence__shell,
@@ -19,7 +19,7 @@ body.ty-density .ty-proof__shell,
 body.ty-density .ty18-shell{
   width:min(var(--s36-shell),calc(100% - 48px));
 }
-body.ty-density .v3p-kicker,
+body.ty-density .ty-product__kicker,
 body.ty-density .ap26-kicker,
 body.ty-density .ab30-kicker,
 body.ty-density .ty-evidence__kicker,
@@ -29,7 +29,7 @@ body.ty-density .eyebrow{
   font-weight:750;
   letter-spacing:.11em;
 }
-body.ty-density .v3p-title,
+body.ty-density .ty-product__title,
 body.ty-density .ty-evidence__title,
 body.ty-density .ty-proof__title,
 body.ty-density .section-head h2,
@@ -39,7 +39,7 @@ body.ty-density .ty-home__index-title h2{
   line-height:1.15;
   letter-spacing:-.018em;
 }
-body.ty-density .v3p-section,
+body.ty-density .ty-product__section,
 body.ty-density .section{
   padding-top:var(--s36-section);
   padding-bottom:var(--s36-section);
@@ -79,9 +79,9 @@ body.ty-density .ty-home__company-copy h2{font-size:var(--ty-fs-7);font-weight:6
 body.ty-density .ty-home__company-copy>p:not(.ty-home__kicker){font-size:var(--ty-fs-3);line-height:1.65}
 body.ty-density .ty-home__stat-grid article{min-height:112px;padding:18px 16px}
 body.ty-density .ty-home__stat-grid strong{font-size:var(--ty-fs-6);font-weight:600}
-body.ty-density .v3p-family-card-copy{padding:18px}
-body.ty-density .v3p-family-card-copy h3{font-size:var(--ty-fs-5);font-weight:620;line-height:1.25}
-body.ty-density .v3p-family-card-copy p{font-size:var(--ty-fs-1);line-height:1.5}
+body.ty-density .ty-product__family-card-copy{padding:18px}
+body.ty-density .ty-product__family-card-copy h3{font-size:var(--ty-fs-5);font-weight:620;line-height:1.25}
+body.ty-density .ty-product__family-card-copy p{font-size:var(--ty-fs-1);line-height:1.5}
 body.ty-density .ty-capabilities-v15,
 body.ty-density .ty-proof__projects{padding-top:58px;padding-bottom:58px}
 body.ty-density .ty-evidence__head{margin-bottom:26px}
@@ -93,7 +93,7 @@ body.ty-density .ty-evidence__lead{font-size:var(--ty-fs-3);line-height:1.6}
 /* Products directory */
 body.ty-density.v19-products-page .v23-product-hero{min-height:520px}
 body.ty-density.v19-products-page .v23-product-hero h1{max-width:610px;font-size:var(--ty-fs-8);font-weight:620;line-height:1.04;letter-spacing:-.03em}
-body.ty-density.v19-products-page .v3p-lead{max-width:560px;font-size:var(--ty-fs-3);line-height:1.6}
+body.ty-density.v19-products-page .ty-product__lead{max-width:560px;font-size:var(--ty-fs-3);line-height:1.6}
 body.ty-density .v23-family-section{padding-top:58px;padding-bottom:58px}
 body.ty-density .v23-family-heading h2{font-size:var(--ty-fs-7);font-weight:600;line-height:1.15;letter-spacing:-.018em}
 body.ty-density .v23-family-heading>p{font-size:var(--ty-fs-2);line-height:1.6}
@@ -103,10 +103,10 @@ body.ty-density .v23-family-grid small{font-size:var(--ty-fs-1);line-height:1.45
 body.ty-density .v12-directory-head{margin-bottom:20px}
 body.ty-density .v12-directory-head h3{font-size:var(--ty-fs-6);font-weight:600;line-height:1.16}
 body.ty-density .v12-directory-head>p{font-size:var(--ty-fs-2);line-height:1.6}
-body.ty-density .v3p-platform-card .copy{padding:17px}
-body.ty-density .v3p-platform-card h3{font-size:var(--ty-fs-4);line-height:1.28}
-body.ty-density .v3p-platform-card .range{font-size:var(--ty-fs-2)}
-body.ty-density .v3p-platform-card small{font-size:var(--ty-fs-1);line-height:1.45}
+body.ty-density .ty-product__platform-card .copy{padding:17px}
+body.ty-density .ty-product__platform-card h3{font-size:var(--ty-fs-4);line-height:1.28}
+body.ty-density .ty-product__platform-card .range{font-size:var(--ty-fs-2)}
+body.ty-density .ty-product__platform-card small{font-size:var(--ty-fs-1);line-height:1.45}
 
 /* Applications & Projects */
 body.ty-density.ap26-projects-page .ap26-hero{min-height:520px}
@@ -158,11 +158,11 @@ body.ty-density .ty-home__news-card h3{font-size:var(--ty-fs-5);line-height:1.28
 body.ty-density .ty-home__news-card span{font-size:var(--ty-fs-1);line-height:1.55}
 
 /* Product/project detail pages that use the shared V3 shell */
-body.ty-density .v3p-detail-hero h1,
-body.ty-density .v3p-product-hero h1,
+body.ty-density .ty-product__detail-hero h1,
+body.ty-density .ty-product__product-hero h1,
 body.ty-density .project-hero h1{font-size:var(--ty-fs-8);font-weight:620;line-height:1.04;letter-spacing:-.03em}
-body.ty-density .v3p-detail-hero,
-body.ty-density .v3p-product-hero,
+body.ty-density .ty-product__detail-hero,
+body.ty-density .ty-product__product-hero,
 body.ty-density .project-hero{min-height:470px}
 
 /* Keep buttons and utility labels modest */
@@ -172,7 +172,7 @@ body.ty-density .text-link{font-weight:650}
 
 @media(max-width:820px){
   body.ty-density{--s36-section:52px;--s36-title:clamp(27px,5vw,36px)}
-  body.ty-density .v3p-shell,
+  body.ty-density .ty-product__shell,
   body.ty-density .ap26-shell,
   body.ty-density .ab30-shell,
   body.ty-density .ty-evidence__shell,

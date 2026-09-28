@@ -11,7 +11,7 @@ body main [class*="hero"] h1{
 }
 
 /* Primary section headings. Keep them clearly below the hero scale. */
-body main .v3p-title,
+body main .ty-product__title,
 body main .ty-evidence__title,
 body main .ty-proof__title,
 body main .section-head h2,
@@ -49,7 +49,7 @@ body main [class*="closing"] h2{
     line-height:1.1!important;
   }
 
-  body main .v3p-title,
+  body main .ty-product__title,
   body main .ty-evidence__title,
   body main .ty-proof__title,
   body main .section-head h2,

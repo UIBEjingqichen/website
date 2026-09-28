@@ -148,7 +148,7 @@ function scopeNote(slug, profile) {
 
 function renderReferenceTable(slug, profile) {
   const rows = profile.rows.map(([name, value]) => `<tr><td>${esc(name)}</td><td>${esc(value)}</td></tr>`).join("");
-  return `<div class="ty-system__reference-parameters" data-v41-reference-parameters><h3>Representative Parameter Table</h3><p class="ty-system__parameter-source"><small><strong>Reference product:</strong> ${esc(profile.model)} · ${esc(profile.source)}. ${esc(scopeNote(slug, profile))}</small></p><div class="v3p-table-wrap"><table class="v3p-table"><thead><tr><th>Parameter</th><th>Reference value</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
+  return `<div class="ty-system__reference-parameters" data-v41-reference-parameters><h3>Representative Parameter Table</h3><p class="ty-system__parameter-source"><small><strong>Reference product:</strong> ${esc(profile.model)} · ${esc(profile.source)}. ${esc(scopeNote(slug, profile))}</small></p><div class="ty-product__table-wrap"><table class="ty-product__table"><thead><tr><th>Parameter</th><th>Reference value</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
 }
 
 function injectIntoRatings(html, slug) {
@@ -175,7 +175,7 @@ const files = fs.existsSync(productsDir)
 let count = 0;
 for (const file of files) {
   let html = read(file);
-  if (!html.includes('<section class="v3p-hero">') || html.includes("v3p-family-hero")) continue;
+  if (!html.includes('<section class="ty-product__hero">') || html.includes("ty-product__family-hero")) continue;
   const slug = path.basename(path.dirname(file));
   html = injectIntoRatings(html, slug);
   if (!html.includes("data-v41-reference-parameters")) throw new Error(`Reference parameter table was not inserted: ${slug}`);

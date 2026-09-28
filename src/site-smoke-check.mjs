@@ -144,7 +144,7 @@ const supplementalDetails = new Map([
 for (const [slug, facts] of supplementalDetails) {
   const rel = `products/${slug}/index.html`;
   const html = read(rel);
-  for (const marker of ['catalog-v8-product-details.css', 'class="v3p-hero c8d-hero"', 'ty-system__detail-jump', 'id="ratings"', 'id="engineering"', 'id="applications"', 'id="documents"', 'id="contact-rfq"', ...facts]) {
+  for (const marker of ['catalog-v8-product-details.css', 'class="ty-product__hero c8d-hero"', 'ty-system__detail-jump', 'id="ratings"', 'id="engineering"', 'id="applications"', 'id="documents"', 'id="contact-rfq"', ...facts]) {
     if (!html.includes(marker)) throw new Error(`${rel} missing source-backed product detail: ${marker}`);
   }
   if (html.includes('>Product Overview<') || html.includes('21M2078-S')) throw new Error(`${rel} has a removed or inherited section.`);
@@ -158,7 +158,7 @@ for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
   if (html.includes('id="product-overview"') || html.includes('catalog-v8-intro') || html.includes('>Product Overview<')) {
     throw new Error(`${rel} still contains the removed Product Overview section.`);
   }
-  if (!html.includes('<section class="v3p-hero">') || html.includes("v3p-family-hero")) continue;
+  if (!html.includes('<section class="ty-product__hero">') || html.includes("ty-product__family-hero")) continue;
   detailCount += 1;
   const catalogV8 = new Set(["sz20-on-load-oil-immersed-transformer", "oil-immersed-split-winding-transformer", "intelligent-low-noise-dry-type-transformer", "zbs-rectifier-transformer"]);
   if (catalogV8.has(entry.name)) {
@@ -189,7 +189,7 @@ const mergedChildren = [
   "24-pulse-phase-shifting-transformer",
 ];
 for (const slug of mergedChildren) {
-  const re = new RegExp(`<a\\b[^>]*class=["'][^"']*v3p-platform-card[^"']*["'][^>]*href=["'][^"']*${slug}\\/?["']`, "i");
+  const re = new RegExp(`<a\\b[^>]*class=["'][^"']*ty-product__platform-card[^"']*["'][^>]*href=["'][^"']*${slug}\\/?["']`, "i");
   if (re.test(directory)) throw new Error(`Products directory still exposes merged child ${slug} as a standalone image card.`);
 }
 for (const [parent, text] of [
@@ -250,7 +250,7 @@ for (const file of htmlFiles) {
     }
   }
 }
-for (const [, href] of directory.matchAll(/<a class="(?:v3p-platform-card|catalog-v8-family-card)" href="([^"]+)"/g)) {
+for (const [, href] of directory.matchAll(/<a class="(?:ty-product__platform-card|catalog-v8-family-card)" href="([^"]+)"/g)) {
   if (!fs.existsSync(path.resolve(dist, href))) throw new Error(`Product card has no target file: ${href}`);
 }
 

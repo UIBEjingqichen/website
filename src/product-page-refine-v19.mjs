@@ -51,7 +51,7 @@ html = html.replace(
 const quickNav = `<nav class="v20-product-jump" aria-label="Product quick navigation"><div class="v20-product-jump-inner"><span class="v20-product-jump-label">Quick navigation</span><a href="#all-platforms">All Products</a><a href="#power-transformers">Power Transformers</a><a href="#distribution-transformers">Distribution Transformers</a><a href="#special-transformers">Special &amp; Renewable</a><a href="#prefabricated-substations">Prefabricated Substations</a></div></nav>`;
 
 if (!html.includes("v20-product-jump")) {
-  html = html.replace(/(<section class="v3p-index-hero">[\s\S]*?<\/section>)/, `$1\n${quickNav}`);
+  html = html.replace(/(<section class="ty-product__index-hero">[\s\S]*?<\/section>)/, `$1\n${quickNav}`);
 }
 
 fs.writeFileSync(productsFile, html, "utf8");

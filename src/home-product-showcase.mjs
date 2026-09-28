@@ -19,7 +19,7 @@ const families = familyDefs.map((family, familyIndex) => {
   if (start < 0) throw new Error(`Product family missing from directory: ${family.id}`);
   const next = directory.indexOf('<div class="v12-directory-group"', start + family.id.length);
   const block = directory.slice(start, next < 0 ? undefined : next);
-  const cardMatches = [...block.matchAll(/<a class="(?:v3p-platform-card|catalog-v8-family-card)"[^>]*>[\s\S]*?<\/a>/g)];
+  const cardMatches = [...block.matchAll(/<a class="(?:ty-product__platform-card|catalog-v8-family-card)"[^>]*>[\s\S]*?<\/a>/g)];
   const items = cardMatches.map(([card], itemIndex) => {
     const href = attr(card.match(/<a\b[^>]*>/)?.[0] || '', 'href');
     const imageTag = card.match(/<img\b[^>]*>/)?.[0] || '';
@@ -46,7 +46,7 @@ const section = `<section class="ty-product-showcase" id="products" data-product
 
 for (const file of [path.join(dist, 'index.html'), path.join(root, 'index.html')]) {
   let html = fs.readFileSync(file, 'utf8');
-  const oldSection = /<section class="v3p-section v3p-products-home"[\s\S]*?<\/section>/;
+  const oldSection = /<section class="ty-product__section ty-product__products-home"[\s\S]*?<\/section>/;
   if (!oldSection.test(html)) throw new Error(`Homepage product section missing: ${file}`);
   html = html.replace(oldSection, section);
   const certStage = '<div class="ty-carousel__coverflow-stage" data-ty-coverflow-stage>';

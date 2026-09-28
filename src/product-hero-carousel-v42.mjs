@@ -20,7 +20,7 @@ function attr(tag, name) {
 }
 
 function heroImage(html) {
-  const hero = html.match(/<div class=["']v3p-hero-media["'][^>]*>([\s\S]*?)<\/div>\s*<\/section>/i)?.[1] || "";
+  const hero = html.match(/<div class=["']ty-product__hero-media["'][^>]*>([\s\S]*?)<\/div>\s*<\/section>/i)?.[1] || "";
   const img = hero.match(/<img\b[^>]*>/i)?.[0] || "";
   if (!img) return null;
   return { src: attr(img, "src"), alt: attr(img, "alt") || "Product image" };
@@ -57,7 +57,7 @@ function carousel(images) {
   const slides = images.map((image, index) => `<figure class="ty-system__product-carousel-slide${index === 0 ? " is-active" : ""}" data-product-slide aria-hidden="${index === 0 ? "false" : "true"}"><img src="${esc(image.src)}" alt="${esc(image.alt)}" ${index === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'}></figure>`).join("");
   const dots = images.map((image, index) => `<button class="ty-system__product-carousel-dot${index === 0 ? " is-active" : ""}" type="button" data-product-dot aria-label="Show image ${index + 1}" aria-current="${index === 0 ? "true" : "false"}"></button>`).join("");
   const count = `${String(1).padStart(2, "0")} / ${String(images.length).padStart(2, "0")}`;
-  return `<div class="v3p-hero-media ty-system__product-carousel" data-product-hero data-single-slide="${images.length < 2 ? "true" : "false"}" aria-label="Product image carousel"><div class="ty-system__product-carousel-stage">${slides}</div><div class="ty-system__product-carousel-controls"><div class="ty-system__product-carousel-dots" aria-label="Choose product image">${dots}</div><span class="ty-system__product-carousel-count" data-product-count>${count}</span></div></div>`;
+  return `<div class="ty-product__hero-media ty-system__product-carousel" data-product-hero data-single-slide="${images.length < 2 ? "true" : "false"}" aria-label="Product image carousel"><div class="ty-system__product-carousel-stage">${slides}</div><div class="ty-system__product-carousel-controls"><div class="ty-system__product-carousel-dots" aria-label="Choose product image">${dots}</div><span class="ty-system__product-carousel-count" data-product-count>${count}</span></div></div>`;
 }
 
 function transform(html, slug) {
@@ -65,7 +65,7 @@ function transform(html, slug) {
   const images = uniqueImages([first, ...galleryImages(html)].filter(Boolean));
   if (!images.length) throw new Error(`No product image found for ${slug}`);
 
-  html = html.replace(/<div class=["']v3p-hero-media["'][^>]*>[\s\S]*?<\/div>\s*<\/section>/i, `${carousel(images)}</section>`);
+  html = html.replace(/<div class=["']ty-product__hero-media["'][^>]*>[\s\S]*?<\/div>\s*<\/section>/i, `${carousel(images)}</section>`);
   html = html.replace(/<section\b[^>]*\bid=["']drawings["'][^>]*>[\s\S]*?<\/section>/gi, "");
   html = html.replace(/<a\b[^>]*href=["']#drawings["'][^>]*>[\s\S]*?<\/a>/gi, "");
   html = html.replace(/The drawing shown in the product gallery is a reference outline view\./gi, "Reference outline drawings are available through the technical resources and project-document package.");
@@ -90,7 +90,7 @@ const files = fs.existsSync(productsDir)
 let count = 0;
 for (const file of files) {
   let html = read(file);
-  if (!html.includes('<section class="v3p-hero">') || html.includes("v3p-family-hero")) continue;
+  if (!html.includes('<section class="ty-product__hero">') || html.includes("ty-product__family-hero")) continue;
   const slug = path.basename(path.dirname(file));
   html = transform(html, slug);
   write(file, html);

@@ -19,8 +19,8 @@ html = html.replace(
 );
 
 html = html.replace(
-  /<h2 class="v3p-title">Browse by engineering family, then by voltage class<\/h2><p class="v3p-lead">Power transformers now open into 35, 66, 110 and 220 kV product pages\. Distribution, dry-type and prefabricated products use the same platform-based structure\.<\/p>/,
-  '<h2 class="v3p-title">Browse by engineering family</h2>'
+  /<h2 class="ty-product__title">Browse by engineering family, then by voltage class<\/h2><p class="ty-product__lead">Power transformers now open into 35, 66, 110 and 220 kV product pages\. Distribution, dry-type and prefabricated products use the same platform-based structure\.<\/p>/,
+  '<h2 class="ty-product__title">Browse by engineering family</h2>'
 );
 
 html = html.replace(

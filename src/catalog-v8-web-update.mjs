@@ -61,8 +61,8 @@ const amorphousRows = [
 {
   const file=pageFile('amorphous-alloy-dry-type-transformer');
   let html=read(file);
-  const block=`<section class="v3p-section" id="catalog-amorphous-parameters"><div class="v3p-shell"><p class="v3p-kicker">SC(B)H17 / SC(B)H19</p><h2 class="v3p-title">Published amorphous-alloy series values</h2><p>10 / 10.5 / 11 kV to 0.4 kV · ±5% or ±2×2.5% taps · Yyn0 or Dyn11. Load loss is shown at 155°C; the catalog also lists 130°C and 180°C columns.</p>${table(['Capacity (kVA)','H19 no-load loss (W)','H17 no-load loss (W)','Load loss at 155°C (W)','I0 (%)','Z (%)'],amorphousRows)}<p class="v3p-mini-note">The two 630 kVA entries are distinct rows in the source catalog. Confirm the intended configuration before selection.</p></div></section>`;
-  const cta=html.indexOf('<section class="v3p-cta"');
+  const block=`<section class="ty-product__section" id="catalog-amorphous-parameters"><div class="ty-product__shell"><p class="ty-product__kicker">SC(B)H17 / SC(B)H19</p><h2 class="ty-product__title">Published amorphous-alloy series values</h2><p>10 / 10.5 / 11 kV to 0.4 kV · ±5% or ±2×2.5% taps · Yyn0 or Dyn11. Load loss is shown at 155°C; the catalog also lists 130°C and 180°C columns.</p>${table(['Capacity (kVA)','H19 no-load loss (W)','H17 no-load loss (W)','Load loss at 155°C (W)','I0 (%)','Z (%)'],amorphousRows)}<p class="ty-product__mini-note">The two 630 kVA entries are distinct rows in the source catalog. Confirm the intended configuration before selection.</p></div></section>`;
+  const cta=html.indexOf('<section class="ty-product__cta"');
   html=cta>=0?html.slice(0,cta)+block+html.slice(cta):html.replace('</main>',block+'</main>');
   write(file,html);
 }
@@ -92,7 +92,7 @@ for (const p of newPages) {
 }
 for (const p of newPages) p.image=`products/catalog-v8/${p.slug}.webp`;
 
-function table(columns,rows){return `<p class="catalog-v8-table-hint">Swipe the table to see all parameters →</p><div class="v3p-table-wrap"><table class="v3p-table"><thead><tr>${columns.map(x=>`<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(x=>`<td>${esc(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;}
+function table(columns,rows){return `<p class="catalog-v8-table-hint">Swipe the table to see all parameters →</p><div class="ty-product__table-wrap"><table class="ty-product__table"><thead><tr>${columns.map(x=>`<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(x=>`<td>${esc(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;}
 const template = read(pageFile('110kv-power-transformer'));
 for (const p of newPages) {
   let html = template.replace(/<main>[\s\S]*?<\/main>/,renderSupplementalProductDetail(p, sz20Rows));
@@ -137,8 +137,8 @@ for (const [slug,items,title] of [
 ]) {
   const file=pageFile(slug);
   let html=read(file);
-  const block=`<section class="v3p-section"><div class="v3p-shell">${familyLinks(title,items,'../','../../assets/media/')}</div></section>`;
-  const cta=html.indexOf('<section class="v3p-cta"');
+  const block=`<section class="ty-product__section"><div class="ty-product__shell">${familyLinks(title,items,'../','../../assets/media/')}</div></section>`;
+  const cta=html.indexOf('<section class="ty-product__cta"');
   html=cta>=0?html.slice(0,cta)+block+html.slice(cta):html.replace('</main>',block+'</main>');
   write(file,addCss(html));
 }

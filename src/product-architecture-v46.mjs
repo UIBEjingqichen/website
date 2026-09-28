@@ -37,7 +37,7 @@ function appendCss(target) {
 }
 
 function productCard({ href, image, family, title, range, note }) {
-  return `<a class="v3p-platform-card" href="${href}"><div class="media"><img src="${image}" alt="${esc(title)}" loading="lazy"></div><div class="copy"><p class="v3p-kicker">${esc(family)}</p><h3>${esc(title)}</h3><span class="range">${esc(range)}</span><small>${esc(note)}</small></div></a>`;
+  return `<a class="ty-product__platform-card" href="${href}"><div class="media"><img src="${image}" alt="${esc(title)}" loading="lazy"></div><div class="copy"><p class="ty-product__kicker">${esc(family)}</p><h3>${esc(title)}</h3><span class="range">${esc(range)}</span><small>${esc(note)}</small></div></a>`;
 }
 
 function heroSlide({ image, label, strong, index }) {
@@ -48,7 +48,7 @@ function rewriteProductsDirectory() {
   const file = path.join(dist, "products.html");
   let html = read(file);
 
-  const heroStart = html.indexOf('<section class="v3p-index-hero');
+  const heroStart = html.indexOf('<section class="ty-product__index-hero');
   const familyStart = html.indexOf('<section class="v23-family-section"', heroStart);
   if (heroStart < 0 || familyStart < 0) throw new Error("v46: products hero/family section not found");
   let hero = html.slice(heroStart, familyStart);
@@ -65,11 +65,11 @@ function rewriteProductsDirectory() {
   const media = `<div class="media"><div class="v23-product-carousel" aria-label="Selected Tianyu product portfolio">${slides}<div class="v23-carousel-nav" aria-label="Product image controls"><span class="v23-carousel-count" data-product-count>01 / 03</span><button class="ty-system__carousel-toggle" type="button" data-product-toggle aria-pressed="false">Pause</button><div class="v23-carousel-dots">${dots}</div></div></div></div></section>\n`;
   hero = hero.slice(0, mediaStart) + media;
 
-  const allStart = html.indexOf('<section class="v3p-section v3p-soft" id="all-platforms">', familyStart);
-  const ctaStart = html.indexOf('<section class="v3p-cta"', allStart);
+  const allStart = html.indexOf('<section class="ty-product__section ty-product__soft" id="all-platforms">', familyStart);
+  const ctaStart = html.indexOf('<section class="ty-product__cta"', allStart);
   if (allStart < 0 || ctaStart < 0) throw new Error("v46: products directory range not found");
 
-  const familySection = `<section class="v23-family-section" id="product-families"><div class="v3p-shell"><div class="v23-family-heading"><div><p class="v3p-kicker">Product Families</p><h2>Three product families</h2></div><p>Choose between power transformers, distribution transformers and prefabricated substations. Application-specific variants sit under the parent platform instead of becoming duplicate product families.</p></div><nav class="v23-family-grid" aria-label="Product family navigation"><a href="#power-transformers"><span>01</span><strong>Power Transformers</strong><small>35–220 kV main transformer platforms</small><b>View range →</b></a><a href="#distribution-transformers"><span>02</span><strong>Distribution Transformers</strong><small>Oil-immersed and dry-type distribution platforms</small><b>View range →</b></a><a href="#prefabricated-substations"><span>03</span><strong>Prefabricated Substations</strong><small>Factory-integrated compact, renewable and mobile systems</small><b>View range →</b></a></nav></div></section>\n`;
+  const familySection = `<section class="v23-family-section" id="product-families"><div class="ty-product__shell"><div class="v23-family-heading"><div><p class="ty-product__kicker">Product Families</p><h2>Three product families</h2></div><p>Choose between power transformers, distribution transformers and prefabricated substations. Application-specific variants sit under the parent platform instead of becoming duplicate product families.</p></div><nav class="v23-family-grid" aria-label="Product family navigation"><a href="#power-transformers"><span>01</span><strong>Power Transformers</strong><small>35–220 kV main transformer platforms</small><b>View range →</b></a><a href="#distribution-transformers"><span>02</span><strong>Distribution Transformers</strong><small>Oil-immersed and dry-type distribution platforms</small><b>View range →</b></a><a href="#prefabricated-substations"><span>03</span><strong>Prefabricated Substations</strong><small>Factory-integrated compact, renewable and mobile systems</small><b>View range →</b></a></nav></div></section>\n`;
 
   const powerCards = [
     productCard({ href: "products/35kv-power-transformer/", image: "assets/media/products/classified/35kv-power-transformer/01.png", family: "Power Transformers", title: "35 kV Oil-Immersed Power Transformer", range: "8–31.5 MVA", note: "35 kV class" }),
@@ -92,7 +92,7 @@ function rewriteProductsDirectory() {
     productCard({ href: "products/american-type-combined-transformer/", image: "assets/media/products/classified/american-type-combined-transformer/01.webp", family: "Prefabricated Substations", title: "American-Type Combined Transformer", range: "Project dependent", note: "Compact pad-mounted distribution arrangement" }),
   ].join("");
 
-  const directory = `<section class="v3p-section v3p-soft" id="all-platforms"><div class="v3p-shell"><p class="v3p-kicker">Product Directory</p><h2 class="v3p-title">Power, distribution and prefabricated substation platforms</h2><div class="v12-directory-group" id="power-transformers"><div class="v12-directory-head"><div><p class="v3p-kicker">01</p><h3>Power Transformers</h3></div><p>Main transformer platforms grouped by voltage class.</p></div><div class="v3p-platform-grid">${powerCards}</div></div><div class="v12-directory-group" id="distribution-transformers"><div class="v12-directory-head"><div><p class="v3p-kicker">02</p><h3>Distribution Transformers</h3></div><p>Two construction families only: oil-immersed distribution transformers and dry-type distribution transformers.</p></div><div class="v3p-platform-grid">${distributionCards}</div></div><div class="v12-directory-group" id="prefabricated-substations"><div class="v12-directory-head"><div><p class="v3p-kicker">03</p><h3>Prefabricated Substations</h3></div><p>Factory-integrated compact, renewable, mobile and project-engineered substation systems.</p></div><div class="v3p-platform-grid">${prefabCards}</div></div></div></section>\n`;
+  const directory = `<section class="ty-product__section ty-product__soft" id="all-platforms"><div class="ty-product__shell"><p class="ty-product__kicker">Product Directory</p><h2 class="ty-product__title">Power, distribution and prefabricated substation platforms</h2><div class="v12-directory-group" id="power-transformers"><div class="v12-directory-head"><div><p class="ty-product__kicker">01</p><h3>Power Transformers</h3></div><p>Main transformer platforms grouped by voltage class.</p></div><div class="ty-product__platform-grid">${powerCards}</div></div><div class="v12-directory-group" id="distribution-transformers"><div class="v12-directory-head"><div><p class="ty-product__kicker">02</p><h3>Distribution Transformers</h3></div><p>Two construction families only: oil-immersed distribution transformers and dry-type distribution transformers.</p></div><div class="ty-product__platform-grid">${distributionCards}</div></div><div class="v12-directory-group" id="prefabricated-substations"><div class="v12-directory-head"><div><p class="ty-product__kicker">03</p><h3>Prefabricated Substations</h3></div><p>Factory-integrated compact, renewable, mobile and project-engineered substation systems.</p></div><div class="ty-product__platform-grid">${prefabCards}</div></div></div></section>\n`;
 
   html = html.slice(0, heroStart) + hero + familySection + directory + html.slice(ctaStart);
   html = mark(html);
@@ -106,18 +106,18 @@ function rewriteDistributionFamily() {
   html = html.replace(/<meta name="description" content="[^"]*">/i, '<meta name="description" content="Oil-immersed and dry-type distribution transformer platforms for utility, industrial and infrastructure projects.">');
   html = html.replace(/<span>Oil-Immersed Transformers<\/span>/g, "<span>Distribution Transformers</span>");
   html = html.replace(/<h1>Oil-Immersed Transformers<\/h1>/g, "<h1>Distribution Transformers</h1>");
-  html = html.replace(/<p class="v3p-lead">[\s\S]*?<\/p>/i, '<p class="v3p-lead">Oil-immersed and dry-type distribution transformers are presented together as one distribution family. Choose the construction type first, then confirm voltage, capacity and project requirements on the dedicated page.</p>');
-  html = html.replace(/(<div class="v3p-family-hero-media"><img src=")[^"]+("[^>]*>)/i, '$1../../assets/media/products/classified/40-5kv-renewable-oil-immersed-transformer/01.png$2');
+  html = html.replace(/<p class="ty-product__lead">[\s\S]*?<\/p>/i, '<p class="ty-product__lead">Oil-immersed and dry-type distribution transformers are presented together as one distribution family. Choose the construction type first, then confirm voltage, capacity and project requirements on the dedicated page.</p>');
+  html = html.replace(/(<div class="ty-product__family-hero-media"><img src=")[^"]+("[^>]*>)/i, '$1../../assets/media/products/classified/40-5kv-renewable-oil-immersed-transformer/01.png$2');
 
-  const heroEnd = html.indexOf("</section>", html.indexOf('<section class="v3p-family-hero">')) + 10;
-  const nextSection = html.indexOf('<section class="v3p-section', heroEnd);
+  const heroEnd = html.indexOf("</section>", html.indexOf('<section class="ty-product__family-hero">')) + 10;
+  const nextSection = html.indexOf('<section class="ty-product__section', heroEnd);
   const followingSection = html.indexOf('<section', nextSection + 10);
   if (nextSection < 0 || followingSection < 0) throw new Error("v46: distribution family product range not found");
   const cards = [
     productCard({ href: "../12kv-oil-immersed-distribution-transformer/", image: "../../assets/media/products/classified/12kv-oil-immersed-distribution-transformer/01.webp", family: "Distribution Transformer · Oil-Immersed", title: "Oil-Immersed Distribution Transformer", range: "35 kV and below", note: "Outdoor and utility distribution applications" }),
     productCard({ href: "../dry-type-distribution-transformer/", image: "../../assets/media/products/classified/dry-type-distribution-transformer/01.jpg", family: "Distribution Transformer · Dry-Type", title: "Dry-Type Distribution Transformer", range: "35 kV and below", note: "Indoor, infrastructure and fire-sensitive applications" }),
   ].join("");
-  const range = `<section class="v3p-section"><div class="v3p-shell"><p class="v3p-kicker">Distribution Transformer Range</p><h2 class="v3p-title">Choose between two construction types</h2><div class="v3p-platform-grid">${cards}</div></div></section>`;
+  const range = `<section class="ty-product__section"><div class="ty-product__shell"><p class="ty-product__kicker">Distribution Transformer Range</p><h2 class="ty-product__title">Choose between two construction types</h2><div class="ty-product__platform-grid">${cards}</div></div></section>`;
   html = html.slice(0, nextSection) + range + html.slice(followingSection);
   html = html.replace(/<body\b([^>]*)class="([^"]*)"/i, (whole, before, classes) => `<body${before}class="${classes.includes("v46-distribution-family") ? classes : `${classes} v46-distribution-family`}"`);
   html = mark(html);
@@ -133,21 +133,21 @@ function rebuildCarousel(slug, names) {
   const title = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1]?.replace(/<[^>]+>/g, "").trim() || slug;
   const slides = available.map((name, index) => `<figure class="ty-system__product-carousel-slide${index === 0 ? " is-active" : ""}" data-product-slide aria-hidden="${index === 0 ? "false" : "true"}"><img src="../../assets/media/products/classified/${slug}/${name}" alt="${esc(title)}${index ? ` ${index + 1}` : ""}" ${index === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'}></figure>`).join("");
   const dots = available.map((_, index) => `<button class="ty-system__product-carousel-dot${index === 0 ? " is-active" : ""}" type="button" data-product-dot aria-label="Show image ${index + 1}" aria-current="${index === 0 ? "true" : "false"}"></button>`).join("");
-  const carousel = `<div class="v3p-hero-media ty-system__product-carousel" data-product-hero data-v43-classified-media data-single-slide="${available.length < 2 ? "true" : "false"}" aria-label="Product image carousel"><div class="ty-system__product-carousel-stage">${slides}</div><div class="ty-system__product-carousel-controls"><div class="ty-system__product-carousel-dots" aria-label="Choose product image">${dots}</div><span class="ty-system__product-carousel-count" data-product-count>01 / ${String(available.length).padStart(2, "0")}</span></div></div>`;
-  html = html.replace(/<div class="v3p-hero-media\s+ty-system__product-carousel"[\s\S]*?<\/div>\s*<\/section>/i, `${carousel}</section>`);
+  const carousel = `<div class="ty-product__hero-media ty-system__product-carousel" data-product-hero data-v43-classified-media data-single-slide="${available.length < 2 ? "true" : "false"}" aria-label="Product image carousel"><div class="ty-system__product-carousel-stage">${slides}</div><div class="ty-system__product-carousel-controls"><div class="ty-system__product-carousel-dots" aria-label="Choose product image">${dots}</div><span class="ty-system__product-carousel-count" data-product-count>01 / ${String(available.length).padStart(2, "0")}</span></div></div>`;
+  html = html.replace(/<div class="ty-product__hero-media\s+ty-system__product-carousel"[\s\S]*?<\/div>\s*<\/section>/i, `${carousel}</section>`);
   html = mark(html);
   write(file, html);
 }
 
 function rewriteCardImage(html, slug, replacement) {
-  const re = new RegExp(`(<a\\b[^>]*class=["'][^"']*v3p-platform-card[^"']*["'][^>]*href=["'][^"']*${slug}\\/?["'][^>]*>[\\s\\S]*?<img\\b[^>]*?src=["'])[^"']+(["'][^>]*>)`, "gi");
+  const re = new RegExp(`(<a\\b[^>]*class=["'][^"']*ty-product__platform-card[^"']*["'][^>]*href=["'][^"']*${slug}\\/?["'][^>]*>[\\s\\S]*?<img\\b[^>]*?src=["'])[^"']+(["'][^>]*>)`, "gi");
   return html.replace(re, `$1${replacement}$2`);
 }
 
 function cleanPrefabFamily() {
   const file = path.join(productsRoot, "prefabricated-substations", "index.html");
   let html = read(file);
-  html = html.replace(/(<div class="v3p-family-hero-media"><img src=")[^"]+("[^>]*>)/i, '$1../../assets/media/products/classified/yb-prefabricated-substation/02.webp$2');
+  html = html.replace(/(<div class="ty-product__family-hero-media"><img src=")[^"]+("[^>]*>)/i, '$1../../assets/media/products/classified/yb-prefabricated-substation/02.webp$2');
   html = rewriteCardImage(html, "zgs-prefabricated-substation", "../../assets/media/products/classified/zgs-prefabricated-substation/02.webp");
   html = rewriteCardImage(html, "yb-prefabricated-substation", "../../assets/media/products/classified/yb-prefabricated-substation/02.webp");
   html = rewriteCardImage(html, "ybh-prefabricated-substation", "../../assets/media/products/classified/ybh-prefabricated-substation/02.jpeg");
@@ -177,7 +177,7 @@ function mergeHomepageFamilies(file) {
   const replaceImage = (inner, src, alt) => inner.replace(/<img\b[^>]*>/i, `<img src="${src}" alt="${esc(alt)}" loading="lazy">`);
   const replaceHref = (attrs, href) => attrs.replace(/href=["'][^"']*["']/i, `href="${href}"`);
   const replaceSummary = (inner, summary) => inner.replace(/(<h3>[^<]*<\/h3>)<p>[^<]*<\/p>/i, `$1<p>${esc(summary)}</p>`);
-  html = html.replace(/<a\b([^>]*class=["'][^"']*v3p-family-card[^"']*["'][^>]*)>([\s\S]*?)<\/a>/gi, (whole, attrs, inner) => {
+  html = html.replace(/<a\b([^>]*class=["'][^"']*ty-product__family-card[^"']*["'][^>]*)>([\s\S]*?)<\/a>/gi, (whole, attrs, inner) => {
     const title = inner.match(/<h3>([^<]+)<\/h3>/i)?.[1]?.replace(/&amp;/g, "&").trim() || "";
     if (/^(?:Dry-Type Transformers|Special & Renewable Solutions)$/.test(title)) return "";
     if (title === "Power Transformers") {
@@ -238,10 +238,10 @@ for (const redCover of ["zgs-prefabricated-substation/01.png", "yb-prefabricated
 }
 const distributionFamily = read(path.join(productsRoot, "oil-immersed-distribution-transformer", "index.html"));
 if (!distributionFamily.includes("Distribution Transformers") || !distributionFamily.includes("dry-type-distribution-transformer")) throw new Error("v46: distribution family merge failed");
-if ((distributionFamily.match(/class="v3p-platform-card"/g) || []).length !== 2) throw new Error("v46: distribution family should expose exactly two product cards");
+if ((distributionFamily.match(/class="ty-product__platform-card"/g) || []).length !== 2) throw new Error("v46: distribution family should expose exactly two product cards");
 const homepage = read(path.join(dist, "index.html"));
-const homepageFamilies = homepage.match(/<section class="v3p-section v3p-products-home"[\s\S]*?<\/section>/i)?.[0] || "";
-if ((homepageFamilies.match(/class="v3p-family-card"/g) || []).length !== 3) throw new Error("v46: homepage should expose exactly three product families");
+const homepageFamilies = homepage.match(/<section class="ty-product__section ty-product__products-home"[\s\S]*?<\/section>/i)?.[0] || "";
+if ((homepageFamilies.match(/class="ty-product__family-card"/g) || []).length !== 3) throw new Error("v46: homepage should expose exactly three product families");
 if (/Special &(?:amp; )?Renewable Solutions|Dry-Type Transformers/.test(homepageFamilies)) throw new Error("v46: homepage still exposes a retired top-level family");
 if (!homepageFamilies.includes("classified/oil-immersed-distribution-transformer/01.png")) throw new Error("v46: homepage distribution family image is not synchronized");
 

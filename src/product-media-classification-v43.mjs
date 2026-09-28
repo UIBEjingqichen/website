@@ -208,7 +208,7 @@ function copyForPage(slug, entries) {
 function carousel(srcs, title) {
   const slides = srcs.map((src, index) => `<figure class="ty-system__product-carousel-slide${index === 0 ? " is-active" : ""}" data-product-slide aria-hidden="${index === 0 ? "false" : "true"}"><img src="${escapeHtml(src)}" alt="${escapeHtml(title)}${index ? ` ${index + 1}` : ""}" ${index === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'}></figure>`).join("");
   const dots = srcs.map((_, index) => `<button class="ty-system__product-carousel-dot${index === 0 ? " is-active" : ""}" type="button" data-product-dot aria-label="Show image ${index + 1}" aria-current="${index === 0 ? "true" : "false"}"></button>`).join("");
-  return `<div class="v3p-hero-media ty-system__product-carousel" data-product-hero data-v43-classified-media data-single-slide="${srcs.length < 2 ? "true" : "false"}" aria-label="Product image carousel"><div class="ty-system__product-carousel-stage">${slides}</div><div class="ty-system__product-carousel-controls"><div class="ty-system__product-carousel-dots" aria-label="Choose product image">${dots}</div><span class="ty-system__product-carousel-count" data-product-count>01 / ${String(srcs.length).padStart(2, "0")}</span></div></div>`;
+  return `<div class="ty-product__hero-media ty-system__product-carousel" data-product-hero data-v43-classified-media data-single-slide="${srcs.length < 2 ? "true" : "false"}" aria-label="Product image carousel"><div class="ty-system__product-carousel-stage">${slides}</div><div class="ty-system__product-carousel-controls"><div class="ty-system__product-carousel-dots" aria-label="Choose product image">${dots}</div><span class="ty-system__product-carousel-count" data-product-count>01 / ${String(srcs.length).padStart(2, "0")}</span></div></div>`;
 }
 
 async function main() {
@@ -227,14 +227,14 @@ async function main() {
     const file = path.join(productsRoot, slug, "index.html");
     if (!fs.existsSync(file)) continue;
     let html = fs.readFileSync(file, "utf8");
-    if (!html.includes('<section class="v3p-hero">') || html.includes("v3p-family-hero")) continue;
+    if (!html.includes('<section class="ty-product__hero">') || html.includes("ty-product__family-hero")) continue;
 
     const selected = uniqueExisting(pageMedia[slug] || fallbackFor(slug));
     if (!selected.length) throw new Error(`No classified product media available for ${slug}`);
     const srcs = copyForPage(slug, selected);
     const title = titleFromHtml(html, slug);
     const replacement = `${carousel(srcs, title)}</section>`;
-    const next = html.replace(/<div class=["']v3p-hero-media\s+ty-system__product-carousel["'][^>]*>[\s\S]*?<\/div>\s*<\/section>/i, replacement);
+    const next = html.replace(/<div class=["']ty-product__hero-media\s+ty-system__product-carousel["'][^>]*>[\s\S]*?<\/div>\s*<\/section>/i, replacement);
     if (next === html || !next.includes("data-v43-classified-media")) throw new Error(`Could not replace hero carousel for ${slug}`);
     if (/floating-solar-combined-transformer-site|american-combined-transformer-03/i.test(next)) throw new Error(`Forbidden media reference remains on ${slug}`);
     fs.writeFileSync(file, next, "utf8");

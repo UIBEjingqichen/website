@@ -82,13 +82,13 @@ function mark(html) {
 }
 
 function cleanupEmptyProductSections(html) {
-  let next = html.replace(/<div\s+class=["']v3p-platform-grid["']>\s*<\/div>/gi, "");
+  let next = html.replace(/<div\s+class=["']ty-product__platform-grid["']>\s*<\/div>/gi, "");
   next = next.replace(/<section\b[^>]*id=["']application-specific-power["'][^>]*>[\s\S]*?<\/section>/gi, "");
   return next;
 }
 
 function removeMergedNavLinks(html) {
-  html = html.replace(/<nav\b([^>]*class=["'][^"']*v3p-family-nav[^"']*["'][^>]*)>([\s\S]*?)<\/nav>/gi, (whole, attrs, inner) => {
+  html = html.replace(/<nav\b([^>]*class=["'][^"']*ty-product__family-nav[^"']*["'][^>]*)>([\s\S]*?)<\/nav>/gi, (whole, attrs, inner) => {
     let next = inner;
     for (const slug of mergedSlugs) {
       const re = new RegExp(`<a\\b[^>]*href=["'][^"']*${slug}\\/?["'][^>]*>[\\s\\S]*?<\\/a>`, "gi");
@@ -107,7 +107,7 @@ function updatePlatformCards(html, file) {
   const used = new Set();
   let updated = 0;
   let removed = 0;
-  const next = html.replace(/<a\b([^>]*class=["'][^"']*v3p-platform-card[^"']*["'][^>]*)>([\s\S]*?)<\/a>/gi, (whole, attrs, inner) => {
+  const next = html.replace(/<a\b([^>]*class=["'][^"']*ty-product__platform-card[^"']*["'][^>]*)>([\s\S]*?)<\/a>/gi, (whole, attrs, inner) => {
     const href = attrs.match(/href=["']([^"']+)["']/i)?.[1] || "";
     const slug = slugFromHref(href);
     if (!slug) return whole;
@@ -128,7 +128,7 @@ function updatePlatformCards(html, file) {
 function updateFamilyCards(html, file) {
   const used = new Set();
   let updated = 0;
-  const next = html.replace(/<a\b([^>]*class=["'][^"']*v3p-family-card[^"']*["'][^>]*)>([\s\S]*?)<\/a>/gi, (whole, attrs, inner) => {
+  const next = html.replace(/<a\b([^>]*class=["'][^"']*ty-product__family-card[^"']*["'][^>]*)>([\s\S]*?)<\/a>/gi, (whole, attrs, inner) => {
     const href = attrs.match(/href=["']([^"']+)["']/i)?.[1] || "";
     const familySlug = slugFromHref(href);
     const rep = familyRepresentatives[familySlug];
@@ -149,7 +149,7 @@ function variantBlock(parentFile, variants) {
     const href = `${toWeb(path.relative(path.dirname(parentFile), target))}/`;
     return `<a class="v45-variant-link" href="${esc(href)}"><strong>${esc(variant.title)}</strong><span>${esc(variant.note)}</span></a>`;
   }).join("");
-  return `<section class="v45-variant-section" data-v45-merged-variants><div class="v3p-shell"><div class="v45-variant-intro"><p class="v3p-kicker">Shared Platform Variants</p><h2>Configurations available within the parent product</h2><p>These configurations use the parent platform and are finalized against the electrical system, site conditions and project requirements.</p></div><div class="v45-variant-list">${links}</div></div></section>`;
+  return `<section class="v45-variant-section" data-v45-merged-variants><div class="ty-product__shell"><div class="v45-variant-intro"><p class="ty-product__kicker">Shared Platform Variants</p><h2>Configurations available within the parent product</h2><p>These configurations use the parent platform and are finalized against the electrical system, site conditions and project requirements.</p></div><div class="v45-variant-list">${links}</div></div></section>`;
 }
 
 function insertVariantBlock(parentSlug, variants) {
@@ -160,8 +160,8 @@ function insertVariantBlock(parentSlug, variants) {
   const block = variantBlock(file, variants);
   if (html.includes('id="applications"')) {
     html = html.replace(/(<section\b[^>]*id=["']applications["'][^>]*>)/i, `${block}$1`);
-  } else if (/<section\b[^>]*class=["'][^"']*v3p-cta[^"']*["']/i.test(html)) {
-    html = html.replace(/(<section\b[^>]*class=["'][^"']*v3p-cta[^"']*["'][^>]*>)/i, `${block}$1`);
+  } else if (/<section\b[^>]*class=["'][^"']*ty-product__cta[^"']*["']/i.test(html)) {
+    html = html.replace(/(<section\b[^>]*class=["'][^"']*ty-product__cta[^"']*["'][^>]*>)/i, `${block}$1`);
   } else {
     html = html.replace(/<\/main>/i, `${block}</main>`);
   }
@@ -202,14 +202,14 @@ for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
   const file = path.join(productsRoot, entry.name, "index.html");
   if (!fs.existsSync(file)) continue;
   let html = fs.readFileSync(file, "utf8");
-  if (html.includes("v3p-family-hero")) {
+  if (html.includes("ty-product__family-hero")) {
     const cards = updatePlatformCards(html, file);
     html = cleanupEmptyProductSections(mark(removeMergedNavLinks(cards.html)));
     fs.writeFileSync(file, html, "utf8");
     familyPages += 1;
     familyCardsUpdated += cards.updated;
     familyCardsRemoved += cards.removed;
-  } else if (html.includes('<section class="v3p-hero">')) {
+  } else if (html.includes('<section class="ty-product__hero">')) {
     html = cleanupEmptyProductSections(mark(removeMergedNavLinks(html)));
     fs.writeFileSync(file, html, "utf8");
     detailPages += 1;

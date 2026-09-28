@@ -11,10 +11,10 @@ const target = path.join(root, "index.html");
 if (!fs.existsSync(source)) throw new Error("v57: dist homepage is missing");
 
 const html = fs.readFileSync(source, "utf8");
-const section = html.match(/<section class="v3p-section v3p-products-home"[\s\S]*?<\/section>/i)?.[0] || "";
+const section = html.match(/<section class="ty-product__section ty-product__products-home"[\s\S]*?<\/section>/i)?.[0] || "";
 const expectedFamilies = ["Power Transformers", "Distribution Transformers", "Prefabricated Substations"];
 
-if ((section.match(/class="v3p-family-card"/g) || []).length !== expectedFamilies.length) {
+if ((section.match(/class="ty-product__family-card"/g) || []).length !== expectedFamilies.length) {
   throw new Error("v57: homepage product-family count is not synchronized with the product directory");
 }
 for (const family of expectedFamilies) {

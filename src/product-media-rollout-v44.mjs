@@ -59,7 +59,7 @@ function hrefSlug(href = "") {
 
 function replaceCardImages(html, file) {
   let changed = 0;
-  const next = html.replace(/<a\b([^>]*class=["'][^"']*v3p-platform-card[^"']*["'][^>]*)>([\s\S]*?)<\/a>/gi, (whole, attrs, inner) => {
+  const next = html.replace(/<a\b([^>]*class=["'][^"']*ty-product__platform-card[^"']*["'][^>]*)>([\s\S]*?)<\/a>/gi, (whole, attrs, inner) => {
     const href = attrs.match(/href=["']([^"']+)["']/i)?.[1];
     const slug = hrefSlug(href);
     if (!slug) return whole;
@@ -75,13 +75,13 @@ function replaceCardImages(html, file) {
 function replaceFamilyHero(html, file, familySlug) {
   let target = familyRepresentatives[familySlug] || null;
   if (!target) {
-    const firstCard = html.match(/<a\b[^>]*class=["'][^"']*v3p-platform-card[^"']*["'][^>]*href=["']([^"']+)["']/i)?.[1];
+    const firstCard = html.match(/<a\b[^>]*class=["'][^"']*ty-product__platform-card[^"']*["'][^>]*href=["']([^"']+)["']/i)?.[1];
     target = hrefSlug(firstCard);
   }
   if (!target) return { html, changed: 0, target: null };
   const src = coverHref(file, target);
   if (!src) return { html, changed: 0, target };
-  const next = html.replace(/(<div\s+class=["']v3p-family-hero-media["'][^>]*>\s*<img\b[^>]*?src=["'])[^"']+(["'][^>]*>)/i, `$1${src}$2`);
+  const next = html.replace(/(<div\s+class=["']ty-product__family-hero-media["'][^>]*>\s*<img\b[^>]*?src=["'])[^"']+(["'][^>]*>)/i, `$1${src}$2`);
   return { html: next, changed: next === html ? 0 : 1, target };
 }
 
@@ -123,7 +123,7 @@ for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
   if (!fs.existsSync(file)) continue;
   let html = fs.readFileSync(file, "utf8");
 
-  if (html.includes('<section class="v3p-hero">') && !html.includes("v3p-family-hero")) {
+  if (html.includes('<section class="ty-product__hero">') && !html.includes("ty-product__family-hero")) {
     if (!coverFile(slug)) throw new Error(`v44: concrete product page lacks classified cover: ${slug}`);
     const before = html;
     html = updateOgImage(html, slug);
@@ -150,7 +150,7 @@ for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
   const file = path.join(productsRoot, entry.name, "index.html");
   if (!fs.existsSync(file)) continue;
   let html = fs.readFileSync(file, "utf8");
-  if (!html.includes("v3p-family-hero")) continue;
+  if (!html.includes("ty-product__family-hero")) continue;
 
   const hero = replaceFamilyHero(html, file, entry.name);
   html = hero.html;

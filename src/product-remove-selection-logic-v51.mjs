@@ -17,7 +17,7 @@ if (fs.existsSync(productsRoot)) {
 }
 
 let removed = 0;
-const selectionSection = /<section\b[^>]*class=["'][^"']*v3p-section[^"']*v3p-soft[^"']*["'][^>]*>\s*<div\b[^>]*class=["'][^"']*v3p-shell[^"']*["'][^>]*>\s*<p\b[^>]*class=["'][^"']*v3p-kicker[^"']*["'][^>]*>\s*Selection Logic\s*<\/p>[\s\S]*?<\/div>\s*<\/section>/gi;
+const selectionSection = /<section\b[^>]*class=["'][^"']*ty-product__section[^"']*ty-product__soft[^"']*["'][^>]*>\s*<div\b[^>]*class=["'][^"']*ty-product__shell[^"']*["'][^>]*>\s*<p\b[^>]*class=["'][^"']*ty-product__kicker[^"']*["'][^>]*>\s*Selection Logic\s*<\/p>[\s\S]*?<\/div>\s*<\/section>/gi;
 
 for (const file of targets) {
   let html = fs.readFileSync(file, "utf8");
