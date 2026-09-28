@@ -62,7 +62,7 @@ function rewriteProductsDirectory() {
     heroSlide({ index: 2, image: "assets/media/products/classified/yb-prefabricated-substation/02.webp", label: "Prefabricated Substations", strong: "Factory-integrated compact substations" }),
   ].join("");
   const dots = [0, 1, 2].map((index) => `<button class="v23-carousel-dot${index === 0 ? " is-active" : ""}" type="button" data-product-dot="${index}" aria-label="Show ${index === 0 ? "power transformer" : index === 1 ? "distribution transformer" : "prefabricated substation"}" aria-current="${index === 0 ? "true" : "false"}"></button>`).join("");
-  const media = `<div class="media"><div class="v23-product-carousel" aria-label="Selected Tianyu product portfolio">${slides}<div class="v23-carousel-nav" aria-label="Product image controls"><span class="v23-carousel-count" data-product-count>01 / 03</span><button class="vs-carousel-toggle" type="button" data-product-toggle aria-pressed="false">Pause</button><div class="v23-carousel-dots">${dots}</div></div></div></div></section>\n`;
+  const media = `<div class="media"><div class="v23-product-carousel" aria-label="Selected Tianyu product portfolio">${slides}<div class="v23-carousel-nav" aria-label="Product image controls"><span class="v23-carousel-count" data-product-count>01 / 03</span><button class="ty-system__carousel-toggle" type="button" data-product-toggle aria-pressed="false">Pause</button><div class="v23-carousel-dots">${dots}</div></div></div></div></section>\n`;
   hero = hero.slice(0, mediaStart) + media;
 
   const allStart = html.indexOf('<section class="v3p-section v3p-soft" id="all-platforms">', familyStart);
@@ -131,10 +131,10 @@ function rebuildCarousel(slug, names) {
   const available = names.filter((name) => exists(path.join(classifiedRoot, slug, name)));
   if (!available.length) throw new Error(`v46: no clean prefab media for ${slug}`);
   const title = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1]?.replace(/<[^>]+>/g, "").trim() || slug;
-  const slides = available.map((name, index) => `<figure class="vs-product-carousel-slide${index === 0 ? " is-active" : ""}" data-product-slide aria-hidden="${index === 0 ? "false" : "true"}"><img src="../../assets/media/products/classified/${slug}/${name}" alt="${esc(title)}${index ? ` ${index + 1}` : ""}" ${index === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'}></figure>`).join("");
-  const dots = available.map((_, index) => `<button class="vs-product-carousel-dot${index === 0 ? " is-active" : ""}" type="button" data-product-dot aria-label="Show image ${index + 1}" aria-current="${index === 0 ? "true" : "false"}"></button>`).join("");
-  const carousel = `<div class="v3p-hero-media vs-product-carousel" data-product-hero data-v43-classified-media data-single-slide="${available.length < 2 ? "true" : "false"}" aria-label="Product image carousel"><div class="vs-product-carousel-stage">${slides}</div><div class="vs-product-carousel-controls"><div class="vs-product-carousel-dots" aria-label="Choose product image">${dots}</div><span class="vs-product-carousel-count" data-product-count>01 / ${String(available.length).padStart(2, "0")}</span></div></div>`;
-  html = html.replace(/<div class="v3p-hero-media\s+vs-product-carousel"[\s\S]*?<\/div>\s*<\/section>/i, `${carousel}</section>`);
+  const slides = available.map((name, index) => `<figure class="ty-system__product-carousel-slide${index === 0 ? " is-active" : ""}" data-product-slide aria-hidden="${index === 0 ? "false" : "true"}"><img src="../../assets/media/products/classified/${slug}/${name}" alt="${esc(title)}${index ? ` ${index + 1}` : ""}" ${index === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'}></figure>`).join("");
+  const dots = available.map((_, index) => `<button class="ty-system__product-carousel-dot${index === 0 ? " is-active" : ""}" type="button" data-product-dot aria-label="Show image ${index + 1}" aria-current="${index === 0 ? "true" : "false"}"></button>`).join("");
+  const carousel = `<div class="v3p-hero-media ty-system__product-carousel" data-product-hero data-v43-classified-media data-single-slide="${available.length < 2 ? "true" : "false"}" aria-label="Product image carousel"><div class="ty-system__product-carousel-stage">${slides}</div><div class="ty-system__product-carousel-controls"><div class="ty-system__product-carousel-dots" aria-label="Choose product image">${dots}</div><span class="ty-system__product-carousel-count" data-product-count>01 / ${String(available.length).padStart(2, "0")}</span></div></div>`;
+  html = html.replace(/<div class="v3p-hero-media\s+ty-system__product-carousel"[\s\S]*?<\/div>\s*<\/section>/i, `${carousel}</section>`);
   html = mark(html);
   write(file, html);
 }

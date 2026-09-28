@@ -22,11 +22,11 @@ html, body { overflow-x: hidden; }
   gap: 32px;
   align-items: center;
 }
-.phase1-detail .vs-product-carousel {
+.phase1-detail .ty-system__product-carousel {
   min-width: 0;
   overflow: hidden;
 }
-.phase1-detail .vs-product-carousel-stage {
+.phase1-detail .ty-system__product-carousel-stage {
   position: relative;
   display: grid;
   place-items: center;
@@ -34,7 +34,7 @@ html, body { overflow-x: hidden; }
   overflow: hidden;
   background: #eef3f5;
 }
-.phase1-detail .vs-product-carousel-slide {
+.phase1-detail .ty-system__product-carousel-slide {
   inset: 0;
   width: 100%;
   height: 100%;
@@ -47,7 +47,7 @@ html, body { overflow-x: hidden; }
   overflow: hidden;
   background: #eef3f5;
 }
-.phase1-detail .vs-product-carousel-slide img {
+.phase1-detail .ty-system__product-carousel-slide img {
   display: block !important;
   flex: 0 1 auto;
   width: auto !important;
@@ -71,8 +71,8 @@ html, body { overflow-x: hidden; }
     min-height: 0;
   }
   .phase1-detail .v3p-hero-media { order: 0; }
-  .phase1-detail .vs-product-carousel-stage { height: 340px !important; }
-  .phase1-detail .vs-product-carousel-slide { padding: 16px !important; }
+  .phase1-detail .ty-system__product-carousel-stage { height: 340px !important; }
+  .phase1-detail .ty-system__product-carousel-slide { padding: 16px !important; }
   .phase1-detail .v3p-family-nav {
     display: flex;
     flex-wrap: nowrap !important;
@@ -89,12 +89,12 @@ html, body { overflow-x: hidden; }
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 24px;
   }
-  .phase1-detail .vs-product-carousel-stage { height: 420px !important; }
+  .phase1-detail .ty-system__product-carousel-stage { height: 420px !important; }
 }
 @media (max-width: 560px) {
   .phase1-detail .v3p-hero { width: calc(100% - 28px); gap: 16px; }
-  .phase1-detail .vs-product-carousel-stage { height: 280px !important; }
-  .phase1-detail .vs-product-carousel-slide { padding: 12px !important; }
+  .phase1-detail .ty-system__product-carousel-stage { height: 280px !important; }
+  .phase1-detail .ty-system__product-carousel-slide { padding: 12px !important; }
 }
 
 /* Directory hero: image, caption and controls always occupy stable rows. */

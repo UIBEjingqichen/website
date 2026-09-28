@@ -34,9 +34,9 @@ small,.eyebrow,.v3p-kicker,.yw-kicker,.ty15-kicker,.ty16-kicker,.mfg34-kicker{fo
 .language{color:var(--ty-muted);font-size:var(--ty-fs-2);font-weight:700;letter-spacing:.08em}
 .menu-toggle{display:none;border:1px solid var(--ty-border);border-radius:var(--ty-radius);background:var(--ty-n-0);color:var(--ty-navy);padding:8px 10px}
 
-.btn,.v3p-outline,.mfg34-btn,.vs-button{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 15px;border:1px solid var(--ty-blue);border-radius:var(--ty-radius);background:transparent;color:var(--ty-blue);font-size:var(--ty-fs-2);font-weight:750;line-height:1.2;cursor:pointer;transition:background .18s ease,border-color .18s ease,color .18s ease,transform .18s ease}
-.btn-primary,.mfg34-btn.primary,.vs-button.primary{border-color:var(--ty-teal-dark);background:var(--ty-teal-dark);color:var(--ty-n-0)}
-.btn:hover,.v3p-outline:hover,.mfg34-btn:hover,.vs-button:hover{transform:translateY(-1px);border-color:var(--ty-teal);background:var(--ty-teal);color:var(--ty-n-0)}
+.btn,.v3p-outline,.mfg34-btn,.ty-system__button{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 15px;border:1px solid var(--ty-blue);border-radius:var(--ty-radius);background:transparent;color:var(--ty-blue);font-size:var(--ty-fs-2);font-weight:750;line-height:1.2;cursor:pointer;transition:background .18s ease,border-color .18s ease,color .18s ease,transform .18s ease}
+.btn-primary,.mfg34-btn.primary,.ty-system__button.primary{border-color:var(--ty-teal-dark);background:var(--ty-teal-dark);color:var(--ty-n-0)}
+.btn:hover,.v3p-outline:hover,.mfg34-btn:hover,.ty-system__button:hover{transform:translateY(-1px);border-color:var(--ty-teal);background:var(--ty-teal);color:var(--ty-n-0)}
 .text-link,.yw-text-arrow,.ty16-all-link,.v23-hero-link{color:var(--ty-blue);font-size:var(--ty-fs-2);font-weight:750}
 
 .footer{padding:48px max(24px,calc((100vw - var(--ty-max))/2)) 20px;border-top:1px solid var(--ty-border);background:var(--ty-navy);color:var(--ty-n-200)}

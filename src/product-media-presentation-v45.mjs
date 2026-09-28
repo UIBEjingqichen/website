@@ -97,7 +97,7 @@ function removeMergedNavLinks(html) {
     return `<nav${attrs}>${next}</nav>`;
   });
   for (const slug of mergedSlugs) {
-    const related = new RegExp(`<a\\b(?=[^>]*class=["'][^"']*vs-related-card[^"']*["'])[^>]*href=["'][^"']*${slug}\\/?["'][^>]*>[\\s\\S]*?<\\/a>`, "gi");
+    const related = new RegExp(`<a\\b(?=[^>]*class=["'][^"']*ty-system__related-card[^"']*["'])[^>]*href=["'][^"']*${slug}\\/?["'][^>]*>[\\s\\S]*?<\\/a>`, "gi");
     html = html.replace(related, "");
   }
   return html;

@@ -51,7 +51,7 @@ function addAnchorBefore(html, marker, id) {
   if (html.includes(`id="${id}"`)) return html;
   const i = html.indexOf(marker);
   if (i < 0) return html;
-  return html.slice(0, i) + `<span id="${id}" class="vs-detail-anchor" aria-hidden="true"></span>` + html.slice(i);
+  return html.slice(0, i) + `<span id="${id}" class="ty-system__detail-anchor" aria-hidden="true"></span>` + html.slice(i);
 }
 
 function ensureRatings(html) {
@@ -81,23 +81,23 @@ function ensureEngineering(html) {
   const fallback = html.indexOf('id="drawings"');
   if (fallback >= 0) {
     const section = html.lastIndexOf("<section", fallback);
-    if (section >= 0) return html.slice(0, section) + '<span id="engineering" class="vs-detail-anchor" aria-hidden="true"></span>' + html.slice(section);
+    if (section >= 0) return html.slice(0, section) + '<span id="engineering" class="ty-system__detail-anchor" aria-hidden="true"></span>' + html.slice(section);
   }
-  return html.replace("</main>", '<span id="engineering" class="vs-detail-anchor" aria-hidden="true"></span></main>');
+  return html.replace("</main>", '<span id="engineering" class="ty-system__detail-anchor" aria-hidden="true"></span></main>');
 }
 
 function genericDocuments() {
-  return '<section class="vs-documents" id="documents"><div class="v3p-shell"><p class="v3p-kicker">Standards &amp; Documents</p><h2 class="v3p-title">Catalog reference and project documentation</h2><p>Published catalog and family data are used as preliminary reference unless a model-specific report is explicitly identified. Final ratings, dimensions, interfaces and guarantees are confirmed against the approved project design.</p><div class="vs-doc-grid"><article class="vs-doc-card"><small>Reference Basis</small><h3>Tianyu product catalog</h3><p>Use the published family range for preliminary selection and request model-specific evidence when required.</p><div class="vs-doc-actions"><a class="vs-button" href="../../catalog.html">Open product catalog</a><a class="vs-button" href="../../resources.html#certificates">Certificates &amp; reports</a></div></article><article class="vs-doc-card"><small>Project Documents</small><h3>Approved project package</h3><p>Final drawings, interfaces, accessories and test documentation are issued for the confirmed project configuration.</p><div class="vs-doc-actions"><button class="vs-button primary" type="button" data-quote-open>Request project documents</button></div></article></div></div></section>';
+  return '<section class="ty-system__documents" id="documents"><div class="v3p-shell"><p class="v3p-kicker">Standards &amp; Documents</p><h2 class="v3p-title">Catalog reference and project documentation</h2><p>Published catalog and family data are used as preliminary reference unless a model-specific report is explicitly identified. Final ratings, dimensions, interfaces and guarantees are confirmed against the approved project design.</p><div class="ty-system__doc-grid"><article class="ty-system__doc-card"><small>Reference Basis</small><h3>Tianyu product catalog</h3><p>Use the published family range for preliminary selection and request model-specific evidence when required.</p><div class="ty-system__doc-actions"><a class="ty-system__button" href="../../catalog.html">Open product catalog</a><a class="ty-system__button" href="../../resources.html#certificates">Certificates &amp; reports</a></div></article><article class="ty-system__doc-card"><small>Project Documents</small><h3>Approved project package</h3><p>Final drawings, interfaces, accessories and test documentation are issued for the confirmed project configuration.</p><div class="ty-system__doc-actions"><button class="ty-system__button primary" type="button" data-quote-open>Request project documents</button></div></article></div></div></section>';
 }
 
 function related(slug) {
   const title = slug.replaceAll("-", " ");
-  return `<section class="vs-related" id="related"><div class="v3p-shell"><p class="v3p-kicker">Related Products</p><h2 class="v3p-title">Continue product selection</h2><div class="vs-related-grid"><a class="vs-related-card" href="../../products.html"><small>Product Directory</small><strong>Compare Tianyu transformer platforms</strong><span>View products →</span></a><a class="vs-related-card" href="../../applications.html"><small>Applications</small><strong>Match equipment to project duty</strong><span>View applications →</span></a><a class="vs-related-card" href="../../resources.html"><small>Technical Resources</small><strong>Review documents for ${title}</strong><span>View resources →</span></a></div></div></section>`;
+  return `<section class="ty-system__related" id="related"><div class="v3p-shell"><p class="v3p-kicker">Related Products</p><h2 class="v3p-title">Continue product selection</h2><div class="ty-system__related-grid"><a class="ty-system__related-card" href="../../products.html"><small>Product Directory</small><strong>Compare Tianyu transformer platforms</strong><span>View products →</span></a><a class="ty-system__related-card" href="../../applications.html"><small>Applications</small><strong>Match equipment to project duty</strong><span>View applications →</span></a><a class="ty-system__related-card" href="../../resources.html"><small>Technical Resources</small><strong>Review documents for ${title}</strong><span>View resources →</span></a></div></div></section>`;
 }
 
 function ensureHeroActions(html) {
-  if (html.includes("vs-detail-hero-actions")) return html;
-  const block = '<div class="vs-detail-hero-actions"><button class="vs-button primary" type="button" data-quote-open>Request RFQ</button><a class="vs-button" href="#ratings">View ratings</a></div>';
+  if (html.includes("ty-system__detail-hero-actions")) return html;
+  const block = '<div class="ty-system__detail-hero-actions"><button class="ty-system__button primary" type="button" data-quote-open>Request RFQ</button><a class="ty-system__button" href="#ratings">View ratings</a></div>';
   if (html.includes('<nav class="v3p-family-nav">')) return html.replace('<nav class="v3p-family-nav">', `${block}<nav class="v3p-family-nav">`);
   const media = html.indexOf('<div class="v3p-hero-media">');
   if (media >= 0) return html.slice(0, media) + block + html.slice(media);
@@ -105,11 +105,11 @@ function ensureHeroActions(html) {
 }
 
 function ensureJump(html) {
-  if (html.includes("vs-detail-jump")) return html;
+  if (html.includes("ty-system__detail-jump")) return html;
   const start = html.indexOf('<section class="v3p-hero">');
   const end = html.indexOf("</section>", start);
   if (start < 0 || end < 0) return html;
-  const nav = '<nav class="vs-detail-jump" aria-label="Product page sections"><div class="vs-detail-jump-inner"><a href="#ratings">Ratings</a><a href="#applications">Applications</a><a href="#engineering">Engineering</a><a href="#drawings">Photos &amp; Drawings</a><a href="#documents">Standards &amp; Documents</a><a href="#related">Related Products</a><a href="#contact-rfq">RFQ</a></div></nav>';
+  const nav = '<nav class="ty-system__detail-jump" aria-label="Product page sections"><div class="ty-system__detail-jump-inner"><a href="#ratings">Ratings</a><a href="#applications">Applications</a><a href="#engineering">Engineering</a><a href="#drawings">Photos &amp; Drawings</a><a href="#documents">Standards &amp; Documents</a><a href="#related">Related Products</a><a href="#contact-rfq">RFQ</a></div></nav>';
   return html.slice(0, end + 10) + nav + html.slice(end + 10);
 }
 
@@ -120,7 +120,7 @@ function ensureCta(html) {
     const end = html.indexOf(">", start);
     const open = html.slice(start, end + 1);
     if (!/\sid=/.test(open)) return html.slice(0, start) + open.replace(">", ' id="contact-rfq">') + html.slice(end + 1);
-    return html.slice(0, start) + '<span id="contact-rfq" class="vs-detail-anchor" aria-hidden="true"></span>' + html.slice(start);
+    return html.slice(0, start) + '<span id="contact-rfq" class="ty-system__detail-anchor" aria-hidden="true"></span>' + html.slice(start);
   }
   return html.replace("</main>", '<section class="v3p-cta" id="contact-rfq"><div><p class="v3p-kicker">Technical Inquiry</p><h2>Send the project ratings for engineering review</h2><p>Capacity, voltage, frequency, vector group, impedance, tap range, site conditions and standards help define the correct configuration.</p></div><button class="btn btn-primary" type="button" data-quote-open>Request a Technical Review</button></section></main>');
 }
@@ -145,8 +145,8 @@ for (const file of pages()) {
   if (!html.includes('id="applications"')) html = addAnchorBefore(html, 'id="engineering"', "applications");
   html = ensureEngineering(html);
   html = sectionAround(html, ["Product &amp; Engineering Views", "Product & Engineering Views", "Product Images", "Engineering Drawings"], "drawings");
-  if (!html.includes('id="drawings"')) html = addAnchorBefore(html, '<section class="vs-documents"', "drawings");
-  if (!html.includes('id="drawings"')) html = html.replace("</main>", '<span id="drawings" class="vs-detail-anchor" aria-hidden="true"></span></main>');
+  if (!html.includes('id="drawings"')) html = addAnchorBefore(html, '<section class="ty-system__documents"', "drawings");
+  if (!html.includes('id="drawings"')) html = html.replace("</main>", '<span id="drawings" class="ty-system__detail-anchor" aria-hidden="true"></span></main>');
   if (!html.includes('id="documents"')) {
     const cta = html.indexOf('<section class="v3p-cta"');
     html = cta >= 0 ? html.slice(0, cta) + genericDocuments() + html.slice(cta) : html.replace("</main>", genericDocuments() + "</main>");

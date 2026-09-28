@@ -83,7 +83,7 @@ export const knowledgeTopics = [
 
 export const knowledgeFaqs = [
   {
-    slug: "dry-type-vs-oil-immersed-transformer",
+    slug: "dry-type-ty-system__oil-immersed-transformer",
     topic: "transformer-selection",
     question: "Dry-type vs oil-immersed transformer: how should a project choose?",
     summary: "The selection depends on installation location, fire and environmental requirements, voltage and capacity, maintenance conditions and lifecycle cost.",
@@ -94,7 +94,7 @@ export const knowledgeFaqs = [
       ["What should be compared", "Compare voltage and capacity range, fire classification, environmental impact, losses, noise, footprint, maintenance plan, overload duty and total lifecycle cost."]
     ],
     relatedTerms: ["Cast resin", "VPI", "Mineral oil", "Natural ester", "Fire-resistant fluid"],
-    relatedFaqs: ["mineral-oil-vs-natural-ester", "cast-resin-vs-vpi", "information-required-for-transformer-quotation"],
+    relatedFaqs: ["mineral-oil-ty-system__natural-ester", "cast-resin-ty-system__vpi", "information-required-for-transformer-quotation"],
     productLink: "../../products.html",
     prefill: { structure: "not_sure", function: "general" }
   },
@@ -115,7 +115,7 @@ export const knowledgeFaqs = [
     prefill: { structure: "dry", function: "k_rated" }
   },
   {
-    slug: "onan-vs-onaf-transformer-cooling",
+    slug: "onan-ty-system__onaf-transformer-cooling",
     topic: "liquid-immersed-transformers",
     question: "What is the difference between ONAN and ONAF transformer cooling?",
     summary: "ONAN uses natural oil circulation and natural air cooling, while ONAF adds forced air from fans around the radiators.",
@@ -126,12 +126,12 @@ export const knowledgeFaqs = [
       ["Selection considerations", "Confirm ambient temperature, loading profile, permissible temperature rise, noise limits, fan redundancy and whether the forced-cooling rating is continuous or conditional."]
     ],
     relatedTerms: ["Oil Natural Air Natural", "Oil Natural Air Forced", "Temperature rise", "Multi-rating"],
-    relatedFaqs: ["mineral-oil-vs-natural-ester", "high-altitude-transformer-design", "transformer-impedance-voltage"],
+    relatedFaqs: ["mineral-oil-ty-system__natural-ester", "high-altitude-transformer-design", "transformer-impedance-voltage"],
     productLink: "../../products.html#oil-immersed-power-transformer",
     prefill: { structure: "liquid", function: "general" }
   },
   {
-    slug: "mineral-oil-vs-natural-ester",
+    slug: "mineral-oil-ty-system__natural-ester",
     topic: "liquid-immersed-transformers",
     question: "Mineral oil vs natural ester: which transformer fluid should be selected?",
     summary: "Mineral oil offers mature performance and broad application, while natural ester provides a higher fire point and improved biodegradability.",
@@ -142,7 +142,7 @@ export const knowledgeFaqs = [
       ["Selection questions", "Confirm installation location, minimum ambient temperature, fire code, environmental sensitivity, voltage and capacity, maintenance plan and whether the unit is hermetically sealed."]
     ],
     relatedTerms: ["Insulating liquid", "Fire point", "Biodegradability", "Hermetically sealed tank"],
-    relatedFaqs: ["dry-type-vs-oil-immersed-transformer", "onan-vs-onaf-transformer-cooling", "high-altitude-transformer-design"],
+    relatedFaqs: ["dry-type-ty-system__oil-immersed-transformer", "onan-ty-system__onaf-transformer-cooling", "high-altitude-transformer-design"],
     productLink: "../../products.html#oil-immersed-energy-saving-transformer",
     prefill: { structure: "liquid", function: "general" }
   },
@@ -158,7 +158,7 @@ export const knowledgeFaqs = [
       ["What to provide", "Provide the required percentage impedance, MVA base, tolerance, short-circuit level, loading duty and details of any existing transformer that must operate in parallel."]
     ],
     relatedTerms: ["Percentage impedance", "Short-circuit current", "Voltage drop", "Parallel operation"],
-    relatedFaqs: ["transformer-vector-group", "oltc-vs-octc", "information-required-for-transformer-quotation"],
+    relatedFaqs: ["transformer-vector-group", "oltc-ty-system__octc", "information-required-for-transformer-quotation"],
     productLink: "../../products.html",
     prefill: { structure: "not_sure", function: "general" }
   },
@@ -174,7 +174,7 @@ export const knowledgeFaqs = [
       ["Commercial and document scope", "Quantity, delivery destination, standards, routine or special tests, drawings, certificates, inspection requirements, packaging and requested delivery schedule."]
     ],
     relatedTerms: ["Datasheet", "Single-line diagram", "Technical specification", "Inspection and test plan"],
-    relatedFaqs: ["dry-type-vs-oil-immersed-transformer", "transformer-impedance-voltage", "transformer-vector-group"],
+    relatedFaqs: ["dry-type-ty-system__oil-immersed-transformer", "transformer-impedance-voltage", "transformer-vector-group"],
     productLink: "../../contact.html",
     prefill: { structure: "not_sure", function: "general" }
   },
@@ -190,7 +190,7 @@ export const knowledgeFaqs = [
       ["Reliability and efficiency", "Review redundancy philosophy, loading under normal and contingency conditions, loss capitalization, temperature rise and fan dependency."]
     ],
     relatedTerms: ["K-rated transformer", "Bus duct", "Low-noise design", "Redundancy"],
-    relatedFaqs: ["what-is-transformer-k-factor", "cast-resin-vs-vpi", "dry-type-vs-oil-immersed-transformer"],
+    relatedFaqs: ["what-is-transformer-k-factor", "cast-resin-ty-system__vpi", "dry-type-ty-system__oil-immersed-transformer"],
     productLink: "../../products.html#dry-type-transformer",
     prefill: { structure: "dry", function: "k_rated" }
   },
@@ -211,7 +211,7 @@ export const knowledgeFaqs = [
     prefill: { structure: "not_sure", function: "inverter" }
   },
   {
-    slug: "cast-resin-vs-vpi",
+    slug: "cast-resin-ty-system__vpi",
     topic: "dry-type-transformers",
     question: "Cast resin vs VPI dry-type transformer: what is the difference?",
     summary: "Cast resin embeds the winding in a solid resin body, while VPI impregnates the winding insulation with varnish under vacuum and pressure.",
@@ -222,12 +222,12 @@ export const knowledgeFaqs = [
       ["How to choose", "Compare humidity and contamination, thermal cycling, overload duty, partial-discharge requirement, enclosure, repairability, certification and local market practice."]
     ],
     relatedTerms: ["Epoxy resin", "Vacuum pressure impregnation", "Partial discharge", "Thermal class"],
-    relatedFaqs: ["transformer-for-data-center", "dry-type-vs-oil-immersed-transformer", "high-altitude-transformer-design"],
+    relatedFaqs: ["transformer-for-data-center", "dry-type-ty-system__oil-immersed-transformer", "high-altitude-transformer-design"],
     productLink: "../../products.html#dry-type-transformer",
     prefill: { structure: "dry", function: "general" }
   },
   {
-    slug: "oltc-vs-octc",
+    slug: "oltc-ty-system__octc",
     topic: "electrical-parameters",
     question: "What is the difference between OLTC and OCTC?",
     summary: "An OLTC changes transformer taps while energized and carrying load, while an OCTC is operated only when the transformer is de-energized.",
@@ -254,7 +254,7 @@ export const knowledgeFaqs = [
       ["Parallel operation", "Transformers intended for parallel operation generally require compatible vector groups, voltage ratios, tap settings and impedance values."]
     ],
     relatedTerms: ["Dyn11", "YNd11", "Zigzag", "Phase displacement"],
-    relatedFaqs: ["transformer-impedance-voltage", "oltc-vs-octc", "information-required-for-transformer-quotation"],
+    relatedFaqs: ["transformer-impedance-voltage", "oltc-ty-system__octc", "information-required-for-transformer-quotation"],
     productLink: "../../products.html",
     prefill: { structure: "not_sure", function: "general" }
   },
@@ -270,7 +270,7 @@ export const knowledgeFaqs = [
       ["What to specify", "Provide site altitude, maximum and minimum ambient temperature, indoor or outdoor location, enclosure, required rating at site and the governing standard."]
     ],
     relatedTerms: ["Altitude correction", "Air clearance", "Temperature rise", "Derating"],
-    relatedFaqs: ["onan-vs-onaf-transformer-cooling", "cast-resin-vs-vpi", "information-required-for-transformer-quotation"],
+    relatedFaqs: ["onan-ty-system__onaf-transformer-cooling", "cast-resin-ty-system__vpi", "information-required-for-transformer-quotation"],
     productLink: "../../products.html",
     prefill: { structure: "not_sure", function: "general" }
   }

@@ -88,9 +88,9 @@
       ['.ty-home .v3p-products-home .v3p-title, .ty-home .v3p-family-card', 65],
       ['.ty-home .ty15-head, .ty-home .ty15-band', 75],
       ['.ty-home .ty16-head, .ty-home .ty16-filters, .ty-home .ty16-map-stage, .ty-home .ty16-card', 70],
-      ['.ty-home .v5-certificate-coverflow, .ty-home .ty18-news-card, .ty-home .vs-home-evidence-head, .ty-home .vs-home-evidence-grid figure, .ty-home .vs-home-cta .v3p-shell', 70],
+      ['.ty-home .v5-certificate-coverflow, .ty-home .ty18-news-card, .ty-home .ty-system__home-evidence-head, .ty-home .ty-system__home-evidence-grid figure, .ty-home .ty-system__home-cta .v3p-shell', 70],
       ['.phase1-products .v23-family-heading, .phase1-products .v23-family-grid > a, .phase1-products .v12-directory-head, .phase1-products .v3p-platform-card', 55],
-      ['.phase1-detail .v3p-spec, .phase1-detail .v3p-table-wrap, .phase1-detail .v3p-two-col > div, .phase1-detail .v3p-photo, .phase1-detail .vs-doc-card, .phase1-detail .vs-related-card, .phase1-detail .v3p-cta > *', 65],
+      ['.phase1-detail .v3p-spec, .phase1-detail .v3p-table-wrap, .phase1-detail .v3p-two-col > div, .phase1-detail .v3p-photo, .phase1-detail .ty-system__doc-card, .phase1-detail .ty-system__related-card, .phase1-detail .v3p-cta > *', 65],
       ['.phase1-manufacturing .mfg34-head, .phase1-manufacturing .mfg34-metric, .phase1-manufacturing .mfg34-step, .phase1-manufacturing .mfg34-system, .phase1-manufacturing .mfg34-digital-visual, .phase1-manufacturing .mfg34-test-item, .phase1-manufacturing .mfg34-test-photo, .phase1-manufacturing .mfg34-gallery figure, .phase1-manufacturing .mfg34-faq details, .phase1-manufacturing .mfg34-cta-inner > *', 55]
     ];
 

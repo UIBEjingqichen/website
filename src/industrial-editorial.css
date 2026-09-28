@@ -6,7 +6,7 @@ body h1{font-size:var(--ty-fs-8);line-height:1.12;letter-spacing:-.025em;font-we
 body h2{line-height:1.18;letter-spacing:-.015em;font-weight:700}
 body p{line-height:1.55}
 body .site-header{background:var(--ty-n-0)!important;border-bottom:1px solid var(--ty-editorial__line)!important}
-body .site-header .btn,body .btn-primary,body .vs-button.primary{background:var(--ty-editorial__teal)!important;border-color:var(--ty-editorial__teal)!important;color:var(--ty-n-0)!important;border-radius:4px!important;min-height:44px}
+body .site-header .btn,body .btn-primary,body .ty-system__button.primary{background:var(--ty-editorial__teal)!important;border-color:var(--ty-editorial__teal)!important;color:var(--ty-n-0)!important;border-radius:4px!important;min-height:44px}
 body .site-header .brand,body .footer a{color:var(--ty-editorial__navy)}
 body .site-header .main-nav a{font-size:var(--ty-fs-3);font-weight:600}
 body a:focus-visible,body button:focus-visible,body input:focus-visible,body select:focus-visible,body textarea:focus-visible,body summary:focus-visible{outline:3px solid var(--ty-copper-600)!important;outline-offset:3px!important}

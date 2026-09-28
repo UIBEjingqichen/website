@@ -217,9 +217,9 @@ function relativeDepth(relativePath) {
 
 function relatedFaqsForProduct(relativePath) {
   const lower = relativePath.toLowerCase();
-  if (lower.includes("dry") || lower.includes("cast") || lower.includes("amorphous")) return ["what-is-transformer-k-factor", "transformer-for-data-center", "cast-resin-vs-vpi"];
+  if (lower.includes("dry") || lower.includes("cast") || lower.includes("amorphous")) return ["what-is-transformer-k-factor", "transformer-for-data-center", "cast-resin-ty-system__vpi"];
   if (lower.includes("rectifier") || lower.includes("phase-shifting")) return ["inverter-duty-transformer", "what-is-transformer-k-factor", "transformer-impedance-voltage"];
-  return ["onan-vs-onaf-transformer-cooling", "mineral-oil-vs-natural-ester", "transformer-impedance-voltage"];
+  return ["onan-ty-system__onaf-transformer-cooling", "mineral-oil-ty-system__natural-ester", "transformer-impedance-voltage"];
 }
 
 function injectBaseEnhancements(file) {

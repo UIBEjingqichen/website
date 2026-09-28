@@ -54,10 +54,10 @@ function uniqueImages(images) {
 }
 
 function carousel(images) {
-  const slides = images.map((image, index) => `<figure class="vs-product-carousel-slide${index === 0 ? " is-active" : ""}" data-product-slide aria-hidden="${index === 0 ? "false" : "true"}"><img src="${esc(image.src)}" alt="${esc(image.alt)}" ${index === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'}></figure>`).join("");
-  const dots = images.map((image, index) => `<button class="vs-product-carousel-dot${index === 0 ? " is-active" : ""}" type="button" data-product-dot aria-label="Show image ${index + 1}" aria-current="${index === 0 ? "true" : "false"}"></button>`).join("");
+  const slides = images.map((image, index) => `<figure class="ty-system__product-carousel-slide${index === 0 ? " is-active" : ""}" data-product-slide aria-hidden="${index === 0 ? "false" : "true"}"><img src="${esc(image.src)}" alt="${esc(image.alt)}" ${index === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'}></figure>`).join("");
+  const dots = images.map((image, index) => `<button class="ty-system__product-carousel-dot${index === 0 ? " is-active" : ""}" type="button" data-product-dot aria-label="Show image ${index + 1}" aria-current="${index === 0 ? "true" : "false"}"></button>`).join("");
   const count = `${String(1).padStart(2, "0")} / ${String(images.length).padStart(2, "0")}`;
-  return `<div class="v3p-hero-media vs-product-carousel" data-product-hero data-single-slide="${images.length < 2 ? "true" : "false"}" aria-label="Product image carousel"><div class="vs-product-carousel-stage">${slides}</div><div class="vs-product-carousel-controls"><div class="vs-product-carousel-dots" aria-label="Choose product image">${dots}</div><span class="vs-product-carousel-count" data-product-count>${count}</span></div></div>`;
+  return `<div class="v3p-hero-media ty-system__product-carousel" data-product-hero data-single-slide="${images.length < 2 ? "true" : "false"}" aria-label="Product image carousel"><div class="ty-system__product-carousel-stage">${slides}</div><div class="ty-system__product-carousel-controls"><div class="ty-system__product-carousel-dots" aria-label="Choose product image">${dots}</div><span class="ty-system__product-carousel-count" data-product-count>${count}</span></div></div>`;
 }
 
 function transform(html, slug) {

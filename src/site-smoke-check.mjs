@@ -144,7 +144,7 @@ const supplementalDetails = new Map([
 for (const [slug, facts] of supplementalDetails) {
   const rel = `products/${slug}/index.html`;
   const html = read(rel);
-  for (const marker of ['catalog-v8-product-details.css', 'class="v3p-hero c8d-hero"', 'vs-detail-jump', 'id="ratings"', 'id="engineering"', 'id="applications"', 'id="documents"', 'id="contact-rfq"', ...facts]) {
+  for (const marker of ['catalog-v8-product-details.css', 'class="v3p-hero c8d-hero"', 'ty-system__detail-jump', 'id="ratings"', 'id="engineering"', 'id="applications"', 'id="documents"', 'id="contact-rfq"', ...facts]) {
     if (!html.includes(marker)) throw new Error(`${rel} missing source-backed product detail: ${marker}`);
   }
   if (html.includes('>Product Overview<') || html.includes('21M2078-S')) throw new Error(`${rel} has a removed or inherited section.`);
@@ -172,7 +172,7 @@ for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
   for (const href of ["../../assets/css/visual-system.css", "../../assets/css/product-detail.css"]) {
     if (!styles.includes(href)) throw new Error(`${rel} missing unified stylesheet: ${href}`);
   }
-  for (const marker of ["phase1-detail", "vs-detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "data-product-hero", "data-product-slide", "visual-behavior.js"]) {
+  for (const marker of ["phase1-detail", "ty-system__detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "data-product-hero", "data-product-slide", "visual-behavior.js"]) {
     if (!html.includes(marker)) throw new Error(`${rel} missing detail-layout marker: ${marker}`);
   }
   if (!/<img\b[^>]*src="[^"]*assets\/media\//i.test(html)) throw new Error(`${rel} is missing product media.`);

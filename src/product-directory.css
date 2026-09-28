@@ -20,7 +20,7 @@ body.phase1-products{background:var(--ty-n-50)}
 .phase1-products .v23-product-slide figcaption strong{color:var(--ty-text);font-size:var(--ty-fs-2);text-align:right}
 .phase1-products .v23-carousel-nav{position:absolute;z-index:5;top:10px;right:10px;display:flex;align-items:center;gap:8px;padding:6px 8px;border:1px solid color-mix(in srgb, var(--ty-navy-800) 12%, transparent);border-radius:var(--ty-radius);background:color-mix(in srgb, var(--ty-n-0) 90%, transparent)}
 .phase1-products .v23-carousel-count{color:var(--ty-muted);font-size:var(--ty-fs-1);font-weight:750}
-.phase1-products .vs-carousel-toggle{min-height:28px;padding:4px 7px;border:1px solid var(--ty-border);border-radius:3px;background:var(--ty-n-0);color:var(--ty-text);font-size:var(--ty-fs-1);cursor:pointer}
+.phase1-products .ty-system__carousel-toggle{min-height:28px;padding:4px 7px;border:1px solid var(--ty-border);border-radius:3px;background:var(--ty-n-0);color:var(--ty-text);font-size:var(--ty-fs-1);cursor:pointer}
 .phase1-products .v23-carousel-dots{display:flex;gap:4px}
 .phase1-products .v23-carousel-dot{width:18px;height:3px;padding:0;border:0;border-radius:999px;background:var(--ty-navy-500);cursor:pointer}
 .phase1-products .v23-carousel-dot.is-active{background:var(--ty-teal-dark)}

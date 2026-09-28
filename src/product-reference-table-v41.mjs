@@ -148,11 +148,11 @@ function scopeNote(slug, profile) {
 
 function renderReferenceTable(slug, profile) {
   const rows = profile.rows.map(([name, value]) => `<tr><td>${esc(name)}</td><td>${esc(value)}</td></tr>`).join("");
-  return `<div class="vs-reference-parameters" data-v41-reference-parameters><h3>Representative Parameter Table</h3><p class="vs-parameter-source"><small><strong>Reference product:</strong> ${esc(profile.model)} · ${esc(profile.source)}. ${esc(scopeNote(slug, profile))}</small></p><div class="v3p-table-wrap"><table class="v3p-table"><thead><tr><th>Parameter</th><th>Reference value</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
+  return `<div class="ty-system__reference-parameters" data-v41-reference-parameters><h3>Representative Parameter Table</h3><p class="ty-system__parameter-source"><small><strong>Reference product:</strong> ${esc(profile.model)} · ${esc(profile.source)}. ${esc(scopeNote(slug, profile))}</small></p><div class="v3p-table-wrap"><table class="v3p-table"><thead><tr><th>Parameter</th><th>Reference value</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
 }
 
 function injectIntoRatings(html, slug) {
-  html = html.replace(/<div class="vs-reference-parameters" data-v41-reference-parameters>[\s\S]*?<\/div>\s*<\/div>/g, "</div>");
+  html = html.replace(/<div class="ty-system__reference-parameters" data-v41-reference-parameters>[\s\S]*?<\/div>\s*<\/div>/g, "</div>");
   const id = html.indexOf('id="ratings"');
   if (id < 0) return html;
   const sectionStart = html.lastIndexOf("<section", id);

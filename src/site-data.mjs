@@ -82,12 +82,12 @@ export const knowledgeHighlights = [
     title: "Dry-Type vs Oil-Immersed Transformer",
     category: "Selection Guide",
     summary: "Compare installation, fire safety, environmental conditions, voltage, capacity and maintenance requirements.",
-    href: "knowledge/faq/dry-type-vs-oil-immersed-transformer.html"
+    href: "knowledge/faq/dry-type-ty-system__oil-immersed-transformer.html"
   },
   {
     title: "ONAN vs ONAF Cooling",
     category: "Technical FAQ",
     summary: "Understand natural and forced-air cooling arrangements before defining transformer loading and accessories.",
-    href: "knowledge/faq/onan-vs-onaf-transformer-cooling.html"
+    href: "knowledge/faq/onan-ty-system__onaf-transformer-cooling.html"
   }
 ];
