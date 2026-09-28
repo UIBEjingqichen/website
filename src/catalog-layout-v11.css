@@ -27,7 +27,7 @@
   margin: 0 !important;
   padding: 5px !important;
   border: 1px solid #d7e0e7 !important;
-  background: #fff !important;
+  background: var(--ty-n-0) !important;
   display: grid !important;
   place-items: center !important;
   overflow: hidden !important;
@@ -113,7 +113,7 @@
   min-width: 0 !important;
   border: 1px solid #ccd8e2 !important;
   border-top: 3px solid #174d78 !important;
-  background: #fff !important;
+  background: var(--ty-n-0) !important;
   overflow: hidden !important;
 }
 .v11-param-head {
@@ -123,7 +123,7 @@
   align-items: end !important;
   padding: 11px 13px 10px !important;
   border-bottom: 1px solid #dbe3e9 !important;
-  background: #f6f8fa !important;
+  background: var(--ty-n-50) !important;
 }
 .v11-param-head p {
   margin: 0 0 4px !important;
@@ -260,7 +260,7 @@
   margin-top: 10px !important;
   border-top: 1px solid #cad6df !important;
   border-bottom: 1px solid #cad6df !important;
-  background: #f7f9fb !important;
+  background: var(--ty-n-50) !important;
 }
 .v11-insulation-summary > span,
 .v11-insulation-summary > div {
@@ -295,7 +295,7 @@
   min-width: 0 !important;
   border: 1px solid #ccd8e2 !important;
   border-top: 3px solid #174d78 !important;
-  background: #fff !important;
+  background: var(--ty-n-0) !important;
   overflow: hidden !important;
 }
 .v11-pad-summary > p {
@@ -354,7 +354,7 @@
 .v11-performance-table td:last-child { border-right: 0 !important; }
 .v11-performance-table th {
   border-top: 1px solid #bfcdd8 !important;
-  background: #f7f9fb !important;
+  background: var(--ty-n-50) !important;
   color: #61788d !important;
   font-size: 7px !important;
   font-weight: 800 !important;

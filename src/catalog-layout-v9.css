@@ -36,7 +36,7 @@
   margin: 0 !important;
   padding: 5px !important;
   border: 1px solid #d8e1e8 !important;
-  background: #fff !important;
+  background: var(--ty-n-0) !important;
   overflow: hidden !important;
   display: grid !important;
   place-items: center !important;
@@ -60,7 +60,7 @@
   padding: 19px 21px !important;
   border-top: 2px solid #154b78 !important;
   border-bottom: 1px solid #d4dfe7 !important;
-  background: #f8fafc !important;
+  background: var(--ty-n-50) !important;
 }
 .v9-panel-intro > p,
 .v9-panel-columns p {
@@ -94,7 +94,7 @@
   padding: 9px 11px !important;
   border-right: 1px solid #e3e9ee !important;
   border-bottom: 1px solid #e3e9ee !important;
-  background: #fff !important;
+  background: var(--ty-n-0) !important;
 }
 .v9-overview-specs span,
 .v9-overview-specs strong {
@@ -185,7 +185,7 @@
 .v9-details-lead {
   padding: 17px 19px 18px !important;
   border-top: 2px solid #154b78 !important;
-  background: #f7f9fb !important;
+  background: var(--ty-n-50) !important;
 }
 .v9-details-lead p,
 .v9-detail-duo p,
@@ -218,8 +218,8 @@
 .v9-detail-duo article {
   min-height: 180px !important;
   padding: 16px 17px !important;
-  border: 1px solid #d6e0e8 !important;
-  background: #fff !important;
+  border: 1px solid var(--ty-n-200) !important;
+  background: var(--ty-n-0) !important;
 }
 .v9-detail-duo h4 {
   margin: 0 0 10px !important;
@@ -267,14 +267,14 @@
   min-width: 0 !important;
   padding: 0 18px 18px !important;
   border: 1px solid #d5e0e8 !important;
-  background: #f8fafc !important;
+  background: var(--ty-n-50) !important;
 }
 .v9-reference-panel figure {
   height: 210px !important;
   margin: 0 -18px 18px !important;
   padding: 9px !important;
   border-bottom: 1px solid #d5e0e8 !important;
-  background: #fff !important;
+  background: var(--ty-n-0) !important;
   display: grid !important;
   place-items: center !important;
   overflow: hidden !important;
@@ -354,7 +354,7 @@
   min-width: 0 !important;
   border: 1px solid #cedae3 !important;
   border-top: 3px solid #174d78 !important;
-  background: #fff !important;
+  background: var(--ty-n-0) !important;
 }
 .v9-model-head {
   display: grid !important;
@@ -362,7 +362,7 @@
   gap: 15px !important;
   align-items: end !important;
   padding: 15px 16px 13px !important;
-  background: #f7f9fb !important;
+  background: var(--ty-n-50) !important;
   border-bottom: 1px solid #d9e2e9 !important;
 }
 .v9-model-head p {
@@ -428,7 +428,7 @@
   margin-top: 15px !important;
   border-top: 1px solid #c6d2dc !important;
   border-bottom: 1px solid #c6d2dc !important;
-  background: #f8fafc !important;
+  background: var(--ty-n-50) !important;
 }
 .v9-insulation-band > div {
   min-height: 61px !important;

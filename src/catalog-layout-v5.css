@@ -2,7 +2,7 @@
 :root {
   --catalog-navy: #0a2f56;
   --catalog-ink: #24384d;
-  --catalog-copy: #41566a;
+  --catalog-copy: var(--ty-navy-600);
   --catalog-muted: #6e8192;
   --catalog-line: #d8e0e7;
 }
@@ -134,7 +134,7 @@ body {
   height: 470px !important;
 }
 .product-hero-image {
-  background: #fff !important;
+  background: var(--ty-n-0) !important;
 }
 .product-hero-image img {
   object-fit: contain !important;
@@ -213,7 +213,7 @@ body {
   min-height: 250px !important;
   height: 250px !important;
   padding: 8px !important;
-  background: #fff !important;
+  background: var(--ty-n-0) !important;
 }
 .catalog-quality-grid .catalog-evidence-image img {
   width: 100% !important;
@@ -250,7 +250,7 @@ body {
   grid-template-columns: 46% 54%;
   min-height: 270px;
   border-top: 1px solid var(--catalog-line);
-  background: #fff !important;
+  background: var(--ty-n-0) !important;
 }
 .catalog-cert-page-grid figure {
   height: 270px !important;
@@ -259,7 +259,7 @@ body {
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: #fff !important;
+  background: var(--ty-n-0) !important;
 }
 .catalog-cert-page-grid figure img {
   width: 100% !important;
@@ -311,7 +311,7 @@ body {
   height: 500px !important;
   object-fit: contain !important;
   object-position: center !important;
-  background: #fff !important;
+  background: var(--ty-n-0) !important;
 }
 .catalog-drawing-page-grid figcaption {
   margin-top: 10px !important;

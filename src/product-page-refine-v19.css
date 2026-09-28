@@ -1,5 +1,5 @@
 /* Product portfolio refinement: full-bleed hero, persistent quick navigation and consistent product-card rhythm. */
-body.v19-products-page main{background:#fff}
+body.v19-products-page main{background:var(--ty-n-0)}
 
 /* Hero: use the same full-bleed visual grammar as the homepage. */
 body.v19-products-page .v3p-index-hero{
@@ -8,7 +8,7 @@ body.v19-products-page .v3p-index-hero{
   min-height:clamp(560px,66vh,700px);
   overflow:hidden;
   isolation:isolate;
-  background:#061f35;
+  background:var(--ty-navy-900);
 }
 body.v19-products-page .v3p-index-hero .media{
   position:absolute;
@@ -16,7 +16,7 @@ body.v19-products-page .v3p-index-hero .media{
   z-index:0;
   display:block;
   min-height:0;
-  background:#061f35;
+  background:var(--ty-navy-900);
 }
 body.v19-products-page .v3p-index-hero .media img{
   display:block;
@@ -37,7 +37,7 @@ body.v19-products-page .v3p-index-hero::before{
   z-index:1;
   content:"";
   background:
-    linear-gradient(90deg,rgba(3,25,44,.94) 0%,rgba(3,25,44,.82) 30%,rgba(3,25,44,.53) 52%,rgba(3,25,44,.19) 74%,rgba(3,25,44,.08) 100%),
+    linear-gradient(90deg,rgba(3,25,44,.94) 0%,rgba(3,25,44,.82) 30%,rgba(3,25,44,.53) 52%,rgba(3,25,44,.19) 74%,color-mix(in srgb, var(--ty-navy-900) 8%, transparent) 100%),
     linear-gradient(0deg,rgba(3,25,44,.48) 0%,rgba(3,25,44,0) 46%);
   pointer-events:none;
 }
@@ -50,7 +50,7 @@ body.v19-products-page .v3p-index-hero::after{
   height:88px;
   content:"";
   border-radius:50% 50% 0 0 / 54% 54% 0 0;
-  background:#fff;
+  background:var(--ty-n-0);
   pointer-events:none;
 }
 body.v19-products-page .v3p-index-hero .copy{
@@ -73,7 +73,7 @@ body.v19-products-page .v3p-index-hero .v3p-kicker{
 body.v19-products-page .v3p-index-hero h1{
   max-width:840px;
   margin:0;
-  color:#fff;
+  color:var(--ty-n-0);
   font-size:clamp(44px,5.1vw,70px);
   font-weight:760;
   line-height:1;
@@ -83,7 +83,7 @@ body.v19-products-page .v3p-index-hero h1{
 body.v19-products-page .v3p-index-hero .v3p-lead{
   max-width:720px;
   margin-top:18px;
-  color:rgba(255,255,255,.78);
+  color:color-mix(in srgb, var(--ty-n-0) 78%, transparent);
   font-size:16px;
   line-height:1.62;
 }
@@ -100,9 +100,9 @@ body.v19-products-page .v3p-index-hero .v3p-range-strip a{
   align-items:center;
   justify-content:center;
   padding:9px 12px;
-  border:1px solid rgba(255,255,255,.34);
+  border:1px solid color-mix(in srgb, var(--ty-n-0) 34%, transparent);
   background:rgba(6,31,53,.34);
-  color:#fff;
+  color:var(--ty-n-0);
   text-align:center;
   font-size:10.5px;
   font-weight:850;
@@ -113,7 +113,7 @@ body.v19-products-page .v3p-index-hero .v3p-range-strip a{
 body.v19-products-page .v3p-index-hero .v3p-range-strip a:hover{
   border-color:#75ded4;
   background:rgba(0,139,139,.74);
-  color:#fff;
+  color:var(--ty-n-0);
   transform:translateY(-2px);
 }
 
@@ -122,7 +122,7 @@ body.v19-products-page .v20-product-jump{
   position:sticky;
   z-index:35;
   top:74px;
-  border-bottom:1px solid #d9e3e8;
+  border-bottom:1px solid var(--ty-n-200);
   background:rgba(255,255,255,.94);
   box-shadow:0 8px 24px rgba(6,36,63,.045);
   backdrop-filter:blur(14px);
@@ -151,14 +151,14 @@ body.v19-products-page .v20-product-jump a{
   flex:0 0 auto;
   padding:9px 12px;
   border-radius:999px;
-  color:#29465c;
+  color:var(--ty-navy-600);
   font-size:11px;
   font-weight:800;
   white-space:nowrap;
   transition:color .2s ease,background .2s ease;
 }
 body.v19-products-page .v20-product-jump a:hover{
-  color:#00777a;
+  color:var(--ty-copper-700);
   background:#eaf6f5;
 }
 body.v19-products-page #power-transformers,
@@ -171,7 +171,7 @@ body.v19-products-page #all-platforms{scroll-margin-top:150px}
 body.v19-products-page main>.v3p-section:first-of-type{
   padding-top:clamp(58px,6.5vw,84px);
   padding-bottom:clamp(60px,6.5vw,88px);
-  background:#fff;
+  background:var(--ty-n-0);
 }
 body.v19-products-page main>.v3p-section:first-of-type>.v3p-shell>.v3p-kicker{margin-bottom:10px}
 body.v19-products-page main>.v3p-section:first-of-type>.v3p-shell>.v3p-title{
@@ -189,7 +189,7 @@ body.v19-products-page .v3p-family-card{
   position:relative;
   overflow:hidden;
   border:1px solid #dbe4e8;
-  background:#fff;
+  background:var(--ty-n-0);
   box-shadow:0 8px 24px rgba(6,36,63,.035);
   transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease;
 }
@@ -216,7 +216,7 @@ body.v19-products-page .v3p-family-card-copy{padding:20px 20px 22px}
 body.v19-products-page .v3p-family-card-copy .v3p-kicker{font-size:9.5px}
 body.v19-products-page .v3p-family-card h3{
   margin:.2rem 0 .55rem;
-  color:#0a2943;
+  color:var(--ty-navy-800);
   font-size:19px;
   line-height:1.12;
 }
@@ -229,7 +229,7 @@ body.v19-products-page .v3p-family-card p{
 body.v19-products-page .v3p-family-card strong{
   display:block;
   margin-top:18px;
-  color:#087f83;
+  color:var(--ty-copper-700);
   font-size:10.5px;
   letter-spacing:.07em;
 }
@@ -237,7 +237,7 @@ body.v19-products-page .v3p-family-card strong{
 /* Directory: reduce oversized headings and preserve a consistent hierarchy. */
 body.v19-products-page #all-platforms{
   padding-top:clamp(62px,6.5vw,88px);
-  background:linear-gradient(180deg,#f3f7f9 0%,#f7f9fa 58%,#fff 100%);
+  background:linear-gradient(180deg,var(--ty-n-50) 0%,var(--ty-n-50) 58%,var(--ty-n-0) 100%);
 }
 body.v19-products-page #all-platforms>.v3p-shell>.v3p-kicker{font-size:10.5px}
 body.v19-products-page #all-platforms>.v3p-shell>.v3p-title{
@@ -259,7 +259,7 @@ body.v19-products-page .v12-directory-head{
 body.v19-products-page .v12-directory-head .v3p-kicker{font-size:10px}
 body.v19-products-page .v12-directory-head h3{
   margin:.08rem 0 0;
-  color:#0a2943;
+  color:var(--ty-navy-800);
   font-size:clamp(25px,2.25vw,34px);
   line-height:1.08;
   letter-spacing:-.02em;
@@ -284,8 +284,8 @@ body.v19-products-page .v3p-platform-card{
   min-width:0;
   min-height:405px;
   overflow:hidden;
-  border:1px solid #d9e3e8;
-  background:#fff;
+  border:1px solid var(--ty-n-200);
+  background:var(--ty-n-0);
   box-shadow:0 6px 20px rgba(6,36,63,.03);
   transition:transform .26s ease,box-shadow .26s ease,border-color .26s ease;
 }

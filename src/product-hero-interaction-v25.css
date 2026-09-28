@@ -49,7 +49,7 @@ body.v19-products-page .v23-stage-dots button.is-active{
   width:56px;
 }
 body.v19-products-page .v23-stage-dots button.is-active::before{
-  background:#078488;
+  background:var(--ty-copper-700);
 }
 body.v19-products-page .v23-stage-dots button:focus-visible{
   outline:2px solid rgba(7,132,136,.35);

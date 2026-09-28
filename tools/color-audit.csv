@@ -1,0 +1,705 @@
+﻿value,count,hue,saturation,lightness,suggested_token,properties,files
+#fff,354,0,0,100,--ty-n-0,--ty-white; --v6-card; --white; background; border; color; fill,applications-projects-v26.css; catalog-product-focus.css; catalog-v3.css; catalog-v8-product-details.css; catalog-v8-web-update.css; company.css; home-capabilities-map-v14.css; home-energy-flow.css; home-product-showcase.css; home-project-map-v16.css; home.css; industrial-editorial.css; manufacturing.css; product-contract-upgrade.css; product-detail.css; product-directory.css; product-hero-split-v21.css; site-experience.css; site-v3-upgrade.css; styles.css; ux-fix-v9.css; ux-refine-v5.css; ux-refine-v6.css; ux-refine-v7.css; visual-refine-v4.css; visual-system.css; yawei-refine.css
+#dfe8ed,37,201,28,90,--ty-n-200,background,product-detail.css; product-directory.css; product-hero-split-v21.css; site-v3-upgrade.css; visual-system.css
+#06243f,20,208,83,14,--ty-navy-800,--navy; background; color,company.css; knowledge.css; product-detail.css; product-directory.css; site-v3-upgrade.css; styles.css; visual-system.css; yawei-refine.css
+#eef3f5,19,197,26,95,--ty-n-100,background,image-quality-pass.css; product-contract-upgrade.css; product-detail.css; product-directory.css; site-v3-upgrade.css; visual-system.css
+#f7fafb,17,195,33,98,--ty-n-50,--ie-bg; background,catalog-product-focus.css; home.css; industrial-editorial.css; manufacturing.css; product-detail.css; product-directory.css; site-v3-upgrade.css; visual-system.css
+#eef4f6,13,195,31,95,--ty-n-100,background,applications-projects-v26.css; manufacturing.css; product-detail.css; product-directory.css; site-v3-upgrade.css
+#d7e2e7,11,199,25,87,--ty-n-200,border; border-bottom; border-top,applications-projects-v26.css; product-detail.css; product-directory.css; site-v3-upgrade.css; visual-system.css
+#f7fafc,11,204,45,98,--ty-n-50,background; color,catalog-v3.css; catalog-v8-web-update.css; home-project-map-v16.css; knowledge.css
+#078488,9,182,90,28,--ty-copper-700,background; border-color; color,applications-projects-v26.css; product-hero-split-v21.css
+#75e0d2,9,172,63,67,--ty-copper-300,border-color; color,ux-refine-v5.css; yawei-refine.css
+#dce5ec,8,206,30,89,--ty-n-200,border; border-color,catalog-v3.css; ux-fix-v9.css
+#f8fafb,7,200,27,98,--ty-n-50,background,applications-projects-v26.css; image-quality-pass.css; site-v3-upgrade.css; styles.css
+#dbe5ea,7,200,26,89,--ty-n-200,border-bottom; border-right; border-top,applications-projects-v26.css
+#f9fbfc,7,200,33,98,--ty-n-50,background,home-product-showcase.css; home.css; product-detail.css; product-directory.css; visual-system.css
+#072a47,7,207,82,15,--ty-navy-800,background,ux-refine-v5.css; visual-refine-v4.css; yawei-refine.css
+"rgba(255,255,255,.18)",6,0,0,100,--ty-n-0,background; border; border-top,applications-projects-v26.css; home-project-map-v16.css; knowledge.css; manufacturing.css; ux-refine-v5.css; visual-refine-v4.css
+#087f84,6,182,89,27,--ty-copper-700,background; border-color; color,applications-projects-v26.css; product-hero-split-v21.css
+#075e67,6,186,87,22,--ty-copper-700,color,applications-projects-v26.css; home-product-showcase.css; site-experience.css
+#183b56,6,206,56,22,--ty-navy-700,color,catalog-v3.css
+#082d4a,6,206,80,16,--ty-navy-800,background; color,company.css
+#cfdae0,6,201,22,85,--ty-n-200,border-bottom; border-left; border-right; border-top,company.css
+"rgba(255,255,255,.14)",6,0,0,100,--ty-n-0,border; border-right; border-top,home-project-map-v16.css; styles.css; ux-refine-v5.css; visual-system.css; yawei-refine.css
+#dce5ea,6,201,25,89,--ty-n-200,border-bottom; border-right; border-top,product-hero-split-v21.css
+#18364a,6,204,51,19,--ty-navy-700,color,site-experience.css
+#008b8b,6,180,100,27,--ty-copper-700,--teal; border-color; color,site-v3-upgrade.css; styles.css
+"rgba(7,42,71,0)",6,207,82,15,--ty-navy-800,background,ux-refine-v5.css; visual-refine-v4.css
+#f4f8fa,5,200,37,97,--ty-n-50,background,applications-projects-v26.css; catalog-product-focus.css; industrial-editorial.css; visual-system.css
+#173348,5,206,52,19,--ty-navy-700,color,applications-projects-v26.css; home-product-showcase.css; site-experience.css
+#f6f9fa,5,195,29,97,--ty-n-50,background,catalog-product-focus.css; catalog-v8-product-details.css; product-hero-split-v21.css
+#d7e1e6,5,200,23,87,--ty-n-200,background; border; border-bottom; border-right,company.css; site-v3-upgrade.css
+#657987,5,205,14,46,--ty-n-500,color,company.css; product-detail.css; product-directory.css; site-v3-upgrade.css; visual-system.css
+"rgba(255,255,255,.24)",5,0,0,100,--ty-n-0,border; border-bottom; border-left; border-right; border-top,company.css; home-project-map-v16.css
+#d8e2e6,5,197,22,87,--ty-n-200,border-bottom; border-right; border-top,company.css
+"rgba(255,255,255,.12)",5,0,0,100,--ty-n-0,border; border-top; box-shadow,home-capabilities-map-v14.css; home-project-map-v16.css; home.css
+"rgba(255,255,255,.16)",5,0,0,100,--ty-n-0,border; border-top; box-shadow,home-project-map-v16.css; home.css; styles.css; yawei-refine.css
+#e1e9ed,5,200,25,91,--ty-n-200,border-top,product-detail.css; product-directory.css; site-v3-upgrade.css; visual-system.css
+#cad8df,5,200,25,83,--ty-navy-500,border; border-bottom; border-left; border-right; border-top,product-hero-split-v21.css; site-v3-upgrade.css
+#eef5fb,5,208,62,96,--ty-n-50,background,ux-refine-v6.css
+#0a2943,4,207,74,15,--ty-navy-800,color,applications-projects-v26.css; product-hero-split-v21.css
+#f5f8fa,4,204,33,97,--ty-n-50,background,catalog-product-focus.css; home-capabilities-map-v14.css
+#f3f7f9,4,200,33,96,--ty-n-50,--pale; --pf-mist; --ty-soft; background,catalog-product-focus.css; home-capabilities-map-v14.css; site-v3-upgrade.css; styles.css
+#dce7ed,4,201,32,90,--ty-n-200,--ty-map; border-bottom; color,catalog-product-focus.css; home-project-map-v16.css; visual-system.css
+#173d5b,4,206,60,22,--ty-navy-700,color,catalog-v3.css
+#72ded3,4,174,62,66,--ty-copper-300,background; color,company.css
+#087f86,4,183,89,28,--ty-copper-700,border-color; color,home-product-showcase.css; site-experience.css
+#0c6976,4,187,82,25,--ty-copper-700,border-color; color,home-product-showcase.css
+"rgba(16,46,70,.08)",4,207,63,17,--ty-navy-800,--ty-shadow; box-shadow; filter,home-product-showcase.css; home.css; product-detail.css; visual-system.css
+"rgba(255,255,255,.72)",4,0,0,100,--ty-n-0,background; border; color,knowledge.css; product-hero-split-v21.css; site-v3-upgrade.css
+"rgba(16,46,70,.10)",4,207,63,17,--ty-navy-800,box-shadow,product-detail.css; product-directory.css; site-v3-upgrade.css; visual-system.css
+#d6e2e7,4,198,26,87,--ty-n-200,border-top,product-detail.css; product-directory.css; site-v3-upgrade.css; visual-system.css
+#667b89,4,204,15,47,--ty-navy-500,color,product-detail.css; product-directory.css; site-v3-upgrade.css; visual-system.css
+#d9e3e8,4,200,25,88,--ty-n-200,border; border-bottom,site-v3-upgrade.css; visual-system.css
+#0b7f84,4,182,85,28,--ty-copper-700,background; border; border-left; border-top,site-v3-upgrade.css
+"rgba(6,36,63,.12)",4,208,83,14,--ty-navy-800,box-shadow,styles.css; ux-refine-v5.css; yawei-refine.css
+#f5f8fb,4,210,43,97,--ty-n-50,--v7-pale; --v9-card; background,ux-fix-v9.css; ux-refine-v6.css; ux-refine-v7.css
+#0b2943,3,208,72,15,--ty-navy-800,color,applications-projects-v26.css
+"rgba(255,255,255,.45)",3,0,0,100,--ty-n-0,background; border,catalog-product-focus.css; home.css; ux-refine-v6.css
+#eaf2f6,3,200,40,94,--ty-n-100,background,catalog-product-focus.css; home-energy-flow.css
+#7890a1,3,205,18,55,--ty-navy-500,color,catalog-product-focus.css
+#173e52,3,200,56,21,--ty-navy-700,color,catalog-v8-product-details.css
+#133f60,3,206,67,23,--ty-navy-700,color,catalog-v8-web-update.css
+#10243a,3,211,57,15,--ty-navy-800,--ty-ink; color,home-capabilities-map-v14.css; home-project-map-v16.css
+"rgba(255,255,255,.13)",3,0,0,100,--ty-n-0,--ty16-line; border; border-top,home-project-map-v16.css; yawei-refine.css
+"rgba(255,255,255,.34)",3,0,0,100,--ty-n-0,background; border-color,home-project-map-v16.css; ux-refine-v8.css
+#bfe1e4,3,185,41,82,--ty-n-300,color,home.css; manufacturing.css
+"rgba(0,0,0,.18)",3,0,0,0,--ty-n-900,box-shadow; text-shadow,knowledge.css; ux-refine-v6.css; yawei-refine.css
+#edf3f7,3,204,38,95,--ty-n-100,background,knowledge.css; ux-refine-v8.css
+"rgba(255,255,255,.28)",3,0,0,100,--ty-n-0,border,manufacturing.css; ux-refine-v5.css
+#edf4f6,3,193,33,95,--ty-n-100,background,product-hero-split-v21.css; site-v3-upgrade.css
+#173f5b,3,205,60,22,--ty-navy-700,color,site-v3-upgrade.css
+#eef7f7,3,180,36,95,--ty-n-100,background,styles.css; ux-refine-v5.css; yawei-refine.css
+#edf1f3,3,200,20,94,--ty-n-100,background,styles.css
+#eef3f7,3,207,36,95,--ty-n-100,background,ux-refine-v7.css; ux-refine-v8.css
+#edf1f5,3,210,29,95,--ty-n-100,border-top,ux-refine-v7.css
+#e8f0f3,2,196,31,93,--ty-n-100,background,applications-projects-v26.css
+"rgba(255,255,255,.58)",2,0,0,100,--ty-n-0,border; color,applications-projects-v26.css; styles.css
+#718592,2,204,13,51,--ty-n-500,color,applications-projects-v26.css
+#718491,2,204,13,51,--ty-n-500,color,applications-projects-v26.css; product-hero-split-v21.css
+#d2dee4,2,200,25,86,--ty-n-200,border,applications-projects-v26.css
+#c9dae2,2,199,30,84,--ty-navy-500,border,applications-projects-v26.css; site-experience.css
+#17324d,2,210,54,20,--ty-navy-700,--pf-ink,catalog-product-focus.css
+#ffffff,2,0,0,100,--ty-n-0,--pf-paper; --ty-n-0,catalog-product-focus.css; ty-foundation.css
+#edf3f6,2,200,33,95,--ty-n-100,--ty-surface; background,catalog-product-focus.css; visual-system.css
+#e5edf2,2,203,33,92,--ty-n-100,border-bottom,catalog-product-focus.css
+#dbe5eb,2,202,29,89,--ty-n-200,border; border-color,catalog-product-focus.css
+#527084,2,204,23,42,--ty-navy-500,color,catalog-product-focus.css
+#2f6f9f,2,206,54,40,--ty-navy-500,border-left; color,catalog-v3.css
+#52606d,2,209,14,37,--ty-n-600,color,catalog-v3.css
+#dce7ef,2,205,37,90,--ty-n-200,background; border,catalog-v3.css
+#f6f9fb,2,204,38,97,--ty-n-50,--ty16-white; background,catalog-v3.css; home-project-map-v16.css
+#5e6b76,2,208,11,42,--ty-n-600,color,catalog-v3.css
+#73808b,2,207,9,50,--ty-n-500,color,catalog-v3.css
+#d8e3e9,2,201,28,88,--ty-n-200,border,catalog-v8-product-details.css
+#dbe6eb,2,199,29,89,--ty-n-200,border,catalog-v8-product-details.css
+#dce5ed,2,208,32,90,--ty-n-200,border,catalog-v8-web-update.css
+#f3f7f8,2,192,26,96,--ty-n-50,background,company.css
+#0b8f93,2,182,86,31,--ty-copper-700,color,company.css
+"rgba(255,255,255,.8)",2,0,0,100,--ty-n-0,color,company.css; home-capabilities-map-v14.css
+#173e58,2,204,59,22,--ty-navy-700,color,company.css; product-hero-split-v21.css
+#c62a2f,2,358,65,47,--ty-copper-600,--ty-red; border-left,home-capabilities-map-v14.css; home-project-map-v16.css
+"rgba(16,36,58,.12)",2,211,57,15,--ty-navy-800,--ty-line; border,home-capabilities-map-v14.css; home-project-map-v16.css
+#102a40,2,207,60,16,--ty-navy-800,background,home-capabilities-map-v14.css; home-project-map-v16.css
+"rgba(255,255,255,.035)",2,0,0,100,--ty-n-0,background,home-capabilities-map-v14.css; home-project-map-v16.css
+"rgba(255,255,255,.4)",2,0,0,100,--ty-n-0,border; border-color,home-capabilities-map-v14.css; styles.css
+"rgba(255,255,255,.08)",2,0,0,100,--ty-n-0,background,home-capabilities-map-v14.css; ux-refine-v6.css
+#0d2235,2,208,61,13,--ty-navy-900,background,home-capabilities-map-v14.css; home-project-map-v16.css
+"rgba(147,218,231,.42)",2,189,64,74,--ty-n-300,background,home-energy-flow.css
+#17577e,2,203,69,29,--ty-copper-700,--ty-blue; color,home-product-showcase.css; visual-system.css
+"rgba(0,0,0,.24)",2,0,0,0,--ty-n-900,box-shadow,home-project-map-v16.css; visual-refine-v4.css
+"rgba(0,0,0,.34)",2,0,0,0,--ty-n-900,background; box-shadow,home-project-map-v16.css; visual-refine-v4.css
+#f4f7f9,2,204,29,97,--ty-n-50,background,home-project-map-v16.css; product-contract-upgrade.css
+#e1edf2,2,198,40,92,--ty-n-100,color,home.css; manufacturing.css
+"rgba(255,255,255,.62)",2,0,0,100,--ty-n-0,border-color,home.css; manufacturing.css
+#9bb7c6,2,201,27,69,--ty-navy-500,border-color,home.css
+#a8becb,2,202,25,73,--ty-navy-500,border,home.css
+"rgba(255,255,255,.5)",2,0,0,100,--ty-n-0,background,home.css
+"rgba(16,46,70,.12)",2,207,63,17,--ty-navy-800,border,home.css; product-directory.css
+#f7f9fa,2,200,23,97,--ty-n-50,background,image-quality-pass.css
+#edf2f4,2,197,24,94,--ty-n-100,background,image-quality-pass.css
+#f4f7f8,2,195,22,96,--ty-n-50,background,image-quality-pass.css; product-contract-upgrade.css
+#102e46,2,207,63,17,--ty-navy-800,--ie-navy; --ty-navy,industrial-editorial.css; visual-system.css
+#203b50,2,206,43,22,--ty-navy-700,--ie-text; --ty-text,industrial-editorial.css; visual-system.css
+#06636a,2,184,89,22,--ty-copper-700,--ie-teal; --ty-teal-dark,industrial-editorial.css; visual-system.css
+#cbdbe2,2,198,28,84,--ty-navy-500,--ie-line; border,industrial-editorial.css; site-experience.css
+#f4f8f9,2,192,29,97,--ty-n-50,background,industrial-editorial.css; site-v3-upgrade.css
+#f5f9fa,2,192,33,97,--ty-n-50,background,industrial-editorial.css; site-experience.css
+#7faab4,2,191,26,60,--ty-copper-300,box-shadow,industrial-editorial.css
+#8ef0e2,2,171,77,75,--ty-n-300,color,knowledge.css
+"rgba(255,255,255,.1)",2,0,0,100,--ty-n-0,background,knowledge.css; styles.css
+"rgba(8,35,58,.05)",2,208,76,13,--ty-navy-800,box-shadow,knowledge.css
+"rgba(249,252,253,.97)",2,195,50,98,--ty-n-50,background,manufacturing.css; product-detail.css
+#e0e8ec,2,200,24,90,--ty-n-200,border-right,manufacturing.css; product-detail.css
+#f0f5f7,2,197,30,95,--ty-n-100,background,manufacturing.css; product-detail.css
+#9fb7c4,2,201,24,70,--ty-navy-500,border,manufacturing.css
+"rgba(16,46,70,.11)",2,207,63,17,--ty-navy-800,filter,product-detail.css
+#f1f6f8,2,197,33,96,--ty-n-50,background,product-detail.css; site-v3-upgrade.css
+"rgba(255,255,255,.42)",2,0,0,100,--ty-n-0,background,product-hero-split-v21.css; yawei-refine.css
+#526e7d,2,201,21,41,--ty-navy-500,color,site-experience.css
+#006d70,2,182,100,22,--ty-copper-700,--teal-dark; color,site-v3-upgrade.css; styles.css
+#e8f5f3,2,171,39,94,--ty-n-100,background,site-v3-upgrade.css
+"rgba(6,36,63,.1)",2,208,83,14,--ty-navy-800,box-shadow,site-v3-upgrade.css; ux-refine-v5.css
+"rgba(6,36,63,.05)",2,208,83,14,--ty-navy-800,background; box-shadow,site-v3-upgrade.css; yawei-refine.css
+#d8e2e7,2,200,24,88,--ty-n-200,border,site-v3-upgrade.css
+#0b4775,2,206,83,25,--ty-navy-600,--blue; background,styles.css; yawei-refine.css
+"rgba(255,255,255,.7)",2,0,0,100,--ty-n-0,border; border-color,styles.css; ux-refine-v6.css
+#405366,2,210,23,33,--ty-navy-600,color,styles.css
+#eef6f6,2,180,31,95,--ty-n-100,background,styles.css
+#255f93,2,208,60,36,--ty-navy-500,--v8-blue; --v9-blue,ux-fix-v9.css; ux-refine-v8.css
+"rgba(255,255,255,.045)",2,0,0,100,--ty-n-0,background,ux-refine-v5.css; yawei-refine.css
+#465a6b,2,208,21,35,--ty-navy-500,color,ux-refine-v5.css; yawei-refine.css
+#385066,2,209,29,31,--ty-navy-600,color,ux-refine-v5.css; yawei-refine.css
+#f4f6f7,2,200,16,96,--ty-n-50,background,ux-refine-v5.css; yawei-refine.css
+"rgba(255,255,255,.05)",2,0,0,100,--ty-n-0,background,ux-refine-v6.css; yawei-refine.css
+"rgba(29,95,159,.12)",2,210,69,37,--ty-navy-500,border,ux-refine-v6.css
+#f4f8fc,2,210,57,97,--ty-n-50,background,ux-refine-v6.css
+#f3f7fa,2,206,41,97,--ty-n-50,background,ux-refine-v6.css; visual-refine-v4.css
+#e6edf3,2,208,35,93,--ty-n-100,--v7-line; border-color,ux-refine-v7.css
+#7890a6,2,209,21,56,--ty-navy-500,color,ux-refine-v7.css
+#d9e3ec,2,208,33,89,--ty-n-200,border-bottom; border-left,ux-refine-v7.css
+#f7f9fb,2,210,33,98,--ty-n-50,--v8-surface; background,ux-refine-v7.css; ux-refine-v8.css
+#edf2f6,2,207,33,95,--ty-n-100,--v8-bg; background,ux-refine-v8.css
+#eaf0f5,2,207,35,94,--ty-n-100,background,ux-refine-v8.css
+#c6d4df,2,206,28,83,--ty-navy-500,background; border,ux-refine-v8.css
+#e2ebf2,2,206,38,92,--ty-n-100,background,ux-refine-v8.css
+"rgba(123,149,171,.18)",2,207,22,58,--ty-navy-500,border-top,ux-refine-v8.css
+#d3dfe8,2,206,31,87,--ty-n-200,border-bottom; border-top,ux-refine-v8.css
+#f1f4f6,2,204,22,95,--ty-n-100,background,yawei-refine.css
+#0b2942,1,207,71,15,--ty-navy-800,color,applications-projects-v26.css
+#082b47,1,207,80,15,--ty-navy-800,color,applications-projects-v26.css
+#5c7383,1,205,17,44,--ty-navy-500,color,applications-projects-v26.css
+"rgba(30,75,99,.14)",1,201,53,25,--ty-navy-600,border-top,applications-projects-v26.css
+#0a324d,1,204,77,17,--ty-navy-700,color,applications-projects-v26.css
+#718695,1,205,15,51,--ty-navy-500,color,applications-projects-v26.css
+"rgba(21,58,79,.16)",1,202,58,20,--ty-navy-700,box-shadow,applications-projects-v26.css
+"rgba(6,40,62,0)",1,204,82,13,--ty-navy-800,background,applications-projects-v26.css
+"rgba(6,40,62,.58)",1,204,82,13,--ty-navy-800,background,applications-projects-v26.css
+"rgba(5,40,61,.62)",1,202,85,13,--ty-navy-800,background,applications-projects-v26.css
+#f4f9fa,1,190,37,97,--ty-n-50,background,applications-projects-v26.css
+"rgba(20,60,80,.08)",1,200,60,20,--ty-navy-700,box-shadow,applications-projects-v26.css
+#f2f8f9,1,189,37,96,--ty-n-50,background,applications-projects-v26.css
+#7a909e,1,203,16,55,--ty-navy-500,color,applications-projects-v26.css
+#0b2d47,1,206,73,16,--ty-navy-800,color,applications-projects-v26.css
+#0b263a,1,206,68,14,--ty-navy-800,background,applications-projects-v26.css
+#0c2b40,1,204,68,15,--ty-navy-800,background,applications-projects-v26.css
+#9fb2bf,1,204,20,69,--ty-navy-500,color,applications-projects-v26.css
+#72d3d1,1,179,52,64,--ty-copper-300,color,applications-projects-v26.css
+#17384f,1,205,55,20,--ty-navy-700,background,applications-projects-v26.css
+"rgba(4,28,46,.06)",1,206,84,10,--ty-navy-900,background,applications-projects-v26.css
+"rgba(4,28,46,.88)",1,206,84,10,--ty-navy-900,background,applications-projects-v26.css
+"rgba(4,28,46,.97)",1,206,84,10,--ty-navy-900,background,applications-projects-v26.css
+#80d7d3,1,177,52,67,--ty-copper-300,color,applications-projects-v26.css
+#bac9d2,1,202,21,78,--ty-navy-500,color,applications-projects-v26.css
+#f2f6f8,1,200,30,96,--ty-n-50,background,applications-projects-v26.css
+#5e7483,1,204,16,44,--ty-navy-500,color,applications-projects-v26.css
+#0a7f84,1,182,86,28,--ty-copper-700,color,applications-projects-v26.css
+"rgba(248,251,252,.94)",1,195,40,98,--ty-n-50,background,applications-projects-v26.css
+"rgba(20,58,78,.05)",1,201,59,19,--ty-navy-700,box-shadow,applications-projects-v26.css
+#496577,1,203,24,38,--ty-navy-500,color,applications-projects-v26.css
+#294b60,1,203,40,27,--ty-navy-600,color,applications-projects-v26.css
+#c7d8df,1,198,27,83,--ty-navy-500,border-color,applications-projects-v26.css
+"rgba(20,58,78,.08)",1,201,59,19,--ty-navy-700,box-shadow,applications-projects-v26.css
+#9aabb5,1,202,15,66,--ty-navy-500,color,applications-projects-v26.css
+#e3eaee,1,202,24,91,--ty-n-200,border-top,applications-projects-v26.css
+#8a9aa5,1,204,13,59,--ty-n-400,color,applications-projects-v26.css
+#496476,1,204,24,37,--ty-navy-500,color,applications-projects-v26.css
+#687f8e,1,204,15,48,--ty-navy-500,color,applications-projects-v26.css
+#415f6e,1,200,26,34,--ty-navy-500,color,applications-projects-v26.css
+#9dbcc9,1,198,29,70,--ty-navy-500,border,applications-projects-v26.css
+#1a9eaa,1,185,73,38,--ty-copper-700,outline,applications-projects-v26.css
+#082f55,1,210,83,18,--ty-navy-700,--pf-navy,catalog-product-focus.css
+#0b7790,1,191,86,30,--ty-copper-700,--pf-blue,catalog-product-focus.css
+#9fd7df,1,188,50,75,--ty-n-300,--pf-cyan,catalog-product-focus.css
+#5f7284,1,209,16,45,--ty-navy-500,--pf-muted,catalog-product-focus.css
+#d8e3eb,1,205,32,88,--ty-n-200,--pf-line,catalog-product-focus.css
+#f2f7fa,1,202,44,96,--ty-n-50,--pf-mist,catalog-product-focus.css
+#f8fbfd,1,204,56,98,--ty-n-50,--pf-soft,catalog-product-focus.css
+#eef2f4,1,200,21,95,--ty-n-100,background,catalog-product-focus.css
+"rgba(7, 39, 70, .97)",1,210,82,15,--ty-navy-800,background,catalog-product-focus.css
+"rgba(8, 39, 70, .16)",1,210,79,15,--ty-navy-800,box-shadow,catalog-product-focus.css
+"rgba(5, 33, 58, .2)",1,208,84,12,--ty-navy-800,box-shadow,catalog-product-focus.css
+#e7eef3,1,205,33,93,--ty-n-100,border-bottom,catalog-product-focus.css
+"rgba(16, 49, 76, .12)",1,207,65,18,--ty-navy-700,box-shadow,catalog-product-focus.css
+#8093a5,1,209,17,57,--ty-navy-500,color,catalog-product-focus.css
+"rgba(3, 27, 53, .9)",1,211,89,11,--ty-navy-900,background,catalog-product-focus.css
+"rgba(3, 27, 53, .48)",1,211,89,11,--ty-navy-900,background,catalog-product-focus.css
+"rgba(3, 27, 53, .08)",1,211,89,11,--ty-navy-900,background,catalog-product-focus.css
+#7990a0,1,205,17,55,--ty-navy-500,color,catalog-product-focus.css
+#2f6677,1,194,43,33,--ty-copper-700,color,catalog-product-focus.css
+#adc4d1,1,202,28,75,--ty-navy-500,border,catalog-product-focus.css
+#d9e8f1,1,202,46,90,--ty-n-200,color,catalog-product-focus.css
+#7e91a1,1,207,16,56,--ty-navy-500,color,catalog-product-focus.css
+"rgba(16, 49, 76, .13)",1,207,65,18,--ty-navy-700,box-shadow,catalog-product-focus.css
+#0a355d,1,209,81,20,--ty-navy-700,--pf-navy,catalog-product-focus.css
+#1676a5,1,200,76,37,--ty-navy-500,--pf-blue,catalog-product-focus.css
+#b8dbe4,1,192,45,81,--ty-n-300,--pf-cyan,catalog-product-focus.css
+#587082,1,206,19,43,--ty-navy-500,--pf-muted,catalog-product-focus.css
+#d7e2e9,1,203,29,88,--ty-n-200,--pf-line,catalog-product-focus.css
+#f8fbfc,1,195,40,98,--ty-n-50,--pf-soft,catalog-product-focus.css
+#e9eef1,1,202,22,93,--ty-n-100,background,catalog-product-focus.css
+"rgba(16, 49, 76, .10)",1,207,65,18,--ty-navy-700,box-shadow,catalog-product-focus.css
+#526b7b,1,203,20,40,--ty-navy-500,color,catalog-product-focus.css
+#688090,1,204,16,49,--ty-navy-500,color,catalog-product-focus.css
+#bfcfd9,1,203,25,80,--ty-navy-500,border-top,catalog-product-focus.css
+#f5f9fb,1,200,43,97,--ty-n-50,background,catalog-product-focus.css
+#afc4cf,1,201,25,75,--ty-navy-500,border-top,catalog-product-focus.css
+#f4f8fb,1,206,47,97,--ty-n-50,background,catalog-v3.css
+#64748b,1,215,16,47,--ty-navy-500,color,catalog-v3.css
+#7a8792,1,207,10,53,--ty-n-500,color,catalog-v3.css
+#687784,1,208,12,46,--ty-n-500,color,catalog-v3.css
+#eaf2f7,1,203,45,94,--ty-n-100,background,catalog-v3.css
+#234e6d,1,205,51,28,--ty-navy-600,color,catalog-v3.css
+#d4e0e8,1,204,30,87,--ty-n-200,border-bottom,catalog-v3.css
+#e6edf2,1,205,32,93,--ty-n-100,border-bottom,catalog-v3.css
+#465764,1,206,18,33,--ty-navy-600,color,catalog-v3.css
+#f8fafc,1,210,40,98,--ty-n-50,background,catalog-v3.css
+#c9d8e2,1,204,30,84,--ty-navy-500,border,catalog-v3.css
+#31536c,1,205,38,31,--ty-navy-600,color,catalog-v3.css
+#566672,1,206,14,39,--ty-n-600,color,catalog-v3.css
+#40566a,1,209,25,33,--ty-navy-600,color,catalog-v8-product-details.css
+#5e7181,1,207,16,44,--ty-navy-500,color,catalog-v8-product-details.css
+#123c54,1,202,65,20,--ty-navy-700,color,catalog-v8-product-details.css
+#0c7580,1,186,83,27,--ty-copper-700,border-left,catalog-v8-product-details.css
+#eaf4f5,1,185,35,94,--ty-n-100,background,catalog-v8-product-details.css
+#15545d,1,188,63,22,--ty-copper-700,color,catalog-v8-product-details.css
+#e2e9ed,1,202,23,91,--ty-n-200,border-bottom,catalog-v8-product-details.css
+#eaf1f4,1,198,31,94,--ty-n-100,background,catalog-v8-product-details.css
+#203e51,1,203,43,22,--ty-navy-700,color,catalog-v8-product-details.css
+#586c7c,1,207,17,42,--ty-navy-500,color,catalog-v8-product-details.css
+#0b6670,1,186,82,24,--ty-copper-700,border-top,catalog-v8-product-details.css
+#4f6574,1,204,19,38,--ty-navy-500,color,catalog-v8-product-details.css
+#40586a,1,206,25,33,--ty-navy-600,color,catalog-v8-product-details.css
+#0b6974,1,186,83,25,--ty-copper-700,color,catalog-v8-product-details.css
+#4d6575,1,204,21,38,--ty-navy-500,color,catalog-v8-product-details.css
+#567080,1,203,20,42,--ty-navy-500,color,catalog-v8-product-details.css
+#82afc8,1,201,39,65,--ty-navy-500,border-color,catalog-v8-web-update.css
+"rgba(17,62,90,.09)",1,203,68,21,--ty-navy-700,box-shadow,catalog-v8-web-update.css
+#5a7180,1,204,17,43,--ty-navy-500,color,catalog-v8-web-update.css
+#145b83,1,202,74,30,--ty-navy-500,color,catalog-v8-web-update.css
+"rgba(2,24,42,.92)",1,207,91,9,--ty-navy-900,background,company.css
+"rgba(3,30,52,.64)",1,207,89,11,--ty-navy-900,background,company.css
+"rgba(3,30,52,.15)",1,207,89,11,--ty-navy-900,background,company.css
+"rgba(3,30,52,.04)",1,207,89,11,--ty-navy-900,background,company.css
+#526b7a,1,202,20,40,--ty-navy-500,color,company.css
+#80909b,1,204,12,55,--ty-n-500,color,company.css
+#062a4a,1,208,85,16,--ty-navy-800,background,company.css
+#0a5680,1,201,86,27,--ty-navy-600,background,company.css
+#dfe9ee,1,200,31,90,--ty-n-200,background,company.css
+"rgba(114,222,211,.12)",1,174,62,66,--ty-copper-300,background,company.css
+"rgba(255,255,255,.07)",1,0,0,100,--ty-n-0,background,company.css
+"rgba(255,255,255,.77)",1,0,0,100,--ty-n-0,color,company.css
+#607483,1,206,15,45,--ty-navy-500,color,company.css
+"rgba(3,28,48,.02)",1,207,88,10,--ty-navy-900,background,company.css
+"rgba(3,28,48,.82)",1,207,88,10,--ty-navy-900,background,company.css
+#173e59,1,205,59,22,--ty-navy-700,color,company.css
+#f1f7f8,1,189,33,96,--ty-n-50,background,company.css
+#0b7d82,1,183,84,28,--ty-copper-700,color,company.css
+"rgba(255,255,255,.55)",1,0,0,100,--ty-n-0,border,company.css
+#0b5b91,1,204,86,31,--ty-navy-500,--ty-blue,home-capabilities-map-v14.css
+#6f8395,1,208,15,51,--ty-navy-500,color,home-capabilities-map-v14.css
+#607486,1,208,17,45,--ty-navy-500,color,home-capabilities-map-v14.css
+#13283b,1,208,51,15,--ty-navy-800,background,home-capabilities-map-v14.css
+"rgba(5,19,31,.05)",1,208,72,7,--ty-navy-900,background,home-capabilities-map-v14.css
+"rgba(5,19,31,.32)",1,208,72,7,--ty-navy-900,background,home-capabilities-map-v14.css
+"rgba(5,19,31,.92)",1,208,72,7,--ty-navy-900,background,home-capabilities-map-v14.css
+#0c1f31,1,209,61,12,--ty-navy-900,background,home-capabilities-map-v14.css
+#8db3cc,1,204,38,68,--ty-navy-500,color,home-capabilities-map-v14.css
+#aec0cd,1,205,24,74,--ty-navy-500,color,home-capabilities-map-v14.css
+#0c2032,1,208,61,12,--ty-navy-900,background,home-capabilities-map-v14.css
+"rgba(42,105,144,.22)",1,203,55,36,--ty-navy-500,background,home-capabilities-map-v14.css
+#29465c,1,206,38,26,--ty-navy-600,fill,home-capabilities-map-v14.css
+#40647d,1,205,32,37,--ty-navy-500,stroke,home-capabilities-map-v14.css
+"rgba(255,255,255,.06)",1,0,0,100,--ty-n-0,stroke,home-capabilities-map-v14.css
+"rgba(125,205,255,.55)",1,203,100,75,--ty-navy-500,box-shadow,home-capabilities-map-v14.css
+"rgba(255,255,255,.22)",1,0,0,100,--ty-n-0,border,home-capabilities-map-v14.css
+#e43c42,1,358,76,56,--ty-copper-500,background,home-capabilities-map-v14.css
+"rgba(228,60,66,.18)",1,358,76,56,--ty-copper-500,box-shadow,home-capabilities-map-v14.css
+"rgba(228,60,66,.45)",1,358,76,56,--ty-copper-500,box-shadow,home-capabilities-map-v14.css
+#7790a3,1,206,19,55,--ty-navy-500,color,home-capabilities-map-v14.css
+#617688,1,208,17,46,--ty-navy-500,color,home-capabilities-map-v14.css
+#8296a6,1,207,17,58,--ty-navy-500,color,home-capabilities-map-v14.css
+#82a9c1,1,203,34,63,--ty-navy-500,color,home-capabilities-map-v14.css
+#aabcc9,1,205,22,73,--ty-navy-500,color,home-capabilities-map-v14.css
+#9fc4da,1,202,44,74,--ty-navy-500,color,home-capabilities-map-v14.css
+#85a9c0,1,203,32,64,--ty-navy-500,color,home-capabilities-map-v14.css
+#c3d2dc,1,204,26,81,--ty-navy-500,color,home-capabilities-map-v14.css
+#5f7385,1,208,17,45,--ty-navy-500,color,home-capabilities-map-v14.css
+#8193a0,1,205,14,57,--ty-n-400,color,home-capabilities-map-v14.css
+#64798a,1,207,16,47,--ty-navy-500,color,home-capabilities-map-v14.css
+"rgba(178, 229, 239, .28)",1,190,66,82,--ty-n-300,border,home-energy-flow.css
+"rgba(7, 39, 59, .87)",1,203,79,13,--ty-navy-800,background,home-energy-flow.css
+"rgba(0, 23, 39, .25)",1,205,100,8,--ty-navy-900,box-shadow,home-energy-flow.css
+#f5fcff,1,198,100,98,--ty-n-50,color,home-energy-flow.css
+#b9ecf2,1,186,69,84,--ty-n-200,color,home-energy-flow.css
+#d8eef3,1,191,53,90,--ty-n-200,color,home-energy-flow.css
+#8be2ed,1,187,73,74,--ty-n-300,outline,home-energy-flow.css
+"rgba(147,218,231,.8)",1,189,64,74,--ty-n-300,background,home-energy-flow.css
+#9df3ff,1,187,100,81,--ty-n-300,background,home-energy-flow.css
+#71dce9,1,187,73,68,--ty-copper-300,box-shadow,home-energy-flow.css
+#b5f2f9,1,186,85,84,--ty-n-200,border,home-energy-flow.css
+#2b7e93,1,192,55,37,--ty-copper-700,background,home-energy-flow.css
+"rgba(153,236,249,.55)",1,188,89,79,--ty-n-300,box-shadow,home-energy-flow.css
+#e7f4f7,1,191,50,94,--ty-n-100,color,home-energy-flow.css
+#0a3a53,1,201,78,18,--ty-navy-700,background,home-energy-flow.css
+#163247,1,206,53,18,--ty-navy-700,color,home-product-showcase.css
+#cbdce5,1,201,33,85,--ty-n-200,border,home-product-showcase.css
+#5b7180,1,204,17,43,--ty-navy-500,color,home-product-showcase.css
+#bfd0d9,1,201,25,80,--ty-navy-500,border,home-product-showcase.css
+#285568,1,198,44,28,--ty-navy-600,color,home-product-showcase.css
+#cfdee6,1,201,32,86,--ty-n-200,border,home-product-showcase.css
+"rgba(16,46,70,.05)",1,207,63,17,--ty-navy-800,box-shadow,home-product-showcase.css
+#7aabb8,1,193,30,60,--ty-copper-300,border-color,home-product-showcase.css
+"rgba(16,46,70,.13)",1,207,63,17,--ty-navy-800,box-shadow,home-product-showcase.css
+#edf4f7,1,198,38,95,--ty-n-100,background,home-product-showcase.css
+#19384b,1,203,50,20,--ty-navy-700,color,home-product-showcase.css
+#c4d6df,1,200,30,82,--ty-navy-500,border,home-product-showcase.css
+#173b50,1,202,55,20,--ty-navy-700,color,home-product-showcase.css
+#208e9c,1,187,66,37,--ty-copper-700,outline,home-product-showcase.css
+#0a1d2d,1,207,64,11,--ty-navy-900,--ty16-bg,home-project-map-v16.css
+#10283b,1,207,57,15,--ty-navy-800,--ty16-panel,home-project-map-v16.css
+#132f45,1,206,57,17,--ty-navy-800,--ty16-panel-2,home-project-map-v16.css
+#a7bac8,1,205,23,72,--ty-navy-500,--ty16-muted,home-project-map-v16.css
+#e04449,1,358,72,57,--ty-copper-500,--ty16-red,home-project-map-v16.css
+#91b9d0,1,202,40,69,--ty-navy-500,color,home-project-map-v16.css
+#b4c5d0,1,204,23,76,--ty-navy-500,color,home-project-map-v16.css
+"rgba(255,255,255,.15)",1,0,0,100,--ty-n-0,border,home-project-map-v16.css
+"rgba(255,255,255,.025)",1,0,0,100,--ty-n-0,background,home-project-map-v16.css
+#a9bdcb,1,205,25,73,--ty-navy-500,color,home-project-map-v16.css
+"rgba(255,255,255,.055)",1,0,0,100,--ty-n-0,background,home-project-map-v16.css
+#eef5f8,1,198,42,95,--ty-n-100,color,home-project-map-v16.css
+"rgba(224,68,73,.65)",1,358,72,57,--ty-copper-500,border-color,home-project-map-v16.css
+"rgba(224,68,73,.08)",1,358,72,57,--ty-copper-500,background,home-project-map-v16.css
+"rgba(48,111,150,.16)",1,203,52,39,--ty-navy-500,background,home-project-map-v16.css
+"rgba(5,20,31,.08)",1,205,72,7,--ty-navy-900,background,home-project-map-v16.css
+"rgba(5,20,31,.09)",1,205,72,7,--ty-navy-900,background,home-project-map-v16.css
+#7f9aac,1,204,21,59,--ty-navy-500,color,home-project-map-v16.css
+#f7fbfd,1,200,60,98,--ty-n-50,background,home-project-map-v16.css
+"rgba(255,255,255,.11)",1,0,0,100,--ty-n-0,box-shadow,home-project-map-v16.css
+"rgba(144,213,255,.42)",1,203,100,78,--ty-navy-500,box-shadow,home-project-map-v16.css
+"rgba(144,213,255,.56)",1,203,100,78,--ty-navy-500,box-shadow,home-project-map-v16.css
+"rgba(224,68,73,.2)",1,358,72,57,--ty-copper-500,box-shadow,home-project-map-v16.css
+"rgba(224,68,73,.55)",1,358,72,57,--ty-copper-500,box-shadow,home-project-map-v16.css
+"rgba(224,68,73,.6)",1,358,72,57,--ty-copper-500,border-color,home-project-map-v16.css
+"rgba(7,24,37,.94)",1,206,68,9,--ty-navy-900,background,home-project-map-v16.css
+#8fb4ca,1,202,36,68,--ty-navy-500,color,home-project-map-v16.css
+"rgba(8,26,40,.965)",1,206,67,9,--ty-navy-900,background,home-project-map-v16.css
+"rgba(6,22,34,.68)",1,206,70,8,--ty-navy-900,background,home-project-map-v16.css
+"rgba(224,68,73,.9)",1,358,72,57,--ty-copper-500,background,home-project-map-v16.css
+#183247,1,207,49,19,--ty-navy-700,background,home-project-map-v16.css
+#94bed5,1,201,44,71,--ty-navy-500,color,home-project-map-v16.css
+#c1d0d8,1,201,23,80,--ty-navy-500,color,home-project-map-v16.css
+#86a2b4,1,203,23,62,--ty-navy-500,color,home-project-map-v16.css
+#ff6a6f,1,358,100,71,--ty-copper-300,color,home-project-map-v16.css
+#ff8a8e,1,358,100,77,--ty-copper-300,color,home-project-map-v16.css
+#8fa9ba,1,204,24,65,--ty-navy-500,color,home-project-map-v16.css
+"rgba(224,68,73,.48)",1,358,72,57,--ty-copper-500,border-color,home-project-map-v16.css
+"rgba(255,255,255,.065)",1,0,0,100,--ty-n-0,background,home-project-map-v16.css
+#173248,1,207,52,19,--ty-navy-700,background,home-project-map-v16.css
+#91b8ce,1,202,38,69,--ty-navy-500,color,home-project-map-v16.css
+#a6bac7,1,204,23,72,--ty-navy-500,color,home-project-map-v16.css
+#617d90,1,204,20,47,--ty-navy-500,color,home-project-map-v16.css
+#0b2032,1,208,64,12,--ty-navy-900,background,home-project-map-v16.css
+#9ec1d6,1,202,41,73,--ty-navy-500,color,home-project-map-v16.css
+#8cb2ca,1,203,37,67,--ty-navy-500,color,home-project-map-v16.css
+#c2d2dc,1,203,27,81,--ty-navy-500,color,home-project-map-v16.css
+#dce5eb,1,204,27,89,--ty-n-200,background,home-project-map-v16.css
+#5f7484,1,206,16,45,--ty-navy-500,color,home-project-map-v16.css
+"rgba(16,36,58,.1)",1,211,57,15,--ty-navy-800,border-bottom,home-project-map-v16.css
+#8095a3,1,204,16,57,--ty-navy-500,color,home-project-map-v16.css
+#667b8a,1,205,15,47,--ty-navy-500,color,home-project-map-v16.css
+"rgba(8,35,54,.88)",1,205,74,12,--ty-navy-900,background,home.css
+"rgba(8,35,54,.66)",1,205,74,12,--ty-navy-900,background,home.css
+"rgba(8,35,54,.13)",1,205,74,12,--ty-navy-900,background,home.css
+"rgba(8,35,54,.04)",1,205,74,12,--ty-navy-900,background,home.css
+#8da0ad,1,204,16,62,--ty-navy-500,color,home.css
+#d9e4ea,1,201,29,88,--ty-n-200,background,home.css
+#c8d8e1,1,202,29,83,--ty-navy-500,background,home.css
+#bfd2dc,1,201,29,81,--ty-navy-500,background,home.css
+"rgba(255,255,255,.92)",1,0,0,100,--ty-n-0,border,home.css
+"rgba(6,99,106,.16)",1,184,89,22,--ty-copper-700,box-shadow,home.css
+"rgba(6,99,106,.2)",1,184,89,22,--ty-copper-700,box-shadow,home.css
+"rgba(23,87,126,.22)",1,203,69,29,--ty-navy-600,box-shadow,home.css
+"rgba(247,250,251,.9)",1,195,33,98,--ty-n-50,background,home.css
+"rgba(16,46,70,.96)",1,207,63,17,--ty-navy-800,background,home.css
+"rgba(16,46,70,.18)",1,207,63,17,--ty-navy-800,box-shadow,home.css
+#b9d4df,1,197,37,80,--ty-navy-500,color,home.css
+"rgba(16,46,70,.97)",1,207,63,17,--ty-navy-800,background,home.css
+#d8e5eb,1,199,32,88,--ty-n-200,color,home.css
+"rgba(255,255,255,.35)",1,0,0,100,--ty-n-0,border,home.css
+"rgba(16,46,70,.88)",1,207,63,17,--ty-navy-800,background,home.css
+#a9c1cd,1,200,26,73,--ty-navy-500,color,home.css
+#b7c9d3,1,201,24,77,--ty-navy-500,border,home.css
+#8daeba,1,196,25,64,--ty-navy-500,border-color,home.css
+"rgba(255,255,255,.76)",1,0,0,100,--ty-n-0,background,home.css
+#94aebb,1,200,22,66,--ty-navy-500,border-color,home.css
+#a4b4be,1,203,17,69,--ty-navy-500,color,home.css
+#dfe8ec,1,198,25,90,--ty-n-200,background,image-quality-pass.css
+#4b6573,1,201,21,37,--ty-navy-500,--ie-muted,industrial-editorial.css
+#007f89,1,184,100,27,--ty-copper-600,outline,industrial-editorial.css
+#324e60,1,203,32,29,--ty-navy-600,color,industrial-editorial.css
+#d9e8ee,1,197,38,89,--ty-n-200,background,industrial-editorial.css
+#8aaeb8,1,193,24,63,--ty-n-400,border-color,industrial-editorial.css
+#24485b,1,201,43,25,--ty-navy-600,color,industrial-editorial.css
+#0b4661,1,199,80,21,--ty-navy-600,background,knowledge.css
+#087f83,1,182,88,27,--ty-copper-700,background,knowledge.css
+"rgba(255,255,255,.84)",1,0,0,100,--ty-n-0,color,knowledge.css
+"rgba(255,255,255,.36)",1,0,0,100,--ty-n-0,border,knowledge.css
+"rgba(8,35,58,.06)",1,208,76,13,--ty-navy-800,box-shadow,knowledge.css
+"rgba(0,139,139,.4)",1,180,100,27,--ty-copper-700,border-color,knowledge.css
+#0b5b70,1,192,82,24,--ty-copper-700,background,knowledge.css
+#334b5f,1,207,30,29,--ty-navy-600,color,knowledge.css
+#eef9f8,1,175,48,95,--ty-n-50,background,knowledge.css
+"rgba(0,139,139,.28)",1,180,100,27,--ty-copper-700,border,knowledge.css
+#f4fbfa,1,171,47,97,--ty-n-50,background,knowledge.css
+"rgba(8,33,51,.91)",1,205,73,12,--ty-navy-900,background,manufacturing.css
+"rgba(8,33,51,.72)",1,205,73,12,--ty-navy-900,background,manufacturing.css
+"rgba(8,33,51,.2)",1,205,73,12,--ty-navy-900,background,manufacturing.css
+"rgba(8,33,51,.08)",1,205,73,12,--ty-navy-900,background,manufacturing.css
+"rgba(11,42,62,.75)",1,204,70,14,--ty-navy-800,background,manufacturing.css
+#bed1da,1,199,27,80,--ty-navy-500,color,manufacturing.css
+#738995,1,201,14,52,--ty-n-500,color,manufacturing.css
+#a9bdc8,1,201,22,72,--ty-navy-500,border,manufacturing.css
+#536272,1,211,16,39,--ty-navy-500,color,product-contract-upgrade.css
+#d9e0e6,1,208,21,88,--ty-n-200,border,product-contract-upgrade.css
+#667786,1,208,14,46,--ty-n-500,color,product-contract-upgrade.css
+#aebcc8,1,208,19,73,--ty-navy-500,border,product-contract-upgrade.css
+#d6dfe6,1,206,24,87,--ty-n-200,border,product-contract-upgrade.css
+#e1e7eb,1,204,20,90,--ty-n-200,border-bottom,product-contract-upgrade.css
+#334a5c,1,206,29,28,--ty-navy-600,color,product-contract-upgrade.css
+#16384c,1,202,55,19,--ty-navy-700,color,product-contract-upgrade.css
+#7a8995,1,207,11,53,--ty-n-500,color,product-contract-upgrade.css
+#6b7984,1,206,10,47,--ty-n-500,color,product-contract-upgrade.css
+#dce4e9,1,203,23,89,--ty-n-200,border,product-contract-upgrade.css
+#58778b,1,204,22,45,--ty-navy-500,color,product-contract-upgrade.css
+#526472,1,206,16,38,--ty-navy-500,color,product-contract-upgrade.css
+#163f59,1,203,60,22,--ty-navy-700,border-top,product-contract-upgrade.css
+#5e6f7c,1,206,14,43,--ty-n-500,color,product-contract-upgrade.css
+#d7e0e6,1,204,23,87,--ty-n-200,border,product-contract-upgrade.css
+#708490,1,202,13,50,--ty-n-500,color,product-detail.css
+#7a8d98,1,202,13,54,--ty-n-500,color,product-detail.css
+#9bb6c3,1,199,25,69,--ty-navy-500,border-color,product-detail.css
+#b9c7ce,1,200,18,77,--ty-navy-500,background,product-detail.css
+#edf4f5,1,188,29,95,--ty-n-100,background,product-detail.css
+#9eb8c1,1,195,22,69,--ty-navy-500,border-color,product-detail.css
+"rgba(255,255,255,.9)",1,0,0,100,--ty-n-0,background,product-directory.css
+#a8b9c3,1,202,18,71,--ty-navy-500,background,product-directory.css
+#7d939f,1,201,15,56,--ty-navy-500,color,product-directory.css
+#9ab5c3,1,200,25,68,--ty-navy-500,border-color,product-directory.css
+#fcfefe,1,180,50,99,--ty-n-0,background,product-directory.css
+#e6edef,1,193,22,92,--ty-n-100,border-top,product-directory.css
+#5b7181,1,205,17,43,--ty-navy-500,color,product-hero-split-v21.css
+#7a8d99,1,203,13,54,--ty-n-500,color,product-hero-split-v21.css
+"rgba(8,64,88,.24)",1,198,83,19,--ty-navy-700,border-bottom,product-hero-split-v21.css
+#0b6175,1,191,83,25,--ty-copper-700,color,product-hero-split-v21.css
+#d6e1e7,1,201,26,87,--ty-n-200,border,product-hero-split-v21.css
+"rgba(25,60,78,.08)",1,200,51,20,--ty-navy-700,box-shadow,product-hero-split-v21.css
+"rgba(4,31,50,.68)",1,205,85,11,--ty-navy-900,background,product-hero-split-v21.css
+#6d8290,1,204,14,50,--ty-n-500,color,product-hero-split-v21.css
+"rgba(21,58,79,.05)",1,202,58,20,--ty-navy-700,box-shadow,product-hero-split-v21.css
+#80919d,1,205,13,56,--ty-n-400,color,product-hero-split-v21.css
+#f2f7f8,1,190,30,96,--ty-n-50,background,product-hero-split-v21.css
+#738594,1,207,13,52,--ty-n-500,color,product-hero-split-v21.css
+#5d7181,1,207,16,44,--ty-navy-500,color,product-hero-split-v21.css
+#c9d8de,1,197,24,83,--ty-navy-500,border-color,product-hero-split-v21.css
+"rgba(255,255,255,.56)",1,0,0,100,--ty-n-0,background,product-hero-split-v21.css
+#36566a,1,203,33,31,--ty-navy-600,color,product-hero-split-v21.css
+"rgba(42,83,104,.14)",1,200,42,29,--ty-navy-600,border-top,product-hero-split-v21.css
+#4d697a,1,203,23,39,--ty-navy-500,color,product-hero-split-v21.css
+"rgba(8,127,132,.45)",1,182,89,27,--ty-copper-700,border-bottom-color,product-hero-split-v21.css
+#0a8b8d,1,181,87,30,--ty-copper-700,border-bottom,product-hero-split-v21.css
+#00a3aa,1,182,100,33,--ty-copper-700,outline,site-experience.css
+#9ed8df,1,186,50,75,--ty-n-300,color,site-experience.css
+#076f77,1,184,89,25,--ty-copper-700,color,site-experience.css
+#12344a,1,204,61,18,--ty-navy-700,background,site-experience.css
+#f2f7f9,1,197,37,96,--ty-n-50,background,site-experience.css
+#e7f0f3,1,195,33,93,--ty-n-100,background,site-experience.css
+#385867,1,199,30,31,--ty-navy-600,color,site-experience.css
+#496775,1,199,23,37,--ty-navy-500,color,site-experience.css
+#435f6d,1,200,24,35,--ty-navy-500,color,site-experience.css
+#aac6cf,1,195,28,74,--ty-navy-500,border,site-experience.css
+#168e9a,1,185,75,35,--ty-copper-700,outline,site-experience.css
+#d4e1e7,1,199,28,87,--ty-n-200,border,site-experience.css
+#536b78,1,201,18,40,--ty-navy-500,color,site-experience.css
+#536577,1,210,18,40,--ty-navy-500,color,site-v3-upgrade.css
+#718092,1,213,13,51,--ty-n-500,color,site-v3-upgrade.css
+#526779,1,208,19,40,--ty-navy-500,color,site-v3-upgrade.css
+#bdd0d9,1,199,27,80,--ty-navy-500,border,site-v3-upgrade.css
+#123e5c,1,204,67,22,--ty-navy-700,color,site-v3-upgrade.css
+#31526a,1,205,37,30,--ty-navy-600,color,site-v3-upgrade.css
+#00797c,1,181,100,24,--ty-copper-700,color,site-v3-upgrade.css
+#0a7680,1,185,86,27,--ty-copper-700,color,site-v3-upgrade.css
+#738293,1,212,13,51,--ty-n-500,color,site-v3-upgrade.css
+#cbd9df,1,198,24,84,--ty-navy-500,border,site-v3-upgrade.css
+#163f5c,1,205,61,22,--ty-navy-700,color,site-v3-upgrade.css
+#007476,1,181,100,23,--ty-copper-700,color,site-v3-upgrade.css
+#7a8793,1,209,10,53,--ty-n-500,color,site-v3-upgrade.css
+#e6f4f7,1,191,52,94,--ty-n-100,background,site-v3-upgrade.css
+#153f5b,1,204,63,22,--ty-navy-700,color,site-v3-upgrade.css
+#e0e7ea,1,198,19,90,--ty-n-200,border-top,site-v3-upgrade.css
+#4c6070,1,207,19,37,--ty-navy-500,color,site-v3-upgrade.css
+#dce5e9,1,198,23,89,--ty-n-200,border,site-v3-upgrade.css
+#4a6070,1,205,20,36,--ty-navy-500,color,site-v3-upgrade.css
+#6b7d8c,1,207,13,48,--ty-n-500,color,site-v3-upgrade.css
+#00777a,1,181,100,24,--ty-copper-700,color,site-v3-upgrade.css
+#d4e0e5,1,198,25,86,--ty-n-200,background,site-v3-upgrade.css
+#71808c,1,207,11,50,--ty-n-500,color,site-v3-upgrade.css
+#647687,1,209,15,46,--ty-navy-500,color,site-v3-upgrade.css
+#d9e2e7,1,201,23,88,--ty-n-200,border,site-v3-upgrade.css
+#d8e1e5,1,198,20,87,--ty-n-200,border,site-v3-upgrade.css
+#0a6f74,1,183,84,25,--ty-copper-700,color,site-v3-upgrade.css
+#6e7e8a,1,206,11,49,--ty-n-500,color,site-v3-upgrade.css
+#076f73,1,182,89,24,--ty-copper-700,color,site-v3-upgrade.css
+#687a88,1,206,13,47,--ty-n-500,color,site-v3-upgrade.css
+#55a046,1,110,39,45,--ty-n-600,--green,styles.css
+#17212b,1,210,30,13,--ty-navy-900,--ink,styles.css
+#657386,1,215,14,46,--ty-n-500,--muted,styles.css
+#d8e0e8,1,210,26,88,--ty-n-200,--line,styles.css
+"rgba(6, 36, 63, .14)",1,208,83,14,--ty-navy-800,--shadow,styles.css
+#34495b,1,208,27,28,--ty-navy-600,color,styles.css
+#066d70,1,182,90,23,--ty-copper-700,color,styles.css
+#e6f4f3,1,176,39,93,--ty-n-100,background,styles.css
+"rgba(216,224,232,.92)",1,210,26,88,--ty-n-200,border-bottom,styles.css
+"rgba(255,255,255,.97)",1,0,0,100,--ty-n-0,background,styles.css
+#294051,1,206,33,24,--ty-navy-700,color,styles.css
+"rgba(255,255,255,.86)",1,0,0,100,--ty-n-0,color,styles.css
+#83eadc,1,172,71,72,--ty-n-300,color,styles.css
+#eaf5f5,1,180,35,94,--ty-n-100,background,styles.css
+"rgba(6,36,63,.86)",1,208,83,14,--ty-navy-800,background,styles.css
+"rgba(6,36,63,.2)",1,208,83,14,--ty-navy-800,background,styles.css
+"rgba(6,36,63,.9)",1,208,83,14,--ty-navy-800,background,styles.css
+#cbd6df,1,207,24,84,--ty-navy-500,border,styles.css
+#edf2f5,1,203,29,95,--ty-n-100,background,styles.css
+"rgba(6,36,63,.84)",1,208,83,14,--ty-navy-800,background,styles.css
+"rgba(255,255,255,.96)",1,0,0,100,--ty-n-0,background,styles.css
+#385065,1,208,29,31,--ty-navy-600,color,styles.css
+#e9f4f3,1,175,33,94,--ty-n-100,background,styles.css
+#365766,1,199,31,31,--ty-navy-600,color,styles.css
+#fafcfd,1,200,43,99,--ty-n-0,background,styles.css
+"rgba(2,18,31,.78)",1,207,88,6,--ty-navy-900,background,styles.css
+#18222c,1,210,29,13,--ty-navy-900,background,styles.css
+#101820,1,210,33,9,--ty-navy-900,background,styles.css
+"rgba(255,255,255,.68)",1,0,0,100,--ty-n-0,color,styles.css
+#061c31,1,209,78,11,--ty-navy-900,--ty-navy-900,ty-foundation.css
+#0a2540,1,210,73,15,--ty-navy-800,--ty-navy-800,ty-foundation.css
+#103353,1,209,68,19,--ty-navy-700,--ty-navy-700,ty-foundation.css
+#1b4570,1,210,61,27,--ty-navy-600,--ty-navy-600,ty-foundation.css
+#2a5d8f,1,210,55,36,--ty-navy-500,--ty-navy-500,ty-foundation.css
+#9a4e1c,1,24,69,36,--ty-copper-700,--ty-copper-700,ty-foundation.css
+#b05e22,1,25,68,41,--ty-copper-600,--ty-copper-600,ty-foundation.css
+#c97a3c,1,26,57,51,--ty-copper-500,--ty-copper-500,ty-foundation.css
+#e8a86a,1,30,73,66,--ty-copper-300,--ty-copper-300,ty-foundation.css
+#f7e6d6,1,29,67,90,--ty-n-100,--ty-copper-100,ty-foundation.css
+#f6f8fa,1,210,29,97,--ty-n-50,--ty-n-50,ty-foundation.css
+#ecf0f4,1,210,27,94,--ty-n-100,--ty-n-100,ty-foundation.css
+#dce3ea,1,210,25,89,--ty-n-200,--ty-n-200,ty-foundation.css
+#c2ccd6,1,210,20,80,--ty-navy-500,--ty-n-300,ty-foundation.css
+#94a3b1,1,209,16,64,--ty-navy-500,--ty-n-400,ty-foundation.css
+#6b7c8c,1,209,13,48,--ty-n-500,--ty-n-500,ty-foundation.css
+#4e5f6f,1,209,17,37,--ty-navy-500,--ty-n-600,ty-foundation.css
+#374754,1,207,21,27,--ty-navy-600,--ty-n-700,ty-foundation.css
+#22303b,1,206,27,18,--ty-navy-800,--ty-n-800,ty-foundation.css
+#0f1a24,1,209,41,10,--ty-navy-900,--ty-n-900,ty-foundation.css
+#22384b,1,208,38,21,--ty-navy-700,--v9-text,ux-fix-v9.css
+#65798c,1,209,16,47,--ty-navy-500,--v9-muted,ux-fix-v9.css
+#d6e0e8,1,207,28,87,--ty-n-200,--v9-line,ux-fix-v9.css
+#eef4f8,1,204,42,95,--ty-n-100,background,ux-fix-v9.css
+#d9e4ec,1,205,33,89,--ty-n-200,border-color,ux-fix-v9.css
+#f2f6f9,1,206,37,96,--ty-n-50,background,ux-fix-v9.css
+#b9cddd,1,207,35,80,--ty-navy-500,border-color,ux-fix-v9.css
+"rgba(28,67,103,.08)",1,209,57,26,--ty-navy-600,box-shadow,ux-fix-v9.css
+#e8eef3,1,207,31,93,--ty-n-100,background,ux-fix-v9.css
+"rgba(0,0,0,.22)",1,0,0,0,--ty-n-900,box-shadow,ux-refine-v5.css
+"rgba(0,0,0,.32)",1,0,0,0,--ty-n-900,box-shadow,ux-refine-v5.css
+"rgba(6,36,63,.72)",1,208,83,14,--ty-navy-800,background,ux-refine-v5.css
+"rgba(255,255,255,.65)",1,0,0,100,--ty-n-0,color,ux-refine-v5.css
+#f2f4f5,1,200,13,95,--ty-n-100,background,ux-refine-v5.css
+#607384,1,208,16,45,--ty-navy-500,color,ux-refine-v5.css
+#344d62,1,207,31,29,--ty-navy-600,color,ux-refine-v5.css
+#f5f7f8,1,200,18,97,--ty-n-50,background,ux-refine-v5.css
+#8795a1,1,208,12,58,--ty-n-400,color,ux-refine-v5.css
+#40576b,1,208,25,34,--ty-navy-600,color,ux-refine-v5.css
+#1d5f9f,1,210,69,37,--ty-navy-500,--v6-blue,ux-refine-v6.css
+#123f6d,1,210,72,25,--ty-navy-600,--v6-blue-dark,ux-refine-v6.css
+#f5f9fd,1,210,67,98,--ty-n-50,--v6-bg,ux-refine-v6.css
+#18324d,1,211,52,20,--ty-navy-700,--v6-text,ux-refine-v6.css
+#627b94,1,210,20,48,--ty-navy-500,--v6-muted,ux-refine-v6.css
+"rgba(23,74,120,.14)",1,208,68,28,--ty-navy-600,--v6-line,ux-refine-v6.css
+"rgba(20,57,92,.1)",1,209,64,22,--ty-navy-700,--v6-shadow,ux-refine-v6.css
+#dbe7f2,1,209,47,90,--ty-n-200,background,ux-refine-v6.css
+"rgba(8,44,82,.38)",1,211,82,18,--ty-navy-700,background,ux-refine-v6.css
+#f0f6fb,1,207,58,96,--ty-n-50,background,ux-refine-v6.css
+"rgba(20,57,92,.07)",1,209,64,22,--ty-navy-700,box-shadow,ux-refine-v6.css
+#f1f6fa,1,207,47,96,--ty-n-50,background,ux-refine-v6.css
+"rgba(23,58,91,.15)",1,209,60,22,--ty-navy-700,box-shadow,ux-refine-v6.css
+"rgba(19,58,96,.08)",1,210,67,23,--ty-navy-700,box-shadow,ux-refine-v6.css
+"rgba(22,59,94,.07)",1,209,62,23,--ty-navy-700,box-shadow,ux-refine-v6.css
+#f2f6fa,1,210,44,96,--ty-n-50,background,ux-refine-v6.css
+"rgba(29,95,159,.28)",1,210,69,37,--ty-navy-500,outline,ux-refine-v6.css
+#f6f9fc,1,210,50,98,--ty-n-50,background,ux-refine-v6.css
+"rgba(20,58,95,.07)",1,210,65,23,--ty-navy-700,box-shadow,ux-refine-v6.css
+#f4f9fd,1,207,69,97,--ty-n-50,background,ux-refine-v6.css
+#245f96,1,209,61,36,--ty-navy-500,--v7-blue,ux-refine-v7.css
+#183e63,1,210,61,24,--ty-navy-600,--v7-blue-deep,ux-refine-v7.css
+#21384f,1,210,41,22,--ty-navy-700,--v7-text,ux-refine-v7.css
+#6a7d90,1,210,15,49,--ty-navy-500,--v7-muted,ux-refine-v7.css
+"rgba(0,0,0,.5)",1,0,0,0,--ty-n-900,text-shadow,ux-refine-v7.css
+"rgba(0,0,0,.55)",1,0,0,0,--ty-n-900,text-shadow,ux-refine-v7.css
+"rgba(0,0,0,.58)",1,0,0,0,--ty-n-900,text-shadow,ux-refine-v7.css
+"rgba(255,255,255,.48)",1,0,0,100,--ty-n-0,background,ux-refine-v7.css
+#5f7386,1,209,17,45,--ty-navy-500,color,ux-refine-v7.css
+#214e78,1,209,57,30,--ty-navy-600,color,ux-refine-v7.css
+#7b8c9d,1,210,15,55,--ty-navy-500,color,ux-refine-v7.css
+#6d8398,1,209,17,51,--ty-navy-500,color,ux-refine-v7.css
+#8ba0b4,1,209,21,63,--ty-navy-500,color,ux-refine-v7.css
+#62778b,1,209,17,46,--ty-navy-500,color,ux-refine-v7.css
+#667d91,1,208,17,48,--ty-navy-500,color,ux-refine-v7.css
+#667a8d,1,209,16,48,--ty-navy-500,color,ux-refine-v7.css
+#eef3f6,1,203,31,95,--ty-n-100,background,ux-refine-v7.css
+#e5ebf0,1,207,27,92,--ty-n-100,border-color,ux-refine-v7.css
+#75879a,1,211,15,53,--ty-navy-500,color,ux-refine-v7.css
+#dfe9f1,1,207,39,91,--ty-n-200,--v8-band,ux-refine-v8.css
+#d3e1ec,1,206,40,88,--ty-n-200,--v8-band-strong,ux-refine-v8.css
+#cbd8e3,1,207,30,84,--ty-navy-500,--v8-line,ux-refine-v8.css
+#23384b,1,208,36,22,--ty-navy-700,--v8-text,ux-refine-v8.css
+#64798d,1,209,17,47,--ty-navy-500,--v8-muted,ux-refine-v8.css
+#173f63,1,208,62,24,--ty-navy-600,--v8-blue-deep,ux-refine-v8.css
+#f3f6f8,1,204,26,96,--ty-n-50,background,ux-refine-v8.css
+#60758a,1,210,18,46,--ty-navy-500,color,ux-refine-v8.css
+#e3eaf0,1,208,30,92,--ty-n-100,background,ux-refine-v8.css
+#dfe7ed,1,206,28,90,--ty-n-200,background,ux-refine-v8.css
+"rgba(0,0,0,.17)",1,0,0,0,--ty-n-900,background,visual-refine-v4.css
+"rgba(0,0,0,0)",1,0,0,0,--ty-n-900,background,visual-refine-v4.css
+"rgba(0,0,0,.30)",1,0,0,0,--ty-n-900,box-shadow,visual-refine-v4.css
+#f3f5f6,1,200,14,96,--ty-n-50,background,visual-refine-v4.css
+#087c83,1,183,88,27,--ty-copper-700,--ty-teal,visual-system.css
+#566c7c,1,205,18,41,--ty-navy-500,--ty-muted,visual-system.css
+#cbd8df,1,201,24,84,--ty-navy-500,--ty-border,visual-system.css
+#d8e5ec,1,201,34,89,--ty-n-200,--ty-panel,visual-system.css
+#c4d6e0,1,201,31,82,--ty-navy-500,--ty-map-canvas,visual-system.css
+"rgba(203,216,223,.9)",1,201,24,84,--ty-navy-500,border-bottom,visual-system.css
+"rgba(249,252,253,.96)",1,195,50,98,--ty-n-50,background,visual-system.css
+#365165,1,206,30,30,--ty-navy-600,color,visual-system.css
+#b8c9d4,1,204,25,78,--ty-navy-500,color,visual-system.css
+#d3e0e7,1,201,29,87,--ty-n-200,color,visual-system.css
+#aebfca,1,204,21,74,--ty-navy-500,color,visual-system.css
+"rgba(9,28,42,.62)",1,205,65,10,--ty-navy-900,background,visual-system.css
+"rgba(7,31,49,.3)",1,206,75,11,--ty-navy-900,box-shadow,visual-system.css
+#061f35,1,208,80,12,--ty-navy-900,background,yawei-refine.css
+"rgba(3,25,44,.9)",1,208,87,9,--ty-navy-900,background,yawei-refine.css
+"rgba(3,25,44,.62)",1,208,87,9,--ty-navy-900,background,yawei-refine.css
+"rgba(3,25,44,.14)",1,208,87,9,--ty-navy-900,background,yawei-refine.css
+"rgba(3,25,44,.08)",1,208,87,9,--ty-navy-900,background,yawei-refine.css
+"rgba(255,255,255,.82)",1,0,0,100,--ty-n-0,color,yawei-refine.css
+"rgba(255,255,255,.78)",1,0,0,100,--ty-n-0,border,yawei-refine.css
+#dfe6eb,1,205,23,90,--ty-n-200,background,yawei-refine.css
+#b7c3cc,1,206,17,76,--ty-navy-500,color,yawei-refine.css
+#6b7075,1,210,4,44,--ty-n-500,color,yawei-refine.css
+#24384a,1,208,35,22,--ty-navy-700,color,yawei-refine.css
+"rgba(255,255,255,.67)",1,0,0,100,--ty-n-0,color,yawei-refine.css
+#ccd7df,1,205,23,84,--ty-navy-500,color,yawei-refine.css
+#dbe2e7,1,205,20,88,--ty-n-200,background,yawei-refine.css
+"rgba(5,28,48,.86)",1,208,81,10,--ty-navy-900,background,yawei-refine.css
+"rgba(5,28,48,.18)",1,208,81,10,--ty-navy-900,background,yawei-refine.css
+#41566a,1,209,24,34,--ty-navy-600,color,yawei-refine.css
+"rgba(6,36,63,.78)",1,208,83,14,--ty-navy-800,background,yawei-refine.css

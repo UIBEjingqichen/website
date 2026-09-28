@@ -6,7 +6,7 @@
   height:auto!important;
   aspect-ratio:4/3;
   overflow:hidden;
-  background:linear-gradient(180deg,#f7f9fa,#edf2f4);
+  background:linear-gradient(180deg,var(--ty-n-50),var(--ty-n-100));
 }
 .v3p-products-home .v3p-family-card-media img,
 .v3p-family-grid .v3p-family-card-media img{
@@ -20,7 +20,7 @@
 
 /* Product index hero is also a product view, not a lifestyle crop. */
 .v3p-index-hero .media{
-  background:linear-gradient(180deg,#f7f9fa,#edf2f4);
+  background:linear-gradient(180deg,var(--ty-n-50),var(--ty-n-100));
   overflow:hidden;
 }
 .v3p-index-hero .media img{
@@ -38,7 +38,7 @@
 .v3p-platform-grid .v3p-platform-card .media{
   aspect-ratio:4/3;
   overflow:hidden;
-  background:#f4f7f8;
+  background:var(--ty-n-50);
 }
 .v3p-platform-grid .v3p-platform-card .media img{
   width:100%;
@@ -54,7 +54,7 @@
 .v3p-hero-media,
 .v3p-family-hero-media,
 .v3p-photo:not(.cover){
-  background:linear-gradient(180deg,#f8fafb,#eef3f5);
+  background:linear-gradient(180deg,var(--ty-n-50),var(--ty-n-100));
 }
 .v3p-hero-media img,
 .v3p-family-hero-media img,
@@ -88,7 +88,7 @@
   margin:0;
   aspect-ratio:4/3;
   overflow:hidden;
-  background:#dfe8ec;
+  background:var(--ty-n-200);
 }
 .iq-landscape-card img{
   display:block;

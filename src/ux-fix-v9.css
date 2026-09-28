@@ -1,4 +1,4 @@
-:root{--v9-text:#22384b;--v9-muted:#65798c;--v9-blue:#255f93;--v9-line:#d6e0e8;--v9-card:#f5f8fb}
+:root{--v9-text:var(--ty-navy-700);--v9-muted:var(--ty-navy-500);--v9-blue:var(--ty-navy-500);--v9-line:var(--ty-n-200);--v9-card:var(--ty-n-50)}
 
 /* Home news and engineering-guide cards must never inherit white display text. */
 .v8-home .yw-news,
@@ -25,13 +25,13 @@
 .v9-model-page .v5-model-apps a{color:var(--v9-text)!important}
 
 /* Applications come from the real project/application rows in the export master table. */
-.v9-real-applications{background:#eef4f8!important;border-color:#d9e4ec!important;color:var(--v9-text)!important}
+.v9-real-applications{background:var(--ty-n-100)!important;border-color:var(--ty-n-200)!important;color:var(--v9-text)!important}
 .v9-real-applications .v5-family-heading{display:flex;align-items:end;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:24px}
 .v9-real-applications .v5-family-heading p{width:100%;margin:0 0 -8px;font-size:11px;letter-spacing:.18em;color:var(--v9-blue)!important}
 .v9-real-applications .v5-family-heading h2{margin:0;font-size:clamp(1.35rem,2.1vw,1.9rem)!important;font-weight:600;color:var(--v9-text)!important}
 .v9-real-applications .v9-section-note{max-width:520px;font-size:.85rem!important;line-height:1.55;color:var(--v9-muted)!important}
 .v9-application-project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.v9-application-project{display:flex;min-height:165px;flex-direction:column;padding:18px;background:#fff;border:1px solid var(--v9-line);border-radius:6px;color:var(--v9-text)!important}
+.v9-application-project{display:flex;min-height:165px;flex-direction:column;padding:18px;background:var(--ty-n-0);border:1px solid var(--v9-line);border-radius:6px;color:var(--v9-text)!important}
 .v9-application-project-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}
 .v9-application-project-meta span{font-size:.68rem!important;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--v9-blue)!important}
 .v9-application-project-meta small{font-size:.74rem;color:var(--v9-muted)!important}
@@ -41,15 +41,15 @@
 .v9-application-project-foot strong{font-size:.76rem!important;color:var(--v9-blue)!important}
 .v9-applications-more{display:inline-block;margin-top:20px;font-size:.72rem;letter-spacing:.08em;font-weight:700;text-decoration:none;color:var(--v9-blue)!important}
 
-.v9-other-products{background:#f2f6f9!important;border-color:#dce5ec!important}
+.v9-other-products{background:var(--ty-n-50)!important;border-color:var(--ty-n-200)!important}
 .v9-other-products .v5-family-heading{display:flex;align-items:end;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:24px}
 .v9-other-products .v5-family-heading p{width:100%;margin:0 0 -8px;font-size:11px;letter-spacing:.18em;color:var(--v9-blue)!important}
 .v9-other-products .v5-family-heading h2{margin:0;font-size:clamp(1.35rem,2.1vw,1.9rem)!important;font-weight:600;color:var(--v9-text)!important}
 .v9-section-note{font-size:.85rem!important;color:var(--v9-muted)!important}
 .v9-other-products-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
-.v9-other-product-card{display:block;overflow:hidden;background:#fff;border:1px solid var(--v9-line);border-radius:6px;text-decoration:none!important;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
-.v9-other-product-card:hover{transform:translateY(-3px);border-color:#b9cddd;box-shadow:0 10px 24px rgba(28,67,103,.08)}
-.v9-other-product-image{aspect-ratio:4/3;background:#e8eef3;overflow:hidden}
+.v9-other-product-card{display:block;overflow:hidden;background:var(--ty-n-0);border:1px solid var(--v9-line);border-radius:6px;text-decoration:none!important;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.v9-other-product-card:hover{transform:translateY(-3px);border-color:var(--ty-navy-500);box-shadow:0 10px 24px color-mix(in srgb, var(--ty-navy-600) 8%, transparent)}
+.v9-other-product-image{aspect-ratio:4/3;background:var(--ty-n-100);overflow:hidden}
 .v9-other-product-image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
 .v9-other-product-card:hover img{transform:scale(1.018)}
 .v9-other-product-copy{padding:13px 13px 14px}

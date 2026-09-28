@@ -1,34 +1,34 @@
-.ty-product-showcase{padding:58px 0 64px;background:#f9fbfc;color:#173348}
+.ty-product-showcase{padding:58px 0 64px;background:var(--ty-n-50);color:var(--ty-navy-700)}
 .typs-shell{width:min(1200px,calc(100% - 48px));margin:0 auto}
 .typs-head{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:19px}
-.typs-head h2{margin:0;color:#163247;font-size:24px;font-weight:760;letter-spacing:-.015em}
+.typs-head h2{margin:0;color:var(--ty-navy-700);font-size:24px;font-weight:760;letter-spacing:-.015em}
 .typs-family-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0 0 28px}
-.typs-family{display:flex;min-height:154px;flex-direction:column;align-items:flex-start;padding:20px 22px;border:1px solid #cbdce5;background:#fff;color:#173348;text-decoration:none;transition:border-color .2s ease,transform .2s ease}
-.typs-family:hover{border-color:#087f86;transform:translateY(-2px)}
-.typs-family small{color:#087f86;font-size:11px;font-weight:800;letter-spacing:.09em}
+.typs-family{display:flex;min-height:154px;flex-direction:column;align-items:flex-start;padding:20px 22px;border:1px solid var(--ty-n-200);background:var(--ty-n-0);color:var(--ty-navy-700);text-decoration:none;transition:border-color .2s ease,transform .2s ease}
+.typs-family:hover{border-color:var(--ty-copper-700);transform:translateY(-2px)}
+.typs-family small{color:var(--ty-copper-700);font-size:11px;font-weight:800;letter-spacing:.09em}
 .typs-family strong{margin-top:9px;font-size:20px;line-height:1.2}
-.typs-family span{margin-top:6px;color:#5b7180;font-size:13px}
-.typs-family b{margin-top:auto;padding-top:14px;color:#075e67;font-size:11px;letter-spacing:.05em}
+.typs-family span{margin-top:6px;color:var(--ty-navy-500);font-size:13px}
+.typs-family b{margin-top:auto;padding-top:14px;color:var(--ty-copper-700);font-size:11px;letter-spacing:.05em}
 .typs-actions,.ty-cert-actions{display:flex;align-items:center;gap:17px}
 .ty-cert-actions a{white-space:nowrap}
-.typs-actions a{color:#17577e;font-size:12px;font-weight:800;letter-spacing:.04em;text-decoration:none}
-.ty-marquee-toggle{display:grid;place-items:center;width:29px;height:29px;padding:0;border:1px solid #bfd0d9;border-radius:4px;background:#fff;color:#285568;font:inherit;font-size:13px;font-weight:800;cursor:pointer}
-.ty-marquee-toggle:hover{border-color:#0c6976;color:#0c6976}
+.typs-actions a{color:var(--ty-copper-700);font-size:12px;font-weight:800;letter-spacing:.04em;text-decoration:none}
+.ty-marquee-toggle{display:grid;place-items:center;width:29px;height:29px;padding:0;border:1px solid var(--ty-navy-500);border-radius:4px;background:var(--ty-n-0);color:var(--ty-navy-600);font:inherit;font-size:13px;font-weight:800;cursor:pointer}
+.ty-marquee-toggle:hover{border-color:var(--ty-copper-700);color:var(--ty-copper-700)}
 .ty-product-showcase [hidden],.ty-cert-actions [hidden]{display:none!important}
 .typs-carousel{position:relative;padding:0 46px}
 .typs-viewport{overflow-x:auto;overflow-y:hidden;scroll-snap-type:none;scroll-behavior:auto;scrollbar-width:none;cursor:grab;touch-action:pan-x pan-y}
 .typs-viewport::-webkit-scrollbar,body.phase1-home #why-us .v5-coverflow-stage::-webkit-scrollbar{display:none}
 .typs-rail{display:flex;width:max-content;gap:14px;padding:2px 0 12px}
-.typs-card{display:flex;flex:0 0 220px;flex-direction:column;width:220px;height:292px;overflow:hidden;border:1px solid #cfdee6;border-radius:5px;background:#fff;color:#173348;text-decoration:none;box-shadow:0 8px 24px rgba(16,46,70,.05);transition:border-color .2s ease,box-shadow .2s ease}
-.typs-card:hover{border-color:#7aabb8;box-shadow:0 10px 26px rgba(16,46,70,.13)}
-.typs-card-media{display:grid;place-items:center;height:222px;padding:12px;background:#edf4f7}
+.typs-card{display:flex;flex:0 0 220px;flex-direction:column;width:220px;height:292px;overflow:hidden;border:1px solid var(--ty-n-200);border-radius:5px;background:var(--ty-n-0);color:var(--ty-navy-700);text-decoration:none;box-shadow:0 8px 24px color-mix(in srgb, var(--ty-navy-800) 5%, transparent);transition:border-color .2s ease,box-shadow .2s ease}
+.typs-card:hover{border-color:var(--ty-copper-300);box-shadow:0 10px 26px color-mix(in srgb, var(--ty-navy-800) 13%, transparent)}
+.typs-card-media{display:grid;place-items:center;height:222px;padding:12px;background:var(--ty-n-100)}
 .typs-card-media img{display:block;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;pointer-events:none}
-.typs-card-title{display:flex;align-items:center;min-height:68px;padding:9px 13px;color:#19384b;font-size:13px;font-weight:730;line-height:1.3}
-.typs-arrow{position:absolute;z-index:2;top:50%;width:34px;height:34px;margin-top:-23px;padding:0;border:1px solid #c4d6df;border-radius:4px;background:#fff;color:#173b50;font:inherit;font-size:18px;cursor:pointer;box-shadow:0 4px 14px rgba(16,46,70,.08)}
-.typs-arrow:hover{border-color:#0c6976;color:#0c6976}
+.typs-card-title{display:flex;align-items:center;min-height:68px;padding:9px 13px;color:var(--ty-navy-700);font-size:13px;font-weight:730;line-height:1.3}
+.typs-arrow{position:absolute;z-index:2;top:50%;width:34px;height:34px;margin-top:-23px;padding:0;border:1px solid var(--ty-navy-500);border-radius:4px;background:var(--ty-n-0);color:var(--ty-navy-700);font:inherit;font-size:18px;cursor:pointer;box-shadow:0 4px 14px color-mix(in srgb, var(--ty-navy-800) 8%, transparent)}
+.typs-arrow:hover{border-color:var(--ty-copper-700);color:var(--ty-copper-700)}
 .typs-arrow[data-typs-prev]{left:0}.typs-arrow[data-typs-next]{right:0}
 .typs-viewport.is-dragging,body.phase1-home #why-us .v5-coverflow-stage.is-dragging{cursor:grabbing}
-.ty-product-showcase button:focus-visible,.ty-product-showcase a:focus-visible,.ty-cert-actions button:focus-visible{outline:3px solid #208e9c;outline-offset:3px}
+.ty-product-showcase button:focus-visible,.ty-product-showcase a:focus-visible,.ty-cert-actions button:focus-visible{outline:3px solid var(--ty-copper-700);outline-offset:3px}
 body.phase1-home #why-us .v5-coverflow-stage{overflow-x:auto;scroll-snap-type:none;scroll-behavior:auto;scrollbar-width:none;cursor:grab;touch-action:pan-x pan-y}
 body.phase1-home #why-us .v5-coverflow-card{scroll-snap-align:none}
 @media(max-width:560px){

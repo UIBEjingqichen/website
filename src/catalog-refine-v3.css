@@ -5,7 +5,7 @@ body { background: #e9edf0; }
 .catalog-appendix {
   box-shadow: none !important;
   border-radius: 0 !important;
-  background: #fff !important;
+  background: var(--ty-n-0) !important;
 }
 .catalog-sheet {
   width: min(1400px, calc(100vw - 32px));
@@ -33,7 +33,7 @@ body { background: #e9edf0; }
 .asset-card,
 .zgs-update-grid,
 .appendix-summary > div {
-  background: #fff !important;
+  background: var(--ty-n-0) !important;
   background-image: none !important;
   box-shadow: none !important;
   border-radius: 0 !important;
@@ -77,7 +77,7 @@ body { background: #e9edf0; }
 .catalog-model-card > div,
 .catalog-project-card div,
 .service-grid article { padding-left: 0 !important; padding-right: 0 !important; }
-.catalog-evidence-image { background: #fff !important; border-bottom: 1px solid #e3e8ec; }
+.catalog-evidence-image { background: var(--ty-n-0) !important; border-bottom: 1px solid #e3e8ec; }
 
 .quality-principles {
   background: transparent !important;
@@ -106,7 +106,7 @@ body { background: #e9edf0; }
 
 .eu-evidence-lead { gap: 0 !important; border-top: 1px solid #d9e0e5; border-bottom: 1px solid #d9e0e5; }
 .eu-evidence-lead div {
-  background: #fff !important;
+  background: var(--ty-n-0) !important;
   color: #17314f !important;
   padding: 18px 0 !important;
 }
@@ -191,7 +191,7 @@ body { background: #e9edf0; }
   border-bottom: 1px solid #d9e0e5;
 }
 .appendix-title,
-.appendix-group-head { background: #fff !important; color: #17293d !important; }
+.appendix-group-head { background: var(--ty-n-0) !important; color: #17293d !important; }
 .appendix-summary {
   background: transparent !important;
   border-top: 1px solid #d9e0e5;
@@ -204,11 +204,11 @@ body { background: #e9edf0; }
 }
 .appendix-summary > div:last-child { border-right: 0 !important; }
 .complete-evidence-group,
-.asset-group { background: #fff !important; }
+.asset-group { background: var(--ty-n-0) !important; }
 .complete-evidence-cover,
-.asset-card figure { background: #fff !important; }
+.asset-card figure { background: var(--ty-n-0) !important; }
 
-.catalog-zgs-update { background: #fff !important; }
+.catalog-zgs-update { background: var(--ty-n-0) !important; }
 .zgs-update-grid { border-top: 1px solid #d9e0e5; border-bottom: 1px solid #d9e0e5; }
 
 @media (max-width: 800px) {
@@ -223,7 +223,7 @@ body { background: #e9edf0; }
 }
 
 @media print {
-  body { background: #fff !important; }
+  body { background: var(--ty-n-0) !important; }
   .catalog { gap: 0 !important; }
   .catalog-sheet,
   .catalog-appendix { border-bottom: 0 !important; }

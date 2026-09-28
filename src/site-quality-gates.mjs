@@ -81,7 +81,7 @@ atLeast('@font-face declarations', (cssText.match(/@font-face\b/g) || []).length
 atMost('CSS files', css.length, 34);
 atMost('CSS KB', Math.ceil(Buffer.byteLength(cssText) / 1024), 550);
 atMost('!important', (cssText.match(/!important\b/gi) || []).length, 2200);
-atMost('Distinct hex colours', new Set((cssText.match(/#[a-f\d]{3,8}\b/gi) || []).map((value) => value.toLowerCase())).size, 620);
+atMost('Distinct hex colours', new Set((cssText.match(/#[a-f\d]{3,8}\b/gi) || []).map((value) => value.toLowerCase())).size, 60);
 atMost('Distinct font sizes', new Set((cssText.match(/font-size\s*:[^;}]*/gi) || []).map((value) => value.toLowerCase())).size, 330);
 atMost('Distinct shadows', new Set((cssText.match(/box-shadow\s*:[^;}]*/gi) || []).map((value) => value.toLowerCase())).size, 80);
 atMost('CSS files declaring :root', css.filter((file) => /:root\b/.test(fs.readFileSync(file, 'utf8'))).length, 13);

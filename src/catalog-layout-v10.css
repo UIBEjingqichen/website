@@ -246,7 +246,7 @@
   padding: 10px 12px !important;
   border-top: 1px solid #cad6df !important;
   border-bottom: 1px solid #cad6df !important;
-  background: #f7f9fb !important;
+  background: var(--ty-n-50) !important;
 }
 .v10-standards-band > div:first-child span,
 .v10-standards-band > div:first-child strong {
@@ -272,7 +272,7 @@
 .v10-standard-list span {
   padding: 5px 8px !important;
   border: 1px solid #d6e0e7 !important;
-  background: #fff !important;
+  background: var(--ty-n-0) !important;
   color: #2f4e69 !important;
   font-size: 8.5px !important;
   font-weight: 700 !important;

@@ -28,7 +28,7 @@
   min-height: 0 !important;
   margin: 0 !important;
   padding: 3px !important;
-  background: #fff !important;
+  background: var(--ty-n-0) !important;
   border: 1px solid #dbe4eb !important;
   overflow: hidden !important;
   display: grid !important;
@@ -85,8 +85,8 @@
   grid-template-columns: minmax(205px, .78fr) minmax(210px, 1fr) !important;
   align-items: center !important;
   border-top: 1px solid #cfd9e2 !important;
-  border-bottom: 1px solid #e5ebf0 !important;
-  background: #fff !important;
+  border-bottom: 1px solid var(--ty-n-100) !important;
+  background: var(--ty-n-0) !important;
   overflow: hidden !important;
 }
 .catalog-front-certificate figure {
@@ -263,7 +263,7 @@
   max-height: 665px !important;
   object-fit: contain !important;
   object-position: center !important;
-  background: #fff !important;
+  background: var(--ty-n-0) !important;
   transform: scale(1.025);
   transform-origin: center;
 }
@@ -351,7 +351,7 @@
     min-width: 320mm !important;
     margin: 0 !important;
     overflow: visible !important;
-    background: #fff !important;
+    background: var(--ty-n-0) !important;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }
