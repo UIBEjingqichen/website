@@ -32,7 +32,7 @@
   /* Variables consumed by legacy page components. */
   --blue:var(--ty-navy-600);
   --green:var(--ty-n-600);
-  --ie-shell:1200px;
+  --ty-editorial__shell:1200px;
   --ink:var(--ty-navy-900);
   --line:var(--ty-n-200);
   --muted:var(--ty-n-600);
@@ -88,12 +88,12 @@
   --white:var(--ty-n-0);
   /* Compatibility names used by the current page styles. */
   --ty-navy:var(--ty-navy-800);--ty-blue:var(--ty-navy-600);--ty-teal:var(--ty-copper-700);--ty-teal-dark:var(--ty-copper-700);--ty-muted:var(--ty-n-600);--ty-panel:var(--ty-n-100);--ty-map:var(--ty-n-200);--ty-map-canvas:var(--ty-n-300);--ty-white:var(--ty-n-0);
-  --ie-navy:var(--ty-navy-800);--ie-text:var(--ty-n-800);--ie-muted:var(--ty-n-600);--ie-teal:var(--ty-copper-700);--ie-line:var(--ty-n-200);--ie-bg:var(--ty-n-50);
+  --ty-editorial__navy:var(--ty-navy-800);--ty-editorial__text:var(--ty-n-800);--ty-editorial__muted:var(--ty-n-600);--ty-editorial__teal:var(--ty-copper-700);--ty-editorial__line:var(--ty-n-200);--ty-editorial__bg:var(--ty-n-50);
   --pf-ink:var(--ty-n-800);--pf-navy:var(--ty-navy-800);--pf-blue:var(--ty-copper-700);--pf-cyan:var(--ty-copper-300);--pf-muted:var(--ty-n-600);--pf-line:var(--ty-n-200);--pf-paper:var(--ty-n-0);--pf-mist:var(--ty-n-50);--pf-soft:var(--ty-n-50);
 }
 body{font-family:var(--ty-font-sans);color:var(--ty-text)}
 :where(h1,h2,h3,.ty-display){font-family:var(--ty-font-display);font-weight:700;letter-spacing:-.01em}
-:where(button,.btn,.ie-button){font-family:var(--ty-font-display)}
+:where(button,.btn,.ty-editorial__button){font-family:var(--ty-font-display)}
 :focus-visible{outline:2px solid var(--ty-focus);outline-offset:3px}
 :where(table,dl,.ty-numeric){font-variant-numeric:tabular-nums}
 @media(max-width:1080px){html{--ty-header:64px}}

@@ -36,25 +36,25 @@ const previousFlowRange = sectionRange(home, 'ty-energy-flow-wrap');
 if (!previousHeroRange || !previousFlowRange) throw new Error('Previous homepage hero or energy flow missing');
 const previousFlow = home.slice(...previousFlowRange);
 home = replaceSection(home, 'ty-energy-flow-wrap', '');
-home = replaceSection(home, 'v6-hero', `${previousFlow}<section class="ie-hero" aria-labelledby="ie-home-title">
-  <div class="ie-shell ie-hero-grid">
-    <div class="ie-hero-copy"><p class="ie-eyebrow">TIANYU ELECTRIC · TRANSFORMER MANUFACTURING</p>
-      <h1 id="ie-home-title">Power transformers for utility, renewable and industrial projects.</h1>
+home = replaceSection(home, 'v6-hero', `${previousFlow}<section class="ty-editorial__hero" aria-labelledby="ty-editorial__home-title">
+  <div class="ty-editorial__shell ty-editorial__hero-grid">
+    <div class="ty-editorial__hero-copy"><p class="ty-editorial__eyebrow">TIANYU ELECTRIC · TRANSFORMER MANUFACTURING</p>
+      <h1 id="ty-editorial__home-title">Power transformers for utility, renewable and industrial projects.</h1>
       <p>Power, distribution and project-engineered transformer platforms, supported by manufacturing and test evidence from Fuzhou.</p>
-      <div class="ie-actions"><a class="ie-button" href="products.html">Explore products</a><a class="ie-button ie-button-secondary" href="contact.html">Discuss a specification</a></div>
-      <p class="ie-hero-detail">35–220 kV power-transformer platforms · Distribution transformers · Prefabricated substations</p>
+      <div class="ty-editorial__actions"><a class="ty-editorial__button" href="products.html">Explore products</a><a class="ty-editorial__button ty-editorial__button-secondary" href="contact.html">Discuss a specification</a></div>
+      <p class="ty-editorial__hero-detail">35–220 kV power-transformer platforms · Distribution transformers · Prefabricated substations</p>
     </div>
-    <figure class="ie-hero-media"><img src="assets/media/products/classified/110kv-power-transformer/01.png" alt="110 kV power transformer in Tianyu's manufacturing facility" width="1200" height="900" fetchpriority="high"><figcaption>110 kV power transformer · Tianyu manufacturing facility</figcaption></figure>
+    <figure class="ty-editorial__hero-media"><img src="assets/media/products/classified/110kv-power-transformer/01.png" alt="110 kV power transformer in Tianyu's manufacturing facility" width="1200" height="900" fetchpriority="high"><figcaption>110 kV power transformer · Tianyu manufacturing facility</figcaption></figure>
   </div>
 </section>`);
-home = replaceSection(home, 'ty-product-showcase', `<section class="ie-home-products" id="products"><div class="ie-shell">
-  <div class="ie-section-head"><div><p class="ie-eyebrow">PRODUCT RANGE</p><h2>Choose by equipment and voltage class.</h2></div><a class="ie-text-link" href="products.html">View complete product directory →</a></div>
-  <nav class="ie-family-links" aria-label="Product families">
+home = replaceSection(home, 'ty-product-showcase', `<section class="ty-editorial__home-products" id="products"><div class="ty-editorial__shell">
+  <div class="ty-editorial__section-head"><div><p class="ty-editorial__eyebrow">PRODUCT RANGE</p><h2>Choose by equipment and voltage class.</h2></div><a class="ty-editorial__text-link" href="products.html">View complete product directory →</a></div>
+  <nav class="ty-editorial__family-links" aria-label="Product families">
     <a href="products.html#power-transformers"><span>01</span><strong>Power Transformers</strong><small>35–220 kV platforms</small></a>
     <a href="products.html#distribution-transformers"><span>02</span><strong>Distribution Transformers</strong><small>Oil-immersed and dry-type</small></a>
     <a href="products.html#prefabricated-substations"><span>03</span><strong>Prefabricated Substations</strong><small>Project-engineered systems</small></a>
   </nav>
-  <div class="ie-feature-grid">
+  <div class="ty-editorial__feature-grid">
     <a href="products/35kv-power-transformer/index.html"><img src="assets/media/products/classified/35kv-power-transformer/01.png" alt="35 kV oil-immersed power transformer" loading="lazy"><span>35 kV class</span><strong>Oil-Immersed Power Transformer</strong><small>8–31.5 MVA</small></a>
     <a href="products/66kv-power-transformer/index.html"><img src="assets/media/products/classified/66kv-power-transformer/01.png" alt="66 kV oil-immersed power transformer" loading="lazy"><span>66 kV class</span><strong>Oil-Immersed Power Transformer</strong><small>6.3–63 MVA</small></a>
     <a href="products/110kv-power-transformer/index.html"><img src="assets/media/products/classified/110kv-power-transformer/01.png" alt="110 kV three-winding power transformer" loading="lazy"><span>110 kV class</span><strong>Three-Winding Power Transformer</strong><small>6.3–63 MVA</small></a>
@@ -64,7 +64,7 @@ home = home.replace('Hover to preview · Click to open project details', 'Select
 write('index.html', home);
 
 let testing = read('testing.html');
-testing = afterSection(testing, 'ty-project-detail-hero', `<section class="ie-test-evidence"><div class="ie-shell"><div class="ie-section-head"><div><p class="ie-eyebrow">TESTING FACILITY</p><h2>Equipment and records behind verification.</h2></div><a class="ie-text-link" href="resources.html#certificates">Find model-specific reports →</a></div><div class="ie-test-grid"><figure><img src="assets/media/factory/large-transformer-test-station.png" alt="Large transformer test station at Tianyu" loading="lazy"><figcaption>Large transformer test station · Routine and project-specified tests</figcaption></figure><figure><img src="assets/media/factory/lightning-impulse-test-equipment.png" alt="Lightning impulse test equipment" loading="lazy"><figcaption>Lightning impulse equipment · Test scope is defined by the applicable standard and project specification</figcaption></figure></div></div></section>`);
+testing = afterSection(testing, 'ty-project-detail-hero', `<section class="ty-editorial__test-evidence"><div class="ty-editorial__shell"><div class="ty-editorial__section-head"><div><p class="ty-editorial__eyebrow">TESTING FACILITY</p><h2>Equipment and records behind verification.</h2></div><a class="ty-editorial__text-link" href="resources.html#certificates">Find model-specific reports →</a></div><div class="ty-editorial__test-grid"><figure><img src="assets/media/factory/large-transformer-test-station.png" alt="Large transformer test station at Tianyu" loading="lazy"><figcaption>Large transformer test station · Routine and project-specified tests</figcaption></figure><figure><img src="assets/media/factory/lightning-impulse-test-equipment.png" alt="Lightning impulse test equipment" loading="lazy"><figcaption>Lightning impulse equipment · Test scope is defined by the applicable standard and project specification</figcaption></figure></div></div></section>`);
 write('testing.html', testing);
 
 let quality = read('quality.html');
@@ -77,9 +77,9 @@ const proof = [1, 8, 14].map(index => {
   const report = card.match(/<a class="text-link" href="([^"]+)"/)?.[1];
   const rating = card.match(/<h3>[\s\S]*?<\/h3>\s*<p>([\s\S]*?)<\/p>/)?.[1];
   if (!img || !title || !report || !rating) throw new Error(`Incomplete report evidence at index ${index}`);
-  return `<article class="ie-proof"><a href="${report}" target="_blank" rel="noopener"><img src="${img}" alt="Cover of ${title}" loading="lazy"><span>${rating}</span><strong>${title}</strong><span class="ie-proof-action">View report →</span></a></article>`;
+  return `<article class="ty-editorial__proof"><a href="${report}" target="_blank" rel="noopener"><img src="${img}" alt="Cover of ${title}" loading="lazy"><span>${rating}</span><strong>${title}</strong><span class="ty-editorial__proof-action">View report →</span></a></article>`;
 }).join('');
-quality = replaceSection(quality, 'evidence-section', `<section class="ie-quality-evidence" aria-labelledby="ie-quality-title"><div class="ie-shell"><div class="ie-section-head"><div><p class="ie-eyebrow">THIRD-PARTY EVIDENCE</p><h2 id="ie-quality-title">Evidence tied to a tested model.</h2><p class="ie-section-intro">These examples identify their product and rating. The resource library holds all 19 supplied report files, with model and document filters.</p></div><a class="ie-text-link" href="resources.html#certificates">Search all reports →</a></div><div class="ie-proof-grid">${proof}</div></div></section>`);
+quality = replaceSection(quality, 'evidence-section', `<section class="ty-editorial__quality-evidence" aria-labelledby="ty-editorial__quality-title"><div class="ty-editorial__shell"><div class="ty-editorial__section-head"><div><p class="ty-editorial__eyebrow">THIRD-PARTY EVIDENCE</p><h2 id="ty-editorial__quality-title">Evidence tied to a tested model.</h2><p class="ty-editorial__section-intro">These examples identify their product and rating. The resource library holds all 19 supplied report files, with model and document filters.</p></div><a class="ty-editorial__text-link" href="resources.html#certificates">Search all reports →</a></div><div class="ty-editorial__proof-grid">${proof}</div></div></section>`);
 write('quality.html', quality);
 
 let resources = read('resources.html');
@@ -87,7 +87,7 @@ const resourceHero = sectionRange(resources, 'v6-hero');
 if (!resourceHero) throw new Error('Resources hero missing');
 const firstResourceSlide = resources.slice(...resourceHero).match(/<article class="v6-hero-slide active"[\s\S]*?<\/article>/)?.[0];
 if (!firstResourceSlide) throw new Error('Resources hero slide missing');
-resources = resources.slice(0, resourceHero[0]) + `<section class="v6-hero v6-page-hero ie-static-page-hero"><div class="v6-hero-slides">${firstResourceSlide}</div></section>` + resources.slice(resourceHero[1]);
+resources = resources.slice(0, resourceHero[0]) + `<section class="v6-hero v6-page-hero ty-editorial__static-page-hero"><div class="v6-hero-slides">${firstResourceSlide}</div></section>` + resources.slice(resourceHero[1]);
 write('resources.html', resources);
 
 let applications = read('applications.html');
@@ -97,11 +97,11 @@ write('applications.html', applications);
 
 const project = 'projects/brazil-cemig-155mw-pv.html';
 let detail = read(project);
-detail = detail.replace('<h2>Project reference</h2>', '<p class="ie-photo-note">Project reference photograph supplied with Tianyu materials. It shows personnel with equipment; it is not identified as an installation-site photograph.</p><h2>Project reference</h2>');
+detail = detail.replace('<h2>Project reference</h2>', '<p class="ty-editorial__photo-note">Project reference photograph supplied with Tianyu materials. It shows personnel with equipment; it is not identified as an installation-site photograph.</p><h2>Project reference</h2>');
 write(project, detail);
 
 let contact = read('contact.html');
-contact = contact.replace('<div><h2>What helps the review</h2>', '<div class="ie-inquiry-help"><h2>What helps the review</h2>');
+contact = contact.replace('<div><h2>What helps the review</h2>', '<div class="ty-editorial__inquiry-help"><h2>What helps the review</h2>');
 write('contact.html', contact);
 
 const css = fs.readFileSync(path.join(root, 'src', 'industrial-editorial.css'), 'utf8');

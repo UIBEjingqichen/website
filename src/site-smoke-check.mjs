@@ -211,7 +211,7 @@ const rootIndex = fs.readFileSync(path.join(root, "index.html"), "utf8");
 if (!rootIndex.includes('<base href="dist/">')) throw new Error("Root index mirror is missing the dist base path.");
 if (!rootIndex.includes('<head><base href="dist/">')) throw new Error("Root index mirror must set its base path before stylesheet links.");
 for (const [label, html] of [["dist homepage", read("index.html")], ["root homepage", rootIndex]]) {
-  for (const marker of ['data-energy-flow', 'class="ie-hero"', 'class="ie-hero-media"', 'assets/css/industrial-editorial.css']) {
+  for (const marker of ['data-energy-flow', 'class="ty-editorial__hero"', 'class="ty-editorial__hero-media"', 'assets/css/industrial-editorial.css']) {
     if (!html.includes(marker)) throw new Error(`${label} is missing Industrial Editorial marker: ${marker}`);
   }
 }
@@ -221,10 +221,10 @@ const localWorldMap = "assets/media/applications/blank-world-map-robinson.svg";
 if (!homeHtml.includes(`class="ty16-world-base" src="${localWorldMap}"`)) throw new Error("Homepage world map is not using its local base image.");
 if (!exists(localWorldMap)) throw new Error("Homepage world map base image is missing.");
 for (const [label, html] of [["dist homepage", homeHtml], ["root homepage", rootIndex]]) {
-  for (const marker of ['class="ie-home-products"', 'class="ie-family-links"', 'class="ie-feature-grid"']) {
+  for (const marker of ['class="ty-editorial__home-products"', 'class="ty-editorial__family-links"', 'class="ty-editorial__feature-grid"']) {
     if (!html.includes(marker)) throw new Error(`${label} is missing product-led homepage marker: ${marker}`);
   }
-  if ((html.match(/class="ie-feature-grid"/g) || []).length !== 1) throw new Error(`${label} should have one curated product feature grid.`);
+  if ((html.match(/class="ty-editorial__feature-grid"/g) || []).length !== 1) throw new Error(`${label} should have one curated product feature grid.`);
   if (html.includes('data-product-showcase')) throw new Error(`${label} still has the moving product row.`);
 }
 
