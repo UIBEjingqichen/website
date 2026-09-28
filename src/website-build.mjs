@@ -12,6 +12,7 @@ runStages("Tianyu website build", [
   "home-product-showcase.mjs",
   "site-experience.mjs",
   "industrial-editorial.mjs",
+  "site-hygiene.mjs",
 ]);
 
 console.log("\nWebsite and catalog build completed through canonical pipelines.");

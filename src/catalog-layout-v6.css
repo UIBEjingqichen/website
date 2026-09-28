@@ -21,7 +21,7 @@
   margin-bottom: 7px !important;
 }
 .sheet-head h2 {
-  font-family: "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
+  
   font-size: clamp(30px, 2.9vw, 42px) !important;
   line-height: 1.08 !important;
   letter-spacing: -.022em !important;

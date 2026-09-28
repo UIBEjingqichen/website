@@ -220,7 +220,7 @@ const rootIndex = fs.readFileSync(path.join(root, "index.html"), "utf8");
 if (!rootIndex.includes('<base href="dist/">')) throw new Error("Root index mirror is missing the dist base path.");
 if (!rootIndex.includes('<head><base href="dist/">')) throw new Error("Root index mirror must set its base path before stylesheet links.");
 for (const [label, html] of [["dist homepage", read("index.html")], ["root homepage", rootIndex]]) {
-  for (const marker of ['class="v6-hero" data-v6-hero', 'data-energy-flow', 'class="ie-hero"', 'class="ie-hero-media"', 'assets/css/industrial-editorial.css']) {
+  for (const marker of ['data-energy-flow', 'class="ie-hero"', 'class="ie-hero-media"', 'assets/css/industrial-editorial.css']) {
     if (!html.includes(marker)) throw new Error(`${label} is missing Industrial Editorial marker: ${marker}`);
   }
 }

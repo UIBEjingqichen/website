@@ -2,7 +2,9 @@
   "scripts": {
     "sync-images": "node src/rename-images.mjs",
     "build": "node src/website-build.mjs",
-    "check": "node src/site-smoke-check.mjs",
+    "check": "node src/site-smoke-check.mjs && node src/site-quality-gates.mjs",
+    "gates": "node src/site-quality-gates.mjs",
+    "optimize-media": "python tools/optimize_heavy_media.py",
     "serve": "node src/server.mjs"
   },
   "devDependencies": {}

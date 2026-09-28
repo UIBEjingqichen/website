@@ -19,7 +19,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--ty-header) + 18px)}
-body{margin:0;background:#f7fafb;color:var(--ty-text);font-family:Inter,"Segoe UI",Arial,sans-serif;font-size:15px;line-height:1.62;-webkit-font-smoothing:antialiased}
+body{margin:0;background:#f7fafb;color:var(--ty-text);font-size:15px;line-height:1.62;-webkit-font-smoothing:antialiased}
 body.modal-open{overflow:hidden}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}

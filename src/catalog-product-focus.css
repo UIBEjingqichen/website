@@ -12,7 +12,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body.product-focused-catalog { margin: 0; background: #eef2f4; color: var(--pf-ink); font-family: Inter, Arial, Helvetica, sans-serif; }
+body.product-focused-catalog { margin: 0; background: #eef2f4; color: var(--pf-ink);  }
 body.product-focused-catalog a { color: inherit; }
 body.product-focused-catalog img { display: block; max-width: 100%; }
 body.product-focused-catalog button { font: inherit; }
@@ -380,7 +380,7 @@ body.product-focused-catalog button { font: inherit; }
 body.product-focused-catalog {
   background: #e9eef1;
   color: var(--pf-ink);
-  font-family: "Aptos", "Helvetica Neue", Arial, sans-serif;
+  
 }
 
 .pf-catalog { gap: 10mm; }

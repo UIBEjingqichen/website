@@ -1,8 +1,7 @@
 /* One visual contract for the generated site. Keep this stylesheet last. */
 :root{--ie-navy:#102e46;--ie-text:#203b50;--ie-muted:#4b6573;--ie-teal:#06636a;--ie-line:#cbdbe2;--ie-bg:#f7fafb;--ie-shell:1200px}
 html{scroll-behavior:smooth}
-body{font-family:Inter,"Segoe UI",Arial,sans-serif!important;font-size:16px;line-height:1.55;color:var(--ie-text)}
-body h1,body h2,body h3,body h4,body button,body input,body select,body textarea{font-family:Inter,"Segoe UI",Arial,sans-serif!important}
+body{font-size:16px;line-height:1.55;color:var(--ie-text)}
 body h1{font-size:clamp(36px,3.2vw,48px);line-height:1.12;letter-spacing:-.025em;font-weight:700}
 body h2{line-height:1.18;letter-spacing:-.015em;font-weight:700}
 body p{line-height:1.55}

@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
+  
   color: var(--catalog-ink) !important;
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
@@ -339,7 +339,7 @@ body {
 }
 
 @media print {
-  body { font-family: Arial, Helvetica, sans-serif !important; }
+  body {  }
   .catalog-certificate-sheet,
   .catalog-drawing-sheet,
   .catalog-quality-continuation { break-after: page; }

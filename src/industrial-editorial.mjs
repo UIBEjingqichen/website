@@ -34,10 +34,9 @@ let home = read('index.html');
 const previousHeroRange = sectionRange(home, 'v6-hero');
 const previousFlowRange = sectionRange(home, 'ty-energy-flow-wrap');
 if (!previousHeroRange || !previousFlowRange) throw new Error('Previous homepage hero or energy flow missing');
-const previousHero = home.slice(...previousHeroRange);
 const previousFlow = home.slice(...previousFlowRange);
 home = replaceSection(home, 'ty-energy-flow-wrap', '');
-home = replaceSection(home, 'v6-hero', `${previousHero}${previousFlow}<section class="ie-hero" aria-labelledby="ie-home-title">
+home = replaceSection(home, 'v6-hero', `${previousFlow}<section class="ie-hero" aria-labelledby="ie-home-title">
   <div class="ie-shell ie-hero-grid">
     <div class="ie-hero-copy"><p class="ie-eyebrow">TIANYU ELECTRIC · TRANSFORMER MANUFACTURING</p>
       <h1 id="ie-home-title">Power transformers for utility, renewable and industrial projects.</h1>
