@@ -218,7 +218,7 @@ for (const [label, html] of [["dist homepage", read("index.html")], ["root homep
 if (!exists('assets/css/industrial-editorial.css')) throw new Error('Shared Industrial Editorial stylesheet is missing.');
 const homeHtml = read("index.html");
 const localWorldMap = "assets/media/applications/blank-world-map-robinson.svg";
-if (!homeHtml.includes(`class="ty16-world-base" src="${localWorldMap}"`)) throw new Error("Homepage world map is not using its local base image.");
+if (!homeHtml.includes(`class="ty-proof__world-base" src="${localWorldMap}"`)) throw new Error("Homepage world map is not using its local base image.");
 if (!exists(localWorldMap)) throw new Error("Homepage world map base image is missing.");
 for (const [label, html] of [["dist homepage", homeHtml], ["root homepage", rootIndex]]) {
   for (const marker of ['class="ty-editorial__home-products"', 'class="ty-editorial__family-links"', 'class="ty-editorial__feature-grid"']) {

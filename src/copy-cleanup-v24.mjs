@@ -46,7 +46,7 @@ function cleanHtml(input) {
   html = html.replace(/<div class="v3p-source">[\s\S]*?<\/div>/g, '');
 
   // Remove the exact project-detail note wrapper after its sentence is cleared.
-  html = html.replace(/<div class="ty16-note">\s*<\/div>/g, '');
+  html = html.replace(/<div class="ty-proof__note">\s*<\/div>/g, '');
   html = html.replace(/<p>\s*<\/p>/g, '');
 
   return html;

@@ -87,7 +87,7 @@
       ['.ty-home .ty-home__company-copy, .ty-home .ty-home__stat-grid article', 70],
       ['.ty-home .v3p-products-home .v3p-title, .ty-home .v3p-family-card', 65],
       ['.ty-home .ty-evidence__head, .ty-home .ty-evidence__band', 75],
-      ['.ty-home .ty16-head, .ty-home .ty16-filters, .ty-home .ty16-map-stage, .ty-home .ty16-card', 70],
+      ['.ty-home .ty-proof__head, .ty-home .ty-proof__filters, .ty-home .ty-proof__map-stage, .ty-home .ty-proof__card', 70],
       ['.ty-home .v5-certificate-coverflow, .ty-home .ty18-news-card, .ty-home .ty-system__home-evidence-head, .ty-home .ty-system__home-evidence-grid figure, .ty-home .ty-system__home-cta .v3p-shell', 70],
       ['.phase1-products .v23-family-heading, .phase1-products .v23-family-grid > a, .phase1-products .v12-directory-head, .phase1-products .v3p-platform-card', 55],
       ['.phase1-detail .v3p-spec, .phase1-detail .v3p-table-wrap, .phase1-detail .v3p-two-col > div, .phase1-detail .v3p-photo, .phase1-detail .ty-system__doc-card, .phase1-detail .ty-system__related-card, .phase1-detail .v3p-cta > *', 65],
