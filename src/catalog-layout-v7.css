@@ -370,7 +370,7 @@
     margin: 0 !important;
     padding: 9mm 13mm 8mm !important;
     overflow: hidden !important;
-    box-shadow: none !important;
+    box-shadow: none;
     break-after: page !important;
     page-break-after: always !important;
     break-inside: avoid !important;

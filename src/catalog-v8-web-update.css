@@ -1,12 +1,12 @@
 .catalog-v8-family-links { grid-column:2 / -1; min-width:0; margin-top:16px; padding:20px 22px; border:1px solid var(--ty-n-200); border-radius:12px; background:var(--ty-n-50); }
-.catalog-v8-family-links h4 { margin:0 0 12px; color:var(--ty-navy-700); font-size:1rem; }
+.catalog-v8-family-links h4 { margin:0 0 12px; color:var(--ty-navy-700); font-size:var(--ty-fs-4); }
 .catalog-v8-family-card-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; }
 .catalog-v8-family-card { display:flex; align-items:center; gap:14px; min-width:0; padding:10px; border:1px solid var(--ty-n-200); border-radius:10px; background:var(--ty-n-0); color:var(--ty-navy-700); text-decoration:none; }
-.catalog-v8-family-card:hover, .catalog-v8-family-card:focus-visible { border-color:var(--ty-navy-500); box-shadow:0 5px 16px color-mix(in srgb, var(--ty-navy-700) 9%, transparent); }
+.catalog-v8-family-card:hover, .catalog-v8-family-card:focus-visible { border-color:var(--ty-navy-500); box-shadow:var(--ty-e-1); }
 .catalog-v8-family-card img { display:block; width:92px; height:92px; flex:none; object-fit:contain; background:var(--ty-n-0); }
 .catalog-v8-family-card span { min-width:0; line-height:1.4; font-weight:700; }
-.catalog-v8-family-card strong { display:block; color:var(--ty-navy-700); font-size:.96rem; line-height:1.35; }
-.catalog-v8-family-card small { display:block; margin-top:6px; color:var(--ty-navy-500); font-size:.76rem; font-weight:500; line-height:1.4; }
+.catalog-v8-family-card strong { display:block; color:var(--ty-navy-700); font-size:var(--ty-fs-4); line-height:1.35; }
+.catalog-v8-family-card small { display:block; margin-top:6px; color:var(--ty-navy-500); font-size:var(--ty-fs-2); font-weight:500; line-height:1.4; }
 .catalog-v8-table-hint { display:none; }
 @media (max-width:900px) { .catalog-v8-family-links { grid-column:1 / -1; } }
-@media (max-width:760px) { .catalog-v8-family-card-grid { grid-template-columns:1fr; } .catalog-v8-family-card img { width:82px; height:82px; } .catalog-v8-table-hint { display:block; margin:14px 0 8px; color:var(--ty-navy-500); font-size:.85rem; } }
+@media (max-width:760px) { .catalog-v8-family-card-grid { grid-template-columns:1fr; } .catalog-v8-family-card img { width:82px; height:82px; } .catalog-v8-table-hint { display:block; margin:14px 0 8px; color:var(--ty-navy-500); font-size:var(--ty-fs-3); } }

@@ -106,12 +106,12 @@
   padding: 10px;
   border: 1px solid color-mix(in srgb, var(--ty-n-0) 18%, transparent);
   background: linear-gradient(180deg, var(--ty-n-0) 0%, var(--ty-n-50) 100%);
-  box-shadow: 0 20px 44px color-mix(in srgb, var(--ty-n-900) 24%, transparent);
+  box-shadow: var(--ty-e-1);
   transition: box-shadow .25s ease, transform .25s ease;
 }
 .certificate-3d-card:hover .certificate-3d-card-inner {
   transform: translateZ(14px);
-  box-shadow: 0 26px 54px color-mix(in srgb, var(--ty-n-900) 30%, transparent);
+  box-shadow: var(--ty-e-1);
 }
 .certificate-3d-card img {
   width: 100%;

@@ -19,6 +19,73 @@
   --ty-font-sans:'Inter',system-ui,sans-serif;--ty-font-display:'Archivo','Inter',system-ui,sans-serif;
   --ty-text:var(--ty-n-800);--ty-text-muted:var(--ty-n-600);--ty-surface:var(--ty-n-50);--ty-border:var(--ty-n-200);--ty-focus:var(--ty-copper-600);
   --ty-container:1200px;
+  --ty-fs-1:11px;--ty-fs-2:12px;--ty-fs-3:14px;--ty-fs-4:16px;
+  --ty-fs-5:18px;--ty-fs-6:24px;--ty-fs-7:36px;--ty-fs-8:clamp(2.25rem,3.4vw + 1.5rem,3.5rem);
+  --ty-r-1:4px;--ty-r-2:8px;--ty-r-3:16px;--ty-r-pill:999px;
+  --ty-sp-9:64px;
+  --ty-e-1:0 4px 14px color-mix(in srgb,var(--ty-navy-800) 8%,transparent);
+  --ty-e-2:0 10px 28px color-mix(in srgb,var(--ty-navy-800) 12%,transparent);
+  --ty-e-3:0 18px 42px color-mix(in srgb,var(--ty-navy-800) 18%,transparent);
+  --ty-e-4:0 24px 70px color-mix(in srgb,var(--ty-navy-900) 26%,transparent);
+  --ty-e-focus:0 0 0 3px var(--ty-copper-600);
+  color-scheme:light;
+  /* Variables consumed by legacy page components. */
+  --blue:var(--ty-navy-600);
+  --green:var(--ty-n-600);
+  --ie-shell:1200px;
+  --ink:var(--ty-navy-900);
+  --line:var(--ty-n-200);
+  --muted:var(--ty-n-600);
+  --navy:var(--ty-navy-800);
+  --pale:var(--ty-n-50);
+  --radius:8px;
+  --shadow:var(--ty-e-3);
+  --teal:var(--ty-copper-700);
+  --teal-dark:var(--ty-copper-700);
+  --ty-header:72px;
+  --ty-ink:var(--ty-navy-800);
+  --ty-line:color-mix(in srgb, var(--ty-navy-800) 12%, transparent);
+  --ty-max:1200px;
+  --ty-radius:4px;
+  --ty-red:var(--ty-copper-600);
+  --ty-shadow:var(--ty-e-2);
+  --ty-soft:var(--ty-n-50);
+  --ty16-bg:var(--ty-navy-900);
+  --ty16-line:color-mix(in srgb, var(--ty-n-0) 13%, transparent);
+  --ty16-muted:var(--ty-n-200);
+  --ty16-panel:var(--ty-navy-800);
+  --ty16-panel-2:var(--ty-navy-800);
+  --ty16-red:var(--ty-copper-500);
+  --ty16-white:var(--ty-n-50);
+  --v6-bg:var(--ty-n-50);
+  --v6-blue:var(--ty-navy-500);
+  --v6-blue-dark:var(--ty-navy-600);
+  --v6-card:var(--ty-n-0);
+  --v6-line:color-mix(in srgb, var(--ty-navy-600) 14%, transparent);
+  --v6-muted:var(--ty-navy-500);
+  --v6-shadow:var(--ty-e-3);
+  --v6-text:var(--ty-navy-700);
+  --v7-blue:var(--ty-navy-500);
+  --v7-blue-deep:var(--ty-navy-600);
+  --v7-line:var(--ty-n-100);
+  --v7-muted:var(--ty-navy-500);
+  --v7-pale:var(--ty-n-50);
+  --v7-text:var(--ty-navy-700);
+  --v8-band:var(--ty-n-200);
+  --v8-band-strong:var(--ty-n-200);
+  --v8-bg:var(--ty-n-100);
+  --v8-blue:var(--ty-navy-500);
+  --v8-blue-deep:var(--ty-navy-600);
+  --v8-line:var(--ty-navy-500);
+  --v8-muted:var(--ty-navy-500);
+  --v8-surface:var(--ty-n-50);
+  --v8-text:var(--ty-navy-700);
+  --v9-blue:var(--ty-navy-500);
+  --v9-card:var(--ty-n-50);
+  --v9-line:var(--ty-n-200);
+  --v9-muted:var(--ty-navy-500);
+  --v9-text:var(--ty-navy-700);
+  --white:var(--ty-n-0);
   /* Compatibility names used by the current page styles. */
   --ty-navy:var(--ty-navy-800);--ty-blue:var(--ty-navy-600);--ty-teal:var(--ty-copper-700);--ty-teal-dark:var(--ty-copper-700);--ty-muted:var(--ty-n-600);--ty-panel:var(--ty-n-100);--ty-map:var(--ty-n-200);--ty-map-canvas:var(--ty-n-300);--ty-white:var(--ty-n-0);
   --ie-navy:var(--ty-navy-800);--ie-text:var(--ty-n-800);--ie-muted:var(--ty-n-600);--ie-teal:var(--ty-copper-700);--ie-line:var(--ty-n-200);--ie-bg:var(--ty-n-50);
@@ -29,4 +96,5 @@ body{font-family:var(--ty-font-sans);color:var(--ty-text)}
 :where(button,.btn,.ie-button){font-family:var(--ty-font-display)}
 :focus-visible{outline:2px solid var(--ty-focus);outline-offset:3px}
 :where(table,dl,.ty-numeric){font-variant-numeric:tabular-nums}
+@media(max-width:1080px){html{--ty-header:64px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}

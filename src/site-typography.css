@@ -5,7 +5,7 @@
 body main h1,
 body main .hero h1,
 body main [class*="hero"] h1{
-  font-size:clamp(30px,3vw,42px)!important;
+  font-size:var(--ty-fs-7);
   line-height:1.08!important;
   letter-spacing:-.024em!important;
 }
@@ -27,7 +27,7 @@ body main .company-overview h2,
 body main .company-history h2,
 body main .company-section-head h2,
 body main .mfg34-title{
-  font-size:clamp(24px,2vw,30px)!important;
+  font-size:var(--ty-fs-6);
   line-height:1.14!important;
   letter-spacing:-.018em!important;
 }
@@ -36,7 +36,7 @@ body main .mfg34-title{
 body main [class*="cta"] h2,
 body main [class*="banner"] h2,
 body main [class*="closing"] h2{
-  font-size:clamp(20px,1.45vw,24px)!important;
+  font-size:var(--ty-fs-6);
   line-height:1.18!important;
   letter-spacing:-.014em!important;
 }
@@ -45,7 +45,7 @@ body main [class*="closing"] h2{
   body main h1,
   body main .hero h1,
   body main [class*="hero"] h1{
-    font-size:34px!important;
+    font-size:var(--ty-fs-7);
     line-height:1.1!important;
   }
 
@@ -65,12 +65,12 @@ body main [class*="closing"] h2{
   body main .company-history h2,
   body main .company-section-head h2,
   body main .mfg34-title{
-    font-size:26px!important;
+    font-size:var(--ty-fs-6);
   }
 
   body main [class*="cta"] h2,
   body main [class*="banner"] h2,
   body main [class*="closing"] h2{
-    font-size:22px!important;
+    font-size:var(--ty-fs-6);
   }
 }

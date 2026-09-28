@@ -3,7 +3,7 @@ body { background: #e9edf0; }
 .catalog { gap: 0; padding-top: 0; }
 .catalog-sheet,
 .catalog-appendix {
-  box-shadow: none !important;
+  box-shadow: none;
   border-radius: 0 !important;
   background: var(--ty-n-0) !important;
 }
@@ -35,7 +35,7 @@ body { background: #e9edf0; }
 .appendix-summary > div {
   background: var(--ty-n-0) !important;
   background-image: none !important;
-  box-shadow: none !important;
+  box-shadow: none;
   border-radius: 0 !important;
 }
 

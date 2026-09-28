@@ -4,7 +4,7 @@
 .phase1-products .v23-product-carousel{height:360px;border:0;border-radius:0;background:var(--ty-n-200);box-shadow:none}
 .phase1-products .v23-product-slide img{height:298px;padding:0;object-fit:cover;object-position:center;background:var(--ty-n-200);transform:scale(1.035);transform-origin:center}
 .phase1-products .v23-product-slide figcaption{min-height:62px;border-top:0;padding:12px 16px}
-.phase1-products .v23-carousel-nav{top:14px;right:14px;border:0;box-shadow:0 8px 24px color-mix(in srgb, var(--ty-navy-800) 10%, transparent)}
+.phase1-products .v23-carousel-nav{top:14px;right:14px;border:0;box-shadow:var(--ty-e-1)}
 
 /* Products directory list */
 .phase1-products .v3p-platform-card{grid-template-columns:190px minmax(0,1fr);min-height:142px}

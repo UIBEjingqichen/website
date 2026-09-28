@@ -7,7 +7,7 @@ body.v19-products-page .v23-product-carousel{
   overflow:hidden;
   border:1px solid var(--ty-n-200);
   background:var(--ty-n-200) url('../media/products/power-transformers/oil-immersed-power-transformer-installed.png') center 54%/cover no-repeat;
-  box-shadow:0 12px 28px color-mix(in srgb, var(--ty-navy-700) 8%, transparent);
+  box-shadow:var(--ty-e-1);
 }
 body.v19-products-page .v23-product-slide{
   position:absolute;

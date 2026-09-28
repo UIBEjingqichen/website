@@ -124,7 +124,7 @@ body.v19-products-page .v20-product-jump{
   top:74px;
   border-bottom:1px solid var(--ty-n-200);
   background:rgba(255,255,255,.94);
-  box-shadow:0 8px 24px rgba(6,36,63,.045);
+  box-shadow:var(--ty-e-1);
   backdrop-filter:blur(14px);
 }
 body.v19-products-page .v20-product-jump-inner{
@@ -190,12 +190,12 @@ body.v19-products-page .v3p-family-card{
   overflow:hidden;
   border:1px solid #dbe4e8;
   background:var(--ty-n-0);
-  box-shadow:0 8px 24px rgba(6,36,63,.035);
+  box-shadow:var(--ty-e-1);
   transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease;
 }
 body.v19-products-page .v3p-family-card:hover{
   border-color:#c4d6dc;
-  box-shadow:0 18px 44px rgba(6,36,63,.09);
+  box-shadow:var(--ty-e-1);
   transform:translateY(-4px);
 }
 body.v19-products-page .v3p-family-card-media{
@@ -286,12 +286,12 @@ body.v19-products-page .v3p-platform-card{
   overflow:hidden;
   border:1px solid var(--ty-n-200);
   background:var(--ty-n-0);
-  box-shadow:0 6px 20px rgba(6,36,63,.03);
+  box-shadow:var(--ty-e-1);
   transition:transform .26s ease,box-shadow .26s ease,border-color .26s ease;
 }
 body.v19-products-page .v3p-platform-card:hover{
   border-color:#bfd4da;
-  box-shadow:0 16px 36px rgba(6,36,63,.08);
+  box-shadow:var(--ty-e-1);
   transform:translateY(-3px);
 }
 body.v19-products-page .v3p-platform-card .media{
