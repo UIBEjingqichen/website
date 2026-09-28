@@ -14,7 +14,7 @@ body.ty-density{
 body.ty-density .v3p-shell,
 body.ty-density .ap26-shell,
 body.ty-density .ab30-shell,
-body.ty-density .ty15-shell,
+body.ty-density .ty-evidence__shell,
 body.ty-density .ty16-shell,
 body.ty-density .ty18-shell{
   width:min(var(--s36-shell),calc(100% - 48px));
@@ -22,7 +22,7 @@ body.ty-density .ty18-shell{
 body.ty-density .v3p-kicker,
 body.ty-density .ap26-kicker,
 body.ty-density .ab30-kicker,
-body.ty-density .ty15-kicker,
+body.ty-density .ty-evidence__kicker,
 body.ty-density .ty16-kicker,
 body.ty-density .eyebrow{
   font-size:var(--ty-fs-1);
@@ -30,7 +30,7 @@ body.ty-density .eyebrow{
   letter-spacing:.11em;
 }
 body.ty-density .v3p-title,
-body.ty-density .ty15-title,
+body.ty-density .ty-evidence__title,
 body.ty-density .ty16-title,
 body.ty-density .section-head h2,
 body.ty-density .ty-home__index-title h2{
@@ -84,11 +84,11 @@ body.ty-density .v3p-family-card-copy h3{font-size:var(--ty-fs-5);font-weight:62
 body.ty-density .v3p-family-card-copy p{font-size:var(--ty-fs-1);line-height:1.5}
 body.ty-density .ty-capabilities-v15,
 body.ty-density .ty16-projects{padding-top:58px;padding-bottom:58px}
-body.ty-density .ty15-head{margin-bottom:26px}
-body.ty-density .ty15-band-copy h3{font-size:var(--ty-fs-6);font-weight:600;line-height:1.15}
-body.ty-density .ty15-band-copy p{font-size:var(--ty-fs-2);line-height:1.6}
+body.ty-density .ty-evidence__head{margin-bottom:26px}
+body.ty-density .ty-evidence__band-copy h3{font-size:var(--ty-fs-6);font-weight:600;line-height:1.15}
+body.ty-density .ty-evidence__band-copy p{font-size:var(--ty-fs-2);line-height:1.6}
 body.ty-density .ty16-lead,
-body.ty-density .ty15-lead{font-size:var(--ty-fs-3);line-height:1.6}
+body.ty-density .ty-evidence__lead{font-size:var(--ty-fs-3);line-height:1.6}
 
 /* Products directory */
 body.ty-density.v19-products-page .v23-product-hero{min-height:520px}
@@ -175,7 +175,7 @@ body.ty-density .text-link{font-weight:650}
   body.ty-density .v3p-shell,
   body.ty-density .ap26-shell,
   body.ty-density .ab30-shell,
-  body.ty-density .ty15-shell,
+  body.ty-density .ty-evidence__shell,
   body.ty-density .ty16-shell,
   body.ty-density .ty18-shell{width:min(100% - 32px,var(--s36-shell))}
   body.ty-density .v6-hero,

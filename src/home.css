@@ -45,19 +45,19 @@ body.ty-home{background:var(--ty-n-50)}
 
 /* Manufacturing / testing / support */
 .ty-home .ty-capabilities-v15{padding:56px 0 60px;background:var(--ty-surface)}
-.ty-home .ty15-head{max-width:760px;margin-bottom:24px}
-.ty-home .ty15-head .ty15-title{margin-bottom:10px}
-.ty-home .ty15-band-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.ty-home .ty15-band,.ty-home .ty15-band-reverse{display:flex;min-width:0;flex-direction:column;border:1px solid var(--ty-border);border-radius:var(--ty-radius);overflow:hidden;background:var(--ty-n-0)}
-.ty-home .ty15-band-media{height:190px;background:var(--ty-n-200)}
-.ty-home .ty15-band-media img{width:100%;height:100%;object-fit:cover}
-.ty-home .ty15-band-copy{display:flex;flex:1;flex-direction:column;padding:18px}
-.ty-home .ty15-index{color:var(--ty-teal-dark);font-size:var(--ty-fs-2);font-weight:800}
-.ty-home .ty15-band-copy h3{margin:7px 0 8px;color:var(--ty-navy)}
-.ty-home .ty15-band-copy>p{font-size:var(--ty-fs-2);line-height:1.52}
-.ty-home .ty15-facts{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 14px}
-.ty-home .ty15-facts span{padding:4px 7px;border:1px solid var(--ty-border);border-radius:3px;background:var(--ty-surface);color:var(--ty-muted);font-size:var(--ty-fs-1)}
-.ty-home .ty15-band-copy>a{margin-top:auto;color:var(--ty-blue);font-size:var(--ty-fs-2);font-weight:800}
+.ty-home .ty-evidence__head{max-width:760px;margin-bottom:24px}
+.ty-home .ty-evidence__head .ty-evidence__title{margin-bottom:10px}
+.ty-home .ty-evidence__band-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ty-home .ty-evidence__band,.ty-home .ty-evidence__band-reverse{display:flex;min-width:0;flex-direction:column;border:1px solid var(--ty-border);border-radius:var(--ty-radius);overflow:hidden;background:var(--ty-n-0)}
+.ty-home .ty-evidence__band-media{height:190px;background:var(--ty-n-200)}
+.ty-home .ty-evidence__band-media img{width:100%;height:100%;object-fit:cover}
+.ty-home .ty-evidence__band-copy{display:flex;flex:1;flex-direction:column;padding:18px}
+.ty-home .ty-evidence__index{color:var(--ty-teal-dark);font-size:var(--ty-fs-2);font-weight:800}
+.ty-home .ty-evidence__band-copy h3{margin:7px 0 8px;color:var(--ty-navy)}
+.ty-home .ty-evidence__band-copy>p{font-size:var(--ty-fs-2);line-height:1.52}
+.ty-home .ty-evidence__facts{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 14px}
+.ty-home .ty-evidence__facts span{padding:4px 7px;border:1px solid var(--ty-border);border-radius:3px;background:var(--ty-surface);color:var(--ty-muted);font-size:var(--ty-fs-1)}
+.ty-home .ty-evidence__band-copy>a{margin-top:auto;color:var(--ty-blue);font-size:var(--ty-fs-2);font-weight:800}
 
 /* Global project map. The map image and pins now share one Robinson-projection plane. */
 .ty-home .ty16-projects{padding:58px 0 62px;background:var(--ty-map)}
@@ -159,8 +159,8 @@ body.ty-home{background:var(--ty-n-50)}
   .ty-home .v6-hero{height:410px}
   .ty-home .ty-home__company-overview{grid-template-columns:1fr;gap:24px;width:min(var(--ty-max),calc(100% - 36px));padding:46px 0}
   .ty-home .v3p-family-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .ty-home .ty15-band-list{grid-template-columns:1fr}
-  .ty-home .ty15-band{display:grid;grid-template-columns:220px 1fr}.ty-home .ty15-band-media{height:100%;min-height:190px}
+  .ty-home .ty-evidence__band-list{grid-template-columns:1fr}
+  .ty-home .ty-evidence__band{display:grid;grid-template-columns:220px 1fr}.ty-home .ty-evidence__band-media{height:100%;min-height:190px}
   .ty-home .ty16-head{align-items:flex-start;flex-direction:column;gap:10px}
   .ty-home .ty16-map-stage{aspect-ratio:1.65/1}
   .ty-home #why-us .ty-home__cert-block{width:min(var(--ty-max),calc(100% - 36px))}
@@ -178,7 +178,7 @@ body.ty-home{background:var(--ty-n-50)}
   .ty-home .ty-home__company-overview{width:calc(100% - 32px)}
   .ty-home .ty-home__stat-grid{grid-template-columns:1fr 1fr}
   .ty-home .v3p-family-grid{grid-template-columns:1fr}
-  .ty-home .ty15-band{display:flex}.ty-home .ty15-band-media{height:190px}
+  .ty-home .ty-evidence__band{display:flex}.ty-home .ty-evidence__band-media{height:190px}
   .ty-home .ty16-projects{padding:48px 0 52px}
   .ty-home .ty16-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
   .ty-home .ty16-filter:first-child{grid-column:1/-1}

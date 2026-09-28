@@ -12,7 +12,7 @@ body main [class*="hero"] h1{
 
 /* Primary section headings. Keep them clearly below the hero scale. */
 body main .v3p-title,
-body main .ty15-title,
+body main .ty-evidence__title,
 body main .ty16-title,
 body main .section-head h2,
 body main .ty-home__index-title h2,
@@ -50,7 +50,7 @@ body main [class*="closing"] h2{
   }
 
   body main .v3p-title,
-  body main .ty15-title,
+  body main .ty-evidence__title,
   body main .ty16-title,
   body main .section-head h2,
   body main .ty-home__index-title h2,
