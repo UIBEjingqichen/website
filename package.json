@@ -1,9 +1,0 @@
-{
-  "scripts": {
-    "sync-images": "node src/rename-images.mjs",
-    "build": "node src/website-build.mjs",
-    "check": "node src/site-smoke-check.mjs",
-    "serve": "node src/server.mjs"
-  },
-  "devDependencies": {}
-}

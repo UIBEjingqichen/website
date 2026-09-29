@@ -1,7 +1,0 @@
-// Published summaries reflect the existing service page. Optional fields remain empty until supplied.
-export const servicePhases = [
-  {id:'pre-production',stage:'Before production',title:'Specification & interface review',summary:'Share application, available ratings and interface requirements.',scopeText:null,requestInputs:['Application','Electrical ratings'],deliveryMethod:null,regionText:null,timingText:null,documents:[],faq:[],publicationState:'published'},
-  {id:'pre-shipment',stage:'Before shipment',title:'FAT, documentation & release',summary:'Confirm the agreed test and document scope for the order.',scopeText:null,requestInputs:['Project reference','Document needs'],deliveryMethod:null,regionText:null,timingText:null,documents:[],faq:[],publicationState:'published'},
-  {id:'delivery',stage:'Delivery',title:'Packing & shipping handover',summary:'Coordinate the agreed shipping and document handover.',scopeText:null,requestInputs:['Order reference','Destination'],deliveryMethod:null,regionText:null,timingText:null,documents:[],faq:[],publicationState:'published'},
-  {id:'site',stage:'Site',title:'Installation & commissioning guidance',summary:'Describe the site requirement so the support scope can be confirmed.',scopeText:null,requestInputs:['Site location','Technical question'],deliveryMethod:null,regionText:null,timingText:null,documents:[],faq:[],publicationState:'published'}
-];
