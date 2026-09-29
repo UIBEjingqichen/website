@@ -43,7 +43,7 @@ while (names.size) {
 const contextKey = (rule) => {
   const parents = [];
   for (let node = rule.parent; node?.type === 'atrule'; node = node.parent) parents.unshift(`@${node.name} ${node.params}`);
-  return crypto.createHash('sha1').update(`${parents.join('|')}|${rule.toString()}`).digest('hex').slice(0, 20);
+  return crypto.createHash('sha1').update(`${parents.join('|')}|${rule.toString().replace(/\r\n?/g, '\n')}`).digest('hex').slice(0, 20);
 };
 let removed = 0;
 const chunks = new Map(order.map((name) => {
