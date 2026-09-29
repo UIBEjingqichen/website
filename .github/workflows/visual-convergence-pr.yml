@@ -1,0 +1,68 @@
+name: Visual convergence validation
+
+on:
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'tools/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/visual-convergence-pr.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build and validate all pages
+        run: |
+          npm run build
+          npm run check
+      - name: Install browser for visual review
+        run: |
+          python3 -m pip install playwright==1.55.0
+          python3 -m playwright install --with-deps chromium
+      - name: Capture eight pages at three widths
+        run: |
+          npm run serve >/tmp/tianyu-site.log 2>&1 &
+          echo $! >/tmp/tianyu-site.pid
+          python3 tools/capture_visual_regression.py visual-artifacts
+      - name: Measure mobile Lighthouse scores
+        run: |
+          npm install --no-save --package-lock=false @lhci/cli@0.15.1
+          npx lhci collect \
+            --url=http://127.0.0.1:4173/index.html \
+            --url=http://127.0.0.1:4173/products/110kv-power-transformer/index.html \
+            --url=http://127.0.0.1:4173/resources.html \
+            --numberOfRuns=1 \
+            --settings.chromeFlags='--headless=new'
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-convergence-screenshots
+          path: visual-artifacts
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Upload Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-convergence-lighthouse
+          path: .lighthouseci/*.html
+          if-no-files-found: warn
+          retention-days: 14

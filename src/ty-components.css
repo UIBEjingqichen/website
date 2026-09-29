@@ -1,0 +1,16 @@
+/* Shared visual finishing across the canonical page families. */
+.ty-editorial__hero h1{font-size:var(--ty-fs-8)}
+.phase1-products .ty-product__platform-card{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.phase1-products .ty-product__platform-card:is(:hover,:focus-visible){transform:translateY(-2px);box-shadow:var(--ty-e-2)}
+.phase1-products .ty-product__platform-card .media{aspect-ratio:4/3}
+.phase1-products .ty-product__platform-card .media img{max-height:100%;object-fit:contain}
+.ty-product__table-wrap,.table-wrap{box-shadow:inset -10px 0 12px -14px var(--ty-navy-800)}
+.ty-product__table thead th,.table-wrap thead th{position:sticky;top:0;z-index:1}
+.ty-product__table tbody tr:nth-child(even),.table-wrap tbody tr:nth-child(even){background:var(--ty-n-100)}
+.ty-product__table :is(td,th):has(> .ty-numeric),.table-wrap :is(td,th):has(> .ty-numeric){text-align:right;font-variant-numeric:tabular-nums}
+.footer .footer-grid p,.footer .footer-bottom span{color:var(--ty-n-200)}
+.phase1-detail .ty-system__product-carousel-dot{position:relative;min-width:24px;width:24px;height:24px;background:transparent}
+.phase1-detail .ty-system__product-carousel-dot.is-active{width:24px;background:transparent}
+.phase1-detail .ty-system__product-carousel-dot::after{content:"";position:absolute;top:50%;left:50%;width:8px;height:8px;border-radius:var(--ty-r-pill);background:var(--ty-navy-500);transform:translate(-50%,-50%)}
+.phase1-detail .ty-system__product-carousel-dot.is-active::after{width:24px;background:var(--ty-copper-700)}
+@media(prefers-reduced-motion:reduce){.phase1-products .ty-product__platform-card{transition:none}}

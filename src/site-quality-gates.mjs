@@ -37,6 +37,7 @@ let noIcon = 0;
 let noFoundation = 0;
 let noDimensions = 0;
 let brokenImages = 0;
+let brokenResponsiveImages = 0;
 const usedAssets = new Set();
 for (const page of pages) {
   const html = fs.readFileSync(page, 'utf8');
@@ -51,6 +52,12 @@ for (const page of pages) {
       if (attrs.src && (!attrs.width || !attrs.height)) noDimensions++;
       const image = local(attrs.src, page);
       if (image && !fs.existsSync(image)) brokenImages++;
+      if (attrs.srcset) {
+        for (const candidate of attrs.srcset.split(',')) {
+          const image = local(candidate.trim().split(/\s+/)[0], page);
+          if (image && !fs.existsSync(image)) brokenResponsiveImages++;
+        }
+      }
     }
     if (/^<script\b/i.test(tag) && attrs.src && !/\b(?:defer|async)\b/i.test(tag) && attrs.type !== 'module') blockingScripts++;
     if (/^<a\b/i.test(tag) && attrs.href?.split(/[?#]/)[0].endsWith('.html')) {
@@ -77,13 +84,14 @@ atMost('Pages without favicon', noIcon, 0);
 atMost('Pages without foundation CSS', noFoundation, 0);
 atMost('Images missing dimensions', noDimensions, 0);
 atMost('Broken image links', brokenImages, 0);
+atMost('Broken responsive image links', brokenResponsiveImages, 0);
 atLeast('@font-face declarations', (cssText.match(/@font-face\b/g) || []).length, 12);
-atMost('CSS files', css.length, 34);
-atMost('CSS KB', Math.ceil(Buffer.byteLength(cssText) / 1024), 550);
-atMost('!important', (cssText.match(/!important\b/gi) || []).length, 2200);
-atMost('Distinct hex colours', new Set((cssText.match(/#[a-f\d]{3,8}\b/gi) || []).map((value) => value.toLowerCase())).size, 60);
-atMost('Distinct font sizes', new Set((cssText.match(/font-size\s*:[^;}]*/gi) || []).map((value) => value.toLowerCase())).size, 20);
-atMost('Distinct shadows', new Set((cssText.match(/box-shadow\s*:[^;}]*/gi) || []).map((value) => value.toLowerCase())).size, 6);
+atMost('CSS files', css.length, 7);
+atMost('CSS KB', Math.ceil(Buffer.byteLength(cssText) / 1024), 450);
+atMost('!important', (cssText.match(/!important\b/gi) || []).length, 160);
+atMost('Distinct hex colours', new Set((cssText.match(/#[a-f\d]{3,8}\b/gi) || []).map((value) => value.toLowerCase())).size, 25);
+atMost('Distinct font sizes', new Set((cssText.match(/font-size\s*:[^;}]*/gi) || []).map((value) => value.toLowerCase())).size, 12);
+atMost('Distinct shadows', new Set((cssText.match(/box-shadow\s*:[^;}]*/gi) || []).map((value) => value.toLowerCase())).size, 4);
 atMost('CSS files declaring :root', css.filter((file) => /:root\b/.test(fs.readFileSync(file, 'utf8'))).length, 1);
 const images = files.filter((file) => /\.(?:png|jpe?g|webp|gif)$/i.test(file));
 atMost('Heaviest shipped image KB', Math.ceil(Math.max(...images.map((file) => fs.statSync(file).size)) / 1024), 400);

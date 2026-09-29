@@ -2,3 +2,5 @@ node_modules/
 website-master/
 tmp/
 output/
+.lighthouseci/
+**/__pycache__/

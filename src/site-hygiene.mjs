@@ -34,6 +34,11 @@ fs.writeFileSync(path.join(dist, 'site.webmanifest'), JSON.stringify({
 
 const mediaMapPath = path.join(root, 'src', 'media-optimization-map.json');
 const mediaMap = fs.existsSync(mediaMapPath) ? JSON.parse(fs.readFileSync(mediaMapPath, 'utf8')) : {};
+const responsiveMapPath = path.join(root, 'src', 'responsive-media-map.json');
+const responsiveMap = fs.existsSync(responsiveMapPath) ? JSON.parse(fs.readFileSync(responsiveMapPath, 'utf8')) : {};
+if (Object.keys(responsiveMap).length) {
+  copyTree(path.join(root, 'src', 'responsive-media'), path.join(assets, 'media', 'responsive'));
+}
 for (const [from, to] of Object.entries(mediaMap)) {
   const source = path.join(root, 'src', 'optimized-media', to.replace(/^assets\/media\//, ''));
   const target = path.join(dist, to);
@@ -115,6 +120,9 @@ for (const page of walk(dist).filter((file) => file.endsWith('.html'))) {
   html = html.replace(/<link\b[^>]*rel="canonical"[^>]*>/gi, (tag) => {
     const url = tag.match(/href="([^"]+)"/i)?.[1];
     if (!url) return tag;
+    // A root-relative canonical is invalid for search engines. Publish an
+    // absolute one only when SITE_URL supplies the real deployment origin.
+    if (url.startsWith('/')) return '';
     let pathname;
     try { pathname = new URL(url, 'https://example.invalid').pathname; } catch { return tag; }
     if (fs.existsSync(path.join(dist, pathname.replace(/^\//, '')))) return tag;
@@ -128,6 +136,18 @@ for (const page of walk(dist).filter((file) => file.endsWith('.html'))) {
     if (!/^<img\b/i.test(output)) return output;
     const url = output.match(/\bsrc="([^"]+)"/i)?.[1];
     if (!url) return output;
+    const original = assetUrl(url, page);
+    const key = original ? relative(original) : null;
+    const variants = key ? responsiveMap[key] : null;
+    if (variants && !/\bsrcset=/i.test(output)) {
+      const srcset = Object.entries(variants).map(([width, target]) => {
+        const href = path.relative(path.dirname(page), path.join(dist, target)).replaceAll('\\', '/');
+        return `${href} ${width}w`;
+      });
+      const width = imageSize(original)?.[0];
+      if (width) srcset.push(`${url} ${width}w`);
+      output = output.replace(/>$/, ` srcset="${srcset.join(', ')}" sizes="(max-width: 640px) 100vw, 50vw">`);
+    }
     if (/fetchpriority="high"/i.test(output)) output = output.replace(/\sloading="lazy"/i, '');
     if (!/\bdecoding=/i.test(output)) output = output.replace(/>$/, ' decoding="async">');
     if (!/\bwidth=|\bheight=/i.test(output)) {

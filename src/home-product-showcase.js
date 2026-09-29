@@ -1,7 +1,7 @@
 (() => {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  document.querySelectorAll('[data-auto-marquee]').forEach(viewport => {
+  function setup(viewport) {
     const container = viewport.closest('[data-product-showcase], .ty-carousel__cert-block');
     const rail = viewport.querySelector('.typs-rail') || viewport;
     const originals = [...rail.children];
@@ -106,5 +106,15 @@
       container.querySelector('[data-typs-prev]')?.addEventListener('click', () => move(-1));
       container.querySelector('[data-typs-next]')?.addEventListener('click', () => move(1));
     }
+  }
+
+  document.querySelectorAll('[data-auto-marquee]').forEach(viewport => {
+    if (!('IntersectionObserver' in window)) { setup(viewport); return; }
+    const observer = new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting) return;
+      observer.disconnect();
+      setup(viewport);
+    }, { rootMargin: '400px' });
+    observer.observe(viewport);
   });
 })();

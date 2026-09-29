@@ -1,7 +1,7 @@
 function initV8Reveal(){
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   const selectors=[
-    'body.ty-home main > section:not(.ty-panel__hero)',
+    'body.ty-home main > section:not(:first-child):not(.ty-panel__hero):not(.ty-editorial__hero)',
     'body.ty-home .ty-home__stat-grid article',
     'body.ty-home .ty-home__product-card',
     'body.ty-home .ty-home__why-grid article',
