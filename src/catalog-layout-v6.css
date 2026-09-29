@@ -2,7 +2,7 @@
 :root {
   --catalog-navy-v6: #082f57;
   --catalog-ink-v6: #263d52;
-  --catalog-copy-v6: var(--ty-navy-600);
+  --catalog-copy-v6: #40576b;
   --catalog-muted-v6: #6b7e8f;
   --catalog-line-v6: #d4dde5;
 }
@@ -21,7 +21,7 @@
   margin-bottom: 7px !important;
 }
 .sheet-head h2 {
-  
+  font-family: "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
   font-size: clamp(30px, 2.9vw, 42px) !important;
   line-height: 1.08 !important;
   letter-spacing: -.022em !important;
@@ -81,7 +81,7 @@
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: var(--ty-n-50);
+  background: #f7f9fb;
   border-bottom: 1px solid var(--catalog-line-v6);
 }
 .catalog-product-photo-pair img {

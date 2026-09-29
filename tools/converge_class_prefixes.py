@@ -26,7 +26,9 @@ def main(prefix):
     replacement = PREFIXES[prefix]
     # Stage filenames still use their historical names until the pipeline is
     # flattened. Keep those string references intact.
-    pattern = re.compile(re.escape(prefix) + r"(?![\w-]*\.(?:mjs|js|css)\b)")
+    # Match a selector/identifier boundary, never the middle of a URL slug
+    # such as cast-resin-vs-vpi or a pipeline filename.
+    pattern = re.compile(r"(?<![\w-])" + re.escape(prefix) + r"(?![\w-]*\.(?:mjs|js|css)\b)")
     changed = 0
     for file in ROOT.iterdir():
         if file.suffix not in {".css", ".js", ".mjs"}:

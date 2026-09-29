@@ -38,7 +38,7 @@ body.mfg34 .mfg34-note{margin-top:10px;font-size:9.5px}
 body.mfg34 .mfg34-process{margin-top:24px;grid-template-columns:repeat(8,minmax(96px,1fr))}
 body.mfg34 .mfg34-process:before{top:25px}
 body.mfg34 .mfg34-step{padding:0 5px}
-body.mfg34 .mfg34-step-no{width:50px;height:50px;font-size:10px;box-shadow:var(--ty-e-1)}
+body.mfg34 .mfg34-step-no{width:50px;height:50px;font-size:10px;box-shadow:0 0 0 5px #fff}
 body.mfg34 .mfg34-step h3{margin-top:12px;font-size:11.5px;font-weight:650;line-height:1.28}
 body.mfg34 .mfg34-step p{margin-top:4px;font-size:9.2px;line-height:1.4}
 body.mfg34 .mfg34-process-media{gap:10px;margin-top:30px}
@@ -100,5 +100,5 @@ body.mfg34 .mfg34-cta-block p{margin:5px 0 10px;font-size:9.8px}
   body.mfg34 .mfg34-cta h2{font-size:23px}
 }
 /* Steps without supplied photos have a deliberate compact text layout. */
-body.mfg34 .mfg34-step:not(.has-media){background:var(--ty-n-50);align-content:start}
+body.mfg34 .mfg34-step:not(.has-media){background:#f2f7f9;align-content:start}
 body.mfg34 .mfg34-step:not(.has-media) .mfg34-step-copy{padding-bottom:24px}

@@ -1,30 +1,30 @@
 /* v46: three-family architecture, larger product imagery, and clean substation presentation. */
 
 /* Products landing page: larger, cleaner media without nested frames. */
-.phase1-products .v23-product-carousel{height:400px;background:var(--ty-n-0);border:0;box-shadow:none}
-.phase1-products .v23-product-slide img{height:336px;padding:0;background:var(--ty-n-0);object-fit:cover;object-position:center;transform:scale(1.02)}
-.phase1-products .v23-product-slide figcaption{min-height:64px;padding:12px 16px;border-top:1px solid var(--ty-n-200);background:var(--ty-n-0)}
+.phase1-products .v23-product-carousel{height:400px;background:#fff;border:0;box-shadow:none}
+.phase1-products .v23-product-slide img{height:336px;padding:0;background:#fff;object-fit:cover;object-position:center;transform:scale(1.02)}
+.phase1-products .v23-product-slide figcaption{min-height:64px;padding:12px 16px;border-top:1px solid #e1e9ed;background:#fff}
 .phase1-products .v23-family-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 .phase1-products .v23-hero-facts{grid-template-columns:repeat(3,minmax(0,1fr));max-width:720px}
 
 /* Product directory cards: one clean image field, larger and edge-to-edge. */
 .phase1-products .ty-product__platform-card{grid-template-columns:220px minmax(0,1fr);min-height:160px}
-.phase1-products .ty-product__platform-card .media{padding:0!important;border-right:0!important;background:var(--ty-n-0)!important;overflow:hidden}
-.phase1-products .ty-product__platform-card .media img{display:block;width:100%!important;height:160px!important;min-height:160px!important;padding:0!important;background:var(--ty-n-0);object-fit:cover!important;object-position:center;mix-blend-mode:normal!important;transform:scale(1.02)}
+.phase1-products .ty-product__platform-card .media{padding:0!important;border-right:0!important;background:#fff!important;overflow:hidden}
+.phase1-products .ty-product__platform-card .media img{display:block;width:100%!important;height:160px!important;min-height:160px!important;padding:0!important;background:#fff;object-fit:cover!important;object-position:center;mix-blend-mode:normal!important;transform:scale(1.02)}
 
 /* Family pages use the same media rhythm. */
-.ty-product__family-hero-media{background:var(--ty-n-0)!important}
+.ty-product__family-hero-media{background:#fff!important}
 .ty-product__family-hero-media img{padding:0!important;object-fit:cover!important;object-position:center!important;transform:scale(1.02)!important}
-.ty-product__platform-card .media{padding:0!important;background:var(--ty-n-0)!important;overflow:hidden!important}
-.ty-product__platform-card .media img,.ty-product__platform-card>img{padding:0!important;background:var(--ty-n-0)!important;object-fit:cover!important;object-position:center!important;transform:scale(1.02)!important}
+.ty-product__platform-card .media{padding:0!important;background:#fff!important;overflow:hidden!important}
+.ty-product__platform-card .media img,.ty-product__platform-card>img{padding:0!important;background:#fff!important;object-fit:cover!important;object-position:center!important;transform:scale(1.02)!important}
 
 /* Product detail pages: substantially larger product image area. */
 .phase1-detail .ty-product__hero{grid-template-columns:minmax(0,.86fr) minmax(600px,1.14fr);width:min(1540px,calc(100% - 40px));min-height:520px;padding:22px 0}
 .phase1-detail .ty-product__hero-copy{padding-right:32px}
-.phase1-detail .ty-product__hero-media,.phase1-detail .ty-system__product-carousel{padding:0;background:var(--ty-n-0)}
-.phase1-detail .ty-system__product-carousel-stage{height:500px;background:var(--ty-n-0);border:0;border-radius:0}
-.phase1-detail .ty-system__product-carousel-slide{padding:0;background:var(--ty-n-0)}
-.phase1-detail .ty-system__product-carousel-slide img{width:100%;height:100%;max-height:none;padding:0;background:var(--ty-n-0);object-fit:contain;object-position:center;filter:none;transform:scale(1.12);transform-origin:center}
+.phase1-detail .ty-product__hero-media,.phase1-detail .ty-system__product-carousel{padding:0;background:#fff}
+.phase1-detail .ty-system__product-carousel-stage{height:500px;background:#fff;border:0;border-radius:0}
+.phase1-detail .ty-system__product-carousel-slide{padding:0;background:#fff}
+.phase1-detail .ty-system__product-carousel-slide img{width:100%;height:100%;max-height:none;padding:0;background:#fff;object-fit:contain;object-position:center;filter:none;transform:scale(1.12);transform-origin:center}
 .phase1-detail .ty-system__product-carousel-controls{margin-top:6px;padding:0 4px}
 
 /* Distribution family now contains exactly the two construction types. */

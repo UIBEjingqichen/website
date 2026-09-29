@@ -6,7 +6,7 @@
   height:auto!important;
   aspect-ratio:4/3;
   overflow:hidden;
-  background:linear-gradient(180deg,var(--ty-n-50),var(--ty-n-100));
+  background:linear-gradient(180deg,#f7f9fa,#edf2f4);
 }
 .ty-product__products-home .ty-product__family-card-media img,
 .ty-product__family-grid .ty-product__family-card-media img{
@@ -20,7 +20,7 @@
 
 /* Product index hero is also a product view, not a lifestyle crop. */
 .ty-product__index-hero .media{
-  background:linear-gradient(180deg,var(--ty-n-50),var(--ty-n-100));
+  background:linear-gradient(180deg,#f7f9fa,#edf2f4);
   overflow:hidden;
 }
 .ty-product__index-hero .media img{
@@ -38,7 +38,7 @@
 .ty-product__platform-grid .ty-product__platform-card .media{
   aspect-ratio:4/3;
   overflow:hidden;
-  background:var(--ty-n-50);
+  background:#f4f7f8;
 }
 .ty-product__platform-grid .ty-product__platform-card .media img{
   width:100%;
@@ -54,7 +54,7 @@
 .ty-product__hero-media,
 .ty-product__family-hero-media,
 .ty-product__photo:not(.cover){
-  background:linear-gradient(180deg,var(--ty-n-50),var(--ty-n-100));
+  background:linear-gradient(180deg,#f8fafb,#eef3f5);
 }
 .ty-product__hero-media img,
 .ty-product__family-hero-media img,
@@ -88,7 +88,7 @@
   margin:0;
   aspect-ratio:4/3;
   overflow:hidden;
-  background:var(--ty-n-200);
+  background:#dfe8ec;
 }
 .iq-landscape-card img{
   display:block;

@@ -13,6 +13,7 @@ THRESHOLD = 120 * 1024
 
 def main():
     result = {}
+    referenced = '\n'.join(p.read_text(encoding='utf-8') for p in (ROOT / 'dist').rglob('*.html'))
     for file in MEDIA.rglob("*"):
         if not file.is_file() or file.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp"}:
             continue
@@ -22,6 +23,8 @@ def main():
             if image.width <= 960:
                 continue
             original = "assets/media/" + file.relative_to(MEDIA).as_posix()
+            if original not in referenced:
+                continue
             variants = {}
             for width in (480, 960):
                 height = round(image.height * width / image.width)
@@ -33,6 +36,7 @@ def main():
                     target, "WEBP", quality=72, method=6
                 )
                 variants[str(width)] = "assets/media/responsive/" + name
+            variants[str(image.width)] = original
             result[original] = variants
     MAPPING.write_text(json.dumps(result, indent=2), encoding="utf-8")
     print(f"Created 480/960px variants for {len(result)} images")

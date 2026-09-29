@@ -55,7 +55,7 @@
   inset: 0;
   content: "";
   pointer-events: none;
-  background: linear-gradient(90deg, var(--ty-navy-800) 0%, transparent 11%, transparent 89%, var(--ty-navy-800) 100%);
+  background: linear-gradient(90deg, #072a47 0%, rgba(7,42,71,0) 11%, rgba(7,42,71,0) 89%, #072a47 100%);
 }
 .certificate-3d-stage::after {
   position: absolute;
@@ -67,7 +67,7 @@
   content: "";
   transform: translateX(-50%);
   border-radius: 50%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--ty-n-900) 34%, transparent) 0%, color-mix(in srgb, var(--ty-n-900) 17%, transparent) 44%, transparent 76%);
+  background: radial-gradient(circle, rgba(0,0,0,.34) 0%, rgba(0,0,0,.17) 44%, rgba(0,0,0,0) 76%);
   filter: blur(5px);
   pointer-events: none;
 }
@@ -104,14 +104,14 @@
   height: 100%;
   place-items: center;
   padding: 10px;
-  border: 1px solid color-mix(in srgb, var(--ty-n-0) 18%, transparent);
-  background: linear-gradient(180deg, var(--ty-n-0) 0%, var(--ty-n-50) 100%);
-  box-shadow: var(--ty-e-1);
+  border: 1px solid rgba(255,255,255,.18);
+  background: linear-gradient(180deg, #fff 0%, #f3f7fa 100%);
+  box-shadow: 0 20px 44px rgba(0,0,0,.24);
   transition: box-shadow .25s ease, transform .25s ease;
 }
 .certificate-3d-card:hover .certificate-3d-card-inner {
   transform: translateZ(14px);
-  box-shadow: var(--ty-e-1);
+  box-shadow: 0 26px 54px rgba(0,0,0,.30);
 }
 .certificate-3d-card img {
   width: 100%;
@@ -127,7 +127,7 @@
 /* Product images get a slightly cleaner showroom crop without changing source files. */
 .ty-home__model-grid img,
 .ty-home__product-image img {
-  background: var(--ty-n-50);
+  background: #f3f5f6;
 }
 .ty-home__model-grid img { object-position: center 52%; }
 .gallery-main img { object-position: center 52%; }
@@ -150,7 +150,7 @@
     margin-left: -18px;
   }
   .certificate-3d-stage::before {
-    background: linear-gradient(90deg, var(--ty-navy-800) 0%, transparent 6%, transparent 94%, var(--ty-navy-800) 100%);
+    background: linear-gradient(90deg, #072a47 0%, rgba(7,42,71,0) 6%, rgba(7,42,71,0) 94%, #072a47 100%);
   }
   .certificate-3d-card {
     width: 182px;

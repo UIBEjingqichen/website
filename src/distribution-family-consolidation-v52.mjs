@@ -48,7 +48,7 @@ function copyOilMedia() {
 function carousel(srcs) {
   const slides = srcs.map((src, index) => `<figure class="ty-system__product-carousel-slide${index === 0 ? " is-active" : ""}" data-product-slide aria-hidden="${index === 0 ? "false" : "true"}"><img src="${esc(src)}" alt="Oil-Immersed Distribution Transformer${index ? ` ${index + 1}` : ""}" ${index === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'}></figure>`).join("");
   const dots = srcs.map((_, index) => `<button class="ty-system__product-carousel-dot${index === 0 ? " is-active" : ""}" type="button" data-product-dot aria-label="Show image ${index + 1}" aria-current="${index === 0 ? "true" : "false"}"></button>`).join("");
-  return `<div class="ty-product__hero-media ty-system__product-carousel" data-product-hero data-ty-oil-family-media data-single-slide="false" aria-label="Oil-immersed distribution transformer image carousel"><div class="ty-system__product-carousel-stage">${slides}</div><div class="ty-system__product-carousel-controls"><div class="ty-system__product-carousel-dots" aria-label="Choose product image">${dots}</div><span class="ty-system__product-carousel-count" data-product-count>01 / ${String(srcs.length).padStart(2, "0")}</span></div></div>`;
+  return `<div class="ty-product__hero-media ty-system__product-carousel" data-product-hero data-v52-oil-family-media data-single-slide="false" aria-label="Oil-immersed distribution transformer image carousel"><div class="ty-system__product-carousel-stage">${slides}</div><div class="ty-system__product-carousel-controls"><div class="ty-system__product-carousel-dots" aria-label="Choose product image">${dots}</div><span class="ty-system__product-carousel-count" data-product-count>01 / ${String(srcs.length).padStart(2, "0")}</span></div></div>`;
 }
 
 function extractRatingTable(html, label) {
@@ -87,7 +87,7 @@ function buildGenericOilPage(srcs) {
   html = html.replace(/<meta property="og:description" content="[^"]*">/i, '<meta property="og:description" content="Oil-immersed distribution transformer platform covering standard distribution, 22 kV tested reference and 35 kV-class project configurations.">');
   html = html.replace(/<meta property="og:url" content="[^"]*">/i, '<meta property="og:url" content="/products/oil-immersed-distribution-transformer/">');
   html = html.replace(/<meta property="og:image" content="[^"]*">/i, '<meta property="og:image" content="/assets/media/products/classified/oil-immersed-distribution-transformer/01.png">');
-  html = html.replace(/<body\b([^>]*)>/i, (match, attrs) => match.includes('data-ty-oil-family="true"') ? match : `<body data-ty-oil-family="true"${attrs}>`);
+  html = html.replace(/<body\b([^>]*)>/i, (match, attrs) => match.includes('data-v52-oil-family="true"') ? match : `<body data-v52-oil-family="true"${attrs}>`);
 
   html = html.replace(/<div class="ty-product__breadcrumb">[\s\S]*?<\/div>/i, '<div class="ty-product__breadcrumb"><a href="../../products.html">Products</a><span>/</span><a href="../../products.html#distribution-transformers">Distribution Transformers</a><span>/</span><span>Oil-Immersed Distribution Transformer</span></div>');
   html = html.replace(/<p class="ty-product__kicker">Distribution Transformer[^<]*<\/p>/i, '<p class="ty-product__kicker">Distribution Transformer · Oil-Immersed</p>');

@@ -22,6 +22,7 @@ VIEWPORTS = ((375, 812), (768, 1024), (1440, 900))
 
 def main():
     destination = Path(sys.argv[1] if len(sys.argv) > 1 else "visual-artifacts")
+    base_url = os.environ.get("SITE_BASE_URL", "http://127.0.0.1:4173").rstrip("/")
     destination.mkdir(parents=True, exist_ok=True)
     failures = []
     with sync_playwright() as playwright:
@@ -38,7 +39,7 @@ def main():
             page = context.new_page()
             for label, route in PAGES.items():
                 response = page.goto(
-                    f"http://127.0.0.1:4173/{route}", wait_until="domcontentloaded"
+                    f"{base_url}/{route}", wait_until="domcontentloaded"
                 )
                 if not response or response.status >= 400:
                     failures.append(f"{route}: HTTP {response.status if response else 'no response'}")
@@ -66,7 +67,7 @@ def main():
 
         context = browser.new_context(viewport={"width": 375, "height": 812})
         page = context.new_page()
-        page.goto("http://127.0.0.1:4173/index.html", wait_until="domcontentloaded")
+        page.goto(f"{base_url}/index.html", wait_until="domcontentloaded")
         menu = page.locator("[data-menu-toggle]")
         menu.click()
         if menu.get_attribute("aria-expanded") != "true":

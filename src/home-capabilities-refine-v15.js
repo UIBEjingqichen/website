@@ -1,8 +1,8 @@
 (() => {
-  const root = document.querySelector('[data-ty-evidence__capabilities]');
+  const root = document.querySelector('[data-ty15-capabilities]');
   if (!root) return;
-  const tabs = [...root.querySelectorAll('[data-ty-evidence__tab]')];
-  const panels = [...root.querySelectorAll('[data-ty-evidence__panel]')];
+  const tabs = [...root.querySelectorAll('[data-ty15-tab]')];
+  const panels = [...root.querySelectorAll('[data-ty15-panel]')];
 
   function activate(id) {
     tabs.forEach((tab) => {

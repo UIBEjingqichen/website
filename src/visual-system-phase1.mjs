@@ -60,7 +60,7 @@ function migrateStyles(html, cssHrefs, behaviorHref) {
 
 function phaseOneHome(html) {
   html = migrateStyles(html, ['assets/css/visual-system.css', 'assets/css/home.css'], 'assets/js/visual-behavior.js');
-  html = addBodyClass(html, 'ty-home');
+  html = addBodyClass(html, 'phase1-home');
   html = html.replace(/\s*<script\b[^>]*src=["']assets\/js\/ux-refine-v5\.js["'][^>]*><\/script>/g, '');
 
   let slideIndex = 0;

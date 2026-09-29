@@ -95,12 +95,12 @@
   gap: 14px;
   min-height: 178px;
   padding: 12px;
-  background: var(--ty-n-0);
+  background: #fff;
   border: 1px solid #d8e2eb;
 }
 
 .complete-evidence-cover {
-  background: var(--ty-n-100);
+  background: #eef3f7;
   overflow: hidden;
 }
 .complete-evidence-cover img {
@@ -159,7 +159,7 @@
 }
 .asset-gallery figure {
   margin: 0;
-  background: var(--ty-n-0);
+  background: #fff;
   border: 1px solid #d8e2eb;
   overflow: hidden;
   break-inside: avoid;
@@ -169,19 +169,19 @@
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: contain;
-  background: var(--ty-n-0);
+  background: #fff;
 }
 #asset-images .asset-gallery img { aspect-ratio: 4 / 3; object-fit: contain; }
 #asset-drawings .asset-gallery img { aspect-ratio: 4 / 3; object-fit: contain; }
 .asset-gallery figcaption {
   padding: 7px 9px;
-  color: var(--ty-navy-500);
+  color: #6a7d90;
   font-size: .7rem;
   border-top: 1px solid #e1e8ef;
 }
 
 .catalog-zgs-update {
-  background: linear-gradient(180deg, #eef5fa 0%, var(--ty-n-0) 100%);
+  background: linear-gradient(180deg, #eef5fa 0%, #ffffff 100%);
 }
 .zgs-update-grid {
   display: grid;
@@ -194,7 +194,7 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  background: var(--ty-n-100);
+  background: #eef3f7;
 }
 .zgs-update-grid h3 { margin: 24px 0 10px; }
 .zgs-update-grid ul { margin: 0; padding-left: 20px; color: #526b83; line-height: 1.6; }
@@ -219,7 +219,7 @@
     width: 100%;
     margin: 0;
     padding: 12mm;
-    background: var(--ty-n-0);
+    background: #fff;
     border: 0;
     break-before: page;
   }
@@ -228,5 +228,5 @@
   .asset-document-group { break-before: auto; }
   .asset-gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .asset-gallery figure { break-inside: avoid; }
-  .catalog-zgs-update { background: var(--ty-n-0); }
+  .catalog-zgs-update { background: #fff; }
 }

@@ -12,8 +12,7 @@ runStages("Tianyu website build", [
   "home-product-showcase.mjs",
   "site-experience.mjs",
   "industrial-editorial.mjs",
-  "site-hygiene.mjs",
-  ...(process.env.TY_SKIP_CSS_BUNDLE ? [] : ["site-css-bundle.mjs"]),
+  "responsive-image-build.mjs",
 ]);
 
 console.log("\nWebsite and catalog build completed through canonical pipelines.");

@@ -2,11 +2,11 @@
   const all = (selector, scope = document) => [...scope.querySelectorAll(selector)];
   const one = (selector, scope = document) => scope.querySelector(selector);
 
-  all("[data-ty-coverflow]").forEach((carousel) => {
-    const stage = one("[data-ty-coverflow-stage]", carousel);
-    const cards = all("[data-ty-coverflow-card]", carousel);
-    const previous = one("[data-ty-coverflow-prev]", carousel);
-    const next = one("[data-ty-coverflow-next]", carousel);
+  all("[data-v5-coverflow]").forEach((carousel) => {
+    const stage = one("[data-v5-coverflow-stage]", carousel);
+    const cards = all("[data-v5-coverflow-card]", carousel);
+    const previous = one("[data-v5-coverflow-prev]", carousel);
+    const next = one("[data-v5-coverflow-next]", carousel);
     if (!stage || cards.length < 2) return;
 
     let active = 0;
@@ -100,7 +100,7 @@
 
   all(".ty-carousel__model-gallery").forEach((gallery) => {
     const main = one(".ty-carousel__model-main-image", gallery);
-    const thumbs = all("[data-ty-model-thumb]", gallery);
+    const thumbs = all("[data-v5-model-thumb]", gallery);
     if (!main) return;
     thumbs.forEach((thumb) => thumb.addEventListener("click", () => {
       const source = thumb.dataset.src;

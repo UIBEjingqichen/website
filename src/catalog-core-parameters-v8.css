@@ -11,7 +11,7 @@
   margin: 0 0 14px !important;
   padding: 9px 12px !important;
   border-left: 3px solid #2f6fa4 !important;
-  background: var(--ty-n-50) !important;
+  background: #f5f8fb !important;
   color: #435a6e !important;
   font-size: 11px !important;
   line-height: 1.45 !important;
@@ -27,7 +27,7 @@
   width: 100% !important;
   border-collapse: collapse !important;
   table-layout: fixed !important;
-  background: var(--ty-n-0) !important;
+  background: #fff !important;
 }
 .catalog-core-table th,
 .catalog-core-table td {
@@ -45,7 +45,7 @@
 .catalog-core-table thead th {
   border-top: 1px solid #aebdca !important;
   border-bottom: 1px solid #aebdca !important;
-  background: var(--ty-n-50) !important;
+  background: #f7f9fb !important;
   color: #38546c !important;
   font-size: 8.5px !important;
   font-weight: 800 !important;

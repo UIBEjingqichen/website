@@ -73,7 +73,7 @@ const slides = media.map((item, index) => {
   return `<figure class="ty-system__product-carousel-slide${index === 0 ? " is-active" : ""}" data-product-slide aria-hidden="${index === 0 ? "false" : "true"}"><img src="${esc(src)}" alt="${esc(item.alt)}" style="${imageStyle}" ${index === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'}></figure>`;
 }).join("");
 const dots = media.map((_, index) => `<button class="ty-system__product-carousel-dot${index === 0 ? " is-active" : ""}" type="button" data-product-dot aria-label="Show image ${index + 1}" aria-current="${index === 0 ? "true" : "false"}"></button>`).join("");
-const carousel = `<div class="ty-product__hero-media ty-system__product-carousel" data-product-hero data-ty-oil-family-media data-v55-oil-media-integrity data-single-slide="false" aria-label="Oil-immersed distribution transformer image carousel"><div class="ty-system__product-carousel-stage">${slides}</div><div class="ty-system__product-carousel-controls"><div class="ty-system__product-carousel-dots" aria-label="Choose product image">${dots}</div><span class="ty-system__product-carousel-count" data-product-count>01 / 07</span></div></div>`;
+const carousel = `<div class="ty-product__hero-media ty-system__product-carousel" data-product-hero data-v52-oil-family-media data-v55-oil-media-integrity data-single-slide="false" aria-label="Oil-immersed distribution transformer image carousel"><div class="ty-system__product-carousel-stage">${slides}</div><div class="ty-system__product-carousel-controls"><div class="ty-system__product-carousel-dots" aria-label="Choose product image">${dots}</div><span class="ty-system__product-carousel-count" data-product-count>01 / 07</span></div></div>`;
 
 let html = read(pageFile);
 const start = html.indexOf('<div class="ty-product__hero-media ty-system__product-carousel"');
@@ -82,15 +82,15 @@ if (start < 0 || end < 0) throw new Error("v55: oil-distribution hero carousel b
 html = html.slice(0, start) + carousel + html.slice(end);
 html = html.replace(/<meta property="og:image" content="[^"]*">/i, '<meta property="og:image" content="/assets/media/products/classified/oil-immersed-distribution-transformer/01.png">');
 html = html.replace(/<body\b([^>]*)>/i, (match, attrs) => {
-  let clean = attrs.replace(/\sdata-v55-media-audited="true"/g, "").replace(/\sdata-ty-image-fit="true"/g, "");
-  return `<body data-ty-image-fit="true"${clean}>`;
+  let clean = attrs.replace(/\sdata-v55-media-audited="true"/g, "").replace(/\sdata-v55-image-fit="true"/g, "");
+  return `<body data-v55-image-fit="true"${clean}>`;
 });
 write(pageFile, html);
 
 let css = read(cssFile);
 const marker = "v55: oil-distribution intrinsic-ratio image fix";
 if (!css.includes(marker)) {
-  css += `\n\n/* ${marker}. Portrait and square source images must never be forced to fill a landscape frame. */\nbody[data-ty-image-fit=\"true\"] .ty-system__product-carousel-stage{height:460px;background:#eef3f5}\nbody[data-ty-image-fit=\"true\"] .ty-system__product-carousel-slide{display:flex!important;align-items:center!important;justify-content:center!important;padding:18px;background:#eef3f5;overflow:hidden}\nbody[data-ty-image-fit=\"true\"] .ty-system__product-carousel-slide img{display:block!important;width:auto!important;height:auto!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;transform:none!important;filter:none!important}\n@media(max-width:1180px){body[data-ty-image-fit=\"true\"] .ty-system__product-carousel-stage{height:420px}}\n@media(max-width:820px){body[data-ty-image-fit=\"true\"] .ty-system__product-carousel-stage{height:340px}body[data-ty-image-fit=\"true\"] .ty-system__product-carousel-slide{padding:12px}}\n@media(max-width:560px){body[data-ty-image-fit=\"true\"] .ty-system__product-carousel-stage{height:280px}body[data-ty-image-fit=\"true\"] .ty-system__product-carousel-slide{padding:8px}}\n`;
+  css += `\n\n/* ${marker}. Portrait and square source images must never be forced to fill a landscape frame. */\nbody[data-v55-image-fit=\"true\"] .ty-system__product-carousel-stage{height:460px;background:#eef3f5}\nbody[data-v55-image-fit=\"true\"] .ty-system__product-carousel-slide{display:flex!important;align-items:center!important;justify-content:center!important;padding:18px;background:#eef3f5;overflow:hidden}\nbody[data-v55-image-fit=\"true\"] .ty-system__product-carousel-slide img{display:block!important;width:auto!important;height:auto!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;transform:none!important;filter:none!important}\n@media(max-width:1180px){body[data-v55-image-fit=\"true\"] .ty-system__product-carousel-stage{height:420px}}\n@media(max-width:820px){body[data-v55-image-fit=\"true\"] .ty-system__product-carousel-stage{height:340px}body[data-v55-image-fit=\"true\"] .ty-system__product-carousel-slide{padding:12px}}\n@media(max-width:560px){body[data-v55-image-fit=\"true\"] .ty-system__product-carousel-stage{height:280px}body[data-v55-image-fit=\"true\"] .ty-system__product-carousel-slide{padding:8px}}\n`;
   write(cssFile, css);
 }
 

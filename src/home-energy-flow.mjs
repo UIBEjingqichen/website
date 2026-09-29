@@ -14,7 +14,7 @@ const flow = `<section class="ty-energy-flow-wrap" aria-label="Energy flow from 
 function update(file) {
   let html=fs.readFileSync(file,'utf8');
   if(html.includes('data-energy-flow')) return;
-  const hero=html.indexOf('<section class="ty-panel__hero" data-ty-panel__hero>');
+  const hero=html.indexOf('<section class="ty-panel__hero" data-v6-hero>');
   if(hero<0) throw new Error(`Homepage hero missing in ${file}`);
   const end=html.indexOf('</section>',hero);
   if(end<0) throw new Error(`Homepage hero is incomplete in ${file}`);

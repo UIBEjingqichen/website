@@ -1,0 +1,378 @@
+{
+  "about.html": {
+    "copy": "aefdde55e3b526d9697c151ef57d7c3dd33595f9c1da2447f29b8a250d4c4728",
+    "destinations": "19bb6dcd9533507350a5b5a9bc664ed2dbd2b8cf2045f59bff30d23a550314d4"
+  },
+  "applications.html": {
+    "copy": "c40fb639cb354e88a0b742e650a483dcb3ecb42af51efd8e1905d60af4671dbe",
+    "destinations": "70730000094dd193182fff1c2a9c5d175408f0dd043ff3f37b875ee4f8983353"
+  },
+  "catalog.html": {
+    "copy": "63f610f3f895b350f04453dcb53d24eb5240a6c834b81cbb50a15922975f14d4",
+    "destinations": "3bb93b9cd7265b97ca6eeffae7a36428236548357eaabc1af37b6a185dee102e"
+  },
+  "contact.html": {
+    "copy": "8168528c970f568e73cc10fe97b0a1e598ed407f62681efe0fd5ce7921c26040",
+    "destinations": "8bbff8f2a540ec717ac4718b95d99625677dabc5d840ce4780733fdc89ed5613"
+  },
+  "factory.html": {
+    "copy": "92d4ea1d6dc57871acd59a91ab116c939b691b22f5dd2202774ac813dcc48ecd",
+    "destinations": "789ea23175128b0bc36ba93846318d9d70e3d9ad5127a568ff2cc9299d071e33"
+  },
+  "index.html": {
+    "copy": "e7ce1ec284762b6e52effd083bcac08671738da9be75a83649f00fb9cbbe1b4c",
+    "destinations": "f68aa60dddc9911810e81106bfb4461f7f18417289e79ae0a3beb51dbb90eb3a"
+  },
+  "knowledge/applications.html": {
+    "copy": "69f3cfdade4c7b27f687926862e2870240710bdaa0adbca9c699f29d75b03a85",
+    "destinations": "d03d2ebe7f8cb77579089fdfaf3adabfcc28692158a310aae422af5ff904fde0"
+  },
+  "knowledge/dry-type-transformers.html": {
+    "copy": "0c8df5892d2a68012b076678dcb59b54d1a21f3bec45509c19b2b9d9db582a84",
+    "destinations": "a63c0bf669a1119c7f0dc542b76d9daf76e77b140bc988378e3b6e9a63f192dd"
+  },
+  "knowledge/electrical-parameters.html": {
+    "copy": "6dff1c3638f5b92ca9d2d37e403a90683381943a913024777892eb02d350b221",
+    "destinations": "a1c40ff7e02eeea9f1e88c0833c81e0c92df83feaa31078ac43ec260369ba516"
+  },
+  "knowledge/engineering-roles.html": {
+    "copy": "56b177ee28583d75551ca9e37d9e8987a4214e90589ecd37056d201b985b5d4d",
+    "destinations": "cf4ef32a6e74e16a831650f4f1d36df2318fe02fbd4f3ee533f0b6a0e35bf0b6"
+  },
+  "knowledge/faq/cast-resin-vs-vpi.html": {
+    "copy": "d23218eeb5aa7beef2076bddedc504113be3d8e3ae5610ad4739f136dc079b57",
+    "destinations": "869dd7bd715c88a0886dbc62fde7ec55d775ccb5fd78a25a8a03dc6189c4ca90"
+  },
+  "knowledge/faq/dry-type-vs-oil-immersed-transformer.html": {
+    "copy": "c8e7d1cf8590d72d922125df0c47623983de0942f8acfeeb96ad0e31efa7612b",
+    "destinations": "35d18c48a9bd0f050708eb781ff8b4800eac25338835bf2eb119b17b6fe56caa"
+  },
+  "knowledge/faq/high-altitude-transformer-design.html": {
+    "copy": "e1f3ab263aa2e349447c622b5fe00a2a57158ca9cd04e75e971946d468c82cfc",
+    "destinations": "b7f60ff797c6d966c5ab9095fe3e413b8a3560fa07b413e63b4d7368d24eab14"
+  },
+  "knowledge/faq/information-required-for-transformer-quotation.html": {
+    "copy": "6036c0e86fb54e86a200ba7bc3ff1d709eeeef72d9339cb93fff17262c865760",
+    "destinations": "6861e03256af9f9c305b1ba2c52eeb90a1e94c9bdd597ca519f2e026c15f9784"
+  },
+  "knowledge/faq/inverter-duty-transformer.html": {
+    "copy": "a1346c133b20c8c5fa4656a32267a8f0edc3c8ccdd5a8389aaaf14fa842ced3a",
+    "destinations": "e4b93110fccb66dc7b6da87050f36481d1cbc7dc4fcbcf220069a64be94e187f"
+  },
+  "knowledge/faq/mineral-oil-vs-natural-ester.html": {
+    "copy": "b0d4aefc420d5c9c740644dd4aba6c3a89b1927a57b91d23f83b090baa917fe1",
+    "destinations": "019daf9f254c7086538e46dffdef2d7af13a9c9baeaba9f3711e0d4e0682500b"
+  },
+  "knowledge/faq/oltc-vs-octc.html": {
+    "copy": "6b4f847b869ac29e09dd46dbb2b297510b0311b0b0808d806e29645c759dcdd1",
+    "destinations": "b5334d7fa95fc8a0a5e5bc167c370a5185314f9a260a48f5b5a3bf0ddff283e0"
+  },
+  "knowledge/faq/onan-vs-onaf-transformer-cooling.html": {
+    "copy": "69200274bb22d369d9210b8aff8254d90f5403315337f744d74998945fc53527",
+    "destinations": "1d1daf6b040c04068bca94d7e4b819bd91ce47b6a58fd58558755cd8306aa6f4"
+  },
+  "knowledge/faq/transformer-for-data-center.html": {
+    "copy": "87152ca5e8557d23f23f8566cac0677833418429dcbb8ccc8084f99023862e0b",
+    "destinations": "ff61fb86f45ec36f7fc75a609da89d98b54c79b4df5d1f78d4205bf287d93e81"
+  },
+  "knowledge/faq/transformer-impedance-voltage.html": {
+    "copy": "00549a44f206807582c71e678f8a0f5d37d32515fdd9a4363583264d7f529290",
+    "destinations": "0b9147c25d145068640c0f5dd619209298b0077900b5c94a3181587ab372f4a8"
+  },
+  "knowledge/faq/transformer-vector-group.html": {
+    "copy": "96b8ca609c079a2b7eefbefdbd01ea9360c59116cb7de5606a78722c7b7ff5eb",
+    "destinations": "eaffee63fcd53f95482c45157ba2470dd30fdc058b5ea005087519e7ed1cae7f"
+  },
+  "knowledge/faq/what-is-transformer-k-factor.html": {
+    "copy": "22c6c0299e41168075c59925fb75f90a698474fb6b7747dd833f2b78a7891712",
+    "destinations": "168e60d52bd94d767723f58a16c90842584fced2a61d5302f048c95ed88b6ca4"
+  },
+  "knowledge/index.html": {
+    "copy": "32f39f07bcb7c6dd787c60e9ee9c37bf30a7776a56d6adb20958260a1365fd83",
+    "destinations": "39f0860f5f6075fa3fff343898322850c3b497711051e9aee201738e262db520"
+  },
+  "knowledge/liquid-immersed-transformers.html": {
+    "copy": "071a08510781202ca8ddfebc6d7be1691e8440c2b320a66b501b4f02f573f225",
+    "destinations": "7c943c3dd722b24605bc46978d22e61b0b9a2c735ec9de4de7cff24063aa0ad0"
+  },
+  "knowledge/standards-and-testing.html": {
+    "copy": "de77da0be8b3474e37e5ec1fdac17b2e3da7762736668a8ba77954b7187ca8f1",
+    "destinations": "cf4ef32a6e74e16a831650f4f1d36df2318fe02fbd4f3ee533f0b6a0e35bf0b6"
+  },
+  "knowledge/transformer-basics.html": {
+    "copy": "718a9b23b6b5896bfb43d4b2b71f4ed27e2ac599eb8a80305c708b3d4a2c41de",
+    "destinations": "cf4ef32a6e74e16a831650f4f1d36df2318fe02fbd4f3ee533f0b6a0e35bf0b6"
+  },
+  "knowledge/transformer-selection.html": {
+    "copy": "02b9096bedfa8f45c1fe77bd9d9fe369217e728641cdff7702ab2f179ed9449c",
+    "destinations": "47ed7ce102a85000e15f9ff118b381c96dd612f6180a9c6ff34ef377499438d9"
+  },
+  "manufacturing.html": {
+    "copy": "93632799ff1ec2ca0984a626ddf857ea6a8c3d4fe1e5f373c4051780848973f8",
+    "destinations": "efb77b8d992a2ccff0bd43df97eadffe5567f6bf929e56d6dc3ca2a8cc3ad1a3"
+  },
+  "news.html": {
+    "copy": "757c0edfd1a2749c82a67c8b5b87c88f8c3d49db872c582b4965926adca1ee2a",
+    "destinations": "06d88ea91ef27c89b750ab5c11158d3142667bcc9e1a2932f733a6e7be8a99d3"
+  },
+  "privacy.html": {
+    "copy": "c3b649ba868e088a033f37c1cfca05c63614949c027a93f33c801d8ef4b8ea0a",
+    "destinations": "8bbff8f2a540ec717ac4718b95d99625677dabc5d840ce4780733fdc89ed5613"
+  },
+  "products.html": {
+    "copy": "4bd0e1cd77fd0ea08943b38b7ea820211cae3a9a3f35029910ec248d3cee0d77",
+    "destinations": "b3550881e7ae407bab57e063f3e732a46f5b732da05eea06cfb659dfcc41e032"
+  },
+  "products/110kv-power-transformer/index.html": {
+    "copy": "1cc3574c8f524b3be228923eb432e853abd7859ebf776d38f44d068afd1726eb",
+    "destinations": "bef2891e2b0ee11423dad7dd6cb3e4b030807af2d0a34b5238eacaeedf7f617f"
+  },
+  "products/12kv-oil-immersed-distribution-transformer/index.html": {
+    "copy": "b94f4b6f3ee3e829be91859df660036f257171746c696b9b76927b7d66364933",
+    "destinations": "f4357ec3f754a323b76e790455d405d0ec30c629978a4a2842fa90f95330f523"
+  },
+  "products/220kv-double-split-booster-transformer/index.html": {
+    "copy": "e156e6cc9a4e7a20362e85cd262b8b601b8bc44510919cd6003887ae935a36bb",
+    "destinations": "681bd252325b2cbf186d26ac527b70589eeaec86c4623cf7e70ba26aff9c88ff"
+  },
+  "products/220kv-power-transformer/index.html": {
+    "copy": "33a0ff6cfde8c8aa6cc48b74eef6787521f3441b562b094a6aceca53e1a0ec76",
+    "destinations": "c03f72e3dd7b4b315b99f3c9f3e3afa33a2529123f5cbb84b42c8bb0ec813fc6"
+  },
+  "products/24-pulse-phase-shifting-transformer/index.html": {
+    "copy": "9dc9956b43833d4d7660deef423c09ea2f32470f605d77820290a18419e9cbef",
+    "destinations": "fab6dfa113da068f00a4d2633b926cc719ee2d65909b483dde9d448c869e6091"
+  },
+  "products/35-110kv-mobile-intelligent-substation/index.html": {
+    "copy": "80301602c77b76a9db64133e007cf71c50eb243ee5106e562d2fd7e342d6ec31",
+    "destinations": "cb26a9b25513acccf5511bab73fbf00c9040bc3d7196c7c95bd0a2295a94c244"
+  },
+  "products/35kv-large-dry-type-power-transformer/index.html": {
+    "copy": "9ed976557685e09f1235a00753cc5bf1fa39de64e867503942d6cf9b965f290d",
+    "destinations": "3ac9a9a1a05b3f64af9f2d0f81e0f5c381be82e9e07fde0426ed1fa6857bd87c"
+  },
+  "products/35kv-power-transformer/index.html": {
+    "copy": "29a2e9b1691f63f8048e95a2ec83cf7adcd2790d670bdfe52873c3f490cfe7ff",
+    "destinations": "d296f998837c82324f7ca359a03ea9f29664c0b2ac9d8188a7ebf9edf18bb79e"
+  },
+  "products/40-5kv-new-energy-dry-type-transformer/index.html": {
+    "copy": "3b028b54ec9abcf84a0f901770e608341c0fae551bd44bf10fa95d6614eedc52",
+    "destinations": "91ca5441f0879c4f8e53c9bc61c61531b611d8131a4face67b5007dedbb3f04c"
+  },
+  "products/40-5kv-renewable-oil-immersed-transformer/index.html": {
+    "copy": "6f78dd0c826a0fb1703aa310a5a9df2f53cda61b4a33704230f2acde1fc31bd2",
+    "destinations": "6218b67601873308ab781e14435c435970a9b26d393295b8f04cd2ef75bff430"
+  },
+  "products/66kv-offshore-wind-nacelle-transformer/index.html": {
+    "copy": "39b2129d3ddfce0907f3c0fe0d998c6e229dc826e0f760c232042aa5ebcee44b",
+    "destinations": "6bf4d22a9881765d0d59a75f568785521107469b978fb77959cbadf2fb8803b0"
+  },
+  "products/66kv-power-transformer/index.html": {
+    "copy": "f9d918b8d4c8db6436b9f9e4b551944822ab340f3df4f1441dde71b314e97de7",
+    "destinations": "6d07c0283e238db44a79503a36ceea1020e2a8da914aea472d5300584f7bb81f"
+  },
+  "products/american-type-combined-transformer.html": {
+    "copy": "2cf05c7cee8a1ef05c1edc900608190aafe3e3d3f1b1b0b171798844b96dd021",
+    "destinations": "f2d0a9d3424da00505872b996cd81ba12ed2a24125e99975056e075f07ddcfa1"
+  },
+  "products/american-type-combined-transformer/index.html": {
+    "copy": "8872cbb29f77386acb5ad1655d2fa70558ab08ddb6b9c686da79ee66f8e52721",
+    "destinations": "f27c9adef4eae07f9bd1fce566b0ee0e497776ea8e4922dd61935e9dbe1e67dc"
+  },
+  "products/american-type-combined-transformer/zgs22-4000-35-0-8.html": {
+    "copy": "fd4e0b84bbc42aedd7e5078ee3bcc54fa21ca689860c531855922e4ff71a7167",
+    "destinations": "e04907e1ec1b784f7dc7a33515b55aceb1d034f52200ca7b3e6dd32c6e438a75"
+  },
+  "products/amorphous-alloy-dry-type-transformer/index.html": {
+    "copy": "34d5a595d48ac7f7c60f413206698465ed1d844b7ee610c42e9ba54dea199fa7",
+    "destinations": "4b968d23be9f8078839c9fb0a11b0e9b4dfa2717dd4b788f01701406ed2f35d2"
+  },
+  "products/cast-resin-dry-type-transformer.html": {
+    "copy": "7ca2e1da3b31c8c919ce363dbd18cbf256f022f5c9e439fe90e4f6115f1deca9",
+    "destinations": "e3dbbf0fae5516d8348e987461acfcec3567f1a9236bb31be1f76e57236a4a92"
+  },
+  "products/cast-resin-dry-type-transformer/index.html": {
+    "copy": "ce8d3c814cffeed0d0c00418fc82315d1c968b4dcf840c2d542b420bfd213863",
+    "destinations": "ee129a2df3ea3a337d072d7f2d19580f07c2e68c6d23d6253897fa6fb6dc6c5c"
+  },
+  "products/cast-resin-dry-type-transformer/scb18-1000-10-nx1.html": {
+    "copy": "fd4e0b84bbc42aedd7e5078ee3bcc54fa21ca689860c531855922e4ff71a7167",
+    "destinations": "e04907e1ec1b784f7dc7a33515b55aceb1d034f52200ca7b3e6dd32c6e438a75"
+  },
+  "products/cast-resin-dry-type-transformer/scb18-2500-10.html": {
+    "copy": "fd4e0b84bbc42aedd7e5078ee3bcc54fa21ca689860c531855922e4ff71a7167",
+    "destinations": "e04907e1ec1b784f7dc7a33515b55aceb1d034f52200ca7b3e6dd32c6e438a75"
+  },
+  "products/dry-type-distribution-transformer/index.html": {
+    "copy": "977dc8fb7fed1c7c7fcc0982d3322dc660deba1a29d1d3ffbbfdf56fdfde6dd1",
+    "destinations": "a35d246163073641b62e0c086acb3dfcbfe515f87f312a4f0c3faf440f3cfe4f"
+  },
+  "products/dry-type-prefabricated-substation.html": {
+    "copy": "4f03af369c25071aa82d227fff5b27f988ad78d7019648b8f8887e8776268ab8",
+    "destinations": "880d0c933566dee105d072434db59cc5f1c1b462d06e8addc9283a8e90736241"
+  },
+  "products/dry-type-prefabricated-substation/index.html": {
+    "copy": "e163e5bb5be9a915c1bc3cdcac16c859b468be517e3a3156564ba792ae6c7163",
+    "destinations": "978d842381b717b3b3216acfd6197be50c2ff7d7a8aeb67d24e4c8ecc82a2575"
+  },
+  "products/dry-type-prefabricated-substation/yb-40-5-1-14-10000.html": {
+    "copy": "fd4e0b84bbc42aedd7e5078ee3bcc54fa21ca689860c531855922e4ff71a7167",
+    "destinations": "e04907e1ec1b784f7dc7a33515b55aceb1d034f52200ca7b3e6dd32c6e438a75"
+  },
+  "products/dry-type-prefabricated-substation/yb-40-5-1-14-12500.html": {
+    "copy": "fd4e0b84bbc42aedd7e5078ee3bcc54fa21ca689860c531855922e4ff71a7167",
+    "destinations": "e04907e1ec1b784f7dc7a33515b55aceb1d034f52200ca7b3e6dd32c6e438a75"
+  },
+  "products/dry-type-prefabricated-substation/yb-40-5-1-14-6300.html": {
+    "copy": "fd4e0b84bbc42aedd7e5078ee3bcc54fa21ca689860c531855922e4ff71a7167",
+    "destinations": "e04907e1ec1b784f7dc7a33515b55aceb1d034f52200ca7b3e6dd32c6e438a75"
+  },
+  "products/high-voltage-power-transformer.html": {
+    "copy": "37ecacdc10d279834e3c37dd46b06ff8afba2259a9f7fc0043947ccb33d623a5",
+    "destinations": "d94789a1ffea7231d7acef90d6d82be6391ce0075c9024dd57b9fb441bbd3674"
+  },
+  "products/high-voltage-power-transformer/index.html": {
+    "copy": "0f26a5acf7b550d38abd7b0379ae05d48dff2a8ca983d75663a894c5452bc936",
+    "destinations": "9163f3f50dc9487a0c1567fba9fd56a4221fb2865223956f916d11e323983780"
+  },
+  "products/high-voltage-power-transformer/sfz-150000-132.html": {
+    "copy": "fd4e0b84bbc42aedd7e5078ee3bcc54fa21ca689860c531855922e4ff71a7167",
+    "destinations": "e04907e1ec1b784f7dc7a33515b55aceb1d034f52200ca7b3e6dd32c6e438a75"
+  },
+  "products/high-voltage-power-transformer/ssz20-240000-220.html": {
+    "copy": "fd4e0b84bbc42aedd7e5078ee3bcc54fa21ca689860c531855922e4ff71a7167",
+    "destinations": "e04907e1ec1b784f7dc7a33515b55aceb1d034f52200ca7b3e6dd32c6e438a75"
+  },
+  "products/high-voltage-power-transformer/ssz22-240000-220-nx1.html": {
+    "copy": "fd4e0b84bbc42aedd7e5078ee3bcc54fa21ca689860c531855922e4ff71a7167",
+    "destinations": "e04907e1ec1b784f7dc7a33515b55aceb1d034f52200ca7b3e6dd32c6e438a75"
+  },
+  "products/high-voltage-power-transformer/sz22-50000-110-nx1.html": {
+    "copy": "fd4e0b84bbc42aedd7e5078ee3bcc54fa21ca689860c531855922e4ff71a7167",
+    "destinations": "e04907e1ec1b784f7dc7a33515b55aceb1d034f52200ca7b3e6dd32c6e438a75"
+  },
+  "products/intelligent-low-noise-dry-type-transformer/index.html": {
+    "copy": "b8c0cbf0235e54a96ad7d09be8ea15ad7c678a1d2d6768524e5277425d186356",
+    "destinations": "2f64ecae324db954c48d60b31efafb48127ed98c41bb288d62403dfe682d0721"
+  },
+  "products/oil-immersed-distribution-transformer.html": {
+    "copy": "6aa7f4c6eca0e4123ff39b559a8cc23c29fb360ee743b4a39d882f7066b4ac7b",
+    "destinations": "0e7b0e1b7127bbde6d4c997b5ba2461cc87e9f3885e6b5650ed97ebec131ed1b"
+  },
+  "products/oil-immersed-distribution-transformer/index.html": {
+    "copy": "2644aa499731cc06e994b3b87caf5700ec526a0b0439bebd5f616855d84c4385",
+    "destinations": "97b7f295a542c47fdcb694c6847d2a8fca4f612818edb41846521b6147e433e9"
+  },
+  "products/oil-immersed-distribution-transformer/s-m-1600-22-tier2.html": {
+    "copy": "fd4e0b84bbc42aedd7e5078ee3bcc54fa21ca689860c531855922e4ff71a7167",
+    "destinations": "e04907e1ec1b784f7dc7a33515b55aceb1d034f52200ca7b3e6dd32c6e438a75"
+  },
+  "products/oil-immersed-distribution-transformer/s-m-630-22-tier2.html": {
+    "copy": "fd4e0b84bbc42aedd7e5078ee3bcc54fa21ca689860c531855922e4ff71a7167",
+    "destinations": "e04907e1ec1b784f7dc7a33515b55aceb1d034f52200ca7b3e6dd32c6e438a75"
+  },
+  "products/oil-immersed-prefabricated-substation.html": {
+    "copy": "c26d11e15b8af4f5fea78f5444079578779f701b88f382a9d23397f6a18e8953",
+    "destinations": "cb577694828e115957fb191abe1fc7c2085f6e65861e55932a05ab53a3693f92"
+  },
+  "products/oil-immersed-prefabricated-substation/index.html": {
+    "copy": "bef3970569ba46c46eaa13f318b0b74170d595a823dca88b967753b89769bd38",
+    "destinations": "fcacbd6b9632464e6cefedaf4bda19aa8b86316499e35388a68c8fc061f4f4e3"
+  },
+  "products/oil-immersed-prefabricated-substation/yb-40-5-1-14-12500-gy.html": {
+    "copy": "fd4e0b84bbc42aedd7e5078ee3bcc54fa21ca689860c531855922e4ff71a7167",
+    "destinations": "e04907e1ec1b784f7dc7a33515b55aceb1d034f52200ca7b3e6dd32c6e438a75"
+  },
+  "products/oil-immersed-prefabricated-substation/yb-40-5-10000.html": {
+    "copy": "fd4e0b84bbc42aedd7e5078ee3bcc54fa21ca689860c531855922e4ff71a7167",
+    "destinations": "e04907e1ec1b784f7dc7a33515b55aceb1d034f52200ca7b3e6dd32c6e438a75"
+  },
+  "products/oil-immersed-rectifier-transformer/index.html": {
+    "copy": "af92533631e27481ee2400130787e0a037ac703a2c90af9d771e8ef7b6790156",
+    "destinations": "0b8290da4f2a5801936b267af4ba281e80e65d1466b08888c5e8d060a38922ff"
+  },
+  "products/oil-immersed-split-winding-transformer/index.html": {
+    "copy": "8485634eaee92175607a1fa8f1d6e7b3a5230c9c45e60bef5713510c7ef84582",
+    "destinations": "56733143c60239766ad7cd86ee397d5e30bee99b369d83cfe6e63e26664bd9a7"
+  },
+  "products/prefabricated-substations/index.html": {
+    "copy": "c25132d92b5f9696e4e0d4febaaefff5e3c915bfd6008ced3f59519eb94a258e",
+    "destinations": "f1c4bb053c8599d3096ac7be078ba1de7ab11b614dbc6d2641315c95ee7b0f05"
+  },
+  "products/pv-ess-integrated-substation/index.html": {
+    "copy": "87e817062434541ccd8f8077656c00affd8b30cdbf3124d3c5538dc3f7de6381",
+    "destinations": "b51052f23f4d1cf89016767493e7efbb23ef2ddeb170d9311e250750d589d79f"
+  },
+  "products/special-renewable-solutions/index.html": {
+    "copy": "741d9431dedb9c15680acb6d147c5670f18125abcc6d4b4ea2844300dd80d46c",
+    "destinations": "4193546c6904d8972f97de414eb8f50eafd17688eaae5bd1f1f36e3e8b890d9d"
+  },
+  "products/sz20-on-load-oil-immersed-transformer/index.html": {
+    "copy": "e41b0ffefda400d17da87d22232886d203c397d7926412c261461a8f2c97e97a",
+    "destinations": "97439bfa326d81dbd9ca6fd861d387e824d54456953379e07b0b34421536eaba"
+  },
+  "products/yb-prefabricated-substation/index.html": {
+    "copy": "a9ab1ecda79074f523780f18ac09e814b16698c08f8764b7f7355c2e5b54a8e2",
+    "destinations": "092543a3c662526cebfc77d41b14a32534aa8ca6da4a4eea43baec1a67e1bfda"
+  },
+  "products/ybh-prefabricated-substation/index.html": {
+    "copy": "41f08b537d313a1015c88a5a8ef1cbfdecb1d07ae17a52e80345ec060f73855d",
+    "destinations": "e2f00bb5bf6c8bf30d7d99952928c321c3fd37f879a58ce48eb12edd11cb4a1a"
+  },
+  "products/zbs-rectifier-transformer/index.html": {
+    "copy": "d22baedea7959d23ae7ee8faaac4bb7ecddf915bdecb9e97fe441889326c0a0d",
+    "destinations": "5bd07f69a4949bb246ec627b19ea224f904339fc45a595ad8c66663a6fa55f44"
+  },
+  "products/zgs-prefabricated-substation/index.html": {
+    "copy": "dafb58faef4b6d41eed67fc2ac417759bfac79ac868143a260acd6d5c808d447",
+    "destinations": "6cf60d91c6369cd7d4e6d51f3a4e21b52424df0378a46b8301331ce786f571e7"
+  },
+  "projects.html": {
+    "copy": "78ba31586999138d0eb1307a699fcbcfcf9033bb47c2e134e599a9ef98f01546",
+    "destinations": "dc922445805e47b4020f2cb6f8ff0325af71201f7893b3dac5d7af458ec3d20d"
+  },
+  "projects/brazil-cemig-155mw-pv.html": {
+    "copy": "7e95f7af721551d96d681195acc53a0485c58ea75be9615b15c1c962e45329c5",
+    "destinations": "ea02db5af49e428117ab8337b54a6dda722469eac73d074e10575e2632d7c907"
+  },
+  "projects/drc-cmoc-mining-solar.html": {
+    "copy": "c421abcb85a8aebf1659d2a8dfd64dccb1351ce48e39b847fc2fe0effb795349",
+    "destinations": "c8fa40b73119496b8d82c04b620d71fcc561c5e50e2b79bf7c4bc7c1871d9132"
+  },
+  "projects/nigeria-atlantic-132kv.html": {
+    "copy": "727685ee45701f27664efb484431257f2459e375179c0754f22dbd444e0c114d",
+    "destinations": "c55f1571832dcab0cb78cb7c3d8721aaa627fe14cd4d7e4a70b99bfb2d90b5a2"
+  },
+  "projects/pakistan-bcl-hattar-cement.html": {
+    "copy": "6e5d8ba308993c8a22955f3a4b8b6521b147be89493ab703bd5cf6d713ad922a",
+    "destinations": "3a3fc1c41ca35f58fdf584fb32b5d4c59a03e62feb4a8e554d198a0d2ef9ce98"
+  },
+  "projects/uae-methanol-mobile-substation.html": {
+    "copy": "2284b6be6859505b128f6e1c4ff0a7c245e0502d8b62b7e105b6658cba29db31",
+    "destinations": "321be9bc260fbda6e22afaa7bf0652a59a4000ab610971e4db4c6e50ad858fad"
+  },
+  "projects/vietnam-long-son-cement.html": {
+    "copy": "52a9b406204dbd504e6bdb8acfc85cc895d48a8aa97f45777b0612cbc0d1d17f",
+    "destinations": "632933cfbb93f65ee8eb9804362dcc9bf5d8e96a1c3e1ab407b027fd0426740b"
+  },
+  "projects/zambia-sunshare-nambala-solar.html": {
+    "copy": "d10ab4f4309a159da3018a310b4cfd9c97a67ed8ac7b7f7f27f91b5d4307d9ab",
+    "destinations": "596767ab43a0375f78831740f50ca11fef76e688543069f8899faeff25a463bb"
+  },
+  "quality.html": {
+    "copy": "84314fa3ca32a1d79954e68e89aef3c239797dbdc897782d7360e9092f1d22f7",
+    "destinations": "0bc2c58dd90b89516266acc882869b94eb06b905c66011040dc7aa29f9b9b6bc"
+  },
+  "resources.html": {
+    "copy": "d167ed7c5af2ed09c75ac505b4294a7b0ed875013ff58f23d20f69163f795c6a",
+    "destinations": "97e4473f1fb126db2fcc4b2bb4a182bbcb6cb1f878448db439336d61db6f7b2e"
+  },
+  "services.html": {
+    "copy": "b4f563e376fcaed122d6e6ae243c8fefdbf75e162ebd745af5eef42eae2c4cd2",
+    "destinations": "3b2b046763d67a45ad9cceae328324303c6413bbe23be2ee0b30c80cf4d63aaa"
+  },
+  "testing.html": {
+    "copy": "f030dcb80110d6a03747e176a4cad10209af4171123a2d5513b652c1ba051a00",
+    "destinations": "e88c002b9e4f6c8e48dbe6c8cd7cfa388e352a8b92ae0cab73d9439f1357a4ae"
+  }
+}

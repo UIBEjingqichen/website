@@ -18,7 +18,7 @@ function stripHeroActions(html) {
 }
 
 function markPageHero(html) {
-  return html.replace('<section class="ty-panel__hero" data-ty-panel__hero>', '<section class="ty-panel__hero ty-panel__page-hero" data-ty-panel__hero>');
+  return html.replace('<section class="ty-panel__hero" data-v6-hero>', '<section class="ty-panel__hero ty-panel__page-hero" data-v6-hero>');
 }
 
 function homeLandscape() {
@@ -38,7 +38,7 @@ function updateHome() {
   if (!fs.existsSync(file)) return;
   let html = fs.readFileSync(file, "utf8");
   html = stripHeroActions(html);
-  if (html.includes("<body>")) html = html.replace("<body>", '<body class="ty-home">');
+  if (html.includes("<body>")) html = html.replace("<body>", '<body class="v7-home">');
   html = html.replace(/<div class="ty-home__landscape-grid">[\s\S]*?<\/div>(?=<\/section>)/, homeLandscape());
   html = injectCss(html);
   fs.writeFileSync(file, html);

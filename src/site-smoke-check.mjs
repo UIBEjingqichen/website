@@ -17,11 +17,9 @@ const required = [
   "applications.html",
   "about.html",
   "catalog.html",
-  "assets/css/ty-home.css",
-  "assets/css/ty-product.css",
-  "assets/css/ty-knowledge.css",
-  "assets/css/ty-resources.css",
-  "assets/css/ty-general.css",
+  "assets/css/visual-system.css",
+  "assets/css/product-directory.css",
+  "assets/css/product-detail.css",
   "assets/js/visual-behavior.js",
   "products/high-voltage-power-transformer/index.html",
   "products/oil-immersed-distribution-transformer/index.html",
@@ -36,6 +34,9 @@ const directory = read("products.html");
 for (const text of ["Power Transformers", "Distribution Transformers", "Prefabricated Substations"]) requireText("products.html", text);
 for (const retired of ['id="oil-immersed-transformers"', 'id="dry-type-transformers"', ">Oil-Immersed Transformers<", ">Dry-Type Transformers<"]) {
   if (directory.includes(retired)) throw new Error(`Products directory still exposes retired top-level family: ${retired}`);
+}
+for (const marker of ['data-v44-media-sync="true"', 'data-v45-product-media="true"', 'data-v46-three-family="true"']) {
+  if (!directory.includes(marker)) throw new Error(`Products directory is missing architecture marker: ${marker}`);
 }
 if ((directory.match(/data-product-slide=/g) || []).length !== 3) throw new Error("Products landing hero must contain exactly three family slides.");
 for (const familyId of ["power-transformers", "distribution-transformers", "prefabricated-substations"]) {
@@ -66,6 +67,10 @@ const distributionFamily = read(distributionFamilyRel);
 for (const text of [
   "Oil-Immersed Distribution Transformer",
   "Dry-Type Distribution Transformer",
+  'data-v52-oil-family="true"',
+  "data-v52-oil-family-media",
+  "data-v55-oil-media-integrity",
+  'data-v55-image-fit="true"',
   "Representative Parameters",
   "35 kV-class / renewable collection range",
   "30 kVA–12.5 MVA",
@@ -85,9 +90,19 @@ if (/includes 22 kV tested reference/i.test(distributionFamily)) {
   throw new Error("Oil-distribution hero still over-emphasizes the 22 kV tested reference.");
 }
 
-const pageCss = ['ty-home.css', 'ty-product.css', 'ty-knowledge.css', 'ty-resources.css', 'ty-general.css']
-  .map((name) => read(`assets/css/${name}`)).join('');
-if (!pageCss.includes("object-fit:contain")) throw new Error("Product images must preserve their complete-image fit rules.");
+for (const cssRel of ["assets/css/visual-system.css", "assets/css/product-directory.css", "assets/css/product-detail.css"]) {
+  const css = read(cssRel);
+  if (!css.includes("v45: full-bleed product media")) throw new Error(`${cssRel} is missing v45 media rules.`);
+  if (!css.includes("v46: three-family architecture")) throw new Error(`${cssRel} is missing v46 three-family media rules.`);
+}
+const detailCss = read("assets/css/product-detail.css");
+if (!detailCss.includes("height:500px")) throw new Error("Product detail hero media did not receive the larger v46 image stage.");
+if (!detailCss.includes("v54: complete-product hero fit and balanced detail layout") || !detailCss.includes("object-fit:contain!important")) {
+  throw new Error("Product detail hero media is missing the v54 complete-image fit rules.");
+}
+if (!detailCss.includes("v55: oil-distribution intrinsic-ratio image fix") || !detailCss.includes("width:auto!important") || !detailCss.includes("height:auto!important")) {
+  throw new Error("Oil-distribution page is missing the v55 intrinsic-ratio protection rules.");
+}
 
 const prohibitedSource = path.join(root, "source-media", "products", "products", "小型油浸式配变 (1).JPG");
 if (fs.existsSync(prohibitedSource)) throw new Error("Prohibited small oil distribution transformer source image still exists.");
@@ -136,7 +151,7 @@ const supplementalDetails = new Map([
 for (const [slug, facts] of supplementalDetails) {
   const rel = `products/${slug}/index.html`;
   const html = read(rel);
-  for (const marker of ['ty-product.css', 'class="ty-product__hero c8d-hero"', 'ty-system__detail-jump', 'id="ratings"', 'id="engineering"', 'id="applications"', 'id="documents"', 'id="contact-rfq"', ...facts]) {
+  for (const marker of ['catalog-v8-product-details.css', 'class="ty-product__hero c8d-hero"', 'ty-system__detail-jump', 'id="ratings"', 'id="engineering"', 'id="applications"', 'id="documents"', 'id="contact-rfq"', ...facts]) {
     if (!html.includes(marker)) throw new Error(`${rel} missing source-backed product detail: ${marker}`);
   }
   if (html.includes('>Product Overview<') || html.includes('21M2078-S')) throw new Error(`${rel} has a removed or inherited section.`);
@@ -157,17 +172,19 @@ for (const entry of fs.readdirSync(productsRoot, { withFileTypes: true })) {
     for (const marker of ['id="ratings"', 'id="applications"', 'id="documents"', 'id="contact-rfq"', "visual-behavior.js"]) {
       if (!html.includes(marker)) throw new Error(`${rel} missing catalog detail marker: ${marker}`);
     }
-    if (html.includes("21M2078-S")) throw new Error(`${rel} incorrectly inherits 110 kV tested-model evidence.`);
+    if (html.includes("21M2078-S") || html.includes('data-v41-reference-parameters')) throw new Error(`${rel} incorrectly inherits 110 kV tested-model evidence.`);
     continue;
   }
   const styles = [...html.matchAll(/<link\b[^>]*rel=["']stylesheet["'][^>]*href=["']([^"']+)["'][^>]*>/gi)].map((m) => m[1]);
-  for (const href of ["../../assets/css/ty-product.css"]) {
+  for (const href of ["../../assets/css/visual-system.css", "../../assets/css/product-detail.css"]) {
     if (!styles.includes(href)) throw new Error(`${rel} missing unified stylesheet: ${href}`);
   }
-  for (const marker of ["phase1-detail", "ty-system__detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "data-product-hero", "data-product-slide", "visual-behavior.js"]) {
+  for (const marker of ["phase1-detail", "ty-system__detail-jump", 'id="ratings"', 'id="applications"', 'id="engineering"', 'id="documents"', 'id="related"', 'id="contact-rfq"', "data-product-hero", "data-product-slide", "data-v41-reference-parameters", "data-v54-complete-image-fit", "visual-behavior.js"]) {
     if (!html.includes(marker)) throw new Error(`${rel} missing detail-layout marker: ${marker}`);
   }
-  if (!/<img\b[^>]*src="[^"]*assets\/media\//i.test(html)) throw new Error(`${rel} is missing product media.`);
+  if (!html.includes("data-v43-classified-media") && !html.includes("data-v52-oil-family-media")) {
+    throw new Error(`${rel} missing classified product-media marker.`);
+  }
   for (const forbidden of ["floating-solar-combined-transformer-site", "american-combined-transformer-03", "小型油浸式配变 (1)"]) {
     if (html.includes(forbidden)) throw new Error(`${rel} references forbidden product media: ${forbidden}`);
   }
@@ -203,11 +220,11 @@ const rootIndex = fs.readFileSync(path.join(root, "index.html"), "utf8");
 if (!rootIndex.includes('<base href="dist/">')) throw new Error("Root index mirror is missing the dist base path.");
 if (!rootIndex.includes('<head><base href="dist/">')) throw new Error("Root index mirror must set its base path before stylesheet links.");
 for (const [label, html] of [["dist homepage", read("index.html")], ["root homepage", rootIndex]]) {
-  for (const marker of ['data-energy-flow', 'class="ty-editorial__hero"', 'class="ty-editorial__hero-media"', 'assets/css/ty-home.css']) {
+  for (const marker of ['class="ty-panel__hero" data-v6-hero', 'data-energy-flow', 'class="ty-editorial__hero"', 'class="ty-editorial__hero-media"', 'assets/css/industrial-editorial.css']) {
     if (!html.includes(marker)) throw new Error(`${label} is missing Industrial Editorial marker: ${marker}`);
   }
 }
-if (!exists('assets/css/ty-home.css')) throw new Error('Homepage stylesheet is missing.');
+if (!exists('assets/css/industrial-editorial.css')) throw new Error('Shared Industrial Editorial stylesheet is missing.');
 const homeHtml = read("index.html");
 const localWorldMap = "assets/media/applications/blank-world-map-robinson.svg";
 if (!homeHtml.includes(`class="ty-proof__world-base" src="${localWorldMap}"`)) throw new Error("Homepage world map is not using its local base image.");
