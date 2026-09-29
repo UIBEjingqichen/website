@@ -63,9 +63,31 @@ def main():
                 if overflow:
                     failures.append(f"{route}: horizontal overflow at {width}px")
             context.close()
+
+        context = browser.new_context(viewport={"width": 375, "height": 812})
+        page = context.new_page()
+        page.goto("http://127.0.0.1:4173/index.html", wait_until="domcontentloaded")
+        menu = page.locator("[data-menu-toggle]")
+        menu.click()
+        if menu.get_attribute("aria-expanded") != "true":
+            failures.append("Mobile navigation did not open")
+        menu.click()
+        quote = page.locator("[data-quote-open]:visible").first
+        quote.click()
+        modal = page.locator("[data-quote-modal]")
+        if modal.get_attribute("aria-hidden") != "false":
+            failures.append("Quote form did not open")
+        if not modal.evaluate("node => node.contains(document.activeElement)"):
+            failures.append("Quote form did not receive keyboard focus")
+        page.keyboard.press("Escape")
+        if modal.get_attribute("aria-hidden") != "true":
+            failures.append("Escape did not close the quote form")
+        if not quote.evaluate("node => node === document.activeElement"):
+            failures.append("Focus did not return to the quote button")
+        context.close()
         browser.close()
     (destination / "validation.txt").write_text(
-        "8 pages × 375/768/1440px; full-page screenshots.\n"
+        "8 pages × 375/768/1440px; full-page screenshots; mobile menu and quote dialog.\n"
         + ("\n".join(failures) if failures else "No HTTP errors or horizontal overflow.\n"),
         encoding="utf-8",
     )

@@ -65,4 +65,5 @@ jobs:
           name: visual-convergence-lighthouse
           path: .lighthouseci/*.html
           if-no-files-found: warn
+          include-hidden-files: true
           retention-days: 14
