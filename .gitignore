@@ -1,4 +1,6 @@
 node_modules/
-website-master/
 tmp/
 output/
+__pycache__/
+.DS_Store
+Thumbs.db

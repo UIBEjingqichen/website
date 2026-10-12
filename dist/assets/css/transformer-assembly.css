@@ -1,0 +1,98 @@
+/* Transformer assembly (v62): the page scroll drives the assembly timeline.
+   Without JS the drawing shows the finished unit and the chapters read as a list. */
+.as{--ink:#0b1d2d;--line:#9fb3c2;--sky:#7cc4ff;--acc:var(--tr-accent,#1f7fd0);--head:72px}
+
+/* ---------- scroll track + pinned stage ---------- */
+.as-scroll{position:relative;background:var(--ink);color:#c9d5de}
+.as-ready .as-scroll{height:900vh}
+.as-stage{position:relative;display:grid;grid-template-columns:160px minmax(0,1fr) 340px;gap:clamp(20px,2.4vw,36px);align-items:center;
+  padding:24px max(24px,calc((100vw - 1320px)/2));min-height:640px}
+.as-ready .as-stage{position:sticky;top:var(--head);height:calc(100vh - var(--head));min-height:0}
+.as-stage::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.55;
+  background-image:linear-gradient(rgba(124,196,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(124,196,255,.05) 1px,transparent 1px);background-size:40px 40px}
+
+/* ---------- progress rail ---------- */
+.as-rail{position:relative;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.as-rail button{display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:center;width:100%;padding:8px 0;border:0;background:none;cursor:pointer;text-align:left;font:inherit;color:#6f879a}
+.as-rail b{font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
+.as-rail span{font-size:13px;line-height:1.3}
+.as-rail i{grid-column:2;display:block;height:2px;background:rgba(255,255,255,.1);position:relative;overflow:hidden}
+.as-rail i::after{content:"";position:absolute;inset:0;background:var(--sky);transform-origin:left;transform:scaleX(var(--f,0))}
+.as-rail button:hover{color:#c9d5de}
+.as-rail button[aria-current="step"]{color:#fff}
+.as-rail button[aria-current="step"] b{color:var(--sky)}
+.as-rail .is-done{color:#9fb3c2}
+
+/* ---------- drawing ---------- */
+.as-figure{position:relative;margin:0;height:100%;min-height:0;display:flex;flex-direction:column;justify-content:center}
+.as-svg{display:block;width:100%;height:100%;max-height:calc(100vh - var(--head) - 80px);overflow:visible}
+.as-readout{display:flex;justify-content:space-between;gap:16px;margin-top:8px;font-size:13px;color:#7f95a6;font-variant-numeric:tabular-nums}
+.as-readout strong{color:#fff;font-weight:600}
+.as-bar{height:2px;margin-top:8px;background:rgba(255,255,255,.1)}
+.as-bar i{display:block;height:100%;background:var(--acc);transform-origin:left;transform:scaleX(var(--p,1))}
+.as-hint{position:absolute;left:50%;bottom:44px;transform:translateX(-50%);display:none;align-items:center;gap:10px;padding:8px 14px;border:1px solid rgba(255,255,255,.18);border-radius:2px;background:rgba(11,29,45,.8);font-size:13px;color:#c9d5de;transition:opacity .3s}
+.as-ready .as-hint{display:flex}
+.as-hint::after{content:"";width:7px;height:7px;border-right:1.5px solid var(--sky);border-bottom:1.5px solid var(--sky);transform:rotate(45deg);animation:as-nudge 1.6s ease-in-out infinite}
+.as-hint.is-gone{opacity:0}
+@keyframes as-nudge{50%{transform:translateY(4px) rotate(45deg)}}
+
+/* svg parts */
+.as-svg *{transform-box:fill-box}
+.as-svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.as-svg .hatch{stroke:rgba(159,179,191,.28);stroke-width:1}
+.as-svg .lead{fill:none;stroke:#f0b86a;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.as-svg .lead--lv{stroke-width:5}
+.as-svg .lead--tap{stroke:#e39a4c;stroke-width:2;stroke-dasharray:none}
+.as-svg .lab{fill:#c9d5de;font-size:19px;font-weight:600;font-family:inherit}
+.as-svg .lab-line{fill:none;stroke:var(--sky);stroke-width:1.2}
+.as-svg .lab-dot{fill:var(--sky)}
+.as-svg .dim{fill:none;stroke:var(--sky);stroke-width:1.2}
+.as-svg .dim-v{transform-box:view-box}
+.as-svg .dim-t{fill:var(--sky);font-size:17px;font-family:inherit}
+
+/* ---------- chapters ---------- */
+.as-chapters{position:relative;margin:0;padding:0;list-style:none}
+.as-chap{padding:0 0 32px}
+.as-ready .as-chapters{height:min(560px,calc(100vh - var(--head) - 60px))}
+.as-ready .as-chap{position:absolute;inset:0;padding:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(16px);transition:opacity .35s ease,transform .45s cubic-bezier(.2,.7,.2,1);pointer-events:none}
+.as-ready .as-chap.is-active{opacity:1;transform:none;pointer-events:auto}
+.as-chap small{display:block;margin-bottom:10px;color:var(--sky);font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
+.as-chap h2{color:#fff!important;font-size:clamp(24px,2.2vw,32px);line-height:1.15;margin:0 0 14px}
+.as-chap p{color:#a9b9c5;font-size:16px;line-height:1.65;margin:0 0 18px;max-width:44ch}
+.as-chap dl{margin:0 0 16px;border-top:1px solid rgba(255,255,255,.14)}
+.as-chap dl div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px}
+.as-chap dt{color:#7f95a6}
+.as-chap dd{margin:0;color:#fff}
+.as-chap a{align-self:flex-start;color:#fff;font-size:14px;font-weight:600;text-decoration:none;border-bottom:1px solid var(--acc);padding-bottom:2px}
+.as-chap a:hover{color:var(--sky)}
+
+/* fade from the dark stage into the steel section below */
+.as-fade{height:150px;background:linear-gradient(180deg,var(--ink) 0,#13304a 30px,#3a5064 60px,#8c9dab 95px,#c9d3dc 124px,var(--steel) 100%)}
+.as-note{font-size:13px!important;color:#7f95a6!important;margin:18px 0 0!important}
+
+/* ---------- responsive ---------- */
+@media (max-width:1180px){.as-stage{grid-template-columns:150px minmax(0,1fr) 300px}.as-rail span{font-size:12px}}
+@media (max-width:900px){
+  .as{--head:64px}
+  .as-ready .as-scroll{height:760vh}
+  .as-stage{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr) auto;gap:10px;padding:12px 16px 16px;align-items:stretch}
+  .as-rail{flex-direction:row;gap:4px}
+  .as-rail li{flex:1}
+  .as-rail button{display:block;padding:6px 0 0}
+  .as-rail b,.as-rail span{display:none}
+  .as-rail i{height:3px}
+  .as-svg{max-height:none}
+  .as-svg .lab,.as-svg .lab-line,.as-svg .lab-dot{display:none}
+  .as-ready .as-chapters{height:190px}
+  .as-ready .as-chap{justify-content:flex-start}
+  .as-chap h2{font-size:21px;margin-bottom:8px}
+  .as-chap p{font-size:14px;margin-bottom:8px}
+  .as-chap dl,.as-readout span:first-child{display:none}
+  .as-hint{bottom:210px}
+}
+@media (prefers-reduced-motion:reduce){.as-hint::after{animation:none}.as-ready .as-chap{transition:none}}
+
+
+
+/* v63: eased fade out of the dark stage (stops in tianyu-refresh.css) */
+.as-fade{height:var(--fx-len,260px);background:linear-gradient(180deg,var(--fx-out-steel))}

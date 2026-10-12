@@ -43,3 +43,4 @@
 /projects.html
 /quality.html
 /resources.html
+/transformer-assembly.html
