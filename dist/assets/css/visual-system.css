@@ -37,6 +37,7 @@ small,.eyebrow,.v3p-kicker,.yw-kicker,.ty15-kicker,.ty16-kicker,.mfg34-kicker{fo
 .site-header{position:sticky;top:0;z-index:120;display:flex;align-items:center;gap:24px;min-height:var(--ty-header);padding:0 max(24px,calc((100vw - var(--ty-max))/2));border-bottom:1px solid rgba(203,216,223,.9);background:rgba(249,252,253,.96);backdrop-filter:blur(12px)}
 .brand{display:flex;align-items:center;gap:10px;min-width:max-content;color:var(--ty-navy)}
 .brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:var(--ty-radius);background:var(--ty-navy);color:white;font-size:12px;font-weight:800;letter-spacing:.08em}
+.brand-logo{display:block;width:100%;height:100%;object-fit:contain;border-radius:inherit}
 .brand>span:last-child{display:flex;flex-direction:column;line-height:1.12}
 .brand strong{font-size:15px;letter-spacing:.01em}
 .brand small{margin-top:2px;color:var(--ty-muted);font-size:11px}
