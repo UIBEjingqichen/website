@@ -87,12 +87,12 @@ all(".quote-form").forEach((form) => form.addEventListener("submit", (event) => 
   const file = form.querySelector('input[type="file"]')?.files?.[0];
   const subject = `Tianyu Electric inquiry - ${String(data.get("requestContext") || data.get("product") || "Project requirements")}`;
   const body = `Please review the following inquiry.\n\n${lines.join("\n")}\n\n${file ? `I will attach the selected file manually in my email application: ${file.name}` : ""}`;
-  const emailUrl = `mailto:shangjianchen21@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const emailUrl = `mailto:tianyuelectric@yeah.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   if (emailUrl.length > 7000) {
-    if (message) message.textContent = "The inquiry is too long for an email link. Please shorten the notes or email shangjianchen21@gmail.com directly.";
+    if (message) message.textContent = "The inquiry is too long for an email link. Please shorten the notes or email tianyuelectric@yeah.net directly.";
     return;
   }
-  if (message) message.textContent = `Your email application is opening. Please attach any selected file there and press Send. This website has not sent your inquiry automatically. If no application opens, email shangjianchen21@gmail.com directly.`;
+  if (message) message.textContent = `Your email application is opening. Please attach any selected file there and press Send. This website has not sent your inquiry automatically. If no application opens, email tianyuelectric@yeah.net directly.`;
   window.location.href = emailUrl;
 }));
 
