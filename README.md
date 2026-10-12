@@ -8,7 +8,8 @@ This repository contains the current static website synchronized from
 
 Open `index.html` directly, or double-click `打开网站.cmd` on Windows.
 For HTTP preview, run `python -m http.server 8000` from this directory and
-open `http://localhost:8000/`. The root entry redirects to `dist/index.html`.
+open `http://localhost:8000/`. The root entry displays the complete homepage
+directly, without a redirect or an "Open website" intermediary.
 
 ## Website files
 
@@ -26,6 +27,9 @@ Local image-library management, repair reports and temporary working notes
 remain in the desktop source folder and are not required to serve this website.
 
 ## Validation
+
+After editing `dist/index.html`, run `python tools/generate_root_home.py` to
+refresh the root homepage and adjust its image, asset and navigation URLs.
 
 Run `python tools/validate_site.py` to check local HTML/CSS links, JSON databases
 and PDF headers. The master workflow also checks JavaScript syntax.

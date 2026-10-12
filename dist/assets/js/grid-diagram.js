@@ -7,7 +7,7 @@
   const pop = document.querySelector('[data-sld-pop]');
   if (!svg || !stage || !pop) return;
 
-  const base = 'products/';
+  const base = new URL('../../products/', document.currentScript.src).href;
   const DATA = {
     ybh:     { role: 'Renewable collection', name: 'YBH Chinese-Type Prefabricated Substation', desc: 'Packaged step-up substation for wind and photovoltaic collection systems.', v: '7.2–72.5 kV HV · 0.315–1.14 kV LV', r: '200–15,000 kVA', href: 'ybh-prefabricated-substation/index.html' },
     pvess:   { role: 'Renewable collection', name: 'PV / Converter / ESS Integrated Substation', desc: 'Converter or PCS, transformer and medium-voltage switchgear integrated in one enclosure.', v: '7.2–40.5 kV HV · 0.315–1.14 kV LV', r: '2,000–15,000 kVA', href: 'pv-ess-integrated-substation/index.html' },
@@ -96,5 +96,4 @@
   trace(nodes[0]);
   if (reduced) setTouring(false); else schedule();
 })();
-
 
