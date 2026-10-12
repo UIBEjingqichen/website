@@ -11,7 +11,7 @@
     }
     if(!document.querySelector('.contact-email-path')){
       const fallback = document.createElement('a'); fallback.className='contact-email-path';
-      fallback.href='mailto:shangjianchen21@gmail.com'; fallback.textContent='Email directly: shangjianchen21@gmail.com';
+      fallback.href='mailto:tianyuelectric@yeah.net'; fallback.textContent='Email directly: tianyuelectric@yeah.net';
       form.insertAdjacentElement('afterend',fallback);
     }
   }
