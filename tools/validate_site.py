@@ -35,7 +35,7 @@ class References(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attributes = dict(attrs)
-        for key in ("src", "href", "poster", "data-src"):
+        for key in ("src", "href", "poster", "data-src", "data-href"):
             if key in attributes:
                 if tag == "link" and key == "href" and "canonical" in attributes.get("rel", "").split():
                     continue
@@ -47,6 +47,11 @@ class References(HTMLParser):
 
 
 html_files = [ROOT / "index.html", *sorted((ROOT / "dist").rglob("*.html"))]
+root_home = (ROOT / "index.html").read_text(encoding="utf-8")
+if not re.search(r"<main(?:\s|>)", root_home, re.I):
+    errors.append("index.html: root entry must contain the full homepage")
+if re.search(r"http-equiv\s*=\s*['\"]refresh['\"]", root_home, re.I):
+    errors.append("index.html: root entry must not depend on a meta-refresh redirect")
 css_files = sorted((ROOT / "dist").rglob("*.css"))
 json_files = sorted((ROOT / "database").rglob("*.json"))
 for source in html_files:
