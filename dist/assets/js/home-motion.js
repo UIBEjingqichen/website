@@ -21,18 +21,27 @@
   /* ---- count-up ---- */
   const fmt = n => n.toLocaleString('en-US');
   const counters = [...document.querySelectorAll('[data-count]')].filter(el => el.tagName !== 'BUTTON');
+  // Keep the published figure available before scrolling and to assistive technology.
+  const visuals = new Map();
+  if (!reduced && io) counters.forEach(el => {
+    const actual = document.createElement('span');
+    actual.className = 'counter-value'; actual.textContent = el.textContent;
+    const visual = document.createElement('span');
+    visual.setAttribute('aria-hidden', 'true'); visual.textContent = el.textContent;
+    el.replaceChildren(actual, visual); visuals.set(el, visual);
+  });
   const run = el => {
     const end = +el.dataset.count, suf = el.dataset.suffix || '', t0 = performance.now(), dur = 1400;
     const tick = t => {
       const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
-      el.textContent = fmt(Math.round(end * e)) + suf;
+      visuals.get(el).textContent = fmt(Math.max(1, Math.round(end * e))) + suf;
       if (p < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
   };
   if (!reduced && io) {
     const oc = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { run(e.target); oc.unobserve(e.target); } }), { threshold: .6 });
-    counters.forEach(el => { el.textContent = '0' + (el.dataset.suffix || ''); oc.observe(el); });
+    counters.forEach(el => oc.observe(el));
   }
 
   /* ---- project map ---- */

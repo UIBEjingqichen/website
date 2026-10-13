@@ -155,6 +155,52 @@ html body .quote-form button:disabled{opacity:.65;cursor:not-allowed;transform:n
 html body .quote-form [data-inquiry-verification]{min-width:0}
 html body .quote-form .form-message{font-size:14px;color:#33485a;line-height:1.5;overflow-wrap:anywhere}
 
+/* Shared inquiry layout: contact details and attachments before optional specifications. */
+html body .rfq-refined{gap:16px;align-items:start}
+html body .rfq-refined fieldset{min-width:0;margin:0;padding:0;border:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px}
+html body .rfq-refined legend{width:100%;padding:0;margin:0 0 12px;color:#14304a;font-size:17px;font-weight:600}
+html body .rfq-refined label{display:block;min-width:0;color:#243e52;font-size:14px}
+html body .rfq-refined label input,html body .rfq-refined label textarea,html body .rfq-refined label select{display:block;width:100%;margin-top:6px;min-height:44px;box-sizing:border-box}
+html body .rfq-refined .rfq-required{float:none;margin-left:6px;font-size:14px;font-weight:400}
+html body .rfq-refined .rfq-optional{float:right;margin-left:8px;font-size:12px;font-weight:400;color:#526576}
+html body .rfq-refined .rfq-intro,html body .rfq-refined .rfq-help{margin:0;color:#4d6274;font-size:14px;line-height:1.55}
+html body .rfq-refined .rfq-needs{padding-top:8px}
+html body .rfq-refined .rfq-detail-group{padding:16px 0 8px;border-top:1px solid #c4d0d9}
+html body .rfq-refined .rfq-detail-group legend{padding-top:12px;font-size:16px}
+html body .rfq-refined .form-message:empty{display:none}
+html body .rfq-refined .form-message:not(:empty){margin:0;padding:12px 14px;background:#edf2f6;color:#243e52}
+html body .rfq-refined .v3p-rfq-details{grid-column:1/-1;width:auto;margin:4px 0 0;border-top:1px solid #bdc9d2;padding-top:4px;background:transparent}
+html body .rfq-refined summary{min-height:44px;padding:12px 0;color:#14304a;font-weight:600;cursor:pointer}
+html body .rfq-refined .v3p-rfq-grid{padding:12px 0;gap:16px}
+html body .rfq-refined input[type=file]{padding:9px;font-size:14px!important}
+html body .rfq-refined input[type=file]::file-selector-button{padding:6px 10px;margin-right:10px;border:1px solid #8293a1;border-radius:2px;background:#eef2f6;color:#14304a;cursor:pointer;font:inherit}
+html body .quote-panel .rfq-refined{padding:0;border:0;box-shadow:none;background:transparent}
+html body .quote-panel:has(.rfq-refined)>p{display:none}
+html body .quote-panel:has(.rfq-refined)>h2{margin:0 0 12px;font-size:28px}
+@media(max-width:760px){html body .rfq-refined fieldset{grid-template-columns:minmax(0,1fr)}}
+
+html body .counter-value{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+html body .rfq-refined .rfq-character-count{display:block;margin-top:6px;color:#4d6274;font-size:12px;font-weight:400}
+html body .rfq-refined .rfq-file-status{margin:6px 0 0;font-size:13px;font-weight:400;overflow-wrap:anywhere;color:#33485a}
+html body .rfq-refined .rfq-file-status:empty{display:none}
+html body .rfq-refined .rfq-file-status.is-error{color:#a12121}
+html body .rfq-refined .rfq-draft{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;font-size:13px}
+html body .rfq-refined .rfq-draft label{display:flex;align-items:center;gap:8px;min-height:44px;font-weight:400}
+html body .rfq-refined .rfq-draft input[type=checkbox]{width:20px;min-height:20px!important;height:20px;margin:0;accent-color:var(--tr-accent)}
+html body .rfq-refined .rfq-draft small{flex-basis:100%;color:#4d6274;line-height:1.5}
+html body .rfq-refined .rfq-draft-clear{min-height:44px;padding:8px 0;border:0;background:transparent;color:#17577e;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+html body .rfq-refined .rfq-draft-clear[hidden]{display:none}
+html body .rfq-refined input,html body .rfq-refined textarea{caret-color:var(--tr-accent);color:#243e52}
+html body .quote-panel .modal-close{color:#14304a;background:#fff}
+html body .rfq-refined .rfq-required{color:#a12121;font-size:18px;font-weight:700;line-height:1}
+html body .quote-form .rfq-field-error{display:block;margin-top:6px;color:#a12121;font-size:13px;font-weight:400;line-height:1.5}
+html body .quote-form .rfq-field-error:empty{display:none}
+html body .quote-form [aria-invalid=true]{border-color:#a12121!important}
+html body .rfq-refined .rfq-native-file{position:absolute;width:1px!important;height:1px!important;min-height:0!important;padding:0!important;margin:0!important;opacity:0;clip-path:inset(50%);pointer-events:none}
+html body .rfq-refined .rfq-upload-control{display:flex;align-items:center;gap:12px;padding:8px;border:1px solid var(--tr-rule);margin-top:6px;min-width:0}
+html body .rfq-refined .rfq-upload-control span{min-width:0;overflow-wrap:anywhere;color:#33485a;font-size:14px;font-weight:400}
+html body .rfq-refined .rfq-upload-button{flex-shrink:0;min-height:44px;padding:8px 12px;border:1px solid #8293a1;border-radius:2px;background:#eef2f6;color:#14304a;font:inherit;cursor:pointer}
+
 /* ---------- responsive header ---------- */
 @media (max-width:1100px){
   html body .site-header{flex-wrap:wrap;gap:12px;min-height:64px;padding:10px 20px!important}

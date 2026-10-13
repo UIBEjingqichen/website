@@ -320,3 +320,9 @@ a.pg-shot:hover img{transform:scale(1.03)}
 .pg-kv--contact a:hover{color:#7cc4ff}
 .pg-direct .pd-note{color:#8fa3b3!important}
 @media (max-width:560px){.pg-direct{padding:20px}.pg-kv--contact div{grid-template-columns:1fr}}
+/* Report navigation and recovery states. */
+.report-empty{margin:24px 0;padding:24px;background:#eef2f6;color:#243e52}
+.report-empty[hidden]{display:none}
+.report-empty p{margin:0 0 12px;max-width:65ch}
+.evidence-card[id^="report-"]{scroll-margin-top:160px}
+.evidence-card.report-target{outline:2px solid #176bb0;outline-offset:4px}

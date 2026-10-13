@@ -336,6 +336,7 @@ function setupProjectFilter(panel) {
 all("[data-project-filter]").forEach(setupProjectFilter);
 
 function setupDocumentFilter(panel) {
+  if (panel.hasAttribute('data-report-navigation')) return;
   const cards = all("[data-evidence-card]");
   const controls = {
     product: bySelector("[data-document-product]", panel),
