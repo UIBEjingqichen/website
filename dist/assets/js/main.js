@@ -49,21 +49,72 @@ menuButton?.addEventListener("click", () => {
 
 const quoteModal = bySelector("[data-quote-modal]");
 let lastFocused = null;
+let activeModal = null;
+const modalBackground = new Map();
+const modalFocusables = (modal) => all('a[href],button,input,select,textarea,summary,[tabindex]', modal)
+  .filter((el) => !el.disabled && el.tabIndex >= 0 && !el.closest('[inert]') && el.getClientRects().length);
 function setModalState(modal, open) {
   if (!modal) return;
+  if (open && activeModal === modal) return;
+  if (!open && activeModal !== modal) return;
+  const opener = document.activeElement;
+  if (open && activeModal) setModalState(activeModal, false);
   modal.classList.toggle("open", open);
   modal.setAttribute("aria-hidden", String(!open));
   body.classList.toggle("modal-open", open);
   if (open) {
-    lastFocused = document.activeElement;
-    bySelector("input,button,a,select,textarea", modal)?.focus({ preventScroll: true });
+    activeModal = modal;
+    lastFocused = opener;
+    let root = modal;
+    while (root.parentElement && root.parentElement !== body) root = root.parentElement;
+    [...body.children].filter((el) => el !== root).forEach((el) => {
+      modalBackground.set(el, el.inert);
+      el.inert = true;
+    });
+    const target = modalFocusables(modal)[0] || modal;
+    if (target === modal) modal.tabIndex = -1;
+    target.focus({ preventScroll: true });
   } else {
+    activeModal = null;
+    modalBackground.forEach((inert, el) => { el.inert = inert; });
+    modalBackground.clear();
     lastFocused?.focus?.();
   }
+}
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Tab' || !activeModal) return;
+  const items = modalFocusables(activeModal);
+  const first = items[0], last = items[items.length - 1];
+  if (!first) { event.preventDefault(); activeModal.focus(); return; }
+  if (!activeModal.contains(document.activeElement) || (event.shiftKey && document.activeElement === first) || (!event.shiftKey && document.activeElement === last)) {
+    event.preventDefault();
+    (event.shiftKey ? last : first).focus();
+  }
+});
+document.addEventListener('focusin', (event) => {
+  if (activeModal && !activeModal.contains(event.target)) (modalFocusables(activeModal)[0] || activeModal).focus();
+});
+
+function prefillProductInquiry(form) {
+  if (!location.pathname.includes('/products/') || body.classList.contains('v9-model-page')) return;
+  const title = bySelector('main h1')?.textContent.trim();
+  if (!title) return;
+  const model = bySelector('main .pd-model')?.textContent.trim();
+  const field = (name) => form.elements.namedItem(name);
+  if (field('model') && !field('model').value) field('model').value = [title, model].filter(Boolean).join(' · ');
+  const category = bySelector('main .pd-crumb')?.textContent.toLowerCase() || '';
+  const family = category.includes('distribution') ? 'Distribution Transformers' : category.includes('substation') ? 'Prefabricated Substations' : category.includes('power transformer') ? 'Power Transformers' : '';
+  if (family && field('product') && !field('product').value) field('product').value = family;
+  if (field('sourcePage')) field('sourcePage').value = location.href;
+  const range = all('main .pd-facts > div').map((item) => `${item.querySelector('dt')?.textContent.trim()}: ${[...item.querySelectorAll('dd strong,dd span')].map((el) => el.textContent.trim()).join(' ')}`).join('; ');
+  let note = form.querySelector('[data-product-context]');
+  if (!note) { note = document.createElement('p'); note.className = 'quote-context full'; note.dataset.productContext = ''; form.prepend(note); }
+  note.textContent = `${title}${range ? ` — Available range: ${range}` : ''}. Please enter your required capacity and voltage below.`;
 }
 all("[data-quote-open]").forEach((button) => button.addEventListener("click", () => {
   const form = quoteModal?.querySelector(".quote-form");
   if (form) {
+    prefillProductInquiry(form);
     let context = form.querySelector('[name="requestContext"]');
     if (!context) {
       context = document.createElement("input");
@@ -76,25 +127,6 @@ all("[data-quote-open]").forEach((button) => button.addEventListener("click", ()
   setModalState(quoteModal, true);
 }));
 all("[data-quote-close]", quoteModal || document).forEach((button) => button.addEventListener("click", () => setModalState(quoteModal, false)));
-
-all(".quote-form").forEach((form) => form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const message = bySelector(".form-message", form);
-  const data = new FormData(form);
-  const lines = [...data.entries()]
-    .filter(([name, value]) => name !== "file" && String(value).trim())
-    .map(([name, value]) => `${name}: ${String(value).trim()}`);
-  const file = form.querySelector('input[type="file"]')?.files?.[0];
-  const subject = `Tianyu Electric inquiry - ${String(data.get("requestContext") || data.get("product") || "Project requirements")}`;
-  const body = `Please review the following inquiry.\n\n${lines.join("\n")}\n\n${file ? `I will attach the selected file manually in my email application: ${file.name}` : ""}`;
-  const emailUrl = `mailto:tianyuelectric@yeah.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  if (emailUrl.length > 7000) {
-    if (message) message.textContent = "The inquiry is too long for an email link. Please shorten the notes or email tianyuelectric@yeah.net directly.";
-    return;
-  }
-  if (message) message.textContent = `Your email application is opening. Please attach any selected file there and press Send. This website has not sent your inquiry automatically. If no application opens, email tianyuelectric@yeah.net directly.`;
-  window.location.href = emailUrl;
-}));
 
 function setupEvidenceCarousel(carousel) {
   const slides = all("[data-carousel-slide]", carousel);

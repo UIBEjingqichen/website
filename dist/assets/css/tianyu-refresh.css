@@ -16,7 +16,7 @@
   --tr-paper:#ffffff;
   --tr-mist:#f3f4f5;       /* neutral, tables only */
   --tr-red:#c8161e;        /* Tianyu logo red: logo mark only */
-  --tr-accent:#1f7fd0;     /* catalogue blue (English sample) */
+  --tr-accent:#176bb0;     /* white button labels: AA contrast */
   --tr-accent-dark:#1665aa;
   --tr-steel:#eef2f6;      /* light band */
   --tr-steel-2:#e3e9ef;
@@ -147,6 +147,13 @@ html body .footer-bottom a{display:inline;margin:0}
 /* ---------- quote modal ---------- */
 html body .quote-panel{border-radius:2px!important;border-top:3px solid var(--tr-accent)!important}
 html body .quote-form input,html body .quote-form select,html body .quote-form textarea{border-radius:2px!important;border-color:var(--tr-rule)!important;background:#fff!important}
+html body .quote-context{grid-column:1/-1;margin:0 0 8px;padding:12px;background:#edf3f6;color:#203b50;font-size:14px;line-height:1.5}
+html body .quote-form .full{grid-column:1/-1}
+html body .quote-form .inquiry-note{margin:0;font-size:13px;color:#33485a;line-height:1.5}
+html body .quote-form .inquiry-fallback{font-size:13px;text-decoration:underline;text-underline-offset:3px;color:#17577e}
+html body .quote-form button:disabled{opacity:.65;cursor:not-allowed;transform:none}
+html body .quote-form [data-inquiry-verification]{min-width:0}
+html body .quote-form .form-message{font-size:14px;color:#33485a;line-height:1.5;overflow-wrap:anywhere}
 
 /* ---------- responsive header ---------- */
 @media (max-width:1100px){

@@ -24,5 +24,6 @@ def rebase(match):
 
 
 source = (ROOT / "dist/index.html").read_text(encoding="utf-8")
-(ROOT / "index.html").write_text(URL_ATTRIBUTE.sub(rebase, source), encoding="utf-8")
+newline = "\r\n" if b"\r\n" in (ROOT / "index.html").read_bytes() else "\n"
+(ROOT / "index.html").write_text(URL_ATTRIBUTE.sub(rebase, source), encoding="utf-8", newline=newline)
 print("Published full homepage at index.html with root-relative file locations.")
