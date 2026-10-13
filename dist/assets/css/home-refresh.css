@@ -8,6 +8,7 @@ html,body{overflow-x:clip}
 .tr-home{--pad:clamp(64px,8vw,112px)}
 .tr-shell{width:min(var(--tr-shell,1200px),calc(100% - 48px));margin-inline:auto}
 .tr-home h2{font-size:clamp(28px,2.8vw,40px);line-height:1.14;margin:0 0 20px}
+.tr-home .tr-section-summary{margin:12px 0 0}
 .tr-home p{font-size:16px;line-height:1.65;margin:0 0 14px;max-width:62ch}
 .tr-over{font-size:13px!important;font-weight:600;color:var(--tr-accent)!important;margin:0 0 12px!important}
 
