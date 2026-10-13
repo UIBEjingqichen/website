@@ -18,7 +18,8 @@ const json = (body, status = 200) => new Response(JSON.stringify(body), {
   status, headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' }
 });
 const hosts = (env) => (env.INQUIRY_HOSTNAMES || DEFAULT_HOSTS.join(',')).split(',').map(v => v.trim()).filter(Boolean);
-const configured = (env) => Boolean(env.RESEND_API_KEY && env.TURNSTILE_SECRET_KEY && env.TURNSTILE_SITE_KEY);
+const missingSettings = (env) => ['RESEND_API_KEY', 'TURNSTILE_SECRET_KEY', 'TURNSTILE_SITE_KEY'].filter(key => !env[key]);
+const configured = (env) => missingSettings(env).length === 0;
 
 async function boundedForm(request) {
   if (!request.headers.get('Content-Type')?.startsWith('multipart/form-data')) throw new Error('type');
@@ -42,7 +43,7 @@ async function boundedForm(request) {
 export async function onRequest({ request, env }) {
   const url = new URL(request.url);
   if (!hosts(env).includes(url.hostname)) return json({ error: 'This website is not enabled for inquiries.' }, 403);
-  if (request.method === 'GET') return json({ ready: configured(env), siteKey: configured(env) ? env.TURNSTILE_SITE_KEY : null, maxFileBytes: MAX_FILE });
+  if (request.method === 'GET') return json({ ready: configured(env), siteKey: configured(env) ? env.TURNSTILE_SITE_KEY : null, maxFileBytes: MAX_FILE, missingSettings: missingSettings(env) });
   if (request.method !== 'POST') return json({ error: 'Use the inquiry form to submit a request.' }, 405);
   if (request.headers.get('Origin') !== url.origin) return json({ error: 'Please submit from the Tianyu website.' }, 403);
   if (!configured(env)) return json({ error: 'Online inquiries are temporarily unavailable. Please email tianyuelectric@yeah.net.' }, 503);

@@ -24,9 +24,11 @@ function mockedDelivery({ verification = { success: true, hostname: 'www.tianyue
 }
 test('GET returns only public configuration; incomplete configuration is unavailable', async () => {
   const good = await onRequest({ request: new Request(`${origin}/api/contact`), env });
-  assert.deepEqual(await good.json(), { ready: true, siteKey: env.TURNSTILE_SITE_KEY, maxFileBytes: 8388608 });
+  assert.deepEqual(await good.json(), { ready: true, siteKey: env.TURNSTILE_SITE_KEY, maxFileBytes: 8388608, missingSettings: [] });
   const missing = await onRequest({ request: new Request(`${origin}/api/contact`), env: {} });
-  assert.equal((await missing.json()).ready, false);
+  const missingData = await missing.json();
+  assert.equal(missingData.ready, false);
+  assert.deepEqual(missingData.missingSettings, ['RESEND_API_KEY', 'TURNSTILE_SECRET_KEY', 'TURNSTILE_SITE_KEY']);
   assert.equal(good.headers.get('Cache-Control'), 'no-store');
 });
 test('sends all technical context, fixed recipient and reply-to, with real attachment bytes', async () => {
