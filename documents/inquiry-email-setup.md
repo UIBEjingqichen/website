@@ -30,7 +30,7 @@
 - Turnstile 在服务端验证有效性、用途和域名，不关闭验证来测试正式接口。
 - 没有把邮件 API Key、Turnstile Secret Key 写入前端，错误响应也不转发邮件服务的内部详情。
 - 全部技术字段会发送到指定收件人；附件文件名、扩展名和大小在服务器检查。运营者应按业务需要保存与处理询价资料。
-- 本次没有推送 GitHub、修改 Cloudflare/Resend 账户配置或发送真实测试邮件。
+- 上线前必须在正式生产环境确认配置与实际收信；本地自动测试使用模拟服务，不发送真实测试邮件。
 
 官方说明：
 - https://developers.cloudflare.com/pages/functions/get-started/
