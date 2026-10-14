@@ -1,7 +1,7 @@
 /* Product pages (v61): directory, family hubs and 24 detail pages share one layout.
    Tonal rhythm: deep navy hero -> cool steel content -> navy feature band -> navy CTA,
    joined by eased gradient fades rather than hard edges. */
-.pd{--ink:#0b1d2d;--navy:#14304a;--steel:#eef2f6;--steel2:#e3e9ef;--paper:#f6f8fa;--rule:#d5dde4;--mut:#66788a;--acc:var(--tr-accent,#1f7fd0);
+.pd{--ink:#0b1d2d;--navy:#14304a;--steel:#eef2f6;--steel2:#e3e9ef;--paper:#f6f8fa;--rule:#d5dde4;--mut:#4d6274;--acc:var(--tr-accent,#1f7fd0);
   --fade-top:linear-gradient(180deg,var(--paper) 0,#e3e8ed 26px,#b4c0ca 52px,#6f8294 80px,#2c4257 105px,var(--ink) 135px);
   background:var(--paper);color:#33485a}
 .pd-shell{width:min(1200px,calc(100% - 48px));margin-inline:auto}

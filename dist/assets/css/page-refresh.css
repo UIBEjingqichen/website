@@ -181,7 +181,7 @@ a.pg-shot:hover img{transform:scale(1.03)}
 .pg-contact-side h2{font-size:22px}
 .pg-form{padding:32px;background:#fff;border-radius:4px;box-shadow:0 1px 0 var(--rule),0 24px 50px rgba(11,29,45,.08)}
 .pg .quote-form{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
-.pg .quote-form label{display:flex;flex-direction:column;gap:7px;font-size:13px;font-weight:600;color:var(--navy)}
+.pg .quote-form label{display:block;font-size:13px;font-weight:600;color:var(--navy)}
 .pg .quote-form label.full,.pg .quote-form details,.pg .quote-form .btn,.pg .quote-form .form-message,.pg .quote-form .v3p-rfq-help{grid-column:1/-1}
 .pg .quote-form input,.pg .quote-form select,.pg .quote-form textarea{width:100%;min-height:46px;padding:10px 12px;border:1px solid var(--rule)!important;border-radius:2px!important;background:#fff;color:var(--navy);font:inherit;font-size:15px;font-weight:400}
 .pg .quote-form textarea{min-height:96px}

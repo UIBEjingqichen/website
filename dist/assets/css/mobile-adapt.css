@@ -74,6 +74,15 @@
  .pg .filter-panel{grid-template-columns:minmax(0,1fr);padding:16px}
  html body .quote-form,html body .quote-form .v3p-rfq-grid{grid-template-columns:minmax(0,1fr)!important}
  .quote-form label{min-width:0}
+ /* Contact is a task entry: keep the form close to its introduction. */
+ html body .pg-contact-page .pg-hero--compact{padding:24px 0;background:radial-gradient(90% 120% at 82% 20%,#1f4a6c 0%,#11304a 42%,var(--ink) 100%)}
+ html body .pg-contact-page .pg-hero-copy{display:block}
+ html body .pg-contact-page .pg-hero-copy .pd-lead{margin:16px 0 0!important;font-size:16px!important}
+ html body .pg-contact-page .contact-inquiry-link{margin-top:20px}
+ html body .pg-contact-page #inquiry{padding:24px 0}
+ html body .pg-contact-page #inquiry-form{scroll-margin-top:calc(var(--mobile-header-height,65px) + 16px)}
+ /* The mobile home caption sits on the dark photo scrim, not the pale desktop fade. */
+ html body .tr-hero-caption{color:#dbe4ea!important}
  .pd-actions{display:flex;flex-wrap:wrap;gap:12px}
  .pd-actions>*{min-height:46px;max-width:100%}
  .pd-photo-request .pd-plate{height:auto;min-height:220px}

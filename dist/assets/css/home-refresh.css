@@ -257,7 +257,7 @@ html body main.tr-home+.footer{border-top:0!important}
 .tr-build .tr-over{color:#7cc4ff!important}
 .tr-build-steps{list-style:none;margin:28px 0 4px;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:24px;border-top:1px solid rgba(255,255,255,.14)}
 .tr-build-steps a{position:relative;display:grid;grid-template-columns:30px 1fr;align-items:baseline;gap:8px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.08);color:#9fb3c2;text-decoration:none;font-size:14px;transition:color .25s}
-.tr-build-steps b{font-size:12px;font-weight:700;color:#5f7a8f;font-variant-numeric:tabular-nums;transition:color .25s}
+.tr-build-steps b{font-size:12px;font-weight:700;color:#a9b9c5;font-variant-numeric:tabular-nums;transition:color .25s}
 .tr-build-steps a::after{content:"";position:absolute;left:0;bottom:-1px;height:1px;width:100%;background:#7cc4ff;transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
 .tr-build-steps .is-done a{color:#c9d5de}
 .tr-build-steps .is-current a,.tr-build-steps a:hover,.tr-build-steps a:focus-visible{color:#fff}
