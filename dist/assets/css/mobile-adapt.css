@@ -1,6 +1,8 @@
 /* V61 touch layouts. Product content and desktop presentation stay shared. */
 .mobile-nav-section-toggle{display:none}
 .mobile-table-hint{display:none}
+/* Keep the full system diagram on desktop; phones go straight to equipment and evidence. */
+@media(max-width:767px){.tr-home .tr-grid[data-sld-stage]{display:none}}
 @media(max-width:1100px){
  html{scroll-padding-top:calc(var(--mobile-header-height,65px) + 64px)}
  html body{overflow-x:clip!important}
@@ -74,12 +76,7 @@
  .pg .filter-panel{grid-template-columns:minmax(0,1fr);padding:16px}
  html body .quote-form,html body .quote-form .v3p-rfq-grid{grid-template-columns:minmax(0,1fr)!important}
  .quote-form label{min-width:0}
- /* Contact is a task entry: keep the form close to its introduction. */
- html body .pg-contact-page .pg-hero--compact{padding:24px 0;background:radial-gradient(90% 120% at 82% 20%,#1f4a6c 0%,#11304a 42%,var(--ink) 100%)}
- html body .pg-contact-page .pg-hero-copy{display:block}
- html body .pg-contact-page .pg-hero-copy .pd-lead{margin:16px 0 0!important;font-size:16px!important}
- html body .pg-contact-page .contact-inquiry-link{margin-top:20px}
- html body .pg-contact-page #inquiry{padding:24px 0}
+ /* Leave room for the sticky header when jumping to the contact form. */
  html body .pg-contact-page #inquiry-form{scroll-margin-top:calc(var(--mobile-header-height,65px) + 16px)}
  /* The mobile home caption sits on the dark photo scrim, not the pale desktop fade. */
  html body .tr-hero-caption{color:#dbe4ea!important}
@@ -111,3 +108,19 @@
  .as-hint{display:none}
 }
 @media(prefers-reduced-motion:reduce){.mobile-nav-section-toggle svg{transition:none}}
+
+/* Phone homepage: short transitions at the assembly and final inquiry only.
+   Each fade ends before content starts; desktop fade tokens remain untouched. */
+@media(max-width:767px){
+ .tr-home{--pad:56px}
+ .tr-home .tr-hero::after{background:linear-gradient(180deg,rgba(9,24,38,.66) 0%,rgba(9,24,38,.8) 60%,rgba(9,24,38,.94) 100%)}
+ .tr-home .tr-hero-caption{color:#dbe4ea!important}
+ .tr-home .tr-intro,.tr-home .tr-products,.tr-home .tr-evidence,.tr-home .tr-map,.tr-home .tr-refs{background:#f5f7f9}
+ .tr-home .tr-map{padding:var(--pad) 0}
+ .tr-home .tr-split{min-height:0;padding:0;background:var(--tr-ink)}
+ .tr-home .tr-split--rev{background:#f5f7f9}
+ .tr-home .tr-split .tr-split-img{min-height:clamp(220px,68vw,300px);-webkit-mask-image:none;mask-image:none}
+ .tr-home .tr-split .tr-split-copy{padding:48px 24px}
+ .tr-home .tr-build{padding:112px 0;background:linear-gradient(180deg,#f5f7f9 0,#c9d7e4 16px,#62819f 32px,#0d2133 64px,#0d2133 calc(100% - 64px),#62819f calc(100% - 32px),#c9d7e4 calc(100% - 16px),#f5f7f9 100%)}
+ .tr-home .tr-cta{padding:112px 0 56px!important;background:linear-gradient(180deg,#f5f7f9 0,#c9d7e4 16px,#62819f 32px,#0d2133 64px,#0d2133 100%)!important}
+}

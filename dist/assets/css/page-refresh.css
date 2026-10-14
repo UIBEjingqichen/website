@@ -326,3 +326,49 @@ a.pg-shot:hover img{transform:scale(1.03)}
 .report-empty p{margin:0 0 12px;max-width:65ch}
 .evidence-card[id^="report-"]{scroll-margin-top:160px}
 .evidence-card.report-target{outline:2px solid #176bb0;outline-offset:4px}
+
+/* Inquiry: a calm writing surface with clear contact/project groups. */
+html body .pg-contact-page .pg-hero--compact{padding:48px 0 56px;background:radial-gradient(90% 120% at 82% 20%,#1f4a6c 0%,#11304a 42%,var(--ink) 100%)}
+html body .pg-contact-page .pg-hero-copy{display:block}
+html body .pg-contact-page .pg-hero-copy h1{max-width:26ch;text-wrap:balance}
+html body .pg-contact-page .pg-hero-copy .pd-lead{max-width:56ch;margin:16px 0 0!important}
+html body .pg-contact-page .contact-inquiry-link{margin-top:24px}
+html body .pg-contact-page #inquiry{padding:48px 0 64px}
+html body .pg-contact-page .pg-form{padding:32px;border:1px solid #c4d0d9;border-radius:4px;box-shadow:none}
+html body .pg-contact-page .rfq-refined{gap:20px}
+html body .pg-contact-page .rfq-refined label{font-size:14px;font-weight:600}
+html body .pg-contact-page .rfq-refined legend{font-size:18px;margin-bottom:14px}
+html body .pg-contact-page .rfq-needs{padding-top:20px;border-top:1px solid #d5dde4}
+html body .pg-contact-page .rfq-refined input:not([type=checkbox]):not([type=hidden]),
+html body .pg-contact-page .rfq-refined select,
+html body .pg-contact-page .rfq-refined textarea{border-color:#8293a1!important}
+html body .pg-contact-page .rfq-refined textarea{min-height:116px;resize:vertical}
+html body .pg-contact-page .rfq-upload-control{border-color:#8293a1}
+html body .pg-contact-page .rfq-refined .rfq-draft label{font-weight:400}
+html body .pg-contact-page .pg-direct{box-shadow:none;border-radius:4px}
+html body .pg-contact-page .pg-direct .pd-note,
+html body .pg-contact-page .pg-kv--contact dt{color:#c9d5de!important}
+html body .pg-contact-page .pg-contact-side{padding-top:8px}
+html body .pg-contact-page .quote-form .btn{min-height:48px}
+@media(max-width:600px){
+ html body .pg-contact-page .pg-hero--compact{padding:28px 0}
+ html body .pg-contact-page .pg-hero-copy .pd-lead{font-size:16px!important}
+ html body .pg-contact-page .contact-inquiry-link{margin-top:20px}
+ html body .pg-contact-page #inquiry{padding:24px 0 40px}
+ html body .pg-contact-page .pg-form{padding:20px}
+ html body .pg-contact-page .quote-form .btn{justify-self:stretch;width:100%}
+ html body .pg-contact-page .pg-contact-side{padding-top:0}
+ /* Find a report is the mobile document task, so keep search above the fold. */
+ html body .pg-certificates-page .pg-hero--img{padding:28px 0;background:var(--ink)}
+ html body .pg-certificates-page .pg-hero--img::after{background:linear-gradient(90deg,rgba(11,29,45,.96),rgba(11,29,45,.87))}
+ html body .pg-certificates-page .pg-hero-copy{display:block}
+ html body .pg-certificates-page .pd-kicker{display:none}
+ html body .pg-certificates-page .pd-lead{font-size:16px!important;margin:16px 0 20px!important}
+ html body .pg-certificates-page .pd-facts{margin:0 0 20px;gap:16px}
+ html body .pg-certificates-page .pd-facts>div{margin:0;padding:12px 0 0;border-right:0}
+ html body .pg-certificates-page .pd-facts strong{font-size:24px}
+ html body .pg-certificates-page .pd-actions{gap:10px}
+ html body .pg-certificates-page .pd-actions a{padding:10px 12px;font-size:14px}
+ html body .pg-certificates-page #certificates{padding:24px 0 40px}
+ html body .pg-certificates-page .pg-head{margin-bottom:20px}
+}
