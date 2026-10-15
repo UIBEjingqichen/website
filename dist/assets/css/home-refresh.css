@@ -37,13 +37,22 @@ html,body{overflow-x:clip}
 @keyframes tr-settle{from{transform:scale(1.06)}to{transform:scale(1)}}
 
 /* ---------- intro ---------- */
-.tr-intro{padding:var(--pad) 0}
+.tr-intro{padding:32px 0 12px}
 .tr-intro-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(40px,6vw,96px);align-items:start}
 .tr-facts{margin:0;display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--tr-navy)}
 .tr-facts>div{padding:18px 0 16px;border-bottom:1px solid var(--tr-rule)}
 .tr-facts>div:nth-child(odd){padding-right:20px}
 .tr-facts dt{font-size:13px;color:var(--tr-muted);margin:0 0 6px}
 .tr-facts dd{margin:0;font-size:clamp(22px,2vw,28px);font-weight:600;color:var(--tr-navy);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+
+.tr-home .tr-intro h2{font-size:clamp(26px,2.4vw,32px);margin-bottom:12px}
+.tr-home .tr-intro p{font-size:15px;line-height:1.55;margin-bottom:8px}
+.tr-intro .tr-link{font-size:14px;margin-top:4px}
+.tr-intro .tr-facts>div{padding-top:8px;padding-bottom:8px}
+.tr-intro .tr-facts dt{font-size:12px;margin-bottom:4px}
+.tr-intro .tr-facts dd{font-size:clamp(20px,1.7vw,24px)}
+.tr-intro + .tr-products{padding-top:28px}
+@media (max-width:1000px){.tr-intro .tr-intro-grid{gap:20px}}
 
 /* ---------- single-line diagram ---------- */
 .tr-grid{background:var(--tr-ink);color:#c9d5de;padding:var(--pad) 0 calc(var(--pad) - 16px)}
