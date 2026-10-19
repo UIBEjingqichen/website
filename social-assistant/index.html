@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tianyu Social Assistant | Tianyu Electric</title>
+  <meta name="description" content="Tianyu Electric's personal Windows tool for local industrial video planning, human-reviewed drafts and authorized YouTube uploads.">
+  <link rel="canonical" href="https://tianyuelectric.com/social-assistant/">
+  <link rel="icon" href="/public/favicon.ico">
+  <link rel="stylesheet" href="/social-assistant/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="app-header">
+    <div class="app-header-inner">
+      <a class="brand" href="/" aria-label="Tianyu Electric home">
+        <span class="brand-mark"><img class="brand-logo" src="/public/tianyu-brandmark-550.png" alt="" width="34" height="34"></span>
+        <span><strong>Tianyu Electric</strong><small>Local publishing tools</small></span>
+      </a>
+      <a class="header-link" href="/social-assistant/privacy/">Privacy Policy</a>
+    </div>
+  </header>
+  <main id="main" class="app-main">
+    <div class="intro">
+      <h1>Tianyu Social Assistant</h1>
+      <p class="lead">Prepare industrial video posts locally.<br>Review every draft before uploading.</p>
+      <p>Developed and operated by Tianyu Electric, Tianyu Social Assistant is a Windows application for its own authorized operator. It helps turn a local industrial video library into reviewed social media drafts.</p>
+      <p>The application runs on the operator's computer. This website provides application information and privacy disclosures; it does not offer public account registration or an online software service.</p>
+      <div class="app-actions">
+        <a class="btn btn-primary" href="/social-assistant/privacy/">Read the Privacy Policy</a>
+        <a href="mailto:tianyuelectric@yeah.net">Contact the developer</a>
+      </div>
+    </div>
+    <div class="reading-layout">
+      <nav class="contents" aria-label="On this page">
+        <h2>On this page</h2>
+        <ul>
+          <li><a href="#workflow">How it works</a></li>
+          <li><a href="#youtube">YouTube access</a></li>
+          <li><a href="#control">Your control</a></li>
+          <li><a href="#contact">Developer contact</a></li>
+        </ul>
+      </nav>
+      <div class="prose">
+        <section id="workflow">
+          <h2>From local video to reviewed draft</h2>
+          <ol>
+            <li><strong>Analyze selected material.</strong> The application indexes the local video library and uses video metadata, existing descriptions and a small set of sampled frames to help plan content.</li>
+            <li><strong>Prepare platform-specific copy.</strong> AI assistance creates English drafts for Facebook, LinkedIn and YouTube. Videos, drafts, revisions and review decisions remain in the local review workspace.</li>
+            <li><strong>Review and edit.</strong> The operator previews the full video, checks the proposed content, edits the copy and approves each platform separately.</li>
+            <li><strong>Confirm an upload.</strong> After approval, the operator separately confirms the target YouTube channel and visibility before a video can be uploaded through the YouTube API.</li>
+          </ol>
+        </section>
+        <section id="youtube">
+          <h2>Google authorization for YouTube</h2>
+          <p>The application uses Google OAuth and YouTube API Services only after the operator grants access to their Google account. Google handles sign-in; the application does not ask for or store a Google password.</p>
+          <ul>
+            <li><code>youtube.upload</code> allows an explicitly confirmed video upload with its title, description, tags and selected visibility.</li>
+            <li><code>youtube.readonly</code> identifies the connected channel and reads the status needed to verify uploads and processing.</li>
+          </ul>
+          <p>By using the application's YouTube features, you agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Details of data access, external AI processing, local storage and authorization removal are explained in the <a href="/social-assistant/privacy/">Privacy Policy</a>.</p>
+        </section>
+        <section id="control">
+          <h2>Approval and uploading are separate</h2>
+          <p>Saving a draft, approving copy or running the weekly planning task does not upload or publish content. A separate confirmation is required for the actual YouTube upload, including private uploads.</p>
+          <div class="review-note"><p><strong>Human review remains essential.</strong> Sampled frames cannot establish everything in a video or its audio. The operator checks technical claims, third-party brands, personal information and media rights before confirming an upload.</p></div>
+          <p>Google authorization can be revoked at any time through <a href="https://myaccount.google.com/connections">Google Account connections</a>. Removing local data does not remove videos already stored on YouTube.</p>
+        </section>
+        <section id="contact">
+          <h2>Developer contact</h2>
+          <p>Tianyu Electric<br><a href="mailto:tianyuelectric@yeah.net">tianyuelectric@yeah.net</a></p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="app-footer"><div class="app-footer-inner"><p>© 2026 Tianyu Electric</p><nav aria-label="Application links"><a href="/social-assistant/privacy/">Privacy Policy</a><a href="https://www.youtube.com/t/terms">YouTube Terms</a></nav></div></footer>
+</body>
+</html>
