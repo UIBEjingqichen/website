@@ -44,3 +44,5 @@
 /quality.html
 /resources.html
 /transformer-assembly.html
+/services.html
+/projects/malaysia-esc-steel-132kv.html

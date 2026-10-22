@@ -15,7 +15,6 @@
     "previewImages": [
       "03-documents/test-reports/oil-distribution-1600kva-tuv-cover.webp"
     ],
-    "pdf": "evidence/pdfs/oil-distribution-1600kva-tuv.pdf",
     "featured": true,
     "tags": [
       "TÜV",
@@ -44,7 +43,6 @@
       "03-documents/test-reports/oil-distribution-1600kva-type-test-parameters.webp",
       "evidence/oil-distribution-1600kva-type-test-product-photo.webp"
     ],
-    "pdf": "evidence/pdfs/oil-distribution-1600kva-type-test.pdf",
     "featured": true,
     "tags": [
       "TYPE TEST",
@@ -72,7 +70,6 @@
       "03-documents/test-reports/oil-distribution-1600kva-efficiency-parameters.webp",
       "evidence/oil-distribution-1600kva-efficiency-product-photo.webp"
     ],
-    "pdf": "evidence/pdfs/oil-distribution-1600kva-efficiency.pdf",
     "featured": true,
     "tags": [
       "EFFICIENCY",
@@ -96,7 +93,6 @@
     "previewImages": [
       "03-documents/test-reports/oil-distribution-1600kva-ce-cover.webp"
     ],
-    "pdf": "evidence/pdfs/oil-distribution-1600kva-ce.pdf",
     "featured": true,
     "tags": [
       "CE",
@@ -120,7 +116,6 @@
     "previewImages": [
       "03-documents/test-reports/oil-distribution-630kva-tuv-cover.webp"
     ],
-    "pdf": "evidence/pdfs/oil-distribution-630kva-tuv.pdf",
     "featured": true,
     "tags": [
       "TÜV",
@@ -149,7 +144,6 @@
       "03-documents/test-reports/oil-distribution-630kva-type-test-parameters.webp",
       "evidence/oil-distribution-630kva-type-test-product-photo.webp"
     ],
-    "pdf": "evidence/pdfs/oil-distribution-630kva-type-test.pdf",
     "featured": true,
     "tags": [
       "TYPE TEST",
@@ -177,7 +171,6 @@
       "03-documents/test-reports/oil-distribution-630kva-efficiency-parameters.webp",
       "evidence/oil-distribution-630kva-efficiency-product-photo.webp"
     ],
-    "pdf": "evidence/pdfs/oil-distribution-630kva-efficiency.pdf",
     "featured": true,
     "tags": [
       "EFFICIENCY",
@@ -201,7 +194,6 @@
     "previewImages": [
       "03-documents/test-reports/oil-distribution-630kva-ce-cover.webp"
     ],
-    "pdf": "evidence/pdfs/oil-distribution-630kva-ce.pdf",
     "featured": true,
     "tags": [
       "CE",
@@ -228,7 +220,6 @@
       "03-documents/test-reports/power-transformer-50mva-110kv-parameters.webp",
       "evidence/power-transformer-50mva-110kv-product-photo.webp"
     ],
-    "pdf": "evidence/pdfs/power-transformer-50mva-110kv.pdf",
     "featured": true,
     "tags": [
       "TEST REPORT",
@@ -255,7 +246,6 @@
       "03-documents/test-reports/power-transformer-150mva-132kv-parameters.webp",
       "evidence/power-transformer-150mva-132kv-product-photo.webp"
     ],
-    "pdf": "evidence/pdfs/power-transformer-150mva-132kv.pdf",
     "featured": true,
     "tags": [
       "TEST REPORT",
@@ -282,7 +272,6 @@
       "03-documents/test-reports/power-transformer-240mva-220kv-ssz20-parameters.webp",
       "evidence/power-transformer-240mva-220kv-ssz20-product-photo.webp"
     ],
-    "pdf": "evidence/pdfs/power-transformer-240mva-220kv-ssz20.pdf",
     "featured": true,
     "tags": [
       "TYPE TEST",
@@ -309,7 +298,6 @@
       "03-documents/test-reports/power-transformer-240mva-220kv-ssz22-parameters.webp",
       "evidence/power-transformer-240mva-220kv-ssz22-product-photo.webp"
     ],
-    "pdf": "evidence/pdfs/power-transformer-240mva-220kv-ssz22.pdf",
     "featured": true,
     "tags": [
       "TEST REPORT",
@@ -336,7 +324,6 @@
       "03-documents/test-reports/dry-type-scb18-1000kva-10kv-parameters.webp",
       "evidence/dry-type-scb18-1000kva-10kv-product-photo.webp"
     ],
-    "pdf": "evidence/pdfs/dry-type-scb18-1000kva-10kv.pdf",
     "featured": true,
     "tags": [
       "TYPE TEST",
@@ -363,7 +350,6 @@
       "03-documents/test-reports/dry-type-scb18-2500kva-10kv-parameters.webp",
       "evidence/dry-type-scb18-2500kva-10kv-product-photo.webp"
     ],
-    "pdf": "evidence/pdfs/dry-type-scb18-2500kva-10kv.pdf",
     "featured": true,
     "tags": [
       "TYPE TEST",
@@ -390,7 +376,6 @@
       "03-documents/test-reports/european-substation-6300kva-35kv-parameters.webp",
       "evidence/european-substation-6300kva-35kv-product-photo.webp"
     ],
-    "pdf": "evidence/pdfs/european-substation-6300kva-35kv.pdf",
     "featured": true,
     "tags": [
       "TYPE TEST",
@@ -417,7 +402,6 @@
       "03-documents/test-reports/european-substation-10000kva-35kv-parameters.webp",
       "evidence/european-substation-10000kva-35kv-product-photo.webp"
     ],
-    "pdf": "evidence/pdfs/european-substation-10000kva-35kv.pdf",
     "featured": true,
     "tags": [
       "TYPE TEST",
@@ -444,7 +428,6 @@
       "03-documents/test-reports/european-substation-12500kva-35kv-parameters.webp",
       "evidence/european-substation-12500kva-35kv-product-photo.webp"
     ],
-    "pdf": "evidence/pdfs/european-substation-12500kva-35kv.pdf",
     "featured": true,
     "tags": [
       "TYPE TEST",
@@ -471,7 +454,6 @@
       "03-documents/test-reports/china-substation-10000kva-35kv-parameters.webp",
       "evidence/china-substation-10000kva-35kv-product-photo.webp"
     ],
-    "pdf": "evidence/pdfs/china-substation-10000kva-35kv.pdf",
     "featured": true,
     "tags": [
       "TYPE TEST",
@@ -498,7 +480,6 @@
       "03-documents/test-reports/china-substation-12500kva-35kv-parameters.webp",
       "evidence/china-substation-12500kva-35kv-product-photo.webp"
     ],
-    "pdf": "evidence/pdfs/china-substation-12500kva-35kv.pdf",
     "featured": true,
     "tags": [
       "TYPE TEST",
@@ -520,7 +501,6 @@
     "ratedVoltage": "35 / 0.8 kV",
     "standards": [],
     "previewImages": [],
-    "pdf": null,
     "featured": false,
     "tags": [
       "ASSET PENDING"

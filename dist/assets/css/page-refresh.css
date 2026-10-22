@@ -6,6 +6,21 @@
    Only adds what product pages do not already provide.
    ========================================================================== */
 
+/* Evidence displays and project content: retain the existing engineering layout. */
+.pg-quality #evidence .pd-rows>a{display:flex;justify-content:space-between;gap:24px;padding:22px 0;border-bottom:1px solid var(--rule);color:var(--navy);text-decoration:none}
+.pg-quality #evidence .pd-rows>a span{color:var(--mut);font-size:14px}
+.pg-quality #evidence .pd-rows>a:hover strong{color:var(--acc)}
+.qualification-content .pd-feat-col h3{color:var(--navy)!important}
+.qualification-content .pd-table--summary{min-width:0;width:100%;table-layout:fixed}
+.qualification-content .pd-table--summary th,.qualification-content .pd-table--summary td{white-space:normal;overflow-wrap:anywhere;vertical-align:top}
+.qualification-content .pd-table--summary th:first-child{width:40%;position:static}
+.pd .pd-config-link{white-space:normal;color:var(--navy);display:inline-block;margin-bottom:24px}
+.pg-resources #drawings .pg-gallery{grid-auto-rows:auto;align-items:start}
+.pg-resources #drawings .pg-shot{background:#fff;border:1px solid var(--rule);border-radius:0;min-height:0}
+.pg-resources #drawings .pg-shot img{position:static;height:auto;object-fit:contain}
+.pg-resources #drawings .pg-shot figcaption{position:static;background:#fff;color:var(--navy);padding:16px 18px;border-top:1px solid var(--rule)}
+@media(max-width:560px){.pg-quality #evidence .pd-rows>a{flex-direction:column;gap:8px}}
+
 .pg [hidden]{display:none!important}
 .pg{--sky:#7cc4ff}
 .pg p{max-width:68ch}

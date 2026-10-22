@@ -241,22 +241,22 @@
   },
   {
     "id": "high-voltage-power-transformer-project-04",
-    "name": "Methanol Dayyer Mobile Substation Export Project",
+    "name": "UAE Mobile Substation Export Project",
     "country": "United Arab Emirates",
     "industry": "Chemical",
     "application": "Infrastructure",
     "productIds": [
       "high-voltage-power-transformer"
     ],
-    "capacity": null,
-    "image": null,
+    "capacity": "35 MW application",
+    "image": "01-pages/projects/qualification-20261022/uae-factory-acceptance.webp",
     "featured": false,
     "contentState": "partial",
     "publicationState": "published",
     "mediaKind": "none",
     "mediaCaption": null,
     "deliveryYear": null,
-    "deliveryStatus": null,
+    "deliveryStatus": "Factory acceptance",
     "customerDisplayName": null,
     "challenge": null,
     "supplyScope": null,
@@ -697,14 +697,14 @@
   },
   {
     "id": "oil-immersed-prefabricated-substation-project-05",
-    "name": "CMOC Mining Area 500 MW Solar Project",
+    "name": "DRC Mining Energy Project — 60 × 9 MVA Substations",
     "country": "Democratic Republic of the Congo",
     "industry": "Mining / Solar",
     "application": "Renewable Energy",
     "productIds": [
       "oil-immersed-prefabricated-substation"
     ],
-    "capacity": "500 MW",
+    "capacity": "60 × 9 MVA",
     "image": null,
     "featured": false,
     "contentState": "partial",
@@ -715,7 +715,7 @@
     "deliveryStatus": null,
     "customerDisplayName": null,
     "challenge": null,
-    "supplyScope": null,
+    "supplyScope": "18 units for K Mine and 42 units for T Mine",
     "result": null,
     "relatedDocuments": []
   },
@@ -886,5 +886,18 @@
     "supplyScope": null,
     "result": null,
     "relatedDocuments": []
+  },
+  {
+    "id": "malaysia-esc-steel-132kv",
+    "name": "ESC Steel 132 kV Substation",
+    "country": "Malaysia",
+    "industry": "Steel",
+    "application": "Industrial",
+    "productIds": [
+      "high-voltage-power-transformer"
+    ],
+    "capacity": "132 kV",
+    "image": "01-pages/projects/qualification-20261022/malaysia-esc-132kv.webp",
+    "publicationState": "published"
   }
 ]
