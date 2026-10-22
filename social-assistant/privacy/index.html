@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | Tianyu Social Assistant</title>
+  <meta name="description" content="How Tianyu Social Assistant uses Google authorization, protects local tokens, processes video drafts and gives its operator control of data.">
+  <link rel="canonical" href="https://tianyuelectric.com/social-assistant/privacy/">
+  <link rel="icon" href="/public/favicon.ico">
+  <link rel="stylesheet" href="/social-assistant/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="app-header"><div class="app-header-inner">
+    <a class="brand" href="/" aria-label="Tianyu Electric home"><span class="brand-mark"><img class="brand-logo" src="/public/tianyu-brandmark-550.png" alt="" width="34" height="34"></span><span><strong>Tianyu Electric</strong><small>Local publishing tools</small></span></a>
+    <a class="header-link" href="/social-assistant/">About the application</a>
+  </div></header>
+  <main id="main" class="app-main">
+    <div class="intro">
+      <h1>Privacy Policy</h1>
+      <p class="lead">Tianyu Social Assistant</p>
+      <p class="policy-meta">Effective and last updated: October 19, 2026</p>
+      <p>This policy explains the current data practices of Tianyu Social Assistant, a personal-use Windows application developed and operated by Tianyu Electric. It is separate from the privacy policy for business inquiries on the main Tianyu Electric website.</p>
+      <p>For privacy questions or a data-removal request, contact <a href="mailto:tianyuelectric@yeah.net">tianyuelectric@yeah.net</a>.</p>
+    </div>
+    <div class="reading-layout">
+      <nav class="contents" aria-label="Policy sections"><h2>In this policy</h2><ul>
+        <li><a href="#google">Google and YouTube</a></li>
+        <li><a href="#storage">Local storage and security</a></li>
+        <li><a href="#ai">External AI processing</a></li>
+        <li><a href="#sharing">Data sharing</a></li>
+        <li><a href="#controls">Revoke access and delete data</a></li>
+        <li><a href="#retention">Retention and updates</a></li>
+      </ul></nav>
+      <div class="prose">
+        <section id="google">
+          <h2>Google and YouTube access</h2>
+          <p>The application uses <strong>YouTube API Services</strong>. Google OAuth connects the operator's selected account to the local application. Google manages authentication, and the application does not collect Google passwords.</p>
+          <p>It requests these permissions:</p>
+          <ul>
+            <li><strong><code>https://www.googleapis.com/auth/youtube.upload</code>:</strong> upload a video selected and explicitly confirmed by the operator, together with its title, description, tags, visibility and, if selected, a future publication time.</li>
+            <li><strong><code>https://www.googleapis.com/auth/youtube.readonly</code>:</strong> read the connected channel's ID and name to identify the destination, and read the video information and processing status needed to check an upload result.</li>
+          </ul>
+          <p>Access tokens, refresh tokens, authorization scopes, expiry information, channel identity and connection-verification times are stored locally. When an upload is confirmed, the local publishing record can also contain the returned YouTube video ID, link, selected visibility, time and processing or failure status.</p>
+          <p>Authorizing the account does not approve a video upload. Draft approval and the final upload confirmation are separate. Weekly planning tasks generate local drafts and reminders; they do not publish content.</p>
+          <p>Use of YouTube features is subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's own handling of information is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+        </section>
+        <section id="storage">
+          <h2>Local storage and security</h2>
+          <p>The review service listens on <code>127.0.0.1</code> by default. It stores the material index, file hashes, video metadata, drafts, revisions, review decisions, task reports and publishing records in the application's local data directory and SQLite database. Selected frame images and AI contact sheets are cached locally. Source videos stay in the operator's chosen folders.</p>
+          <p>OAuth client secrets, access tokens and refresh tokens are encrypted with <strong>Windows Data Protection API (DPAPI)</strong> in the local <code>data/vault</code> directory. Decryption is tied to the Windows user and environment. OAuth credentials and tokens are not put in application source code or normal operation logs. A downloaded client JSON file is a separate copy and should be removed or protected by the operator after secure import.</p>
+          <p>DPAPI protects the credential store; the SQLite database, video files, drafts and cached frames are not encrypted by the application. Their protection also depends on Windows account security, disk access and any device encryption the operator enables. Local backups may include the database, reports and encrypted credential files.</p>
+          <p>The local browser interface uses cookies for request validation and the OAuth session. These are not advertising cookies. Requests to Google and configured AI services use HTTPS. This public information page does not provide access to the local review service or its data.</p>
+        </section>
+        <section id="ai">
+          <h2>External AI processing</h2>
+          <p>AI planning is not entirely offline. In the default mode, the application invokes the locally installed Codex CLI using the operator's existing sign-in. An optional mode calls the OpenAI API with a separately configured key.</p>
+          <p>For up to three candidate videos, the application prepares a contact sheet with five sampled frames per video. It can send those images, file names, video metadata, related material descriptions and selected production-history text to OpenAI to recommend a video and generate draft copy. It does not automatically upload the entire original video library for AI analysis.</p>
+          <p>The application does not include Google OAuth tokens or API-retrieved channel information in those AI requests. It does not use Google or YouTube API data to train AI models. The operator should check video samples and source descriptions for confidential or personal information before running analysis. External processing is also governed by the applicable provider terms and <a href="https://openai.com/policies/privacy-policy/">OpenAI's privacy policy</a>.</p>
+        </section>
+        <section id="sharing">
+          <h2>How information is shared</h2>
+          <p>Tianyu Electric does not sell personal data or Google user data, provide it to data brokers, or use it for personalized advertising. Google user data is used only for the account-connection and publishing features described here. Tianyu Social Assistant's use and transfer of information received from Google APIs adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+          <p>A confirmed YouTube upload sends the chosen video and accompanying metadata to Google/YouTube. A public upload makes that content available to the audience selected by the operator. Private uploads still transfer the file to Google. AI processing shares only the inputs described above with the configured AI provider.</p>
+          <p>The public information pages are hosted through the existing Tianyu Electric website infrastructure. Hosting providers can process ordinary request information, such as IP addresses and browser information, when delivering these pages. The local application's video library and credential store are not hosted on this website.</p>
+        </section>
+        <section id="controls">
+          <h2>Revoke authorization and remove local data</h2>
+          <ol>
+            <li><strong>Revoke Google access:</strong> visit <a href="https://myaccount.google.com/connections">Google Account connections</a> or the <a href="https://security.google.com/settings/security/permissions">Google security permissions page</a>, select Tianyu Social Assistant and remove its access. The application will need a new authorization before it can reconnect.</li>
+            <li><strong>Remove the local YouTube authorization:</strong> open the local review center's System Settings and use YouTube's “Remove local authorization” action. This removes the active local token record and its cached channel identity. It does not itself revoke Google's grant, remove client credentials, erase backups or clear publishing history.</li>
+            <li><strong>Remove remaining local copies:</strong> stop the local service before deleting application data. The operator can remove the application's <code>data</code> directory to erase its local database, reports, cached frames and credential store, and remove any application backups or downloaded credential JSON files separately. This is a full workspace reset and also removes other locally stored platform settings. It does not delete the original video folders referenced by the application.</li>
+            <li><strong>Ask for help:</strong> contact <a href="mailto:tianyuelectric@yeah.net">tianyuelectric@yeah.net</a> for a targeted removal request, including any remaining local publishing records. Because this is a personal local tool, the developer cannot remotely erase files on an operator's computer.</li>
+          </ol>
+          <p><strong>Local deletion does not delete YouTube content.</strong> To remove an uploaded video or other content held by YouTube, use YouTube Studio or the relevant Google controls. Deleting or restoring local backups does not change the platform's copy.</p>
+        </section>
+        <section id="retention">
+          <h2>Retention, current information and policy changes</h2>
+          <p>Local source indexes, user-created drafts and review history remain until the operator removes them. Tokens are retained while the connection is needed and are replaced or removed through refresh, reauthorization or local disconnection. Token refresh does not erase historical publishing records, and there is no automatic full-workspace deletion timer.</p>
+          <p>YouTube API data must not be treated as a permanent live copy: refresh or delete cached API data within 30 days, and remove API data when authorization is revoked or a deletion is requested. The current tool re-reads channel identity during connection verification. Its operator must also clear remaining historical API records and backup copies when removing access; local disconnection alone does not clear those copies. Data-removal requests should be completed as soon as possible and within seven calendar days.</p>
+          <p>Google may expire or revoke authorization. A connection failure or rejected refresh requires the operator to check the account and, where necessary, authorize again. No claim is made that a refresh token lasts indefinitely.</p>
+          <p>Changes to these practices will be published on this page with an updated effective date. A change that introduces a new use of Google user data requires an updated disclosure and the operator's consent before that new use begins.</p>
+          <p>Operator and contact: Tianyu Electric · <a href="mailto:tianyuelectric@yeah.net">tianyuelectric@yeah.net</a>.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="app-footer"><div class="app-footer-inner"><p>© 2026 Tianyu Electric</p><nav aria-label="Application links"><a href="/social-assistant/">About the application</a><a href="https://www.youtube.com/t/terms">YouTube Terms</a></nav></div></footer>
+</body>
+</html>
