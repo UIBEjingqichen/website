@@ -60,6 +60,7 @@
 .qs-steps>li:not(:last-child):after{content:"";position:absolute;left:13px;top:30px;bottom:5px;width:1px;background:#cdd6df}
 .qs-steps h3{margin:0 0 5px;font-size:17px}
 .qs-steps p{font-size:15px;margin:0;line-height:1.65}
+.qs-page .qs-response-note{font-size:14px;line-height:1.65;margin:22px 0;color:#4d6274}
 .qs-document-flow{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:start}
 .qs-documents{margin:0;padding:0;list-style:none;border-top:2px solid #14304a}
 .qs-documents>li{padding:17px 0;border-bottom:1px solid #d8dee3;display:grid;grid-template-columns:1fr 1.1fr;gap:24px;font-size:15px;line-height:1.6}

@@ -1,0 +1,11 @@
+/* Narrow contact-page refinements; preserve the shared form and brand system. */
+.pg-contact-page .pg-direct .contact-guidance{color:#d6e2ec}
+.pg-contact-page [data-contact-needs]>label:first-of-type{margin-bottom:4px}
+.pg-contact-page [data-contact-reference]{overflow-wrap:anywhere;color:#405a70}
+.pg-contact-page [data-contact-reference]:not([hidden]){display:grid;gap:8px;border-block:1px solid #bdcbd6;padding:16px 0;margin:4px 0 8px;line-height:1.6}
+.pg-contact-page [data-contact-reference] strong{font-weight:600;color:#14304a}
+.pg-contact-page [data-contact-reference] a{justify-self:start;min-height:32px;display:inline-flex;align-items:center;text-underline-offset:3px}
+.pg-contact-page [data-contact-reference] a:focus-visible{outline:2px solid #176bb0;outline-offset:3px}
+.pg-contact-page [data-contact-reference] span{font-size:13px}
+@media(max-width:520px){.pg-contact-page [data-contact-reference] a{min-height:44px}}
+.pg-contact-page select:focus-visible{outline:2px solid #176bb0;outline-offset:3px}
