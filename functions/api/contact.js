@@ -1,4 +1,4 @@
-const RECIPIENT = 'tianyuelectric@yeah.net';
+const RECIPIENT = 'sales@tianyuelectric.com';
 const MAX_FILE = 8 * 1024 * 1024;
 const MAX_BODY = MAX_FILE + 128 * 1024;
 const DEFAULT_HOSTS = ['www.tianyuelectric.com', 'tianyuelectric.com', 'website-qd8.pages.dev'];
@@ -46,7 +46,7 @@ export async function onRequest({ request, env }) {
   if (request.method === 'GET') return json({ ready: configured(env), siteKey: configured(env) ? env.TURNSTILE_SITE_KEY : null, maxFileBytes: MAX_FILE, missingSettings: missingSettings(env) });
   if (request.method !== 'POST') return json({ error: 'Use the inquiry form to submit a request.' }, 405);
   if (request.headers.get('Origin') !== url.origin) return json({ error: 'Please submit from the Tianyu website.' }, 403);
-  if (!configured(env)) return json({ error: 'Online inquiries are temporarily unavailable. Please email tianyuelectric@yeah.net.' }, 503);
+  if (!configured(env)) return json({ error: 'Online inquiries are temporarily unavailable. Please email sales@tianyuelectric.com.' }, 503);
   let form;
   try { form = await boundedForm(request); }
   catch (error) { return json({ error: error.message === 'size' ? 'The attachment must be 8 MB or smaller.' : 'Please use the website inquiry form.' }, error.message === 'size' ? 413 : 400); }
@@ -95,11 +95,11 @@ export async function onRequest({ request, env }) {
         ...(attachments.length ? { attachments } : {})
       })
     });
-    if (!response.ok) return json({ error: 'We could not send your inquiry. Your entries are kept; please retry or email tianyuelectric@yeah.net.' }, 502);
+    if (!response.ok) return json({ error: 'We could not send your inquiry. Your entries are kept; please retry or email sales@tianyuelectric.com.' }, 502);
     const sent = await response.json();
-    if (!sent.id) return json({ error: 'We could not confirm sending. Please retry or email tianyuelectric@yeah.net.' }, 502);
+    if (!sent.id) return json({ error: 'We could not confirm sending. Please retry or email sales@tianyuelectric.com.' }, 502);
     return json({ success: true, reference: sent.id });
   } catch {
-    return json({ error: 'Sending could not be confirmed. Your entries are kept; please retry or email tianyuelectric@yeah.net.' }, 503);
+    return json({ error: 'Sending could not be confirmed. Your entries are kept; please retry or email sales@tianyuelectric.com.' }, 503);
   }
 }

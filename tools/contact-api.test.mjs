@@ -37,7 +37,7 @@ test('sends all technical context, fixed recipient and reply-to, with real attac
   assert.equal(response.status, 200);
   assert.deepEqual(await response.json(), { success: true, reference: 'test-reference' });
   const sent = JSON.parse(calls[1].options.body);
-  assert.deepEqual(sent.to, ['tianyuelectric@yeah.net']);
+  assert.deepEqual(sent.to, ['sales@tianyuelectric.com']);
   assert.equal(sent.reply_to, 'buyer@example.com');
   assert.match(sent.text, /YNyn0d11/);
   assert.match(sent.text, /Brazil/);

@@ -1,6 +1,6 @@
 # 网站询价直接发送配置
 
-代码接收接口：`/api/contact`（`functions/api/contact.js`）。网站通过 Cloudflare Pages Functions 调用 Resend，收件人固定为 `tianyuelectric@yeah.net`。客户邮件地址设为 Reply-To，便于回复。附件上限为 8 MB，使用实际文件内容发送。收件邮箱无需更换。
+代码接收接口：`/api/contact`（`functions/api/contact.js`）。网站通过 Cloudflare Pages Functions 调用 Resend，收件人固定为 `sales@tianyuelectric.com`。客户邮件地址设为 Reply-To，便于回复。附件上限为 8 MB，使用实际文件内容发送。网站询盘统一发送到销售邮箱。
 
 ## 上线前配置
 
@@ -21,7 +21,7 @@
 
 5. 确认 Pages Root directory 为仓库根目录，Build output directory 为 `.`（保留现有根首页、dist、images、database、documents、public），Build command 为 `exit 0`。如果现有输出目录已正确，不要改为 dist；这会改变网站路径。`functions` 必须位于项目根目录。环境变量更改后需要重新部署。
 6. 部署后打开 `https://www.tianyuelectric.com/api/contact`，应返回 `ready: true` 和公开 siteKey，不返回任何密钥。仅表示配置存在，不能证明域名验证或收信成功。
-7. 在正式网站填写一个明确标注“网站测试”的询价，附一份不含敏感信息的小 PDF。检查网页返回参考号、yeah.net 收件箱/垃圾邮件、附件、产品型号、来源页面和回复地址。确认收到邮件后才算上线完成。
+7. 在正式网站填写一个明确标注“网站测试”的询价，附一份不含敏感信息的小 PDF。检查网页返回参考号、sales@tianyuelectric.com 收件箱/垃圾邮件、附件、产品型号、来源页面和回复地址。确认收到邮件后才算上线完成。
 
 ## 运行与限制
 

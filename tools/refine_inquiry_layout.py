@@ -14,7 +14,7 @@ for path in (ROOT / 'dist').rglob('*.html'):
             form = form.replace('<label>Capacity / Voltage', fields + '<label>Capacity / Voltage', 1)
         if 'data-inquiry-verification' not in form:
             form = form.replace('<button class="btn btn-primary" type="submit">', '<p class="inquiry-note full">Your inquiry and selected file will be emailed to Tianyu Electric. Attachment limit: 8 MB.</p><div class="full" data-inquiry-verification=""></div><button class="btn btn-primary" type="submit">', 1)
-            form = form.replace('</form>', '<a class="inquiry-fallback full" href="mailto:tianyuelectric@yeah.net">Prefer email? tianyuelectric@yeah.net</a><noscript>Please email us directly; online inquiries require JavaScript.</noscript></form>')
+            form = form.replace('</form>', '<a class="inquiry-fallback full" href="mailto:sales@tianyuelectric.com">Prefer email? sales@tianyuelectric.com</a><noscript>Please email us directly; online inquiries require JavaScript.</noscript></form>')
         if 'action="/api/contact"' not in form:
             form = form.replace('<form ', '<form action="/api/contact" method="post" enctype="multipart/form-data" ', 1)
         return form
