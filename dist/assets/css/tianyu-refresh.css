@@ -293,3 +293,29 @@ html body .mfg34-section,html body .mfg34-section article,html body .mfg34-secti
 .footer .footer-contact a{display:inline!important;padding:0!important;margin:0!important;color:#dfe8ee;text-decoration:none;border-bottom:1px solid rgba(124,196,255,.35)}
 .footer .footer-contact>a{justify-self:start}
 .footer .footer-contact a:hover{color:#fff;border-color:#7cc4ff}
+
+/* Main navigation feedback */
+html body .site-header .main-nav > .nav-item > a { transition: color 160ms ease, transform 160ms ease; }
+@media (hover: hover) {
+  html body .site-header .main-nav > .nav-item > a:hover { color: #008b91 !important; transform: translateY(-2px); }
+}
+html body .site-header .main-nav > .nav-item > a:active { color: #006f75 !important; transform: translateY(1px) scale(.97); }
+@media (min-width: 1101px) {
+  html body .site-header .main-nav > .nav-item > a.active { box-shadow: none !important; background: linear-gradient(var(--tr-accent), var(--tr-accent)) center calc(50% + 20px) / calc(100% - 24px) 2px no-repeat !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body .site-header .main-nav > .nav-item > a { transition: color 160ms ease; }
+  html body .site-header .main-nav > .nav-item > a:hover, html body .site-header .main-nav > .nav-item > a:active { transform: none; }
+}
+
+/* Dropdown link feedback */
+html body .site-header .main-nav .dropdown-menu a { transition: color 160ms ease, background-color 160ms ease, transform 160ms ease; }
+@media (hover: hover) {
+  html body .site-header .main-nav .dropdown-menu a:hover { color: #fff !important; background: #55595c !important; transform: translateX(3px); }
+}
+html body .site-header .main-nav .dropdown-menu a:focus-visible { color: #fff !important; background: #55595c !important; }
+html body .site-header .main-nav .dropdown-menu a:active { color: #fff !important; background: #414548 !important; transform: translateX(2px) scale(.98); }
+@media (prefers-reduced-motion: reduce) {
+  html body .site-header .main-nav .dropdown-menu a { transition: color 160ms ease, background-color 160ms ease; }
+  html body .site-header .main-nav .dropdown-menu a:hover, html body .site-header .main-nav .dropdown-menu a:active { transform: none; }
+}
