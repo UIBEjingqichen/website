@@ -1,0 +1,64 @@
+/* Site V36: refined industrial editorial typography and density
+   Applies the successful Manufacturing V35 scale to the rest of the website
+   without flattening page-specific layouts. */
+
+body.site36-density{
+  --s36-shell:1080px;
+  --s36-title:clamp(28px,2.75vw,36px);
+  --s36-hero:clamp(40px,4.7vw,60px);
+  --s36-copy:13.5px;
+  --s36-section:58px;
+}
+
+/* Shared typography */
+body.site36-density .v3p-shell{width:min(var(--s36-shell),calc(100% - 48px))}
+body.site36-density .eyebrow{font-size:10px;font-weight:750;letter-spacing:.11em}
+body.site36-density .v3p-title{font-size:var(--s36-title);font-weight:600;line-height:1.15;letter-spacing:-.018em}
+body.site36-density .section{padding-top:var(--s36-section);padding-bottom:var(--s36-section)}
+
+/* Shared image/page heroes */
+body.site36-density .v6-hero,
+body.site36-density .v6-page-hero{
+  min-height:500px;
+}
+body.site36-density .v6-page-hero .v6-hero-copy h1{max-width:620px;font-size:var(--s36-hero);font-weight:620;line-height:1.04;letter-spacing:-.03em}
+/* Homepage */
+body.site36-density.v7-home .v6-hero,
+body.site36-density.v8-home .v6-hero{min-height:520px}body.site36-density .yw-company-copy h2{font-size:34px;font-weight:600;line-height:1.15;letter-spacing:-.018em}
+body.site36-density .yw-company-copy>p:not(.yw-kicker){font-size:13.5px;line-height:1.65}
+body.site36-density .yw-stat-grid article{min-height:112px;padding:18px 16px}
+body.site36-density .yw-stat-grid strong{font-size:30px;font-weight:600}body.site36-density .ty15-head{margin-bottom:26px}
+/* Products directory */body.site36-density .v23-family-heading h2{font-size:34px;font-weight:600;line-height:1.15;letter-spacing:-.018em}
+body.site36-density .v23-family-heading>p{font-size:13px;line-height:1.6}
+body.site36-density .v23-family-grid a{padding:18px 16px;min-height:150px}
+body.site36-density .v23-family-grid strong{font-size:18px;line-height:1.25}
+body.site36-density .v23-family-grid small{font-size:10.5px;line-height:1.45}
+body.site36-density .v12-directory-head{margin-bottom:20px}
+body.site36-density .v12-directory-head h3{font-size:27px;font-weight:600;line-height:1.16}
+body.site36-density .v12-directory-head>p{font-size:12.5px;line-height:1.6}
+body.site36-density .v3p-platform-card .copy{padding:17px}
+body.site36-density .v3p-platform-card h3{font-size:17px;line-height:1.28}
+body.site36-density .v3p-platform-card .range{font-size:12px}
+body.site36-density .v3p-platform-card small{font-size:10.5px;line-height:1.45}
+
+/* Applications & Projects */
+/* About */
+/* Resources / Quality / News / Contact and other top-level information pages */body.site36-density .yw-news-card{padding:20px}
+body.site36-density .yw-news-card h3{font-size:19px;line-height:1.28}
+body.site36-density .yw-news-card span{font-size:11.5px;line-height:1.55}
+
+/* Product/project detail pages that use the shared V3 shell */
+/* Keep buttons and utility labels modest */
+body.site36-density .btn,
+body.site36-density button{font-weight:650}
+
+@media(max-width:820px){
+  body.site36-density{--s36-section:52px;--s36-title:clamp(27px,5vw,36px)}
+  body.site36-density .v3p-shell{width:min(100% - 32px,var(--s36-shell))}
+  body.site36-density .v6-hero,
+body.site36-density .v6-page-hero{min-height:560px}
+}
+@media(max-width:560px){
+  body.site36-density{--s36-section:46px;--s36-title:28px;--s36-hero:40px}  body.site36-density .yw-company-copy h2,
+body.site36-density .v23-family-heading h2{font-size:28px}
+}

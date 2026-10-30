@@ -1,0 +1,29 @@
+/* V4 visual refinement: preserve the Yawei-style layout, add genuine 3D certificate motion and unify existing photography. */
+
+/* Homepage hero image selection and grading */
+/* Keep product, industry, factory and landscape photography within one visual family. */
+.yw-landscape-grid img{filter: brightness(.95) saturate(.92) contrast(1.04)}.yw-landscape-grid .landscape-1 img { object-position: center 54%; }
+.yw-landscape-grid .landscape-2 img { object-position: center 52%; }
+.yw-landscape-grid .landscape-3 img { object-position: center 48%; }
+.yw-landscape-grid .landscape-4 img { object-position: center 50%; }
+.yw-landscape-grid .landscape-5 img { object-position: center 52%; }
+.yw-landscape-grid .landscape-6 img { object-position: center 50%; }
+
+/* 3D certificates. The source pages remain clean: certificate image only, no caption block. */.certificate-3d-stage.dragging { cursor: grabbing; }.certificate-3d-ring {
+  position: relative;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(-8deg) rotateY(var(--rotation, -12deg));
+  will-change: transform;
+}
+/* The old flat marquee is no longer rendered, but keep it suppressed if stale output survives cache. */
+/* Product images get a slightly cleaner showroom crop without changing source files. */
+@media (prefers-reduced-motion: reduce) {  .certificate-3d-ring {
+    display: flex;
+    width: max-content;
+    height: auto;
+    gap: 14px;
+    padding: 8px 0 22px;
+    transform: none !important;
+  }}

@@ -1,0 +1,5 @@
+/* Shared finishing layer used by every generated page. */
+.site-header .brand small{font-size:11px}
+.site-header .main-nav a:focus-visible,.site-header .btn:focus-visible,.footer a:focus-visible{outline:3px solid #00a3aa;outline-offset:3px}body .yw-news-card.featured,body .yw-news-card.featured h3,body .yw-news-card.featured p,body .yw-news-card.featured span,body .yw-news-card.featured a,body .yw-news-card.featured strong{color:#173348!important}
+body .yw-news-card.featured .eyebrow{color:#076f77!important}.experience-show-more[hidden]{display:none}
+.document-filter input[type=search]{width:100%;min-width:160px;min-height:38px;border:1px solid #cbdbe2;padding:8px;color:#18364a;font:inherit}

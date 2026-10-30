@@ -1,0 +1,222 @@
+{
+  "about": "Data for dist/selector.html. Every value is copied from the published product page given in 'href'. 'kva' and 'hvSystem' are the numeric ranges used for matching (nominal system kV); null means not published, which the selector shows as 'confirm with engineering'. Update this file whenever a product page changes.",
+  "updated": "2026-10-30",
+  "applications": {
+    "grid": "Utility grid & substations",
+    "industry": "Industrial plants",
+    "buildings": "Buildings & data centres",
+    "renewables": "Solar, wind & storage",
+    "mining": "Mining",
+    "dc": "Rectifier & DC processes",
+    "temporary": "Temporary & emergency supply"
+  },
+  "products": [
+    {
+      "id": "35kv-power-transformer", "family": "power",
+      "name": "35 kV Oil-Immersed Power Transformer", "series": "SZ-8000~31500/35",
+      "href": "products/35kv-power-transformer/index.html",
+      "image": "images/02-shared/products/model-confirmed/power-transformers/35kv-oil-immersed-power-transformer-front-p085.webp",
+      "kva": [8000, 31500], "hvSystem": [35, 38.5], "insulation": ["oil"], "installation": ["outdoor"], "frequency": [50], "tap": ["oltc"],
+      "apps": ["grid", "industry"],
+      "specs": {"Rated power": "8–31.5 MVA", "High voltage": "35 / 38.5 kV", "Low voltage": "6.3 / 6.6 / 10.5 kV", "Frequency": "50 Hz", "Insulation": "Oil-immersed", "Tap changer": "On-load", "Tapping range": "±3×2.5%", "Vector group": "YNd11, Dyn11", "Efficiency / standard": "> 99.6 %; PEI to EU Tier 2"}
+    },
+    {
+      "id": "66kv-power-transformer", "family": "power",
+      "name": "66 kV Oil-Immersed Power Transformer", "series": "SZ-6300~63000/66",
+      "href": "products/66kv-power-transformer/index.html",
+      "image": "images/02-shared/products/model-confirmed/power-transformers/66kv-power-transformer-catalogue-outline.webp",
+      "kva": [6300, 63000], "hvSystem": [63, 69], "insulation": ["oil"], "installation": ["outdoor"], "frequency": [50], "tap": ["oltc"],
+      "apps": ["grid", "industry"],
+      "specs": {"Rated power": "6.3–63 MVA", "High voltage": "63 / 66 / 69 kV", "Low voltage": "6.3 / 6.6 / 10.5 kV", "Frequency": "50 Hz", "Insulation": "Oil-immersed", "Tap changer": "On-load", "Tapping range": "±4×1.25% / ±6×1.25% / ±8×1.25%", "Vector group": "YNd11, Dyn11", "Efficiency / standard": "> 99.6 %; PEI to EU Tier 2"}
+    },
+    {
+      "id": "110kv-power-transformer", "family": "power",
+      "name": "110 kV Three-Winding Power Transformer", "series": "SSZ-6300~63000/110",
+      "href": "products/110kv-power-transformer/index.html",
+      "image": "images/02-shared/products/optimized/products/classified/110kv-power-transformer/01.webp",
+      "kva": [6300, 200000], "hvSystem": [110, 121], "insulation": ["oil"], "installation": ["outdoor"], "frequency": [50], "tap": ["oltc"],
+      "apps": ["grid", "industry"],
+      "specs": {"Rated power": "6.3–200 MVA", "High voltage": "110 / 115 / 121 kV", "Low voltage": "MV 36 / 37 / 38.5 kV; LV 6.3 / 6.6 / 10.5 / 21 kV", "Frequency": "50 Hz", "Insulation": "Oil-immersed, three-winding", "Tap changer": "On-load", "Tapping range": "±4×1.25% / ±6×1.25% / ±8×1.25%", "Vector group": "YNyn0d11", "Impedance": "HV–MV 10.5%, HV–LV 17.5–19%, MV–LV 6.5%"}
+    },
+    {
+      "id": "220kv-power-transformer", "family": "power",
+      "name": "220 kV Three-Winding Power Transformer", "series": "SSZ-31500~240000/220",
+      "href": "products/220kv-power-transformer/index.html",
+      "image": "images/02-shared/products/optimized/products/classified/220kv-power-transformer/01.webp",
+      "kva": [31500, 420000], "hvSystem": [220, 242], "insulation": ["oil"], "installation": ["outdoor"], "frequency": [50], "tap": ["oltc"],
+      "apps": ["grid", "industry"],
+      "specs": {"Rated power": "31.5–420 MVA", "High voltage": "220 / 230 / 242 kV", "Low voltage": "MV 69 / 115 / 121 kV; LV 6.3–38.5 kV", "Frequency": "50 Hz", "Insulation": "Oil-immersed, three-winding", "Tap changer": "On-load", "Tapping range": "±4×1.25% / ±6×1.25% / ±8×1.25%", "Vector group": "YNyn0d11", "Impedance": "HV–MV 12–14%, HV–LV 22–24%, MV–LV 7–9%"}
+    },
+    {
+      "id": "220kv-double-split-booster-transformer", "family": "power",
+      "name": "220 kV Double-Split Booster Transformer", "series": "220 kV double-split",
+      "href": "products/220kv-double-split-booster-transformer/index.html",
+      "image": "images/02-shared/products/model-confirmed/power-transformers/220kv-double-split-booster-transformer-installation.webp",
+      "kva": null, "hvSystem": [220, 220], "hvClass": true, "insulation": ["oil"], "installation": ["outdoor"], "frequency": null, "tap": null,
+      "apps": ["renewables"],
+      "specs": {"Rated power": "Project-engineered", "High voltage": "220 kV class", "Insulation": "Oil-immersed, axial split winding", "Efficiency / standard": "Avg. winding rise ≤ 55 K; PD < 50 pC at 1.58 Ur", "Enclosure": "C5-M anti-corrosion for offshore sites"}
+    },
+    {
+      "id": "66kv-offshore-wind-nacelle-transformer", "family": "power",
+      "name": "66 kV Offshore Wind Nacelle Transformer", "series": "66 kV liquid-immersed nacelle",
+      "href": "products/66kv-offshore-wind-nacelle-transformer/index.html",
+      "image": "images/02-shared/products/model-confirmed/special-transformers/66kv-offshore-wind-nacelle-transformer-front.webp",
+      "kva": null, "hvSystem": [66, 66], "hvClass": true, "insulation": ["oil"], "installation": [], "frequency": null, "tap": null,
+      "apps": ["renewables"],
+      "specs": {"Rated power": "Project-engineered", "High voltage": "66 kV class, plug-in bushings", "Insulation": "Natural ester liquid", "Enclosure": "Tall, narrow nacelle arrangement"}
+    },
+    {
+      "id": "35-110kv-mobile-intelligent-substation", "family": "power",
+      "name": "35–110 kV Mobile Intelligent Substation", "series": "35–110 kV vehicle-mounted",
+      "href": "products/35-110kv-mobile-intelligent-substation/index.html",
+      "image": "images/02-shared/products/products/classified/35-110kv-mobile-intelligent-substation/01.png",
+      "kva": null, "hvSystem": [35, 110], "insulation": ["oil"], "installation": ["outdoor"], "frequency": null, "tap": null,
+      "apps": ["temporary", "grid"],
+      "specs": {"Rated power": "Project-engineered", "High voltage": "35–110 kV", "Enclosure": "Vehicle-mounted, towable", "Efficiency / standard": "Integrated primary and secondary equipment"}
+    },
+    {
+      "id": "oil-immersed-split-winding-transformer", "family": "power",
+      "name": "Oil-Immersed Split-Winding Transformer", "series": "SZ-50000/110 (example)",
+      "href": "products/oil-immersed-split-winding-transformer/index.html",
+      "image": "images/02-shared/products/products/catalog-v8/oil-immersed-split-winding-transformer.webp",
+      "kva": null, "hvSystem": [110, 110], "hvClass": true, "insulation": ["oil"], "installation": ["outdoor"], "frequency": null, "tap": null,
+      "apps": ["grid"],
+      "specs": {"Rated power": "50 MVA example; two branches up to 30 MVA each", "High voltage": "110 kV (example)", "Low voltage": "6.3 / 6.3 kV split", "Insulation": "Oil-immersed", "Vector group": "YNd11d11", "Impedance": "Through 10.5%, half-through 19%; split factor ≥ 3.4"}
+    },
+    {
+      "id": "oil-immersed-distribution-transformer", "family": "distribution",
+      "name": "Oil-Immersed Distribution Transformer", "series": "S20 / S22 · 12 kV distribution",
+      "href": "products/oil-immersed-distribution-transformer/index.html",
+      "image": "images/02-shared/products/products/classified/12kv-oil-immersed-distribution-transformer/01.webp",
+      "kva": [30, 2500], "hvSystem": [6, 11], "insulation": ["oil"], "installation": ["outdoor"], "frequency": [50, 60], "tap": ["octc", "oltc"],
+      "apps": ["grid", "industry", "renewables"],
+      "specs": {"Rated power": "30–2500 kVA", "High voltage": "6 / 6.3 / 6.6 / 10 / 10.5 / 11 kV", "Low voltage": "400 / 415 / 420 V", "Frequency": "50 / 60 Hz", "Insulation": "Oil-immersed, copper winding", "Tap changer": "Off-circuit or on-load", "Tapping range": "±2×2.5%, ±5%, ±3×2.5%, ±4×2.5%", "Vector group": "Dyn11 / Yyn0 / Dyn5", "Efficiency / standard": "PEI to EU Tier 2"}
+    },
+    {
+      "id": "35kv-oil-immersed-step-up-transformer", "family": "distribution",
+      "name": "35 kV Oil-Immersed Step-Up Transformer", "series": "35 kV step-up · 1000–12500 kVA",
+      "href": "products/35kv-oil-immersed-step-up-transformer/index.html",
+      "image": "images/02-shared/products/model-confirmed/distribution-transformers/35kv-oil-immersed-step-up-transformer-installation.webp",
+      "kva": [1000, 12500], "hvSystem": [33, 38.5], "insulation": ["oil"], "installation": ["outdoor"], "frequency": [50, 60], "tap": ["octc", "oltc"],
+      "apps": ["renewables", "industry", "grid"],
+      "specs": {"Rated power": "1–12.5 MVA", "High voltage": "33 / 34.5 / 35 / 37 / 38.5 kV", "Low voltage": "400 / 690 / 800 / 1140 V", "Frequency": "50 / 60 Hz", "Insulation": "Oil-immersed, copper or aluminium winding", "Tap changer": "Off-circuit or on-load", "Tapping range": "±2×2.5%, ±5%, ±3×2.5%, ±4×2.5%", "Vector group": "Dyn11 / Yyn0 / Dyn5", "Impedance": "6–14%", "Efficiency / standard": "PEI to EU Tier 2"}
+    },
+    {
+      "id": "sz20-on-load-oil-immersed-transformer", "family": "distribution",
+      "name": "SZ20 / SZ22 On-Load Oil-Immersed Transformer", "series": "SZ20, SZ22",
+      "href": "products/sz20-on-load-oil-immersed-transformer/index.html",
+      "image": "images/02-shared/products/products/catalog-v8/sz20-on-load-oil-immersed-transformer.webp",
+      "kva": [200, 2500], "hvSystem": [6, 11], "insulation": ["oil"], "installation": ["outdoor"], "frequency": null, "tap": ["oltc"],
+      "apps": ["grid", "industry", "renewables"],
+      "specs": {"Rated power": "200–2500 kVA", "High voltage": "6 / 6.3 / 10 / 10.5 / 11 kV", "Low voltage": "0.4 kV", "Insulation": "Oil-immersed", "Tap changer": "On-load", "Tapping range": "±4×2.5%", "Vector group": "Yyn0 or Dyn11", "Efficiency / standard": "No-load loss 30–40% below S13"}
+    },
+    {
+      "id": "dry-type-distribution-transformer", "family": "distribution",
+      "name": "SC(B)14 / SC(B)18 Dry-Type Energy-Saving Transformer", "series": "SCB14 (grade 2), SCB18 (grade 1)",
+      "href": "products/dry-type-distribution-transformer/index.html",
+      "image": "images/02-shared/products/products/classified/dry-type-distribution-transformer/01.jpg",
+      "kva": [null, 8000], "hvSystem": [10, 35], "insulation": ["dry"], "installation": ["indoor"], "frequency": [50, 60], "tap": ["octc", "oltc"],
+      "apps": ["buildings", "industry", "grid"],
+      "specs": {"Rated power": "Up to 8000 kVA", "High voltage": "10 / 20 / 35 kV", "Low voltage": "0.4 / 0.69 / 0.8 kV", "Frequency": "50 / 60 Hz", "Insulation": "Cast resin, class F and above", "Tap changer": "Off-circuit or on-load", "Tapping range": "±2×2.5%, ±5%, ±3×2.5%, ±4×2.5%", "Vector group": "Dyn11, Yyn0, Yd11", "Impedance": "4 / 6 / 8 / 10%", "Efficiency / standard": "GB 20052-2024 grade 1 (SCB18) / grade 2 (SCB14); noise ≤ 54 dB"}
+    },
+    {
+      "id": "amorphous-alloy-dry-type-transformer", "family": "distribution",
+      "name": "SC(B)H17 / SC(B)H19 Amorphous-Alloy Dry-Type Transformer", "series": "SCBH15, SCBH17, SCBH19",
+      "href": "products/amorphous-alloy-dry-type-transformer/index.html",
+      "image": "images/02-shared/products/products/classified/amorphous-alloy-dry-type-transformer/01.jpeg",
+      "kva": [null, 4000], "hvSystem": [10, 35], "insulation": ["dry"], "installation": ["indoor"], "frequency": [50, 60], "tap": ["octc", "oltc"],
+      "apps": ["buildings", "industry"],
+      "specs": {"Rated power": "Up to 4000 kVA", "High voltage": "10 / 20 / 35 kV", "Low voltage": "0.4 / 0.69 / 0.8 kV", "Frequency": "50 / 60 Hz", "Insulation": "Cast resin, amorphous-alloy core", "Tap changer": "Off-circuit or on-load", "Tapping range": "±2×2.5%, ±5%, ±3×2.5%, ±4×2.5%", "Vector group": "Dyn11, Yyn0, Yd11", "Impedance": "4 / 6 / 8 / 10%", "Efficiency / standard": "Noise ≤ 54 dB"}
+    },
+    {
+      "id": "intelligent-low-noise-dry-type-transformer", "family": "distribution",
+      "name": "Energy-Saving, Low-Noise Intelligent Dry-Type Transformer", "series": "Intelligent dry-type",
+      "href": "products/intelligent-low-noise-dry-type-transformer/index.html",
+      "image": "images/02-shared/products/model-confirmed/dry-type-transformers/intelligent-low-noise-dry-type-transformer-catalogue.webp",
+      "kva": null, "hvSystem": [null, 35], "insulation": ["dry"], "installation": ["indoor"], "frequency": [50, 60], "tap": ["octc", "oltc"],
+      "apps": ["buildings", "industry"],
+      "specs": {"Rated power": "Per project", "High voltage": "≤ 35 kV", "Low voltage": "0.4 / 0.69 / 0.8 kV", "Frequency": "50 / 60 Hz", "Insulation": "Class F+", "Tap changer": "Off-circuit or on-load", "Vector group": "Dyn11, Yyn0, Yd11", "Impedance": "4 / 6 / 8 / 10%", "Efficiency / standard": "Real-time monitoring terminal"}
+    },
+    {
+      "id": "35kv-large-dry-type-power-transformer", "family": "distribution",
+      "name": "35 kV Large Dry-Type Power Transformer", "series": "SC(Z)11~18",
+      "href": "products/35kv-large-dry-type-power-transformer/index.html",
+      "image": "images/02-shared/products/model-confirmed/dry-type-transformers/35kv-large-dry-type-power-transformer-catalogue.webp",
+      "kva": [null, 25000], "hvSystem": [35, 35], "hvClass": true, "insulation": ["dry"], "installation": ["indoor"], "frequency": null, "tap": ["octc", "oltc"],
+      "apps": ["buildings", "industry"],
+      "specs": {"Rated power": "Up to 25 MVA", "High voltage": "35 kV class", "Insulation": "Cast resin, web through-core", "Tap changer": "Off-circuit or on-load", "Efficiency / standard": "First SCZ12-25000/35 energised 2023"}
+    },
+    {
+      "id": "40-5kv-new-energy-dry-type-transformer", "family": "distribution",
+      "name": "Dry-Type Transformer for Energy Storage, Wind and PV", "series": "S(S)CB11~18",
+      "href": "products/40-5kv-new-energy-dry-type-transformer/index.html",
+      "image": "images/02-shared/products/model-confirmed/dry-type-transformers/new-energy-dry-type-transformer-catalogue.webp",
+      "kva": [null, 8000], "hvSystem": null, "insulation": ["dry"], "installation": ["indoor"], "frequency": null, "tap": ["octc", "oltc"],
+      "apps": ["renewables"],
+      "specs": {"Rated power": "Up to 8000 kVA", "Insulation": "Class F+, flat-plate through-core", "Tap changer": "Off-circuit or on-load", "Efficiency / standard": "Large air-volume cooling"}
+    },
+    {
+      "id": "oil-immersed-rectifier-transformer", "family": "distribution",
+      "name": "35 kV and Below Rectifier Power Transformer", "series": "Oil-immersed rectifier",
+      "href": "products/oil-immersed-rectifier-transformer/index.html",
+      "image": "images/02-shared/products/products/classified/oil-immersed-rectifier-transformer/01.png",
+      "kva": null, "hvSystem": [null, 35], "insulation": ["oil"], "installation": ["indoor", "outdoor"], "frequency": [50], "tap": null,
+      "apps": ["dc", "industry"],
+      "specs": {"Rated power": "8000 kVA example (ZS-8000/10-0.66)", "High voltage": "≤ 35 kV", "Low voltage": "0.66 / 0.66 kV (example)", "Frequency": "50 Hz", "Insulation": "Oil-immersed, ONAN", "Vector group": "Dy11d0 (example)", "Efficiency / standard": "30-year design life"}
+    },
+    {
+      "id": "zbs-rectifier-transformer", "family": "distribution",
+      "name": "ZBS / ZBSCB Rectifier Transformer", "series": "ZBS (oil-immersed), ZBSCB (dry-type)",
+      "href": "products/zbs-rectifier-transformer/index.html",
+      "image": "images/02-shared/products/products/catalog-v8/zbs-rectifier-transformer.webp",
+      "kva": null, "hvSystem": null, "insulation": ["oil", "dry"], "installation": ["indoor", "outdoor"], "frequency": [50], "tap": null,
+      "apps": ["dc", "industry"],
+      "specs": {"Rated power": "8000 kVA example", "High voltage": "10 kV (example)", "Frequency": "50 Hz", "Insulation": "Oil-immersed (ZBS) or dry-type (ZBSCB)", "Vector group": "Dy11d0 (example)", "Efficiency / standard": "30-year design life"}
+    },
+    {
+      "id": "24-pulse-phase-shifting-transformer", "family": "distribution",
+      "name": "24-Pulse Phase-Shifting Rectifier Transformer", "series": "ZBSS-6300/35 pair",
+      "href": "products/24-pulse-phase-shifting-transformer/index.html",
+      "image": "images/02-shared/products/model-confirmed/special-transformers/24-pulse-phase-shifting-transformer-active-part.webp",
+      "kva": null, "hvSystem": [35, 35], "hvClass": true, "insulation": ["oil"], "installation": ["indoor", "outdoor"], "frequency": null, "tap": null,
+      "apps": ["dc", "industry"],
+      "specs": {"Rated power": "6300 kVA per unit (pair)", "High voltage": "35 kV", "Insulation": "Oil-immersed", "Vector group": "D(−7.5)y11d0 + D(+7.5)y11d0", "Efficiency / standard": "24-pulse harmonic cancellation"}
+    },
+    {
+      "id": "zgs-prefabricated-substation", "family": "substation",
+      "name": "ZGS Combined Transformer (American-Type)", "series": "ZGS series",
+      "href": "products/zgs-prefabricated-substation/index.html",
+      "image": "images/02-shared/products/products/classified/zgs-prefabricated-substation/02.webp",
+      "kva": [200, 4000], "hvSystem": [6, 35], "insulation": ["oil"], "installation": ["outdoor"], "frequency": [50], "tap": null,
+      "apps": ["grid", "industry", "renewables"],
+      "specs": {"Rated power": "200–4000 kVA", "High voltage": "7.2–40.5 kV equipment rating", "Low voltage": "0.315–1.14 kV", "Frequency": "50 Hz", "Insulation": "Oil-immersed", "Enclosure": "Below IP65; altitude ≤ 5000 m"}
+    },
+    {
+      "id": "yb-prefabricated-substation", "family": "substation",
+      "name": "YB Prefabricated Substation (European-Type)", "series": "YB-12 (40.5) series",
+      "href": "products/yb-prefabricated-substation/index.html",
+      "image": "images/02-shared/products/products/classified/yb-prefabricated-substation/02.webp",
+      "kva": [200, 8000], "hvSystem": [6, 35], "insulation": ["oil", "dry"], "installation": ["outdoor"], "frequency": [50], "tap": null,
+      "apps": ["grid", "industry", "buildings", "renewables"],
+      "specs": {"Rated power": "200–8000 kVA", "High voltage": "7.2–40.5 kV equipment rating", "Low voltage": "0.315–1.14 kV", "Frequency": "50 Hz", "Insulation": "Dry-type or oil-immersed transformer", "Enclosure": "IP33, IP43, IP54, IP65"}
+    },
+    {
+      "id": "ybh-prefabricated-substation", "family": "substation",
+      "name": "YBH Chinese-Type Prefabricated Substation", "series": "YBH series",
+      "href": "products/ybh-prefabricated-substation/index.html",
+      "image": "images/02-shared/products/model-confirmed/prefabricated-substations/catalog-chinese-box-type-substation-p041.webp",
+      "kva": [200, 15000], "hvSystem": [6, 66], "insulation": ["oil"], "installation": ["outdoor"], "frequency": [50], "tap": null,
+      "apps": ["renewables", "mining"],
+      "specs": {"Rated power": "200–15000 kVA", "High voltage": "7.2–72.5 kV equipment rating", "Low voltage": "0.315–1.14 kV", "Frequency": "50 Hz", "Insulation": "Oil-immersed (S20 / S22)", "Enclosure": "IP33, IP43, IP54, IP65", "Efficiency / standard": "GB/T 17467; HV breaking 31.5 kA"}
+    },
+    {
+      "id": "pv-ess-integrated-substation", "family": "substation",
+      "name": "PV Inverter / Converter Energy-Storage Integrated Machine", "series": "Integrated step-up machine",
+      "href": "products/pv-ess-integrated-substation/index.html",
+      "image": "images/02-shared/products/products/classified/pv-ess-integrated-substation/01.png",
+      "kva": [2000, 15000], "hvSystem": [6, 35], "insulation": ["oil", "dry"], "installation": ["outdoor"], "frequency": [50], "tap": null,
+      "apps": ["renewables"],
+      "specs": {"Rated power": "2000–15000 kVA", "High voltage": "7.2–40.5 kV equipment rating", "Low voltage": "0.315–1.14 kV", "Frequency": "50 Hz", "Insulation": "Dry-type or oil-immersed transformer", "Enclosure": "IP33, IP43, IP54, IP65", "Efficiency / standard": "Inverter or PCS, transformer and HV switch integrated"}
+    }
+  ]
+}

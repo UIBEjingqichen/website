@@ -1,0 +1,62 @@
+/* One visual contract for the generated site. Keep this stylesheet last. */html{scroll-behavior:smooth}
+body{font-family:Inter,"Segoe UI",Arial,sans-serif!important;font-size:16px;line-height:1.55;color:var(--ie-text)}
+body h1,body h2,body h3,body h4,body button,body input,body select,body textarea{font-family:Inter,"Segoe UI",Arial,sans-serif!important}
+body h1{font-size:clamp(36px,3.2vw,48px);line-height:1.12;letter-spacing:-.025em;font-weight:700}
+body h2{line-height:1.18;letter-spacing:-.015em;font-weight:700}
+body p{line-height:1.55}
+body .site-header{background:#fff!important;border-bottom:1px solid var(--ie-line)!important}
+body .site-header .btn,body .btn-primary{background:var(--ie-teal)!important;border-color:var(--ie-teal)!important;color:#fff!important;border-radius:4px!important;min-height:44px}
+body .site-header .brand,body .footer a{color:var(--ie-navy)}
+body .site-header .main-nav a{font-size:14px;font-weight:600}
+body a:focus-visible,body button:focus-visible,body input:focus-visible,body select:focus-visible,body textarea:focus-visible,body summary:focus-visible{outline:3px solid #007f89!important;outline-offset:3px!important}
+body .v3p-shell{max-width:var(--ie-shell)}body .v3p-title{font-size:clamp(28px,2.6vw,36px);line-height:1.18}body .v3p-platform-card .media img{object-fit:contain!important;transform:none!important}
+body .v3p-table-wrap{box-shadow:none}@media(min-width:901px){body.phase1-home .ie-hero{display:none!important}}
+@media(max-width:900px){body.phase1-home .v6-hero,body.phase1-home .ty-energy-flow-wrap{display:none!important}}
+/* Project facts precede the optional map; the map remains interactive. */body .ty16-head{order:1}
+body .ty16-filters{order:2}body .ty16-map-stage{order:5;min-height:0;height:430px;aspect-ratio:auto;border-radius:4px;background:#d9e8ee}body.phase1-home .ty16-pin,body.phase1-home .ty16-pin.active,body.phase1-home .ty16-pin:hover{border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;transform:translate(-50%,-50%)!important}
+body.phase1-home .ty16-pin::before,body.phase1-home .ty16-pin.active::before{inset:10px!important;border:2px solid #fff!important;border-radius:50%;background:var(--ie-teal);box-shadow:0 0 0 2px #7faab4}
+/* Flatten the directory: one product is one selectable row. */
+body.phase1-products .v12-directory-group{padding:32px 0!important;margin-top:24px!important;border-top:1px solid var(--ie-line)}
+body.phase1-products .v12-directory-group .v3p-platform-grid{display:grid!important;grid-template-columns:1fr!important;gap:0!important;margin-top:0!important}
+body.phase1-products .v12-directory-group .v3p-platform-card{display:grid!important;grid-template-columns:154px minmax(0,1fr)!important;grid-template-rows:auto!important;min-height:146px!important;border:0!important;border-bottom:1px solid var(--ie-line)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;transform:none!important}
+body.phase1-products .v12-directory-group .v3p-platform-card .media{height:146px!important;min-height:0!important;max-height:none!important;background:transparent!important}
+body.phase1-products .v12-directory-group .v3p-platform-card .media img{width:100%!important;height:146px!important;min-height:0!important;object-fit:contain!important;transform:none!important;padding:10px!important}
+body.phase1-products .v12-directory-group .v3p-platform-card .copy{display:grid!important;grid-template-columns:minmax(0,1.2fr) minmax(110px,.45fr) minmax(160px,.8fr)!important;grid-template-rows:auto!important;align-items:center;gap:16px;padding:16px!important}
+body.phase1-products .v12-directory-group .v3p-platform-card h3{grid-column:1!important;grid-row:1!important;margin:0!important;min-height:0!important;font-size:17px!important}
+body.phase1-products .v12-directory-group .v3p-platform-card .range{grid-column:2!important;grid-row:1!important;margin:0!important;font-size:14px!important;color:var(--ie-teal)!important}
+body.phase1-products .v12-directory-group .v3p-platform-card small{grid-column:3!important;grid-row:1!important;font-size:13px!important;color:var(--ie-muted)!important}
+body.phase1-products .catalog-v8-family-links{margin-top:20px;padding:0;border:0;border-radius:0;background:transparent}
+body.phase1-products .catalog-v8-family-card-grid{display:block}
+body.phase1-products .catalog-v8-family-card{border:0;border-bottom:1px solid var(--ie-line);border-radius:0;background:transparent;box-shadow:none}
+body.phase1-products .catalog-v8-family-card img{object-fit:contain}
+
+/* Product family and technical pages retain their data density. */body .v3p-family-hero+section .v3p-platform-card{border-radius:0;box-shadow:none}
+body .v3p-family-hero+section .v3p-platform-card img{object-fit:contain!important;transform:none!important}body .v3p-cta{padding:40px max(24px,calc((100% - 1200px)/2));background:var(--ie-navy)}
+
+/* Manufacturing proof uses readable steps and real process photography. */body.mfg34 .mfg34-step{border:1px solid var(--ie-line);border-radius:0;background:#fff}body.mfg34 #digital img{max-height:410px;object-fit:contain}
+/* Documents and projects remain dense and searchable. */body .evidence-card{border-radius:4px;box-shadow:none}
+/* Controls and touch targets. */
+body [data-marquee-toggle]{min-width:32px!important;min-height:32px!important}
+body .quote-form input,body .quote-form select,body .quote-form textarea{min-height:44px}
+body .quote-form button,body .quote-form .btn{min-height:44px}
+
+@media(max-width:1024px){  body.phase1-products .v12-directory-group .v3p-platform-card .copy{grid-template-columns:minmax(0,1fr) 140px!important}
+  body.phase1-products .v12-directory-group .v3p-platform-card small{grid-column:1/-1!important;grid-row:2!important}
+}
+@media(max-width:768px){  body .ty16-map-stage{height:330px;min-height:0}  body .quote-band .quote-form{order:1;width:100%}}
+@media(max-width:900px){
+  body .site-header{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:10px!important;padding:12px 18px!important;min-height:0!important}
+  body .site-header .brand{grid-column:1;grid-row:1}
+  body .site-header .menu-toggle{display:inline-flex!important;grid-column:2;grid-row:1;align-items:center;justify-content:center;min-height:44px}
+  body .site-header .main-nav{grid-column:1/-1;grid-row:3}
+  body .site-header .header-actions{display:flex!important;grid-column:1/-1;grid-row:2;width:100%;min-width:0;justify-self:stretch}
+  body .site-header .header-actions .language{display:none!important}
+  body .site-header .header-actions .btn{display:inline-flex!important;align-items:center;justify-content:center;width:100%;min-height:44px}
+}
+@media(max-width:600px){  body .ty16-map-stage{height:280px;min-height:0}  body.phase1-products .v12-directory-group{display:block!important}
+  body.phase1-products .v12-directory-group .v3p-platform-card{grid-template-columns:112px minmax(0,1fr)!important;min-height:130px!important}
+  body.phase1-products .v12-directory-group .v3p-platform-card .media,body.phase1-products .v12-directory-group .v3p-platform-card .media img{height:130px!important}
+  body.phase1-products .v12-directory-group .v3p-platform-card .copy{display:flex!important;flex-direction:column;align-items:flex-start;gap:4px;padding:12px!important}
+  body.phase1-products .v12-directory-group .v3p-platform-card h3{font-size:14px!important}
+  body.phase1-products .v12-directory-group .v3p-platform-card .range,body.phase1-products .v12-directory-group .v3p-platform-card small{font-size:12px!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}body *,body *::before,body *::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}

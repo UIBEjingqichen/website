@@ -1,0 +1,238 @@
+/* ==========================================================================
+   Tianyu refresh layer (v60)
+   Load LAST on every page, after industrial-editorial.css.
+   Direction: engineering dossier. White paper, hairline rules, deep tank-navy
+   bands, Tianyu logo red used only for actions and live/active states.
+   Replaces the pale tinted boxes used by earlier layers.
+   ========================================================================== */
+html body,html body main{background:#fff!important;color:var(--tr-text);font-family:"Segoe UI Variable Text","Segoe UI",Inter,system-ui,-apple-system,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif!important;-webkit-font-smoothing:antialiased}
+html body h1,html body h2,html body h3,html body h4{font-family:"Segoe UI Variable Display","Segoe UI",Inter,system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif!important;color:var(--tr-navy);font-weight:600;letter-spacing:-.02em}
+html body table,html body [class*="stat"] strong,html body [class*="metric"] strong{font-variant-numeric:tabular-nums}
+
+/* ---------- eyebrows / kickers: quiet, sentence case ---------- */
+html body .eyebrow{color:var(--tr-muted)!important;text-transform:none!important;letter-spacing:0!important;font-size:13px!important;font-weight:600!important}
+
+/* ---------- header: one system for every page ---------- */
+html body .site-header{display:flex!important;align-items:center;gap:28px;min-height:72px;
+  padding:0 max(24px,calc((100vw - var(--tr-shell))/2))!important;background:#fff!important;
+  border-bottom:1px solid var(--tr-rule)!important;box-shadow:none!important;backdrop-filter:none!important;grid-template-columns:none}
+html body .site-header .brand{display:flex;align-items:center;gap:10px;color:var(--tr-navy)!important;text-decoration:none;flex:none}
+html body .site-header .brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:2px;background:var(--tr-red)!important;color:#fff!important;font-size:12px;font-weight:700;letter-spacing:.02em}
+html body .site-header .brand strong{display:block;font-size:15px;font-weight:650;color:var(--tr-navy)}
+html body .site-header .brand small{display:block;font-size:11px;color:var(--tr-muted)}
+html body .site-header .main-nav{display:flex;flex:1;justify-content:center;gap:4px;align-items:stretch;padding:0;border:0}
+html body .site-header .nav-item{position:relative;display:flex}
+html body .site-header .nav-item>a{display:flex;align-items:center;min-height:72px;padding:0 12px!important;border:0!important;
+  color:var(--tr-text)!important;font-size:14px!important;font-weight:500!important;text-decoration:none;box-shadow:none!important;background:none!important}
+html body .site-header .nav-item>a:hover{color:var(--tr-navy)!important}
+html body .site-header .nav-item>a.active{color:var(--tr-navy)!important;box-shadow:inset 0 -2px 0 var(--tr-accent)!important}
+html body .site-header .nav-dropdown>a::after{content:"";display:inline-block;width:5px;height:5px;margin:0 0 3px 7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);opacity:.55}
+html body .site-header .dropdown-menu{top:100%!important;border:1px solid var(--tr-rule)!important;border-radius:0!important;box-shadow:0 18px 40px rgba(13,33,51,.12)!important;padding:6px!important;min-width:250px}
+html body .site-header .dropdown-menu a{border-radius:0!important;color:var(--tr-text)!important;font-size:14px}
+html body .site-header .dropdown-menu a:hover{background:var(--tr-mist)!important;color:var(--tr-navy)!important}
+html body .site-header .header-actions{display:flex;align-items:center;gap:14px;flex:none}
+html body .site-header .language{padding:0!important;border:0!important;color:var(--tr-muted);font-size:12px;font-weight:600}
+html body .site-header .menu-toggle{display:none;border:1px solid var(--tr-rule)!important;border-radius:2px;background:#fff;color:var(--tr-navy);padding:8px 12px;font:inherit;font-size:14px}
+
+/* ---------- buttons ---------- */
+html body .btn,html body .tr-btn{border-radius:2px!important;min-height:44px;padding:10px 18px;font-size:14px!important;font-weight:600!important;box-shadow:none!important;transform:none!important;letter-spacing:0}
+html body .btn-primary,html body .site-header .btn,html body .tr-btn--primary{background:var(--tr-accent)!important;border:1px solid var(--tr-accent)!important;color:#fff!important}
+html body .btn-primary:hover,html body .site-header .btn:hover,html body .tr-btn--primary:hover{background:var(--tr-accent-dark)!important;border-color:var(--tr-accent-dark)!important}html body a:focus-visible,html body button:focus-visible,html body [tabindex]:focus-visible{outline:2px solid var(--tr-accent)!important;outline-offset:3px!important}
+
+/* ---------- remove scroll-reveal hiding and hover jitter ---------- */
+html body .v8-reveal,html body .v8-reveal:hover,html body [data-vs-reveal]{opacity:1!important;transform:none!important}
+
+/* ---------- de-box: pale tinted panels become white with hairlines ---------- */
+html body .section.pale{background:#fff!important}
+html body main>section+section.section{border-top:1px solid var(--tr-rule)}
+
+/* generic card treatment: no fill, no shadow, no radius */
+html body .v3p-platform-card,
+html body .mfg34-metric,
+html body .company-metric,
+html body .yw-news-card,
+html body .vs-doc-card,
+html body .vs-related-card,
+html body .v3p-spec,
+html body .mfg34-step,
+html body .mfg34-system,
+html body .mfg34-test-item,
+html body .evidence-card{background:#fff!important;box-shadow:none!important;border-radius:0!important}
+
+/* chips / proof tags: plain text separated by a rule, not pale pills */html body .v3p-family-nav a.current{border-left-color:var(--tr-accent)!important;color:var(--tr-navy)!important}
+
+/* ---------- tables: engineering data sheet ---------- */
+html body .v3p-table-wrap{border:1px solid #dbe3ea!important;border-radius:12px!important;background:#fff;box-shadow:0 1px 2px rgba(13,33,51,.04),0 12px 32px -12px rgba(13,33,51,.14)!important;overflow-x:auto}
+/* ---------- products directory ---------- */html body .v12-directory-head .v3p-kicker{display:none}html body .v3p-platform-card{border:0!important;border-top:1px solid var(--tr-rule)!important}
+html body .v3p-platform-card .media{background:#fff!important}
+html body .v3p-platform-card:hover h3{color:var(--tr-accent)!important}
+
+/* ---------- family hero alignment with the content shell ---------- */
+/* ---------- manufacturing process: equal cards, numbered because it is a sequence ---------- */html body .mfg34-step{display:flex!important;flex-direction:column;counter-increment:step;border:0!important;border-right:1px solid var(--tr-rule)!important;border-bottom:1px solid var(--tr-rule)!important}html body .mfg34-step:not(.has-media)::after{content:counter(step,decimal-leading-zero);margin-top:auto;aspect-ratio:16/10;display:grid;place-items:center;background:var(--tr-ink);color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.4);font-size:76px;font-weight:600}
+/* ---------- quality page: heading scale in narrow cards ---------- */
+/* ---------- company metrics / stat grids: numbers on rules, no boxes ---------- */
+html body .company-metrics{gap:0!important;border:0!important;background:transparent!important}
+html body .company-metric,html body .mfg34-metric{border:0!important;border-top:1px solid var(--tr-rule)!important}
+
+/* ---------- footer (fixes invisible navy-on-navy links) ---------- */
+html body .footer{background:var(--tr-ink)!important;color:#b9c6d0;padding:64px max(24px,calc((100vw - var(--tr-shell))/2)) 32px!important}
+html body .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;max-width:none}
+html body .footer h2{color:#fff!important;font-size:20px;margin:0 0 12px}
+html body .footer h3{color:#fff!important;font-size:13px;font-weight:600;margin:0 0 14px;letter-spacing:.02em}
+html body .footer p{color:#9fb0bd!important;opacity:1!important;font-size:14px;line-height:1.6;margin:0 0 8px}
+html body .footer a{display:block;color:#d4dde4!important;opacity:1!important;font-size:14px;margin:0 0 9px;text-decoration:none}
+html body .footer a:hover{color:#fff!important;text-decoration:underline;text-underline-offset:3px}
+html body .footer-bottom{display:flex;justify-content:space-between;gap:20px;margin-top:48px;padding-top:20px;border-top:1px solid var(--tr-rule-dark)!important;color:#8196a5!important;font-size:13px}
+html body .footer-bottom a{display:inline;margin:0}
+
+/* ---------- quote modal ---------- */
+html body .quote-panel{border-radius:2px!important;border-top:3px solid var(--tr-accent)!important}
+html body .quote-form input,html body .quote-form select,html body .quote-form textarea{border-radius:2px!important;border-color:var(--tr-rule)!important;background:#fff!important}
+html body .quote-context{grid-column:1/-1;margin:0 0 8px;padding:12px;background:#edf3f6;color:#203b50;font-size:14px;line-height:1.5}
+html body .quote-form .full{grid-column:1/-1}
+html body .quote-form .inquiry-note{margin:0;font-size:13px;color:#33485a;line-height:1.5}
+html body .quote-form .inquiry-fallback{font-size:13px;text-decoration:underline;text-underline-offset:3px;color:#17577e}
+html body .quote-form button:disabled{opacity:.65;cursor:not-allowed;transform:none}
+html body .quote-form [data-inquiry-verification]{min-width:0}
+html body .quote-form .form-message{font-size:14px;color:#33485a;line-height:1.5;overflow-wrap:anywhere}
+
+/* Shared inquiry layout: contact details and attachments before optional specifications. */
+html body .rfq-refined{gap:16px;align-items:start}
+html body .rfq-refined fieldset{min-width:0;margin:0;padding:0;border:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px}
+html body .rfq-refined legend{width:100%;padding:0;margin:0 0 12px;color:#14304a;font-size:17px;font-weight:600}
+html body .rfq-refined label{display:block;min-width:0;color:#243e52;font-size:14px}
+html body .rfq-refined label input,html body .rfq-refined label textarea,html body .rfq-refined label select{display:block;width:100%;margin-top:6px;min-height:44px;box-sizing:border-box}
+html body .rfq-refined .rfq-required{float:none;margin-left:6px}
+html body .rfq-refined .rfq-optional{float:right;margin-left:8px;font-size:12px;font-weight:400;color:#526576}
+html body .rfq-refined .rfq-help{margin:0;color:#4d6274;font-size:14px;line-height:1.55}
+html body .rfq-refined .rfq-needs{padding-top:8px}
+html body .rfq-refined .rfq-detail-group{padding:16px 0 8px;border-top:1px solid #c4d0d9}
+html body .rfq-refined .rfq-detail-group legend{padding-top:12px;font-size:16px}
+html body .rfq-refined .form-message:empty{display:none}
+html body .rfq-refined .form-message:not(:empty){margin:0;padding:12px 14px;background:#edf2f6;color:#243e52}
+html body .rfq-refined .v3p-rfq-details{grid-column:1/-1;width:auto;margin:4px 0 0;border-top:1px solid #bdc9d2;padding-top:4px;background:transparent}
+html body .rfq-refined summary{min-height:44px;padding:12px 0;color:#14304a;font-weight:600;cursor:pointer}
+html body .rfq-refined .v3p-rfq-grid{padding:12px 0;gap:16px}
+html body .rfq-refined input[type=file]{padding:9px;font-size:14px!important}
+html body .rfq-refined input[type=file]::file-selector-button{padding:6px 10px;margin-right:10px;border:1px solid #8293a1;border-radius:2px;background:#eef2f6;color:#14304a;cursor:pointer;font:inherit}
+html body .quote-panel .rfq-refined{padding:0;border:0;box-shadow:none;background:transparent}
+html body .quote-panel:has(.rfq-refined)>p{display:none}
+html body .quote-panel:has(.rfq-refined)>h2{margin:0 0 12px;font-size:28px}
+@media(max-width:760px){html body .rfq-refined fieldset{grid-template-columns:minmax(0,1fr)}}
+
+html body .counter-value{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+html body .rfq-refined .rfq-character-count{display:block;margin-top:6px;color:#4d6274;font-size:12px;font-weight:400}
+html body .rfq-refined .rfq-file-status{margin:6px 0 0;font-size:13px;font-weight:400;overflow-wrap:anywhere;color:#33485a}
+html body .rfq-refined .rfq-file-status:empty{display:none}
+html body .rfq-refined .rfq-file-status.is-error{color:#a12121}
+html body .rfq-refined .rfq-draft{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;font-size:13px}
+html body .rfq-refined .rfq-draft label{display:flex;align-items:center;gap:8px;min-height:44px;font-weight:400}
+html body .rfq-refined .rfq-draft input[type=checkbox]{width:20px;min-height:20px!important;height:20px;margin:0;accent-color:var(--tr-accent)}
+html body .rfq-refined .rfq-draft small{flex-basis:100%;color:#4d6274;line-height:1.5}
+html body .rfq-refined .rfq-draft-clear{min-height:44px;padding:8px 0;border:0;background:transparent;color:#17577e;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+html body .rfq-refined .rfq-draft-clear[hidden]{display:none}
+html body .rfq-refined input,html body .rfq-refined textarea{caret-color:var(--tr-accent);color:#243e52}
+html body .quote-panel .modal-close{color:#14304a;background:#fff}
+html body .rfq-refined .rfq-required{color:#a12121;font-size:18px;font-weight:700;line-height:1}
+html body .quote-form .rfq-field-error{display:block;margin-top:6px;color:#a12121;font-size:13px;font-weight:400;line-height:1.5}
+html body .quote-form .rfq-field-error:empty{display:none}
+html body .quote-form [aria-invalid=true]{border-color:#a12121!important}
+html body .rfq-refined .rfq-native-file{position:absolute;width:1px!important;height:1px!important;min-height:0!important;padding:0!important;margin:0!important;opacity:0;clip-path:inset(50%);pointer-events:none}
+html body .rfq-refined .rfq-upload-control{display:flex;align-items:center;gap:12px;padding:8px;border:1px solid var(--tr-rule);margin-top:6px;min-width:0}
+html body .rfq-refined .rfq-upload-control span{min-width:0;overflow-wrap:anywhere;color:#33485a;font-size:14px;font-weight:400}
+html body .rfq-refined .rfq-upload-button{flex-shrink:0;min-height:44px;padding:8px 12px;border:1px solid #8293a1;border-radius:2px;background:#eef2f6;color:#14304a;font:inherit;cursor:pointer}
+
+/* ---------- responsive header ---------- */
+@media (max-width:1100px){
+  html body .site-header{flex-wrap:wrap;gap:12px;min-height:64px;padding:10px 20px!important}
+  html body .site-header .brand{order:1}
+  html body .site-header .header-actions{order:2}
+  html body .site-header .menu-toggle{order:3;display:inline-block!important}
+  html body .site-header .main-nav{order:4;display:none!important;flex-basis:100%;flex-direction:column;justify-content:flex-start;padding:8px 0 16px;border-top:1px solid var(--tr-rule)}
+  html body .site-header .main-nav.open{display:flex!important}
+  html body .site-header .nav-item{flex-direction:column;width:100%}
+  html body .site-header .nav-item>a{min-height:44px;padding:0!important;box-shadow:none!important;font-size:16px!important}
+  html body .site-header .nav-item>a.active{color:var(--tr-accent)!important}
+  html body .site-header .nav-dropdown>a::after{display:none}
+  html body .site-header .dropdown-menu{position:static!important;display:block!important;opacity:1!important;visibility:visible!important;transform:none!important;border:0!important;box-shadow:none!important;padding:0 0 8px 14px!important;min-width:0}
+  html body .site-header .dropdown-menu a{padding:7px 0!important;color:var(--tr-muted)!important;background:none!important}
+  html body .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  html body .site-header .language{display:none}
+  html body .site-header .header-actions .btn{display:inline-flex!important;width:auto!important;min-height:40px;padding:8px 12px;font-size:13px!important}
+  html body .site-header .brand small{display:none}
+  html body .footer-grid{grid-template-columns:1fr}
+  html body .footer-bottom{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* ---------- products index hero: no boxes ---------- */html body .v23-carousel-dot.is-active{background:var(--tr-accent)!important}
+/* ---------- remaining pale fills found in page layers ---------- */
+html body.phase1-manufacturing,html body.company-page,html body.phase1-detail{background:#fff!important}
+html body .mfg34-jump{background:#fff!important;border-bottom:1px solid var(--tr-rule)!important}
+html body .mfg34-jump a.is-active,html body .mfg34-jump a:hover{background:transparent!important;color:var(--tr-accent)!important}
+html body .mfg34-system,
+html body .mfg34-digital-visual,
+html body .mfg34-test-item,
+html body .mfg34-test-photo,
+html body .mfg34-test-photo figcaption,
+html body .mfg34-gallery figure,
+html body .mfg34-faq details,
+html body .phase1-detail #ratings,
+html body .phase1-detail #drawings,
+html body .v3p-gallery .drawing{background:#fff!important;box-shadow:none!important}
+html body .mfg34-faq details{border:0!important;border-bottom:1px solid var(--tr-rule)!important;border-radius:0!important}
+html body .v3p-cta{background:var(--tr-ink)!important;color:#c9d5de!important;border-radius:0!important}
+html body .v3p-cta h2{color:#fff!important}
+html body .v3p-cta p{color:#b3c2cd!important}
+html body .v3p-cta .v3p-kicker{color:#ff6b6e!important}
+html body .v3p-gallery .drawing img{border:1px solid var(--tr-rule)}
+html body .mfg34-section a[class*="area"],html body [class*="mfg34-area"]{background:#fff!important;box-shadow:none!important;border-radius:0!important}
+@media (max-width:1100px){
+  html body .site-header .brand{flex:1 1 auto;min-width:0}
+  html body .site-header .header-actions{width:auto!important;grid-column:auto!important;justify-self:auto!important}
+}
+@media (max-width:440px){
+  html body .site-header{gap:8px;padding:10px 16px!important}
+  html body .site-header .brand span:not(.brand-mark){display:none}
+}
+
+
+
+/* ================= v63: eased section fades =================
+   Light <-> ink transitions use a 120px smoothstep ramp interpolated in OKLCH with a small
+   chroma lift mid-way, so the band deepens through blue instead of passing through grey fog.
+   Stop lists are shared as custom properties; every dark band starts/ends on the exact
+   colour of its neighbour. */
+/* v63: company contact details in every footer (address, sales, service, email) */
+.footer .footer-contact{display:grid;gap:5px;margin-top:16px;font-style:normal;font-size:13px;line-height:1.55;color:#9fb3c2}
+.footer .footer-contact a{display:inline!important;padding:0!important;margin:0!important;color:#dfe8ee;text-decoration:none;border-bottom:1px solid rgba(124,196,255,.35)}
+.footer .footer-contact>a{justify-self:start}
+.footer .footer-contact a:hover{color:#fff;border-color:#7cc4ff}
+
+/* Main navigation feedback */
+html body .site-header .main-nav > .nav-item > a { transition: color 160ms ease, transform 160ms ease; }
+@media (hover: hover) {
+  html body .site-header .main-nav > .nav-item > a:hover { color: #008b91 !important; transform: translateY(-2px); }
+}
+html body .site-header .main-nav > .nav-item > a:active { color: #006f75 !important; transform: translateY(1px) scale(.97); }
+@media (min-width: 1101px) {
+  html body .site-header .main-nav > .nav-item > a.active { box-shadow: none !important; background: linear-gradient(var(--tr-accent), var(--tr-accent)) center calc(50% + 20px) / calc(100% - 24px) 2px no-repeat !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body .site-header .main-nav > .nav-item > a { transition: color 160ms ease; }
+  html body .site-header .main-nav > .nav-item > a:hover, html body .site-header .main-nav > .nav-item > a:active { transform: none; }
+}
+
+/* Dropdown link feedback */
+html body .site-header .main-nav .dropdown-menu a { transition: color 160ms ease, background-color 160ms ease, transform 160ms ease; }
+@media (hover: hover) {
+  html body .site-header .main-nav .dropdown-menu a:hover { color: #fff !important; background: #55595c !important; transform: translateX(3px); }
+}
+html body .site-header .main-nav .dropdown-menu a:focus-visible { color: #fff !important; background: #55595c !important; }
+html body .site-header .main-nav .dropdown-menu a:active { color: #fff !important; background: #414548 !important; transform: translateX(2px) scale(.98); }
+@media (prefers-reduced-motion: reduce) {
+  html body .site-header .main-nav .dropdown-menu a { transition: color 160ms ease, background-color 160ms ease; }
+  html body .site-header .main-nav .dropdown-menu a:hover, html body .site-header .main-nav .dropdown-menu a:active { transform: none; }
+}

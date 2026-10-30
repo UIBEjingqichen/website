@@ -1,0 +1,33 @@
+/* Catalog-first image quality pass. Preserve evidence/document previews; normalize marketing photography. */
+
+/* Product-family cards should show the machine clearly instead of cropping away radiators, bushings or enclosure edges. */
+.v3p-products-home .v3p-family-card-media{height:auto!important;aspect-ratio:4/3;overflow:hidden;background:linear-gradient(180deg,#f7f9fa,#edf2f4)}
+.v3p-products-home .v3p-family-card-media img{width:100%;height:100%;padding:16px!important;object-fit:contain!important;object-position:center;transform:none!important}
+
+/* Product index hero is also a product view, not a lifestyle crop. */
+/* Product range cards stay aligned even when source images have different native ratios. */
+.v3p-platform-grid .v3p-platform-card{
+  grid-template-rows:auto 1fr;
+}
+.v3p-platform-grid .v3p-platform-card .media{
+  aspect-ratio:4/3;
+  overflow:hidden;
+  background:#f4f7f8;
+}
+.v3p-platform-grid .v3p-platform-card .media img{
+  width:100%;
+  height:100%;
+  max-width:none;
+  max-height:none;
+  padding:14px!important;
+  object-fit:contain!important;
+  object-position:center;
+}
+
+/* Detailed product pages should show the complete machine/drawing, not amputate technical details. */
+.v3p-photo:not(.cover){background:linear-gradient(180deg,#f8fafb,#eef3f5)}
+.v3p-photo:not(.cover) img{object-fit:contain!important;object-position:center}
+/* The former irregular collage is now a calm 3 x 2 grid of six distinct source images. */
+/* Proof cards use photographic crops and equal-height media windows. */
+/* Hero photography fills its frame consistently; no stretching. */@media(max-width:620px){  .v3p-products-home .v3p-family-card-media{aspect-ratio:16/10}
+}

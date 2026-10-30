@@ -1,0 +1,63 @@
+/* Design tokens: the single source for site-wide custom properties.
+   Generated from the effective values every page resolved before the CSS refactor.
+   Change a colour here, not in a component file. */
+:root{
+  /* Brand palette (Tianyu refresh) */
+  --tr-ink:#0d2133;
+  --tr-navy:#14304a;
+  --tr-text:#33485a;
+  --tr-muted:#4d6274;
+  --tr-rule:#d8dee3;
+  --tr-rule-dark:rgba(255,255,255,.14);
+  --tr-paper:#ffffff;
+  --tr-mist:#f3f4f5;
+  --tr-red:#c8161e;
+  --tr-accent:#176bb0;
+  --tr-accent-dark:#1665aa;
+  --tr-steel:#eef2f6;
+  --tr-steel-2:#e3e9ef;
+  --tr-shell:1200px;
+  /* Edge fades and scrims (generated gradients used by section transitions) */
+  --fx-len:120px;
+  --fx-in-paper:#f6f8fa 0,#f1f5f8 8.8px,#e4ebf1 17.1px,#d0dce8 25.8px,#b8c9da 34.2px,#9cb4ca 42.9px,#809cb7 51.2px,#6684a1 60px,#4e6d89 68.8px,#395772 77.1px,#29435b 85.8px,#1c3348 94.2px,#13273a 102.9px,#0d2030 111.2px,#0b1d2d 120px;
+  --fx-in-steel:#eef2f6 0,#e9eff4 8.8px,#dde5ee 17.1px,#c9d7e4 25.8px,#b1c5d7 34.2px,#97b0c7 42.9px,#7c99b5 51.2px,#62819f 60px,#4b6a88 68.8px,#375571 77.1px,#28425b 85.8px,#1b3348 94.2px,#122739 102.9px,#0d2030 111.2px,#0b1d2d 120px;
+  --fx-in-steel2:#e3e9ef 0,#dfe6ed 8.8px,#d2dde7 17.1px,#c0cfde 25.8px,#a9bed2 34.2px,#8fa9c3 42.9px,#7594b0 51.2px,#5d7d9c 60px,#476785 68.8px,#35536f 77.1px,#264159 85.8px,#1a3247 94.2px,#122739 102.9px,#0d1f30 111.2px,#0b1d2d 120px;
+  --fx-out-paper:#0b1d2d calc(100% - 120px),#0d2030 calc(100% - 111.2px),#13273a calc(100% - 102.9px),#1c3348 calc(100% - 94.2px),#29435b calc(100% - 85.8px),#395772 calc(100% - 77.1px),#4e6d89 calc(100% - 68.8px),#6684a1 calc(100% - 60px),#809cb7 calc(100% - 51.2px),#9cb4ca calc(100% - 42.9px),#b8c9da calc(100% - 34.2px),#d0dce8 calc(100% - 25.8px),#e4ebf1 calc(100% - 17.1px),#f1f5f8 calc(100% - 8.8px),#f6f8fa 100%;
+  --fx-out-steel:#0b1d2d calc(100% - 120px),#0d2030 calc(100% - 111.2px),#122739 calc(100% - 102.9px),#1b3348 calc(100% - 94.2px),#28425b calc(100% - 85.8px),#375571 calc(100% - 77.1px),#4b6a88 calc(100% - 68.8px),#62819f calc(100% - 60px),#7c99b5 calc(100% - 51.2px),#97b0c7 calc(100% - 42.9px),#b1c5d7 calc(100% - 34.2px),#c9d7e4 calc(100% - 25.8px),#dde5ee calc(100% - 17.1px),#e9eff4 calc(100% - 8.8px),#eef2f6 100%;
+  --fx-hero-steel:rgba(11,29,45,0) calc(100% - 138.5px),rgba(11,29,45,0.00) calc(100% - 120px),rgba(13,32,48,0.24) calc(100% - 111.2px),rgba(18,39,57,0.48) calc(100% - 102.9px),rgba(27,51,72,0.71) calc(100% - 94.2px),rgba(40,66,91,0.95) calc(100% - 85.8px),#375571 calc(100% - 77.1px),#4b6a88 calc(100% - 68.8px),#62819f calc(100% - 60px),#7c99b5 calc(100% - 51.2px),#97b0c7 calc(100% - 42.9px),#b1c5d7 calc(100% - 34.2px),#c9d7e4 calc(100% - 25.8px),#dde5ee calc(100% - 17.1px),#e9eff4 calc(100% - 8.8px),#eef2f6 100%;
+  --fx-in-home:#f5f7f9 0,#f0f4f7 8.8px,#e3eaf1 17.1px,#d0dce8 25.8px,#b8cadb 34.2px,#9db4cc 42.9px,#819eb9 51.2px,#6786a4 60px,#4f6f8e 68.8px,#3b5a76 77.1px,#2b4761 85.8px,#1e374e 94.2px,#152b3f 102.9px,#0f2436 111.2px,#0d2133 120px;
+  --fx-in-home2:#e3eaf0 0,#dfe7ee 8.8px,#d3dee9 17.1px,#c1d0e0 25.8px,#aabfd4 34.2px,#91acc6 42.9px,#7796b4 51.2px,#5f80a0 60px,#496a8a 68.8px,#375674 77.1px,#28445f 85.8px,#1c364d 94.2px,#142b3f 102.9px,#0f2336 111.2px,#0d2133 120px;
+  --fx-out-home:#0d2133 calc(100% - 120px),#0f2436 calc(100% - 111.2px),#152b3f calc(100% - 102.9px),#1e374e calc(100% - 94.2px),#2b4761 calc(100% - 85.8px),#3b5a76 calc(100% - 77.1px),#4f6f8e calc(100% - 68.8px),#6786a4 calc(100% - 60px),#819eb9 calc(100% - 51.2px),#9db4cc calc(100% - 42.9px),#b8cadb calc(100% - 34.2px),#d0dce8 calc(100% - 25.8px),#e3eaf1 calc(100% - 17.1px),#f0f4f7 calc(100% - 8.8px),#f5f7f9 100%;
+  --fx-hero-home:rgba(13,33,51,0) calc(100% - 138.5px),rgba(13,33,51,0.00) calc(100% - 120px),rgba(15,36,54,0.24) calc(100% - 111.2px),rgba(20,43,63,0.48) calc(100% - 102.9px),rgba(29,54,77,0.71) calc(100% - 94.2px),rgba(41,69,96,0.95) calc(100% - 85.8px),#385875 calc(100% - 77.1px),#4b6c8c calc(100% - 68.8px),#6182a2 calc(100% - 60px),#7a99b6 calc(100% - 51.2px),#95afc8 calc(100% - 42.9px),#afc3d7 calc(100% - 34.2px),#c6d5e3 calc(100% - 25.8px),#d9e3ec calc(100% - 17.1px),#e5ecf2 calc(100% - 8.8px),#e9eff4 100%;
+  --fx-out-steel-from-ink:#0b1d2d calc(100% - 120px),#0d2030 calc(100% - 111.2px),#122739 calc(100% - 102.9px),#1b3348 calc(100% - 94.2px),#28425b calc(100% - 85.8px),#375571 calc(100% - 77.1px),#4b6a88 calc(100% - 68.8px),#62819f calc(100% - 60px),#7c99b5 calc(100% - 51.2px),#97b0c7 calc(100% - 42.9px),#b1c5d7 calc(100% - 34.2px),#c9d7e4 calc(100% - 25.8px),#dde5ee calc(100% - 17.1px),#e9eff4 calc(100% - 8.8px),#eef2f6 100%;
+  --fx-mask-y:rgba(0,0,0,0.000) 0px,rgba(0,0,0,0.020) 9.2px,rgba(0,0,0,0.074) 18.5px,rgba(0,0,0,0.156) 27.7px,rgba(0,0,0,0.259) 36.9px,rgba(0,0,0,0.376) 46.2px,rgba(0,0,0,0.500) 55.4px,rgba(0,0,0,0.624) 64.6px,rgba(0,0,0,0.741) 73.8px,rgba(0,0,0,0.844) 83.1px,rgba(0,0,0,0.926) 92.3px,rgba(0,0,0,0.980) 101.5px,rgba(0,0,0,1.000) 110.8px,rgba(0,0,0,1.000) calc(100% - 110.8px),rgba(0,0,0,0.980) calc(100% - 101.5px),rgba(0,0,0,0.926) calc(100% - 92.3px),rgba(0,0,0,0.844) calc(100% - 83.1px),rgba(0,0,0,0.741) calc(100% - 73.8px),rgba(0,0,0,0.624) calc(100% - 64.6px),rgba(0,0,0,0.500) calc(100% - 55.4px),rgba(0,0,0,0.376) calc(100% - 46.2px),rgba(0,0,0,0.259) calc(100% - 36.9px),rgba(0,0,0,0.156) calc(100% - 27.7px),rgba(0,0,0,0.074) calc(100% - 18.5px),rgba(0,0,0,0.020) calc(100% - 9.2px),rgba(0,0,0,0) 100%;
+  --fx-scrim-home:rgba(233,239,244,1.000) 0px,rgba(233,239,244,0.980) 7.8px,rgba(233,239,244,0.926) 15.2px,rgba(233,239,244,0.844) 23.1px,rgba(233,239,244,0.741) 30.9px,rgba(233,239,244,0.624) 38.3px,rgba(233,239,244,0.500) 46.2px,rgba(233,239,244,0.376) 54px,rgba(233,239,244,0.259) 61.4px,rgba(233,239,244,0.156) 69.2px,rgba(233,239,244,0.074) 77.1px,rgba(233,239,244,0.020) 84.5px,rgba(233,239,244,0.000) 92.3px;
+  /* Legacy aliases — older component layers read these names; they all resolve to the brand palette */
+  --ie-shell:1200px;
+  --ie-teal:var(--tr-navy);
+  --ie-navy:var(--tr-navy);
+  --ie-text:var(--tr-text);
+  --ie-muted:var(--tr-muted);
+  --ie-line:var(--tr-rule);
+  --ie-bg:#fff;
+  --ty-teal:var(--tr-navy);
+  --ty-teal-dark:var(--tr-navy);
+  --teal:var(--tr-navy);
+  --ty-surface:#fff;
+  --ty-soft:#fff;
+  --ty-panel:#fff;
+  --ty-border:var(--tr-rule);
+  --ty-navy:var(--tr-navy);
+  --ty-text:var(--tr-text);
+  --ty-muted:var(--tr-muted);
+  --v6-bg:#fff;
+  --v7-pale:#fff;
+  --v7-line:var(--tr-rule);
+  --v8-bg:#fff;
+  --v8-band:#fff;
+  --v8-band-strong:#fff;
+  --v8-surface:#fff;
+  --v8-line:var(--tr-rule);
+  --v9-card:#fff;
+  --v9-line:var(--tr-rule);
+}

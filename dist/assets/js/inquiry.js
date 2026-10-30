@@ -85,7 +85,9 @@
     keep.type = 'checkbox'; keepLabel.append(keep, ' Keep a text draft in this tab');
     const clear = document.createElement('button'); clear.type = 'button'; clear.className = 'rfq-draft-clear'; clear.textContent = 'Clear draft'; clear.hidden = true;
     const draftStatus = document.createElement('small'); draftStatus.setAttribute('aria-live', 'polite');
-    draft.append(keepLabel, clear, draftStatus); form.querySelector('.inquiry-note').before(draft);
+    draft.append(keepLabel, clear, draftStatus);
+    // The note paragraph was removed from some templates; fall back so the script never stops here.
+    (form.querySelector('.inquiry-note') || verification || submit).before(draft);
     const removeDraft = () => { try { sessionStorage.removeItem(draftKey); } catch {} };
     const saveDraft = () => {
       if (!keep.checked || state.sent) return;
