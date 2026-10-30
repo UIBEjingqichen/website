@@ -55,7 +55,7 @@
 .pg-tone-b{background:linear-gradient(180deg,var(--paper) 0%,var(--steel) 100%)}   /* paper -> steel */
 .pg-tone-p{background:var(--paper)}
 /* dark band; its top fade starts from steel, bottom fade ends in paper */
-.pg-band{color:#c9d5de;padding:calc(clamp(64px,7vw,104px) + 110px) 0!important;
+.pg-band{color:#c9d5de;padding:calc(clamp(48px,5.2vw,76px) + 64px) 0!important;
   background:linear-gradient(180deg,var(--steel) 0,#c9d3dc 26px,#8c9dab 55px,#3a5064 90px,#13304a 120px,var(--ink) 150px,var(--ink) calc(100% - 150px),#13304a calc(100% - 120px),#3a5064 calc(100% - 90px),#8c9dab calc(100% - 55px),#c9d3dc calc(100% - 26px),var(--paper) 100%)}
 .pg-band--from-paper{background:linear-gradient(180deg,var(--paper) 0,#c9d3dc 26px,#8c9dab 55px,#3a5064 90px,#13304a 120px,var(--ink) 150px,var(--ink) calc(100% - 150px),#13304a calc(100% - 120px),#3a5064 calc(100% - 90px),#8c9dab calc(100% - 55px),#c9d3dc calc(100% - 26px),var(--paper) 100%)}
 .pg-band h2,.pg-band h3{color:#fff!important}
@@ -285,7 +285,11 @@ a.pg-shot:hover img{transform:scale(1.03)}
 }
 
 /* small modifiers */
-.pg-kv--stack div{grid-template-columns:1fr;gap:4px}
+.pg-kv--stack{border-top:0;background:#fff;border:1px solid #dbe3ea;border-radius:12px;overflow:hidden;position:relative;box-shadow:0 1px 2px rgba(13,33,51,.04),0 12px 32px -14px rgba(13,33,51,.16)}
+.pg-kv--stack::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,#176bb0,#4aa3e8 60%,rgba(74,163,232,0))}
+.pg-kv--stack div{grid-template-columns:1fr;gap:4px;padding:15px 20px;border-bottom:1px solid #edf1f5;transition:background-color .15s}
+.pg-kv--stack div:last-child{border-bottom:0}
+.pg-kv--stack div:hover{background:#f5f9fc}
 .pg-kv--stack dt{color:var(--navy);font-weight:600}
 .pg-kv--stack dd{font-weight:400;color:#4d6272}
 .pg-when{display:block;margin:0 0 4px;font-size:12px;font-weight:600;color:var(--mut)}
@@ -301,7 +305,7 @@ a.pg-shot:hover img{transform:scale(1.03)}
 .pg-steps--4>li::after,.pg-steps--text>li::after{display:none}
 
 /* a dark band that runs straight into the CTA keeps ink at its lower edge */
-.pg-band.pg-band--end{padding-bottom:clamp(64px,7vw,104px)!important;background:linear-gradient(180deg,var(--steel) 0,#c9d3dc 26px,#8c9dab 55px,#3a5064 90px,#13304a 120px,var(--ink) 150px,var(--ink) 100%)}
+.pg-band.pg-band--end{padding-bottom:clamp(48px,5.2vw,76px)!important;background:linear-gradient(180deg,var(--steel) 0,#c9d3dc 26px,#8c9dab 55px,#3a5064 90px,#13304a 120px,var(--ink) 150px,var(--ink) 100%)}
 .pg-band--from-paper.pg-band--end{background:linear-gradient(180deg,var(--paper) 0,#c9d3dc 26px,#8c9dab 55px,#3a5064 90px,#13304a 120px,var(--ink) 150px,var(--ink) 100%)}
 .pd-cta.pg-cta--flush{background:var(--ink);padding-top:clamp(56px,6vw,88px);border-top:1px solid rgba(255,255,255,.1)}
 .pg-feat-4{grid-template-columns:repeat(4,1fr)}
@@ -316,12 +320,12 @@ a.pg-shot:hover img{transform:scale(1.03)}
 
 /* ================= v63: eased fades (stops in tianyu-refresh.css) ================= */
 .pg-hero--img::after{background:linear-gradient(180deg,var(--fx-hero-steel)),linear-gradient(90deg,rgba(11,29,45,.95) 0%,rgba(11,29,45,.84) 42%,rgba(11,29,45,.42) 78%,rgba(11,29,45,.3) 100%)}
-.pg-hero--compact{padding-bottom:210px}
+.pg-hero--compact{padding-bottom:132px}
 .pg-hero--flush{background:radial-gradient(90% 120% at 82% 20%,#1f4a6c 0%,#11304a 42%,var(--ink) 100%)}
-.pg-band{padding:calc(clamp(64px,7vw,104px) + 140px) 0!important;background:linear-gradient(180deg,var(--fx-in-steel),var(--fx-out-paper))}
+.pg-band{padding:calc(clamp(48px,5.2vw,76px) + 64px) 0!important;background:linear-gradient(180deg,var(--fx-in-steel),var(--fx-out-paper))}
 .pg-band--from-paper{background:linear-gradient(180deg,var(--fx-in-paper),var(--fx-out-paper))}
 .pd-cta.pg-cta--from-paper{background:linear-gradient(180deg,var(--fx-in-paper))}
-.pg-band.pg-band--end{padding-bottom:clamp(64px,7vw,104px)!important;background:linear-gradient(180deg,var(--fx-in-steel))}
+.pg-band.pg-band--end{padding-bottom:clamp(48px,5.2vw,76px)!important;background:linear-gradient(180deg,var(--fx-in-steel))}
 .pg-band--from-paper.pg-band--end{background:linear-gradient(180deg,var(--fx-in-paper))}
 @media (max-width:560px){.pg-hero--compact{padding-bottom:160px}}
 /* v63: direct contact card on the contact page */

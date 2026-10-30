@@ -1,0 +1,234 @@
+/* Applications & projects page: visual polish (loaded last).
+   Scope: .ap60 only. Reference list is the main piece of work. */
+
+html{scroll-behavior:auto}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+/* ---------- Hero ---------- */
+.ap60-hero{min-height:480px}
+.ap60-hero::after{
+  background:
+    linear-gradient(0deg,rgba(9,24,38,.6) 0,rgba(9,24,38,0) 42%),
+    linear-gradient(90deg,rgba(9,24,38,.94) 0%,rgba(9,24,38,.74) 46%,rgba(9,24,38,.16) 100%);
+}
+.ap60-hero-inner{padding:112px 0 72px}
+.ap60-hero h1{max-width:20ch;font-size:clamp(34px,4.2vw,56px)}
+.ap60-hero p:not(.tr-over){color:#d5e0e8;line-height:1.6}
+
+/* ---------- International references ---------- */
+.ap60-table--intl{border-collapse:separate!important;border-spacing:0;border-top:0!important;background:#fff;border:1px solid #dbe3ea;border-radius:12px;overflow:hidden;box-shadow:0 1px 2px rgba(13,33,51,.04),0 12px 32px -14px rgba(13,33,51,.16)}
+.ap60-table--intl thead th{background:linear-gradient(180deg,#f4f7fa,#eaf0f5);color:#47607a;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;padding:13px 16px;border-bottom:1px solid #cfdbe5;box-shadow:inset 0 2px 0 var(--tr-accent)}
+.ap60-table--intl thead th:first-child{width:118px}
+.ap60-table--intl tbody th,.ap60-table--intl td{padding:14px 16px;border-bottom:1px solid #edf1f5;vertical-align:middle;transition:background-color .15s}
+.ap60-table--intl tbody tr:last-child>*{border-bottom:0}
+.ap60-table--intl tbody tr:hover>*{background:#f2f7fc}
+.ap60-table--intl td:nth-child(2) a{border-bottom:0;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.ap60-table--intl td:nth-child(2) a::after{content:"\2192";font-weight:400;color:var(--tr-accent);opacity:0;transform:translateX(-4px);transition:opacity .15s,transform .15s}
+.ap60-table--intl tr:hover td a::after{opacity:1;transform:none}
+.ap60-table--intl td:last-child{color:#5a7085;font-size:13.5px}
+.tbl-country{display:inline-block;padding:3px 9px;border-radius:6px;background:#eef3f7;color:#35506a;font-size:11.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+@media (max-width:620px){.ap60-table--intl tr{padding:12px 14px!important}.ap60-table--intl tbody th,.ap60-table--intl td{padding:3px 0!important}}
+.ap60-intl-img img{outline:1px solid rgba(13,33,51,.14);outline-offset:-1px}
+.ap60-intl-img figcaption{margin-top:12px;padding-left:12px;border-left:3px solid var(--tr-accent);line-height:1.4}
+
+/* ---------- Benchmark projects ---------- */
+.ap60-bench-grid{gap:32px}
+.ap60-bench-grid article{
+  position:relative;display:flex;flex-direction:column;overflow:hidden;
+  background:#fff;border:1px solid var(--tr-rule);padding-bottom:26px;
+}
+.ap60-bench-grid img{margin-bottom:0}
+.ap60-bench-grid article>:not(img){margin-left:22px;margin-right:22px}
+.ap60-bench-grid .ap60-meta{
+  margin-top:20px;margin-bottom:8px;font-size:13px;font-weight:600;color:var(--tr-accent);
+}
+.ap60-bench-grid .ap60-meta span{
+  position:absolute;top:0;left:0;margin:0;padding:6px 14px;
+  background:var(--tr-ink);color:#fff;font-size:13px;letter-spacing:.02em;
+}
+.ap60-bench-grid h3{margin-bottom:10px}
+.ap60-bench-grid article>p:last-child{margin:0 22px;color:var(--tr-muted);line-height:1.6}
+
+/* ---------- Reference list ---------- */
+html body .ap60>section.ap60-list#projects{background:#eaf0f4!important}
+.ap60-list{
+  --ap-header:74px;           /* measured and overwritten by JS */
+  --ap-nav:62px;              /* measured and overwritten by JS */
+  --ap-line:#d3dee7;
+  --ap-row-line:#e5ebf0;
+  --ap-tint:#f4f8fb;
+}
+
+/* heading: same two-column rhythm as the benchmark section */
+.ap60-list .ap60-head{display:grid;margin-bottom:36px}
+.ap60-list .ap60-head h2{margin:0}
+.ap60-list .ap60-head p{max-width:56ch;line-height:1.6}
+.ap60-list .ap60-head b{color:var(--tr-navy);font-weight:600;font-variant-numeric:tabular-nums}
+
+/* jump bar: segment widths follow the number of references */
+.ap60-list .ap60-jump{
+  position:sticky;top:var(--ap-header);z-index:30;
+  display:flex;flex-wrap:nowrap;gap:0 10px;
+  margin:0 0 36px;padding:0;
+  background:#eaf0f4;
+  overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+}
+.ap60-list .ap60-jump::-webkit-scrollbar{display:none}
+.ap60-list .ap60-jump.is-stuck{box-shadow:0 1px 0 var(--ap-line)}
+.ap60-list .ap60-jump a{
+  flex:var(--n,1) 1 auto;min-width:max-content;
+  display:flex;align-items:baseline;gap:8px;
+  padding:13px 4px 15px 0;
+  border:0;border-top:4px solid #bccbd7;
+  font-size:15px;font-weight:600;color:var(--tr-navy);
+  transition:border-color .2s,color .2s;
+}
+.ap60-list .ap60-jump a:hover{border-top-color:#6f98b8}
+.ap60-list .ap60-jump a.is-active{border-top-color:var(--tr-accent)}
+.ap60-list .ap60-jump span{margin:0;color:var(--tr-muted);font-weight:500}
+.ap60-list .ap60-jump a.is-active span{color:var(--tr-accent)}
+.ap60-list .ap60-jump a:focus-visible{outline:2px solid var(--tr-accent);outline-offset:2px}
+
+/* group: one navy rule across, title left, white ledger right */
+.ap60-list .ap60-reference-groups{gap:56px}
+.ap60-list .ap60-reference-group{
+  display:grid;grid-template-columns:minmax(190px,250px) minmax(0,1fr);
+  column-gap:clamp(28px,4vw,56px);align-items:start;
+  border-top:2px solid var(--tr-navy);
+  scroll-margin-top:calc(var(--ap-header) + var(--ap-nav) + 12px);
+}
+.ap60-list .ap60-reference-heading{
+  position:sticky;top:calc(var(--ap-header) + var(--ap-nav) + 24px);
+  display:block;padding:22px 0 0;border:0;
+}
+.ap60-list .ap60-reference-heading h3{font-size:clamp(24px,2.4vw,30px);line-height:1.15;margin:0 0 8px}
+.ap60-list .ap60-reference-heading>span{display:block;font-size:14px;color:var(--tr-muted);white-space:normal}
+
+.ap60-list .ap60-reference-items{
+  display:block;background:#fff;
+  border:1px solid var(--ap-line);border-top:0;
+}
+
+/* row: country | project + product | capacity | arrow */
+.ap60-list .ap60-reference{
+  position:relative;
+  display:grid;grid-template-columns:104px minmax(0,1fr) auto 24px;column-gap:20px;align-items:start;
+  padding:20px 22px 20px 26px;
+  border-bottom:1px solid var(--ap-row-line);
+  transition:background-color .15s;
+}
+.ap60-list .ap60-reference:last-child{border-bottom:0}
+.ap60-list .ap60-reference.is-extra{display:none}
+.ap60-list .ap60-reference-group.is-open .ap60-reference.is-extra{display:grid;animation:ap60-reveal .3s ease-out both}
+@keyframes ap60-reveal{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+.ap60-list .ap60-reference h4{grid-column:2;grid-row:1;margin:0;font-size:17px;line-height:23px;font-weight:600;color:var(--tr-navy)}
+.ap60-list .ap60-reference-meta{display:contents}
+.ap60-list .ap60-reference-meta>span+span::before{content:none;margin:0}
+
+/* country */
+.ap60-list .ap60-reference-meta>span:nth-child(1){
+  grid-column:1;grid-row:1 / span 2;
+  font-size:14px;line-height:23px;font-weight:600;color:var(--tr-muted);
+}
+.ap60-list .ap60-reference-meta>span.is-intl{color:var(--tr-accent)}
+
+/* product chip */
+.ap60-list .ap60-reference-meta>span:nth-child(2){grid-column:2;grid-row:2;justify-self:start;margin-top:12px}
+.ap60-list .ap60-reference .ap60-prod{
+  --pc:#5b7a92;--pc-rgb:91,122,146;
+  position:relative;z-index:1;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:3px 11px 3px 9px;
+  font-size:13px;line-height:1.45;color:var(--tr-text)!important;text-decoration:none;
+  background:rgba(var(--pc-rgb),.09);
+  border:1px solid rgba(var(--pc-rgb),.3)!important;border-radius:3px;
+  transition:background-color .15s,border-color .15s;
+}
+.ap60-list .ap60-reference .ap60-prod::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--pc)}
+.ap60-list .ap60-reference .ap60-prod:hover{background:rgba(var(--pc-rgb),.18);border-color:rgba(var(--pc-rgb),.55)!important;color:var(--tr-navy)!important;text-decoration:none}
+.ap60-list .ap60-reference .ap60-prod:focus-visible{outline:2px solid var(--tr-accent);outline-offset:2px}
+.ap60-list .ap60-prod[href*="/ybh-prefabricated"]{--pc:#176bb0;--pc-rgb:23,107,176}
+.ap60-list .ap60-prod[href*="/yb-prefabricated"]{--pc:#16909f;--pc-rgb:22,144,159}
+.ap60-list .ap60-prod[href*="/zgs-prefabricated"]{--pc:#5a62c4;--pc-rgb:90,98,196}
+.ap60-list .ap60-prod[href*="/high-voltage-power-transformer"]{--pc:#c2741b;--pc-rgb:194,116,27}
+.ap60-list .ap60-prod[href*="/oil-immersed-distribution"]{--pc:#3b9363;--pc-rgb:59,147,99}
+.ap60-list .ap60-prod[href*="/cast-resin-dry-type"]{--pc:#9a5aa6;--pc-rgb:154,90,166}
+
+/* capacity */
+.ap60-list .ap60-reference-meta>span:nth-child(3){
+  grid-column:3;grid-row:1 / span 2;
+  text-align:right;white-space:nowrap;
+  font-size:14px;line-height:23px;color:var(--tr-muted);font-variant-numeric:tabular-nums;
+}
+.ap60-list .ap60-reference-meta>span:nth-child(3) b{font-size:18px;font-weight:600;color:var(--tr-navy)}
+
+/* rows that open a project page */
+.ap60-list .ap60-reference h4 a{color:inherit;text-decoration:none}
+.ap60-list .ap60-reference h4 a::before{content:"";position:absolute;inset:0;z-index:0}
+.ap60-list .ap60-reference h4 a:hover{text-decoration:none}
+.ap60-list .ap60-reference h4 a:focus-visible{outline:0}
+.ap60-list .ap60-reference h4 a:focus-visible::before{outline:2px solid var(--tr-accent);outline-offset:-2px}
+.ap60-list .ap60-reference.has-page::after{
+  content:"";grid-column:4;grid-row:1 / span 2;justify-self:end;align-self:start;margin-top:3px;
+  width:18px;height:18px;background:#9db3c3;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 3.5 12.5 9 7 14.5'/%3E%3C/svg%3E") center/contain no-repeat;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 3.5 12.5 9 7 14.5'/%3E%3C/svg%3E") center/contain no-repeat;
+  transition:background-color .15s,transform .15s;
+}
+.ap60-list .ap60-reference.has-page:hover{background:var(--ap-tint)}
+.ap60-list .ap60-reference.has-page:hover h4{color:var(--tr-accent)}
+.ap60-list .ap60-reference.has-page:hover::after{background:var(--tr-accent);transform:translateX(2px)}
+.ap60-list .ap60-reference.has-page::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:transparent;transition:background-color .15s;
+}
+.ap60-list .ap60-reference.has-page:hover::before{background:var(--tr-accent)}
+
+/* expand control: footer bar of the ledger */
+.ap60-list .ap60-reference-items>.ap60-more{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  width:100%;min-height:54px;margin:0;padding:0 26px;
+  justify-self:auto;align-self:auto;
+  background:#f6f9fb;border:0;border-top:1px solid var(--ap-line);border-radius:0;
+  font:inherit;font-size:14px;font-weight:600;text-align:left;color:var(--tr-navy);cursor:pointer;
+  transition:background-color .15s,color .15s;
+}
+.ap60-list .ap60-reference-items>.ap60-more:hover{background:#eaf1f7;color:var(--tr-accent)}
+.ap60-list .ap60-reference-items>.ap60-more:focus-visible{outline:2px solid var(--tr-accent);outline-offset:-2px}
+.ap60-list .ap60-more::after{
+  content:"";flex:none;width:8px;height:8px;
+  border-right:2px solid currentColor;border-bottom:2px solid currentColor;
+  transform:translateY(-2px) rotate(45deg);transition:transform .2s;
+}
+.ap60-list .ap60-more[aria-expanded="true"]::after{transform:translateY(2px) rotate(-135deg)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:900px){
+  .ap60-list .ap60-reference-group{grid-template-columns:minmax(0,1fr)}
+  .ap60-list .ap60-reference-heading{
+    position:static;display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+    padding:18px 0 16px;
+  }
+  .ap60-list .ap60-reference-heading h3{margin:0}
+  .ap60-list .ap60-reference-heading>span{display:inline}
+  .ap60-list .ap60-reference-items{border-top:1px solid var(--ap-line)}
+}
+@media (max-width:700px){
+  .ap60-hero{min-height:420px}
+  .ap60-hero-inner{padding:88px 0 52px}
+  .ap60-list .ap60-jump{gap:0 18px;margin-bottom:28px}
+  .ap60-list .ap60-jump a{flex:0 0 auto;padding-right:2px}
+  .ap60-list .ap60-reference-groups{gap:40px}
+  .ap60-list .ap60-reference{grid-template-columns:minmax(0,1fr) auto 22px;column-gap:12px;padding:16px 14px 16px 18px}
+  .ap60-list .ap60-reference-meta>span:nth-child(1){grid-column:1;grid-row:1;font-size:13px;line-height:20px}
+  .ap60-list .ap60-reference-meta>span:nth-child(3){grid-column:2;grid-row:1;line-height:20px}
+  .ap60-list .ap60-reference-meta>span:nth-child(3) b{font-size:16px}
+  .ap60-list .ap60-reference h4{grid-column:1 / 3;grid-row:2;margin-top:6px;font-size:16px;line-height:1.4}
+  .ap60-list .ap60-reference-meta>span:nth-child(2){grid-column:1 / -1;grid-row:3;margin-top:10px}
+  .ap60-list .ap60-reference.has-page::after{grid-column:3;grid-row:1 / span 2;align-self:center;margin-top:0}
+  .ap60-list .ap60-reference-items>.ap60-more{padding:0 18px;min-height:52px}
+  .ap60-bench-grid{gap:24px}
+}
+@media (prefers-reduced-motion:reduce){
+  .ap60-list *,.ap60-list *::before,.ap60-list *::after{animation:none!important;transition:none!important}
+}
